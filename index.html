@@ -10,11 +10,14 @@ Switzerland, Wahrscheinlichkeit, Analysis, Mandelbrot, Julia, Unterrichtsunterla
 <title>Mathematik mit Berchtold: Mathe am Gymnasium bzw. an der Kantonsschule</title>
 <script>
 window.onload=function(){if (window.innerWidth<578){document.getElementById('tablet').style.display="none";}
-var anzahl=z.length;var i=Math.floor(anzahl*Math.random());document.getElementById("message").innerHTML=z[i]+"<br><small>"+a[i]+"</small><br>";}
+var anzahl=z.length;var i=Math.floor(anzahl*Math.random());document.getElementById("message").innerHTML=z[i]+"<br><small>"+a[i]+"</small>";
+anzahl=Spiel.length;var i=Math.floor(anzahl*Math.random());document.getElementById("message_spiel").innerHTML=Spiel[i]+Link[i]"<br>";
+}
 function ReverseDisplay(){if(document.getElementById("menu").style.display=="none"){document.getElementById("menu").style.display="block";document.getElementById("content").style.display="none";window.document.images[0].src="/img/menu_closeicon.gif"}else{document.getElementById("menu").style.display="none";document.getElementById("content").style.display="block";window.document.images[0].src="/img/menuicon.png"}};
 </script>
 <link REL="stylesheet" HREF="css/mathematik.css" TYPE="text/css">
 <script src="/zitate/zitate.js"></script>
+<script src="zufallstuff.js"></script>
 <link rel="SHORTCUT ICON" href="/favicon.ico">
 <style>li {padding:4px}</style>
 </head>
@@ -80,7 +83,7 @@ function ReverseDisplay(){if(document.getElementById("menu").style.display=="non
 </td>
 <td class="c" style="width:32%">
 <small>Zufallsspiel</small><br><br>
-<a href="/spiele/Sokoban/"><img src="/img/sokoban.png" class="a" alt="Spiel"></a> </td>
+<span id="message_spiel"> </span> </td>
 </tr>
 <tr>
 <td class="c" colspan="3">
@@ -104,7 +107,7 @@ function ReverseDisplay(){if(document.getElementById("menu").style.display=="non
 </td>
 <td class="c">
 <small>Zufallsrätsel</small><br><br>
-<a href="/puzzle/puzzle22.php"><img src="/img/puzzle22.jpg" class="a" alt="Puzzle"></a> </td>
+<span id="message_raetsel"> </span>
 </tr>
 </table>
 <noscript>
