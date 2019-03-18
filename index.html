@@ -6,13 +6,13 @@
 <meta NAME="Description" CONTENT="Mathematik am Gymnasium bzw. an der Kantonsschule, Bernhard Berchtold, eh. Lehrer für Mathematik und Anwendungen der Mathematik, Schweiz">
 <meta NAME="Keywords" CONTENT="mathematics, Logical, Puzzle, fractal, Fraktal, Denkaufgabe, Gymnasium, Gym, java, mathview, Lehrer, teacher, Mathe, 
 math, Knacknuss, Mathematik, Mathematiklehrer, Teaching, Lucerne, Luzern, Kantonsschule, kanti, Schule, Schweiz, Algebra, Geometrie, Unterricht, 
-Switzerland, Wahrscheinlichkeit, Analysis, Mandelbrot, Julia, Unterrichtsunterlagen, Vorlagen, Hilfe, mathi, Matura, Maturaprüfungen, Sudoku">
+Switzerland, Wahrscheinlichkeit, Analysis, Mandelbrot, Julia, Unterrichtsunterlagen, Vorlagen, Hilfe, mathi, Matura, Maturaprüfungen, Sudoku">  
 <title>Mathematik mit Berchtold: Mathe am Gymnasium bzw. an der Kantonsschule</title>
 <script>
 window.onload=function(){if (window.innerWidth<578){document.getElementById('tablet').style.display="none";}
-var anzahl=z.length;var i=Math.floor(anzahl*Math.random());document.getElementById("message").innerHTML=z[i]+"<br><small>"+a[i]+"</small>";
-anzahl=Spiel.length;var i=Math.floor(anzahl*Math.random());document.getElementById("message_spiel").innerHTML=Spiel[i]+"<br>";
-anzahl=Link.length;var i=Math.floor(anzahl*Math.random());document.getElementById("message_raetsel").innerHTML=Link[i]+"<br>";}
+var anzahl=z.length;var i=Math.floor(anzahl*Math.random());document.getElementById("message").innerHTML=z[i]+"<br><small>"+a[i]+"</small><br>";
+anzahl=Spiel.length; i=Math.floor(anzahl*Math.random());document.getElementById("message_spiel").innerHTML=Spiel[i];
+anzahl=Link.length; i=Math.floor(anzahl*Math.random());document.getElementById("message_raetsel").innerHTML=Link[i];}
 function ReverseDisplay(){if(document.getElementById("menu").style.display=="none"){document.getElementById("menu").style.display="block";document.getElementById("content").style.display="none";window.document.images[0].src="/img/menu_closeicon.gif"}else{document.getElementById("menu").style.display="none";document.getElementById("content").style.display="block";window.document.images[0].src="/img/menuicon.png"}};
 </script>
 <link REL="stylesheet" HREF="css/mathematik.css" TYPE="text/css">
@@ -21,6 +21,7 @@ function ReverseDisplay(){if(document.getElementById("menu").style.display=="non
 <link rel="SHORTCUT ICON" href="/favicon.ico">
 <style>li {padding:4px}</style>
 </head>
+
 <body>
 <div class="page">
 <table class="c">
@@ -31,90 +32,99 @@ function ReverseDisplay(){if(document.getElementById("menu").style.display=="non
 </td><td style="width:10%">&nbsp;</td></tr>
 </table>
 <div id="menu" style="display:none;">
-<h4>Inhalt</h4>
-<ul>
-<li><a href="/anwendungenmath/">Anwendungen + Unterrichtshilfen</a></li>
-<li><a href="/puzzle/">Puzzles (Rätsel)</a></li>
-<li><a href="/spiele/">'Spiele'</a></li>
-<li><a href="/spiele/euromillions/">Euromillions</a></li>
-<li><a href="/spiele/swisslotto/">Swisslotto</a></li>
-<li><a href="/geschichte/">Geschichte</a></li>
-<li><a href="/mathematiker/">Mathematiker</a></li>
-<li><a href="/zitate/">Zitate</a></li>
-<li><a href="/maturapruefungen/">Maturaprüfungen</a></li>
-<li><a HREF="/witze/">Witze (+IQ-Test)</a></li>
-<li><a HREF="/about.php">Kontakt</a></li>
-<li><a HREF="/links.php">Links</a></li>
-<li><a href="/search/">Suche</a></li>
-</ul></div>
+  <h4>Inhalt</h4>
 
-<div id="content" style="display:block;">
-<table class="c">
-<tr>
-<td rowspan="4" style="vertical-align:top">
-<div id="tablet" style="display:block;">
-<br>
-<h4>Inhalt</h4>
 <ul>
-<li><a href="/anwendungenmath/">Anwendungen + Unterrichtshilfen</a></li>
-<li><a href="/puzzle/">Puzzles (Rätsel)</a></li>
-<li><a href="/spiele/">'Spiele'</a></li>
-<li><a href="/spiele/euromillions/">Euromillions</a></li>
-<li><a href="/spiele/swisslotto/">Swisslotto</a></li>
-<li><a href="/geschichte/">Geschichte</a></li>
-<li><a href="/mathematiker/">Mathematiker</a></li>
-<li><a href="/zitate/">Zitate</a></li>
-<li><a href="/maturapruefungen/">Maturaprüfungen</a></li>
-<li><a HREF="/witze/">Witze (+IQ-Test)</a></li>
-<li><a HREF="/about.php">Kontakt</a></li>
-<li><a HREF="/links.php">Links</a></li>
-<li><a href="/search/">Suche</a></li>
-</ul> </div>
-</td>
-<td class="c" style="width:34%">
-<small>Fraktale</small><br>
-<a href="anwendungenmath/fractal/">
-<img class="a" src="/img/farn.png" alt="Farn"></a>
-</td>
-<td class="c" style="width:34%">
-<small>Approximation<br>Binomialverteilung</small><br>
-<a href="/anwendungenmath/wkeit/approx_bin_norm.php">
-<img class="a" src="/img/approx.jpg" alt="Approx"></a>
-</td>
-<td class="c" style="width:32%">
-<small>Zufallsspiel</small><br><br>
-<span id="message_spiel"> </span> </td>
+  <li><a href="/anwendungenmath/">Anwendungen + Unterrichtshilfen</a></li>
+  <li><a href="/puzzle/">Puzzles (Rätsel)</a></li> 
+  <li><a href="/spiele/">'Spiele'</a></li>
+  <li><a href="/spiele/euromillions/">Euromillions</a></li>
+  <li><a href="/spiele/swisslotto/">Swisslotto</a></li>
+  <li><a href="/geschichte/">Geschichte</a></li>
+  <li><a href="/mathematiker/">Mathematiker</a></li>
+  <li><a href="/zitate/">Zitate</a></li> 
+  <li><a href="/maturapruefungen/">Maturaprüfungen</a></li>
+  <li><a HREF="/witze/">Witze (+IQ-Test)</a></li>
+  <li><a HREF="/about.html">Kontakt</a></li>
+  <li><a HREF="/links.html">Links</a></li>
+  <li><a href="/search/">Suche</a></li>
+</ul></div>
+<!-- CONTENT -->
+ 
+<div id="content" style="display:block;">
+
+<table class="c">
+  <tr>
+	<td rowspan="4" style="vertical-align:top">
+	<div id="tablet" style="display:block;">
+	   <br>
+       <h4>Inhalt</h4>
+
+<ul>
+  <li><a href="/anwendungenmath/">Anwendungen + Unterrichtshilfen</a></li>
+  <li><a href="/puzzle/">Puzzles (Rätsel)</a></li> 
+  <li><a href="/spiele/">'Spiele'</a></li>
+  <li><a href="/spiele/euromillions/">Euromillions</a></li>
+  <li><a href="/spiele/swisslotto/">Swisslotto</a></li>
+  <li><a href="/geschichte/">Geschichte</a></li>
+  <li><a href="/mathematiker/">Mathematiker</a></li>
+  <li><a href="/zitate/">Zitate</a></li> 
+  <li><a href="/maturapruefungen/">Maturaprüfungen</a></li>
+  <li><a HREF="/witze/">Witze (+IQ-Test)</a></li>
+  <li><a HREF="/about.html">Kontakt</a></li>
+  <li><a HREF="/links.html">Links</a></li>
+  <li><a href="/search/">Suche</a></li>
+</ul>    </div>
+	</td>	
+    <td class="c" style="width:34%">
+      <small>Fraktale</small><br>
+      <a href="anwendungenmath/fractal/">	
+      <img class="a" src="/img/farn.png" alt="Farn"></a>
+    </td>
+	<td class="c" style="width:34%">
+      <small>Approximation<br>Binomialverteilung</small><br>
+	  <a href="/anwendungenmath/wkeit/approx_bin_norm.html">
+      <img class="a" src="/img/approx.jpg" alt="Approx"></a> 
+    </td>
+    <td class="c" style="width:32%">
+      <small>Zufallsspiel</small><br><br>
+      <span id="message_spiel"> </span>
+    </td>
+  </tr>
+  <tr>
+    <td class="c" colspan="3">
+    <strong>Das zufällige Zitat:</strong><br>
+    <span id="message"> </span>
+  </td>
 </tr>
 <tr>
-<td class="c" colspan="3">
-<strong>Das zufällige Zitat:</strong><br>
-<span id="message"> </span>
-</td>
+  <td colspan="3">&nbsp;</td>
 </tr>
 <tr>
-<td colspan="3">&nbsp;</td>
-</tr>
-<tr>
-<td class="c">
-<small>Mandelbrot</small><br>
-<a href="anwendungenmath/fractal/julia/julia.php">
-<img class="a" src="/img/mandelbrot.png" alt="Mandelbrotmenge"></a>
-</td>
-<td class="c">
-<small>Platon Körper</small><br>
-<a href="anwendungenmath/PlatonKoerper/">
-<img class="a" src="/img/ikosaeder.png" alt="Ikosaeder"></a>
-</td>
-<td class="c">
-<small>Zufallsrätsel</small><br><br>
-<span id="message_raetsel"> </span>
+  <td class="c">
+    <small>Mandelbrot</small><br>
+	<a href="anwendungenmath/fractal/julia/julia.html">
+    <img class="a" src="/img/mandelbrot.png" alt="Mandelbrotmenge"></a>
+  </td>
+  <td class="c">
+    <small>Platon Körper</small><br>
+    <a href="anwendungenmath/PlatonKoerper/">
+    <img class="a" src="/img/ikosaeder.png" alt="Ikosaeder"></a>
+  </td>
+  <td class="c">
+    <small>Zufallsrätsel</small><br><br>
+    <span id="message_raetsel"> </span>
+  </td>
 </tr>
 </table>
+
 <noscript>
 Sie haben Java-Script nicht eingeschaltet.
 Die Webseite funktioniert nur mit Javascript vollständig (Navigation und die meisten Spiele und Anwendungen).
 </noscript>
-</div>
+
+</div>  
+<!-- EOF: CONTENT -->
 
 <div id="footer">
 <p><small>
@@ -122,6 +132,7 @@ Die Webseite funktioniert nur mit Javascript vollständig (Navigation und die me
 2019 www.mathematik.ch | <a href="/search/"><img style="vertical-align:middle" width=27 height=27 src="/img/lupe.jpg" alt="Suche"></a>
 </small></p>
 </div>
+
 </div>
 </body>
 </html>
