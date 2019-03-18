@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lösung Puzzle 32: Der Münzenwurf zum zweiten</title>
+<LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
+<script async src="/script/show-hide.js"></script>
+</head>
+
+<body>
+<div class="page">
+<table class="c">
+<tr><td style="width:10%">
+<img width=28 height=27 src="/img/menuicon.png" style="cursor:pointer" title="Inhalt" alt="menu" onClick="ReverseDisplay()">
+</td><td class="c" style="width:80%">
+<a href="/"><img width=257 height=35 src="/img/mathematik.png" alt="mathematik.ch"></a>
+</td><td style="width:10%">&nbsp;</td></tr>
+</table>
+<div id="menu" style="display:none;">
+  <h4>Inhalt</h4>
+
+<ul>
+  <li><a href="/anwendungenmath/">Anwendungen + Unterrichtshilfen</a></li>
+  <li><a href="/puzzle/">Puzzles (Rätsel)</a></li> 
+  <li><a href="/spiele/">'Spiele'</a></li>
+  <li><a href="/spiele/euromillions/">Euromillions</a></li>
+  <li><a href="/spiele/swisslotto/">Swisslotto</a></li>
+  <li><a href="/geschichte/">Geschichte</a></li>
+  <li><a href="/mathematiker/">Mathematiker</a></li>
+  <li><a href="/zitate/">Zitate</a></li> 
+  <li><a href="/maturapruefungen/">Maturaprüfungen</a></li>
+  <li><a HREF="/witze/">Witze (+IQ-Test)</a></li>
+  <li><a HREF="/about.html">Kontakt</a></li>
+  <li><a HREF="/links.html">Links</a></li>
+  <li><a href="/search/">Suche</a></li>
+</ul></div>
+<!-- CONTENT -->
+<div id="content" style="display:block;">
+
+<h4>Lösung Puzzle 32: Der Münzenwurf zum zweiten</h4>
+
+<p><img src="img/einstein_formel.jpg" width="175" height="177" alt="einstein_formel"><br>
+<span style="font-size:12px;">Gedenkmünze Einstein</span>
+<p>
+Anna wirft siebenmal und Berta achtmal.<br><br>
+a) Wie gross ist die Wahrscheinlichkeit, dass Berta dabei mehr 'Zahl' wirft als Anna?<br>
+b) Wie gross ist die Wahrscheinlichkeit, dass Berta genau so viel mal 'Zahl' wirft wie Anna?<br>
+c) Wie gross ist die Wahrscheinlichkeit, dass Anna dabei mehr 'Zahl' wirft als Berta?  
+</p>
+<p>
+Insgesamt gibt es m = 2<sup>15</sup> = 32768 mögliche Fälle.<br><br>
+Zur Lösung von a) braucht man aber nicht alle günstigen Fälle des Ereignisses A = "Berta wirft mehr 'Zahl' als Anna" aufzuzählen.
+Da Berta genau einmal mehr wirft als Anna, so sind die zwei Ereignisse A und <span class="ol">A</span> = "Berta wirft mehr 'Kopf' als Anna" entgegengesetzte
+Ereignisse: Wenn A eintritt, so tritt <span class="ol">A</span> nicht ein und umgekehrt. Da 'Kopf' und 'Zahl' gleich wahrscheinlich sind, so muss
+die Wahrscheinlichkeit für "Berta wirft mehr 'Zahl' als Anna" = <b>P(A) = 0.5</b> sein.<br><br>
+Zur Lösung von b):<br> Die günstigen Fälle g für das betrachtete Ereignis B = "Berta wirft genau so viel mal Zahl wie Anna" ist die 
+Summe von "Anna und Berta werfen genau 0-mal Zahl" + "Anna und Berta werfen je genau 1-mal Zahl" + ... + "Anna und Berta werfen je genau 7-mal Zahl" =<br>
+<img src="img/solut32.gif" width="315" height="39" style="vertical-align:middle" alt="summe binomialkoeff">.<br>
+Die Wahrscheinlichkeit für "Berta wirft genau so viel mal 'Zahl' wie Anna" ist daher:<br>
+<b>P(B) = </b><img src="img/solut32.2.gif" width="70" height="33" style="vertical-align:middle" alt="6435/32768"> <b>&asymp; 19.638%</b>.<br><br>
+Zur Lösung von c):<br>
+<b>P("Anna wirft mehr 'Zahl' als Berta")</b> = 1 - P(A) - P(B) = <b>30.362%</b>.     
+</p>
+
+<p><a href="puzzle32.html">Zur Aufgabenstellung</a></p>
+
+</div>
+<!-- EOF: CONTENT -->
+
+<div id="footer">
+<p><small>
+©1997 -
+2019 www.mathematik.ch | <a href="/search/"><img style="vertical-align:middle" width=27 height=27 src="/img/lupe.jpg" alt="Suche"></a>
+</small></p>
+</div>
+
+</div>
+</body>
+</html>

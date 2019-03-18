@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lösung Puzzle 19: Der Münzenwurf</title>
+<LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
+<script async src="/script/show-hide.js"></script>
+</head>
+
+<body>
+<div class="page">
+<table class="c">
+<tr><td style="width:10%">
+<img width=28 height=27 src="/img/menuicon.png" style="cursor:pointer" title="Inhalt" alt="menu" onClick="ReverseDisplay()">
+</td><td class="c" style="width:80%">
+<a href="/"><img width=257 height=35 src="/img/mathematik.png" alt="mathematik.ch"></a>
+</td><td style="width:10%">&nbsp;</td></tr>
+</table>
+<div id="menu" style="display:none;">
+  <h4>Inhalt</h4>
+
+<ul>
+  <li><a href="/anwendungenmath/">Anwendungen + Unterrichtshilfen</a></li>
+  <li><a href="/puzzle/">Puzzles (Rätsel)</a></li> 
+  <li><a href="/spiele/">'Spiele'</a></li>
+  <li><a href="/spiele/euromillions/">Euromillions</a></li>
+  <li><a href="/spiele/swisslotto/">Swisslotto</a></li>
+  <li><a href="/geschichte/">Geschichte</a></li>
+  <li><a href="/mathematiker/">Mathematiker</a></li>
+  <li><a href="/zitate/">Zitate</a></li> 
+  <li><a href="/maturapruefungen/">Maturaprüfungen</a></li>
+  <li><a HREF="/witze/">Witze (+IQ-Test)</a></li>
+  <li><a HREF="/about.html">Kontakt</a></li>
+  <li><a HREF="/links.html">Links</a></li>
+  <li><a href="/search/">Suche</a></li>
+</ul></div>
+<!-- CONTENT -->
+<div id="content" style="display:block;">
+
+<h4>Lösung von PUZZLE 19: Der Münzenwurf</h4>
+
+<img src="img/solut19.jpg" width="200" height="200" alt="Justinian"><br>
+<span style="font-size:12px;"> Münze mit Abbild Kaiser Justinian I. (482-565) www.kirchenrecht.ch</span>
+
+<p>Wenn Anna die Dreierfolge <i>KKZ</i> und Berta die Dreierfolge <i>ZKK</i> hat, gewinnt Anna mit der 
+Wahrscheinlichkeit <b>0.25</b>.<br><br>
+Beweis: Wenn am Anfang zwei <i>K</i> hintereinander geworfen werden (Wahrscheinlichkeit 0.25), gewinnt Anna, nämlich
+sobald das erste <i>Z</i>  fällt (KK...Z).<br>
+Fängt die Folge aber anders an, ist schon ein <i>Z</i>  dabei. Werden nun zum ersten Mal zwei
+<i>K</i> hintereinander geworfen (was für einen Gewinn von Anna
+notwendig wäre), ist vorher schon ein <i>Z</i> geworfen worden, daher gewinnt in diesem Fall Berta.
+</p>
+<p>
+Zusatz: Wenn Berta die Folge <i>KZK</i> wählt, so gewinnt Anna mit Wahrscheinlichkeit <b>2/3</b>.<br><br>
+Beweis: Sei <i>x</i> die Wahrscheinlichkeit, mit der Anna gewinnt. Man betrachtet im Prinzip die 8 möglichen Fälle
+für die ersten 3 Münzenwürfe: Jeder dieser 8 Fälle tritt also mit Wahrscheinlichkeit 0.125 auf.<br>
+KKZ oder KKK: Wie oben gewinnt hier Anna mit Wahrscheinlichkeit 0.25.<br>
+KZK: Hier gewinnt natürlich Berta.<br>
+KZZ: Hier kann keine der beiden einen Rest dieser
+Kombination nutzen (da beide Gewinnkombinationen mit <i>K</i> anfangen)
+und daher ist die Wahrscheinlichkeit für einen Gewinn dieselbe wie am Anfang.<br>
+Dasselbe gilt auch, wenn gleich am Anfang ein <i>Z</i> (Fälle 5 bis 8) geworfen wird
+(Wahrscheinlichkeit 0.5). Daher gilt:
+<p>x = 0.25 + 0 + 0.125x + 0.5x , also x = 2/3</p>
+
+<p><a href="puzzle19.html">Zurück zur Aufgabenstellung</a></p>
+
+</div>
+<!-- EOF: CONTENT -->
+
+<div id="footer">
+<p><small>
+©1997 -
+2019 www.mathematik.ch | <a href="/search/"><img style="vertical-align:middle" width=27 height=27 src="/img/lupe.jpg" alt="Suche"></a>
+</small></p>
+</div>
+
+</div>
+</body>
+</html>

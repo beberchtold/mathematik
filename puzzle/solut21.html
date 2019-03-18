@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lösung Puzzle 21: Das Käferproblem</title>
+<LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
+<script async src="/script/show-hide.js"></script>
+</head>
+
+<body>
+<div class="page">
+<table class="c">
+<tr><td style="width:10%">
+<img width=28 height=27 src="/img/menuicon.png" style="cursor:pointer" title="Inhalt" alt="menu" onClick="ReverseDisplay()">
+</td><td class="c" style="width:80%">
+<a href="/"><img width=257 height=35 src="/img/mathematik.png" alt="mathematik.ch"></a>
+</td><td style="width:10%">&nbsp;</td></tr>
+</table>
+<div id="menu" style="display:none;">
+  <h4>Inhalt</h4>
+
+<ul>
+  <li><a href="/anwendungenmath/">Anwendungen + Unterrichtshilfen</a></li>
+  <li><a href="/puzzle/">Puzzles (Rätsel)</a></li> 
+  <li><a href="/spiele/">'Spiele'</a></li>
+  <li><a href="/spiele/euromillions/">Euromillions</a></li>
+  <li><a href="/spiele/swisslotto/">Swisslotto</a></li>
+  <li><a href="/geschichte/">Geschichte</a></li>
+  <li><a href="/mathematiker/">Mathematiker</a></li>
+  <li><a href="/zitate/">Zitate</a></li> 
+  <li><a href="/maturapruefungen/">Maturaprüfungen</a></li>
+  <li><a HREF="/witze/">Witze (+IQ-Test)</a></li>
+  <li><a HREF="/about.html">Kontakt</a></li>
+  <li><a HREF="/links.html">Links</a></li>
+  <li><a href="/search/">Suche</a></li>
+</ul></div>
+<!-- CONTENT -->
+<div id="content" style="display:block;">
+
+<h4>Lösung PUZZLE 21: Das Käferproblem</h4>
+
+<p>
+Ohne höhere Mathematik kann man die Frage nach dem Treffpunkt und die Länge des Weges beantworten:<br>
+Aus Symmetriegründen werden sich die Käfer im <b>Mittelpunkt</b> des Quadrates treffen (wie weiter unten gezeigt wird,
+ist dies allerdings ein 'Grenzpunkt').<br>
+Da sich Käfer 1 immer direkt auf Käfer 2 zubewegt, dieser aber nicht auf Käfer 1, so muss die Länge des Weges gleich der
+Anfangsdistanz, also gleich der <b>Länge der Quadratseite</b> sein.
+</p>
+<p><img src="img/solut21.figur.png" width="230" height="293" alt="figur"></p>
+<p>
+Die Art der Kurve kann mit Hilfe einer Differentialgleichung bestimmt werden:<br>
+Der Ursprung des Koordinatensystems wird in den Mittelpunkt eines Quadrates mit Seitenlänge 2 gesetzt. Befindet sich 
+Käfer 1 im Punkt P(x/y), so muss sich Käfer 2 aus Symmetriegründen im Punkt Q(y/-x) befinden. Die Gerade (PQ) ist 
+Tangente in P an die gesuchte Kurve, die Käfer 1 zurücklegt. Also gilt die Differentialgleichung 
+<img src="img/solut21.diffgl.gif" style="vertical-align: middle;" width="61" height="40" alt="diffgl"> mit Anfangsbedingung x = y = -1.
+Sie kann mit der Substitution  z:=y/x gelöst werden. Es gibt aber eine einfachere Lösung, die von meinem Kollegen
+Walter Burgherr (Danke!) stammt:<br>
+Führt man Polarkoordinaten ein, so gilt x = r cos &phi;, y = r sin &phi;, also<br>
+<img src="img/solut21.dx.gif" width="23" height="39" style="vertical-align: middle;" alt="dx"> = r' cos &phi; - r sin &phi; und
+<img src="img/solut21.dy.gif" width="23" height="39" style="vertical-align: middle;" alt="dy"> = r' sin &phi; + r cos &phi; 
+Setzt man diese Werte in die obenstehende Differentialgleichung ein, so erhält man die Differentialgleichung für r in Abhängigkeit von &phi;:
+<img src="img/solut21.diffgl2.gif" width="184" height="39" style="vertical-align: middle;" alt="diffgl2">.
+</p>
+<p>
+Ausrechnen und Vereinfachen führt auf die Differentialgleichung  <b>r' = r </b>.<br>
+Ihre Lösung lautet  r = C e<sup>&phi;</sup>. Setzt man zur Bestimmung von C die Anfangsbedingung
+<img src="img/solut21.anfbed.gif" width="132" height="31" style="vertical-align: middle;" alt="anfbed"> ein, so
+erhält man die Gleichung der Kurve (<b>Logarithmische Spirale</b>), auf der sich Käfer 1 bewegt:<br>
+<img src="img/solut21.loesung.gif" width="88" height="32" alt="loesung"><br>
+Der Treffpunkt wird also für &phi; &rarr; - &infin; erreicht!<br>
+Berechnet man die dazugehörige Bogenlänge durch Integration so erhält man in der Tat 2, die Länge der Quadratseite.
+</p>
+
+<p><a href="puzzle21.html">Zurück zur Aufgabenstellung</a></p>
+
+</div>
+<!-- EOF: CONTENT -->
+
+<div id="footer">
+<p><small>
+©1997 -
+2019 www.mathematik.ch | <a href="/search/"><img style="vertical-align:middle" width=27 height=27 src="/img/lupe.jpg" alt="Suche"></a>
+</small></p>
+</div>
+
+</div>
+</body>
+</html>

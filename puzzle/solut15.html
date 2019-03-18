@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lösung Puzzle 15: Bananentransport</title>
+<LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
+<script async src="/script/show-hide.js"></script>
+</head>
+
+<body>
+<div class="page">
+<table class="c">
+<tr><td style="width:10%">
+<img width=28 height=27 src="/img/menuicon.png" style="cursor:pointer" title="Inhalt" alt="menu" onClick="ReverseDisplay()">
+</td><td class="c" style="width:80%">
+<a href="/"><img width=257 height=35 src="/img/mathematik.png" alt="mathematik.ch"></a>
+</td><td style="width:10%">&nbsp;</td></tr>
+</table>
+<div id="menu" style="display:none;">
+  <h4>Inhalt</h4>
+
+<ul>
+  <li><a href="/anwendungenmath/">Anwendungen + Unterrichtshilfen</a></li>
+  <li><a href="/puzzle/">Puzzles (Rätsel)</a></li> 
+  <li><a href="/spiele/">'Spiele'</a></li>
+  <li><a href="/spiele/euromillions/">Euromillions</a></li>
+  <li><a href="/spiele/swisslotto/">Swisslotto</a></li>
+  <li><a href="/geschichte/">Geschichte</a></li>
+  <li><a href="/mathematiker/">Mathematiker</a></li>
+  <li><a href="/zitate/">Zitate</a></li> 
+  <li><a href="/maturapruefungen/">Maturaprüfungen</a></li>
+  <li><a HREF="/witze/">Witze (+IQ-Test)</a></li>
+  <li><a HREF="/about.html">Kontakt</a></li>
+  <li><a HREF="/links.html">Links</a></li>
+  <li><a href="/search/">Suche</a></li>
+</ul></div>
+<!-- CONTENT -->
+<div id="content" style="display:block;">
+
+<h4>Lösung PUZZLE 15: Bananentransport in der Wüste</h4>
+
+<p><b>Ergebnis:</b> Der Scheich erhält <b>53</b> Bananen.</p>
+
+<img src="img/solut15_1.gif" width="300" height="90" alt="solut15">
+
+<p>
+Bezeichnet man den Start in Kashaba mit S, das Ziel in Lumbubu mit Z und nimmt man zwei Zwischenlager bei P1 und P2
+an, so ergibt die Lösung der linearen Optimierung (s. weiter unten) für die Distanz von S bis P1 20 km und 
+für die Distanz von P1 bis P2 33 km.
+(Die Annahme genau eines Zwischenlagers führt auf das Resultat von 40 Bananen)<br>
+Dies ergibt den folgenden Transport:
+</p>
+
+        <ol>
+          <li>
+            100 Bananen aufladen, 20 km zu P1 marschieren, dort 60 Bananen abladen und zu S zurückkehren.</li>
+          <li>
+            Nochmals dasselbe wie bei 1.</li>
+          <li>
+            Bei S 100 Bananen aufladen, 20 km zu P1 marschieren, dort 20 Bananen aufladen.</li>
+          <li>
+            Von P1 33 km zu P2 marschieren, dort 34 Bananen abladen und zu P1 zurückkehren.</li>
+          <li>
+            Bei P1 die restlichen 100 Bananen aufladen, zu P2 marschieren und
+        dort 33 Bananen aufladen. Weil das Kamel bisher so gut gearbeitet hat,
+        darf es hier zusätzlich die 'Restbanane' essen!</li>
+          <li>
+            Von P2 47 km zum Ziel Z marschieren und dem Scheich 53 Bananen übergeben.</li>
+        </ol>
+
+<p>Für die mathematisch Interessierten das 'Programm' der linearen Optimierung:<br>
+x sei Distanz von S zu P1, y diejenige von P1 zu P2 in km.<br>
+Sicher x&gt;0 und y&gt;0. Weiter x&lt;50 und y&lt;50 klar wegen Verlust von 1 Banane pro km.<br>
+Bei P1 muss die Anzahl der Bananen nach der fünfmal zurückgelegten
+Distanz x kleiner oder gleich 200 betragen, also muss 5x &ge; 100 sein.<br>
+Bei P2 muss die Anzahl der Bananen nach der dreimal zurückgelegten
+Distanz y kleiner oder gleich 100 betragen, also muss 3y &ge; 100 sein.<br>
+Die total zurückgelegte Distanz ist 5x + 3y + 100 - x - y = 4x + 2y +100. Sie muss minimal werden 
+(denn 300 - total zurückgelegte Distanz muss maximal werden). Also:</p>
+
+<p>x &gt; 0, y &gt; 0<br>
+x &lt; 50, y &lt; 50<br>
+5x &ge; 100,
+3y &ge; 100</p>
+
+<p>Zielfunktion z(x,y) = 4x + 2y soll minimal werden</p>
+
+<p>Die Lösung dieser Optimierung ergibt für x 20, für y 33+1/3. Die Anpassung auf ganze
+Zahlen führt zum Ergebnis.</p>
+
+<p><a href="puzzle15.html">zurück zur Aufgabenstellung</a></p>
+
+</div>
+<!-- EOF: CONTENT -->
+
+<div id="footer">
+<p><small>
+©1997 -
+2019 www.mathematik.ch | <a href="/search/"><img style="vertical-align:middle" width=27 height=27 src="/img/lupe.jpg" alt="Suche"></a>
+</small></p>
+</div>
+
+</div>
+</body>
+</html>

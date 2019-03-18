@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lösung Puzzle 22: Fasane, Hasen und Rehe</title>
+<LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
+<script async src="/script/show-hide.js"></script>
+</head>
+
+<body>
+<div class="page">
+<table class="c">
+<tr><td style="width:10%">
+<img width=28 height=27 src="/img/menuicon.png" style="cursor:pointer" title="Inhalt" alt="menu" onClick="ReverseDisplay()">
+</td><td class="c" style="width:80%">
+<a href="/"><img width=257 height=35 src="/img/mathematik.png" alt="mathematik.ch"></a>
+</td><td style="width:10%">&nbsp;</td></tr>
+</table>
+<div id="menu" style="display:none;">
+  <h4>Inhalt</h4>
+
+<ul>
+  <li><a href="/anwendungenmath/">Anwendungen + Unterrichtshilfen</a></li>
+  <li><a href="/puzzle/">Puzzles (Rätsel)</a></li> 
+  <li><a href="/spiele/">'Spiele'</a></li>
+  <li><a href="/spiele/euromillions/">Euromillions</a></li>
+  <li><a href="/spiele/swisslotto/">Swisslotto</a></li>
+  <li><a href="/geschichte/">Geschichte</a></li>
+  <li><a href="/mathematiker/">Mathematiker</a></li>
+  <li><a href="/zitate/">Zitate</a></li> 
+  <li><a href="/maturapruefungen/">Maturaprüfungen</a></li>
+  <li><a HREF="/witze/">Witze (+IQ-Test)</a></li>
+  <li><a HREF="/about.html">Kontakt</a></li>
+  <li><a HREF="/links.html">Links</a></li>
+  <li><a href="/search/">Suche</a></li>
+</ul></div>
+<!-- CONTENT -->
+<div id="content" style="display:block;">
+
+<h4>Lösung PUZZLE 22: Fasane, Hasen und Rehe</h4>
+
+<p><img src="img/solut22.jpg" width="241" height="236" alt="solut22">
+</p>
+<p>Annahme: x Fasane, y Hasen, z Rehe<br><br>
+Es gilt das Gleichungssystem:    x + y + z = 100, 0.5x + 3y + 7z = 100 <br>
+mit der Bedingung x, y und z natürliche Zahlen zwischen 1 und 98. <br><br>
+
+Das System führt auf die diophantische Gleichung 13x + 8y = 1200.<br>
+Die Gleichung ist lösbar, denn der ggT(13,8) = 1 ist Teiler von 1200.<br>
+Man muss also die Gleichung   y = (1200 - 13x) / 8 = 150 - 13x/8 mit Bedingung y &lt; 100 - x lösen.<br>
+x ist daher ein Vielfaches von 8; da weiter aus 100 - x = 150 - 13x/8 für x der Wert 80 folgt, kommen für x nur 
+noch die Werte 88 und 96 in Frage.  x = 96 führt aber zu einem negativen y.<br><br>
+Daher gibt es nur die einzige Lösung:    x = 88, y = 7 und z = 5.<br><br>
+
+<b>Antwort: Es sind 88 Fasane, 7 Hasen und 5 Rehe.</b>
+</p>
+
+<p><a href="puzzle22.html">Zurück zur Aufgabenstellung</a></p>
+
+</div>
+<!-- EOF: CONTENT -->
+
+<div id="footer">
+<p><small>
+©1997 -
+2019 www.mathematik.ch | <a href="/search/"><img style="vertical-align:middle" width=27 height=27 src="/img/lupe.jpg" alt="Suche"></a>
+</small></p>
+</div>
+
+</div>
+</body>
+</html>

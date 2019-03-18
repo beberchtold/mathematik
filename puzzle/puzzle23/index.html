@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<title>Puzzle 23</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta NAME="Description" CONTENT="Puzzle23: Six Puzzle">
+<meta name="author" content="B.Berchtold">
+<LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
+<script async src="puzzle23_min.js"></script>
+<script async src="/script/show-hide.js"></script>
+</head>
+
+<body>
+<div class="page">
+<table class="c">
+<tr><td style="width:10%">
+<img width=28 height=27 src="/img/menuicon.png" style="cursor:pointer" title="Inhalt" alt="menu" onClick="ReverseDisplay()">
+</td><td class="c" style="width:80%">
+<a href="/"><img width=257 height=35 src="/img/mathematik.png" alt="mathematik.ch"></a>
+</td><td style="width:10%">&nbsp;</td></tr>
+</table>
+<div id="menu" style="display:none;">
+  <h4>Inhalt</h4>
+
+<ul>
+  <li><a href="/anwendungenmath/">Anwendungen + Unterrichtshilfen</a></li>
+  <li><a href="/puzzle/">Puzzles (Rätsel)</a></li> 
+  <li><a href="/spiele/">'Spiele'</a></li>
+  <li><a href="/spiele/euromillions/">Euromillions</a></li>
+  <li><a href="/spiele/swisslotto/">Swisslotto</a></li>
+  <li><a href="/geschichte/">Geschichte</a></li>
+  <li><a href="/mathematiker/">Mathematiker</a></li>
+  <li><a href="/zitate/">Zitate</a></li> 
+  <li><a href="/maturapruefungen/">Maturaprüfungen</a></li>
+  <li><a HREF="/witze/">Witze (+IQ-Test)</a></li>
+  <li><a HREF="/about.html">Kontakt</a></li>
+  <li><a HREF="/links.html">Links</a></li>
+  <li><a href="/search/">Suche</a></li>
+</ul></div>
+<!-- CONTENT -->
+<div id="content" style="display:block;">
+
+<h4>Puzzle 23: Sechs Hasen Puzzle</h4>
+<p>Dies ist eine (einfachere!) Variante des <a href="/puzzle/SixteenPuzzle/">SixteenPuzzles</a>. Das Ziel besteht darin, die drei
+gelben Hasen nach rechts und die drei grauen Hasen nach links zu bringen.<br> Ein Zug ist folgendermassen definiert:<br>
+Ein Hase kann um eine Position vorwärts in die Lücke verschoben werden oder 
+ein Hase kann über einen andern (beliebiger Farbe) vorwärts in die Lücke springen.<br>
+Klicken Sie auf einen Hasen, um mit ihm zu ziehen! Falls es ein zulässiger Zug ist, so wird der Zug durchgeführt.</p>
+<noscript>Bei Ihrem Browser muss JavaScript aktiviert sein.</noscript>
+
+<div class="colgroup-2">
+  <div class="col">
+    <div>
+    <img id="1" src="leer.png" style="width:14.2%;height:auto" alt=""><img id="2" src="leer.png" style="width:14.2%;height:auto" alt=""><img id="3" src="leer.png" style="width:14.2%;height:auto" alt=""><img id="4" src="leer.png" style="width:14.2%;height:auto" alt=""><img id="5" src="leer.png" style="width:14.2%;height:auto" alt=""><img id="6" src="leer.png" style="width:14.2%;height:auto" alt=""><img id="7" src="leer.png" style="width:14.2%;height:auto" alt="">
+	</div>
+	<div>
+    <img id="8" src="hase1.png" style="width:14.2%;height:auto" onClick="Pruefe(1)" alt="1"><img id="9" src="hase1.png" style="width:14.2%;height:auto" onClick="Pruefe(2)" alt="2"><img id="10" src="hase1.png" style="width:14.2%;height:auto" onClick="Pruefe(3)" alt="3"><img id="11" src="leer.png" style="width:14.2%;height:auto" onClick="Pruefe(4)" alt="4"><img id="12" src="hase2.png" style="width:14.2%;height:auto" onClick="Pruefe(5)" alt="5"><img id="13" src="hase2.png" style="width:14.2%;height:auto" onClick="Pruefe(6)" alt="6"><img id="14" src="hase2.png" style="width:14.2%;height:auto" onClick="Pruefe(7)" alt="7">                  
+	</div>
+  </div>
+  
+  <div class="col">
+  <p><a href="#" onClick="Zugruecknehmen()">Zug zurücknehmen</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="#" onClick="Wiederausfuehren()">Zug wieder ausführen</a><br><br>
+  <a href="">von vorne beginnen</a></p>
+
+  Zugnummer: <span id="Zugnummer">0</span><br><br>
+  <span id="Antwort">"Viel Erfolg!"</span>
+  </div>
+</div>  
+  
+<div style="text-align: right;">
+<p>4. März 2005 &nbsp;</p>
+</div>
+
+<p><a href="#" onClick="loesung()">Lösung</a></p>
+
+</div>
+<!-- EOF: CONTENT -->
+
+<div id="footer">
+<p><small>
+©1997 -
+2019 www.mathematik.ch | <a href="/search/"><img style="vertical-align:middle" width=27 height=27 src="/img/lupe.jpg" alt="Suche"></a>
+</small></p>
+</div>
+
+</div>
+</body>
+</html>

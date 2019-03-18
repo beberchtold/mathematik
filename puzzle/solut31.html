@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta NAME="Description" CONTENT="Lösung Mathematik Rätsel 31">
+<meta NAME="Keywords" CONTENT="mathematics,Logical,Puzzle,Denkaufgabe,Knacknuss,Mathematik,Schule,Algebra,Unterricht">
+<title>Lösung Puzzle 31: Wie heisst die 57-ste Zahl? (Lucas-Folge)</title>
+<LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
+<script async src="/script/show-hide.js"></script>
+</head>
+
+<body>
+<div class="page">
+<table class="c">
+<tr><td style="width:10%">
+<img width=28 height=27 src="/img/menuicon.png" style="cursor:pointer" title="Inhalt" alt="menu" onClick="ReverseDisplay()">
+</td><td class="c" style="width:80%">
+<a href="/"><img width=257 height=35 src="/img/mathematik.png" alt="mathematik.ch"></a>
+</td><td style="width:10%">&nbsp;</td></tr>
+</table>
+<div id="menu" style="display:none;">
+  <h4>Inhalt</h4>
+
+<ul>
+  <li><a href="/anwendungenmath/">Anwendungen + Unterrichtshilfen</a></li>
+  <li><a href="/puzzle/">Puzzles (Rätsel)</a></li> 
+  <li><a href="/spiele/">'Spiele'</a></li>
+  <li><a href="/spiele/euromillions/">Euromillions</a></li>
+  <li><a href="/spiele/swisslotto/">Swisslotto</a></li>
+  <li><a href="/geschichte/">Geschichte</a></li>
+  <li><a href="/mathematiker/">Mathematiker</a></li>
+  <li><a href="/zitate/">Zitate</a></li> 
+  <li><a href="/maturapruefungen/">Maturaprüfungen</a></li>
+  <li><a HREF="/witze/">Witze (+IQ-Test)</a></li>
+  <li><a HREF="/about.html">Kontakt</a></li>
+  <li><a HREF="/links.html">Links</a></li>
+  <li><a href="/search/">Suche</a></li>
+</ul></div>
+<!-- CONTENT -->
+<div id="content" style="display:block;">
+
+<h4>Lösung PUZZLE 31: Wie heisst die 57-ste Zahl?</h4>
+
+<p>Die rekursive Darstellung dieser Lucas-Folge lautet:</p>
+<p>
+   &nbsp;&nbsp; b<sub>1</sub> = 1 , b<sub>2</sub> = 3<br>
+   &nbsp;&nbsp; b<sub>n+2</sub> = b<sub>n+1</sub> + b<sub>n</sub> &nbsp;&nbsp; (n = 1, 2, 3, ...)
+</p>
+<p>
+Zum Suchen der expliziten Darstellung betrachtet man die allgemeine Lucas-Folge<br>
+b<sub>1</sub>,&nbsp;&nbsp; b<sub>2</sub> <br>
+b<sub>3</sub> = b<sub>2</sub> + b<sub>1</sub> <br>
+b<sub>4</sub> = b<sub>3</sub> + b<sub>2</sub> = <span style="color:red">1</span> b<sub>1</sub> + <span style="color:red">2</span> b<sub>2</sub> <br> 
+b<sub>5</sub> = b<sub>4</sub> + b<sub>3</sub> = <span style="color:red">2</span> b<sub>1</sub> + <span style="color:red">3</span> b<sub>2</sub> <br>
+b<sub>6</sub> = b<sub>5</sub> + b<sub>4</sub> = <span style="color:red">3</span> b<sub>1</sub> + <span style="color:red">5</span> b<sub>2</sub> <br>
+b<sub>7</sub> = b<sub>6</sub> + b<sub>5</sub> = <span style="color:red">5</span> b<sub>1</sub> + <span style="color:red">8</span> b<sub>2</sub> <br>
+....<br>
+Die roten Zahlen sind aber genau die Zahlen (a<sub>n</sub>) der Fibonacci-Folge. Es gilt daher<br>
+b<sub>n</sub> = b<sub>n-1</sub> + b<sub>n-2</sub> = <span style="color:red">a<sub>n-2</sub></span> b<sub>1</sub> + <span style="color:red">a<sub>n-1</sub></span> b<sub>2</sub> &nbsp;&nbsp; (n = 3, 4, 5, ...)<br>
+und damit gemäss der expliziten Darstellung der Fibonacci-Folge auf <a href="/anwendungenmath/fibonacci/">Fibonacci- und Lucas-Zahlen</a>:<br>
+<img src="img/solut31.lucas.png" width="441" height="45" alt="lucasfolge"><br>
+Die explizite Darstellung für die gesuchte Folge (b<sub>1</sub> = 1 , b<sub>2</sub> = 3) lautet daher:<br>
+<img src="img/solut31.lucas.loesung.png" width="419" height="45" alt="lucasfolge.loesung"><br>
+Also gilt:<br>
+<img src="img/solut31.b57.png" width="405" height="36" alt="b57"><br><br><br>
+Nun zum Grenzwert x der Quotientenfolge:<br>
+<img src="img/solut31.grenzwert.png" width="521" height="52" alt="grenzwert"><br>
+Dies führt auf die Gleichung x<sup>2</sup> - x - 1 = 0 (Goldener Schnitt). Ihre positive Lösung ist <br>
+<img src="img/solut31.goldenerSchnitt.png" width="181" height="36" alt="goldenerSchnitt">
+</p>
+
+<p><a href="puzzle31.html">Zurück zur Aufgabenstellung</a></p>
+
+</div>
+<!-- EOF: CONTENT -->
+
+<div id="footer">
+<p><small>
+©1997 -
+2019 www.mathematik.ch | <a href="/search/"><img style="vertical-align:middle" width=27 height=27 src="/img/lupe.jpg" alt="Suche"></a>
+</small></p>
+</div>
+
+</div>
+</body>
+</html>

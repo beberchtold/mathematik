@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Puzzle 9: Kryptogramm</title>
+<LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
+<script src="puzzle9_min.js"></script>
+<script async src="/script/show-hide.js"></script>
+</head>
+
+<body>
+<div class="page">
+<table class="c">
+<tr><td style="width:10%">
+<img width=28 height=27 src="/img/menuicon.png" style="cursor:pointer" title="Inhalt" alt="menu" onClick="ReverseDisplay()">
+</td><td class="c" style="width:80%">
+<a href="/"><img width=257 height=35 src="/img/mathematik.png" alt="mathematik.ch"></a>
+</td><td style="width:10%">&nbsp;</td></tr>
+</table>
+<div id="menu" style="display:none;">
+  <h4>Inhalt</h4>
+
+<ul>
+  <li><a href="/anwendungenmath/">Anwendungen + Unterrichtshilfen</a></li>
+  <li><a href="/puzzle/">Puzzles (Rätsel)</a></li> 
+  <li><a href="/spiele/">'Spiele'</a></li>
+  <li><a href="/spiele/euromillions/">Euromillions</a></li>
+  <li><a href="/spiele/swisslotto/">Swisslotto</a></li>
+  <li><a href="/geschichte/">Geschichte</a></li>
+  <li><a href="/mathematiker/">Mathematiker</a></li>
+  <li><a href="/zitate/">Zitate</a></li> 
+  <li><a href="/maturapruefungen/">Maturaprüfungen</a></li>
+  <li><a HREF="/witze/">Witze (+IQ-Test)</a></li>
+  <li><a HREF="/about.html">Kontakt</a></li>
+  <li><a HREF="/links.html">Links</a></li>
+  <li><a href="/search/">Suche</a></li>
+</ul></div>
+<!-- CONTENT -->
+<div id="content" style="display:block;">
+
+<h4>Puzzle 9: Kryptogramm</h4>
+
+<p>Gleiche Symbole bedeuten gleiche Ziffern</p>
+
+<table class="c">
+  <tr>
+    <td><img src="img/Image1.jpg" width="20" height="20" alt="A">
+    <img src="img/Image2.jpg" width="20" height="20" alt="B">
+    <img src="img/Image3.jpg" width="20" height="20" alt="C"></td>
+    <td><b>:</b></td>
+    <td><img src="img/Image3.jpg" width="20" height="20" alt="C">
+    <img src="img/Image4.jpg" width="20" height="20" alt="D"></td>
+    <td><b>=</b></td>
+    <td><img src="img/Image5.jpg" width="20" height="20" alt="E">
+    <img src="img/Image6.jpg" width="20" height="20" alt="F"></td>
+  </tr>
+  <tr>
+    <td><b>-</b></td>
+    <td>&nbsp;</td>
+    <td><b>x</b></td>
+    <td>&nbsp;</td>
+    <td><b>+</b></td>
+  </tr>
+  <tr>
+    <td><img src="img/Image6.jpg" width="20" height="20" alt="F">
+    <img src="img/Image4.jpg" width="20" height="20" alt="D">
+    <img src="img/Image6.jpg" width="20" height="20" alt="F"></td>
+    <td><b>+</b></td>
+    <td><img src="img/Image5.jpg" width="20" height="20" alt="E">
+    <img src="img/Image7.jpg" width="20" height="20" alt="G"></td>
+    <td><b>=</b></td>
+    <td><img src="img/Image1.jpg" width="20" height="20" alt="A">
+    <img src="img/Image8.jpg" width="20" height="20" alt="H">
+    <img src="img/Image4.jpg" width="20" height="20" alt="D"></td>
+  </tr>
+  <tr>
+    <td colspan="5"><hr style="height:1px"></td>
+  </tr>
+  <tr>
+    <td><img src="img/Image2.jpg" width="20" height="20" alt="B">
+    <img src="img/Image2.jpg" width="20" height="20" alt="B"></td>
+    <td><b>+</b></td>
+    <td><img src="img/Image6.jpg" width="20" height="20" alt="F">
+    <img src="img/Image7.jpg" width="20" height="20" alt="G">
+    <img src="img/Image1.jpg" width="20" height="20" alt="A"></td>
+    <td><b>=</b></td>
+    <td><img src="img/Image1.jpg" width="20" height="20" alt="A">
+    <img src="img/Image9.jpg" width="20" height="20" alt="I">
+    <img src="img/Image10.jpg" width="20" height="20" alt="J"></td>
+  </tr>
+</table>
+<br>
+<p>Als Hilfe zur Lösung können Sie das
+nachfolgende Formular benützen. Der Computer berechnet aber die Resultate <b>nicht!</b>
+Er ersetzt nur die von Ihnen gesetzten Ziffern in den gleichen Buchstaben und
+kontrolliert, ob Sie die Ziffer nicht bereits benützt haben. Klicken Sie dazu nach der
+Setzung einer Ziffer auf eine Stelle ausserhalb des Ziffernfeldes.<br>
+Zwischenergebnisse können Sie mit Hilfe von Store speichern. Mit Restore gelangen Sie
+schrittweise wieder zu den vorher abgespeicherten Zuständen zurück.<br>
+<small>(Ihr Browser muss allerdings JavaScript-fähig sein)</small></p>
+
+<form name="game">
+
+  <table class="c">
+    <tr>
+      <td><input type="text" name="T0" onChange="change(0)"
+      size="2" maxlength="1"><input type="text" name="T1" onChange="change(1)" size="2"
+      maxlength="1"><input type="text" name="T2" onChange="change(2)" size="2" maxlength="1"></td>
+      <td><b>:</b></td>
+      <td><input type="text" name="T3" onChange="change(3)"
+      size="2" maxlength="1"><input type="text" name="T4" onChange="change(4)" size="2" maxlength="1"></td>
+      <td><b>=</b></td>
+      <td><input type="text" name="T5" onChange="change(5)"
+      size="2" maxlength="1"><input type="text" name="T6" onChange="change(6)" size="2" maxlength="1"></td>
+    </tr>
+    <tr>
+      <td><b>-</b></td>
+      <td>&nbsp;</td>
+      <td><b>x</b></td>
+      <td>&nbsp;</td>
+      <td><b>+</b></td>
+    </tr>
+    <tr>
+      <td><input type="text" name="T7" onChange="change(7)" size="2" maxlength="1">
+      <input type="text" name="T8" onChange="change(8)" size="2" maxlength="1">
+      <input type="text" name="T9" onChange="change(9)" size="2" maxlength="1"></td>
+      <td><b>+</b></td>
+      <td><input type="text" name="T10" onChange="change(10)" size="2" maxlength="1">
+      <input type="text" name="T11" onChange="change(11)" size="2" maxlength="1"></td>
+      <td><b>=</b></td>
+      <td><input type="text" name="T12" onChange="change(12)" size="2" maxlength="1">
+      <input type="text" name="T13" onChange="change(13)" size="2" maxlength="1">
+      <input type="text" name="T14" onChange="change(14)" size="2" maxlength="1"></td>
+    </tr>
+    <tr>
+      <td colspan="5"><hr style="height:1px"></td>
+    </tr>
+    <tr>
+      <td><input type="text" name="T15" onChange="change(15)" size="2" maxlength="1">
+      <input type="text" name="T16" onChange="change(16)" size="2" maxlength="1"></td>
+      <td><b>+</b></td>
+      <td><input type="text" name="T17" onChange="change(17)" size="2" maxlength="1">
+      <input type="text" name="T18" onChange="change(18)" size="2" maxlength="1">
+      <input type="text" name="T19" onChange="change(19)" size="2" maxlength="1"></td>
+      <td><b>=</b></td>
+      <td><input type="text" name="T20" onChange="change(20)" size="2" maxlength="1">
+      <input type="text" name="T21" onChange="change(21)" size="2" maxlength="1">
+      <input type="text" name="T22" onChange="change(22)" size="2" maxlength="1"></td>
+    </tr>
+  </table>
+
+  <p><input type="button" name="Store" value="Store" onClick="push()">
+  <input type="button" name="Restore" value="Restore" onClick="restore()">
+  <input type="button" name="Finished" value="Finished" onClick="finished()"> </p>
+
+  <p><input type="text" name="marquee" onFocus="this.blur()" size="26"> </p>
+
+</form>
+
+<div style="text-align: right;">
+<p>10. Januar 1999&nbsp;</p>
+</div>
+
+<p><a href="solut9.html">Lösung</a></p>
+
+</div>
+<!-- EOF: CONTENT -->
+
+<div id="footer">
+<p><small>
+©1997 -
+2019 www.mathematik.ch | <a href="/search/"><img style="vertical-align:middle" width=27 height=27 src="/img/lupe.jpg" alt="Suche"></a>
+</small></p>
+</div>
+
+</div>
+</body>
+</html>

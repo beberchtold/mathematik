@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta NAME="Description" CONTENT="Puzzle20: Eulersche Quadrate">
+<meta name="author" content="B.Berchtold">
+<title>Puzzle 20: Eulersche Quadrate</title>
+<LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
+<script src="puzzle20_min.js"></script>
+<script async src="/script/show-hide.js"></script>
+</head>
+
+<body>
+<div class="page">
+<table class="c">
+<tr><td style="width:10%">
+<img width=28 height=27 src="/img/menuicon.png" style="cursor:pointer" title="Inhalt" alt="menu" onClick="ReverseDisplay()">
+</td><td class="c" style="width:80%">
+<a href="/"><img width=257 height=35 src="/img/mathematik.png" alt="mathematik.ch"></a>
+</td><td style="width:10%">&nbsp;</td></tr>
+</table>
+<div id="menu" style="display:none;">
+  <h4>Inhalt</h4>
+
+<ul>
+  <li><a href="/anwendungenmath/">Anwendungen + Unterrichtshilfen</a></li>
+  <li><a href="/puzzle/">Puzzles (Rätsel)</a></li> 
+  <li><a href="/spiele/">'Spiele'</a></li>
+  <li><a href="/spiele/euromillions/">Euromillions</a></li>
+  <li><a href="/spiele/swisslotto/">Swisslotto</a></li>
+  <li><a href="/geschichte/">Geschichte</a></li>
+  <li><a href="/mathematiker/">Mathematiker</a></li>
+  <li><a href="/zitate/">Zitate</a></li> 
+  <li><a href="/maturapruefungen/">Maturaprüfungen</a></li>
+  <li><a HREF="/witze/">Witze (+IQ-Test)</a></li>
+  <li><a HREF="/about.html">Kontakt</a></li>
+  <li><a HREF="/links.html">Links</a></li>
+  <li><a href="/search/">Suche</a></li>
+</ul></div>
+<!-- CONTENT -->
+<div id="content" style="display:block;">
+
+<h4>Puzzle 20: Eulersche Quadrate</h4>
+<p>Die Bausteine sind so auf das Zielfeld zu platzieren, 
+dass in jeder Zeile und Kolonne genau eine Farbe und genau eine Ziffer steht!<br>
+Klicken Sie zuerst auf einen Baustein. Er wandert dann in die Zwischenablage.
+Nun klicken Sie auf das gewünschte Feld im Zielfeld.<br>
+Einen Baustein im Zielfeld können Sie mit Mausklick wieder zurück transferieren.</p>
+
+<noscript>Bei Ihrem Browser muss JavaScript aktiviert sein.</noscript>
+
+<div class="colgroup-2">
+<div class="col">
+<table><tr><td>
+<div style="width:210px;height:40px;display:block;">
+<img id="1" src="1.jpg" width="40" height="40" onClick="Ziehe(1)" alt="1"><img id="2" src="2.jpg" width="40" height="40" onClick="Ziehe(2)" alt="2"><img id="3" src="3.jpg" width="40" height="40" onClick="Ziehe(3)" alt="3"><img id="4" src="weiss.jpg" width="40" height="40" onClick="Ziehe(4)" alt="4"><img id="5" src="weiss.jpg" width="40" height="40" onClick="Ziehe(5)" alt="5">
+</div>
+<div style="width:210px;height:40px;display:block;">
+<img id="6" src="6.jpg" width="40" height="40" onClick="Ziehe(6)" alt="6"><img id="7" src="7.jpg" width="40" height="40" onClick="Ziehe(7)" alt="7"><img id="8" src="8.jpg" width="40" height="40" onClick="Ziehe(8)" alt="8"><img id="9" src="weiss.jpg" width="40" height="40" onClick="Ziehe(9)" alt="9"><img id="10" src="weiss.jpg" width="40" height="40" onClick="Ziehe(10)" alt="10">
+</div>
+<div style="width:210px;height:40px;display:block;">
+<img id="11" src="11.jpg" width="40" height="40" onClick="Ziehe(11)" alt="11"><img id="12" src="12.jpg" width="40" height="40" onClick="Ziehe(12)" alt="12"><img id="13" src="13.jpg" width="40" height="40" onClick="Ziehe(13)" alt="13"><img id="14" src="weiss.jpg" width="40" height="40" onClick="Ziehe(14)" alt="14"><img id="15" src="weiss.jpg" width="40" height="40" onClick="Ziehe(15)" alt="15">
+</div>
+<div style="width:210px;height:40px;display:block;">
+<img id="16" src="weiss.jpg" width="40" height="40" onClick="Ziehe(16)" alt="16"><img id="17" src="weiss.jpg" width="40" height="40" onClick="Ziehe(17)" alt="17"><img id="18" src="weiss.jpg" width="40" height="40" onClick="Ziehe(18)" alt="18"><img id="19" src="weiss.jpg" width="40" height="40" onClick="Ziehe(19)" alt="19"><img id="20" src="weiss.jpg" width="40" height="40" onClick="Ziehe(20)" alt="20">
+</div>
+<div style="width:210px;height:40px;display:block;">
+<img id="21" src="weiss.jpg" width="40" height="40" onClick="Ziehe(21)" alt="21"><img id="22" src="weiss.jpg" width="40" height="40" onClick="Ziehe(22)" alt="22"><img id="23" src="weiss.jpg" width="40" height="40" onClick="Ziehe(23)" alt="23"><img id="24" src="weiss.jpg" width="40" height="40" onClick="Ziehe(24)" alt="24"><img id="25" src="weiss.jpg" width="40" height="40" onClick="Ziehe(25)" alt="25">
+</div>
+</td><td style="width:100px;vertical-align:top;">
+<img id="26" src="leer.jpg" width="40" height="40" alt="zwischen">
+<br><br><br><br>
+<div id="label">Viel Erfolg!</div>
+</td></tr></table>
+</div>
+
+<div class="col">
+<div style="width:200px;height:40px;display:block;">
+<img id="27" src="leer.jpg" width="40" height="40" onClick="Zurueck(27)" alt="27"><img id="28" src="leer.jpg" width="40" height="40" onClick="Zurueck(28)" alt="28"><img id="29" src="leer.jpg" width="40" height="40" onClick="Zurueck(29)" alt="29"><img id="30" src="weiss.jpg" width="40" height="40" onClick="Zurueck(30)" alt="30"><img id="31" src="weiss.jpg" width="40" height="40" onClick="Zurueck(31)" alt="31">
+</div>
+<div style="width:200px;height:40px;display:block;">
+<img id="32" src="leer.jpg" width="40" height="40" onClick="Zurueck(32)" alt="32"><img id="33" src="leer.jpg" width="40" height="40" onClick="Zurueck(33)" alt="33"><img id="34" src="leer.jpg" width="40" height="40" onClick="Zurueck(34)" alt="34"><img id="35" src="weiss.jpg" width="40" height="40" onClick="Zurueck(35)" alt="35"><img id="36" src="weiss.jpg" width="40" height="40" onClick="Zurueck(36)" alt="36">
+</div>
+<div style="width:200px;height:40px;display:block;">
+<img id="37" src="leer.jpg" width="40" height="40" onClick="Zurueck(37)" alt="37"><img id="38" src="leer.jpg" width="40" height="40" onClick="Zurueck(38)" alt="38"><img id="39" src="leer.jpg" width="40" height="40" onClick="Zurueck(39)" alt="39"><img id="40" src="weiss.jpg" width="40" height="40" onClick="Zurueck(40)" alt="40"><img id="41" src="weiss.jpg" width="40" height="40" onClick="Zurueck(41)" alt="41">
+</div>
+<div style="width:200px;height:40px;display:block;">
+<img id="42" src="weiss.jpg" width="40" height="40" onClick="Zurueck(42)" alt="42"><img id="43" src="weiss.jpg" width="40" height="40" onClick="Zurueck(43)" alt="43"><img id="44" src="weiss.jpg" width="40" height="40" onClick="Zurueck(44)" alt="44"><img id="45" src="weiss.jpg" width="40" height="40" onClick="Zurueck(45)" alt="45"><img id="46" src="weiss.jpg" width="40" height="40" onClick="Zurueck(46)" alt="46">
+</div>
+<div style="width:200px;height:40px;display:block;">
+<img id="47" src="weiss.jpg" width="40" height="40" onClick="Zurueck(47)" alt="47"><img id="48" src="weiss.jpg" width="40" height="40" onClick="Zurueck(48)" alt="48"><img id="49" src="weiss.jpg" width="40" height="40" onClick="Zurueck(49)" alt="49"><img id="50" src="weiss.jpg" width="40" height="40" onClick="Zurueck(50)" alt="50"><img id="51" src="weiss.jpg" width="40" height="40" onClick="Zurueck(51)" alt="51">
+</div>
+</div>
+</div>
+
+<p>Hier können Sie die Feldgrösse neu setzen oder von vorne beginnen:<br>
+<a href="#" onClick="Setze_n(3)">Grösse 3x3</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="#" onClick="Setze_n(4)">Grösse 4x4</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="#" onClick="Setze_n(5)">Grösse 5x5</a>
+</p>   
+<p><a href="/mathematiker/euler.html">Leonhard Euler</a> hat sich im 18. Jahrhundert mit solchen Quadraten beschäftigt. 
+Er vermutete um 1779, dass es für n = 6 keine Lösung gibt. Den Beweis dazu gab es aber erst um 1900.<br>
+Seit Mitte des 20. Jahrhunderts weiss man, dass es für alle natürlichen n ausser für n = 2 und n = 6 Lösungen gibt.</p>
+<p>Im Zusammenhang mit den Eulerschen Quadraten steht auch das <a href="/spiele/N_Damenproblem/">NxN Damenproblem.</a></p>
+<p><a href="http://www.hp-gramatke.de/magic_sq/german/page0090.htm" target="_blank">Weitere Infos zu Lateinischen und Eulerschen Quadraten</a> (externer Link).</p>
+<div style="text-align: right;">
+<p>8. Oktober 2003 &nbsp;</p>
+</div>
+
+<p><a href="solut.html">Lösung</a></p>
+
+</div>
+<!-- EOF: CONTENT -->
+
+<div id="footer">
+<p><small>
+©1997 -
+2019 www.mathematik.ch | <a href="/search/"><img style="vertical-align:middle" width=27 height=27 src="/img/lupe.jpg" alt="Suche"></a>
+</small></p>
+</div>
+
+</div>
+</body>
+</html>

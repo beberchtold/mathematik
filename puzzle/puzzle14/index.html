@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="de">
+<HEAD>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta NAME="Description" CONTENT="Puzzle14: Schiebepuzzle">
+<TITLE>Puzzle14: Schiebepuzzle</title>
+<LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
+<script src="puzzle14_min.js"></script>
+<script async src="/script/show-hide.js"></script>
+</HEAD>
+
+<body>
+<div class="page">
+<table class="c">
+<tr><td style="width:10%">
+<img width=28 height=27 src="/img/menuicon.png" style="cursor:pointer" title="Inhalt" alt="menu" onClick="ReverseDisplay()">
+</td><td class="c" style="width:80%">
+<a href="/"><img width=257 height=35 src="/img/mathematik.png" alt="mathematik.ch"></a>
+</td><td style="width:10%">&nbsp;</td></tr>
+</table>
+<div id="menu" style="display:none;">
+  <h4>Inhalt</h4>
+
+<ul>
+  <li><a href="/anwendungenmath/">Anwendungen + Unterrichtshilfen</a></li>
+  <li><a href="/puzzle/">Puzzles (Rätsel)</a></li> 
+  <li><a href="/spiele/">'Spiele'</a></li>
+  <li><a href="/spiele/euromillions/">Euromillions</a></li>
+  <li><a href="/spiele/swisslotto/">Swisslotto</a></li>
+  <li><a href="/geschichte/">Geschichte</a></li>
+  <li><a href="/mathematiker/">Mathematiker</a></li>
+  <li><a href="/zitate/">Zitate</a></li> 
+  <li><a href="/maturapruefungen/">Maturaprüfungen</a></li>
+  <li><a HREF="/witze/">Witze (+IQ-Test)</a></li>
+  <li><a HREF="/about.html">Kontakt</a></li>
+  <li><a HREF="/links.html">Links</a></li>
+  <li><a href="/search/">Suche</a></li>
+</ul></div>
+<!-- CONTENT -->
+<div id="content" style="display:block;">
+
+<h4>Puzzle 14: Schiebepuzzle</h4>  
+
+<p>
+Stellen Sie durch horizontales und vertikales Verschieben der einzelnen
+Bausteine (Zuerst Checkbox der Richtung wählen, dann Click auf Baustein) die Vorlage her!<br>
+Der Baustein bewegt sich so lange, bis er auf den nächsten Stein oder
+einen Farbblock trifft. Stösst er auf einen Farbblock, so nimmt er dessen Farbe an!
+</p>
+
+<div class="colgroup-2">
+  <div class="col">
+    Vorlage: <img src="vorlage14.png" width="104" height="105" style="vertical-align:top" alt="vorlage">
+	<p>Ihren jeweils letzten Zug können Sie durch Klicken auf 'Zug -' rückgängig machen.<br>
+    Klick auf 'Clear' stellt Anfangszustand her.</p>
+    <p><input type="button" id="Zug-" value="Zug-" onclick="back()">
+	   <input type="button" value="Clear" onclick="doClear()" style="margin-left:40px">
+	   <span id="message" style="margin-left:40px">  </span>
+	</p>	
+	<p>Verschieben des Bausteins nach:<br>
+	<input id="links" type="checkbox" onclick="OnChangeCheckbox1 (this)"> links &nbsp;&nbsp;&nbsp;&nbsp;
+	<input id="rechts" type="checkbox" onclick="OnChangeCheckbox2 (this)"> rechts &nbsp;&nbsp;&nbsp;&nbsp;
+	<input id="oben" type="checkbox" onclick="OnChangeCheckbox3 (this)"> oben &nbsp;&nbsp;&nbsp;&nbsp;
+	<input id="unten" type="checkbox" onclick="OnChangeCheckbox4 (this)"> unten</p>		
+  </div>
+        
+  <div class="col">
+       <canvas id="myCanvas" width=336 height=336>Ihr Browser kann kein Canvas!</canvas>
+  </div>
+</div>	   
+
+<div style="text-align: right;">
+<p>6. April 2001 &nbsp;</p>
+</div>
+
+<p><a href="solut14.html">Lösung</a></p>
+
+</div>
+<!-- EOF: CONTENT -->
+
+<div id="footer">
+<p><small>
+©1997 -
+2019 www.mathematik.ch | <a href="/search/"><img style="vertical-align:middle" width=27 height=27 src="/img/lupe.jpg" alt="Suche"></a>
+</small></p>
+</div>
+
+</div>
+</body>
+</html>

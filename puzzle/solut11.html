@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lösung Puzzle 11</title>
+<LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
+<script async src="/script/show-hide.js"></script>
+</head>
+
+<body>
+<div class="page">
+<table class="c">
+<tr><td style="width:10%">
+<img width=28 height=27 src="/img/menuicon.png" style="cursor:pointer" title="Inhalt" alt="menu" onClick="ReverseDisplay()">
+</td><td class="c" style="width:80%">
+<a href="/"><img width=257 height=35 src="/img/mathematik.png" alt="mathematik.ch"></a>
+</td><td style="width:10%">&nbsp;</td></tr>
+</table>
+<div id="menu" style="display:none;">
+  <h4>Inhalt</h4>
+
+<ul>
+  <li><a href="/anwendungenmath/">Anwendungen + Unterrichtshilfen</a></li>
+  <li><a href="/puzzle/">Puzzles (Rätsel)</a></li> 
+  <li><a href="/spiele/">'Spiele'</a></li>
+  <li><a href="/spiele/euromillions/">Euromillions</a></li>
+  <li><a href="/spiele/swisslotto/">Swisslotto</a></li>
+  <li><a href="/geschichte/">Geschichte</a></li>
+  <li><a href="/mathematiker/">Mathematiker</a></li>
+  <li><a href="/zitate/">Zitate</a></li> 
+  <li><a href="/maturapruefungen/">Maturaprüfungen</a></li>
+  <li><a HREF="/witze/">Witze (+IQ-Test)</a></li>
+  <li><a HREF="/about.html">Kontakt</a></li>
+  <li><a HREF="/links.html">Links</a></li>
+  <li><a href="/search/">Suche</a></li>
+</ul></div>
+<!-- CONTENT -->
+<div id="content" style="display:block;">
+
+<h4>Lösung Puzzle Nr 11: Prinz und Prinzessin</h4>
+
+<p>Das Rätsel lässt vom deutschen Satzbau her (letzte Zeile!) zwei Interpretationen zu:<br>
+<b>A</b> mit 'Summe der beiden Alter' ist die Summe der damaligen Alter gemeint<br>
+<b>B</b> mit 'Summe der beiden Alter' ist die Summe der jetzigen Alter gemeint<br>
+<br>
+Zuerst zu <b>A:</b><br>
+Das Alter der Prinzessin kann nur dann halb so gross sein wie die Summe der
+beiden Alter, wenn die beiden gleich alt sind! ( u = 0.5(u + v) )<br>
+Die weiteren Bedingungen sind dann trivialerweise erfüllt, lassen aber keine
+Bestimmung des eigentlichen Alters zu.<br>
+<b>Resultat: Prinz und Prinzessin sind gleich alt!</b>
+</p>
+
+<p>Wer lieber einen komplizierteren, algebraischen Lösungsweg haben will:
+</p>
+
+  <table style="width:100%;border:1px solid;">
+    <tr>
+      <td style="width:25%;">&nbsp;</td>
+      <td style="width:25%; background-color:#99CCFF" class="c">Prinzessin</td>
+      <td style="width:25%; background-color:#FF3300" class="c">Prinz</td>
+      <td style="width:25%;">&nbsp;</td>
+    </tr>
+    <tr>
+      <td>in Zukunft (in x-y Jahren)</td>
+      <td class="c">2z</td>
+      <td class="c">x</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>Differenz = x - y</td>
+    </tr>
+    <tr>
+      <td style="background-color:#FFCC00">jetzt:</td>
+      <td class="c" style="background-color:#FFCC00">x</td>
+      <td class="c" style="background-color:#FFCC00">y</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>Differenz = y - z</td>
+    </tr>
+    <tr>
+      <td>früher (vor y-z Jahren)</td>
+      <td class="c">0.5(x-(y-z)+z)</td>
+      <td class="c">z</td>
+      <td>&nbsp;</td>
+    </tr>
+  </table>
+
+<p>Dies ergibt die drei Gleichungen:</p>
+
+  <table style="width:350px;">
+    <tr>
+      <td style="width:60%;">x + x - y = 2z</td>
+      <td style="width:40%;">(1)</td>
+    </tr>
+    <tr>
+      <td>0.5(x-y+2z) + y - z = x</td>
+      <td>(2)</td>
+    </tr>
+    <tr>
+      <td>0.5(x-y+2z) + x - z = 2z</td>
+      <td>(3)</td>
+    </tr>
+  </table>
+
+<p>Wer das Gleichungssystem auflöst, erkennt  x = y = 2z, Gleichungen nicht linear unabhängig.</p>
+<br>
+<p><b>B</b> Stellt man das Gleichungssystem analog zu A für die Interpretation B auf, so gilt:</p>
+
+    <table style="width:350px;">
+      <tr>
+        <td style="width:60%;">x + x - y = 2z</td>
+        <td style="width:40%;">(1)&nbsp; wie bei A</td>
+      </tr>
+      <tr>
+        <td>0.5(x+y) + y - z = x</td>
+        <td>(2)</td>
+      </tr>
+      <tr>
+        <td>0.5(x+y) + x - z = 2z</td>
+        <td>(3)</td>
+      </tr>
+    </table>
+
+  <p>Einsetzen von y = 2x - 2z aus Gl (1) in die
+  Gleichungen (2) und (3) führt auf dieselbe Gleichung 2.5x = 4z, also 5x = 8z.<br>
+  Eingesetzt in y = 2x - 2z liefert dies das Ergebnis 5y = 6z.<br>
+  Verlangt man ganzzahlige Lösungen, so gilt:
+</p>
+
+<p><b>Resultat</b>: <b>Alter der Prinzessin = 1.6z und Alter des Prinzen = 1.2z 
+  mit z = 5, 10, 15, 20 usw.</b><br>
+   <br>
+  Die ersten möglichen Resultate für das jetzige Alter lauten daher:
+</p>
+
+  <table style="width:300px">
+    <tr>
+      <td style="width:50%; background-color:#99CCFF" class="c">Prinzessin</td>
+      <td style="width:50%; background-color:#FF3300" class="c">Prinz</td>
+    </tr>
+    <tr>
+      <td class="c" style="background-color:#FFCC00">&nbsp;8</td>
+      <td class="c" style="background-color:#FFCC00">6</td>
+    </tr>
+    <tr>
+      <td class="c" style="background-color:#FFCC00">16</td>
+      <td class="c" style="background-color:#FFCC00">12</td>
+    </tr>
+    <tr>
+      <td class="c" style="background-color:#FFCC00">24</td>
+      <td class="c" style="background-color:#FFCC00">18</td>
+    </tr>
+    <tr>
+      <td class="c" style="background-color:#FFCC00">32</td>
+      <td class="c" style="background-color:#FFCC00">24</td>
+    </tr>
+    <tr>
+      <td class="c" style="background-color:#FFCC00">40</td>
+      <td class="c" style="background-color:#FFCC00">30</td>
+    </tr>
+    <tr>
+      <td class="c" style="background-color:#FFCC00">...</td>
+      <td class="c" style="background-color:#FFCC00">...</td>
+    </tr>
+  </table>
+
+<p><a href="puzzle11.html">Zurück zum aktuellen Puzzle</a></p>
+
+</div>
+<!-- EOF: CONTENT -->
+
+<div id="footer">
+<p><small>
+©1997 -
+2019 www.mathematik.ch | <a href="/search/"><img style="vertical-align:middle" width=27 height=27 src="/img/lupe.jpg" alt="Suche"></a>
+</small></p>
+</div>
+
+</div>
+</body>
+</html>

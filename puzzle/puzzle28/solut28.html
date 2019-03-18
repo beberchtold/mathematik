@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lösung Puzzle 28: Das Perlen-Armband</title>
+<LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
+<script async src="/script/show-hide.js"></script>
+</head>
+
+<body>
+<div class="page">
+<table class="c">
+<tr><td style="width:10%">
+<img width=28 height=27 src="/img/menuicon.png" style="cursor:pointer" title="Inhalt" alt="menu" onClick="ReverseDisplay()">
+</td><td class="c" style="width:80%">
+<a href="/"><img width=257 height=35 src="/img/mathematik.png" alt="mathematik.ch"></a>
+</td><td style="width:10%">&nbsp;</td></tr>
+</table>
+<div id="menu" style="display:none;">
+  <h4>Inhalt</h4>
+
+<ul>
+  <li><a href="/anwendungenmath/">Anwendungen + Unterrichtshilfen</a></li>
+  <li><a href="/puzzle/">Puzzles (Rätsel)</a></li> 
+  <li><a href="/spiele/">'Spiele'</a></li>
+  <li><a href="/spiele/euromillions/">Euromillions</a></li>
+  <li><a href="/spiele/swisslotto/">Swisslotto</a></li>
+  <li><a href="/geschichte/">Geschichte</a></li>
+  <li><a href="/mathematiker/">Mathematiker</a></li>
+  <li><a href="/zitate/">Zitate</a></li> 
+  <li><a href="/maturapruefungen/">Maturaprüfungen</a></li>
+  <li><a HREF="/witze/">Witze (+IQ-Test)</a></li>
+  <li><a HREF="/about.html">Kontakt</a></li>
+  <li><a HREF="/links.html">Links</a></li>
+  <li><a href="/search/">Suche</a></li>
+</ul></div>
+<!-- CONTENT -->
+<div id="content" style="display:block;">
+
+<h4>Lösung PUZZLE 28: Das Perlen-Armband</h4>
+
+<p><b>Es gibt total 92 derartige Armbänder.</b></p>
+<p>
+Zuerst zur Farbwahl: Sind die Anzahlen der Perlen der drei Farben verschieden, so gibt es 3!=6
+Möglichkeiten. Sind genau zwei der drei Anzahlen gleich, so gibt es 3 Möglichkeiten; sind alle 
+drei Anzahlen gleich (einziger Fall (2,2,2) ), so gibt es nur eine Möglichkeit.  
+</p>
+<p><b>Einfarbige Bänder</b></p>
+<p>(6,0,0): Hier gibt es keine weiteren Permutationen. Also 3 Armbänder.  
+</p>
+<p><b>Zweifarbige Bänder</b></p>
+<p>(5,1,0): Hier gibt es keine weiteren Permutationen. Also 3! = 6 Armbänder.</p>
+
+<p>(4,2,0): Zu jeder der 6 Möglichkeiten von der Farbwahl kommen je 3 weitere Permutationen hinzu. 
+Also 6*3 = 18 Armbänder.<br>
+<img src="(4,2,0).klein.jpg" width=300 height=100 alt="(4,2,0)">
+</p>
+<p>(3,3,0): Zu jeder der 3 Möglichkeiten von der Farbwahl kommen je 3 weitere Permutationen hinzu. 
+Also 3*3 = 9 Armbänder.<br>  
+<img src="(3,3,0).klein.jpg" width=300 height=100 alt="(3,3,0)">
+</p>
+<p><b>Dreifarbige Bänder</b></p>
+<p>(4,1,1): Zu jeder der 3 Möglichkeiten von der Farbwahl kommen je 3 weitere Permutationen hinzu. 
+Also 3*3 = 9 Armbänder.<br>
+<img src="(4,1,1).klein.jpg" width=300 height=100 alt="(4,1,1)">
+</p>
+<p>(3,2,1): Zu jeder der 6 Möglichkeiten von der Farbwahl kommen je 6 weitere Permutationen hinzu. 
+Also 6*6 = 36 Armbänder.<br>
+<img src="(3,2,1).klein.jpg" width=600 height=100 alt="(3,2,1)">
+</p>
+<p>(2,2,2): Hier gibt es 11 Permutationen. Also 1*11 = 11 Armbänder. <br>
+<img src="(2,2,2).klein.jpg" width=600 height=200 alt="(2,2,2)">
+</p>
+<p>Insgesamt gibt es daher 3 + 6 + 18 + 9 + 9 + 36 + 11 = <b>92</b> Armbänder.</p>
+
+<p><a href="./">Zurück zur Aufgabenstellung</a></p>
+
+</div>
+<!-- EOF: CONTENT -->
+
+<div id="footer">
+<p><small>
+©1997 -
+2019 www.mathematik.ch | <a href="/search/"><img style="vertical-align:middle" width=27 height=27 src="/img/lupe.jpg" alt="Suche"></a>
+</small></p>
+</div>
+
+</div>
+</body>
+</html>

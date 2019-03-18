@@ -1,0 +1,1 @@
+function chkFormular(){if(""==document.bi.n.value)return alert("Wert für n eingeben!"),document.bi.n.focus(),!1;var e=parseInt(document.bi.n.value);return 0>=e||e>35||isNaN(e)?(alert("falscher Wert für n"),document.bi.n.value="",document.bi.n.focus(),!1):(document.bi.n.value=e,void 0)}

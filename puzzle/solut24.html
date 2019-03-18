@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lösung Puzzle 24: Distanz vom "Löwen" zum "Bären"</title>
+<LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
+<script async src="/script/show-hide.js"></script>
+</head>
+
+<body>
+<div class="page">
+<table class="c">
+<tr><td style="width:10%">
+<img width=28 height=27 src="/img/menuicon.png" style="cursor:pointer" title="Inhalt" alt="menu" onClick="ReverseDisplay()">
+</td><td class="c" style="width:80%">
+<a href="/"><img width=257 height=35 src="/img/mathematik.png" alt="mathematik.ch"></a>
+</td><td style="width:10%">&nbsp;</td></tr>
+</table>
+<div id="menu" style="display:none;">
+  <h4>Inhalt</h4>
+
+<ul>
+  <li><a href="/anwendungenmath/">Anwendungen + Unterrichtshilfen</a></li>
+  <li><a href="/puzzle/">Puzzles (Rätsel)</a></li> 
+  <li><a href="/spiele/">'Spiele'</a></li>
+  <li><a href="/spiele/euromillions/">Euromillions</a></li>
+  <li><a href="/spiele/swisslotto/">Swisslotto</a></li>
+  <li><a href="/geschichte/">Geschichte</a></li>
+  <li><a href="/mathematiker/">Mathematiker</a></li>
+  <li><a href="/zitate/">Zitate</a></li> 
+  <li><a href="/maturapruefungen/">Maturaprüfungen</a></li>
+  <li><a HREF="/witze/">Witze (+IQ-Test)</a></li>
+  <li><a HREF="/about.html">Kontakt</a></li>
+  <li><a HREF="/links.html">Links</a></li>
+  <li><a href="/search/">Suche</a></li>
+</ul></div>
+<!-- CONTENT -->
+<div id="content" style="display:block;">
+
+<h4>Lösung PUZZLE 24: Wie weit ist es vom "Löwen" zum "Bären" ?</h4>
+
+<p><img src="img/solut24.png" style="width:100%;height:auto;max-width:495px" alt="solut24"></p>
+<p><b>Resultat: Vom "Löwen" zum "Bären" ist es genau 1000 Meter weit</b></p>
+
+<p>Beweis:<br>
+Die Strecke vom "Löwen" zum "Bären" messe x Meter. Die Geschwindigkeit von Bieri sei v<sub>B</sub> Meter pro 
+Minute, diejenige von Weinhold sei v<sub>W</sub> Meter pro Minute.<br>
+In derselben Zeit t legt dann Bieri bis zum Treffpunkt T (0.5x + 100) Meter, Weinhold (0.5x - 100) Meter 
+zurück.<br>
+Es gelten also die zwei Gleichungen:<br>
+(1) &nbsp;&nbsp;&nbsp; v<sub>B</sub> * t = 0.5x + 100<br>
+(2) &nbsp;&nbsp;&nbsp; v<sub>W</sub> * t = 0.5x - 100<br>
+Nach dem Treffpunkt legt Bieri die Strecke der Länge (0.5x - 100) Meter mit Geschwindigkeit 0.5v<sub>B</sub> in 8 
+Minuten, Weinhold die Strecke (0.5x + 100) Meter mit Geschwindigkeit 0.5v<sub>W</sub> in 18 Minuten zurück. Also gilt:<br>
+(3) &nbsp;&nbsp;&nbsp; 0.5v<sub>B</sub> * 8 = 0.5x - 100<br>
+(4) &nbsp;&nbsp;&nbsp; 0.5v<sub>W</sub> * 18 = 0.5x + 100<br><br>
+Dividiert man (1) durch (2) (t und v<sub>W</sub> > 0), so erhält man dasselbe Resultat wie bei der Division von (4) durch (3):<br>
+(5) &nbsp;&nbsp;&nbsp; v<sub>B</sub> / v<sub>W</sub> = (0.5x + 100) / (0.5x - 100) = 9v<sub>W</sub> / 4v<sub>B</sub> <br>
+Also gilt 
+4v<sub>B</sub><sup>2</sup> = 9v<sub>W</sub><sup>2</sup><br>
+Zieht man die Wurzel (Betrag unnötig, da die Geschwindigkeiten positiv sein müssen), so folgt:<br>
+2v<sub>B</sub> = 3v<sub>W</sub> <br>
+Setzt man dieses Resultat in Gleichung (5) ein und multipliziert mit 2, so gilt:<br>
+3v<sub>W</sub> / v<sub>W</sub> = (x + 200) / (0.5x - 100)<br>
+v<sub>W</sub> lässt sich wegkürzen und die Auflösung der entstandenen Gleichung ergibt: x = 1000
+</p>
+
+<p><a href="puzzle24.html">Zurück zur Aufgabenstellung</a></p>
+
+</div>
+<!-- EOF: CONTENT -->
+
+<div id="footer">
+<p><small>
+©1997 -
+2019 www.mathematik.ch | <a href="/search/"><img style="vertical-align:middle" width=27 height=27 src="/img/lupe.jpg" alt="Suche"></a>
+</small></p>
+</div>
+
+</div>
+</body>
+</html>

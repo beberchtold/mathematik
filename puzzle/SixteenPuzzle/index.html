@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Puzzle 16</title>
+<meta NAME="Description" CONTENT="Puzzle16: Sixteen Puzzle">
+<meta name="author" content="B.Berchtold">
+<script src="puzzle16_min.js"></script>
+<LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
+<script async src="/script/show-hide.js"></script>
+</head>
+
+<body>
+<div class="page">
+<table class="c">
+<tr><td style="width:10%">
+<img width=28 height=27 src="/img/menuicon.png" style="cursor:pointer" title="Inhalt" alt="menu" onClick="ReverseDisplay()">
+</td><td class="c" style="width:80%">
+<a href="/"><img width=257 height=35 src="/img/mathematik.png" alt="mathematik.ch"></a>
+</td><td style="width:10%">&nbsp;</td></tr>
+</table>
+<div id="menu" style="display:none;">
+  <h4>Inhalt</h4>
+
+<ul>
+  <li><a href="/anwendungenmath/">Anwendungen + Unterrichtshilfen</a></li>
+  <li><a href="/puzzle/">Puzzles (Rätsel)</a></li> 
+  <li><a href="/spiele/">'Spiele'</a></li>
+  <li><a href="/spiele/euromillions/">Euromillions</a></li>
+  <li><a href="/spiele/swisslotto/">Swisslotto</a></li>
+  <li><a href="/geschichte/">Geschichte</a></li>
+  <li><a href="/mathematiker/">Mathematiker</a></li>
+  <li><a href="/zitate/">Zitate</a></li> 
+  <li><a href="/maturapruefungen/">Maturaprüfungen</a></li>
+  <li><a HREF="/witze/">Witze (+IQ-Test)</a></li>
+  <li><a HREF="/about.html">Kontakt</a></li>
+  <li><a HREF="/links.html">Links</a></li>
+  <li><a href="/search/">Suche</a></li>
+</ul></div>
+<!-- CONTENT -->
+<div id="content" style="display:block;">
+
+<h4>Puzzle 16: Sixteen Puzzle</h4>
+<p>Die goldenen Steine sind nach rechts unten, die silbernen nach links oben zu bringen.<br>
+Ein Stein kann um eine Position in die Leerstelle verschoben werden oder über einen andern (beliebiger Farbe) 
+in die Leerstelle springen.<br>
+Sie dürfen höchstens 80 Züge durchführen.</p>
+<noscript>Bei Ihrem Browser muss JavaScript aktiviert sein.</noscript>
+
+<div class="colgroup-2">
+  <div class="col">
+  <table><tr><td>
+  <div style="width:120px;height:40px;display:block;">
+   <img id="1" src="gold.png" width=40 height=40 onClick="Pruefe(1)" alt="1"><img id="2" src="gold.png" width=40 height=40 onClick="Pruefe(2)" alt="2"><img id="3" src="gold.png" width=40 height=40 onClick="Pruefe(3)" alt="3">
+  </div>
+  <div style="width:120px;height:40px;display:block;">   
+   <img id="4" src="gold.png" width=40 height=40 onClick="Pruefe(4)" alt="4"><img id="5" src="gold.png" width=40 height=40 onClick="Pruefe(5)" alt="5"><img id="6" src="gold.png" width=40 height=40 onClick="Pruefe(6)" alt="6">   
+  </div>
+  <div style="width:210px;height:40px;display:block;"> 
+   <img id="7" src="gold.png" width=40 height=40 onClick="Pruefe(7)" alt="7"><img id="8" src="gold.png" width=40 height=40 onClick="Pruefe(8)" alt="8"><img id="9" src="leer.png" width=40 height=40 onClick="Pruefe(9)" alt="9"><img id="10" src="silber.png" width=40 height=40 onClick="Pruefe(10)" alt="10"><img id="11" src="silber.png" width=40 height=40 onClick="Pruefe(11)" alt="11">
+  </div>
+  <div style="width:120px;height:40px;display:block;margin-left:80px"> 
+   <img id="12" src="silber.png" width=40 height=40 onClick="Pruefe(12)" alt="12"><img id="13" src="silber.png" width=40 height=40 onClick="Pruefe(13)" alt="13"><img id="14" src="silber.png" width=40 height=40 onClick="Pruefe(14)" alt="14">
+  </div>
+  <div style="width:120px;height:40px;display:block;margin-left:80px">    
+   <img id="15" src="silber.png" width=40 height=40 onClick="Pruefe(15)" alt="15"><img id="16" src="silber.png" width=40 height=40 onClick="Pruefe(16)" alt="16"><img id="17" src="silber.png" width=40 height=40 onClick="Pruefe(17)" alt="17">
+  </div>
+  </td><td class="c">
+  Zugnummer: <span id="Zugnummer">0</span>
+  </td></tr></table>
+  </div>
+  <div class="col">
+  <a href="#" onClick="Zugruecknehmen()">Zug zurücknehmen</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="#" onClick="Wiederausfuehren()">Zug wieder ausführen</a><br><br>
+  <a href="">von vorne beginnen</a><br><br>
+  <span id="Antwort">"Viel Erfolg!"</span>
+  </div>
+</div>
+
+<p>Hinweis: Der britische Rätselexperte H.E. Dudeney (1857-1930) schaffte es in 46 Zügen und übertrumpfte
+damit sogar Amerikas berühmtesten Rätsel-Spezialisten Sam Loyd (1841-1911), der 47 Züge benötigte.</p>  
+
+<div style="text-align: right;">
+<p>16. Januar 2003&nbsp;</p>
+</div>
+
+<p><a href="#" onClick="loesung()">Lösung</a></p>
+
+</div>
+<!-- EOF: CONTENT -->
+
+<div id="footer">
+<p><small>
+©1997 -
+2019 www.mathematik.ch | <a href="/search/"><img style="vertical-align:middle" width=27 height=27 src="/img/lupe.jpg" alt="Suche"></a>
+</small></p>
+</div>
+
+</div>
+</body>
+</html>
