@@ -1,0 +1,28 @@
+RewriteEngine On
+ RewriteCond %{HTTP_HOST} !^www\.mathematik\.ch [NC]
+ RewriteRule ^(.*) https://www\.mathematik\.ch/$1 [R=301,L]
+
+AddCharset UTF-8 .js
+
+ErrorDocument 404 /404.php
+Options -Indexes
+
+<IfModule mod_expires.c>
+ExpiresActive On
+ExpiresByType text/css "access plus 1 week"
+ExpiresByType text/javascript "access plus 1 week"
+ExpiresByType application/javascript "access plus 1 month"
+ExpiresByType image/gif "access plus 1 month"
+ExpiresByType image/jpeg "access plus 1 month"
+ExpiresByType image/png "access plus 1 month"
+ExpiresByType image/x-icon "access plus 1 year"
+</IfModule>
+
+<IfModule mod_deflate.c>
+AddOutputFilterByType DEFLATE text/css
+AddOutputFilterByType DEFLATE text/javascript
+AddOutputFilterByType DEFLATE application/javascript
+AddOutputFilterByType DEFLATE image/png
+AddOutputFilterByType DEFLATE image/gif
+AddOutputFilterByType DEFLATE image/jpeg
+</IfModule>
