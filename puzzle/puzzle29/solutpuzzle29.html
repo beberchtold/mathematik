@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" CONTENT="Bernhard Berchtold">
 <meta NAME="Description" CONTENT="Puzzle29, Anwendungen der Mathematik, Wahrscheinlichkeit, Kombinatorik">
-<title>Lösung Puzzle29: Formular</title>
+<title>Lösung Puzzle29:Formular</title>
 <LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
 <script async src="/script/show-hide.js"></script>
 <script src="solutpuzzle29.js"></script>
@@ -41,25 +41,37 @@
 <!-- CONTENT -->
 <div id="content" style="display:block;">
 
-<h4>Formular zu Puzzle 29</h4>
+<h4>Lösung zu Puzzle 29</h4>
 
 <p>Geben Sie die Anzahl der Schützen (und gleichzeitig auch Tontauben) in die Maske ein.<br>
 Das Formular berechnet dann die günstigen Fälle für 
 k = 0, k = 1, ...bis k = n überlebende Tontauben, die dazugehörige Wahrscheinlichkeit und den Erwartungswert.</p>
 
-<form name="bi" onSubmit="return chkFormular()" method=post action="solutpuzzle29_1.html">
   <table>
     <tr>
       <td style="height:27px">Anzahl Tontauben n (n &le; 35): </td>
-      <td><input name="n" style="width:2em;" type="number" min="1" max="35" value="9"></td>
+      <td><input id="n" style="width:2em;" type="number" min="1" max="35" value="9"></td>
     </tr>
     <tr>
       <td style="height:27px">&nbsp;</td>
-      <td><input type="submit" value="Berechne!"></td>
+      <td><input type="button" value="Berechne!" onclick="rechne()"></td>
     </tr>
   </table>
-</form>
 
+  n = <span id="N"></span><br>
+  mögliche Fälle = n<sup>n</sup> = <span id="M"></span><br><br>
+
+  <table>
+    <tr><td width=30><b>k</b></td><td width=150><b>günstige Fälle</b></td><td width=150><b>Wahrscheinlichkeit</b></td></tr>
+  </table>
+  <span id="Ausgabe"></span> 
+  <br>
+  Erwartungswert = <span id="RES"></span><br><br>
+  Summe der Wahrscheinlichkeiten als Kontrolle = <span id="KONTROL"></span>
+  
+  
+  
+  
 <p><a href="/puzzle/puzzle29.html">Zurück zur Aufgabenstellung</a></p>
 
 </div>
