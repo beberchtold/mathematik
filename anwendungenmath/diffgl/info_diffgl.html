@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta NAME="Description" CONTENT="Information zum Programm Differentialgleichungen">
+<title>Info zum Programm Differentialgleichung</title>
+<LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
+</head>
+<body>
+<div class="page">
+
+<p>
+<a href="https://www.mathematik.ch">
+<img class="center" src="/img/mathematik.png" width="257" height="35" alt="mathematik.ch"></a></p>
+
+<h4>Infos zum Programm Differentialgleichungen</h4>
+
+<ol>
+<li>Geben Sie eine Differentialgleichung der Form &nbsp;&nbsp; <i>y' = g</i>(<i>x,y</i>) &nbsp;&nbsp; ein.<br>
+    Folgende Angaben können Sie ins Feld der Differentialgleichung machen:<br>
+  <ul>
+  <li>x: unabhängige Variable, y: abhängige Variable</li>
+  <li>+, -, *, /: plus, minus, mal, dividiert durch</li>
+  <li>(...): Klammer</li>
+  <li>abs(...): Absolutbetrag</li>
+  <li>sqrt(...): Quadratwurzel</li>
+  <li>exp(...): Exponentialfunktion mit Basis e, z.B. exp(x) ist e^x oder exp(x*ln(2)) ist 2^x</li>
+  <li>pow(...,...): Exponentialfunktion mit bel. Basis, z.B. pow(2,x) ist 2^x</li>
+  <li>log(...) oder ln(...): natürlicher Logarithmus ln</li>
+  <li>sin(...): Sinus</li>
+  <li>cos(...): Cosinus</li>
+  <li>tan(...): Tangens</li>
+  <li>asin(...): Arcussinus</li>
+  <li>acos(...): Arcuscosinus</li>
+  <li>atan(...): Arcustangens</li>
+  <li>e: Eulersche Zahl e</li>
+  <li>pi: Kreiszahl pi</li>
+  </ul>
+</li>
+
+<li>Geben Sie den Startpunkt (x0/y0) und den Endwert xe ein.<br>
+  Voraussetzung für die Korrektheit des Verfahrens ist die Stetigkeit der gesuchten
+  Funktion auf dem abgeschlossenen Intervall [x0,xe]. Sie können also nicht ein Intervall eingeben, in
+  dem ein x-Wert liegt, der einen ev. Nenner von g(x,y) zu Null macht bzw. ein Intervall eingeben, in dem eine Polstelle
+  der gesuchten Funktion liegt.
+</li>
+
+<li>Wählen Sie die Schrittweite h &gt; 0; sie wird im Laufe des Programms automatisch angepasst.
+</li>
+
+<li>Falls ein Syntaxfehler bei der Differentialgleichung auftritt, so
+  erhalten Sie eine entsprechende Meldung.<br>
+  Wählen Sie entweder 'Step', um den nächsten Schritt anzuzeigen oder
+  'Run', um das Programm laufen zu lassen.<br>
+  Falls die Schrittweite &lt; 0.0000001 wird, so wird das Programm abgebrochen.<br>
+  Es werden die jeweils letzten 5 Werte angegeben.
+</li>
+
+<li>Vergessen Sie nicht, nach einer Änderung den Reset-Knopf anzuklicken. Die Return-Taste genügt nicht!
+</li>
+
+<li>Bei Division durch Null oder einer anderweitigen Operation, die keine Zahl
+  ergibt, wird das Symbol NaN ausgegeben (Definition für "Not a Number").
+</li>
+</ol>
+
+</div>
+</body>
+</html>

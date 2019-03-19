@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta NAME="Description" CONTENT="Statistik: Korrelation und Regression">
+<title>Korrelation und Regression</title>
+<LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
+<script src="regression_min.js"></script>
+<script async src="/script/show-hide.js"></script>
+<style type="text/css">input {width:2.5em}</style>
+</head>
+
+<body>
+<div class="page">
+<table class="c">
+<tr><td style="width:10%">
+<img width=28 height=27 src="/img/menuicon.png" style="cursor:pointer" title="Inhalt" alt="menu" onClick="ReverseDisplay()">
+</td><td class="c" style="width:80%">
+<a href="/"><img width=257 height=35 src="/img/mathematik.png" alt="mathematik.ch"></a>
+</td><td style="width:10%">&nbsp;</td></tr>
+</table>
+<div id="menu" style="display:none;">
+  <h4>Inhalt</h4>
+
+<ul>
+  <li><a href="/anwendungenmath/">Anwendungen + Unterrichtshilfen</a></li>
+  <li><a href="/puzzle/">Puzzles (Rätsel)</a></li> 
+  <li><a href="/spiele/">'Spiele'</a></li>
+  <li><a href="/spiele/euromillions/">Euromillions</a></li>
+  <li><a href="/spiele/swisslotto/">Swisslotto</a></li>
+  <li><a href="/geschichte/">Geschichte</a></li>
+  <li><a href="/mathematiker/">Mathematiker</a></li>
+  <li><a href="/zitate/">Zitate</a></li> 
+  <li><a href="/maturapruefungen/">Maturaprüfungen</a></li>
+  <li><a HREF="/witze/">Witze (+IQ-Test)</a></li>
+  <li><a HREF="/about.html">Kontakt</a></li>
+  <li><a HREF="/links.html">Links</a></li>
+  <li><a href="/search/">Suche</a></li>
+</ul></div>
+<!-- CONTENT -->
+<div id="content" style="display:block;">
+
+<h4>Lineare Regression - Korrelation </h4>
+(Theorie: s. <a href="Regression_Korrelation.pdf">Regression_Korrelation.pdf</a>)
+
+<p>Geben Sie die Koordinaten ( x<sub>i</sub> / y<sub>i</sub> )  von maximal 30 Punkten in die Felder ein.</p>
+
+<FORM action="#">
+      <p>
+       01 <INPUT value=80 name=element0> <INPUT value=120 name=element10> 11 
+      <INPUT value=80 name=element20> <INPUT value=140 name=element30> 21 
+      <INPUT name=element40> <INPUT name=element50> <br>
+       02 <INPUT value=70 name=element1>
+      <INPUT value=115 name=element11> 12 <INPUT value=70 name=element21>
+      <INPUT value=135 name=element31> 22 <INPUT name=element41>
+      <INPUT name=element51> <br>03 <INPUT value=80 name=element2>
+      <INPUT value=125 name=element12> 13 <INPUT value=95 name=element22> 
+      <INPUT value=140 name=element32> 23 <INPUT name=element42> 
+      <INPUT name=element52> <br>04 <INPUT value=70 name=element3> 
+      <INPUT value=110 name=element13> 14 <INPUT value=75 name=element23>
+      <INPUT value=130 name=element33> 24 <INPUT name=element43> <INPUT name=element53><br>
+      05 <INPUT value=70 name=element4> <INPUT value=115 name=element14> 15 
+      <INPUT value=90 name=element24> <INPUT value=145 name=element34> 25 
+      <INPUT name=element44> <INPUT name=element54> <br>06 <INPUT value=80 name=element5>
+      <INPUT value=130 name=element15> 16 <INPUT name=element25> <INPUT name=element35> 26 
+      <INPUT name=element45> <INPUT name=element55> <br>07 <INPUT value=85 name=element6>
+      <INPUT value=140 name=element16> 17 <INPUT name=element26> <INPUT name=element36> 27 
+      <INPUT name=element46> <INPUT name=element56> <br>08 <INPUT value=75 name=element7> 
+      <INPUT value=120 name=element17> 18 <INPUT name=element27> <INPUT name=element37> 28 
+      <INPUT name=element47> <INPUT name=element57> <br>09 <INPUT value=75 name=element8> 
+      <INPUT value=125 name=element18> 19 <INPUT name=element28> <INPUT name=element38> 29 
+      <INPUT name=element48> <INPUT name=element58> <br>10 <INPUT value=90 name=element9> 
+      <INPUT value=150 name=element19> 20 <INPUT name=element29> <INPUT name=element39> 30 
+      <INPUT name=element49> <INPUT name=element59><br><br>
+      <INPUT onclick="uttest(form,data1,data2,data4,data5)" type=button value="Berechne Korrelation und Regression" style="width:18em">
+	  <p><b>n = <span id="n"> </span></b>
+      <br>
+      <p><b>Mittelwerte:&nbsp;&nbsp; <span class="ol">x</span> = <span id="mw1"> </span>&nbsp;&nbsp;&nbsp;
+      <span class="ol">y</span> = <span id="mw2"> </span></b> 
+      <p><b>Standardabweichung:&nbsp;&nbsp; s<sub>x</sub> = <span id="s1"> </span>&nbsp;&nbsp;&nbsp; 
+      s<sub>y</sub> = <span id="s2"> </span></b>
+      <p><b>Gleichungen der Regressionsgeraden: y = b1&sdot;x + b0  &nbsp;&nbsp;&nbsp;  bzw. &nbsp;&nbsp;&nbsp; x = a1&sdot;y + a0</b>
+      <p><b>b1 = <span id="b1"> </span>&nbsp;&nbsp; b0 = <span id="b0"> </span></b>
+      &nbsp;&nbsp;
+      <b>a1 = <span id="a1"> </span>&nbsp;&nbsp; a0 = <span id="a0"> </span></b>
+      <p><b>Korrelationskoeffizient r = <span id="r"> </span></b>
+</FORM>
+
+<p><small>Quelle: Das ursprüngliche Programm stammt von der site http://medweb.uni-muenster.de/institute/imib/lehre/skripte/biomathe/bio/koreg.html<br>
+  s. auch unter Links: JUMBO</small></p>
+
+</div>
+<!-- EOF: CONTENT -->
+
+<div id="footer">
+<p><small>
+©1997 -
+2019 www.mathematik.ch | <a href="/search/"><img style="vertical-align:middle" width=27 height=27 src="/img/lupe.jpg" alt="Suche"></a>
+</small></p>
+</div>
+
+</div>
+</body>
+</html>

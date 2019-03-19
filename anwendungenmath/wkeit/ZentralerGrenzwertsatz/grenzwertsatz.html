@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" CONTENT="Bernhard Berchtold">
+<meta NAME="Description" CONTENT="Anwendungen der Mathematik, Wahrscheinlichkeit, Zentraler Grenzwertsatz">
+<title>Zentraler Grenzwertsatz</title>
+<LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-alpha/katex.min.css" TYPE="text/css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-alpha/katex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-alpha/contrib/auto-render.min.js"></script>
+<script async src="grenzwertsatz.js"></script>
+<script async src="/script/show-hide.js"></script>
+</head>
+
+<body>
+<div class="page">
+<table class="c">
+<tr><td style="width:10%">
+<img width=28 height=27 src="/img/menuicon.png" style="cursor:pointer" title="Inhalt" alt="menu" onClick="ReverseDisplay()">
+</td><td class="c" style="width:80%">
+<a href="/"><img width=257 height=35 src="/img/mathematik.png" alt="mathematik.ch"></a>
+</td><td style="width:10%">&nbsp;</td></tr>
+</table>
+<div id="menu" style="display:none;">
+  <h4>Inhalt</h4>
+
+<ul>
+  <li><a href="/anwendungenmath/">Anwendungen + Unterrichtshilfen</a></li>
+  <li><a href="/puzzle/">Puzzles (Rätsel)</a></li> 
+  <li><a href="/spiele/">'Spiele'</a></li>
+  <li><a href="/spiele/euromillions/">Euromillions</a></li>
+  <li><a href="/spiele/swisslotto/">Swisslotto</a></li>
+  <li><a href="/geschichte/">Geschichte</a></li>
+  <li><a href="/mathematiker/">Mathematiker</a></li>
+  <li><a href="/zitate/">Zitate</a></li> 
+  <li><a href="/maturapruefungen/">Maturaprüfungen</a></li>
+  <li><a HREF="/witze/">Witze (+IQ-Test)</a></li>
+  <li><a HREF="/about.html">Kontakt</a></li>
+  <li><a HREF="/links.html">Links</a></li>
+  <li><a href="/search/">Suche</a></li>
+</ul></div>
+<!-- CONTENT -->
+<div id="content" style="display:block;">
+
+<h4>Zentraler Grenzwertsatz</h4>
+
+<p>Zentraler Grenzwertsatz: (vereinfachte Formulierung)</p>
+<div style="width:95%; border:1px solid; padding:5px; display: block; margin-left: auto; margin-right: auto;">
+Eine <b>Summe</b> von sehr vielen unabhängigen Zufallsvariablen ist unter der Voraussetzung, dass jede der unabhängigen
+ Zufallsvariablen nur einen geringen Einfluss auf die Summe hat, <b>angenähert normalverteilt</b>.<br><br>
+ A.M. Ljapunoff (1857 - 1918)
+ </div>
+ <p>
+Zur Illustration soll die Überlegung (1) und anschliessend unabhängig davon das Formular (2) dienen:<br>
+(1) Die Newton'sche Formel W'keit = P<sub>n</sub>(x) =<span>\(\rm\binom{n}{x} p^x q^{n-x} \)</span>,
+ q = 1-p für die Berechnung bei <a href="../binomialvert.html">Binomialverteilung</a> kann auch folgendermassen interpretiert werden:<br>
+Gegeben seien n voneinander unabhängige Zufallvariablen Z<sub>1</sub>, Z<sub>2</sub>, ... , Z<sub>n</sub>, die nur den Wert 1 
+(mit Wahrscheinlichkeit p) und den Wert 0 (mit Wahrscheinlichkeit q) annehmen können. Wie gross ist dann die Wahrscheinlichkeit, dass 
+die <b>Summe</b> X := Z<sub>1</sub> + Z<sub>2</sub> + ... + Z<sub>n</sub>  den Wert x annimmt? Dies ist aber die W'keit, dass das Ereignis
+ "Wert 1 annehmen" genau x -mal von n-mal eintreten muss.<br> Die W'keit dafür ist eben P<sub>n</sub>(x).<br>
+ Nach dem zentralen Grenzwertsatz ist X angenähert normalverteilt. Dies führt auf die 
+ <a href="../approx_bin_norm.html">Approximation der Binomialverteilung durch Normalverteilung</a>, also den Grenzwertsatz von de Moivre 
+ und Laplace.</p>
+<p>(2) In einer Urne liegen 99 von 1 bis 99 nummerierte Kugeln. Man zieht z.B. n = 4000 -mal eine Kugel, notiert die Nummer und legt die 
+Kugel wieder zurück.<br>
+Jede Zahl x von 1 bis 99 ist dann <b>gleichwahrscheinlich</b>. Fasst man nun aber z.B. N = 5 aufeinander notierte 
+Zahlen x<sub>i</sub> zusammen und bildet deren Mittelwert <span class="ol">x</span><sub>j</sub>, so ist dieser 
+Mittelwert <span class="ol">x</span> eine angenähert normal-verteilte Zufallsvariable (Mittelwerte
+  um 50 sind häufiger als solche um 30 oder gar solche um 10 oder 90).</p>
+  
+<div class="colgroup-2">
+  <div class="col" id="containercanvas">  
+    <p><b>Illustration Zentraler Grenzwertsatz</b></p>
+    <canvas id="myCanvas">Ihr Browser kann kein Canvas!</canvas>
+  </div>
+  
+  <div class="col">  
+  <br>
+  <table>
+    <tr>
+      <td>Anzahl Züge (1000&le;n&le;10000)</td>
+      <td><input id="n" size="4" value="4000"></td>
+    </tr>
+    <tr>
+      <td>Aufeinander notierte Zahlen (5&le;N&le;20)&nbsp;&nbsp;</td>
+      <td><input id="N" size="4" value="5"></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td><input type="button" value="Berechne!" onclick="rechne()"></td>
+    </tr>
+  </table>
+  <p>Anzahl der Mittelwerte = <span id="Total"> </span><br>
+  Mittelwert der Mittelwerte = <span id="MittelWert"> </span><br>
+  Standardaweichung der Mittelwerte = <span id="StandardAbweichung"> </span></p>
+  </div>       
+</div>
+<p>Die Klassenbreite wurde 5 gewählt. 
+  Der Inhalt der Rechtecksfläche des Vertreters 47.5 repräsentiert also die
+  Anzahl der Mittelwerte, die zwischen 45 und 50 liegen; der Inhalt der Rechtecksfläche des Vertreters 52.5 repräsentiert 
+  die Anzahl der Mittelwerte, die zwischen 50 und 55 liegen usw.<br>
+  Die roten Zahlen geben die absoluten Häufigkeiten der Mittelwerte in der entsprechenden Klasse an.</p>	
+
+</div>
+<script>
+   renderMathInElement(document.body);
+</script>
+<!-- EOF: CONTENT -->
+
+<div id="footer">
+<p><small>
+©1997 -
+2019 www.mathematik.ch | <a href="/search/"><img style="vertical-align:middle" width=27 height=27 src="/img/lupe.jpg" alt="Suche"></a>
+</small></p>
+</div>
+
+</div>
+</body>
+</html>

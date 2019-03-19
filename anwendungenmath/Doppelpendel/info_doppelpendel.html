@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta NAME="Description" CONTENT="Information zur Simulation Doppelpendel">
+<title>Information zur Anwendung Doppelpendel</title>
+<LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
+</head>
+<body>
+<div class="page">
+
+<p>
+<a href="https://www.mathematik.ch">
+<img class="center" src="/img/mathematik.png" width="257" height="35" alt="mathematik.ch"></a></p>
+
+<h4>Infos zur Simulation Doppelpendel</h4>
+
+<ol>
+<li>Phi1 ist der Winkel von der Vertikalen zum ersten (roten) Pendel. Phi2 der Winkel von der Vertikalen zum zweiten
+  (blauen) Pendel. (Diese Winkel sind im Bogenmass zwischen - Pi und +Pi).
+</li>
+<li>Grundlage zur Lösung der Bewegung des Doppelpendels ist die
+  Lagrange-Gleichung: Die Energieformen sind die potentielle Energie Epot(Phi1,Phi2) und die
+  kinetische Energie Ekin(Phi1,Phi2,Phi1',Phi2'). Die modifizierte innere Energie
+  des Systems ist&nbsp; L=Ekin-Epot.<br>
+  Die Bewegungsgleichungen lauten also:<br><br>
+  <img src="diffgl.gif" width="188" height="44" alt="Diffgleichung">
+  <br><br>
+  Nach Auflösen dieser Gleichungen erhält man zwei Differentialgleichungen
+  zweiter Ordnung in den Winkeln Phi1 und Phi2. Diese werden dann in vier
+  Differentialgleichungen erster Ordnung umgewandelt, die dann mit dem Runge-Kutta-Verfahren
+  gelöst werden können.
+</li>
+<li>Die Schrittweite h können Sie nicht grösser als 0.04 wählen. Die Lösung mit dem Runge-Kutta-Verfahren (ohne
+  Schrittweitenanpassung) wird sonst viel zu ungenau.
+</li>
+<li>Klicken auf Step zeigt den nächsten Schritt (mit Schrittweite h).</li>
+<li>Klicken auf Run/Stop lässt das Programm laufen. Erneutes Klicken auf Run/Stop hält es wieder an.</li>
+<li><b>Vergessen Sie nicht, nach einer Änderung zuerst den Start-Knopf anzuklicken. Die Return-Taste genügt nicht!</b>
+</li>
+</ol>
+
+</div>
+</body>
+</html>
+

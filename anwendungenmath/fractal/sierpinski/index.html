@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sierpinski-Dreieck mit speziellem Algorithmus</title>
+<meta name="description" content="Sierpinski-Dreieck mit speziellem Algorithmus">
+<meta name="keywords" content="Sierpinski-Dreieck">
+<LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
+<script src="sierpinski.js"></script>
+<script async src="/script/show-hide.js"></script>
+</head>
+
+<body>
+<div class="page">
+<table class="c">
+<tr><td style="width:10%">
+<img width=28 height=27 src="/img/menuicon.png" style="cursor:pointer" title="Inhalt" alt="menu" onClick="ReverseDisplay()">
+</td><td class="c" style="width:80%">
+<a href="/"><img width=257 height=35 src="/img/mathematik.png" alt="mathematik.ch"></a>
+</td><td style="width:10%">&nbsp;</td></tr>
+</table>
+<div id="menu" style="display:none;">
+  <h4>Inhalt</h4>
+
+<ul>
+  <li><a href="/anwendungenmath/">Anwendungen + Unterrichtshilfen</a></li>
+  <li><a href="/puzzle/">Puzzles (Rätsel)</a></li> 
+  <li><a href="/spiele/">'Spiele'</a></li>
+  <li><a href="/spiele/euromillions/">Euromillions</a></li>
+  <li><a href="/spiele/swisslotto/">Swisslotto</a></li>
+  <li><a href="/geschichte/">Geschichte</a></li>
+  <li><a href="/mathematiker/">Mathematiker</a></li>
+  <li><a href="/zitate/">Zitate</a></li> 
+  <li><a href="/maturapruefungen/">Maturaprüfungen</a></li>
+  <li><a HREF="/witze/">Witze (+IQ-Test)</a></li>
+  <li><a HREF="/about.html">Kontakt</a></li>
+  <li><a HREF="/links.html">Links</a></li>
+  <li><a href="/search/">Suche</a></li>
+</ul></div>
+<!-- CONTENT -->
+<div id="content" style="display:block;">
+
+<h4>Sierpinski-Dreieck mit speziellem Algorithmus</h4>
+
+<div class="colgroup-2">
+  <div class="col" id="containercanvas">
+    <p>Anzahl <span id="Strecke"></span> = <span id="N"> </span></p>
+    <canvas id="myCanvas">Ihr Browser kann kein Canvas!</canvas>
+	<p><a href="#" onClick="doppelt()">Doppelte Anzahl</a>
+	<a href="#" onClick="halb()" style="margin-left:30px">Halbe Anzahl</a></p>
+	<p><input id="Punkte" type="checkbox" onclick="OnChangeCheckbox (this)">Punkte statt Streckenzüge</p>
+  </div>
+  <div class="col">
+	<p>Gegeben ist ein gleichseitiges Dreieck.<br>
+	Start ist im Punkt P = Ecke oben.<br>
+    1. Es wird nun eine der drei Ecken zufällig gewählt und die halbe Strecke von P bis zur gewählten Ecke gezeichnet.<br>
+    2. Der Endpunkt der gezeichneten Strecke heisse nun wieder P.<br>
+    3. Wiederhole ab 1., bis die gewählte Anzahl Strecken gezeichnet sind.</p>
+
+    <p>Wenn Sie die Checkbox 'Punkte statt Streckenzüge' ankreuzen, so werden nur die <b>Endpunkte</b> der Strecken des 
+	Streckenzuges gezeichnet. Hier wird (bei genügend grosser Anzahl der Punkte) das <b>Sierpinski-Dreieck</b> 
+	(Fraktal mit Dimension ln3 / ln2 ≈ 1.58496...) erscheinen!</p>
+	<p>Anzahl Strecken bzw. Punkte: min=3, max=49152</p>
+   </div>
+</div>
+
+<p>Interessant sind auch die <a href="/anwendungenmath/fractal/">Fraktale mit IFS</a>.</p>
+
+</div>
+<!-- EOF: CONTENT -->
+
+<div id="footer">
+<p><small>
+©1997 -
+2019 www.mathematik.ch | <a href="/search/"><img style="vertical-align:middle" width=27 height=27 src="/img/lupe.jpg" alt="Suche"></a>
+</small></p>
+</div>
+
+</div>
+</body>
+</html>

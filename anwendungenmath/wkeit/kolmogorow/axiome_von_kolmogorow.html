@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Axiome von Kolmogorow</title>
+<LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
+<script async src="/script/show-hide.js"></script>
+</head>
+
+<body>
+<div class="page">
+<table class="c">
+<tr><td style="width:10%">
+<img width=28 height=27 src="/img/menuicon.png" style="cursor:pointer" title="Inhalt" alt="menu" onClick="ReverseDisplay()">
+</td><td class="c" style="width:80%">
+<a href="/"><img width=257 height=35 src="/img/mathematik.png" alt="mathematik.ch"></a>
+</td><td style="width:10%">&nbsp;</td></tr>
+</table>
+<div id="menu" style="display:none;">
+  <h4>Inhalt</h4>
+
+<ul>
+  <li><a href="/anwendungenmath/">Anwendungen + Unterrichtshilfen</a></li>
+  <li><a href="/puzzle/">Puzzles (Rätsel)</a></li> 
+  <li><a href="/spiele/">'Spiele'</a></li>
+  <li><a href="/spiele/euromillions/">Euromillions</a></li>
+  <li><a href="/spiele/swisslotto/">Swisslotto</a></li>
+  <li><a href="/geschichte/">Geschichte</a></li>
+  <li><a href="/mathematiker/">Mathematiker</a></li>
+  <li><a href="/zitate/">Zitate</a></li> 
+  <li><a href="/maturapruefungen/">Maturaprüfungen</a></li>
+  <li><a HREF="/witze/">Witze (+IQ-Test)</a></li>
+  <li><a HREF="/about.html">Kontakt</a></li>
+  <li><a HREF="/links.html">Links</a></li>
+  <li><a href="/search/">Suche</a></li>
+</ul></div>
+<!-- CONTENT -->
+<div id="content" style="display:block;">
+
+<h4>Axiome von Kolmogorow (auch etwa Kolmogorov oder Kolmogoroff)</h4>
+<p>für Lebenslauf von Kolmogorw: 
+<a href="https://de.wikipedia.org/wiki/Andrei_Nikolajewitsch_Kolmogorow" target="_blank">Kolmogorow bei Wikipedia</a></p>
+
+<p><b>Axiome der Wahrscheinlichkeitsrechnung</b></p>
+<p>I. Jedem Ereignis E des Stichprobenraumes ist eine reelle Zahl P(E), seine Wahrscheinlichkeit, zugeordnet.</p>
+<p>II. Für diese Funktion P: E &rarr; P(E), gilt:</p>
+
+<ul>
+  <li>Die Wahrscheinlichkeiten sind nicht negativ:&nbsp; P(E) &ge; 0.</li>
+  <li>Die Wahrscheinlichkeit des sicheren Ereingnisses S ist eins:&nbsp; P(S) = 1.</li>
+  <li>Die Wahrscheinlichkeit, dass von zwei unvereinbaren Ereignissen entweder das eine oder das andere eintritt, ist 
+      gleich der Summe der beiden Wahrscheinlichkeiten: 
+      P(A &cup; B) = P(A) + P(B), falls A &cap; B = &#216; </li>
+</ul>
+<p>Diese Axiome wurden von A.N.Kolmogorow 1933 im Buch &quot;Grundbegriffe der Wahrscheinlichkeitsrechnung&quot; 
+   publiziert.</p>
+<hr>
+<p>Mit Hilfe dieser Axiome (und den Gesetzen der Mengenlehre) lässt sich z.B. sehr einfach der sog. Additionssatz
+ herleiten:</p>
+<p><b>Additionssatz</b>: Für zwei beliebige Ereignisse A und B gilt:<br>
+<b> P(A  &cup; B) = P(A) + P(B) - P(A &cap; B)</b></p>
+
+<p><b>Beweis:</b>&nbsp;&nbsp; 
+<span class="ol">A</span>: Entgegengesetztes Ereignis von A (
+<span class="ol">A</span> tritt genau dann ein, wenn A nicht eintritt)</p>
+
+<div class="colgroup-2">
+  <div class="col">
+    <img src="additionssatz.png" width=245 height=148 alt="additionssatz">
+  </div>
+
+   <div class="col">
+     P(A) = P(A &cap; <span class="ol">B</span>) + P(A
+       &cap; B)&nbsp;&nbsp;  &rarr; &nbsp; P(A
+       &cap; <span class="ol">B</span>) = P(A) - P(A &cap; B)<br><br>
+        P(B) = P(A &cap; B) + P(<span class="ol">A</span>
+       &cap; B)&nbsp;&nbsp;  &rarr; &nbsp; 
+      P(<span class="ol">A</span> &cap; B) = P(B) - P(A &cap; B)<br><br>
+        P(A &cup; B) = P(A &cap; <span class="ol">B</span>) + P(A &cap; B) + P(<span class="ol">A</span> &cap; B)
+        <hr>
+        P(A &cup; B) = P(A) - P(A &cap; B) + P(A &cap; B) + P(B) - P(A &cap; B), also<br><br>
+        P(A &cup; B) = P(A) + P(B) - P(A &cap; B)
+   </div>
+</div>	
+
+</div>
+<!-- EOF: CONTENT -->
+
+<div id="footer">
+<p><small>
+©1997 -
+2019 www.mathematik.ch | <a href="/search/"><img style="vertical-align:middle" width=27 height=27 src="/img/lupe.jpg" alt="Suche"></a>
+</small></p>
+</div>
+
+</div>
+</body>
+</html>

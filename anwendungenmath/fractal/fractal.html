@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta NAME="Description" CONTENT="Infos zu Fraktalen mit Hilfe von iterierten Funktionssystemen">
+<title>Infos zu Fraktale mit IFS</title>
+<LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
+<script async src="/script/show-hide.js"></script>
+</head>
+
+<body>
+<div class="page">
+<table class="c">
+<tr><td style="width:10%">
+<img width=28 height=27 src="/img/menuicon.png" style="cursor:pointer" title="Inhalt" alt="menu" onClick="ReverseDisplay()">
+</td><td class="c" style="width:80%">
+<a href="/"><img width=257 height=35 src="/img/mathematik.png" alt="mathematik.ch"></a>
+</td><td style="width:10%">&nbsp;</td></tr>
+</table>
+<div id="menu" style="display:none;">
+  <h4>Inhalt</h4>
+
+<ul>
+  <li><a href="/anwendungenmath/">Anwendungen + Unterrichtshilfen</a></li>
+  <li><a href="/puzzle/">Puzzles (Rätsel)</a></li> 
+  <li><a href="/spiele/">'Spiele'</a></li>
+  <li><a href="/spiele/euromillions/">Euromillions</a></li>
+  <li><a href="/spiele/swisslotto/">Swisslotto</a></li>
+  <li><a href="/geschichte/">Geschichte</a></li>
+  <li><a href="/mathematiker/">Mathematiker</a></li>
+  <li><a href="/zitate/">Zitate</a></li> 
+  <li><a href="/maturapruefungen/">Maturaprüfungen</a></li>
+  <li><a HREF="/witze/">Witze (+IQ-Test)</a></li>
+  <li><a HREF="/about.html">Kontakt</a></li>
+  <li><a HREF="/links.html">Links</a></li>
+  <li><a href="/search/">Suche</a></li>
+</ul></div>
+<!-- CONTENT -->
+<div id="content" style="display:block;">
+
+<h4>Fraktale mittels Chaosspiel (IFS: iterierte Funktionssysteme)</h4>
+
+<p><b>Information zu IFS</b></p>
+
+<p>
+<b>Eine</b> affine Abbildung hat die Form<br>
+x' = a<sub>1</sub>*x + b<sub>1</sub>*y + v<sub>1</sub><br>
+y' = a<sub>2</sub>*x + b<sub>2</sub>*y + v<sub>2</sub><br>
+Sie ist also durch 6 Zahlen bestimmt. Weitere Infos zu <a href="/anwendungenmath/affineAbb/">affinen Abbildungen</a></p>
+
+<p>Beispiel: Code der Eiche (5 Abbildungen zu 6 Zahlen = 30 Zahlen)</p>
+<div class="colgroup-2">
+  <div class="col">
+  <img class="center" src="eiche.png" width="240" height="180" alt="Eiche">
+  </div>
+  <div class="col">
+    Jede Zeile beschreibt eine affine Abbildung
+    <table style="border:1px solid">
+    <tr>
+      <td class="c" style="width:16%">a<sub>1</sub></td>
+      <td class="c" style="width:16%">b<sub>1</sub></td>
+      <td class="c" style="width:17%">a<sub>2</sub></td>
+      <td class="c" style="width:17%">b<sub>2</sub></td>
+      <td class="c" style="width:17%">v<sub>1</sub></td>
+      <td class="c" style="width:17%">v<sub>2</sub></td>
+    </tr>
+    <tr>
+      <td class="c" style="color:#0000A8">0.1950</td>
+      <td class="c" style="color:#0000A8">-0.4880</td>
+      <td class="c" style="color:#0000A8">0.3440</td>
+      <td class="c" style="color:#0000A8">0.4430</td>
+      <td class="c" style="color:#0000A8">0.4431</td>
+      <td class="c" style="color:#0000A8">0.2452</td>
+    </tr>
+    <tr>
+      <td class="c" style="color:#00A800">0.4620</td>
+      <td class="c" style="color:#00A800">0.4140</td>
+      <td class="c" style="color:#00A800">-0.2520</td>
+      <td class="c" style="color:#00A800">0.3610</td>
+      <td class="c" style="color:#00A800">0.2511</td>
+      <td class="c" style="color:#00A800">0.5692</td>
+    </tr>
+    <tr>
+      <td class="c" style="color:#00A8A8">-0.0580</td>
+      <td class="c" style="color:#00A8A8">-0.0700</td>
+      <td class="c" style="color:#00A8A8">0.4530</td>
+      <td class="c" style="color:#00A8A8">-0.1110</td>
+      <td class="c" style="color:#00A8A8">0.5976</td>
+      <td class="c" style="color:#00A8A8">0.0969</td>
+    </tr>
+    <tr>
+      <td class="c" style="color:#A80000">-0.0350</td>
+      <td class="c" style="color:#A80000">0.0700</td>
+      <td class="c" style="color:#A80000">-0.4690</td>
+      <td class="c" style="color:#A80000">-0.0220</td>
+      <td class="c" style="color:#A80000">0.4884</td>
+      <td class="c" style="color:#A80000">0.5069</td>
+    </tr>
+    <tr>
+      <td class="c" style="color:#A800A8">-0.6370</td>
+      <td class="c" style="color:#A800A8">0.0000</td>
+      <td class="c" style="color:#A800A8">0.0000</td>
+      <td class="c" style="color:#A800A8">0.5010</td>
+      <td class="c" style="color:#A800A8">0.8562</td>
+      <td class="c" style="color:#A800A8">0.2513</td>
+    </tr>
+    </table>
+  </div>
+</div>	
+      
+<p>In der Anwendung werden die Fraktale mittels Chaosspiel gezeichnet: Ausgehend von einem Punkt werden die Abbildungen 
+gemäss 'Zufallprinzip, aber Häufigkeit proportional zur Abbildungsdeterminante' bis 160'000 mal nacheinander ausgeführt.<br>
+Man könnte die Fraktale auch mittels eines rekursiven Algorithmus <a href="eiche_deterministisch.html">deterministisch</a> erzeugen:<br>
+Ausgehend von einem Dreieck kann je nach Wahl der Stufe die Entstehung des Fraktals demonstriert werden. 
+Das entstehende Fraktal ist völlig unabhängig von der Ausgangsfigur!
+</p>
+
+<p><a href="./">Zurück zu Fraktale mit IFS</a></p>
+
+</div>
+<!-- EOF: CONTENT -->
+
+<div id="footer">
+<p><small>
+©1997 -
+2019 www.mathematik.ch | <a href="/search/"><img style="vertical-align:middle" width=27 height=27 src="/img/lupe.jpg" alt="Suche"></a>
+</small></p>
+</div>
+
+</div>
+</body>
+</html>

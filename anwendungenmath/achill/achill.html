@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Achill und die Schildkröte</title>
+<LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
+<script async src="/script/show-hide.js"></script>
+</head>
+
+<body>
+<div class="page">
+<table class="c">
+<tr><td style="width:10%">
+<img width=28 height=27 src="/img/menuicon.png" style="cursor:pointer" title="Inhalt" alt="menu" onClick="ReverseDisplay()">
+</td><td class="c" style="width:80%">
+<a href="/"><img width=257 height=35 src="/img/mathematik.png" alt="mathematik.ch"></a>
+</td><td style="width:10%">&nbsp;</td></tr>
+</table>
+<div id="menu" style="display:none;">
+  <h4>Inhalt</h4>
+
+<ul>
+  <li><a href="/anwendungenmath/">Anwendungen + Unterrichtshilfen</a></li>
+  <li><a href="/puzzle/">Puzzles (Rätsel)</a></li> 
+  <li><a href="/spiele/">'Spiele'</a></li>
+  <li><a href="/spiele/euromillions/">Euromillions</a></li>
+  <li><a href="/spiele/swisslotto/">Swisslotto</a></li>
+  <li><a href="/geschichte/">Geschichte</a></li>
+  <li><a href="/mathematiker/">Mathematiker</a></li>
+  <li><a href="/zitate/">Zitate</a></li> 
+  <li><a href="/maturapruefungen/">Maturaprüfungen</a></li>
+  <li><a HREF="/witze/">Witze (+IQ-Test)</a></li>
+  <li><a HREF="/about.html">Kontakt</a></li>
+  <li><a HREF="/links.html">Links</a></li>
+  <li><a href="/search/">Suche</a></li>
+</ul></div>
+<!-- CONTENT -->
+<div id="content" style="display:block;">
+
+<h4>Achill und die Schildkröte (Paradoxie des Zenon: um 500 v.Chr.)</h4>
+
+<p>Problem: Wettlauf zwischen Achill A und der Schildkröte S:<br>
+S habe d Vorsprung. Ist A an der Stelle A1(Startposition von S) angelangt, so
+ist S doch bereits an der Stelle S1. Ist A an der Stelle A2 = S1 angelangt, so
+ist S doch bereits an der Stelle S2 usw. Wenn A also jeweils an der Stelle ist,
+wo S vorher war, so ist S immer wieder bereits eine Strecke weiter. Holt also
+Achill die Schildkröte nie ein?</p>
+<p><img src="achill1.gif" width="150" height="100" alt="Achill"><br>
+<img src="achill2.gif" width="340" height="73" alt="Strecke"></p>
+
+<p>Das berühmte Paradoxon lässt sich mit Hilfe der Formeln für unendliche geometrische Reihen erklären:</p>
+<p>Die Geschwindigkeit von A sei v<sub>A</sub> , diejenige
+der Schildkröte sei v<sub>S</sub>&nbsp; mit v<sub>A</sub> &gt; v<sub>S</sub> .<br>
+A benötige für die Strecke d die Zeit t<sub>1</sub> . Also&nbsp; t<sub>1</sub>
+= d / v<sub>A</sub> .<br>
+Strecke s<sub>1</sub> = v<sub>S</sub> &middot; t<sub>1</sub> =&nbsp;&nbsp; v<sub>S</sub> / v<sub>A</sub> &middot; d<br>
+A benötige für die Strecke&nbsp; s<sub>1 </sub>= A1A2 die Zeit t<sub>2</sub> . Also t<sub>2</sub>
+= s<sub>1</sub> / v<sub>A</sub> .<br>
+Strecke s<sub>2</sub> = v<sub>S</sub> &middot; t<sub>2</sub> =&nbsp;&nbsp; v<sub>S</sub>
+/ v<sub>A</sub> &middot; s<sub>1<br>
+</sub>A benötige für die Strecke&nbsp; s<sub>2 </sub>= A2A3 die Zeit t<sub>3</sub> . Also&nbsp; t<sub>3</sub>
+= s<sub>2</sub> / v<sub>A</sub> .<br>
+Strecke s<sub>3</sub> = v<sub>S</sub> &middot;
+ t<sub>3</sub> =&nbsp;&nbsp; v<sub>S</sub> / v<sub>A</sub> &middot; s<sub>2</sub>&nbsp;&nbsp; und so weiter.</p>
+<p>Also ist (s<sub>n</sub> ) eine geometrische Folge mit q = v<sub>S</sub> / v<sub>A</sub> &lt; 1.<br>
+Daher konvergiert die unendliche geom. Reihe s =&nbsp; s<sub>1</sub> + s<sub>2</sub> + s<sub>3</sub> + ...</p>
+<p>s = s<sub>1</sub> / (1 - q) = (v<sub>S</sub> / v<sub>A</sub> &middot; d) / (1 - v<sub>S</sub> / v<sub>A</sub> ) 
+= v<sub>S</sub> &middot; d / (v<sub>A</sub> - v<sub>S</sub> ).&nbsp;&nbsp; (*)</p>
+<p>Dies stimmt mit der elementaren Berechnung der Gesamtzeit T überein, bis Achill die Schildkröte einholt:</p>
+<p>v<sub>A</sub> &middot; T = v<sub>S</sub> &middot; T + d , also &nbsp;&nbsp; T = d / (v<sub>A</sub> - v<sub>S</sub> )</p>
+<p>Nach (*):&nbsp;&nbsp; s =&nbsp; v<sub>S</sub> &middot; T , also T = d / (v<sub>A</sub> - v<sub>S</sub> )</p>
+
+</div>
+<!-- EOF: CONTENT -->
+
+<div id="footer">
+<p><small>
+©1997 -
+2019 www.mathematik.ch | <a href="/search/"><img style="vertical-align:middle" width=27 height=27 src="/img/lupe.jpg" alt="Suche"></a>
+</small></p>
+</div>
+
+</div>
+</body>
+</html>

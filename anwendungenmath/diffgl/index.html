@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta NAME="Description" CONTENT="Differentialgleichungen: Programm zur Lösung nach Runge-Kutta">
+<meta name="author" content="B.Berchtold">
+<title>Differentialgleichungen<</title>
+<LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
+<script src="diffgl_min.js"></script>
+<script async src="/script/show-hide.js"></script>
+</head>
+
+<body>
+<div class="page">
+<table class="c">
+<tr><td style="width:10%">
+<img width=28 height=27 src="/img/menuicon.png" style="cursor:pointer" title="Inhalt" alt="menu" onClick="ReverseDisplay()">
+</td><td class="c" style="width:80%">
+<a href="/"><img width=257 height=35 src="/img/mathematik.png" alt="mathematik.ch"></a>
+</td><td style="width:10%">&nbsp;</td></tr>
+</table>
+<div id="menu" style="display:none;">
+  <h4>Inhalt</h4>
+
+<ul>
+  <li><a href="/anwendungenmath/">Anwendungen + Unterrichtshilfen</a></li>
+  <li><a href="/puzzle/">Puzzles (Rätsel)</a></li> 
+  <li><a href="/spiele/">'Spiele'</a></li>
+  <li><a href="/spiele/euromillions/">Euromillions</a></li>
+  <li><a href="/spiele/swisslotto/">Swisslotto</a></li>
+  <li><a href="/geschichte/">Geschichte</a></li>
+  <li><a href="/mathematiker/">Mathematiker</a></li>
+  <li><a href="/zitate/">Zitate</a></li> 
+  <li><a href="/maturapruefungen/">Maturaprüfungen</a></li>
+  <li><a HREF="/witze/">Witze (+IQ-Test)</a></li>
+  <li><a HREF="/about.html">Kontakt</a></li>
+  <li><a HREF="/links.html">Links</a></li>
+  <li><a href="/search/">Suche</a></li>
+</ul></div>
+<!-- CONTENT -->
+<div id="content" style="display:block;">
+
+<h4>Differentialgleichungen: Lösung nach Runge-Kutta</h4>
+(Theorie: s. <a href="Differentialgleichungen.pdf">Differentialgleichungen.pdf</a>)
+
+<p>Geben Sie eine Differentialgleichung der Form &nbsp;&nbsp;
+<i>y' = g</i>(<i>x,y</i>)&nbsp;&nbsp; ein.<br>
+Der Startpunkt ist (x0/y0), der Endwert für x ist xe.<br>
+Das Programm versucht den Funktionswert y = f(xe) zu berechnen und den Graph von f im Intervall [x0,xe] 
+im Bereich für y-Werte zwischen ymin und ymax zu zeichnen.<br>
+Die Schrittweite wird im Laufe des Programms - falls nötig - automatisch angepasst.
+</p>
+
+<div class="colgroup-2">
+  <div class="col" id="containercanvas">
+     <canvas id="myCanvas" width=320 height=320>Ihr Browser kann kein Canvas!</canvas>
+  </div>
+
+  <div class="col">
+	<p>Gleichung: y' = <input id="f" type="text" value="-x/y" style="width:10em;">
+	<a href="info_diffgl.html" target="_blank">
+	<img src="help.gif" width=32 height=40 style="vertical-align:middle" alt="help"></a><br>
+    x0: <input id="x0" style="width:3em;" type="number" step="any" value="0"> &nbsp;&nbsp;&nbsp;&nbsp;
+    y0: <input id="y0" style="width:3em;" type="number" step="any" value="1"> &nbsp;&nbsp;&nbsp;&nbsp;
+    xe: <input id="xe" style="width:3em;" type="number" step="any" value="1"><br>
+    ymin: <input id="ymin" style="width:3em;" type="number" step="any" value="-0.1"> &nbsp;&nbsp;&nbsp;&nbsp;
+    ymax: <input id="ymax" style="width:3em;" type="number" step="any" value="1.1"><br>
+	Schrittweite: <input id="h" style="width:4em;" type="number" step="any" value="0.1">
+</p>
+    <p><input type="button" value="Reset" onclick="reset()">
+	   <input id="Run" type="button" value="Run" onclick="run()" style="margin-left:40px">
+	   <input id="Step" type="button" value="Step" onclick="dostep()" style="margin-left:40px"></p>
+    <p><span id="x1"> </span> &nbsp;&nbsp;&nbsp;&nbsp; <span id="y1"> </span><br>
+	<span id="x2"> </span> &nbsp;&nbsp;&nbsp;&nbsp; <span id="y2"> </span><br>
+	<span id="x3"> </span> &nbsp;&nbsp;&nbsp;&nbsp; <span id="y3"> </span><br>
+	<span id="x4"> </span> &nbsp;&nbsp;&nbsp;&nbsp; <span id="y4"> </span><br>
+	<span id="x5"> </span> &nbsp;&nbsp;&nbsp;&nbsp; <span id="y5"> </span><br>
+	</p>
+	<p><span id="message"> </span></p>	
+  </div>
+        
+</div>
+   
+</div>  
+<!-- EOF: CONTENT -->
+
+ 
+<div id="footer">
+<p><small>
+©1997 -
+2019 www.mathematik.ch | <a href="/search/"><img style="vertical-align:middle" width=27 height=27 src="/img/lupe.jpg" alt="Suche"></a>
+</small></p>
+</div>
+
+</div>
+</body>
+</html>
+

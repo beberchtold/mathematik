@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ortsbogen 70°</title>
+<LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
+<script src="/script/show-hide.js"></script>
+</head>
+
+<body>
+<div class="page">
+<table class="c">
+<tr><td style="width:10%">
+<img width=28 height=27 src="/img/menuicon.png" style="cursor:pointer" title="Inhalt" alt="menu" onClick="ReverseDisplay()">
+</td><td class="c" style="width:80%">
+<a href="/"><img width=257 height=35 src="/img/mathematik.png" alt="mathematik.ch"></a>
+</td><td style="width:10%">&nbsp;</td></tr>
+</table>
+<div id="menu" style="display:none;">
+  <h4>Inhalt</h4>
+
+<ul>
+  <li><a href="/anwendungenmath/">Anwendungen + Unterrichtshilfen</a></li>
+  <li><a href="/puzzle/">Puzzles (Rätsel)</a></li> 
+  <li><a href="/spiele/">'Spiele'</a></li>
+  <li><a href="/spiele/euromillions/">Euromillions</a></li>
+  <li><a href="/spiele/swisslotto/">Swisslotto</a></li>
+  <li><a href="/geschichte/">Geschichte</a></li>
+  <li><a href="/mathematiker/">Mathematiker</a></li>
+  <li><a href="/zitate/">Zitate</a></li> 
+  <li><a href="/maturapruefungen/">Maturaprüfungen</a></li>
+  <li><a HREF="/witze/">Witze (+IQ-Test)</a></li>
+  <li><a HREF="/about.html">Kontakt</a></li>
+  <li><a HREF="/links.html">Links</a></li>
+  <li><a href="/search/">Suche</a></li>
+</ul></div>
+<!-- CONTENT -->
+<div id="content" style="display:block;">
+
+<h4>Zwei Konstruktionen zum Ortsbogen 70°</h4>
+
+<p>Gesucht ist die Menge aller Punkte P, von denen aus man die Strecke AB unter dem Winkel 70° sieht.</p>
+
+<div class="colgroup-2">
+  <div class="col">
+     Lösung 1: Mit Peripherie-Zentriwinkelsatz
+	 <img src="ortsbogen1.png" width="90%" height="auto" style="max-width:311px">
+    <p>Bericht:</p>    
+    <p>- Mittelsenkrechte m von AB<br>
+    - Winkel 90°-70°=20° bei A an AB antragen &rarr; Schenkel g<br>
+    - g &cap; m = {M}<br>
+    - Bogen k mit Mittelpunkt M über AB ist gesuchte Lösung.<br>
+    &nbsp;&nbsp;(Für alle Punkte P auf k gilt: &ang;APB = 70°)
+    </p>	
+  </div>
+
+  <div class="col">  
+    Lösung 2: Mit Sehnentangentenwinkelsatz
+    <img src="ortsbogen2.png" width="90%" height="auto" style="max-width:334px">
+    <p>Bericht:</p>    
+    <p>- Mittelsenkrechte m von AB<br>
+    - Winkel 70° bei A an AB antragen &rarr; Schenkel h<br>
+    - Senkrechte g zu h durch A<br>
+    - g &cap; m = {M}<br>
+    - Bogen k mit Mittelpunkt M über AB ist gesuchte Lösung.<br>
+    &nbsp;&nbsp;(Für alle Punkte P auf k gilt: &ang;APB = 70°)
+    </p>    
+  </div>
+</div>
+
+</div>
+<!-- EOF: CONTENT -->
+
+<div id="footer">
+<p><small>
+©1997 -
+2019 www.mathematik.ch | <a href="/search/"><img style="vertical-align:middle" width=27 height=27 src="/img/lupe.jpg" alt="Suche"></a>
+</small></p>
+</div>
+
+</div>
+</body>
+</html>

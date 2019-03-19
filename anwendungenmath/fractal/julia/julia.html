@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Julia-Mengen und Mandelbrotmenge</title>
+<meta name="description" content="Juliamengen mit Javascript, Juliamengen mit Klick aus Mandelbrotmenge">
+<LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
+<script src="julia1_min.js"></script>
+<script async src="/script/show-hide.js"></script>
+</head>
+
+<body>
+<div class="page">
+<table class="c">
+<tr><td style="width:10%">
+<img width=28 height=27 src="/img/menuicon.png" style="cursor:pointer" title="Inhalt" alt="menu" onClick="ReverseDisplay()">
+</td><td class="c" style="width:80%">
+<a href="/"><img width=257 height=35 src="/img/mathematik.png" alt="mathematik.ch"></a>
+</td><td style="width:10%">&nbsp;</td></tr>
+</table>
+<div id="menu" style="display:none;">
+  <h4>Inhalt</h4>
+
+<ul>
+  <li><a href="/anwendungenmath/">Anwendungen + Unterrichtshilfen</a></li>
+  <li><a href="/puzzle/">Puzzles (Rätsel)</a></li> 
+  <li><a href="/spiele/">'Spiele'</a></li>
+  <li><a href="/spiele/euromillions/">Euromillions</a></li>
+  <li><a href="/spiele/swisslotto/">Swisslotto</a></li>
+  <li><a href="/geschichte/">Geschichte</a></li>
+  <li><a href="/mathematiker/">Mathematiker</a></li>
+  <li><a href="/zitate/">Zitate</a></li> 
+  <li><a href="/maturapruefungen/">Maturaprüfungen</a></li>
+  <li><a HREF="/witze/">Witze (+IQ-Test)</a></li>
+  <li><a HREF="/about.html">Kontakt</a></li>
+  <li><a HREF="/links.html">Links</a></li>
+  <li><a href="/search/">Suche</a></li>
+</ul></div>
+<!-- CONTENT -->
+<div id="content" style="display:block;">
+
+<h4>Julia-Mengen und Mandelbrotmenge</h4>
+
+<div class="colgroup-2">
+  <div class="col" id="containercanvas">
+     <p>Re(c) = <span id="Rec">-0.7</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Im(c) = <span id="Imc">0.3</span></p>
+     <a href="#" onClick="mandel()"><canvas id="myCanvas">Ihr Browser kann kein Canvas!</canvas></a> 
+  </div>
+  <div class="col">
+	<br>
+    <p>20 &le; n &le; 200: <input id="N" style="width:3em;" type="number" min=20 max=200 value="100"><br>
+    -2.4&le;Re(c)&le;1.4: <input id="rc" style="width:3em;" type="number" step="any" min=-2.4 max=1.4 value="-0.7">&nbsp;&nbsp;&nbsp;
+    -1.3&le;Im(c)&le;1.3: <input id="ic" style="width:3em;" type="number" step="any" min=-1.3 max=1.3 value="0.3"></p>
+    <p><input type="button" value="Zeichne Juliamenge!" onclick="einlesen()"></p>
+    <p>Das Fraktal Juliamenge wird durch die komplexe Zahl c bestimmt: Realteil Re(c), Imaginärteil Im(c).<br>
+     Je höher Sie n wählen, desto genauer wird das Fraktal gezeichnet.</p>
+    <p>Mit c=i (Re(c)=0, Im(c)=1) erhalten Sie das <a href="#" onClick="logo()">Logo</a> von mathematik.ch</p>	  
+  </div>
+</div>
+
+<p><b>Nach Klick auf das Bild einer Juliamenge erscheint die Mandelbrotmenge.</b><br>
+Dort können Sie dann mit einem Klick die dazugehörige Juliamenge der Koordinaten des Klicks erzeugen.<br>
+Interessante Juliamengen erhalten Sie, wenn Sie am Rand der Mandelbrotmenge klicken.</p>
+
+<p><a href="./">Zur Info über Juliamengen und Mandelbrotmenge</a>.</p>
+
+</div>
+<!-- EOF: CONTENT -->
+
+<div id="footer">
+<p><small>
+©1997 -
+2019 www.mathematik.ch | <a href="/search/"><img style="vertical-align:middle" width=27 height=27 src="/img/lupe.jpg" alt="Suche"></a>
+</small></p>
+</div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pentominos</title>
+<meta NAME="Description" CONTENT="Lösung des Pentominos-Problems mit JavaScript">
+<meta name="author" content="B.Berchtold">
+<script src="pentominos_min.js"></script>
+<LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
+<script async src="/script/show-hide.js"></script>
+</head>
+
+<body>
+<div class="page">
+<table class="c">
+<tr><td style="width:10%">
+<img width=28 height=27 src="/img/menuicon.png" style="cursor:pointer" title="Inhalt" alt="menu" onClick="ReverseDisplay()">
+</td><td class="c" style="width:80%">
+<a href="/"><img width=257 height=35 src="/img/mathematik.png" alt="mathematik.ch"></a>
+</td><td style="width:10%">&nbsp;</td></tr>
+</table>
+<div id="menu" style="display:none;">
+  <h4>Inhalt</h4>
+
+<ul>
+  <li><a href="/anwendungenmath/">Anwendungen + Unterrichtshilfen</a></li>
+  <li><a href="/puzzle/">Puzzles (Rätsel)</a></li> 
+  <li><a href="/spiele/">'Spiele'</a></li>
+  <li><a href="/spiele/euromillions/">Euromillions</a></li>
+  <li><a href="/spiele/swisslotto/">Swisslotto</a></li>
+  <li><a href="/geschichte/">Geschichte</a></li>
+  <li><a href="/mathematiker/">Mathematiker</a></li>
+  <li><a href="/zitate/">Zitate</a></li> 
+  <li><a href="/maturapruefungen/">Maturaprüfungen</a></li>
+  <li><a HREF="/witze/">Witze (+IQ-Test)</a></li>
+  <li><a HREF="/about.html">Kontakt</a></li>
+  <li><a HREF="/links.html">Links</a></li>
+  <li><a href="/search/">Suche</a></li>
+</ul></div>
+<!-- CONTENT -->
+<div id="content" style="display:block;">
+
+<h4>Pentominos</h4>
+
+<p>Das Programm zeigt den Algorithmus zum Finden von Lösungen des 10x6 Pentominos-Problems.</p>
+
+<div class="colgroup-2">
+  <div class="col">  
+   <div id="label">Anzahl Lösungen: 0</div><br>
+   <canvas id="myCanvas" width="351" height="212"> Ihr Browser kann kein Canvas! </canvas><br><br>
+     <input type="button" id="startBttn" value="Start" onclick="Start()"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+     <input type="button" id="pauseBttn" value="Pause" disabled> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     <input type="button" id="goBttn" value="Go" onclick="doGo()" disabled> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+     <input type="button" id="stepBttn" value="Step" onclick="doStep()" disabled>
+   <br><br>
+   <div id="label1">Klicken Sie auf Start</div><br>
+   <input type="checkbox" id="haltlos"> Ohne Halt bei gefundener Lösung<br><br> 
+   Position von Kreuz &nbsp;&nbsp;
+   <select name="Startpos" id="Startpos">
+   <option value="15" selected>Zeile 1, Feld 3, 389 Lösungen</option>
+   <option value="16">Zeile 1, Feld 4, 342 Lösungen</option>
+   <option value="17">Zeile 1, Feld 5, 291 Lösungen</option>
+   <option value="26">Zeile 2, Feld 2, 442 Lösungen</option>
+   <option value="27">Zeile 2, Feld 3, 262 Lösungen</option>
+   <option value="28">Zeile 2, Feld 4, 276 Lösungen</option>
+   <option value="29">Zeile 2, Feld 5, 337 Lösungen</option>  
+   </select><br><br>
+   Verzögerung in Millisekunden &nbsp;&nbsp;
+   <select name="Delay" id="Delay">
+   <option value="1" selected>1</option>
+   <option value="100">100</option>
+   <option value="500">500</option>
+   <option value="1000">1000</option>
+   </select>
+  </div>
+  <div class="col">
+     <p>
+      Klick auf <b>Step</b> lässt den Computer das Puzzle schrittweise lösen.<br><br>
+      Klick auf <b>Go</b> lässt den Computer das Puzzle lösen. Der Computer stoppt nach jeder gefundenen Lösung, wenn Sie nicht
+      die Checkbox 'ohne Halt' anklicken.<br><br>
+      Klick auf <b>Pause</b> unterbricht diesen Vorgang.<br><br>
+      Klick auf <b>Start</b> stellt Anfangszustand her.</p>
+      <p>Die Geschwindigkeit können Sie mit den entsprechenden Befehlen steuern.</p>
+      <p>Die Anfangsposition des Kreuzes können Sie mit den entsprechenden Befehlen wählen.<br>
+         Da diese Position vorgewählt wird, erzeugt das Programm nur nichtkongruente Lösungen. 
+      Es gibt insgesamt <b>2339</b> solche Lösungen.</p>
+  </div>
+ </div>
+	  
+	  
+</div>
+<!-- EOF: CONTENT -->
+
+<div id="footer">
+<p><small>
+©1997 -
+2019 www.mathematik.ch | <a href="/search/"><img style="vertical-align:middle" width=27 height=27 src="/img/lupe.jpg" alt="Suche"></a>
+</small></p>
+</div>
+
+</div>
+</body>
+</html>

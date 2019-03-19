@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="de">
+<HEAD>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta NAME="Description" CONTENT="Der Kreis des Apollonius">
+<TITLE>Der Kreis des Apollonius</title>
+<LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
+<script src="KreisdesApollonius_min.js"></script>
+<script async src="/script/show-hide.js"></script>
+</HEAD>
+
+<body>
+<div class="page">
+<table class="c">
+<tr><td style="width:10%">
+<img width=28 height=27 src="/img/menuicon.png" style="cursor:pointer" title="Inhalt" alt="menu" onClick="ReverseDisplay()">
+</td><td class="c" style="width:80%">
+<a href="/"><img width=257 height=35 src="/img/mathematik.png" alt="mathematik.ch"></a>
+</td><td style="width:10%">&nbsp;</td></tr>
+</table>
+<div id="menu" style="display:none;">
+  <h4>Inhalt</h4>
+
+<ul>
+  <li><a href="/anwendungenmath/">Anwendungen + Unterrichtshilfen</a></li>
+  <li><a href="/puzzle/">Puzzles (Rätsel)</a></li> 
+  <li><a href="/spiele/">'Spiele'</a></li>
+  <li><a href="/spiele/euromillions/">Euromillions</a></li>
+  <li><a href="/spiele/swisslotto/">Swisslotto</a></li>
+  <li><a href="/geschichte/">Geschichte</a></li>
+  <li><a href="/mathematiker/">Mathematiker</a></li>
+  <li><a href="/zitate/">Zitate</a></li> 
+  <li><a href="/maturapruefungen/">Maturaprüfungen</a></li>
+  <li><a HREF="/witze/">Witze (+IQ-Test)</a></li>
+  <li><a HREF="/about.html">Kontakt</a></li>
+  <li><a HREF="/links.html">Links</a></li>
+  <li><a href="/search/">Suche</a></li>
+</ul></div>
+<!-- CONTENT -->
+<div id="content" style="display:block;">
+
+<h4>Der Kreis des Apollonius</h4>  
+
+<p>Es gilt der Satz:</p>
+<div style="border:1px solid; padding:5px"><b>Jede Winkelhalbierende im Dreieck teilt die Gegenseite innen im
+      Verhältnis der anliegenden Seiten.<BR>Jede Winkelhalbierende eines Aussenwinkels am Dreieck teilt die Gegenseite aussen im Verhältnis der 
+      anliegenden Seiten</b> 
+</div>
+
+<p>Die innere und die äussere Winkelhalbierende eines 
+Dreieckswinkels teilen also die Gegenseite <b>harmonisch</b> im Verhältnis der 
+anliegenden Seiten</p>
+<p>Die Umkehrung des Satzes ist wahr: </p>
+
+<div style="border:1px solid; padding:5px"><b>Teilt man eine Dreiecksseite harmonisch im Verhältinis der 
+      anliegenden Seiten, so halbieren die Geraden durch die Teilpunkte und die 
+      Gegenecke den Innen- und Aussenwinkel des Dreiecks.</b> 
+</div>
+
+<p>Dieser Satz ist Grundlage für einen berühmten Satz der Antike. Um 200 v. Chr. 
+hat der griechische Mathematiker und Astronom <b>Apollonius</b> in Alexandria folgende 
+Entdeckung gemacht: </p>
+
+<div style="border:1px solid; padding:5px"><b>Der geometrische Ort der Punkte, deren Entfernung von zwei 
+      gegebenen Punkten A und B ein festes Verhältnis b:a haben, ist der Kreis 
+      mit dem Durchmesser T1 T2.<BR>T1 und T2 teilen AB harmonisch im 
+      Verhältnis b:a</b>
+</div>
+
+<p>Prüfen Sie diese Behauptungen an folgender Zeichnung:<br>
+Durch Verschieben der Ecke C1 (auf dem Kreis) sehen Sie, dass dieses Verhältnis konstant bleibt<br>
+Durch Verschieben der Ecke C (Checkbox aktivieren) können Sie das Verhältnis b:a verändern.
+Alternativ können Sie auch mit 'Step' die Position von C1 (bzw. C bei angekreuzter Checkbox) schrittweise verändern.
+</p>
+
+<div class="colgroup-2">
+  <div class="col" id="containercanvas">
+       <canvas id="myCanvas">Ihr Browser kann kein Canvas!</canvas>
+  </div>
+  
+  <div class="col">
+    <p>Verhältnis AC : BC = b : a = <span id="b_zu_a">   </span></p>
+	<p><span style="color:red">Verhältnis AT<sub>1</sub> : BT<sub>1</sub> = </span><span id="AT1_zu_BT1">   </span></p>
+    <p><span style="color:red">Verhältnis AT<sub>2</sub> : BT<sub>2</sub> = </span><span id="AT2_zu_BT2">   </span></p>
+    <p><span style="color:green">Verhältnis AC<sub>1</sub> : BC<sub>1</sub> = </span><span id="AC1_zu_BC1">   </span></p>
+	<p><input id="VarC1" type="checkbox" onclick="OnChangeCheckbox1 (this)"> Position Punkt C1 verändern</p>
+	<p><input id="VarC" type="checkbox" onclick="OnChangeCheckbox2 (this)"> Position Punkt C verändern</p>
+    <p><input type="button" value="Step" onclick="dostep()"></p>	
+  </div>
+        
+</div>	   
+
+</div>
+<!-- EOF: CONTENT -->
+
+<div id="footer">
+<p><small>
+©1997 -
+2019 www.mathematik.ch | <a href="/search/"><img style="vertical-align:middle" width=27 height=27 src="/img/lupe.jpg" alt="Suche"></a>
+</small></p>
+</div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hilbert- und Peanokurven</title>
+<meta name="description" content="Hilbert- und Peanokurven">
+<meta name="keywords" content="Hilbertkurve, Peanokurve, flächenfüllende Kurven">
+<LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
+<script src="hilbert_min.js"></script>
+<script async src="/script/show-hide.js"></script>
+</head>
+
+<body>
+<div class="page">
+<table class="c">
+<tr><td style="width:10%">
+<img width=28 height=27 src="/img/menuicon.png" style="cursor:pointer" title="Inhalt" alt="menu" onClick="ReverseDisplay()">
+</td><td class="c" style="width:80%">
+<a href="/"><img width=257 height=35 src="/img/mathematik.png" alt="mathematik.ch"></a>
+</td><td style="width:10%">&nbsp;</td></tr>
+</table>
+<div id="menu" style="display:none;">
+  <h4>Inhalt</h4>
+
+<ul>
+  <li><a href="/anwendungenmath/">Anwendungen + Unterrichtshilfen</a></li>
+  <li><a href="/puzzle/">Puzzles (Rätsel)</a></li> 
+  <li><a href="/spiele/">'Spiele'</a></li>
+  <li><a href="/spiele/euromillions/">Euromillions</a></li>
+  <li><a href="/spiele/swisslotto/">Swisslotto</a></li>
+  <li><a href="/geschichte/">Geschichte</a></li>
+  <li><a href="/mathematiker/">Mathematiker</a></li>
+  <li><a href="/zitate/">Zitate</a></li> 
+  <li><a href="/maturapruefungen/">Maturaprüfungen</a></li>
+  <li><a HREF="/witze/">Witze (+IQ-Test)</a></li>
+  <li><a HREF="/about.html">Kontakt</a></li>
+  <li><a HREF="/links.html">Links</a></li>
+  <li><a href="/search/">Suche</a></li>
+</ul></div>
+<!-- CONTENT -->
+<div id="content" style="display:block;">
+
+<h4>Hilbert- und Peanokurven</h4>
+
+<div class="colgroup-2">
+  <div class="col" id="containercanvas">
+    <p>Kurve <span id="Peanotxt"> </span> mit Ordnung <span id="N"> </span></p>
+    <canvas id="myCanvas">Ihr Browser kann kein Canvas!</canvas>
+  </div>
+  <div class="col">
+	<p><a href="#" onClick="ordnungh()">Ordnung höher</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="#" onClick="ordnungt()">Ordnung tiefer</a>
+	</p>
+	<p><input id="Peano" type="checkbox" onclick="OnChangeCheckbox (this)">Peanokurve statt Hilbertkurve</p>
+	<p>Die Kurven sind nach den Mathematikern <a href="/mathematiker/hilbert.html">David Hilbert</a> und 
+	<a href="/mathematiker/peano.html">Guiseppe Peano</a> benannt.<br>
+    Sie sind im Grenzfall ( n &rarr; &infin; ) flächenfüllende Kurven (Fraktale mit Dimension 2).</p>
+    <p>Es können für die Hilbert-Kurve Ordnungen zwischen 1 und 7, für die Peano-Kurve solche zwischen 1 und 5 betrachtet 
+	werden. Ab höherer Ordnung ist die Kurve hier bereits flächenfüllend.</p>
+	<p>Die Hilbert-Kurve entsteht rekursiv gemäss:<br>
+    initiator = "X" (s. Ordnung 1)<br>
+	generatorX = "LYFRXFXRFYL"<br>
+	generatorY = "RXFLYFYLFXR"</p>
+    <p>Die Peano-Kurve entsteht rekursiv gemäss:<br>
+    initiator = "X" (s. Ordnung 1)<br>
+	generatorX = "XFYFXLFLYFXFYRFRXFYFX"<br>
+	generatorY = "YFXFYRFRXFYFXLFLYFXFY"</p>
+    <p>Winkel für beide Kurven = 90°.</p>
+   </div>
+</div>
+
+<p>Interessant sind auch die <a href="/anwendungenmath/fractal/">Fraktale mit IFS</a>.</p>
+
+</div>
+<!-- EOF: CONTENT -->
+
+<div id="footer">
+<p><small>
+©1997 -
+2019 www.mathematik.ch | <a href="/search/"><img style="vertical-align:middle" width=27 height=27 src="/img/lupe.jpg" alt="Suche"></a>
+</small></p>
+</div>
+
+</div>
+</body>
+</html>

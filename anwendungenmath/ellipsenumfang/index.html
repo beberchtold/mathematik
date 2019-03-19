@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta NAME="Description" CONTENT="Berechnung Umfang der Ellipse mit Näherungsformel Ramanujan">
+<title>Berechnung Umfang Ellipse</title>
+<LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
+<script async src="elumfang_min.js"></script>
+<script async src="/script/show-hide.js"></script>
+</head>
+
+<body>
+<div class="page">
+<table class="c">
+<tr><td style="width:10%">
+<img width=28 height=27 src="/img/menuicon.png" style="cursor:pointer" title="Inhalt" alt="menu" onClick="ReverseDisplay()">
+</td><td class="c" style="width:80%">
+<a href="/"><img width=257 height=35 src="/img/mathematik.png" alt="mathematik.ch"></a>
+</td><td style="width:10%">&nbsp;</td></tr>
+</table>
+<div id="menu" style="display:none;">
+  <h4>Inhalt</h4>
+
+<ul>
+  <li><a href="/anwendungenmath/">Anwendungen + Unterrichtshilfen</a></li>
+  <li><a href="/puzzle/">Puzzles (Rätsel)</a></li> 
+  <li><a href="/spiele/">'Spiele'</a></li>
+  <li><a href="/spiele/euromillions/">Euromillions</a></li>
+  <li><a href="/spiele/swisslotto/">Swisslotto</a></li>
+  <li><a href="/geschichte/">Geschichte</a></li>
+  <li><a href="/mathematiker/">Mathematiker</a></li>
+  <li><a href="/zitate/">Zitate</a></li> 
+  <li><a href="/maturapruefungen/">Maturaprüfungen</a></li>
+  <li><a HREF="/witze/">Witze (+IQ-Test)</a></li>
+  <li><a HREF="/about.html">Kontakt</a></li>
+  <li><a HREF="/links.html">Links</a></li>
+  <li><a href="/search/">Suche</a></li>
+</ul></div>
+<!-- CONTENT -->
+<div id="content" style="display:block;">
+
+<h4>Berechnung des Umfanges einer Ellipse mit Näherungsformel</h4>
+
+<p>Wie gross ist der Umfang u einer Ellipse mit den Halbachsen a und b ?</p>
+<img src="ellipse.png" width="250" height="129" alt="Ellipse">
+<p>Für das (elliptische!) Integral <img src="ellipsenumfang.png" style="vertical-align:middle" width="232" height="56" alt="Umfang Ellipse"> gibt es keine exakte Lösung.</p>
+
+<p>Das folgende Formular berechnet den Umfang einer Ellipse gemäss der Näherungsformel von <a href="/mathematiker/ramanujan.html">Ramanujan</a>:<br>
+<img src="naeherungsformel.png" width="341" height="51" alt="Näherungsformel"></p>
+   
+<div class="colgroup-2">
+  <div class="col">
+  <table>
+    <tr>
+      <td style="height:27px">
+        Halbachse a (a &gt; 0):  
+      </td>
+      <td>
+      <input id="a" style="width:4em;" type="number" step="any" value=11.0>
+      </td>
+    </tr>
+    <tr>
+      <td style="height:27px">
+        Halbachse b (b &gt; 0): 
+      </td>
+      <td style="height:27px">
+      <input id="b" style="width:4em;" type="number" step="any" value=1.75>
+      </td>
+    </tr>    
+    <tr>
+      <td style="height:27px">&nbsp;</td>
+      <td><input type="button" value="Berechne!" onClick="berechne_el()">
+      </td>
+    </tr>
+  </table>
+  </div>
+  <div class="col">
+  <span id="txt"></span>
+  </div>
+</div>
+
+<br>
+<p>Falls Sie den Umfang <b>beliebig genau</b> berechnen wollen, so gehen Sie zum Programm <a href="/anwendungenmath/numint/">
+numerische Integration</a> auf www.mathematik.ch</p>
+
+</div>
+<!-- EOF: CONTENT -->
+
+<div id="footer">
+<p><small>
+©1997 -
+2019 www.mathematik.ch | <a href="/search/"><img style="vertical-align:middle" width=27 height=27 src="/img/lupe.jpg" alt="Suche"></a>
+</small></p>
+</div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="de">
+<HEAD>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<TITLE>Four_doc</title>
+<LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
+</head>
+
+<body>
+<h4>Fourier-Transformationen&nbsp;&nbsp;<font size="1" color="#808080" face="Arial">(von
+www.fh-dieburg.de/netteach/Fourier/four_doc.htm)</font></h4>
+
+<TABLE border=0>
+  <TBODY>
+  <TR>
+    <TD><IMG src="Four_doc-Dateien/four_ab1.jpe"></TD>
+    <TD><B>Jean Baptiste Joseph Fourier 1768 - 1830</B> <BR>Fourier 
+      stammt aus einer unbegüterten Familie. Er hat es der Revolution und 
+      Napoleon zu verdanken, daß er sich seiner Begabung entsprechend entwickeln 
+      konnte. <BR>Die Veröffentlichung seiner Untersuchungen zur Wärmeleitung 
+      (1807) wurde von seinen Gutachtern LAGRANGE, LAPLACE und LEGENDRE 
+      abgelehnt. Erst 1822 konnte er sein Buch <I>Théorie analytique de la 
+      chaleur</I>, das auch die Theorie der Fourier-Reihen enthält, 
+      veröffentlichen.<BR>[<I>K. Simonyi: Kulturgeschichte der Physik, Budapest 
+      1990</I>]</TD></TR></TBODY></TABLE>
+
+<p>Fourier-Transformationen gehören zu den wichtigsten mathematischen Werkzeugen 
+der Signalverarbeitung und des Systementwurfs. Sie ermöglichen die Umwandlung 
+einer Zeitfunktion oder Folge in ein Spektrum (bzw. die Impulsantwort in den 
+Frequenzgang) und umgekehrt. Die Spektraldarstellung ist in den meisten Fällen 
+anschaulicher als die Darstellung im Zeitbereich. <BR>Man unterscheidet je nach 
+Signalform vier Transformationen:</p>
+<CENTER>
+<TABLE border=2>
+  <TBODY>
+  <TR>
+    <TD align=middle>Zeitbereich</TD>
+    <TD align=middle>Frequenzbereich</TD>
+    <TD align=middle>Bezeichnung</TD>
+    <TD>Link</TD></TR>
+  <TR align=middle>
+    <TD align=middle>kontinuierlich/aperiodisch</TD>
+    <TD align=middle>kontinuierlich/aperiodisch</TD>
+    <TD align=middle>Fourier-Transformation</TD>
+    <TD><B><a href="#Four1">FOUR 1</a></B></TD></TR>
+  <TR align=middle>
+    <TD align=middle>kontinuierlich/periodisch</TD>
+    <TD align=middle>diskret/aperiodisch</TD>
+    <TD align=middle>Fourier-Analyse</TD>
+    <TD><B><a href="#Four2">FOUR 2</a></B></TD></TR>
+  <TR align=middle>
+    <TD align=middle>diskret/aperiodisch</TD>
+    <TD align=middle>kontinuierlich/periodisch</TD>
+    <TD align=middle>Fourier-Transf. diskreter Signale</TD>
+    <TD><B><a href="#Four3">FOUR 3</a></B></TD></TR>
+  <TR align=middle>
+    <TD align=middle>diskret/periodisch</TD>
+    <TD align=middle>diskret/periodisch</TD>
+    <TD align=middle>diskrete Fourier-Transf. (DFT)</TD>
+    <TD><B><a href="#Four4">FOUR 4</a></B></TD>
+  </TR>
+</TBODY></TABLE></CENTER>
+
+<p>Folgende Variablen werden verwendet:</p>
+<UL>
+  <LI>t: kontinuierliche Zeitvariable 
+  <LI>f: kontinuierliche Frequenzvariable 
+  <LI>T<SUB>0</SUB>: Periodendauer der periodischen Zeitfunktion 
+  <LI>n: diskrete Zeitvariable 
+  <LI>k: diskrete Frequenzvariable 
+  <LI>T: Taktzeit (Abtastzeit); 1/T = f<SUB>T</SUB> (Taktfrequenz) 
+  <LI>v: auf die Taktfrequenz bezogenen diskrete Frequenzvariable (v = f/f<SUB>T</SUB>)</LI>
+</UL>
+<p>Alle Diagramme und Simulationen wurden mit Mathcad Plus erstellt.</p> 
+
+<p><FONT color="#ff0000" face="Arial" size=3><b>Four<a name="Four1"></a>ier-Transformation 1</b></FONT></p>
+<CENTER>
+<TABLE bgColor="#c6c6ff" border=2>
+  <TBODY>
+  <TR align=middle>
+    <TD align=middle>Zeitsignal:&nbsp;<BR>kontinuierlich, aperiodisch</TD>
+    <TD align=middle>Frequenzsignal:&nbsp;<BR>kontinuierlich, aperiodisch</TD>
+  </TR>
+  <TR align=middle>
+    <TD align=middle><IMG src="Four_doc-Dateien/four_g01.gif"></TD>
+    <TD align=middle><IMG src="Four_doc-Dateien/four_g02.gif"></TD>
+  </TR>
+  <TR align=middle>
+    <TD align=middle><IMG src="Four_doc-Dateien/four_w04.gif">&nbsp;</TD>
+    <TD align=middle><IMG src="Four_doc-Dateien/four_w05.gif"></TD>
+  </TR>
+  <TR>
+    <TD align=middle colSpan=2>Die Betragsdarstellung setzt sich aus Realteil und Imaginärteil zusammen</TD>
+  </TR>
+  <TR align=middle>
+    <TD align=middle><IMG src="Four_doc-Dateien/four_g03.gif"></TD>
+    <TD align=middle><IMG src="Four_doc-Dateien/four_g04.gif"></TD>
+  </TR>
+  <TR>
+    <TD colSpan=2>Faßt man die Zeitfunktion als Impulsantwort eines Systems auf, dann entspricht das Spektrum dem 
+      Frequenzgang. Dieser wird üblicherweise als Betrags- und Phasendarstellung im logarithmischen 
+      Maßstab angegeben (Bode-Diagramm).</TD></TR>
+  <TR align=middle>
+    <TD align=middle><IMG src="Four_doc-Dateien/four_g05.gif"></TD>
+    <TD align=middle><IMG src="Four_doc-Dateien/four_g06.gif"></TD>
+  </TR>
+  <TR>
+    <TD colSpan=2>Die Simulation SIM1 (67 k) zeigt ein System 2. Ordnung mit unterschiedlichem 
+Dämpfungsverhalten.</TD>
+  </TR>
+</TBODY></TABLE></CENTER>
+
+<p><font size="3"><b><a name="Four2"></a><FONT color=#ff0000>Fourier-Transformation 
+2 </FONT></b></font><FONT color=#ff0000 face=SYSTEM size=+3> </FONT><B>(Fourier-Analyse)</B></font></p> 
+<CENTER>
+<TABLE bgColor="#ffffb5" border=2>
+  <TBODY>
+  <TR align=middle>
+    <TD align=middle>Zeitsignal:&nbsp;<BR>kontinuierlich, periodisch</TD>
+    <TD align=middle>Frequenzsignal:&nbsp;<BR>diskret, aperiodisch</TD>
+  </TR>
+  <TR align=middle>
+    <TD align=middle><IMG src="Four_doc-Dateien/four_g07.gif"></TD>
+    <TD align=middle><IMG src="Four_doc-Dateien/four_g08.gif"></TD>
+  </TR>
+  <TR align=middle>
+    <TD align=middle><IMG src="Four_doc-Dateien/four_w01.gif">&nbsp;<IMG src="Four_doc-Dateien/four_w02.gif"></TD>
+    <TD align=middle><IMG src="Four_doc-Dateien/four_w03.gif"></TD>
+  </TR>
+  <TR>
+    <TD colSpan=2>Für die gewählte Zeitfunktion ist der Realteil des Spektrums nahezu null, der Imaginärteil ist daher
+     identisch mit dem Betrag.</TD>
+  </TR>
+  <TR>
+    <TD colSpan=2>Die Simulation SIM2 (22 k) zeigt die Fourier-Synthese einer Dreieckschwingung aus den ersten 10 
+      Teilschwingungen (y(k)), die aus der Fourier-Analyse gewonnen wurden. An den Unstetigkeitsstellen der Zeitfunktion
+       erkennt man Überschwinger, die als Gibb´sches Phänomen bekannt sind.</TD>
+    </TR>
+</TBODY></TABLE></CENTER>
+
+<p><font color="#ff0000" face="Arial" size="3"><b>Fourier-<a name="Four3"></a>Transformation 3</b></font></p>
+<CENTER>
+<TABLE bgColor=#d5eaea border=2>
+  <TBODY>
+  <TR align=middle>
+    <TD align=middle>Zeitsignal: <BR>diskret, aperiodisch</TD>
+    <TD align=middle>Frequenzsignal:&nbsp; <BR>kontinuierlich, periodisch</TD>
+  </TR>
+  <TR align=middle>
+    <TD align=middle><IMG src="Four_doc-Dateien/four_g11.gif"></TD>
+    <TD align=middle><IMG src="Four_doc-Dateien/four_g12.gif"></TD>
+  </TR>
+  <TR align=middle>
+    <TD align=middle><IMG src="Four_doc-Dateien/four_w06.gif">&nbsp;<IMG src="Four_doc-Dateien/four_w07.gif"></TD>
+    <TD align=middle><IMG src="Four_doc-Dateien/four_w08.gif"></TD>
+  </TR>
+  <TR>
+    <TD colSpan=2>Die Simulation SIM3a (32 k) zeigt das Spektrum einer abgetasteten e-Funktion mit variabler
+     Zeitkonstante.</TD>
+  </TR>
+  <TR align=middle>
+    <TD colSpan=2>Diskreter Zeitsignale werden häufig durch Abtastung (A-D-Wandlung) kontinuierlicher Funktionen gewonnen.
+      Bei ihrer Transformation ist das Abtattheorem von Shannon zu beachten: der höchste im Signal vorkommende
+      Frequenzanteil muß kleiner sein als die halbe Abtastfrequenz. Nur unter dieser Bedingung ist eine Rekonstruktion
+      des Zeitsignals aus dem Spektrum fehlerfrei möglich. Bei Nichtbeachtung tritt der nicht korrigierbare Alias-Fehler
+      auf. Bei obiger Darstellung muß das Spektrum des abzutastenden Signals auf v = 0,5 bandbegrenzt sein.</TD>
+  <TR align=middle>
+    <TD colSpan=2>Die Simulation SIM3b (102 k) zeigt die Abtastung einer sin-Schwingung mit variabler Frequenz bei 
+      konstanter Abtastfrequenz. Zur Verdeutlichung werden die Abtastwerte durch einen DA-Wandler in ein stufenförmiges
+      Analogsignal zurückverwandelt. Es zeigt sich, daß das Analogsignal bei v = x und bei v = 1-x dieselbe Frequenz hat.
+      Die Frequenzen oberhalb von v = 0,5 werden als Alias-Frequenzen bezeichnet.</TD>
+  </TR>
+</TBODY></TABLE></CENTER>
+
+<p><font color="#ff0000" face="Arial" size="3"><b><a name="Four4">Four</a>ier-Transformation 4</b></font></p>
+<CENTER>
+<TABLE bgColor="#ffff9f" border=2>
+  <TBODY>
+  <TR align=middle>
+    <TD align=middle>Zeitsignal:&nbsp; <BR>diskret, periodisch <BR>Die dargestellten N = 32 Abtastwerte entsprechen
+      einer Periode des diskreten Zeitsignals.</TD>
+    <TD align=middle>Frequenzsignal:&nbsp; <BR>diskret, periodisch <BR>Die dargestellten N = 32 Spektralwerte entsprechen
+      einer Periode des periodischen Spektrums.</TD>
+  </TR>
+  <TR align=middle>
+    <TD align=middle><IMG src="Four_doc-Dateien/four_g13.gif"></TD>
+    <TD align=middle><IMG src="Four_doc-Dateien/four_g14.gif"></TD>
+  </TR>
+  <TR align=middle>
+    <TD align=middle><IMG src="Four_doc-Dateien/four_w09.gif">&nbsp;</TD>
+    <TD align=middle><IMG src="Four_doc-Dateien/four_w10.gif"></TD>
+  </TR>
+  <TR>
+    <TD align=middle colSpan=2>Darstellung des Spektrums als Real- und Imaginärteil</TD>
+  </TR>
+  <TR align=middle>
+    <TD align=middle><IMG src="Four_doc-Dateien/four_g15.gif"></TD>
+    <TD align=middle><IMG src="Four_doc-Dateien/four_g16.gif"></TD>
+  </TR>
+  <TR align=middle>
+    <TD colSpan=2>Das DFT-Spektrum ist immer symmetrisch (Realteil symmetrisch, Imaginärteil antisymmetrisch). Die obere
+      Hälfte des Spektrums liegt im "verbotenen" Frequenzbereich; für die Rücktransformation in den Zeitbereich wird
+      dieser Bereich natürlich benötigt. Für die numerische Lösung des Fourier-Integrals wird nur der Bereich bis zur
+      halben Taktfrequenz (untere Hälfte) herangezogen</TD>
+  </TR>
+  <TR align=middle>
+    <TD colSpan=2>Die Bedeutung der DFT hat durch die Möglichkeit ihrer schnellen Berechnung mittels FFT (Fast Fourier 
+      Transform) enorm zugenommen. Mit FFT-Analysatoren z.B. können Signale und Systeme gleichzeitig im Zeit-und
+      Frequenzbereich untersucht werden. Die Lösung des Fourier-Integrals (FOUR1) mit dem Rechner benutzt auch den 
+      FFT-Algorithmus. Auch das Goertzel-Filter, ein hochempfindlicher Frequenz-Detektor, ist aus der DFT-Summenformel
+      abgeleitet.</TD>
+  </TR>
+</TBODY></TABLE></CENTER>
+
+<p>Literaturhinweis<BR>Die Literatur über Fourier-Transformationen ist sehr zahlreich. Eine 
+gute umfassende Darstellung findet man in dem Lehrbuch<BR>
+Oppenheim/Willsky/Young: Signale und Systeme, VCH Verlagsgesellschaft Weinheim 1992</p>
+<HR>
+<p><a href="fourier.php">zurück zur Seite Fourier</a></p>
+</BODY>
+</HTML>

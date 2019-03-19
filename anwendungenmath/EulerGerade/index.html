@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="de">
+<HEAD>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta NAME="Description" CONTENT="Eulersche Gerade, Schwerpunkt, Umkreismittelpunkt und Höhenschnittpunkt eines Dreiecks">
+<TITLE>Euler'sche Gerade</title>
+<LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
+<script src="EulerGerade_min.js"></script>
+<script async src="/script/show-hide.js"></script>
+</HEAD>
+
+<body>
+<div class="page">
+<table class="c">
+<tr><td style="width:10%">
+<img width=28 height=27 src="/img/menuicon.png" style="cursor:pointer" title="Inhalt" alt="menu" onClick="ReverseDisplay()">
+</td><td class="c" style="width:80%">
+<a href="/"><img width=257 height=35 src="/img/mathematik.png" alt="mathematik.ch"></a>
+</td><td style="width:10%">&nbsp;</td></tr>
+</table>
+<div id="menu" style="display:none;">
+  <h4>Inhalt</h4>
+
+<ul>
+  <li><a href="/anwendungenmath/">Anwendungen + Unterrichtshilfen</a></li>
+  <li><a href="/puzzle/">Puzzles (Rätsel)</a></li> 
+  <li><a href="/spiele/">'Spiele'</a></li>
+  <li><a href="/spiele/euromillions/">Euromillions</a></li>
+  <li><a href="/spiele/swisslotto/">Swisslotto</a></li>
+  <li><a href="/geschichte/">Geschichte</a></li>
+  <li><a href="/mathematiker/">Mathematiker</a></li>
+  <li><a href="/zitate/">Zitate</a></li> 
+  <li><a href="/maturapruefungen/">Maturaprüfungen</a></li>
+  <li><a HREF="/witze/">Witze (+IQ-Test)</a></li>
+  <li><a HREF="/about.html">Kontakt</a></li>
+  <li><a HREF="/links.html">Links</a></li>
+  <li><a href="/search/">Suche</a></li>
+</ul></div>
+<!-- CONTENT -->
+<div id="content" style="display:block;">
+
+<h4>Euler'sche Gerade eines Dreiecks</h4>  
+
+<p>Im Dreieck <I>ABC</I> gibt es verschiedene interessante Punkte und spezielle Linien. Sie wandern alle entsprechend 
+mit, wenn Sie die Eckpunkte <I>C</I> und B (Checkbox aktivieren) mit der Maus (B und C bleiben auf dem Umkreis) 
+verschieben.<br>
+Alternativ können Sie auch mit 'Step' die Positionen von C (bzw.B) schrittweise verändern.</p>
+<div style="border:1px solid;padding:5px;"><b>Euler'sche Gerade des Dreiecks</b><br>
+Die drei Punkte M, S und H liegen auf einer Geraden, der sog. <I>Euler'schen Geraden</I><br>
+(nach <a href="/mathematiker/euler.html"> Leonhard Euler</a>, 1707-1783).</div>
+<br>
+	
+<div class="colgroup-2">
+  <div class="col" id="containercanvas">
+       <canvas id="myCanvas">Ihr Browser kann kein Canvas!</canvas>
+  </div>
+
+  <div class="col">
+	<p><input id="VarC" type="checkbox" onclick="OnChangeCheckbox1 (this)"> Position Punkt C verändern</p>
+	<p><input id="VarB" type="checkbox" onclick="OnChangeCheckbox2 (this)"> Position Punkt B verändern</p>
+    <p><input type="button" value="Step" onclick="dostep()"></p>
+	<p>Klick auf <input type="button" value="Reset" onclick="reset()"> stellt Anfangszustand her.</p>
+  </div>
+	
+</div>	   
+
+<p><b>Schwerpunkt S des Dreiecks</b><br>
+<I>A'</I>, <I>B'</I> und <I>C'</I> sind die Mittelpunkte der Dreiecksseiten. Die grün gefärbten
+Strecken <I>AA'</I>, <I>BB'</I> und <I>CC'</I> sind die Seitenhalbierenden
+(oder Schwerelinien) des Dreiecks. Sie schneiden sich im Schwerpunkt S.<br>
+Man kann zeigen, dass sich die Schwerelinien im Verhältnis 2:1 teilen. So ist
+also z.B. die Strecke <I>AS</I> doppelt so lang wie die Strecke <I>A'S</I>.
+</p>
+<p><b>Umkreismittelpunkt M</b><br>
+Der Mittelpunkt <i>M</i> des Umkreises ist
+Schnittpunkt der (grau gefärbten) Mittelsenkrechten <I>A'D'</I>, <I>B'E'</I>, and <I>C'F'</I>.
+Die Verbindungslinien <I>A'B'</I>, <I>B'C'</I> und <I>C'A'</I> der Mittelpunkte der
+Seiten sind schwarz gefärbt.</p>
+<p><b>Höhenschnittpunkt H</b><br>
+Es gibt drei (rot gefärbte) Höhen des Dreiecks: <I>AD</I> senkrecht zu <I>BC</I>, <I>BE</I>  sekrecht zu <I>CA</I> und
+schliesslich <I>CF</I>  senkrecht zu <I>AB</I>. <i>H</i> ist der Schnittpunkt dieser drei Höhen.</p>
+
+<p>Es scheint überraschend, dass die drei Punkte M, S und H auf einer Geraden liegen. Aber hier ist der Beweis:<br>
+Wegen dem Teilverhältnis der Schwerelinien (s. oben) ist das Dreieck <I>A'B'C'</I>
+ähnlich zum Dreieck <I>ABC </I>und seine Seiten sind parallel zu den entsprechenden Seiten des Dreiecks <I>ABC </I>und
+ halb so lang wie sie. (Zentrische Streckung an S mit Faktor -0.5) </p>
+<p>Die Höhen <I>AD</I>, <I>BE</I> und <I>CF </I>werden dadurch auf die Höhen <I>A'D'</I>, <I>B'E'</I> und 
+<I>C'F' </I>abgebildet. Da sich die Höhen des Originaldreiecks in <i>H</i>
+schneiden, so schneiden sich die Höhen des Dreiecks <I>A'B'C'</I> in <I>H'</I>.
+<I>H'</I> ist aber zugleich der Umkreismittelpunkt <I>M</I><i> </i>des Dreiecks <I>ABC</I>. 
+Also ist <I>M</I> das Bild des Punktes <I>H</I>  unter der zentrischen Streckung
+an <i>S</i>. Folglich ist zudem die Strecke <i>SM</i> halb so lang wie die Strecke <i>S</i><I>H</I>.</p>
+
+</div>
+<!-- EOF: CONTENT -->
+
+<div id="footer">
+<p><small>
+©1997 -
+2019 www.mathematik.ch | <a href="/search/"><img style="vertical-align:middle" width=27 height=27 src="/img/lupe.jpg" alt="Suche"></a>
+</small></p>
+</div>
+
+</div>
+</body>
+</html>

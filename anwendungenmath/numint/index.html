@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta NAME="Description" CONTENT="Numerische Integration, Obersumme, Untersumme, Trapez, Simpson">
+<meta name="author" content="B.Berchtold">
+<title>Numerische Integration</title>
+<LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
+<script src="numint.js"></script>
+<script async src="/script/show-hide.js"></script>
+</head>
+
+<body>
+<div class="page">
+<table class="c">
+<tr><td style="width:10%">
+<img width=28 height=27 src="/img/menuicon.png" style="cursor:pointer" title="Inhalt" alt="menu" onClick="ReverseDisplay()">
+</td><td class="c" style="width:80%">
+<a href="/"><img width=257 height=35 src="/img/mathematik.png" alt="mathematik.ch"></a>
+</td><td style="width:10%">&nbsp;</td></tr>
+</table>
+<div id="menu" style="display:none;">
+  <h4>Inhalt</h4>
+
+<ul>
+  <li><a href="/anwendungenmath/">Anwendungen + Unterrichtshilfen</a></li>
+  <li><a href="/puzzle/">Puzzles (Rätsel)</a></li> 
+  <li><a href="/spiele/">'Spiele'</a></li>
+  <li><a href="/spiele/euromillions/">Euromillions</a></li>
+  <li><a href="/spiele/swisslotto/">Swisslotto</a></li>
+  <li><a href="/geschichte/">Geschichte</a></li>
+  <li><a href="/mathematiker/">Mathematiker</a></li>
+  <li><a href="/zitate/">Zitate</a></li> 
+  <li><a href="/maturapruefungen/">Maturaprüfungen</a></li>
+  <li><a HREF="/witze/">Witze (+IQ-Test)</a></li>
+  <li><a HREF="/about.html">Kontakt</a></li>
+  <li><a HREF="/links.html">Links</a></li>
+  <li><a href="/search/">Suche</a></li>
+</ul></div>
+<!-- CONTENT -->
+<div id="content" style="display:block;">
+
+<h4>Numerische Integration</h4>
+
+<p><a href="NumerischeIntegration.pdf">Dazugehörige Theorie</a> <img src="/img/pdficon_small.gif" width=17 height=17 alt="pdficon"></p>
+
+<div class="colgroup-2">
+  <div class="col" id="containercanvas">
+     <canvas id="myCanvas">Ihr Browser kann kein Canvas!</canvas>
+  </div>
+
+  <div class="col">
+     <p><span style="color:green">Funktion: y = </span><input id="f" type="text" value="1/sqrt(2*pi)*exp(-x*x/2)" style="width:12em;"> <a href="infos.html" target="_blank"><img src="help.gif" width=32 height=40 style="vertical-align: middle" alt="help"></a><br>
+     x0: <input id="Xmin" style="width:4em;" type="number" step="any" value="0">  &nbsp;&nbsp;&nbsp;&nbsp;
+     xn: <input id="Xmax" style="width:4em;" type="number" step="any" value="5"><br>
+     Anzahl Teilintervalle: <input id="Anz" style="width:4em;" type="number" min="1" max="2000" value="20"></p>
+	 <p><input type="button" value="Berechne!" onclick="reset()"></p>
+	 <p><b>Graphik</b><br>
+     <input id="Trapez" type="checkbox" onclick="OnChangeCheckbox1 (this)">Trapez &nbsp;&nbsp;&nbsp;
+     <input id="LPunkt" type="checkbox" onclick="OnChangeCheckbox2 (this)">Links &nbsp;&nbsp;&nbsp;
+     <input id="RPunkt" type="checkbox" onclick="OnChangeCheckbox3 (this)">Rechts &nbsp;&nbsp;&nbsp;
+	 <input id="MPunkt" type="checkbox" onclick="OnChangeCheckbox4 (this)">Mitte
+     </p>
+	 <p><b>Resultate</b><br>
+     Trapez: <span id="trapez" style="color:black"> </span> &nbsp;&nbsp;&nbsp;
+     Simpson: <b><span id="simpson" style="color:black"> </span></b><br>
+     Links: <span id="lpunkt" style="color:black"> </span> &nbsp;&nbsp;&nbsp;
+     Rechts: <span id="rpunkt" style="color:black"> </span><br>
+	 Mitte: <span id="mpunkt" style="color:black"> </span></p>				
+  </div>
+        
+</div>	
+     
+<p>Nach einer Änderung in einem Eingabefeld müssen Sie auf Berechne! klicken. Die Return-Taste genügt nicht.</p>
+
+<p><b>Anwendungsbeispiel</b>: Wie gross ist der Umfang u einer Ellipse mit den Halbachsen a = 11 und b = 1.75?</p>
+<p>Für das (elliptische!) Integral <img src="ellipsenumfang.png" width="232" height="56" style="vertical-align:middle" alt="Umfang Ellipse"> gibt es keine exakte Formel.<br>
+Geben Sie also bei y = die folgende Funktion ein: &nbsp; &nbsp; 4*sqrt(11*11*cos(x)*cos(x)+1.75*1.75*sin(x)*sin(x))<br>
+ bei x0 = 0 und bei xn = 1.5707963267948966 &nbsp; &nbsp; &nbsp; (copy and paste!).<br>
+Wählen Sie für die Anzahl Intervalle 40, klicken Sie dann auf 'Berechne!' und Sie erhalten den Simpson-Wert <b>u = 45.528581</b>.</p>
+	
+</div>  
+<!-- EOF: CONTENT -->
+
+ 
+<div id="footer">
+<p><small>
+©1997 -
+2019 www.mathematik.ch | <a href="/search/"><img style="vertical-align:middle" width=27 height=27 src="/img/lupe.jpg" alt="Suche"></a>
+</small></p>
+</div>
+
+</div>
+</body>
+</html>
+

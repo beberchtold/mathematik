@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta NAME="Description" CONTENT="Wahrscheinlichkeit: Hypergeometrische Verteilung mit Histogramm">
+<title>Hypergeometrische Verteilung mit Histogramm</title>
+<meta name="author" content="B.Berchtold">
+<LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-alpha/katex.min.css" TYPE="text/css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-alpha/katex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-alpha/contrib/auto-render.min.js"></script>
+<script src="hypergeo_min.js"></script>
+<script async src="/script/show-hide.js"></script>
+</head>
+
+<body>
+<div class="page">
+<table class="c">
+<tr><td style="width:10%">
+<img width=28 height=27 src="/img/menuicon.png" style="cursor:pointer" title="Inhalt" alt="menu" onClick="ReverseDisplay()">
+</td><td class="c" style="width:80%">
+<a href="/"><img width=257 height=35 src="/img/mathematik.png" alt="mathematik.ch"></a>
+</td><td style="width:10%">&nbsp;</td></tr>
+</table>
+<div id="menu" style="display:none;">
+  <h4>Inhalt</h4>
+
+<ul>
+  <li><a href="/anwendungenmath/">Anwendungen + Unterrichtshilfen</a></li>
+  <li><a href="/puzzle/">Puzzles (Rätsel)</a></li> 
+  <li><a href="/spiele/">'Spiele'</a></li>
+  <li><a href="/spiele/euromillions/">Euromillions</a></li>
+  <li><a href="/spiele/swisslotto/">Swisslotto</a></li>
+  <li><a href="/geschichte/">Geschichte</a></li>
+  <li><a href="/mathematiker/">Mathematiker</a></li>
+  <li><a href="/zitate/">Zitate</a></li> 
+  <li><a href="/maturapruefungen/">Maturaprüfungen</a></li>
+  <li><a HREF="/witze/">Witze (+IQ-Test)</a></li>
+  <li><a HREF="/about.html">Kontakt</a></li>
+  <li><a HREF="/links.html">Links</a></li>
+  <li><a href="/search/">Suche</a></li>
+</ul></div>
+<!-- CONTENT -->
+<div id="content" style="display:block;">
+
+<h4>Hypergeometrische Verteilung (Ziehen ohne Zurücklegen)</h4>
+
+<p>In einer Urne liegen m&ge;2 Kugeln; r davon sind rot. Man zieht n Kugeln ohne Zurücklegen.<br>
+Das Formular berechnet dann die Wahrscheinlichkeit, dass von diesen n Kugeln
+mindestens a und höchstens b rote Kugeln sind.<br>
+W'keit P<sup>*</sup>(a &le; x &le; b) = 
+<span>\(\rm\Large{\frac{\sum\limits_{x=a}^b \binom{r}{x} \binom{m-r}{n-x}}{\binom{m}{n}}}\) </span>
+,&nbsp;&nbsp; n <small>&le;</small> m, b&nbsp;<small>&le;</small>&nbsp;n, a&nbsp;<small>&le;</small>&nbsp;b&nbsp;<small>&le;</small>&nbsp;r<br>
+Erwartungswert &mu; = <span>\(\rm n\cdot\frac{r}{m}\)</span>, Varianz &sigma;<sup>2</sup> = <span>\(\rm n\cdot\frac{r}{m}(1-\frac{r}{m})\frac{m-n}{m-1}\)</span>, Standardweichung &sigma;</p>
+
+<p>Das Histogramm wird nur gezeichnet, falls n&le;30</p>
+
+<div class="colgroup-2">
+  <div class="col" id="containercanvas">
+    <p><b>Verteilung für m = <span id="M"></span>, r = <span id="R"></span>, n = <span id="N"></span></b><br>
+	&mu; = <span id="MU"></span> &nbsp;&nbsp; &sigma;<sup>2</sup> = <span id="VAR"></span> &nbsp;&nbsp; 
+	&sigma; = <span id="SIGMA"></span></p>
+    <canvas id="myCanvas">Ihr Browser kann kein Canvas!</canvas>
+  </div>
+  
+  <div class="col">
+    <ul>
+	  <li style="padding:4px;">Gesamtanzahl Kugeln m: <input id="m" type="number" min=2 style="width:50px;" value="45"></li>
+      <li style="padding:4px;">Anzahl rote Kugeln r: <input id="r" type="number" min=1 style="width:50px;margin-left:10px;" value="6"></li>
+	  <li style="padding:4px;">Anzahl Züge n: <input id="n" type="number" min=1 max=1000 style="width:50px;margin-left:52px;" value="6"></li>
+      <li style="padding:4px;">Untere Grenze a: <input id="a" type="number" min=0 style="width:50px;margin-left:38px;" value="0"></li>
+      <li style="padding:4px;">Obere Grenze b (b&ge;a): <input id="b" type="number" min=0 style="width:50px;" value="2"></li>
+      <li style="padding:4px;"><input type="button" value="Berechne!" onclick="rechne()"></li>  
+    </ul>
+	<br>
+    <p><b>Resultat</b><br><br> 
+	<b>P<sup>*</sup>(<span id="A"></span>&le;X&le;<span id="B"></span>) = <span id="RESHY"></span></b></p>
+  </div>       
+</div>	
+
+<p><b>Beispiele</b></p>
+<p>1) m = 45, r = 6, n = 6<br>
+<b>Wahrscheinlichkeit, 0 bis 2 rote zu ziehen?</b> a = 0, b = 2<br>
+W'keit = 0.976166, also ungefähr <b>97.6 Prozent</b>.</p>
+<p>2) Swisslotto: 6 aus 42 Zahlen und 1 von 6 Glückszahlen<br>
+<b>Wahrscheinlichkeit P, genau 3 der 6 Zahlen richtig und die Glückszahl falsch zu haben?</b><br>
+Zuerst m = 42, r = 6, n = 6, a = 3, b = 3; Dies ergibt W'keit1 = 0.027222<br>
+Dann W'keit2 =  5/6, die Glückszahl falsch zu haben.<br>
+P ist W'keit1 &middot; W'keit2, also <b>P = 0.022685</b>
+<p>3) Euromillions: 5 aus 50 Zahlen und 2 von 11 Sternen<br>
+<b>Wahrscheinlichkeit P, genau 2 der 5 Zahlen und einen der beiden Sterne richtig zu haben?</b><br>
+Zuerst m = 50, r = 5, n = 5, a = 2, b = 2; Dies ergibt W'keit1 = 0.066973<br>
+Dann m = 11, r = 2, n = 2, a = 1, b = 1; Dies ergibt W'keit2 =  0.327273<br>
+P ist W'keit1 &middot; W'keit2, also <b>P = 0.021918</b></p>
+
+<p>Für die Resultate aller Wahrscheinlichkeiten von Euromillions wählen Sie  
+<a href="euromillions/euromillions.html">W'keiten von Euromillions</a><br>  
+Falls Sie die Ziehung der Zahlen und Sterne simulieren wollen, so gehen Sie zu <a href="/spiele/euromillions/">Spiele (Euromillions)</a></p>
+<p>Falls Sie die Ziehung des Swisslottos simulieren wollen, so wählen Sie <a href="/spiele/swisslotto/">Spiele (Swisslotto)</a></p>
+
+<p>Informationen zur Binomialverteilung: <a href="binomialvert.html">Binomialverteilung</a></p>
+		
+</div>
+<script>
+   renderMathInElement(document.body);
+</script>   
+<!-- EOF: CONTENT -->
+
+ 
+<div id="footer">
+<p><small>
+©1997 -
+2019 www.mathematik.ch | <a href="/search/"><img style="vertical-align:middle" width=27 height=27 src="/img/lupe.jpg" alt="Suche"></a>
+</small></p>
+</div>
+
+</div>
+</body>
+</html>
+

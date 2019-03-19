@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta NAME="Description" CONTENT="Spiel Sudoku mit Javascript">
+<meta name="author" content="B.Berchtold">
+<title>Sudoku 9x9</title>
+<LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
+<script src="sudoku.js" type="text/javascript"></script>
+<script async src="problems_min.js" type="text/javascript"></script>
+<script async src="/script/show-hide.js" type="text/javascript"></script>
+</head>
+
+<body onload="resizeCanvas()" onkeyup="keyPress(event.keyCode)">
+<div class="page">
+<table class="c">
+<tr><td style="width:10%">
+<img width=28 height=27 src="/img/menuicon.png" style="cursor:pointer" title="Inhalt" alt="menu" onClick="ReverseDisplay()">
+</td><td class="c" style="width:80%">
+<a href="/"><img width=257 height=35 src="/img/mathematik.png" alt="mathematik.ch"></a>
+</td><td style="width:10%">&nbsp;</td></tr>
+</table>
+<div id="menu" style="display:none;">
+  <h4>Inhalt</h4>
+
+<ul>
+  <li><a href="/anwendungenmath/">Anwendungen + Unterrichtshilfen</a></li>
+  <li><a href="/puzzle/">Puzzles (Rätsel)</a></li> 
+  <li><a href="/spiele/">'Spiele'</a></li>
+  <li><a href="/spiele/euromillions/">Euromillions</a></li>
+  <li><a href="/spiele/swisslotto/">Swisslotto</a></li>
+  <li><a href="/geschichte/">Geschichte</a></li>
+  <li><a href="/mathematiker/">Mathematiker</a></li>
+  <li><a href="/zitate/">Zitate</a></li> 
+  <li><a href="/maturapruefungen/">Maturaprüfungen</a></li>
+  <li><a HREF="/witze/">Witze (+IQ-Test)</a></li>
+  <li><a HREF="/about.html">Kontakt</a></li>
+  <li><a HREF="/links.html">Links</a></li>
+  <li><a href="/search/">Suche</a></li>
+</ul></div>
+<!-- CONTENT -->
+<div id="content" style="display:block;">
+
+<h4>Sudoku 9x9</h4>
+
+<p>Das Ziel des Spiels ist, in jeder Zeile, Kolonne und Box (eine Box ist durch fette Linien abgetrennt) 
+genau die Ziffern 1 bis 9 zu haben.</p>
+<p>Sie können die Ziffern einer Problemstellung in die Felder eingeben oder mit Create ein neues Puzzle erzeugen.
+<br>
+Sie können auch durch Wahl von p1 bis p11 aus dem Auswahlfeld 'Prob' ein gespeichertes Problem laden und dann lösen.<br>
+Das Programm lässt für die Eingabe die - gemäss den Regeln - in den Leerfeldern noch möglichen Ziffern zu. 
+Es ist aber wegen der Eindeutigkeit der Lösung jeweils natürlich nur genau eine dieser Ziffern richtig!<br>
+Weitere Informationen, insbesondere zur Hilfe: Klicken Sie auf <a href="infos.html" target="_blank">
+<img src="help.gif" width=32 height=40 style="vertical-align:middle" alt="help"></a></p>
+
+<div class="colgroup-2">
+  <div class="col" id="containercanvas">
+     <canvas id="myCanvas">Ihr Browser kann kein Canvas!</canvas>
+  </div>
+  
+  <div class="col">
+    <p>Eingabe der Ziffer ins aktuelle Feld:<br>
+	<input id="1" type="button" value="1" onclick="eingabe(1)">&nbsp;&nbsp;
+	<input id="2" type="button" value="2" onclick="eingabe(2)">&nbsp;&nbsp;
+	<input id="3" type="button" value="3" onclick="eingabe(3)">&nbsp;&nbsp;
+    <input id="4" type="button" value="4" onclick="eingabe(4)">&nbsp;&nbsp;
+	<input id="5" type="button" value="5" onclick="eingabe(5)">&nbsp;&nbsp;
+	<input id="6" type="button" value="6" onclick="eingabe(6)">&nbsp;&nbsp;
+    <input id="7" type="button" value="7" onclick="eingabe(7)">&nbsp;&nbsp;
+	<input id="8" type="button" value="8" onclick="eingabe(8)">&nbsp;&nbsp;
+	<input id="9" type="button" value="9" onclick="eingabe(9)">&nbsp;&nbsp;	
+	</p>
+	<p style="margin-top:20px"><input id="Show" type="checkbox" onclick="OnChangeCheckbox1 (this)">Mögliche Ziffern im akt. Feld: <span id="Verf"> </span></p>
+
+    <p><input id="Hilfe" type="checkbox" onclick="OnChangeCheckbox2 (this)">Mögliche Felder für Ziffer:<br>
+	<input id="H1" type="button" value="1" onclick="hilf(1)">&nbsp;&nbsp;
+	<input id="H2" type="button" value="2" onclick="hilf(2)">&nbsp;&nbsp;
+	<input id="H3" type="button" value="3" onclick="hilf(3)">&nbsp;&nbsp;
+    <input id="H4" type="button" value="4" onclick="hilf(4)">&nbsp;&nbsp;
+	<input id="H5" type="button" value="5" onclick="hilf(5)">&nbsp;&nbsp;
+	<input id="H6" type="button" value="6" onclick="hilf(6)">&nbsp;&nbsp;
+    <input id="H7" type="button" value="7" onclick="hilf(7)">&nbsp;&nbsp;
+	<input id="H8" type="button" value="8" onclick="hilf(8)">&nbsp;&nbsp;
+	<input id="H9" type="button" value="9" onclick="hilf(9)">&nbsp;&nbsp;	
+	</p>
+	<br>
+	<table><tr>
+	<td><input type="button" value="Create" onclick="docreate()">&nbsp;&nbsp;</td>
+    <td style="padding-right:12px;">
+    <select id="wahl" size="1" onclick="problem(this[selectedIndex].index)">
+      <option selected>Prob</option>
+	  <option>p1</option>
+      <option>p2</option>
+      <option>p3</option>
+      <option>p4</option>
+      <option>p5</option>
+	  <option>p6</option>
+	  <option>p7</option>
+	  <option>p8</option>
+      <option>p9</option>
+	  <option>p10</option>
+	  <option>p11</option>
+    </select>
+    </td>
+	<td><input type="button" value="Solve" onclick="solvebutton()">&nbsp;&nbsp;</td>
+	<td><input type="button" value="Clear" onclick="initPuzzle()"></td>
+	</tr><tr>
+	<td style="padding-top:10px;"><input type="button" value="Save" onclick="save_user()"></td>
+	<td style="padding-top:10px;"><input type="button" value="Load" onclick="load_user()"></td>
+	<td style="padding-top:10px;"><input type="button" value="Lock" onclick="lock()"></td>
+	<td style="padding-top:10px;"><input type="button" value="Back" onclick="backtrack_user()"></td>	
+	</tr></table>
+	<p style="margin-top:20px"><b><span id="message"></span></b></p>
+  </div>       
+</div>	
+
+<p>Ein Sudoku benötigt mindestens 17 Vorgaben (Gary McGuire, Januar 2012)</p>
+<p><a href="/spiele/sudoku_x/">Zu SudokuX</a></p>
+
+</div>  
+<!-- EOF: CONTENT -->
+ 
+<div id="footer">
+<p><small>
+©1997 -
+2019 www.mathematik.ch | <a href="/search/"><img style="vertical-align:middle" width=27 height=27 src="/img/lupe.jpg" alt="Suche"></a>
+</small></p>
+</div>
+
+</div>
+</body>
+</html>

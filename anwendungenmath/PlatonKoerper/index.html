@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="de">
+<HEAD>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta NAME="Description" CONTENT="Platonische Körper, Tetraeder, Würfel, Oktaeder, Dodekader, Isokaeder">
+<TITLE>Platonische Körper</title>
+<LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
+<script src="platon_min.js"></script>
+<script async src="/script/show-hide.js"></script>
+</HEAD>
+
+<body>
+<div class="page">
+<table class="c">
+<tr><td style="width:10%">
+<img width=28 height=27 src="/img/menuicon.png" style="cursor:pointer" title="Inhalt" alt="menu" onClick="ReverseDisplay()">
+</td><td class="c" style="width:80%">
+<a href="/"><img width=257 height=35 src="/img/mathematik.png" alt="mathematik.ch"></a>
+</td><td style="width:10%">&nbsp;</td></tr>
+</table>
+<div id="menu" style="display:none;">
+  <h4>Inhalt</h4>
+
+<ul>
+  <li><a href="/anwendungenmath/">Anwendungen + Unterrichtshilfen</a></li>
+  <li><a href="/puzzle/">Puzzles (Rätsel)</a></li> 
+  <li><a href="/spiele/">'Spiele'</a></li>
+  <li><a href="/spiele/euromillions/">Euromillions</a></li>
+  <li><a href="/spiele/swisslotto/">Swisslotto</a></li>
+  <li><a href="/geschichte/">Geschichte</a></li>
+  <li><a href="/mathematiker/">Mathematiker</a></li>
+  <li><a href="/zitate/">Zitate</a></li> 
+  <li><a href="/maturapruefungen/">Maturaprüfungen</a></li>
+  <li><a HREF="/witze/">Witze (+IQ-Test)</a></li>
+  <li><a HREF="/about.html">Kontakt</a></li>
+  <li><a HREF="/links.html">Links</a></li>
+  <li><a href="/search/">Suche</a></li>
+</ul></div>
+<!-- CONTENT -->
+<div id="content" style="display:block;">
+
+<h4>Die Platonischen Körper</h4>  
+
+<p>Als Platonische Körper werden diejenigen Polyeder (Vielflache) bezeichnet, bei denen alle Flächen kongruente 
+regelmässige Vielecke sind. Es gibt genau fünf Platonische Körper:</p>
+
+<ul>
+<li>Regelmässiges Tetraeder (4 Ecken, 6 Kanten, 4 gleichseitige Dreiecke als Flächen)</li>
+<li>Regelmässiges Hexaeder oder Würfel (8 Ecken, 12 Kanten, 6 Quadrate als Flächen)</li>
+<li>Regelmässiges Oktaeder (6 Ecken, 12 Kanten, 8 gleichseitige Dreiecke als Flächen)</li>
+<li>Regelmässiges Dodekaeder (20 Ecken, 30 Kanten, 12 regelmässige Fünfecke als Flächen)</li>
+<li>Regelmässiges Ikosaeder (12 Ecken, 30 Kanten, 20 gleichseitige Dreiecke als Flächen)</li>
+</ul>
+
+<p>Wählen Sie mittels Checkbox einen Platonischen Körper aus. Die Rotationsachse verläuft immer senkrecht 
+durch den roten Punkt. Die Achse kann wahlweise durch eine Ecke, einen Kantenmittelpunkt oder einen Flächenmittelpunkt 
+verlaufen (Umschaltmöglichkeit mit dem Button 'Rotationsachse').<br>
+Klick auf 'Step' lässt den Körper um jeweils &pi;/20 rotieren.<br>
+Klick auf 'Run/Stop' lässt den Körper permanent rotieren, nochmaliger Klick stoppt diese Rotation.<br>
+Der Höhenwinkel lässt sich im entsprechenden Textfeld zwischen 90&deg; (Anblick senkrecht von oben) 
+und -90&deg; (Anblick senkrecht von unten) verändern.</p>
+
+<div class="colgroup-2">
+  <div class="col" id="containercanvas">
+       <canvas id="myCanvas">Ihr Browser kann kein Canvas!</canvas>
+  </div>
+
+  <div class="col">
+	<table>
+	  <tr>
+	    <td style="padding:6px;"><input id="Tetraeder" type="checkbox" onclick="OnChangeCheckbox1 (this)"> Tetraeder</td>
+	    <td style="padding:6px;"><input id="Hexaeder" type="checkbox" onclick="OnChangeCheckbox2 (this)"> Hexaeder (Würfel)</td>
+	  </tr><tr>
+        <td style="padding:6px;"><input id="Oktaeder" type="checkbox" onclick="OnChangeCheckbox3 (this)"> Oktaeder</td>
+        <td style="padding:6px;"><input id="Dodekaeder" type="checkbox" onclick="OnChangeCheckbox4 (this)"> Dodekaeder</td>
+	  </tr><tr>	
+        <td style="padding:6px;" colspan="2"><input id="Ikosaeder" type="checkbox" onclick="OnChangeCheckbox5 (this)"> Ikosaeder</td>
+	  </tr><tr>
+        <td style="padding:6px;" colspan="2">Höhenwinkel in Grad = <input id="theta" style="width:2.2em;" type="number" min=-90 max=90 value="15" onchange="calc()"></td>	
+	  </tr><tr>
+        <td style="padding:6px;" colspan="2"><input type="button" value="Rotationsachse" onclick="doAxis()"></td>  
+	  </tr>
+	  <tr>
+	    <td style="padding:6px;"><input id="STEP" type="button" value="Step" onclick="dostep()"></td>
+	    <td style="padding:6px;"><input type="button" value="Run/Stop" onclick="run()"></td>
+	  </tr>
+    </table>	
+  </div>        
+</div>	   
+
+</div>
+<!-- EOF: CONTENT -->
+
+<div id="footer">
+<p><small>
+©1997 -
+2019 www.mathematik.ch | <a href="/search/"><img style="vertical-align:middle" width=27 height=27 src="/img/lupe.jpg" alt="Suche"></a>
+</small></p>
+</div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta NAME="Description" CONTENT="Programm zur Nullstelle mit Newton-Methode">
+<meta name="author" content="B.Berchtold">
+<title>Nullstelle mit Newton-Methode<</title>
+<LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
+<script src="newton.js"></script>
+<script async src="/script/show-hide.js"></script>
+</head>
+
+<body>
+<div class="page">
+<table class="c">
+<tr><td style="width:10%">
+<img width=28 height=27 src="/img/menuicon.png" style="cursor:pointer" title="Inhalt" alt="menu" onClick="ReverseDisplay()">
+</td><td class="c" style="width:80%">
+<a href="/"><img width=257 height=35 src="/img/mathematik.png" alt="mathematik.ch"></a>
+</td><td style="width:10%">&nbsp;</td></tr>
+</table>
+<div id="menu" style="display:none;">
+  <h4>Inhalt</h4>
+
+<ul>
+  <li><a href="/anwendungenmath/">Anwendungen + Unterrichtshilfen</a></li>
+  <li><a href="/puzzle/">Puzzles (Rätsel)</a></li> 
+  <li><a href="/spiele/">'Spiele'</a></li>
+  <li><a href="/spiele/euromillions/">Euromillions</a></li>
+  <li><a href="/spiele/swisslotto/">Swisslotto</a></li>
+  <li><a href="/geschichte/">Geschichte</a></li>
+  <li><a href="/mathematiker/">Mathematiker</a></li>
+  <li><a href="/zitate/">Zitate</a></li> 
+  <li><a href="/maturapruefungen/">Maturaprüfungen</a></li>
+  <li><a HREF="/witze/">Witze (+IQ-Test)</a></li>
+  <li><a HREF="/about.html">Kontakt</a></li>
+  <li><a HREF="/links.html">Links</a></li>
+  <li><a href="/search/">Suche</a></li>
+</ul></div>
+<!-- CONTENT -->
+<div id="content" style="display:block;">
+
+<h4>Nullstelle mit Newton Methode</h4>
+
+<p>Gesucht ist eine Nullstelle der Funktion mit Gleichung y = f(x).</p>
+
+<div class="colgroup-2">
+  <div class="col" id="containercanvas">
+     <canvas id="myCanvas">Ihr Browser kann kein Canvas!</canvas>
+  </div>
+  
+  <div class="col">
+    <p><span style="color:green">y = </span>
+	<input id="f" type="text" value="pow(x,4)-3*pow(x,3)+2*x+1" style="width:12em;"> 
+	<a href="info_newton.html" target="_blank">
+	<img src="help.gif" width=32 height=40 style="vertical-align:middle" alt="help"></a><br>
+    Linke Grenze: <input id="Xmin" style="width:2.5em;" type="number" step="any" value="-0.2">  &nbsp;&nbsp;&nbsp;
+    Rechte Grenze: <input id="Xmax" style="width:2.5em;" type="number" step="any" value="3.1"><br>
+    Startwert x0: &nbsp;&nbsp;<input id="x0" style="width:3em;" type="number" step="any" value="0.8"><br>
+    Stop falls |x(n+1)-xn| &le; <input id="eps" style="width:4em;" type="number" step="any" value="1E-7"><br>
+    Max Iterationen: <input id="max" style="width:3em;" type="number" min="1" max="100" value="50"></p>
+    <p><input type="button" value="Reset" onclick="reset()">
+	   <input id="Run" type="button" value="Run" onclick="run()" style="margin-left:40px">
+	   <input id="Step" type="button" value="Step" onclick="dostep()" style="margin-left:40px"></p>
+    <p>
+	<span id="xn" style="color:red"> </span><br>
+	<span id="yn"> </span><br>
+    <span id="abl"> </span></p>
+    <p><span id="xneu" style="color:blue"> </span><br>
+	<span id="yneu"> </span></p>
+	<p><span id="message"> </span></p>	
+  </div>
+        
+</div>	
+
+<p>&nbsp;</p>
+
+<p><a HREF="iteration.html">Zu Nullstelle mit allgemeiner Iteration</a></p>
+<p><a HREF="schachtelung.html">Zu Nullstelle mit Intervallschachtelung</a></p>
+   
+</div>  
+<!-- EOF: CONTENT -->
+
+ 
+<div id="footer">
+<p><small>
+©1997 -
+2019 www.mathematik.ch | <a href="/search/"><img style="vertical-align:middle" width=27 height=27 src="/img/lupe.jpg" alt="Suche"></a>
+</small></p>
+</div>
+
+</div>
+</body>
+</html>
+

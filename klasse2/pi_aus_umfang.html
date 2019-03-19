@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pi aus Umfang eines n-Ecks durch Eckenverdoppelung</title>
+<LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
+<script async src="/script/show-hide.js"></script>
+</head>
+
+<body>
+<div class="page">
+<table class="c">
+<tr><td style="width:10%">
+<img width=28 height=27 src="/img/menuicon.png" style="cursor:pointer" title="Inhalt" alt="menu" onClick="ReverseDisplay()">
+</td><td class="c" style="width:80%">
+<a href="/"><img width=257 height=35 src="/img/mathematik.png" alt="mathematik.ch"></a>
+</td><td style="width:10%">&nbsp;</td></tr>
+</table>
+<div id="menu" style="display:none;">
+  <h4>Inhalt</h4>
+
+<ul>
+  <li><a href="/anwendungenmath/">Anwendungen + Unterrichtshilfen</a></li>
+  <li><a href="/puzzle/">Puzzles (Rätsel)</a></li> 
+  <li><a href="/spiele/">'Spiele'</a></li>
+  <li><a href="/spiele/euromillions/">Euromillions</a></li>
+  <li><a href="/spiele/swisslotto/">Swisslotto</a></li>
+  <li><a href="/geschichte/">Geschichte</a></li>
+  <li><a href="/mathematiker/">Mathematiker</a></li>
+  <li><a href="/zitate/">Zitate</a></li> 
+  <li><a href="/maturapruefungen/">Maturaprüfungen</a></li>
+  <li><a HREF="/witze/">Witze (+IQ-Test)</a></li>
+  <li><a HREF="/about.html">Kontakt</a></li>
+  <li><a HREF="/links.html">Links</a></li>
+  <li><a href="/search/">Suche</a></li>
+</ul></div>
+<!-- CONTENT -->
+<div id="content" style="display:block;">
+
+<h4>Pi aus Umfang eines n-Ecks durch Eckenverdoppelung</h4>
+
+<div class="colgroup-2">
+  <div class="col">
+  <p>Der Umkreis der n-Ecke habe Durchmesser d = 2r = 1. Man kann zeigen, dass die nachfolgende Formel für den Umfang
+    u<sub>2n</sub> des 2n-Ecks aus dem Umfang u<sub>n</sub> des n-Ecks gilt:<br>
+    <img src="img/umfang_bei_eckenverdoppelung.gif" width="169" height="79" alt="umfang_bei_eckenverdoppelung">
+    </p>
+  <p>Startet man z.B. mit n = 6, so ist u<sub>6</sub> = 6 &middot; 0.5 = 3. Daraus lässt sich mit der Formel der 
+    Umfang u<sub>12</sub> des 12-Ecks berechnen:<br>
+    <img src="img/u12_aus_u6.gif" width="228" height="77" alt="u12_aus_u6"></p>
+	
+    <img src="img/6_und_12Eck_klein.gif" width="180" height="184" alt="6_und_12Eck">
+  </div>
+
+  <div class="col">
+	<p>Resultate bis zum 786432-Eck.</p>
+    <table style="border:1px solid;">
+      <tr>
+        <td class="c" style="padding:4px;"><b>n</b></td>
+        <td class="c" style="padding:4px;"><b>u<sub>n</sub></b></td>
+      </tr>
+      <tr>
+        <td class="c" style="padding:4px;">6</td>
+        <td class="c" style="padding:4px;">3</td>
+      </tr>
+      <tr>
+        <td class="c" style="padding:4px;">12</td>
+        <td class="c" style="padding:4px;">3.10582854123024915</td>
+      </tr>
+      <tr>
+        <td class="c" style="padding:4px;">24</td>
+        <td class="c" style="padding:4px;">3.13262861328123820</td>
+      </tr>
+      <tr>
+        <td class="c" style="padding:4px;">48</td>
+        <td class="c" style="padding:4px;">3.13935020304686721</td>
+      </tr>
+      <tr>
+        <td class="c" style="padding:4px;">96</td>
+        <td class="c" style="padding:4px;">3.14103195089050964</td>
+      </tr>
+      <tr>
+        <td class="c" style="padding:4px;">192</td>
+        <td class="c" style="padding:4px;">3.14145247228546208</td>
+      </tr>
+      <tr>
+        <td class="c" style="padding:4px;">384</td>
+        <td class="c" style="padding:4px;">3.14155760791185765</td>
+      </tr>
+      <tr>
+        <td class="c" style="padding:4px;">768</td>
+        <td class="c" style="padding:4px;">3.14158389214831841</td>
+      </tr>
+      <tr>
+        <td class="c" style="padding:4px;">1536</td>
+        <td class="c" style="padding:4px;">3.14159046322805010</td>
+      </tr>
+      <tr>
+        <td class="c" style="padding:4px;">3072</td>
+        <td class="c" style="padding:4px;">3.14159210599927155</td>
+      </tr>
+      <tr>
+        <td class="c" style="padding:4px;">6144</td>
+        <td class="c" style="padding:4px;">3.14159251669215745</td>
+      </tr>
+      <tr>
+        <td class="c" style="padding:4px;">12288</td>
+        <td class="c" style="padding:4px;">3.14159261936538396</td>
+      </tr>
+      <tr>
+        <td class="c" style="padding:4px;">24576</td>
+        <td class="c" style="padding:4px;">3.14159264503369090</td>
+      </tr>
+      <tr>
+        <td class="c" style="padding:4px;">49152</td>
+        <td class="c" style="padding:4px;">3.14159265145076765</td>
+      </tr>
+      <tr>
+        <td class="c" style="padding:4px;">98304</td>
+        <td class="c" style="padding:4px;">3.14159265305503684</td>
+      </tr>
+      <tr>
+        <td class="c" style="padding:4px;">196608</td>
+        <td class="c" style="padding:4px;">3.14159265345610414</td>
+      </tr>
+      <tr>
+        <td class="c" style="padding:4px;">393216</td>
+        <td class="c" style="padding:4px;">3.14159265355637096</td>
+      </tr>
+      <tr>
+        <td class="c" style="padding:4px;">786432</td>
+        <td class="c" style="padding:4px;">3.14159265358143767</td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+</div>
+<!-- EOF: CONTENT -->
+
+<div id="footer">
+<p><small>
+©1997 -
+2019 www.mathematik.ch | <a href="/search/"><img style="vertical-align:middle" width=27 height=27 src="/img/lupe.jpg" alt="Suche"></a>
+</small></p>
+</div>
+
+</div>
+</body>
+</html>

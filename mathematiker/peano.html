@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta NAME="Description" CONTENT="Giuseppe Peano, Axiome von Peano">
+<title>Axiome von Peano</title>
+<LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
+<script async src="/script/show-hide.js"></script>
+</head>
+
+<body>
+<div class="page">
+<table class="c">
+<tr><td style="width:10%">
+<img width=28 height=27 src="/img/menuicon.png" style="cursor:pointer" title="Inhalt" alt="menu" onClick="ReverseDisplay()">
+</td><td class="c" style="width:80%">
+<a href="/"><img width=257 height=35 src="/img/mathematik.png" alt="mathematik.ch"></a>
+</td><td style="width:10%">&nbsp;</td></tr>
+</table>
+<div id="menu" style="display:none;">
+  <h4>Inhalt</h4>
+
+<ul>
+  <li><a href="/anwendungenmath/">Anwendungen + Unterrichtshilfen</a></li>
+  <li><a href="/puzzle/">Puzzles (Rätsel)</a></li> 
+  <li><a href="/spiele/">'Spiele'</a></li>
+  <li><a href="/spiele/euromillions/">Euromillions</a></li>
+  <li><a href="/spiele/swisslotto/">Swisslotto</a></li>
+  <li><a href="/geschichte/">Geschichte</a></li>
+  <li><a href="/mathematiker/">Mathematiker</a></li>
+  <li><a href="/zitate/">Zitate</a></li> 
+  <li><a href="/maturapruefungen/">Maturaprüfungen</a></li>
+  <li><a HREF="/witze/">Witze (+IQ-Test)</a></li>
+  <li><a HREF="/about.html">Kontakt</a></li>
+  <li><a HREF="/links.html">Links</a></li>
+  <li><a href="/search/">Suche</a></li>
+</ul></div>
+<!-- CONTENT -->
+<div id="content" style="display:block;">
+
+<h4>Giuseppe Peano</h4>
+
+<img src="Giuseppe_Peano.jpg" width="220" height="278" alt="Peano">
+<p>Geboren: 27. August 1858 in Cuneo, Piemont, Italien<br>
+Gestorben: 20. April 1932 in Turin, Italien</p>
+<p>für Lebenslauf von Peano: 
+<a href="https://de.wikipedia.org/wiki/Giuseppe_Peano" target="_blank">Peano bei Wikipedia</a></p>
+<br>
+<p><b>Axiome, die die Menge <img src="/img/IN.gif" width="12" height="12" alt="N"> der natürlichen Zahlen begründen:</b></p>
+<ol type="I">
+  <li>1 ist eine (natürliche) Zahl.</li>
+  <li>Jede Zahl n hat genau einen Nachfolger n'.</li>
+  <li>1 ist nicht Nachfolger einer Zahl.</li>
+  <li>Jede Zahl ist höchstens Nachfolger einer Zahl, d.h aus n' = m' folgt n = m.</li>
+  <li>Jede Menge von natürlichen Zahlen, die die Zahl 1
+    enthält und die zu jeder Zahl n auch deren Nachfolger n' enthält, enthält alle natürlichen Zahlen.</li>
+</ol>
+<p>Diese Axiome wurden von Giuseppe Peano 1892 unter Berufung auf <a href="dedekind.html">Dedekind</a> publiziert.</p>
+<hr>
+<p>Auf Axiom V beruht die Beweismethode der <b>vollständigen Induktion:</b></p>
+<p>Wenn man eine Aussageform a(n) für alle natürlichen
+Zahlen n als gültig nachweisen will, so weist man sie zunächst für die Zahl
+n=1 nach (Verankerung) und zeigt dann, dass - falls a(k) wahr ist, auch a(k') = a(k+1) wahr ist.
+ Wegen Axiom V. muss dann a(n) für alle natürlichen n wahr sein. Kurz:</p>
+
+  <table>
+    <tr>
+      <td>Verankerung:</td>
+      <td>a(1)</td>
+    </tr>
+    <tr>
+      <td>Induktionsschritt: &nbsp;&nbsp;</td>
+      <td>a(k) &rarr; a(k+1)&nbsp;&nbsp; (für alle k)</td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <hr>
+      </td>
+    </tr>
+    <tr>
+      <td>Dann gilt:</td>
+      <td>a(n) (für alle n &isin; <img src="/img/IN.gif" width="12" height="12" alt="N">)</td>
+    </tr>
+  </table>
+<p><a href="../anwendungenmath/fractal/hilbert/">Zu den Peano-Kurven</a></p>
+
+</div>
+<!-- EOF: CONTENT -->
+
+<div id="footer">
+<p><small>
+©1997 -
+2019 www.mathematik.ch | <a href="/search/"><img style="vertical-align:middle" width=27 height=27 src="/img/lupe.jpg" alt="Suche"></a>
+</small></p>
+</div>
+
+</div>
+</body>
+</html>

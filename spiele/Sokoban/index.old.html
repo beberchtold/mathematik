@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<HEAD>
+<META http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta NAME="Description" CONTENT="Sokoban, 50 Originalprobleme">
+<TITLE>Sokoban</title>
+<LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
+<script src="sokoban.js" type="text/javascript"></script>
+<script async src="/script/show-hide.js" type="text/javascript"></script>
+</HEAD>
+
+<body onload="resizeCanvas()" onkeyup="keyPress(event.keyCode)">
+<div class="page">
+<table class="c">
+<tr><td style="width:10%">
+<img width=28 height=27 src="/img/menuicon.png" style="cursor:pointer" title="Inhalt" alt="menu" onClick="ReverseDisplay()">
+</td><td class="c" style="width:80%">
+<a href="/"><img width=257 height=35 src="/img/mathematik.png" alt="mathematik.ch"></a>
+</td><td style="width:10%">&nbsp;</td></tr>
+</table>
+<div id="menu" style="display:none;">
+  <h4>Inhalt</h4>
+
+<ul>
+  <li><a href="/anwendungenmath/">Anwendungen + Unterrichtshilfen</a></li>
+  <li><a href="/puzzle/">Puzzles (Rätsel)</a></li> 
+  <li><a href="/spiele/">'Spiele'</a></li>
+  <li><a href="/spiele/euromillions/">Euromillions</a></li>
+  <li><a href="/spiele/swisslotto/">Swisslotto</a></li>
+  <li><a href="/geschichte/">Geschichte</a></li>
+  <li><a href="/mathematiker/">Mathematiker</a></li>
+  <li><a href="/zitate/">Zitate</a></li> 
+  <li><a href="/maturapruefungen/">Maturaprüfungen</a></li>
+  <li><a HREF="/witze/">Witze (+IQ-Test)</a></li>
+  <li><a HREF="/about.html">Kontakt</a></li>
+  <li><a HREF="/links.html">Links</a></li>
+  <li><a href="/search/">Suche</a></li>
+</ul></div>
+<!-- CONTENT -->
+<div id="content" style="display:block;">
+
+<h4>Sokoban, 50 Originalprobleme</h4>  
+
+<p>
+Dieses bekannte Spiel wurde von Hiroyuki Imabayashi um 1980 in Japan erfunden.
+Die Hauptarbeit liegt in den 50 genialen Problemen, die im Originalspiel enthalten waren.<br>
+Das Ziel des Spiels ist, mit dem grünen Schieber alle blauen Kisten auf die markierten Ziele zu schieben.<br>
+Den Schieber können Sie mit den Pfeiltasten auf Ihrer Tastatur oder alternativ mit Klick auf die Pfeilbuttons verschieben.<br>
+'Save' speichert den aktuellen Zwischenstand. Mit 'Load' laden Sie diesen gespeicherten Zwischenstand.<br>
+'Clear' stellt Anfangszustand des aktuellen Problems her. Der ev. gespeicherte Zwischenstand wird gelöscht!<br>
+Mit 'Prob+' gelangen Sie zum nächsten Problem, mit 'Prob-' zum vorherigen.<br>
+Klick auf 'Lösung' liest die Lösungszüge des aktuellen Problems ein. 'Zug+' führt dann den jeweils nächsten Zug aus.
+Tipp: Nach einmaligem Klick auf 'Zug+' können Sie die Return-Taste verwenden. Bei gedrückter Return-Taste gehts schneller...
+</p>
+
+<div class="colgroup-2">
+  <div class="col" id="containercanvas">
+       <canvas id="myCanvas">Ihr Browser kann kein Canvas!</canvas>
+  </div>
+
+  <div class="col">
+	<p><b><span id="message">  </span></b></p>
+    <p>
+    <input onClick="moveb('u')" TYPE=button VALUE="&uarr;" style="width:32px;margin-left:30px">
+	  <input type="button" value="Clear" onclick="doClear()" style="width:60px;margin-left:80px"><br>	
+    <input onClick="moveb('l')" TYPE=button VALUE="&larr;" style="width:32px;margin-top:10px"> &nbsp;&nbsp;&nbsp;&nbsp;
+      <input onClick="moveb('r')" TYPE=button VALUE="&rarr;" style="width:32px;margin-top:10px">
+	  <input type="button" value="Save" onclick="save()" style="width:60px;margin-top:10px;margin-left:52px"><br>
+	<INPUT onClick="moveb('d')" TYPE=button VALUE="&darr;" style="width:32px;margin-top:10px;margin-left:30px">
+	  <input type="button"  id="Load" value="Load" onclick="doLoad()" style="width:60px;margin-top:10px;margin-left:80px">
+    </p>
+	<p style="margin-top:30px"><input type="button" value="Lösung" onclick="solution()">
+	  <input type="button" id="Zug+" value="Zug+" onclick="zugplus()" style="margin-left:35px"></p>
+	<p style="margin-top:30px">
+	<input type="button" value="Prob+" onclick="levelplus()">
+	<input type="button" value="Prob-" onclick="levelminus()" style="margin-left:45px"></p>  
+	</div>
+       
+</div>	   
+
+</div>
+<!-- EOF: CONTENT -->
+
+<div id="footer">
+<p><small>
+©1997 -
+2019 www.mathematik.ch | <a href="/search/"><img style="vertical-align:middle" width=27 height=27 src="/img/lupe.jpg" alt="Suche"></a>
+</small></p>
+</div>
+
+</div>
+</body>
+</html>

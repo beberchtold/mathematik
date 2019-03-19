@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" CONTENT="Bernhard Berchtold">
+<meta NAME="Description" CONTENT="Euromillions, Anwendungen der Mathematik, Wahrscheinlichkeit, Hypergeometrische Verteilung">
+<title>Euromillions: Simulation der Lottoziehung</title>
+<LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
+<script async src="euromillions_min.js"></script>
+<script async src="/script/show-hide.js"></script>
+</head>
+
+<body>
+<div class="page">
+<table class="c">
+<tr><td style="width:10%">
+<img width=28 height=27 src="/img/menuicon.png" style="cursor:pointer" title="Inhalt" alt="menu" onClick="ReverseDisplay()">
+</td><td class="c" style="width:80%">
+<a href="/"><img width=257 height=35 src="/img/mathematik.png" alt="mathematik.ch"></a>
+</td><td style="width:10%">&nbsp;</td></tr>
+</table>
+<div id="menu" style="display:none;">
+  <h4>Inhalt</h4>
+
+<ul>
+  <li><a href="/anwendungenmath/">Anwendungen + Unterrichtshilfen</a></li>
+  <li><a href="/puzzle/">Puzzles (Rätsel)</a></li> 
+  <li><a href="/spiele/">'Spiele'</a></li>
+  <li><a href="/spiele/euromillions/">Euromillions</a></li>
+  <li><a href="/spiele/swisslotto/">Swisslotto</a></li>
+  <li><a href="/geschichte/">Geschichte</a></li>
+  <li><a href="/mathematiker/">Mathematiker</a></li>
+  <li><a href="/zitate/">Zitate</a></li> 
+  <li><a href="/maturapruefungen/">Maturaprüfungen</a></li>
+  <li><a HREF="/witze/">Witze (+IQ-Test)</a></li>
+  <li><a HREF="/about.html">Kontakt</a></li>
+  <li><a HREF="/links.html">Links</a></li>
+  <li><a href="/search/">Suche</a></li>
+</ul></div>
+<!-- CONTENT -->
+<div id="content" style="display:block;">
+
+<h4>Euromillions: Simulation der Lottoziehung</h4>
+
+<p>Beim Lottospiel Euromillions werden zweimal pro Woche in Paris 5 aus 50 Zahlen und 2 von 11 Sternen gezogen.<br> 
+Hier können Sie diese Ziehung simulieren.<br>
+Sie können entweder 'Ihre' Zahlen und Sterne in die Felder eingeben oder - bequemer - die Zahlen und Sterne durch Klicken 
+auf die entsprechenden Buttons zufällig erzeugen lassen.<br>  
+Haben Sie (eine Zahl und beide Sterne richtig) oder (mindestens zwei Zahlen richtig), so haben Sie gewonnen.<br>
+Wählen Sie n = 1, so werden Ihnen die - vom Computer - gezogenen Zahlen angezeigt.<br>
+Für n &gt; 1 werden Ihnen diejenigen Spiele, in denen Sie etwas gewonnen hätten und Ihre <b>Schlussbilanz</b> angezeigt.<br> 
+Klicken Sie zur weiteren Info der Schlussbilanz auf das Fragezeichen.
+  <a href="infos.html" target="_blank">
+     <img src="help.gif" width=32 height=40 style="vertical-align:middle" alt="Hilfe"></a>
+</p>
+
+<div class="colgroup-2">
+  <div class="col">
+  Geben Sie 5 Zahlen zwischen 1 und 50 an oder <input type=button value="Erzeuge 5 Zufallszahlen" onClick="generatenumbers()"><br>
+   <table>
+    <tr>
+      <td><input id="z1" style="width:2em;" type="number" min="1" max="50" value="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+      <td><input id="z2" style="width:2em;" type="number" min="1" max="50" value="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+      <td><input id="z3" style="width:2em;" type="number" min="1" max="50" value="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+      <td><input id="z4" style="width:2em;" type="number" min="1" max="50" value="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+      <td><input id="z5" style="width:2em;" type="number" min="1" max="50" value=""></td>
+    </tr>
+   </table> 
+  Geben Sie noch zwei Sterne zwischen 1 und 11 an oder <input type=button value="Erzeuge 2 Zufallssterne" onClick="generatestars()"><br>
+   <table>
+    <tr> 
+      <td><input id="s1" style="width:2em;" type="number"  min="1" max="11" value="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+      <td><input id="s2" style="width:2em;" type="number"  min="1" max="11" value=""></td>
+    </tr>
+   </table>
+   <br>
+  Anzahl Ziehungen n (1 &le; n &le; 1000)<br>
+  <p><input id="n" style="width:3.5em;" type="number" min="1" max="1000" value="1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <input type="button" value="Mache n Ziehungen" onClick="ziehe()"></p>
+  </div>
+
+  <div class="col">
+  <span id="txt"></span>
+  </div>
+</div>
+
+<br>
+<p>Für die Wahrscheinlichkeiten von Euromillions gehen Sie zu 
+<a href="/anwendungenmath/wkeit/euromillions/euromillions.html">Berechnung der W'keiten</a></p>
+<p>Zur Simulation des Swisslottos gehen Sie zu <a href="/spiele/swisslotto/">Simulation Swisslotto</a></p>
+
+</div>
+<!-- EOF: CONTENT -->
+
+<div id="footer">
+<p><small>
+©1997 -
+2019 www.mathematik.ch | <a href="/search/"><img style="vertical-align:middle" width=27 height=27 src="/img/lupe.jpg" alt="Suche"></a>
+</small></p>
+</div>
+
+</div>
+</body>
+</html>

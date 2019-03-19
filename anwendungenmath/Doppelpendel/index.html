@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta NAME="Description" CONTENT="Simulation des Doppelpendels mit numerischer Lösung des Differentialgleichungssystems mittels Runge-Kutta">
+<title>Doppelpendel</title>
+<LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
+<script src="doppelpendel.js"></script>
+<script src="/script/show-hide.js"></script>
+</head>
+
+<body>
+<div class="page">
+<table class="c">
+<tr><td style="width:10%">
+<img width=28 height=27 src="/img/menuicon.png" style="cursor:pointer" title="Inhalt" alt="menu" onClick="ReverseDisplay()">
+</td><td class="c" style="width:80%">
+<a href="/"><img width=257 height=35 src="/img/mathematik.png" alt="mathematik.ch"></a>
+</td><td style="width:10%">&nbsp;</td></tr>
+</table>
+<div id="menu" style="display:none;">
+  <h4>Inhalt</h4>
+
+<ul>
+  <li><a href="/anwendungenmath/">Anwendungen + Unterrichtshilfen</a></li>
+  <li><a href="/puzzle/">Puzzles (Rätsel)</a></li> 
+  <li><a href="/spiele/">'Spiele'</a></li>
+  <li><a href="/spiele/euromillions/">Euromillions</a></li>
+  <li><a href="/spiele/swisslotto/">Swisslotto</a></li>
+  <li><a href="/geschichte/">Geschichte</a></li>
+  <li><a href="/mathematiker/">Mathematiker</a></li>
+  <li><a href="/zitate/">Zitate</a></li> 
+  <li><a href="/maturapruefungen/">Maturaprüfungen</a></li>
+  <li><a HREF="/witze/">Witze (+IQ-Test)</a></li>
+  <li><a HREF="/about.html">Kontakt</a></li>
+  <li><a HREF="/links.html">Links</a></li>
+  <li><a href="/search/">Suche</a></li>
+</ul></div>
+<!-- CONTENT -->
+<div id="content" style="display:block;">
+
+<h4>Doppelpendel</h4>
+
+<div class="colgroup-2">
+  <div class="col" id="containercanvas">
+     <canvas id="myCanvas">Ihr Browser kann kein Canvas!</canvas>
+  </div>
+  
+  <div class="col">
+    <input id="PHI1" style="width:3em" type="number" min=-3.1415 max=3.1415 step="any" value=2.84> Phi1 &nbsp;&nbsp;&nbsp;
+    <input id="PHI2" style="width:3em" type="number" min=-3.1415 max=3.1415 step="any" value=-1.57> Phi2<br>
+    <input id="Schrittweite" style="width:3em" type="number" min=0.0001 max=0.04 step="any" value=0.01> Schrittweite h<br><br>
+    <input type="button" value="Start" onclick="start()"> &nbsp;&nbsp;&nbsp;&nbsp;
+	<input type="button" id="STEP" value="Step" onclick="dostep()"> &nbsp;&nbsp;&nbsp;&nbsp;
+	<input type="button" value="Run/Stop" onclick="run()">
+    <p>Sie können die Anfangswerte für Phi1, Phi2 (im
+       Bogenmass zwischen -Pi und Pi) und die Schrittweite h (0&lt;h&lt;0.04) ändern.<br>
+       Klicken Sie dann zuerst auf den Start-Button, um diese Werte zu übernehmen.</p>
+      <p>Klicken Sie für weitere Infos auf <a href="info_doppelpendel.html" target="_blank">
+     <img src="help.gif" width="32" height="40" style="vertical-align:middle" alt="Hilfe"></a>.</p>
+	
+  </div>       
+</div>	
+		
+</div>
+
+<!-- EOF: CONTENT -->
+
+<div id="footer">
+<p><small>
+©1997 -
+2019 www.mathematik.ch | <a href="/search/"><img style="vertical-align:middle" width=27 height=27 src="/img/lupe.jpg" alt="Suche"></a>
+</small></p>
+</div>
+
+</div>
+</body>
+</html>

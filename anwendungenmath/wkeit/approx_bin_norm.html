@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta NAME="Description" CONTENT="Anwendungen der Mathematik, Wahrscheinlichkeit, 
+Approximation der Binomialverteilung durch die Normalverteilung">
+<title>Approximation Binomialverteilung mit Normalverteilung</title>
+<meta name="author" content="B.Berchtold">
+<LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-alpha/katex.min.css" TYPE="text/css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-alpha/katex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-alpha/contrib/auto-render.min.js"></script>
+<script src="approximation_min.js"></script>
+<script async src="/script/show-hide.js"></script>
+</head>
+
+<body>
+<div class="page">
+<table class="c">
+<tr><td style="width:10%">
+<img width=28 height=27 src="/img/menuicon.png" style="cursor:pointer" title="Inhalt" alt="menu" onClick="ReverseDisplay()">
+</td><td class="c" style="width:80%">
+<a href="/"><img width=257 height=35 src="/img/mathematik.png" alt="mathematik.ch"></a>
+</td><td style="width:10%">&nbsp;</td></tr>
+</table>
+<div id="menu" style="display:none;">
+  <h4>Inhalt</h4>
+
+<ul>
+  <li><a href="/anwendungenmath/">Anwendungen + Unterrichtshilfen</a></li>
+  <li><a href="/puzzle/">Puzzles (Rätsel)</a></li> 
+  <li><a href="/spiele/">'Spiele'</a></li>
+  <li><a href="/spiele/euromillions/">Euromillions</a></li>
+  <li><a href="/spiele/swisslotto/">Swisslotto</a></li>
+  <li><a href="/geschichte/">Geschichte</a></li>
+  <li><a href="/mathematiker/">Mathematiker</a></li>
+  <li><a href="/zitate/">Zitate</a></li> 
+  <li><a href="/maturapruefungen/">Maturaprüfungen</a></li>
+  <li><a HREF="/witze/">Witze (+IQ-Test)</a></li>
+  <li><a HREF="/about.html">Kontakt</a></li>
+  <li><a HREF="/links.html">Links</a></li>
+  <li><a href="/search/">Suche</a></li>
+</ul></div>
+<!-- CONTENT -->
+<div id="content" style="display:block;">
+
+<h4>Approximation der Binomialverteilung (Ziehen mit Zurücklegen)</h4>
+
+<p>Die W'keit, aus einer Urne in einem Zug eine rote Kugel zu ziehen, sei p (0&lt;p&lt;1).<br>
+Das Formular berechnet die W'keit P, in n Zügen mit Zurücklegen mindestens a und höchstens b rote Kugeln zu ziehen.<br>
+Die exakte W'keit P = <span>\(\rm\sum\limits_{x=a}^b \binom{n}{x} p^x q^{n-x} \)</span>,
+q = 1-p gemäss Binomialverteilung wird durch die Normalverteilung mit<br>
+P &asymp; <span>\(\rm\frac{1}{\sqrt{2\pi}\sigma} \int\limits_{a-0.5}^{b+0.5} e^{\normalsize\frac{-{(x-\mu)}^2}{2\sigma^2}}dx \)</span> &nbsp;
+approximiert (Grenzwertsatz von de Moivre und Laplace).<br>
+Erwartungswert ist &mu; = n&sdot;p , Varianz &sigma;<sup>2</sup> = n&sdot;p&sdot;q. 
+Die Approximation ist zulässig, falls &sigma;<sup>2</sup>>9.</p>
+
+<div class="colgroup-2">
+  <div class="col" id="containercanvas">
+    <p><b>Approximation für n = <span id="N"></span> und p = <span id="P"></span></b><br>
+	&mu; = <span id="MU"></span> &nbsp;&nbsp; &sigma;<sup>2</sup> = <span id="VAR"></span> &nbsp;&nbsp; 
+	&sigma; = <span id="SIGMA"></span></p>
+    <canvas id="myCanvas">Ihr Browser kann kein Canvas!</canvas>
+ 
+  </div>
+  
+  <div class="col">
+    <ul>
+      <li style="padding:4px;">Anzahl Züge (n&gt;19): <input id="n" type="number" min=20 style="width:50px;margin-left:17px;" value="600"></li>
+      <li style="padding:4px;">Einzelw'keit p (0&lt;p&lt;1): <input id="p" style="width:50px;" value="1/6"></li>
+      <li style="padding:4px;">Untere Grenze a: <input id="a" type="number" min=0 style="width:50px;;margin-left:34px;" value="80"></li>
+      <li style="padding:4px;">Obere Grenze b (b&ge;a): <input id="b" type="number" min=0 style="width:50px;" value="120"></li>
+      <li style="padding:4px;"><input type="button" value="Berechne!" onclick="rechne()"></li>  
+    </ul>
+	<br>
+    <p><b>Resultate</b>  <span id="message"></span><br>
+	Exakt nach Binomialverteilung:<br>
+	<b>P(<span id="A"></span>&le;X&le;<span id="B"></span>) = <span id="RESBI"></span></b><br>
+	Approximation nach Normalverteilung:<br>
+	<b>P(<span id="Aminus"></span>&le;X&le;<span id="Bplus"></span>) = <span id="RESNOR"></span></b></p>
+  </div>       
+</div>	
+
+<p>Beispiel:<br>
+Wie gross ist die Wahrscheinlichkeit, in 600 Würfen 
+mit einem Würfel zwischen 80 und 120 mal die &quot;6&quot; zu würfeln (Grenzen inklusive)?<br>  
+n = 600, p = 1/6, a = 80, b = 120.</p>
+
+<p>Zur <a href="binomialvert.html">Binomialverteilung mit Histogramm</a></p>
+<p>Zur <a href="normalvert.html">Normalverteilung</a></p>
+		
+</div>
+<script>
+   renderMathInElement(document.body);
+</script>  
+<!-- EOF: CONTENT -->
+
+ 
+<div id="footer">
+<p><small>
+©1997 -
+2019 www.mathematik.ch | <a href="/search/"><img style="vertical-align:middle" width=27 height=27 src="/img/lupe.jpg" alt="Suche"></a>
+</small></p>
+</div>
+
+</div>
+</body>
+</html>
+

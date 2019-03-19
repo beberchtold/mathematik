@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nadelproblem von Buffon</title>
+<meta name="description" content="Nadelproblem von Buffon mit MonteCarlo-Methode">
+<meta name="keywords" content="Rudolf Wolf, Buffon, Nadelproblem, Simulation, MonteCarlo-Methode, geometrische Wahrscheinlichkeit">
+<LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-alpha/katex.min.css" TYPE="text/css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-alpha/katex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-alpha/contrib/auto-render.min.js"></script>
+<script src="buffon_min.js"></script>
+<script async src="/script/show-hide.js"></script>
+</head>
+
+<body>
+<div class="page">
+<table class="c">
+<tr><td style="width:10%">
+<img width=28 height=27 src="/img/menuicon.png" style="cursor:pointer" title="Inhalt" alt="menu" onClick="ReverseDisplay()">
+</td><td class="c" style="width:80%">
+<a href="/"><img width=257 height=35 src="/img/mathematik.png" alt="mathematik.ch"></a>
+</td><td style="width:10%">&nbsp;</td></tr>
+</table>
+<div id="menu" style="display:none;">
+  <h4>Inhalt</h4>
+
+<ul>
+  <li><a href="/anwendungenmath/">Anwendungen + Unterrichtshilfen</a></li>
+  <li><a href="/puzzle/">Puzzles (Rätsel)</a></li> 
+  <li><a href="/spiele/">'Spiele'</a></li>
+  <li><a href="/spiele/euromillions/">Euromillions</a></li>
+  <li><a href="/spiele/swisslotto/">Swisslotto</a></li>
+  <li><a href="/geschichte/">Geschichte</a></li>
+  <li><a href="/mathematiker/">Mathematiker</a></li>
+  <li><a href="/zitate/">Zitate</a></li> 
+  <li><a href="/maturapruefungen/">Maturaprüfungen</a></li>
+  <li><a HREF="/witze/">Witze (+IQ-Test)</a></li>
+  <li><a HREF="/about.html">Kontakt</a></li>
+  <li><a HREF="/links.html">Links</a></li>
+  <li><a href="/search/">Suche</a></li>
+</ul></div>
+<!-- CONTENT -->
+<div id="content" style="display:block;">
+
+<h4>Buffon'sches Nadelproblem (18. Jahrhundert)</h4>
+
+<p>Man wirft zufällig eine Nadel der Länge c auf eine Ebene, die mit Parallelstreifen
+  der Breite a versehen ist (c &le; a). Wie gross ist die Wahrscheinlichkeit
+  P(A), dass die Nadel eine der Parallelen trifft? Dies ist eine geometrische Wahrscheinlichkeit.<br>
+  Das folgende Programm ist eine Simulation dieses Problems (Bestimmung der W'keit mit einer sog. Monte-Carlo-Methode).</p>
+  <p>Mit dieser Simulation kann umgekehrt auch eine Näherung für die Zahl <span>\(\pi\)</span> gewonnen werden:<br>
+  Wählt man c = a, so ist <span>\(\boxed{\pi = \sf\footnotesize\frac{2}{P(A)}}\)</span>. (Beweis: s. unten)<br>
+  Der Schweizer Astronom Rudolf Wolf soll 1850 mit 5000 Würfen für <span>\(\pi\)</span> den Näherungswert von 3.1596 gefunden haben.</p>
+<p><span>\(\pi\)</span> wird mit Startwert 400 Würfen berechnet. Sie können diese Anzahl verändern: min=25, max=25600.<br>
+Je mehr Würfe Sie wählen, desto besser wird i.a. die Approximation für <span>\(\pi\)</span>.</p>
+
+<div class="colgroup-2">
+  <div class="col" id="containercanvas">
+     <p>Berechnung mit <span id="N">400</span> Würfen.</p>
+     <canvas id="myCanvas">Ihr Browser kann kein Canvas!</canvas>
+  </div>
+  <div class="col">
+	 <p><a href="#" onClick="zeichne()">Nochmals mit gleicher Anzahl</a> 
+	 <p><a href="#" onClick="doppelt()">Doppelte Anzahl</a> 
+	 <a href="#" onClick="halb()" style="margin-left:50px">Halbe Anzahl</a></p>
+	 <p><b>Resultat:</b><br>
+	 W'keit P(A) = <b><span id="Anzb"> </span></b>. Daher <span>\(\pi\)</span> &asymp; <b><span id="Res"> </span></b></p>
+	 <p>Vergleich: Exakter Wert für <span>\(\pi\)</span> = 3.14159265...</p>
+   </div>
+</div>
+
+<p>Beweis:<br>
+Die möglichen Fälle m (des Ereignisraumes) werden repräsentiert durch die Lage der Nadel: Winkel &alpha; 
+der Nadel gegenüber der Horizontalen und Distanz d der Nadelspitze zu einer Parallelen
+(0 &le; &alpha; &le; <span>\(\pi\)</span>, 0 &le; d &le; a), also m = a<span>\(\,\pi\)</span>.<br>
+Die für das Ereignis A günstigen Fälle g werden repräsentiert durch d &le; c&middot;sin&alpha;,
+also der Fläche unterhalb der Kurve mit Gleichung f(&alpha;)&nbsp;=&nbsp;c&middot;sin&alpha; im Intervall [0, <span>\(\pi\)</span> ].<br> 
+Mit Hilfe der Integralrechnung folgt:<br>
+g = <span>\(\sf\int\limits_0^\pi c \cdot sin\alpha \,d\alpha = c \int\limits_0^\pi sin\alpha \,d\alpha = c \large[\normalsize-cos\alpha\large]\normalsize \pi \atop 0 \)</span>
+= c(1&nbsp;-&nbsp;(-1)) = 2c
+<br>
+Damit gilt für die W'keit P(A), dass die Nadel trifft:
+P(A) = <span>\(\sf\large\frac{2c}{a \pi}\)</span></p>
+
+</div>
+<script>
+   renderMathInElement(document.body);
+</script> 
+<!-- EOF: CONTENT -->
+
+<div id="footer">
+<p><small>
+©1997 -
+2019 www.mathematik.ch | <a href="/search/"><img style="vertical-align:middle" width=27 height=27 src="/img/lupe.jpg" alt="Suche"></a>
+</small></p>
+</div>
+
+</div>
+</body>
+</html>

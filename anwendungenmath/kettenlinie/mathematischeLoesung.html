@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="de">
+<HEAD>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Die Kettenlinie: mathematische Lösung">
+<TITLE>Die mathematische Lösung</title>
+<LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-alpha/katex.min.css" TYPE="text/css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-alpha/katex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-alpha/contrib/auto-render.min.js"></script>
+<script async src="/script/show-hide.js"></script>
+</HEAD>
+
+<body>
+<div class="page">
+<table class="c">
+<tr><td style="width:10%">
+<img width=28 height=27 src="/img/menuicon.png" style="cursor:pointer" title="Inhalt" alt="menu" onClick="ReverseDisplay()">
+</td><td class="c" style="width:80%">
+<a href="/"><img width=257 height=35 src="/img/mathematik.png" alt="mathematik.ch"></a>
+</td><td style="width:10%">&nbsp;</td></tr>
+</table>
+<div id="menu" style="display:none;">
+  <h4>Inhalt</h4>
+
+<ul>
+  <li><a href="/anwendungenmath/">Anwendungen + Unterrichtshilfen</a></li>
+  <li><a href="/puzzle/">Puzzles (Rätsel)</a></li> 
+  <li><a href="/spiele/">'Spiele'</a></li>
+  <li><a href="/spiele/euromillions/">Euromillions</a></li>
+  <li><a href="/spiele/swisslotto/">Swisslotto</a></li>
+  <li><a href="/geschichte/">Geschichte</a></li>
+  <li><a href="/mathematiker/">Mathematiker</a></li>
+  <li><a href="/zitate/">Zitate</a></li> 
+  <li><a href="/maturapruefungen/">Maturaprüfungen</a></li>
+  <li><a HREF="/witze/">Witze (+IQ-Test)</a></li>
+  <li><a HREF="/about.html">Kontakt</a></li>
+  <li><a HREF="/links.html">Links</a></li>
+  <li><a href="/search/">Suche</a></li>
+</ul></div>
+<!-- CONTENT -->
+<div id="content" style="display:block;">
+
+<h4>Mathematische Lösung</h4>
+<p>Mit Hilfe <a href="modell.html">des physikalischen Modells</a> gelingt es, eine Beziehung zwischen den infinitesimalen 
+Grössen aufzustellen.</p>
+<img src="img/kraefte.jpe" width="300" height="138" alt="Kraefte">
+<p>Zunächst sinkt die y-Koordinate der Kraft proportional zur durchlaufenen Kettenlänge s. Wir haben also</p>
+K<sub>y</sub> = c + as
+<p>Dabei ist -a das Gewicht der Kette pro 
+Längeneinheit. Die Konstante c bestimmt zusammen mit dem konstanten y-Anteil des 
+Kraftvektors die Kraft im rechten Aufhängepunkt.</p>
+<p>Wir setzen &nbsp; K<sub>x</sub> = d</p>
+<p>Weil die Kettenkurve und die Kraft die gleiche Steigung haben, ergibt sich für die Kettenkurve, die wir mit y(x) 
+bezeichnen,</p>
+y'(x) = <span>\(\rm\large\frac{dy}{dx} = \frac{c + as}{d}\)</span>
+<p>Differenziert man auf beiden Seiten nach x, so erhält man mit einer positiven Konstanten k=a/d</p>
+y''(x) = <span>\(\rm\large\frac{d^2y}{dx^2} = \normalsize k\large\frac{ds}{dx}\)</span>
+<p>Hier wird ein wenig über die Schwierigkeit hinweggegangen, die mit der zweiten Ableitung zusammenhängt. Diese zweite 
+Ableitung lässt sich nämlich nicht mehr ohne weiteres im obigen Bild mit infinitesimalen Grössen ablesen. Unsere 
+simulierte Kettenlinie ist ja auch ein Streckenzug, der im kleinen keine zweite Ableitung hat.</p>
+<p>Die Mathematiker zur Zeit von Leibniz hatten mit diesen Dingen die gleichen Schwierigkeiten. Sie überzeugten sich 
+allerdings durch gründliche Überlegung von der Richtigkeit ihrer Rechnungen im Grenzübergang gegen 0. Ich warne davor, 
+dies als Unexaktheit anzuprangern. Es gibt ausserdem verschiedene Wege, die obigen Überlegungen exakt zu machen.</p>
+<p>Wegen &nbsp; ds = <span>\(\rm\small\sqrt{dx^2+dy^2}\)</span></p>
+<p>erhält man schliesslich die Differentialgleichung (in moderner Form geschrieben)</p>
+y''(x) = k<span>\(\rm\small\sqrt{1+y'(x)^2}\)</span>
+<p>Die Lösung dieser Differentialgleichung für u=y' kann man mit Hilfe der Methode der Variablentrennung gewinnen. Diese 
+Methode taucht übrigens bei Bernoulli zum ersten mal auf. Er schreibt (mit u=y')</p>
+<span>\(\rm\large\frac{1}{\sqrt{1+u^2}}\)</span>du = kdx
+<p>Dann integriert er auf beiden Seiten mit den Worten <CITE>"ergo &amp; horum integralia aequantur&quot;</CITE>, wovon 
+unser Wort <EM>Integral</EM> kommt.</p>
+<p>Es kommt hier nicht darauf an, diese Lösung analytisch zu finden. Man muss lediglich nachprüfen, dass die Funktionen 
+vom Typ</p>
+<b>y(x) = A + <span>\(\rm\large\bf\frac{1}{k}\)</span>cosh(k(x - B))</b>
+<p>die Differentialgleichung in der Tat erfüllen.</p>
+<p>Dabei liegt in x=B der tiefste Punkt (Scheitel) der Kette. Es ist an dieser Stelle interessant, solche Funktionen zu 
+diskutieren. Verschiebt man die Funktion so, dass ihr Scheitel in (0,0) liegt, so sieht man, dass die Kettenkurve durch 
+lineares Skalieren in der Tat in eine Kettenkurve mit anderer Konstante k übergeht. Sie erfüllt also unsere 
+geforderten <a href="geometrie.html">geometrischen Eigenschaften.</a></p>
+
+<p><a href="./"><small>zum Inhaltsverzeichnis Kettenlinie</small></a></p>
+
+</div>
+<script>
+   renderMathInElement(document.body);
+</script>
+<!-- EOF: CONTENT -->
+
+<div id="footer">
+<p><small>
+©1997 -
+2019 www.mathematik.ch | <a href="/search/"><img style="vertical-align:middle" width=27 height=27 src="/img/lupe.jpg" alt="Suche"></a>
+</small></p>
+</div>
+
+</div>
+</body>
+</html>

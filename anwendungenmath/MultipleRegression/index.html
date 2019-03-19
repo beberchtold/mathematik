@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta NAME="Description" CONTENT="Statistik: Multiple Regression">
+<title>Multiple Regression</title>
+<meta NAME="Author" CONTENT="Bernhard Berchtold, https://www.mathematik.ch">
+<LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
+<script async src="/script/show-hide.js"></script>
+<script src="multipleRegression.js"></script>
+<style type="text/css">input {width:34px}</style>
+</head>
+
+<body>
+<div class="page">
+<table class="c">
+<tr><td style="width:10%">
+<img width=28 height=27 src="/img/menuicon.png" style="cursor:pointer" title="Inhalt" alt="menu" onClick="ReverseDisplay()">
+</td><td class="c" style="width:80%">
+<a href="/"><img width=257 height=35 src="/img/mathematik.png" alt="mathematik.ch"></a>
+</td><td style="width:10%">&nbsp;</td></tr>
+</table>
+<div id="menu" style="display:none;">
+  <h4>Inhalt</h4>
+
+<ul>
+  <li><a href="/anwendungenmath/">Anwendungen + Unterrichtshilfen</a></li>
+  <li><a href="/puzzle/">Puzzles (Rätsel)</a></li> 
+  <li><a href="/spiele/">'Spiele'</a></li>
+  <li><a href="/spiele/euromillions/">Euromillions</a></li>
+  <li><a href="/spiele/swisslotto/">Swisslotto</a></li>
+  <li><a href="/geschichte/">Geschichte</a></li>
+  <li><a href="/mathematiker/">Mathematiker</a></li>
+  <li><a href="/zitate/">Zitate</a></li> 
+  <li><a href="/maturapruefungen/">Maturaprüfungen</a></li>
+  <li><a HREF="/witze/">Witze (+IQ-Test)</a></li>
+  <li><a HREF="/about.html">Kontakt</a></li>
+  <li><a HREF="/links.html">Links</a></li>
+  <li><a href="/search/">Suche</a></li>
+</ul></div>
+<!-- CONTENT -->
+<div id="content" style="display:block;">
+
+<h4>Lineare multiple Regression und Korrelation</h4>
+
+<p>Geben Sie die Koordinaten ( x<sub>i</sub> / y<sub>i</sub> / z<sub>i</sub>)  von maximal 30 Punkten in die Felder ein.<br>
+Das Formular berechnet dann nach Klick auf 'Regression berechnen' die Koeffizienten a, b und d in der Gleichung  der 
+<b>Regressionsebene E: z = a*x + b*y + d  </b> auf zwei Arten:<br>
+1. Die Summe der Quadrate der z-Differenzen wird minimal, d.h.
+<img src="summe_quadrate_residuen.gif" style="vertical-align:middle" width="211" height="53" alt="Summe Quadrate Residuen"> ( 3 &le; n &le; 30)<br>
+2. Die Summe der Quadrate der Abstände der Punkte wird minimal, d.h. 
+<img src="summe_quadrate_abstaende.gif" style="vertical-align:middle" width="182" height="53" alt="Summe Quadrate Abstände"><br> minimal unter der
+ Bedingung a<sup>2</sup> + b<sup>2</sup> + c<sup>2</sup> = 1 &nbsp;&nbsp; ( 5 &le; n &le; 30)</p>
+<br>
+<div class="colgroup-2">
+ <div class="col">
+  <div style="padding:5px;">
+
+Eingabe der Koordinaten der Punkte:<br>
+    
+      01 <INPUT value=-6 id="x1"> <INPUT value=-1 id="y1"> <INPUT value=1 id="z1">
+      11 <INPUT id="x11"> <INPUT id="y11"> <INPUT id="z11">
+	  21 <INPUT id="x21"> <INPUT id="y21"> <INPUT id="z21"><BR>
+      02 <INPUT value=-4 id="x2"> <INPUT value=1 id="y2"> <INPUT value=1 id="z2">
+      12 <INPUT id=x12> <INPUT id=y12> <INPUT id=z12>
+	  22 <INPUT id=x22> <INPUT id=y22> <INPUT id=z22><BR>
+      03 <INPUT value=0 id="x3"> <INPUT value=7 id="y3"> <INPUT value=2 id="z3">
+      13 <INPUT id=x13> <INPUT id=y13> <INPUT id=z13>
+	  23 <INPUT id=x23> <INPUT id=y23> <INPUT id=z23><BR>
+      04 <INPUT value=1 id="x4"> <INPUT value=5 id="y4"> <INPUT value=3 id="z4">
+      14 <INPUT id=x14> <INPUT id=y14> <INPUT id=z14>
+	  24 <INPUT id=x24> <INPUT id=y24> <INPUT id=z24><BR>
+      05 <INPUT value=-3 id="x5"> <INPUT value=-1 id="y5"> <INPUT value=2 id="z5">
+      15 <INPUT id=x15> <INPUT id=y15> <INPUT id=z15>
+      25 <INPUT id=x25> <INPUT id=y25> <INPUT id=z25><BR>	  
+      06 <INPUT id="x6"> <INPUT id="y6"> <INPUT id="z6">
+      16 <INPUT id=x16> <INPUT id=y16> <INPUT id=z16>
+      26 <INPUT id=x26> <INPUT id=y26> <INPUT id=z26><BR>	  
+      07 <INPUT id=x7> <INPUT id=y7> <INPUT id=z7>
+      17 <INPUT id=x17> <INPUT id=y17> <INPUT id=z17>
+	  27 <INPUT id=x27> <INPUT id=y27> <INPUT id=z27><BR>	  
+      08 <INPUT id=x8> <INPUT id=y8> <INPUT id=z8>
+      18 <INPUT id=x18> <INPUT id=y18> <INPUT id=z18>
+      28 <INPUT id=x28> <INPUT id=y28> <INPUT id=z28><BR>	  
+      09 <INPUT id=x9> <INPUT id=y9> <INPUT id=z9>
+      19 <INPUT id=x19> <INPUT id=y19> <INPUT id=z19>
+	  29 <INPUT id=x29> <INPUT id=y29> <INPUT id=z29><BR>
+      10 <INPUT id=x10> <INPUT id=y10> <INPUT id=z10>
+      20 <INPUT id=x20> <INPUT id=y20> <INPUT id=z20>
+      30 <INPUT id=x30> <INPUT id=y30> <INPUT id=z30><BR>
+      <p><INPUT type="button" value="Regression berechnen" style="width:12em"  onclick="rechne()"></p>
+    
+  </div></div>
+  <div class="col">
+  <div>
+  <p><b>Resultate der multiplen Regression für n = <span id="N"></span></b><br><br>
+  Mittelwerte: <span class="ol">x</span> = <span id="xquer"></span>, <span class="ol">y</span> = <span id="yquer"></span>, <span class="ol">z</span> = <span id="zquer"></span></p>
+  <b>1. Summe der Quadrate der z-Differenzen minimal</b><br><br>
+    <span id="Ebgl"></span><br><br>
+	Summe der Quadrate der z-Differenzen = <span id="sumquaz"></span><br><br>
+    Bestimmtheitsmass R<sup>2</sup> = <span id="r2"></span><br>
+	Je näher R<sup>2</sup> bei 1, desto besser die Korrelation.<br><br>
+	(Summe der Quadrate der Abstände der Punkte = <span id="sumqua"></span>)</p>
+	
+  <p><b>2. Summe der Quadrate der Abstände der Punkte minimal</b><br><br>
+     <span id="Ebgl2"></span><br><br>
+	 Summe der Quadrate der Abstände der Punkte = <span id="sumqua2"></span><br><br>
+	 <span id="Warnung"></span>
+	 (Summe der Quadrate der z-Differenzen = <span id="sumquaz2"></span>)</p>
+  </div>
+  </div>
+ </div> 
+</div>
+<!-- EOF: CONTENT -->
+
+<div id="footer">
+<p><small>
+©1997 -
+2019 www.mathematik.ch | <a href="/search/"><img style="vertical-align:middle" width=27 height=27 src="/img/lupe.jpg" alt="Suche"></a>
+</small></p>
+</div>
+
+</div>
+</body>
+</html>

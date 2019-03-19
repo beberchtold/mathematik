@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta NAME="Description" CONTENT="Spiele: N Damen-Problem">
+<meta name="author" content="B.Berchtold">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>N_Damenproblem</title>
+<LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
+<script src="damen_min.js"></script>
+<script async src="/script/show-hide.js" type="text/javascript"></script>
+</head>
+
+<body>
+<div class="page">
+<table class="c">
+<tr><td style="width:10%">
+<img width=28 height=27 src="/img/menuicon.png" style="cursor:pointer" title="Inhalt" alt="menu" onClick="ReverseDisplay()">
+</td><td class="c" style="width:80%">
+<a href="/"><img width=257 height=35 src="/img/mathematik.png" alt="mathematik.ch"></a>
+</td><td style="width:10%">&nbsp;</td></tr>
+</table>
+<div id="menu" style="display:none;">
+  <h4>Inhalt</h4>
+
+<ul>
+  <li><a href="/anwendungenmath/">Anwendungen + Unterrichtshilfen</a></li>
+  <li><a href="/puzzle/">Puzzles (Rätsel)</a></li> 
+  <li><a href="/spiele/">'Spiele'</a></li>
+  <li><a href="/spiele/euromillions/">Euromillions</a></li>
+  <li><a href="/spiele/swisslotto/">Swisslotto</a></li>
+  <li><a href="/geschichte/">Geschichte</a></li>
+  <li><a href="/mathematiker/">Mathematiker</a></li>
+  <li><a href="/zitate/">Zitate</a></li> 
+  <li><a href="/maturapruefungen/">Maturaprüfungen</a></li>
+  <li><a HREF="/witze/">Witze (+IQ-Test)</a></li>
+  <li><a HREF="/about.html">Kontakt</a></li>
+  <li><a HREF="/links.html">Links</a></li>
+  <li><a href="/search/">Suche</a></li>
+</ul></div>
+<!-- CONTENT -->
+<div id="content" style="display:block;">
+
+<h4>N Damen-Problem</h4>
+
+<p>Wie kann man 8 Damen so auf ein Schachbrett stellen, dass sie sich gegenseitig nicht schlagen können?<br>
+Gemäss Wikipedia wurde das Damenproblem erstmals vom bayrischen Schachmeister Max Bezzel (1824-1871) formuliert. 
+In der Berliner Schachzeitung fragte er 1848 nach der Anzahl der möglichen Lösungen. Als erster nannte 1850 Dr. Franz 
+Nauck in der 'Leipziger Illustrirten Zeitung' die korrekte Zahl 92. Auch Carl Friedrich Gauss zeigte Interesse an dem 
+Problem, weshalb es irrtümlich häufig auf ihn zurückgeführt wird.<br>
+Nauck verallgemeinerte die Problemstellung und fragte, auf wie viele verschiedene Arten N Damen auf einem N×N-Schachbrett
+ aufgestellt werden können.</p>
+ 
+<div style="width:350px;float:left">
+  <canvas id="myCanvas" width="321" height="321"> Ihr Browser kann kein Canvas! </canvas>
+</div>  
+
+<div style="width:350px;float:left">  
+  <p>Brettgrösse NxN <input id="Anz" type="number" style="width:3em" min=4 max=12 value="8" onChange="Start()">
+  </p>
+  Verzögerung in Millisekunden &nbsp;&nbsp;
+  <select name="Delay" id="Delay">
+    <option value="1">1</option>
+    <option value="10">10</option>
+    <option value="100" selected>100</option>
+    <option value="500">500</option>
+    <option value="1000">1000</option>
+  </select><br>
+  <input type="checkbox" id="ohneHalt"> Ohne Halt bei gefundener Lösung<br>
+  <input type="button" id="start" value="Start" onclick="Start()"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+  <input type="button" id="run_stop" value="Stop" disabled="disabled">
+  <br><br>
+  <div id="label">Anzahl Lösungen: 0</div>
+  <div id="label1">Anzahl nichtkongruenter Lösungen: 0</div>
+  <div id="label2">Klicken Sie auf Start zum Suchen der ersten Lösung</div>
+  <br>
+  Das Javascript-Programm zeigt den Algorithmus zum Finden der Lösungen für N=4 bis N=12. Falls es eine Lösung gefunden hat, so 
+checkt es diese Lösung auf Kongruenz mit allen vorhergehenden Lösungen.
+</div>
+
+<div style="clear: both"></div>  
+<p>Betrachtet man die nichtkongruenten Lösungen, so gibt es für das 8x8 Schachbrett nur 12 statt 92 Lösungen.<br> 
+1991 wurde von B. Bernhardsson eine explizite Lösung des N-Damenproblems für jede beliebige Schachbrettgrösse im ACM SIGART 
+Bulletin, Vol. 2, No. 7 angegeben.<br> 
+Das Programm zeigt alle Lösungen (Klick jeweils auf 'Go') bis die erste Dame in der ersten Zeile die Mitte 
+erreicht hat. Es gibt dann keine weiteren nichtkongruenten Lösungen mehr.<br>
+Sie können die Verzögerung des Programmablaufs jederzeit verändern.<br>
+Durch Ankreuzen der Checkbox 'Ohne Halt' beschleunigen Sie das Finden aller Lösungen.<br>
+Falls Sie für N=12 zu wenig Geduld haben: Dort gibt es 1787 nichtkongruente Lösungen!</p>
+
+</div>
+<!-- EOF: CONTENT -->
+
+<div id="footer">
+<p><small>
+©1997 -
+2019 www.mathematik.ch | <a href="/search/"><img style="vertical-align:middle" width=27 height=27 src="/img/lupe.jpg" alt="Suche"></a>
+</small></p>
+</div>
+
+</div>
+</body>
+</html>

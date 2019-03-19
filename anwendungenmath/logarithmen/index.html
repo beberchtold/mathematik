@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta NAME="Description" CONTENT="Numerik: Historisches zur Berechnung von Logarithmen und Programm dazu">
+<title>Berechnung von Logarithmen</title>
+<LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
+<script async src="log_min.js"></script>
+<script async src="/script/show-hide.js"></script>
+</head>
+
+<body>
+<div class="page">
+<table class="c">
+<tr><td style="width:10%">
+<img width=28 height=27 src="/img/menuicon.png" style="cursor:pointer" title="Inhalt" alt="menu" onClick="ReverseDisplay()">
+</td><td class="c" style="width:80%">
+<a href="/"><img width=257 height=35 src="/img/mathematik.png" alt="mathematik.ch"></a>
+</td><td style="width:10%">&nbsp;</td></tr>
+</table>
+<div id="menu" style="display:none;">
+  <h4>Inhalt</h4>
+
+<ul>
+  <li><a href="/anwendungenmath/">Anwendungen + Unterrichtshilfen</a></li>
+  <li><a href="/puzzle/">Puzzles (Rätsel)</a></li> 
+  <li><a href="/spiele/">'Spiele'</a></li>
+  <li><a href="/spiele/euromillions/">Euromillions</a></li>
+  <li><a href="/spiele/swisslotto/">Swisslotto</a></li>
+  <li><a href="/geschichte/">Geschichte</a></li>
+  <li><a href="/mathematiker/">Mathematiker</a></li>
+  <li><a href="/zitate/">Zitate</a></li> 
+  <li><a href="/maturapruefungen/">Maturaprüfungen</a></li>
+  <li><a HREF="/witze/">Witze (+IQ-Test)</a></li>
+  <li><a HREF="/about.html">Kontakt</a></li>
+  <li><a HREF="/links.html">Links</a></li>
+  <li><a href="/search/">Suche</a></li>
+</ul></div>
+<!-- CONTENT -->
+<div id="content" style="display:block;">
+
+<h4>Berechnung von Logarithmen</h4>
+
+<p>Geschichtliches s. bei <a href ="/mathematiker/napier.html">Lord John Napier</a> (Neper).</p>
+<p><b>A Ein mögliches Verfahren zur Berechnung des natürlichen Logarithmus  ln x für x &gt; 0</b>:</p>
+<img src="img/lnx.gif" width="259" height="49" alt="Berechnung ln x">
+<p>Aus dem natürlichen Logarithmus <b>ln x</b> (Basis e = 2.71828182846...) 
+kann man durch Multiplikation mit dem Kehrwert  (1 / ln 10) = 0.434294481904... den dekadischen (Brigg'schen) 
+Logarithmus <b>lg x</b>  (Basis 10) berechnen:<br>
+lg x &asymp; 0.434294481904 · ln x</p>
+<p><b>Beispiel:</b> Berechnung von ln 2 </p>
+<p>a) Aus der Formel für ln x ergibt sich für x = 2 mit sieben berechneten Summanden: </p>
+<img src="img/ln2.gif" width="396" height="89" alt="Berechnung ln 2"><br>
+<b>&asymp; 0.69314717</b>
+<p>b) Daraus die Berechnung von lg 2:  &nbsp;&nbsp;&nbsp;   lg 2 &asymp; 0.434294481904 &middot; 0.69314717 &asymp; 0.30102999 </p>
+<p>Das folgende Formular berechnet die Logarithmen ln x gemäss diesem Algorithmus.<br>
+Je grösser n, desto genauer die Approximation. Das Verfahren konvergiert aber für  x nahe bei 0 und für grosse x relativ 
+langsam. <br>Statt ln 0.0001234 zu berechnen sollte man also besser ln 1.234 berechnen und entsprechend korrigieren:<br>
+ln 0.0001234 = ln (1.234 * 10<sup>-4</sup>) = -4 * ln 10 + ln 1.234
+</p>
+
+<div class="colgroup-2">
+  <div class="col">
+  <table>
+    <tr>
+      <td>
+        Zahl x (0 &lt; x &le; 10)
+      </td>
+      <td>&nbsp;&nbsp;
+      <input id="xa" type="number" style="width:4em" step="any" max=10 value="2">
+	  </td>
+    </tr>
+    <tr>
+      <td>
+        Anzahl n (3 &le; n &le; 50)
+      </td>
+      <td>&nbsp;&nbsp;
+      <input id="n" type="number" style="width:3em" min=3 max=50 value="10">
+      </td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>&nbsp;&nbsp;<input type="button" value="Berechne ln!" onClick="berechne_ln()">
+	  </td>
+    </tr>
+  </table>
+  </div>
+  <div class="col">
+  <span id="txt"></span>
+  </div>
+</div>
+
+<p><b>B1 Weiteres Verfahren (Idee nach Bürgi, Neper, Briggs)</b>:</p>
+
+<p>Verfahren zur Berechnung des 10-er Logarithmus einer reellen Zahl x zwischen 1 und 10, das auch in vielen Taschenrechnern implementiert ist.<br>
+Man berechnet nur wenige Logarithmen, z.B.<br> lg(1 + 10<sup>-n</sup>) für n = 0, 1, 2,...mit Hilfe der Taylorreihenentwicklung <br>
+<img src="img/ln1_plus_z.gif" width="302" height="42" alt="Berechnung ln(1+z)"> <br> 
+für -1 &lt; z &le; 1 und der Umrechnungsformel vom ln zum lg (s. A)
+und speichert diese Werte in einer Tabelle ab.<br>
+(Nebenbei: ln 2 lässt sich mit der Formel ln(1+z) viel einfacher berechnen als mit der Formel bei A)<br>
+Man approximiert nun x über die Zerlegung<br>
+<img src="img/x_approx.gif" width="323" height="28" alt="x_approx"> <br>
+wobei die Exponenten i<sub>k</sub> so gewählt sind, dass &nbsp;&nbsp; x<sub>k</sub>&nbsp; &le; &nbsp; x &nbsp; &le; &nbsp; x<sub>k</sub>&middot;(1+10<sup>-k</sup>) &nbsp;&nbsp; für k = 0, 1,..., n<br>
+Damit folgt die Näherung<br>
+lg x &asymp; i<sub>0</sub> &middot; lg(2) + i<sub>1</sub> &middot; lg(1.1) + i<sub>2</sub> &middot; lg(1.01) + ... + i<sub>n</sub> &middot; lg(1+10<sup>-n</sup>). <br>
+Das Produkt lässt sich mit 1 beginnend aufbauen, indem man solange mit 2 multipliziert, als man unterhalb von x bleibt, 
+dann solange mit 1.1 multipliziert, als man unterhalb von x bleibt, u.s.w. <br>
+Das folgende Formular berechnet die Logarithmen lg x gemäss diesem Algorithmus.<br>
+Dabei werden nur die n+1 Werte für lg(2) bis lg(1+10<sup>-n</sup>), die auf 11 Stellen genau in der Tabelle abgespeichert sind, verwendet.<br>
+Je grösser n, desto genauer die Approximation.<br>
+Beachten Sie, dass man mit den Logarithmen zwischen 1 und 10 Logarithmen von beliebigen Zahlen berechnen kann, z.B.<br>
+lg 123456.78 = lg (1.2345678 * 10<sup>5</sup>) = 5 + lg 1.2345678   oder  lg 0.00012345678 = lg (1.2345678 * 10<sup>-4</sup>) = -4 + lg 1.2345678 
+</p>
+<div class="colgroup-2">
+  <div class="col">
+  <table>
+    <tr>
+      <td>
+        Zahl x (1 &le; x &le; 10)
+      </td>
+      <td>&nbsp;&nbsp;
+      <input id="xb" type="number" style="width:4em" step="any" min=1 max=10 value="7.3628">
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Anzahl n (2 &le; n &le; 10)
+      </td>
+      <td>&nbsp;&nbsp;
+      <input id="n1" type="number" style="width:3em" min=2 max=10 value="8">
+      </td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>&nbsp;&nbsp;<input type="button" value="Berechne lg!" onClick="berechne_lg1()">
+      </td>
+    </tr>
+  </table>
+  </div>
+  <div class="col">
+  <span id="txt1"></span>
+  </div>
+</div>
+
+<p><b>B2 Verfahren von Briggs</b>:</p>
+<p>Gesucht ist wiederum lg x. Briggs erhielt die Logarithmen nicht durch Taylorreihen, sondern durch 54-maliges 
+fortlaufendes Quadratwurzelziehen der Zahl 10 (Genauigkeit auf 30 Stellen!), also <br>
+<img src="img/fortlauf_Wurzel.png" width="256" height="27" alt="fortlauf_Wurzel"><br>
+Dann gilt lg(u<sub>1</sub>) = 0.5, lg(u<sub>2</sub>) = 0.25, lg(u<sub>3</sub>) = 0.125  usw. <br>
+Der Numerus x lässt sich wie bei B1 darstellen mit <br>
+<img src="img/x_approx_Brigg.gif" width="217" height="28" alt="x_approx_Brigg"><br>
+(Dabei sind alle Exponenten i<sub>k</sub> entweder 0 oder 1. Ausnahme: Für x=10 wird i<sub>1</sub>=2). Für lg x gilt folglich die Näherung:<br>
+lg x &asymp; i<sub>1</sub> &middot; 0.5 + i<sub>2</sub> &middot; 0.25 + i<sub>3</sub> &middot; 0.125 + ... + i<sub>n</sub> &middot; (0.5)<sup>n</sup>.<br>
+Das folgende Formular berechnet die Logarithmen lg x gemäss diesem Algorithmus.<br>
+Es gilt auch hier: Je grösser n, desto genauer die Approximation.
+</p>
+
+<div class="colgroup-2">
+  <div class="col">
+  <table>
+    <tr>
+      <td>
+        Zahl x (1 &le; x &le; 10)
+      </td>
+      <td>&nbsp;&nbsp;
+      <input id="xc" type="number" style="width:4em" step="any" min=1 max=10 value="7.3628">
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Anzahl n (3 &le; n &le; 40)
+      </td>
+      <td>&nbsp;&nbsp;
+      <input id="n2" type="number" style="width:3em" min=3 max=40 value="24">
+      </td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>&nbsp;&nbsp;<input type="button" value="Berechne lg!" onClick="berechne_lg2()">
+      </td>
+    </tr>
+  </table>
+  </div>
+  <div class="col">
+  <span id="txt2"></span>
+  </div>
+</div>
+
+</div>
+<!-- EOF: CONTENT -->
+
+<div id="footer">
+<p><small>
+©1997 -
+2019 www.mathematik.ch | <a href="/search/"><img style="vertical-align:middle" width=27 height=27 src="/img/lupe.jpg" alt="Suche"></a>
+</small></p>
+</div>
+
+</div>
+</body>
+</html>

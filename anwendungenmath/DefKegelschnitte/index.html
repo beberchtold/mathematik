@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="de">
+<HEAD>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta NAME="Description" CONTENT="Brennpunktsdefinitionen der Kegelschnitte">
+<TITLE>Brennpunktsdefinitionen der Kegelschnitte</title>
+<LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
+<script src="Kegelschnitte_min.js"></script>
+<script async src="/script/show-hide.js"></script>
+</HEAD>
+
+<body>
+<div class="page">
+<table class="c">
+<tr><td style="width:10%">
+<img width=28 height=27 src="/img/menuicon.png" style="cursor:pointer" title="Inhalt" alt="menu" onClick="ReverseDisplay()">
+</td><td class="c" style="width:80%">
+<a href="/"><img width=257 height=35 src="/img/mathematik.png" alt="mathematik.ch"></a>
+</td><td style="width:10%">&nbsp;</td></tr>
+</table>
+<div id="menu" style="display:none;">
+  <h4>Inhalt</h4>
+
+<ul>
+  <li><a href="/anwendungenmath/">Anwendungen + Unterrichtshilfen</a></li>
+  <li><a href="/puzzle/">Puzzles (Rätsel)</a></li> 
+  <li><a href="/spiele/">'Spiele'</a></li>
+  <li><a href="/spiele/euromillions/">Euromillions</a></li>
+  <li><a href="/spiele/swisslotto/">Swisslotto</a></li>
+  <li><a href="/geschichte/">Geschichte</a></li>
+  <li><a href="/mathematiker/">Mathematiker</a></li>
+  <li><a href="/zitate/">Zitate</a></li> 
+  <li><a href="/maturapruefungen/">Maturaprüfungen</a></li>
+  <li><a HREF="/witze/">Witze (+IQ-Test)</a></li>
+  <li><a HREF="/about.html">Kontakt</a></li>
+  <li><a HREF="/links.html">Links</a></li>
+  <li><a href="/search/">Suche</a></li>
+</ul></div>
+<!-- CONTENT -->
+<div id="content" style="display:block;">
+
+<h4>Brennpunktsdefinitionen der Kegelschnitte</h4>  
+
+<p><b>Definition der Parabel</b> (l:Leitlinie, F:Brennpunkt)<br>
+Für alle Punkte P der Parabel gilt: Abstand d(P,l) = <span class="ol">PF</span></p>
+<p><b>Definition der Ellipse</b> (F1, F2: Brennpunkte, a: grosse Halbachse)<br>
+Für alle Punkte P der Ellipse gilt: <span class="ol">F1P</span> + <span class="ol">F2P</span> = 2a = konstant</p>
+<p><b>Definition der Hyperbel</b> (F1, F2: Brennpunkte, a: reelle Halbachse)<br> 
+Für alle Punkte P der Hyperbel gilt: |<span class="ol">F1P</span> - <span class="ol">F2P</span>| = 2a = konstant</p>
+
+<p>Der orange Punkt C lässt sich mit gedrückter Maustaste entlang der vertikalen Strecke bewegen.
+Alternativ können Sie mit 'Step' den Punkt C schrittweise bewegen.
+Die auf der vertikalen Strecke schwarz gefärbte Strecke AB hat (für Ellipse und Hyperbel) die Länge 2a.<br>
+Für die Parabel gilt dann: Radius des Kreises um F = d(C,l)<br>
+Für Ellipse und Hyperbel gilt: Radius des Kreises um F1 = <span class="ol">CA</span>, Radius des Kreises um F2 = <span class="ol">CB</span><br>
+So 'konstruieren' Sie die blauen Kegelschnittpunkte.</p>
+
+<div class="colgroup-2">
+  <div class="col">
+	<p><input id="ellipse" type="checkbox" onclick="OnChangeCheckbox0 (this)"> Ellipse &nbsp;&nbsp;&nbsp;&nbsp;
+	<input id="parabel" type="checkbox" onclick="OnChangeCheckbox1 (this)"> Parabel &nbsp;&nbsp;&nbsp;&nbsp;
+	<input id="hyperbel" type="checkbox" onclick="OnChangeCheckbox2 (this)"> Hyperbel</p>	
+    <p><input type="button" value="Step" onclick="dostep()"></p>	
+  </div>
+        
+  <div class="col">
+       <canvas id="myCanvas" width=320 height=320>Ihr Browser kann kein Canvas!</canvas>
+  </div>
+</div>	   
+
+</div>
+<!-- EOF: CONTENT -->
+
+<div id="footer">
+<p><small>
+©1997 -
+2019 www.mathematik.ch | <a href="/search/"><img style="vertical-align:middle" width=27 height=27 src="/img/lupe.jpg" alt="Suche"></a>
+</small></p>
+</div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formel von Cardano</title>
+<LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-alpha/katex.min.css" TYPE="text/css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-alpha/katex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-alpha/contrib/auto-render.min.js"></script>
+<script async src="cardano.js"></script>
+<script async src="/script/show-hide.js"></script>
+</head>
+
+<body>
+<div class="page">
+<table class="c">
+<tr><td style="width:10%">
+<img width=28 height=27 src="/img/menuicon.png" style="cursor:pointer" title="Inhalt" alt="menu" onClick="ReverseDisplay()">
+</td><td class="c" style="width:80%">
+<a href="/"><img width=257 height=35 src="/img/mathematik.png" alt="mathematik.ch"></a>
+</td><td style="width:10%">&nbsp;</td></tr>
+</table>
+<div id="menu" style="display:none;">
+  <h4>Inhalt</h4>
+
+<ul>
+  <li><a href="/anwendungenmath/">Anwendungen + Unterrichtshilfen</a></li>
+  <li><a href="/puzzle/">Puzzles (Rätsel)</a></li> 
+  <li><a href="/spiele/">'Spiele'</a></li>
+  <li><a href="/spiele/euromillions/">Euromillions</a></li>
+  <li><a href="/spiele/swisslotto/">Swisslotto</a></li>
+  <li><a href="/geschichte/">Geschichte</a></li>
+  <li><a href="/mathematiker/">Mathematiker</a></li>
+  <li><a href="/zitate/">Zitate</a></li> 
+  <li><a href="/maturapruefungen/">Maturaprüfungen</a></li>
+  <li><a HREF="/witze/">Witze (+IQ-Test)</a></li>
+  <li><a HREF="/about.html">Kontakt</a></li>
+  <li><a HREF="/links.html">Links</a></li>
+  <li><a href="/search/">Suche</a></li>
+</ul></div>
+<!-- CONTENT -->
+<div id="content" style="display:block;">
+
+<h4>Formel von Cardano (mit Formular zur Demo)</h4>
+
+<p>Die Lösungen von Gleichungen bis höchstens 4. Grades können exakt aus den Koeffizienten berechnet werden, 
+indem man Wurzeln zieht und rationale Rechenoperationen durchführt. Ab Gleichungen 5. Grades ist
+dies im allgemeinen nicht mehr möglich und man muss sich mit Näherungslösungen (z.B. Newton-Verfahren, Iteration usw.) 
+begnügen. Hier finden Sie die Formeln von Cardano zur exakten Lösung von allgemeinen Gleichungen dritten Grades, die er 
+im Jahr 1545 veröffentlichte. Sie sind eher von historischem Interesse 
+(s. dazu in seinem <a href="/mathematiker/cardano.html"> Lebenslauf</a> auch die Bemerkung).
+</p>
+<p>
+Ausgangslage ist die Gleichung dritten Grades<br>
+<b>ax<sup>3</sup>
++ bx<sup>2</sup>&nbsp; + cx + d = 0</b>.</p>
+<p>Dividiert man durch a und setzt man   y := x + <span>\(\rm\large\frac{b}{3a}\)</span>, so entsteht die Gleichung 
+<b>y<sup>3</sup> + <span style="color:#0000FF">3p</span>y + 
+<span style="color:#FF0000"> 2q</span> = 0</b><br>mit <span style="color:#0000FF">3p</span> = <span>\(\rm\large\frac{3ac - b^2}{3a^2}\)</span>
+und <span style="color:#FF0000"> 2q</span> = <span>\(\rm\large\frac{2b^3}{27a^3}\)</span> - <span>\(\rm\large\frac{bc}{3a^2}\)</span> + <span>\(\rm\large\frac{d}{a}\)</span>.
+</p>
+<p>
+Die Anzahl der reellen Lösungen hängt vom Vorzeichen der Diskrimante
+D:=q<sup>2</sup> + p<sup>3</sup>  ab.
+</p>
+<p>
+Ist D &gt; 0, so hat die Gleichung eine reelle und zwei komplexe Lösungen.<br>
+Ist D &lt; 0, so hat die Gleichung drei verschiedene reelle Lösungen.<br>
+Für D = 0 hat die Gleichung die Lösung 
+y<sub>1</sub>= y<sub>2</sub>= y<sub>3</sub>=0, falls p = q = 0 und zwei Lösungen, falls q<sup>2</sup> = -p<sup>3</sup>  
+&ne; 0.
+</p>
+<p>Die Lösungen heissen 
+y<sub>1</sub> = u + v, y<sub>2</sub> = f
+<sub>1</sub>u + f<sub>2</sub>v, y<sub>3</sub> = f<sub>2</sub>u
++ f<sub>1</sub>v, wobei u = <span>\(\rm\small\sqrt[3]{-q+\sqrt{D}}\)</span>, 
+v = <span>\(\rm\small\sqrt[3]{-q-\sqrt{D}}\)</span>
+und f<sub>1</sub> und f<sub>2</sub> die Lösungen der
+Gleichung f<sup>2</sup> + f + 1 = 0 sind, d.h. f<sub>1,2</sub> = 0.5 (-1 &plusmn; i<span>\(\rm\footnotesize\sqrt{3}\)</span>).<br>
+(i: imaginäre Einheit)</p>
+
+<p>Beispiel:</p>
+<p>x<sup>3</sup> + 3x<sup>2</sup> + 9x + 9 = 0 , also a=1, b=3, c=9 und d=9.<br>
+y:= x + 1,&nbsp;&nbsp;<span style="color:#0000FF"><b>3p</b></span> = <span>\(\large\frac{27 - 9}{3}\)</span> = <span style="color:#0000FF"><b>6</b></span>,
+ also p = 2 und <b><span style="color:#FF0000">2q</span>
+</b> = <span>\(\large\frac{2\cdot27}{27}\)</span> - <span>\(\large\frac{27}{3}\)</span> + 9 = <b><span style="color:#FF0000">2</span></b>, also q = 1
+<br>
+Es entsteht die Gleichung y<sup>3</sup> + <b>
+<span style="color:#0000FF">6</span></b>y + <b><span style="color:#FF0000">2</span></b> = 0 
+mit Diskrimante D = q<sup>2</sup> + p<sup>3</sup> = 9.<br>
+Die Gleichung hat daher eine reelle und zwei (konjugiert) komplexe Lösungen.
+</p>
+<p>
+Also <span>\(\rm\small\sqrt{D}\)</span> = 3, u = <span>\(\rm\small\sqrt[3]{-1 + 3} = \rm\small\sqrt[3]{2}\)</span>, v = <span>\(\small\sqrt[3]{-1 - 3} = -\small\sqrt[3]{4}\)</span><br>
+Damit y<sub>1</sub> = <span>\(\small\sqrt[3]{2} - \small\sqrt[3]{4}\)</span>, y<sub>2,3</sub> = -0.5(u+v) &plusmn; 0.5i<span>\(\footnotesize\sqrt{3}\)</span>(u-v) = ...<br>
+Die Resubstitution liefert für das reelle x<sub>1</sub> = y<sub>1</sub>  - 1 &asymp; 
+-1.32748 und für die komplexen x<sub>2,3</sub>
+die entsprechenden Resultate. Man vergleiche durch numerische Lösung z.B. mit
+dem <a href="/anwendungenmath/nullstelle/">Newton-Verfahren</a>.
+</p>
+
+<div class="colgroup-2">
+  <div class="col">
+  <p><b>Formular zur Demo der Formel von Cardano</b></p>
+  <p>Geben Sie die Koeffizienten a, b, c und d der Gleichung ax<sup>3</sup>+bx<sup>2</sup>+cx+d = 0 ein.<br>
+  Das Formular berechnet dann die Lösungen inklusive Angabe der Resultate der Zwischenschritte.</p>
+
+  a = <INPUT id="a" type="number" style="width:2.5em" value=1 step="any"> &nbsp;&nbsp; b = <INPUT id="b" type="number" style="width:2.5em" value=3 step="any"> &nbsp;&nbsp;
+  c = <INPUT id="c" type="number" style="width:2.5em" value=9 step="any"> &nbsp;&nbsp; d = <INPUT id="d" type="number" style="width:2.5em" value=9 step="any"><br><br>
+  <INPUT type="button" value="Lösungen berechnen" onClick="berechne()">
+  </div>
+  <div class="col">
+  <span id="txt"></span>
+  </div>
+</div>
+
+</div>
+<script>
+   renderMathInElement(document.body);
+</script>
+<!-- EOF: CONTENT -->
+
+<div id="footer">
+<p><small>
+©1997 -
+2019 www.mathematik.ch | <a href="/search/"><img style="vertical-align:middle" width=27 height=27 src="/img/lupe.jpg" alt="Suche"></a>
+</small></p>
+</div>
+
+</div>
+</body>
+</html>

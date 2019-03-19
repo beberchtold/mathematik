@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta NAME="Description" CONTENT="Information zum Programm Numerische Integration">
+<title>Information zum Programm Numerische Integration</title>
+<LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
+</head>
+<body>
+<div class="page">
+
+<p>
+<a href="/"><img class="center" src="/img/mathematik.png" width="257" height="35" alt="mathematik.ch"></a></p>
+
+<h4>Infos zum Programm Numerische Integration auf www.mathematik.ch</h4>
+
+<ol>
+<li>Geben Sie eine Gleichung der Form <i>y = f</i>(<i>x</i>) ein.<br>
+    Folgende Angaben können Sie ins Feld der Funktionsgleichung machen:<br>
+  <ul>
+  <li>x: unabhängige Variable</li>
+  <li>+, -, *, /: plus, minus, mal, dividiert durch</li>
+  <li>(...): Klammer</li>
+  <li>abs(...): Absolutbetrag</li>
+  <li>sqrt(...): Quadratwurzel</li>
+  <li>exp(...): Exponentialfunktion mit Basis e, z.B. exp(x) ist e^x oder exp(x*ln(2)) ist 2^x</li>
+  <li>pow(...,...): Exponentialfunktion mit bel. Basis, z.B. pow(2,x) ist 2^x</li>
+  <li>log(...) oder ln(...): natürlicher Logarithmus ln</li>
+  <li>sin(...): Sinus</li>
+  <li>cos(...): Cosinus</li>
+  <li>tan(...): Tangens</li>
+  <li>asin(...): Arcussinus</li>
+  <li>acos(...): Arcuscosinus</li>
+  <li>atan(...): Arcustangens</li>
+  <li>e: Eulersche Zahl e</li>
+  <li>pi: Kreiszahl pi
+  </ul>
+</li>
+
+<li>Startwert x0 und Endwert xn für x (Integrationsgrenzen). f muss stetig sein auf [x0,xn].
+</li>
+
+<li>Geben Sie die Anzahl Intervalle ein, in die Sie das Intervall [x0,xn] einteilen wollen.<br>
+  Um grosse Rechenzeiten zu vermeiden, beträgt die maximale Anzahl 2000.
+  Normalerweise genügen 20 bis 40.</li>
+
+<li>Wählen Sie die Graphik durch Ankreuzen einer Checkbox. Auf die Graphik der Simpson-Methode wird verzichtet.</li>
+
+<li>Falls ein Syntaxfehler bei der Funktionsgleichung auftritt, so
+  erhalten Sie eine entsprechende Meldung. Sonst wird der Graph gezeichnet und
+  die Werte gemäss den Methoden Trapez, Simpson, linker Endpunkt usw. werden
+  ausgegeben. Der Graph wird gemäss der gewählten Methode schraffiert.
+  Nachdem der Graph gezeichnet ist, können Sie die Graphik durch Ankreuzen der entsprechenden Checkbox ändern.<br>
+  Beachten Sie, dass die Simpson-Regel eine gerade Anzahl von Intervallen verlangt.
+</li>
+
+<li>Bei Division durch Null oder einer anderweitigen Operation, die keine Zahl
+  ergibt, wird das Symbol NaN ausgegeben (Definition für "Not a Number").
+</li>
+
+<li>Über die Genauigkeit des Resultates wird nichts ausgesagt:<br>
+  Wählen Sie z.B. die Funktion f(x) = 1/x mit den Integrationsgrenzen 0.00001 und 1. Bei 200 Teilintervallen 
+  gibt die Methode nach Simpson den Wert 172.76776 aus. Der genaue Wert wäre 5*ln(10) = 11.512925...
+</li>
+</ol>
+
+</div>
+</body>
+</html>
+

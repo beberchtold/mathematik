@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<!--
+ The  original file has been put into the public domain by its
+ author, David Eck (http://math.hws.edu/eck), with no
+ guarantees or claims about what it might be good for.
+ Please note that the card images used in this game are
+ from the Gnome Desktop project, which uses the GPL
+ license.  The prototype and scriptaculous JavaScript
+ libraries that are used on this page have their own license.
+ The translation of the comments in german and some other changes by Bernhard Berchtold, www.mathematik.ch
+-->
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BlackJack mit Javascript</title>
+<script src="Card_min.js"></script>
+<script src="DisplayedCard_min.js"></script>
+<script src="js/prototype.js"></script>
+<script src="js/scriptaculous.js?load=effects"></script>
+<script src="blackjack.js"></script>
+<style type="text/css">*[id^='dealer']{width:65px;height:100px;margin-left:4px;background-color:#660;float:left}
+*[id^='player']{width:65px;height:100px;margin-left:4px;background-color:#660;float:left}</style>
+<LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
+<script async src="/script/show-hide.js"></script>
+</head>
+
+<body>
+<div class="page">
+<table class="c">
+<tr><td style="width:10%">
+<img width=28 height=27 src="/img/menuicon.png" style="cursor:pointer" title="Inhalt" alt="menu" onClick="ReverseDisplay()">
+</td><td class="c" style="width:80%">
+<a href="/"><img width=257 height=35 src="/img/mathematik.png" alt="mathematik.ch"></a>
+</td><td style="width:10%">&nbsp;</td></tr>
+</table>
+<div id="menu" style="display:none;">
+  <h4>Inhalt</h4>
+
+<ul>
+  <li><a href="/anwendungenmath/">Anwendungen + Unterrichtshilfen</a></li>
+  <li><a href="/puzzle/">Puzzles (Rätsel)</a></li> 
+  <li><a href="/spiele/">'Spiele'</a></li>
+  <li><a href="/spiele/euromillions/">Euromillions</a></li>
+  <li><a href="/spiele/swisslotto/">Swisslotto</a></li>
+  <li><a href="/geschichte/">Geschichte</a></li>
+  <li><a href="/mathematiker/">Mathematiker</a></li>
+  <li><a href="/zitate/">Zitate</a></li> 
+  <li><a href="/maturapruefungen/">Maturaprüfungen</a></li>
+  <li><a HREF="/witze/">Witze (+IQ-Test)</a></li>
+  <li><a HREF="/about.html">Kontakt</a></li>
+  <li><a HREF="/links.html">Links</a></li>
+  <li><a href="/search/">Suche</a></li>
+</ul></div>
+<!-- CONTENT -->
+<div id="content" style="display:block;">
+
+<h4>Black Jack (Ziel: 21 Punkte)</h4>
+
+<div style="border:solid #660;background-color:#280;width:325px;height:310px">
+    <div style="color:#9F9;margin-top:5px">Karten der Bank:</div>
+	<div style="width:320px;height:110px;margin-top:5px">
+    <div id="dealer1"></div>
+	<div id="dealer2"></div>
+    <div id="dealer3"></div>
+    <div id="dealer4"></div>
+    <div id="dealer5"></div>
+	</div>
+    <div style="color:#9F9;margin-bottom:5px">Ihre Karten:</div>
+	<div style="width:320px;height:110px;margin-top:5px">
+    <div id="player1"></div>
+    <div id="player2"></div>
+    <div id="player3"></div>
+    <div id="player4"></div>
+    <div id="player5"></div>
+	</div>
+    <span style="color:#9F9">Sie besitzen</span>&nbsp;
+    <span id="money" style="color:yellow;"></span>&nbsp;&nbsp;&nbsp;
+    <span id="betdiv" style="color:#9F9">Ihr Wettbetrag</span> <input type="text" id="bet" style="width:40px">
+</div>
+<p><input type=button id="hitButton" value="Neue Karte" onclick="hit()" disabled>
+<input type=button id="standButton" value="Wette gilt" onclick="stand()" disabled>
+<input type=button id="newGameButton" value="Neues Spiel" onClick="startGame()"></p>
+
+<p><b><span id="message" style="color:#600">Willkommen zu Blackjack!<br>
+Klicken Sie "Neues Spiel" zum Starten.</span></b></p>
+Total&nbsp;&nbsp;&nbsp;&nbsp;Gewonnen&nbsp;&nbsp;&nbsp;&nbsp;Verloren&nbsp;&nbsp;&nbsp;&nbsp;(Gleichstand)<br>
+<span id="Total" style="margin-left:15px">0</span><span id="Gewonnen" style="margin-left:60px">0</span>
+<span id="Verloren" style="margin-left:70px">0</span><span id="Gleichstand" style="margin-left:80px">0</span>
+
+</div>
+<!-- EOF: CONTENT -->
+
+<div id="footer">
+<p><small>
+©1997 -
+2019 www.mathematik.ch | <a href="/search/"><img style="vertical-align:middle" width=27 height=27 src="/img/lupe.jpg" alt="Suche"></a>
+</small></p>
+</div>
+
+</div>
+</body>
+</html>

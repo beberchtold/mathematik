@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Solitaire</title>
+<LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
+<meta name="author" content="B.Berchtold">
+<script src="solitaire1_min.js"></script>
+<script async src="solitaire2.js"></script>
+<script async src="/script/show-hide.js"></script>
+</head>
+
+<body>
+<div class="page">
+<table class="c">
+<tr><td style="width:10%">
+<img width=28 height=27 src="/img/menuicon.png" style="cursor:pointer" title="Inhalt" alt="menu" onClick="ReverseDisplay()">
+</td><td class="c" style="width:80%">
+<a href="/"><img width=257 height=35 src="/img/mathematik.png" alt="mathematik.ch"></a>
+</td><td style="width:10%">&nbsp;</td></tr>
+</table>
+<div id="menu" style="display:none;">
+  <h4>Inhalt</h4>
+
+<ul>
+  <li><a href="/anwendungenmath/">Anwendungen + Unterrichtshilfen</a></li>
+  <li><a href="/puzzle/">Puzzles (Rätsel)</a></li> 
+  <li><a href="/spiele/">'Spiele'</a></li>
+  <li><a href="/spiele/euromillions/">Euromillions</a></li>
+  <li><a href="/spiele/swisslotto/">Swisslotto</a></li>
+  <li><a href="/geschichte/">Geschichte</a></li>
+  <li><a href="/mathematiker/">Mathematiker</a></li>
+  <li><a href="/zitate/">Zitate</a></li> 
+  <li><a href="/maturapruefungen/">Maturaprüfungen</a></li>
+  <li><a HREF="/witze/">Witze (+IQ-Test)</a></li>
+  <li><a HREF="/about.html">Kontakt</a></li>
+  <li><a HREF="/links.html">Links</a></li>
+  <li><a href="/search/">Suche</a></li>
+</ul></div>
+<!-- CONTENT -->
+<div id="content" style="display:block;">
+
+<h4>Solitaire</h4>
+
+<table class="c">
+  <tr>
+    <td><a href="#" onClick="Kreuz()"> Steine als Kreuz</a> (33)</td>
+    <td><a href="#" onClick="Quadrat()"> Steine als Quadrat</a> (49)</td>
+    <td><a href="#" onClick="Achteck()"> Steine als Achteck</a> (37)</td>
+  </tr>
+</table>
+
+<div class="colgroup-2">
+  <div class="col">
+<div style="width:11px;height:10px;display:block;">
+<img src="feld.gif" width=1 height=1><img src="feld.gif" width=1 height=1><img src="feld.gif" width=1 height=1><img src="feld.gif" width=1 height=1><img src="feld.gif" width=1 height=1><img src="feld.gif" width=1 height=1><img src="feld.gif" width=1 height=1><img src="feld.gif" width=1 height=1><img src="feld.gif" width=1 height=1><img src="feld.gif" width=1 height=1><img src="feld.gif" width=1 height=1>     
+</div>
+<div style="width:11px;height:10px;display:block;">
+<img src="feld.gif" width=1 height=1><img src="feld.gif" width=1 height=1><img src="feld.gif" width=1 height=1><img src="feld.gif" width=1 height=1><img src="feld.gif" width=1 height=1><img src="feld.gif" width=1 height=1><img src="feld.gif" width=1 height=1><img src="feld.gif" width=1 height=1><img src="feld.gif" width=1 height=1><img src="feld.gif" width=1 height=1><img src="feld.gif" width=1 height=1>     
+</div>
+<div style="width:284px;height:40px;display:block;">
+<img src="feld.gif" width=1 height=1><img src="feld.gif" width=1 height=1><img id="24" src="feld1.gif" width=40 height=40 onClick="Pruefe(24)"><img id="25" src="feld1.gif" width=40 height=40 onClick="Pruefe(25)"><img id="26" src="feld1.gif" width=40 height=40 onClick="Pruefe(26)"><img id="27" src="feld1.gif" width=40 height=40 onClick="Pruefe(27)"><img id="28" src="feld1.gif" width=40 height=40 onClick="Pruefe(28)"><img id="29" src="feld1.gif" width=40 height=40 onClick="Pruefe(29)"><img id="30" src="feld1.gif" width=40 height=40 onClick="Pruefe(30)"><img src="feld.gif" width=1 height=1><img src="feld.gif" width=1 height=1>      
+</div>
+<div style="width:284px;height:40px;display:block;">
+<img src="feld.gif" width=1 height=1><img src="feld.gif" width=1 height=1><img id="35" src="feld1.gif" width=40 height=40 onClick="Pruefe(35)"><img id="36" src="feld1.gif" width=40 height=40 onClick="Pruefe(36)"><img id="37" src="feld1.gif" width=40 height=40 onClick="Pruefe(37)"><img id="38" src="feld1.gif" width=40 height=40 onClick="Pruefe(38)"><img id="39" src="feld1.gif" width=40 height=40 onClick="Pruefe(39)"><img id="40" src="feld1.gif" width=40 height=40 onClick="Pruefe(40)"><img id="41" src="feld1.gif" width=40 height=40 onClick="Pruefe(41)"><img src="feld.gif" width=1 height=1><img src="feld.gif" width="40" height="40">      
+</div>
+<div style="width:284px;height:40px;display:block;">
+<img src="feld.gif" width=1 height=1><img src="feld.gif" width=1 height=1><img id="46" src="feld1.gif" width=40 height=40 onClick="Pruefe(46)"><img id="47" src="feld1.gif" width=40 height=40 onClick="Pruefe(47)"><img id="48" src="feld1.gif" width=40 height=40 onClick="Pruefe(48)"><img id="49" src="feld1.gif" width=40 height=40 onClick="Pruefe(49)"><img id="50" src="feld1.gif" width=40 height=40 onClick="Pruefe(50)"><img id="51" src="feld1.gif" width=40 height=40 onClick="Pruefe(51)"><img id="52" src="feld1.gif" width=40 height=40 onClick="Pruefe(52)"><img src="feld.gif" width=1 height=1><img src="feld.gif" width=1 height=1>     
+</div>
+<div style="width:284px;height:40px;display:block;">
+<img src="feld.gif" width=1 height=1><img src="feld.gif" width=1 height=1><img id="57" src="feld1.gif" width=40 height=40 onClick="Pruefe(57)"><img id="58" src="feld1.gif" width=40 height=40 onClick="Pruefe(58)"><img id="59" src="feld1.gif" width=40 height=40 onClick="Pruefe(59)"><img id="60" src="feld1.gif" width=40 height=40 onClick="Pruefe(60)"><img id="61" src="feld1.gif" width=40 height=40 onClick="Pruefe(61)"><img id="62" src="feld1.gif" width=40 height=40 onClick="Pruefe(62)"><img id="63" src="feld1.gif" width=40 height=40 onClick="Pruefe(63)"><img src="feld.gif" width=1 height=1><img src="feld.gif" width="40" height="40">    
+</div>
+<div style="width:284px;height:40px;display:block;">
+<img src="feld.gif" width=1 height=1><img src="feld.gif" width=1 height=1><img id="68" src="feld1.gif" width=40 height=40 onClick="Pruefe(68)"><img id="69" src="feld1.gif" width=40 height=40 onClick="Pruefe(69)"><img id="70" src="feld1.gif" width=40 height=40 onClick="Pruefe(70)"><img id="71" src="feld1.gif" width=40 height=40 onClick="Pruefe(71)"><img id="72" src="feld1.gif" width=40 height=40 onClick="Pruefe(72)"><img id="73" src="feld1.gif" width=40 height=40 onClick="Pruefe(73)"><img id="74" src="feld1.gif" width=40 height=40 onClick="Pruefe(74)"><img src="feld.gif" width=1 height=1><img src="feld.gif" width=1 height=1>      
+</div>
+<div style="width:284px;height:40px;display:block;">
+<img src="feld.gif" width=1 height=1><img src="feld.gif" width=1 height=1><img id="79" src="feld1.gif" width=40 height=40 onClick="Pruefe(79)"><img id="80" src="feld1.gif" width=40 height=40 onClick="Pruefe(80)"><img id="81" src="feld1.gif" width=40 height=40 onClick="Pruefe(81)"><img id="82" src="feld1.gif" width=40 height=40 onClick="Pruefe(82)"><img id="83" src="feld1.gif" width=40 height=40 onClick="Pruefe(83)"><img id="84" src="feld1.gif" width=40 height=40 onClick="Pruefe(84)"><img id="85" src="feld1.gif" width=40 height=40 onClick="Pruefe(85)"><img src="feld.gif" width=1 height=1><img src="feld.gif" width=1 height=1>      
+</div>
+<div style="width:284px;height:40px;display:block;">
+<img src="feld.gif" width=1 height=1><img src="feld.gif" width=1 height=1><img id="90" src="feld1.gif" width=40 height=40 onClick="Pruefe(90)"><img id="91" src="feld1.gif" width=40 height=40 onClick="Pruefe(91)"><img id="92" src="feld1.gif" width=40 height=40 onClick="Pruefe(92)"><img id="93" src="feld1.gif" width=40 height=40 onClick="Pruefe(93)"><img id="94" src="feld1.gif" width=40 height=40 onClick="Pruefe(94)"><img id="95" src="feld1.gif" width=40 height=40 onClick="Pruefe(95)"><img id="96" src="feld1.gif" width=40 height=40 onClick="Pruefe(96)"><img src="feld.gif" width=1 height=1><img src="feld.gif" width=1 height=1>      
+</div>
+  </div>
+  
+  <div class="col">
+  <p style="margin-top:10px"><a href="#" onClick="Zugruecknehmen()">Zug zurücknehmen</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="#" onClick="Wiederausfuehren()">Zug wieder ausführen</a>  
+  </p>
+  <noscript>In Ihrem Browser muss JavaScript aktiviert sein.</noscript>
+  <p>Klicken Sie zuerst auf einen Spielstein, um ihn zu entfernen.<br>
+  Klicken Sie dann auf einen Spielstein, um mit ihm zu ziehen! Falls es ein zulässiger Zug ist, so wird der Stein 'halb' 
+  herausgezogen.<br>
+  Klicken Sie jetzt auf das leere Feld, auf das der herausgezogene Stein springen soll (Zug nur möglich, falls dazwischen 
+  ein Spielstein liegt).<br>
+  Der Zug wird nun ausgeführt.</p>
+  </div>
+</div>
+
+<p>Es gibt verschiedene Ziele:<br>
+  1. Es soll genau ein Stein übrigbleiben! Beim Kreuz gibt es immer eine
+  Lösung, einen beliebigen Stein zu entfernen und den letzten Stein in einem
+  vorgewählten Feld zu haben, also z.B. von Mitte zu Mitte (s. Demolösung)<br>
+  2. Sie können auch versuchen, vorgewählte Figuren am Ende zu erzeugen.</p>
+<hr>
+
+<table class="c">
+  <tr>
+    <td><a href="#" onClick="loesung1()">Lösung Kreuz</a></td>  
+    <td><a href="#" onClick="loesungQuadrat()">Lösung Quadrat</a></td> 
+    <td><a href="#" onClick="loesungAchteck()">Lösung Achteck</a></td>
+  </tr>
+</table>  
+
+<p>Copyright für das Programm: <a href="/about.html">Bernhard Berchtold</a></p>
+
+<p>Falls Sie ein Programm suchen, das Ihnen die Suche der Lösungen für das 'Kreuz' abnimmt, so empfehle ich Ihnen 
+  <a href="http://www.extrabit.com/pegsol/" target="_blank">32-PegSolitair von Mark Williams.</a></p>
+
+</div>
+<!-- EOF: CONTENT -->
+  
+<div id="footer">
+<p><small>
+©1997 -
+2019 www.mathematik.ch | <a href="/search/"><img style="vertical-align:middle" width=27 height=27 src="/img/lupe.jpg" alt="Suche"></a>
+</small></p>
+</div>
+
+</div>
+</body>
+</html>

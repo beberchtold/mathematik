@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rechnen mit komplexen Zahlen</title>
+<meta name="description" content="Rechnen mit komplexen Zahlen, geometrische Deutung">
+<meta name="keywords" content="Addition, Subtraktion, Multiplikation, Division, komplexe Zahl, Gauss-Ebene">
+<LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
+<script src="komplexeZahlen_min.js"></script>
+<script async src="/script/show-hide.js"></script>
+</head>
+
+<body>
+<div class="page">
+<table class="c">
+<tr><td style="width:10%">
+<img width=28 height=27 src="/img/menuicon.png" style="cursor:pointer" title="Inhalt" alt="menu" onClick="ReverseDisplay()">
+</td><td class="c" style="width:80%">
+<a href="/"><img width=257 height=35 src="/img/mathematik.png" alt="mathematik.ch"></a>
+</td><td style="width:10%">&nbsp;</td></tr>
+</table>
+<div id="menu" style="display:none;">
+  <h4>Inhalt</h4>
+
+<ul>
+  <li><a href="/anwendungenmath/">Anwendungen + Unterrichtshilfen</a></li>
+  <li><a href="/puzzle/">Puzzles (Rätsel)</a></li> 
+  <li><a href="/spiele/">'Spiele'</a></li>
+  <li><a href="/spiele/euromillions/">Euromillions</a></li>
+  <li><a href="/spiele/swisslotto/">Swisslotto</a></li>
+  <li><a href="/geschichte/">Geschichte</a></li>
+  <li><a href="/mathematiker/">Mathematiker</a></li>
+  <li><a href="/zitate/">Zitate</a></li> 
+  <li><a href="/maturapruefungen/">Maturaprüfungen</a></li>
+  <li><a HREF="/witze/">Witze (+IQ-Test)</a></li>
+  <li><a HREF="/about.html">Kontakt</a></li>
+  <li><a HREF="/links.html">Links</a></li>
+  <li><a href="/search/">Suche</a></li>
+</ul></div>
+<!-- CONTENT -->
+<div id="content" style="display:block;">
+
+<h4>Rechnen mit komplexen Zahlen</h4>
+  
+<p>Hier werden die Grundrechenarten mit komplexen Zahlen geometrisch gedeutet. 
+Der erste Operand ist durch einen schwarzen Punkt in der Gauss'schen Zahlenebene dargestellt, der
+zweite durch einen roten. Beide Operanden können mit gedrückter Maustaste verändert werden. Alternativ können Sie die 
+Operanden auch via Tastatur in die entsprechenden Felder eingeben.<br>
+Das Resultat wird durch den blauen Punkt repräsentiert.</p>
+
+<p>Wählen Sie mittels Checkbox, welche Operation Sie durchführen wollen und welches Koordinatensystem angezeigt werden soll.
+</p>
+
+<div class="colgroup-2">
+  <div class="col" id="containercanvas">
+       <canvas id="myCanvas" style="border:1px solid; border-color:#A0A0A0">Ihr Browser kann kein Canvas!</canvas>
+  </div>
+  <div class="col">
+    <p><input id="Addition" type="checkbox" onclick="OnChangeCheckbox1 (this)"> Addition &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<input id="Subtraktion" type="checkbox" onclick="OnChangeCheckbox2 (this)"> Subtraktion<br><br>
+    <input id="Multiplikation" type="checkbox" onclick="OnChangeCheckbox3 (this)"> Multiplikation &nbsp;&nbsp;&nbsp;
+	<input id="Division" type="checkbox" onclick="OnChangeCheckbox4 (this)"> Division
+	</p>
+	<p>z1 = <input id="x1" style="width:2.5em;" type="number" min=-10 max=10 step="any" value="5" onchange="calc()"> 	
+    + <input id="y1" style="width:2.5em;" type="number" min=-10 max=10 step="any" value="5" onchange="calc()"> i &nbsp;&nbsp;&nbsp;&nbsp;
+	z2 = <input id="x2" style="width:2.5em;" type="number" min=-10 max=10 step="any" value="1" onchange="calc()"> 
+    + <input id="y2" style="width:2.5em;" type="number" min=-10 max=10 step="any" value="2" onchange="calc()"> i</p>
+	<p>Resultat = <span id="Resultat">   </span></p>
+    <p><input id="kartesisch" type="checkbox" onclick="OnChangeCheckbox5 (this)"> Kartesisches KS &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<input id="polar" type="checkbox" onclick="OnChangeCheckbox6 (this)"> PolarKS</p>	
+  </div>
+        
+</div>	   
+
+
+</div>
+<!-- EOF: CONTENT -->
+
+<div id="footer">
+<p><small>
+©1997 -
+2019 www.mathematik.ch | <a href="/search/"><img style="vertical-align:middle" width=27 height=27 src="/img/lupe.jpg" alt="Suche"></a>
+</small></p>
+</div>
+
+</div>
+</body>
+</html>

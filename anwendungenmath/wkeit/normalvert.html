@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta NAME="Description" CONTENT="Normalverteilung">
+<title>Normalverteilung</title>
+<meta name="author" content="B.Berchtold">
+<LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-alpha/katex.min.css" TYPE="text/css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-alpha/katex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-alpha/contrib/auto-render.min.js"></script>
+<script src="normalvert.js"></script>
+<script async src="/script/show-hide.js"></script>
+</head>
+
+<body>
+<div class="page">
+<table class="c">
+<tr><td style="width:10%">
+<img width=28 height=27 src="/img/menuicon.png" style="cursor:pointer" title="Inhalt" alt="menu" onClick="ReverseDisplay()">
+</td><td class="c" style="width:80%">
+<a href="/"><img width=257 height=35 src="/img/mathematik.png" alt="mathematik.ch"></a>
+</td><td style="width:10%">&nbsp;</td></tr>
+</table>
+<div id="menu" style="display:none;">
+  <h4>Inhalt</h4>
+
+<ul>
+  <li><a href="/anwendungenmath/">Anwendungen + Unterrichtshilfen</a></li>
+  <li><a href="/puzzle/">Puzzles (Rätsel)</a></li> 
+  <li><a href="/spiele/">'Spiele'</a></li>
+  <li><a href="/spiele/euromillions/">Euromillions</a></li>
+  <li><a href="/spiele/swisslotto/">Swisslotto</a></li>
+  <li><a href="/geschichte/">Geschichte</a></li>
+  <li><a href="/mathematiker/">Mathematiker</a></li>
+  <li><a href="/zitate/">Zitate</a></li> 
+  <li><a href="/maturapruefungen/">Maturaprüfungen</a></li>
+  <li><a HREF="/witze/">Witze (+IQ-Test)</a></li>
+  <li><a HREF="/about.html">Kontakt</a></li>
+  <li><a HREF="/links.html">Links</a></li>
+  <li><a href="/search/">Suche</a></li>
+</ul></div>
+<!-- CONTENT -->
+<div id="content" style="display:block;">
+
+<h4>Normalverteilung</h4>
+
+<p>Eine Zufallsvariable X sei normalverteilt mit Erwartungswert &mu; und Standardabweichung &sigma;.<br>
+Das Formular berechnet nach Klick auf den entsprechenden Button<br>
+a) die W'keit P, dass X einen Wert von mindestens a und höchstens b annimmt 
+gemäss 
+P(a&le;X&le;b) = <span>\(\rm\frac{1}{\sqrt{2\pi}\sigma} \int\limits_a^b e^{\normalsize\frac{-{(x-\mu)}^2}{2\sigma^2}}dx \)</span><br>
+b) die Abweichung &Delta; vom Erwartungswert bei vorgegebener Wkeit W gemäss P(&mu;-&Delta;&le;X&le;&mu;+&Delta;) = W
+</p>
+
+<div class="colgroup-2">
+  <div class="col" id="containercanvas">
+    <p>&mu; = <span id="MU"></span> &nbsp;&nbsp; &sigma; = <span id="SIGMA"></span> &nbsp;&nbsp; 
+	Varianz &sigma;<sup>2</sup> = <span id="VAR"></span></p>
+    <canvas id="myCanvas">Ihr Browser kann kein Canvas!</canvas>
+ 
+  </div>
+  
+  <div class="col">
+    <ul>
+      <li style="padding:4px;">&mu;: <input id="mue" type="number" style="width:50px" value="25">&nbsp;&nbsp;&nbsp;&nbsp;
+      &sigma;: <input id="sigma" style="width:50px" value="0.2"></li>
+      <li style="padding:4px;">Untere Grenze a: <input id="a" type="number" style="width:50px;margin-left:34px;" step="any" value="24.5"></li>
+      <li style="padding:4px;">Obere Grenze b (b&gt;a): <input id="b" type="number" style="width:50px;" step="any" value="25.5"></li>
+      <li style="padding:4px;">a) <input type="button" value="Berechne Wkeit" onclick="rechne()"></li>
+	  <li style="padding:4px;">Wkeit: <input id="wkeit" type="number" style="width:50px" min=0 max=1 step="any" value="0.98"></li>
+      <li style="padding:4px;">b) <input type="button" value="Berechne Grenzen" onclick="rechne_grenze()"></li>
+	</ul>
+	<br>
+    <p><b>Resultat</b><br>
+	<b><span id="RES"></span></b></p>
+	<p><span id="message"></span></p>
+  </div>       
+</div>	
+
+<p><b>Beispiel</b><br>
+Bei der Produktion eines Massenartikels hat sich gezeigt, dass die Längen normalverteilt sind mit &mu; = 25cm und 
+&sigma; = 0.2cm.<br>
+a) Artikel mit mehr als 0.5cm Abweichung von &mu; sind unbrauchbar. Wie viel Prozent der produzierten Artikel
+sind unbrauchbar?<br>
+b) Wie gross darf die Abweichung &Delta; vom Erwartungswert sein, wenn damit 2% der Artikel unbrauchbar werden?
+</p>
+<p><b>Lösung</b><br>
+a) Da P(24.5&le;X&le;25.5) = 98.76%, so sind <b>1.24%</b> der Artikel unbrauchbar.<br>
+b) Da P(24.53546&le;X&le;25.46454) = 0.9798, so ist <b>&Delta; &asymp; 0.4645cm</b></p>
+<br>
+<p><a href="approx_bin_norm.html">Approximation Binomial- mit Normalverteilung</a></p>
+		
+</div>
+<script>
+   renderMathInElement(document.body);
+</script> 
+<!-- EOF: CONTENT -->
+
+ 
+<div id="footer">
+<p><small>
+©1997 -
+2019 www.mathematik.ch | <a href="/search/"><img style="vertical-align:middle" width=27 height=27 src="/img/lupe.jpg" alt="Suche"></a>
+</small></p>
+</div>
+
+</div>
+</body>
+</html>
+

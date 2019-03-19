@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta NAME="Description" CONTENT="Wahrscheinlichkeit: Binomialverteilung mit Histogramm">
+<title>Binomialverteilung (Ziehen mit Zurücklegen)</title>
+<meta name="author" content="B.Berchtold">
+<LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-alpha/katex.min.css" TYPE="text/css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-alpha/katex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-alpha/contrib/auto-render.min.js"></script>
+<script src="binomialvert_min.js"></script>
+<script async src="/script/show-hide.js"></script>
+</head>
+
+<body>
+<div class="page">
+<table class="c">
+<tr><td style="width:10%">
+<img width=28 height=27 src="/img/menuicon.png" style="cursor:pointer" title="Inhalt" alt="menu" onClick="ReverseDisplay()">
+</td><td class="c" style="width:80%">
+<a href="/"><img width=257 height=35 src="/img/mathematik.png" alt="mathematik.ch"></a>
+</td><td style="width:10%">&nbsp;</td></tr>
+</table>
+<div id="menu" style="display:none;">
+  <h4>Inhalt</h4>
+
+<ul>
+  <li><a href="/anwendungenmath/">Anwendungen + Unterrichtshilfen</a></li>
+  <li><a href="/puzzle/">Puzzles (Rätsel)</a></li> 
+  <li><a href="/spiele/">'Spiele'</a></li>
+  <li><a href="/spiele/euromillions/">Euromillions</a></li>
+  <li><a href="/spiele/swisslotto/">Swisslotto</a></li>
+  <li><a href="/geschichte/">Geschichte</a></li>
+  <li><a href="/mathematiker/">Mathematiker</a></li>
+  <li><a href="/zitate/">Zitate</a></li> 
+  <li><a href="/maturapruefungen/">Maturaprüfungen</a></li>
+  <li><a HREF="/witze/">Witze (+IQ-Test)</a></li>
+  <li><a HREF="/about.html">Kontakt</a></li>
+  <li><a HREF="/links.html">Links</a></li>
+  <li><a href="/search/">Suche</a></li>
+</ul></div>
+<!-- CONTENT -->
+<div id="content" style="display:block;">
+
+<h4>Binomialverteilung (Ziehen mit Zurücklegen)</h4>
+
+<p>Die Wahrscheinlichkeit, aus einer Urne in einem Zug eine rote Kugel zu ziehen, sei p (0 &le; p &le; 1).<br>
+Das Formular berechnet dann die Wahrscheinlichkeit P, in n Zügen mit Zurücklegen
+mindestens a und höchstens b rote Kugeln zu ziehen.<br>
+Dabei gilt: P = <span>\(\rm\sum\limits_{x=a}^b \binom{n}{x} p^x q^{n-x} \)</span>
+mit q = 1 - p<br>
+Erwartungswert &mu; = n&sdot;p, Varianz &sigma;<sup>2</sup> = n&sdot;p&sdot;q, Standardweichung &sigma;</p>
+<p>Das Histogramm wird nur gezeichnet, falls n&le;30</p>
+
+<div class="colgroup-2">
+  <div class="col" id="containercanvas">
+    <p><b>Binomialverteilung für n = <span id="N"></span> und p = <span id="P"></span></b><br>
+	&mu; = <span id="MU"></span> &nbsp;&nbsp; &sigma;<sup>2</sup> = <span id="VAR"></span> &nbsp;&nbsp; 
+	&sigma; = <span id="SIGMA"></span></p>
+    <canvas id="myCanvas">Ihr Browser kann kein Canvas!</canvas>
+ 
+  </div>
+  
+  <div class="col">
+    <ul>
+      <li style="padding:4px;">Anzahl Züge (n&lt;1001): <input id="n" type="number" min=1 max=1000 style="width:50px;margin-left:17px;" value="12"></li>
+      <li style="padding:4px;">Einzelw'keit p (0&le;p&le;1): <input id="p" style="width:50px;" value="1/6"></li>
+      <li style="padding:4px;">Untere Grenze a: <input id="a" type="number" min=0 style="width:50px;;margin-left:34px;" value="2"></li>
+      <li style="padding:4px;">Obere Grenze b (b&ge;a): <input id="b" type="number" min=0 style="width:50px;" value="4"></li>
+      <li style="padding:4px;"><input type="button" value="Berechne!" onclick="rechne()"></li>  
+    </ul>
+	<br>
+    <p><b>Resultat</b><br><br> 
+	<b>P(<span id="A"></span>&le;X&le;<span id="B"></span>) = <span id="RESBI"></span></b></p>
+  </div>       
+</div>	
+
+<p>Beispiel:<br>
+Wie gross ist die Wahrscheinlichkeit, in 12 Würfen mit einem idealen Würfel mindestens zweimal und 
+ höchstens viermal eine "6" zu würfeln?<br>
+ n = 12, p = 1/6, a = 2, b= 4.</p>
+<br>
+<p><a href="approx_bin_norm.html">Approximation der Binomialverteilung durch Normalverteilung</a></p>
+<p><a href="hypotest/hypotest.html">Testen von Hypothesen mit Binomialverteilung</a></p>
+
+<p><a href="hypergeovert.html">Hypergeometrische Verteilung</a></p>
+		
+</div>
+<script>
+   renderMathInElement(document.body);
+</script> 
+<!-- EOF: CONTENT -->
+
+ 
+<div id="footer">
+<p><small>
+©1997 -
+2019 www.mathematik.ch | <a href="/search/"><img style="vertical-align:middle" width=27 height=27 src="/img/lupe.jpg" alt="Suche"></a>
+</small></p>
+</div>
+
+</div>
+</body>
+</html>
+

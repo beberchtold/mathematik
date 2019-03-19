@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sinus, Cosinus und Tangens eines Winkels</title>
+<meta name="description" content="Sinus, Cosinus und Tangens eines Winkels">
+<meta name="keywords" content="Mathematik, Trigonometrie, Sinus, Cosinus, Tangens">
+<LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
+<script src="trigFkt_min.js"></script>
+<script async src="/script/show-hide.js"></script>
+</head>
+
+<body>
+<div class="page">
+<table class="c">
+<tr><td style="width:10%">
+<img width=28 height=27 src="/img/menuicon.png" style="cursor:pointer" title="Inhalt" alt="menu" onClick="ReverseDisplay()">
+</td><td class="c" style="width:80%">
+<a href="/"><img width=257 height=35 src="/img/mathematik.png" alt="mathematik.ch"></a>
+</td><td style="width:10%">&nbsp;</td></tr>
+</table>
+<div id="menu" style="display:none;">
+  <h4>Inhalt</h4>
+
+<ul>
+  <li><a href="/anwendungenmath/">Anwendungen + Unterrichtshilfen</a></li>
+  <li><a href="/puzzle/">Puzzles (Rätsel)</a></li> 
+  <li><a href="/spiele/">'Spiele'</a></li>
+  <li><a href="/spiele/euromillions/">Euromillions</a></li>
+  <li><a href="/spiele/swisslotto/">Swisslotto</a></li>
+  <li><a href="/geschichte/">Geschichte</a></li>
+  <li><a href="/mathematiker/">Mathematiker</a></li>
+  <li><a href="/zitate/">Zitate</a></li> 
+  <li><a href="/maturapruefungen/">Maturaprüfungen</a></li>
+  <li><a HREF="/witze/">Witze (+IQ-Test)</a></li>
+  <li><a HREF="/about.html">Kontakt</a></li>
+  <li><a HREF="/links.html">Links</a></li>
+  <li><a href="/search/">Suche</a></li>
+</ul></div>
+<!-- CONTENT -->
+<div id="content" style="display:block;">
+
+<h4>Sinus, Cosinus und Tangens eines Winkels</h4>
+
+<p>Hier wird die Definition für den Sinus-, Cosinus- bzw. Tangenswert eines 
+Winkels graphisch dargestellt. Wählen Sie mit Hilfe der Checkbox eine dieser trigonometrischen Funktionen. Im 
+linken Teil (Einheitskreis) lässt sich der voreingestellte Winkel durch Ziehen mit der Maus verändern. 
+Alternativ können Sie auch durch Klicken auf 'Step' den Winkel schrittweise verändern.<br> 
+Rechts ist der Graph der betreffenden Winkelfunktion gezeichnet. Die gleichfarbig gekennzeichneten Strecken bzw. 
+Kreisbogen sind jeweils gleich lang.</p>
+
+<p><input id="Sinus" type="checkbox" onclick="OnChangeCheckbox1 (this)"> Sinus &nbsp;&nbsp;&nbsp;
+<input id="Cosinus" type="checkbox" onclick="OnChangeCheckbox2 (this)"> Cosinus &nbsp;&nbsp;&nbsp;
+<input id="Tangens" type="checkbox" onclick="OnChangeCheckbox3 (this)"> Tangens </p>
+
+<p><span style="color:red">Winkel = </span><span id="phi">   </span>° &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<span style="color:blue">Funktionswert = </span><span id="res">   </span></p>	
+<p><input type="button" value="Step" onclick="dostep()"></p>	
+
+<canvas id="myCanvas" width=500 height=200 style="border:1px solid; border-color:#A0A0A0">Ihr Browser kann kein Canvas!</canvas>
+
+</div>
+<!-- EOF: CONTENT -->
+
+<div id="footer">
+<p><small>
+©1997 -
+2019 www.mathematik.ch | <a href="/search/"><img style="vertical-align:middle" width=27 height=27 src="/img/lupe.jpg" alt="Suche"></a>
+</small></p>
+</div>
+
+</div>
+</body>
+</html>

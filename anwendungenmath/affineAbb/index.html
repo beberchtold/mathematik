@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="B.Berchtold">
+<meta NAME="Description" CONTENT="Affine Abbildungen">
+<title>Affine Abbildungen</title>
+<LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
+<script src="affineabb.js"></script>
+<script async src="/script/show-hide.js"></script>
+</head>
+
+<body>
+<div class="page">
+<table class="c">
+<tr><td style="width:10%">
+<img width=28 height=27 src="/img/menuicon.png" style="cursor:pointer" title="Inhalt" alt="menu" onClick="ReverseDisplay()">
+</td><td class="c" style="width:80%">
+<a href="/"><img width=257 height=35 src="/img/mathematik.png" alt="mathematik.ch"></a>
+</td><td style="width:10%">&nbsp;</td></tr>
+</table>
+<div id="menu" style="display:none;">
+  <h4>Inhalt</h4>
+
+<ul>
+  <li><a href="/anwendungenmath/">Anwendungen + Unterrichtshilfen</a></li>
+  <li><a href="/puzzle/">Puzzles (Rätsel)</a></li> 
+  <li><a href="/spiele/">'Spiele'</a></li>
+  <li><a href="/spiele/euromillions/">Euromillions</a></li>
+  <li><a href="/spiele/swisslotto/">Swisslotto</a></li>
+  <li><a href="/geschichte/">Geschichte</a></li>
+  <li><a href="/mathematiker/">Mathematiker</a></li>
+  <li><a href="/zitate/">Zitate</a></li> 
+  <li><a href="/maturapruefungen/">Maturaprüfungen</a></li>
+  <li><a HREF="/witze/">Witze (+IQ-Test)</a></li>
+  <li><a HREF="/about.html">Kontakt</a></li>
+  <li><a HREF="/links.html">Links</a></li>
+  <li><a href="/search/">Suche</a></li>
+</ul></div>
+<!-- CONTENT -->
+<div id="content" style="display:block;">
+
+<h4>Affine Abbildungen</h4>
+<p>Affine Abbildungen in der Grundebene haben die Form P(x/y) &rarr; P'(x'/y') gemäss:</p>
+
+<div class="colgroup-2">
+  <div class="col">
+   x' = a<sub>1</sub>*x + b<sub>1</sub>*y + v<sub>1</sub><br>  
+   y' = a<sub>2</sub>*x + b<sub>2</sub>*y + v<sub>2</sub> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          mit  &Delta; = a<sub>1</sub>*b<sub>2</sub> - b<sub>1</sub>*a<sub>2</sub> &ne; 0
+   </div>
+   <div class="col">
+   a<sub>1</sub>&nbsp;<input id="a1" style="width:2.5em;" type="number" step="any" value="1">&nbsp;&nbsp;&nbsp;
+    b<sub>1</sub>&nbsp;<input id="b1" style="width:2.5em;" type="number" step="any" value="-2">&nbsp;&nbsp;&nbsp;
+    v<sub>1</sub>&nbsp;<input id="v1" style="width:2.5em;" type="number" step="any" value="2"><br>
+    a<sub>2</sub>&nbsp;<input id="a2" style="width:2.5em;" type="number" step="any" value="2">&nbsp;&nbsp;&nbsp;
+    b<sub>2</sub>&nbsp;<input id="b2" style="width:2.5em;" type="number" step="any" value="2">&nbsp;&nbsp;&nbsp;
+    v<sub>2</sub>&nbsp;<input id="v2" style="width:2.5em;" type="number" step="any" value="-3">
+   </div>
+</div>   
+<br>
+<div class="colgroup-2">
+  <div class="col" id="containercanvas">
+     <canvas id="myCanvas">Ihr Browser kann kein Canvas!</canvas>
+  </div>
+
+  <div class="col">
+<ul>
+<li><input type="checkbox" id="Quadrat" onclick="OnChangeCheckbox1 (this)"> Bild des Einheitsquadrates</li>
+<li><input type="checkbox" id="Kreis" checked onclick="OnChangeCheckbox2 (this)"> Bild des Kreises mit Mittelpunkt<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mx <input id="mx" style="width:2.5em;" type="number" step="any" value="0">
+my <input id="my" style="width:2.5em;" type="number" step="any" value="0">      
+und Radius <input id="r" style="width:2em;" type="number" step="any" min=0 value="1"></li>        
+<li><input type="checkbox" id="F" onclick="OnChangeCheckbox3 (this)"> Bild des Buchstaben F</li>
+<li><input type="checkbox" id="Dreieck" onclick="OnChangeCheckbox4 (this)"> Bild des Dreiecks mit<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x1 <input id="x1" style="width:2em;" type="number" step="any" value="0">
+y1 <input id="y1" style="width:2em;" type="number" step="any" value="0">     
+x2 <input id="x2" style="width:2em;" type="number" step="any" value="4">       
+y2 <input id="y2" style="width:2em;" type="number" step="any" value="1">
+x3 <input id="x3" style="width:2em;" type="number" step="any" value="2">      
+y3 <input id="y3" style="width:2em;" type="number" step="any" value="-1"></li>    
+<li><input type="checkbox" id="Funktion" onclick="OnChangeCheckbox5 (this)"> Bild der Funktion mit Gleichung <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;y = f(x) = <input id="f" type="text" style="width:8em;" value='x*x-1'> 
+      <a href="infos.html">
+     <img width=32 height=40 src="help.gif" style="vertical-align:middle" alt="Hilfe"></a></li>
+</ul>
+	 
+<input type="button" value="Zeichne!" onclick="zeichne()">
+		
+  </div>       
+</div>	
+
+<p>&nbsp;</p>
+<p><a href="/anwendungenmath/fractal/">Affine Abbildungen zur Erzeugung von Fraktalen</a></p>
+		
+</div>  
+<!-- EOF: CONTENT -->
+
+ 
+<div id="footer">
+<p><small>
+©1997 -
+2019 www.mathematik.ch | <a href="/search/"><img style="vertical-align:middle" width=27 height=27 src="/img/lupe.jpg" alt="Suche"></a>
+</small></p>
+</div>
+
+</div>
+</body>
+</html>
+

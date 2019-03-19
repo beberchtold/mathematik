@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" CONTENT="Bernhard Berchtold">
+<meta NAME="Description" CONTENT="Anwendungen der Mathematik, Wahrscheinlichkeit, Hypergeometrische Verteilung">
+<title>Euromillions: Berechnung der Wahrscheinlichkeiten mit hypergeometrischer Verteilung</title>
+<LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
+<script async src="/script/show-hide.js"></script>
+</head>
+
+<body>
+<div class="page">
+<table class="c">
+<tr><td style="width:10%">
+<img width=28 height=27 src="/img/menuicon.png" style="cursor:pointer" title="Inhalt" alt="menu" onClick="ReverseDisplay()">
+</td><td class="c" style="width:80%">
+<a href="/"><img width=257 height=35 src="/img/mathematik.png" alt="mathematik.ch"></a>
+</td><td style="width:10%">&nbsp;</td></tr>
+</table>
+<div id="menu" style="display:none;">
+  <h4>Inhalt</h4>
+
+<ul>
+  <li><a href="/anwendungenmath/">Anwendungen + Unterrichtshilfen</a></li>
+  <li><a href="/puzzle/">Puzzles (Rätsel)</a></li> 
+  <li><a href="/spiele/">'Spiele'</a></li>
+  <li><a href="/spiele/euromillions/">Euromillions</a></li>
+  <li><a href="/spiele/swisslotto/">Swisslotto</a></li>
+  <li><a href="/geschichte/">Geschichte</a></li>
+  <li><a href="/mathematiker/">Mathematiker</a></li>
+  <li><a href="/zitate/">Zitate</a></li> 
+  <li><a href="/maturapruefungen/">Maturaprüfungen</a></li>
+  <li><a HREF="/witze/">Witze (+IQ-Test)</a></li>
+  <li><a HREF="/about.html">Kontakt</a></li>
+  <li><a HREF="/links.html">Links</a></li>
+  <li><a href="/search/">Suche</a></li>
+</ul></div>
+<!-- CONTENT -->
+<div id="content" style="display:block;">
+
+<h4>Euromillions: Resultate der Berechnung der Wahrscheinlichkeiten</h4>
+
+<p>Beim Lottospiel Euromillions werden zweimal pro Woche 5 aus 50 Zahlen und 2 von 11 Sternen gezogen.<br>
+Die Tabelle gibt die Wahrscheinlichkeit an - geordnet nach Grösse -, a Zahlen und b Sterne richtig zu haben.<br>
+0 &le; a &le; 5; 0 &le; b &le; 2.<br>
+Die Berechnung erfolgt durch die Multiplikation von zwei <a href="../hypergeovert.html">hypergeometrischen</a> Wahrscheinlichkeiten.
+</p>
+
+  <table>
+    <tr>
+      <td class="c" style="width:60px">Zahlen</td>
+      <td class="c" style="width:70px">Sterne </td>
+	  <td style="width:180px">Wahrscheinlichkeit</td>
+    </tr>
+    <tr>
+      <td class="c"><b>5</b></td>
+      <td class="c"><b>2</b></td>
+	  <td>1 : 116531800 &asymp; 8.58E-9</td>
+    </tr>
+	<tr>
+      <td class="c"><b>5</b></td>
+      <td class="c"><b>1</b></td>
+	  <td>1 : 6473988.9 &asymp; 1.54E-7</td>
+    </tr>
+	<tr>
+      <td class="c"><b>5</b></td>
+      <td class="c"><b>0</b></td>
+	  <td>1 : 3236994.4 &asymp; 3.09E-7</td>
+    </tr>
+	<tr>
+      <td class="c"><b>4</b></td>
+      <td class="c"><b>2</b></td>
+	  <td>1 : 517919.1 &asymp; 1.93E-6</td>
+    </tr>
+	<tr>
+      <td class="c"><b>4</b></td>
+      <td class="c"><b>1</b></td>
+	  <td>1 : 28773.3 &asymp; 3.48E-5</td>
+    </tr>
+	<tr>
+      <td class="c"><b>4</b></td>
+      <td class="c"><b>0</b></td>
+	  <td>1 : 14386.6 &asymp; 6.95E-5</td>
+    </tr>
+	<tr>
+      <td class="c"><b>3</b></td>
+      <td class="c"><b>2</b></td>
+	  <td>1 : 11770.9 &asymp; 8.5E-5</td>
+    </tr>
+	<tr>
+      <td class="c"><b>2</b></td>
+      <td class="c"><b>2</b></td>
+	  <td>1 : 821.2 &asymp; 0.001218</td>
+    </tr>
+	<tr>
+      <td class="c"><b>3</b></td>
+      <td class="c"><b>1</b></td>
+	  <td>1 : 653.9 &asymp; 0.001529</td>
+    </tr>
+	<tr>
+      <td class="c"><b>3</b></td>
+      <td class="c"><b>0</b></td>
+	  <td>1 : 326.97 &asymp; 0.003058</td>
+    </tr>
+	<tr>
+      <td class="c"><b>1</b></td>
+      <td class="c"><b>2</b></td>
+	  <td>1 : 156.4 &asymp; 0.006393</td>
+    </tr>
+	<tr>
+      <td class="c">0</td>
+      <td class="c">2</td>
+	  <td>1 : 95.4 &asymp; 0.010484</td>
+    </tr>
+	<tr>
+      <td class="c"><b>2</b></td>
+      <td class="c"><b>1</b></td>
+	  <td>1 : 45.6 &asymp; 0.021918</td>
+    </tr>
+	<tr>
+      <td class="c"><b>2</b></td>
+      <td class="c"><b>0</b></td>
+	  <td>1 : 22.8 &asymp; 0.043837</td>
+    </tr>
+	<tr>
+      <td class="c">1</td>
+      <td class="c">1</td>
+	  <td>1 : 8.69 &asymp; 0.115072</td>
+    </tr>
+	<tr>
+      <td class="c">0</td>
+      <td class="c">1</td>
+	  <td> 1 : 5.3 &asymp; 0.188718</td>
+    </tr>
+	<tr>
+      <td class="c">1</td>
+      <td class="c">0</td>
+	  <td>1 : 4.35 &asymp;  0.230144</td>
+    </tr>
+	<tr>
+      <td class="c">0</td>
+      <td class="c">0</td>
+	  <td>1 : 2.65 &asymp; 0.377436</td>
+    </tr>		
+  </table>
+
+
+<p>Hinweis: Es gibt <b>13</b> Gewinnränge. Für a=0 und b=2 gibt es keine Auszahlung, obwohl die Wahrscheinlichkeit dafür kleiner 
+ist als diejenige der zwei nächsten Ränge. Der Minimalgewinn erfolgt also für a = 2 und b = 0.</p>
+
+<p>Falls Sie die Ziehung der Zahlen und Sterne simulieren wollen, so gehen Sie zu <a href="/spiele/euromillions/">Spiele (Euromillions)</a></p>
+
+</div>
+<!-- EOF: CONTENT -->
+
+<div id="footer">
+<p><small>
+©1997 -
+2019 www.mathematik.ch | <a href="/search/"><img style="vertical-align:middle" width=27 height=27 src="/img/lupe.jpg" alt="Suche"></a>
+</small></p>
+</div>
+
+</div>
+</body>
+</html>

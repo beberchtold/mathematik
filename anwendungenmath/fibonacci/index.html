@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="author" CONTENT="Bernhard Berchtold">
+<meta NAME="Description" CONTENT="Fibonacci Zahlen">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fibonacci-Zahlen und Lucas-Zahlen</title>
+<LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
+<script async src="fibonacci_min.js"></script>
+<script async src="/script/show-hide.js"></script>
+</head>
+
+<body>
+<div class="page">
+<table class="c">
+<tr><td style="width:10%">
+<img width=28 height=27 src="/img/menuicon.png" style="cursor:pointer" title="Inhalt" alt="menu" onClick="ReverseDisplay()">
+</td><td class="c" style="width:80%">
+<a href="/"><img width=257 height=35 src="/img/mathematik.png" alt="mathematik.ch"></a>
+</td><td style="width:10%">&nbsp;</td></tr>
+</table>
+<div id="menu" style="display:none;">
+  <h4>Inhalt</h4>
+
+<ul>
+  <li><a href="/anwendungenmath/">Anwendungen + Unterrichtshilfen</a></li>
+  <li><a href="/puzzle/">Puzzles (Rätsel)</a></li> 
+  <li><a href="/spiele/">'Spiele'</a></li>
+  <li><a href="/spiele/euromillions/">Euromillions</a></li>
+  <li><a href="/spiele/swisslotto/">Swisslotto</a></li>
+  <li><a href="/geschichte/">Geschichte</a></li>
+  <li><a href="/mathematiker/">Mathematiker</a></li>
+  <li><a href="/zitate/">Zitate</a></li> 
+  <li><a href="/maturapruefungen/">Maturaprüfungen</a></li>
+  <li><a HREF="/witze/">Witze (+IQ-Test)</a></li>
+  <li><a HREF="/about.html">Kontakt</a></li>
+  <li><a HREF="/links.html">Links</a></li>
+  <li><a href="/search/">Suche</a></li>
+</ul></div>
+<!-- CONTENT -->
+<div id="content" style="display:block;">
+
+<h4>Fibonacci-Zahlen und Lucas-Zahlen</h4>
+
+<p>Leonardo von Pisa, genannt "Fibonacci" fand im Jahre 1202 die nach ihm benannte Folge beim Studium der Vermehrung von Kaninchen.<br>
+Die rekursive Darstellung der Folge lautet:</p>
+<blockquote>
+  <table style="border:1px solid">
+  <tr><td>
+   &nbsp;&nbsp; a<sub>1</sub> = 1 , a<sub>2</sub> = 1<br>
+   &nbsp;&nbsp; a<sub>n+2</sub> = a<sub>n+1</sub> + a<sub>n</sub>
+  </td></tr>
+  </table>
+</blockquote>   
+
+<p>Das folgende Formular berechnet die Zahlen gemäss dieser rekursiven Darstellung. 
+Dabei können Sie die ersten beiden ganzen Zahlen (Rekursionsanfang) beliebig festsetzen und 
+erhalten so sogenannte Lucas-Zahlen (nach Edouard Lucas, 1842 - 1891).<br>
+Die Fibonacci-Folge ist also ein Spezialfall einer Lucas-Folge.
+</p>
+
+<div class="colgroup-2">
+  <div class="col">
+  <table>
+    <tr>
+      <td style="height:27px">Erste Zahl</td>
+      <td><input id="Zahl1" style="width:4em;" type="number" value="1"></td>
+    </tr>
+    <tr>
+      <td style="height:27px">Zweite Zahl</td>
+      <td><input id="Zahl2" style="width:4em;" type="number" value="1"></td>
+    </tr>
+    <tr>
+      <td style="height:27px">Berechne die nächsten</td>
+      <td><input id="anz" style="width:4em;" type="number" min=1 max=100 value="10"> Zahlen</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td><input type="submit" value="Berechne!" onClick="rekursiv()"></td>
+    </tr>
+  </table>
+  </div>
+  <div class="col">
+  <span id="txt"></span>
+  </div>
+</div>
+
+<p>&nbsp;</p>
+<p>Die explizite Darstellung für die Fibonacci-Folge mit a<sub>1</sub> = 1 und a<sub>2</sub> = 1 heisst (nach Binet, 1843):</p> 
+<blockquote><img src="fibonacci.png" width=189 height=47 alt="fibonacci explizit">
+</blockquote>
+Daraus lässt sich die explizite Darstellung für eine Lucas-Folge (zwei beliebige Anfangszahlen) gewinnen.
+Das folgende Formular berechnet die n-te Zahl explizit (n &lt; 1422). 
+<br>
+<div class="colgroup-2">
+  <div class="col">
+  <table> 
+    <tr>
+      <td style="height:27px">Erste Zahl</td>
+      <td><input id="Zahl1exp" style="width:4em;" type="number" value="1"></td>
+    </tr>
+    <tr>
+      <td style="height:27px">Zweite Zahl</td>
+      <td><input id="Zahl2exp" style="width:4em;" type="number" value="1"></td>
+    </tr>
+    <tr>
+      <td style="height:27px">Berechne die n = &nbsp;</td>
+      <td><input id="n" style="width:4em;" type="number" min=3 max=1421 value="30"> -te Zahl</td>
+    </tr> 
+    <tr>
+      <td>&nbsp;</td>
+      <td><input type="button" value="Berechne!" onClick="explizit()"></td>
+    </tr>
+  </table>
+  </div>
+  <div class="col">
+  <span id="txt1"></span>
+  </div>
+</div>
+
+<br>
+Für die explizite Darstellung einer Lucas-Folge und den Zusammenhang mit dem Goldenen Schnitt:
+ s. auch <a href="/puzzle/puzzle31.html">Puzzle 31</a> und die dazugehörige Lösung.
+
+ </div>
+<!-- EOF: CONTENT -->
+
+<div id="footer">
+<p><small>
+©1997 -
+2019 www.mathematik.ch | <a href="/search/"><img style="vertical-align:middle" width=27 height=27 src="/img/lupe.jpg" alt="Suche"></a>
+</small></p>
+</div>
+
+</div>
+</body>
+</html>

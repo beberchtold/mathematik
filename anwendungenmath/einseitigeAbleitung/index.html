@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="de">
+<HEAD>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta NAME="Description" CONTENT="Links- und rechtsseitiger Grenzwert der Differenzenquotientenfunktion">
+<TITLE>Links-und rechtsseitiger Grenzwert der Differenzenquotientenfunktion</title>
+<LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-alpha/katex.min.css" TYPE="text/css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-alpha/katex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-alpha/contrib/auto-render.min.js"></script>
+<script src="einseitigeAbleitung_min.js"></script>
+<script async src="/script/show-hide.js"></script>
+</HEAD>
+
+<body>
+<div class="page">
+<table class="c">
+<tr><td style="width:10%">
+<img width=28 height=27 src="/img/menuicon.png" style="cursor:pointer" title="Inhalt" alt="menu" onClick="ReverseDisplay()">
+</td><td class="c" style="width:80%">
+<a href="/"><img width=257 height=35 src="/img/mathematik.png" alt="mathematik.ch"></a>
+</td><td style="width:10%">&nbsp;</td></tr>
+</table>
+<div id="menu" style="display:none;">
+  <h4>Inhalt</h4>
+
+<ul>
+  <li><a href="/anwendungenmath/">Anwendungen + Unterrichtshilfen</a></li>
+  <li><a href="/puzzle/">Puzzles (Rätsel)</a></li> 
+  <li><a href="/spiele/">'Spiele'</a></li>
+  <li><a href="/spiele/euromillions/">Euromillions</a></li>
+  <li><a href="/spiele/swisslotto/">Swisslotto</a></li>
+  <li><a href="/geschichte/">Geschichte</a></li>
+  <li><a href="/mathematiker/">Mathematiker</a></li>
+  <li><a href="/zitate/">Zitate</a></li> 
+  <li><a href="/maturapruefungen/">Maturaprüfungen</a></li>
+  <li><a HREF="/witze/">Witze (+IQ-Test)</a></li>
+  <li><a HREF="/about.html">Kontakt</a></li>
+  <li><a HREF="/links.html">Links</a></li>
+  <li><a href="/search/">Suche</a></li>
+</ul></div>
+<!-- CONTENT -->
+<div id="content" style="display:block;">
+
+<h4>Einseitige Ableitung von f bei x<sub>0</sub></h4>
+
+<div class="colgroup-2">
+  <div class="col">
+      Linksseitiger Grenzwert der Differenzenquotientenfunktion: &nbsp;&nbsp;
+       <span>\(\rm\lim\limits_{x \rightarrow x_0}\large\frac{f(x) - f(x_0)}{x - x_0}\)</span>
+      &nbsp;&nbsp;für x &lt; x<sub>0</sub>
+  </div>
+  <div class="col">
+      Rechtsseitiger Grenzwert der Differenzenquotientenfunktion: &nbsp;&nbsp;
+       <span>\(\rm\lim\limits_{x \rightarrow x_0}\large\frac{f(x) - f(x_0)}{x - x_0}\)</span>
+       &nbsp;&nbsp;für x &gt; x<sub>0</sub>
+  </div>
+</div>  
+
+<p>Ist der linksseitige gleich dem rechtsseitigen Grenzwert der Differenzenquotientenfunktion, so ist f differenzierbar
+   bei x<sub>0</sub>. Es existiert dann die Ableitung f'(x<sub>0</sub>), die Steigung
+   der Tangente an den Graphen im Punkt (x<sub>0</sub> / f(x<sub>0</sub>)).
+</p>
+
+<p>Wählen Sie zuerst, ob x &rarr; x<sub>0</sub> oder x &rarr; x<sub>1</sub> gehen soll.<br>
+      Wählen Sie nun, ob Sie den Grenzwert linksseitig oder rechtsseitig betrachten wollen.<br>
+      Verschieben Sie dann (bei gedrückter Maustaste) den roten Punkt gegen den blauen Punkt. 
+	  Alternativ können Sie auch durch Klicken auf 'Step' die Annäherung schrittweise vollziehen.
+</p>
+
+<div class="colgroup-2">
+  <div class="col" id="containercanvas">
+       <canvas id="myCanvas">Ihr Browser kann kein Canvas!</canvas>
+  </div>
+  <div class="col">
+    <br>
+    <div><input id="x0" type="checkbox" onclick="OnChangeCheckbox0 (this)"> x &rarr; x<sub>0</sub>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<input id="x1" type="checkbox" onclick="OnChangeCheckbox1 (this)"> x &rarr; x<sub>1</sub></div><br>
+    <div><input id="links" type="checkbox" onclick="OnChangeCheckboxl (this)"> linksseitig &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	Sekantensteigung: <span id="lsteig">   </span>
+	</div><br>
+	<div><input id="rechts" type="checkbox" onclick="OnChangeCheckboxr (this)"> rechtsseitig &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	Sekantensteigung: <span id="rsteig">   </span>
+	</div>
+	<br>
+    <p><input type="button" value="Step" onclick="dostep()"></p>	
+  </div>
+        
+</div>	   
+
+<p>Die Funktion f(x) ist an der Stelle x<sub>0</sub> stetig, weil
+      der Grenzwert der Funktion f für x &rarr; x<sub>0</sub> existiert und gleich dem
+      Funktionswert f(x<sub>0</sub>) ist. Sie ist aber an der Stelle x<sub>0</sub>
+      <U>nicht</U> differenzierbar, weil der 
+      linksseitige Grenzwert der Differenzenquotientenfunktion <U>nicht</U> mit dem rechtsseitigen Grenzwert identisch
+      ist (es ex. also nur die sog. links- und die rechtsseitige Ableitung).<br>
+      Die Funktion f(x) ist an der Stelle x = x<sub>1</sub> differenzierbar, weil der
+      linksseitige Grenzwert und der rechtsseitige Grenzwert der Differenzenquotientenfunktion
+      übereinstimmen (es ex. also die Ableitung f'(x<sub>1</sub>)).
+</p>
+
+<p>Siehe auch <a href="/anwendungenmath/DefAbleitung/">Definition der Ableitung</a></p>
+
+</div>
+<script>
+   renderMathInElement(document.body);
+</script> 
+<!-- EOF: CONTENT -->
+
+<div id="footer">
+<p><small>
+©1997 -
+2019 www.mathematik.ch | <a href="/search/"><img style="vertical-align:middle" width=27 height=27 src="/img/lupe.jpg" alt="Suche"></a>
+</small></p>
+</div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gödel's Incompleteness Theorem</title>
+<LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
+<script async src="/script/show-hide.js"></script>
+</head>
+
+<body>
+<div class="page">
+<table class="c">
+<tr><td style="width:10%">
+<img width=28 height=27 src="/img/menuicon.png" style="cursor:pointer" title="Inhalt" alt="menu" onClick="ReverseDisplay()">
+</td><td class="c" style="width:80%">
+<a href="/"><img width=257 height=35 src="/img/mathematik.png" alt="mathematik.ch"></a>
+</td><td style="width:10%">&nbsp;</td></tr>
+</table>
+<div id="menu" style="display:none;">
+  <h4>Inhalt</h4>
+
+<ul>
+  <li><a href="/anwendungenmath/">Anwendungen + Unterrichtshilfen</a></li>
+  <li><a href="/puzzle/">Puzzles (Rätsel)</a></li> 
+  <li><a href="/spiele/">'Spiele'</a></li>
+  <li><a href="/spiele/euromillions/">Euromillions</a></li>
+  <li><a href="/spiele/swisslotto/">Swisslotto</a></li>
+  <li><a href="/geschichte/">Geschichte</a></li>
+  <li><a href="/mathematiker/">Mathematiker</a></li>
+  <li><a href="/zitate/">Zitate</a></li> 
+  <li><a href="/maturapruefungen/">Maturaprüfungen</a></li>
+  <li><a HREF="/witze/">Witze (+IQ-Test)</a></li>
+  <li><a HREF="/about.html">Kontakt</a></li>
+  <li><a HREF="/links.html">Links</a></li>
+  <li><a href="/search/">Suche</a></li>
+</ul></div>
+<!-- CONTENT -->
+<div id="content" style="display:block;">
+
+<h4>Gödel's Incompleteness Theorem</h4>
+
+<p>This theorem is one of the most important proven in this century,
+ranking with Einstein's Theory of Relativity and Heisenberg's Uncertainty Principle.
+However, very few people know about it. The excerpts below should, I hope, help explain it.</p>
+<hr>
+<blockquote>
+  <p>In 1931, the Czech-born mathematician Kurt Gödel demonstrated that
+  within any given branch of mathematics, there would always be some propositions that
+  couldn't be proven either true or false using the rules and axioms ... of that
+  mathematical branch itself. You might be able to prove every conceivable statement about
+  numbers within a system by going <em>outside</em> the system in order to come up with new
+  rules an axioms, but by doing so you'll only create a larger system with its own
+  unprovable statements. The implication is that <em>all</em> logical system of any
+  complexity are, by definition, incomplete; each of them contains, at any given time, more
+  true statements than it can possibly prove according to its own defining set of rules.</p>
+  <p>Gödel's Theorem has been used to argue that a computer can never be
+  as smart as a human being because the extent of its knowledge is limited by a fixed set of
+  axioms, whereas people can discover unexpected truths ... It plays a part in modern
+  linguistic theories, which emphasize the power of language to come up with new ways to
+  express ideas. And it has been taken to imply that you'll never entirely understand
+  yourself, since your mind, like any other closed system, can only be sure of what it knows
+  about itself by relying on what it knows about itself. </p>
+</blockquote>
+
+<p>Jones and Wilson, <cite>An Incomplete Education</cite> </p>
+<hr>
+<blockquote>
+  <p>Gödel showed that within a rigidly logical system such as Russell
+  and Whitehead had developed for arithmetic, propositions can be formulated that are
+  undecidable or undemonstrable within the axioms of the system. That is, within the system,
+  there exist certain clear-cut statements that can neither be proved or disproved. Hence
+  one cannot, using the usual methods, be certain that the axioms of arithmetic will not
+  lead to contradictions ... It appears to foredoom hope of mathematical certitude through
+  use of the obvious methods. Perhaps doomed also, as a result, is the ideal of science - to
+  devise a set of axioms from which all phenomena of the external world can be deduced.</p>
+</blockquote>
+
+<p>Boyer, <cite>History of Mathematics</cite> </p>
+<hr>
+<blockquote>
+  <p>He proved it impossible to establish the internal logical
+  consistency of a very large class of deductive systems - elementary arithmetic, for
+  example - unless one adopts principles of reasoning so complex that their internal
+  consistency is as open to doubt as that of the systems themselves ... Second main
+  conclusion is ... Gödel showed that <i>Principia</i>, or any other system within which
+  arithmetic can be developed, is <em>essentially incomplete</em>. In other words, given <em>any</em>
+  consistent set of arithmetical axioms, there are true mathematical statements that cannot
+  be derived from the set... Even if the axioms of arithmetic are augmented by an indefinite
+  number of other true ones, there will always be further mathematical truths that are not
+  formally derivable from the augmented set. </p>
+</blockquote>
+
+<p>Nagel and Newman, <cite>Gödel's Proof</cite></p>
+<hr>
+<blockquote>
+  <p>The proof of Gödel's Incompleteness Theorem is so simple, and so
+  sneaky, that it is almost embarassing to relate. His basic procedure is as follows:
+  <ol>
+    <li>Someone introduces Gödel to a UTM, a machine that is supposed to be
+      a Universal Truth Machine, capable of correctly answering any question at all. </li>
+    <li>Gödel asks for the program and the circuit design of the UTM. The
+      program may be complicated, but it can only be finitely long. Call the program P(UTM) for
+      Program of the Universal Truth Machine.</li>
+    <li>Smiling a little, Gödel writes out the following sentence: &quot;The
+      machine constructed on the basis of the program P(UTM) will never say that this sentence
+      is true.&quot; Call this sentence G for Gödel. <em>Note that G is equivalent to:
+      &quot;UTM will never say G is true.&quot;</em> </li>
+    <li>Now Gödel laughs his high laugh and asks UTM whether G is true or not.</li>
+    <li>If UTM says G is true, then &quot;UTM will never say G is true&quot;
+      is false. If &quot;UTM will never say G is true&quot; is false, then G is false (since G =
+      &quot;UTM will never say G is true&quot;). So if UTM says G is true, then G is in fact
+      false, and UTM has made a false statement. So UTM will never say that G is true, since UTM
+      makes only true statements.</li>
+    <li>We have established that UTM will never say G is true. So &quot;UTM
+      will never say G is true&quot; is in fact a true statement. So G is true (since G =
+      &quot;UTM will never say G is true&quot;).</li>
+    <li>&quot;I know a truth that UTM can never utter,&quot; Gödel says.
+      &quot;I know that G is true. UTM is not truly universal.&quot; </li>
+  </ol>
+  <p>Think about it - it grows on you ... </p>
+  <p>With his great mathematical and logical genius, Gödel was able to
+  find a way (for any given P(UTM)) actually to write down a complicated polynomial equation
+  that has a solution if and only if G is true. So G is not at all some vague or
+  non-mathematical sentence. <em>G is a specific mathematical problem that we know the
+  answer to, even though UTM does not!</em> So UTM does not, and cannot, embody a best and
+  final theory of mathematics ... </p>
+  <p>Although this theorem can be stated and proved in a rigorously
+  mathematical way, what it seems to say is that <em>rational thought can never penetrate to
+  the final ultimate truth</em> ... But, paradoxically, to understand Gödel's proof is to
+  find a sort of liberation. For many logic students, the final breakthrough to full
+  understanding of the Incompleteness Theorem is practically a conversion experience. This
+  is partly a by-product of the potent mystique Gödel's name carries. But, more profoundly,
+  to understand the essentially labyrinthine nature of <em>the castle</em> is, somehow, to
+  be free of it.</p>
+</blockquote>
+
+<p>Rucker, <cite>Infinity and the Mind</cite></p>
+<hr>
+<blockquote>
+  <p>All consistent axiomatic formulations of number theory include undecidable propositions ... </p>
+  <p>Gödel showed that provability is a weaker notion than truth, no matter what axiom system is involved ... </p>
+  <p>How can you figure out if you are sane? ... Once you begin to
+  question your own sanity, you get trapped in an ever-tighter vortex of self-fulfilling
+  prophecies, though the process is by no means inevitable. Everyone knows that the insane
+  interpret the world via their own peculiarly consistent logic; how can you tell if your
+  own logic is &quot;peculiar' or not, given that you have only your own logic to judge
+  itself? I don't see any answer. I am reminded of Gödel's second theorem, which implies
+  that the only versions of formal number theory which assert their own consistency are
+  inconsistent. </p>
+  <p>The other metaphorical analogue to Gödel's Theorem which I find
+  provocative suggests that ultimately, we cannot understand our own mind/brains ... Just as
+  we cannot see our faces with our own eyes, is it not inconceivable to expect that we
+  cannot mirror our complete mental structures in the symbols which carry them out? All the
+  limitative theorems of mathematics and the theory of computation suggest that once the
+  ability to represent your own structure has reached a certain critical point, that is the
+  kiss of death: it guarantees that you can never represent yourself totally.</p>
+</blockquote>
+
+<p>Hofstadter, <cite>Gödel, Escher, Bach</cite></p>
+<hr>
+<p>William Denton (buff@vex.net)</p>
+
+<p><a href="goedel.html">zurück zur Seite Gödel</a></p>
+
+</div>
+<!-- EOF: CONTENT -->
+
+<div id="footer">
+<p><small>
+©1997 -
+2019 www.mathematik.ch | <a href="/search/"><img style="vertical-align:middle" width=27 height=27 src="/img/lupe.jpg" alt="Suche"></a>
+</small></p>
+</div>
+
+</div>
+</body>
+</html>

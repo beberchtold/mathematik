@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="de">
+<HEAD>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta NAME="Description" CONTENT="Lissajou-Figuren mit Javascript">
+<TITLE>Lissajou-Figuren</title>
+<LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
+<script src="Lissajou_min.js"></script>
+<script async src="/script/show-hide.js"></script>
+</HEAD>
+
+<body>
+<div class="page">
+<table class="c">
+<tr><td style="width:10%">
+<img width=28 height=27 src="/img/menuicon.png" style="cursor:pointer" title="Inhalt" alt="menu" onClick="ReverseDisplay()">
+</td><td class="c" style="width:80%">
+<a href="/"><img width=257 height=35 src="/img/mathematik.png" alt="mathematik.ch"></a>
+</td><td style="width:10%">&nbsp;</td></tr>
+</table>
+<div id="menu" style="display:none;">
+  <h4>Inhalt</h4>
+
+<ul>
+  <li><a href="/anwendungenmath/">Anwendungen + Unterrichtshilfen</a></li>
+  <li><a href="/puzzle/">Puzzles (Rätsel)</a></li> 
+  <li><a href="/spiele/">'Spiele'</a></li>
+  <li><a href="/spiele/euromillions/">Euromillions</a></li>
+  <li><a href="/spiele/swisslotto/">Swisslotto</a></li>
+  <li><a href="/geschichte/">Geschichte</a></li>
+  <li><a href="/mathematiker/">Mathematiker</a></li>
+  <li><a href="/zitate/">Zitate</a></li> 
+  <li><a href="/maturapruefungen/">Maturaprüfungen</a></li>
+  <li><a HREF="/witze/">Witze (+IQ-Test)</a></li>
+  <li><a HREF="/about.html">Kontakt</a></li>
+  <li><a HREF="/links.html">Links</a></li>
+  <li><a href="/search/">Suche</a></li>
+</ul></div>
+<!-- CONTENT -->
+<div id="content" style="display:block;">
+
+<h4>Lissajou-Figuren</h4>  
+
+<div class="colgroup-2">
+  <div class="col" id="containercanvas">
+     <p>Figur mit a = <span id="A">   </span>, b = <span id="B">   </span> und k = <span id="K">   </span></p>
+     <canvas id="myCanvas">Ihr Browser kann kein Canvas!</canvas>
+  </div>
+  <div class="col">
+    <p>Sie können die drei Werte a,b und k durch den Computer bestimmen lassen:<br>	
+	<input id="STEP" type="button" value="Step" onclick="dostep()"> Zufallsfigur mit Zufallsfarbe rot, grün, blau oder gelb.</p>
+	<p><input type="button" value="Run/Stop" onclick="run()"> Permanent Zufallsfigur erzeugen</p>
+	<p>Sie können die Werte a, b und k aber auch hier eingeben:<br>
+	1&le;a&le;5: <input id="a" type="number" value=4 min=1 max=5 style="width:1.5em"> &nbsp;&nbsp;
+	1&le;b&le;5: <input id="b" type="number" value=3 min=1 max=5 style="width:1.5em"> &nbsp;&nbsp;
+	1&le;k&le;359: <input id="k" type="number" value=329 min=1 max=359 style="width:3em">
+	</p>
+    <p><input id="USER" type="button" value="Zeichne!" onclick="benutzer()"><br>
+    Klick auf 'Zeichne' erzeugt die dazugehörige Figur mit einer Zufallsfarbe rot, grün, blau oder gelb.</p>	
+  </div>       
+</div>	   
+
+<p>Interessante Figuren erhalten Sie z.B. für folgende Werte von a, b und k:<br>
+<a href="#" onClick="Figur(1,1,103)">1,1,103; </a>&nbsp;&nbsp;<a href="#" onClick="Figur(1,2,269)"> 1,2,69; </a>&nbsp;&nbsp;
+<a href="#" onClick="Figur(2,5,29)"> 2,5,29; </a>&nbsp;&nbsp;<a href="#" onClick="Figur(3,2,31)"> 3,2,31; </a>&nbsp;&nbsp;
+<a href="#" onClick="Figur(4,1,247)"> 4,1,247; </a>&nbsp;&nbsp; <a href="#" onClick="Figur(4,2,137)"> 4,2,137; </a>&nbsp;&nbsp;
+<a href="#" onClick="Figur(5,1,127)"> 5,1,127; </a>&nbsp;&nbsp; <a href="#" onClick="Figur(5,2,331)"> 5,2,331</a></p>
+
+<p>Punkte (xi|yi) der Figur entstehen im Prinzip gemäss xi = cos(a*k*i), yi = sin(b*k*i) für i = 1,2,3,...,L; k in Grad. 
+Aufeinanderfolgende Punkte werden durch eine Strecke verbunden. Sie erhalten also für a=b=1 und k=60 für i=1 bis 6 ein 
+regelmässiges Sechseck.</p>
+
+</div>
+<!-- EOF: CONTENT -->
+
+<div id="footer">
+<p><small>
+©1997 -
+2019 www.mathematik.ch | <a href="/search/"><img style="vertical-align:middle" width=27 height=27 src="/img/lupe.jpg" alt="Suche"></a>
+</small></p>
+</div>
+
+</div>
+</body>
+</html>
