@@ -55,7 +55,18 @@ function control(n,moeglich,guenstig)
    return(result);
  } 
  
-function rechne() {
+  function ausgabe(zahl) {
+    var hilf=zahl.toString();
+    if (hilf.length>14) {
+		var str=hilf.split("e");
+		if (str[1]>"") {
+			hilf=hilf.substr(0, 10)+"e"+str[1];
+	    }
+	}
+    return(hilf);
+}
+ 
+ function rechne() {
   var n=9;
   n=parseInt(document.getElementById("n").value);
   if (isNaN(n) || n<1 || n>35) n=9;
@@ -76,8 +87,8 @@ function rechne() {
   for (var i = 0; i <= n; i++)  {	  
      document.getElementById("Ausgabe").innerHTML+="<div class=\"table\">";
 	 document.getElementById("Ausgabe").innerHTML+="<div class=\"spalte1\">"+i+"</div>";
-     document.getElementById("Ausgabe").innerHTML+="<div class=\"spalte\">"+guenstig[i]+"</div>";
-	 document.getElementById("Ausgabe").innerHTML+="<div class=\"spalte\">"+guenstig[i]/moeglich+"</div>";
+     document.getElementById("Ausgabe").innerHTML+="<div class=\"spalte\">"+ausgabe(guenstig[i])+"</div>";
+	 document.getElementById("Ausgabe").innerHTML+="<div class=\"spalte\">"+ausgabe(guenstig[i]/moeglich)+"</div>";
 	 document.getElementById("Ausgabe").innerHTML+="</div>";
    }
   document.getElementById("RES").innerHTML=Erwartungswert;
