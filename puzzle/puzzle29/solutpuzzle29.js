@@ -1,1 +1,86 @@
-function Bikoeff(e,n){if(n>e)return 0;n>e-n&&(n=e-n);for(var t=1,r=1;n>=r;r++)t=t*(e-r+1)/r;return t}function fak(e){for(var n=1,t=2;e>=t;t++)n*=t;return n}function gue(e){for(var n=new Array,t=1;46>t;t++)n[t]=0;for(n[0]=fak(e),e>1&&(n[e-1]=e),n[1]=n[0]*Bikoeff(e,2),t=2;e-1>t;t++){for(var r=0,o=-1,u=0;e-t-1>=u;u++)o=-1*o,r+=o*Bikoeff(e-t,u)*Math.pow(e-t-u,e);n[t]=Bikoeff(e,e-t)*r}return n}function control(e,n,t){for(var r=0,o=0;e>=o;o++)r+=t[o];var u=r/n;return u}function EW(e,n,t){for(var r=0,o=0;e>o;o++)r+=o*t[o];var u=r/n;return u}function rechne(){var e=9;e=parseInt(document.getElementById("n").value),(isNaN(e)||1>e||e>35)&&(e=9),document.getElementById("n").value=e,document.getElementById("N").innerHTML=e;var n=Math.pow(e,e);document.getElementById("M").innerHTML=n;var t=new Array;t=gue(e);var r=control(e,n,t),o=Math.round(1e4*EW(e,n,t))/1e4;document.getElementById("Ausgabe").innerHTML="";for(var u=0;e>=u;u++)document.getElementById("Ausgabe").innerHTML+=u,document.getElementById("Ausgabe").innerHTML+="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;",document.getElementById("Ausgabe").innerHTML+=t[u],document.getElementById("Ausgabe").innerHTML+="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;",document.getElementById("Ausgabe").innerHTML+=t[u]/n,document.getElementById("Ausgabe").innerHTML+="<br>";document.getElementById("RES").innerHTML=o,document.getElementById("KONTROL").innerHTML=r}
+function Bikoeff(A,B)
+ {
+  if (A<B) return 0;
+  if (B > A - B)
+    B = A - B;  
+  var F = 1;
+  for (var i = 1;  i <= B;  i++)
+     F = F * (A - i + 1) / i ;
+  return F;
+ }
+ 
+ function fak(n)
+ {
+  var res=1;
+  for (var i = 2;  i <= n;  i++)
+    res=res*i;
+  return res;
+ }
+ 
+ function gue(n)
+ {
+ var guenstig=new Array();
+ for (var k = 1; k < 46; k++)
+     guenstig[k]=0;
+ guenstig[0]=fak(n);
+ if (n>1) guenstig[n-1]=n;
+ guenstig[1]=guenstig[0]*Bikoeff(n,2);
+ for (k = 2; k < n-1; k++)
+ {
+   var sum=0; var faktor=-1;
+   for (var x = 0; x <= n-k-1; x++)
+     { faktor=faktor*(-1);
+       sum = sum+faktor*Bikoeff(n-k,x) * Math.pow(n-k-x,n);
+     }
+   guenstig[k] = Bikoeff(n,n-k) * sum;   // probs bei hohem n (z.B. n=39, n=40): negative Werte für k=3!!
+ }  
+   return(guenstig);
+ }
+ 
+function control(n,moeglich,guenstig)
+ {
+   var sum=0; 
+   for (var i = 0; i <= n; i++)
+       sum = sum+guenstig[i]; 
+   var result=sum/moeglich; 
+   return(result);
+ }
+ 
+ function EW(n,moeglich,guenstig)
+ {
+   var sum=0; 
+   for (var i = 0; i < n; i++)
+       sum = sum+i*guenstig[i];
+   var result=sum/moeglich;   
+   return(result);
+ } 
+ 
+function rechne() {
+  var n=9;
+  n=parseInt(document.getElementById("n").value);
+  if (isNaN(n) || n<1 || n>35) n=9;
+  document.getElementById("n").value=n;
+  document.getElementById("N").innerHTML=n;
+  var moeglich=Math.pow(n,n);
+  document.getElementById("M").innerHTML=moeglich;
+  var guenstig=new Array();
+  guenstig=gue(n);
+  var kontrolle=control(n,moeglich,guenstig);
+  var Erwartungswert=Math.round(10000*EW(n,moeglich,guenstig))/10000;
+  document.getElementById("Ausgabe").innerHTML="";
+  document.getElementById("Ausgabe").innerHTML+="<div class=\"table\">";
+  document.getElementById("Ausgabe").innerHTML+="<div class=\"spalte1\"><b>k</b></div>";
+  document.getElementById("Ausgabe").innerHTML+="<div class=\"spalte\"><b>günstige Fälle</b></div>";
+  document.getElementById("Ausgabe").innerHTML+="<div class=\"spalte\"><b>Wahrscheinlichkeit</b></div>";
+  document.getElementById("Ausgabe").innerHTML+="</div>";
+  for (var i = 0; i <= n; i++)  {	  
+     document.getElementById("Ausgabe").innerHTML+="<div class=\"table\">";
+	 document.getElementById("Ausgabe").innerHTML+="<div class=\"spalte1\">"+i+"</div>";
+     document.getElementById("Ausgabe").innerHTML+="<div class=\"spalte\">"+guenstig[i]+"</div>";
+	 document.getElementById("Ausgabe").innerHTML+="<div class=\"spalte\">"+guenstig[i]/moeglich+"</div>";
+	 document.getElementById("Ausgabe").innerHTML+="</div>";
+   }
+  document.getElementById("RES").innerHTML=Erwartungswert;
+  document.getElementById("KONTROL").innerHTML=kontrolle;
+}
+ 
