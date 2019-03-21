@@ -75,7 +75,7 @@ function control(n,moeglich,guenstig) {
   document.getElementById("Ausgabe").innerHTML+="<div class=\"table\">";
   document.getElementById("Ausgabe").innerHTML+="<div class=\"spalte1\"><b>k</b></div>";
   document.getElementById("Ausgabe").innerHTML+="<div class=\"spalte\"><b>günstige Fälle</b></div>";
-  document.getElementById("Ausgabe").innerHTML+="<div class=\"spalte\"><b>Wahrscheinlichkeit</b></div>";
+  document.getElementById("Ausgabe").innerHTML+="<div class=\"spalte\"><b>Wkeit</b></div>";
   document.getElementById("Ausgabe").innerHTML+="</div>";
   for (var i = 0; i <= n; i++)  {	  
      document.getElementById("Ausgabe").innerHTML+="<div class=\"table\">";
