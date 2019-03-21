@@ -1,5 +1,4 @@
-function Bikoeff(A,B)
- {
+function Bikoeff(A,B) {
   if (A<B) return 0;
   if (B > A - B)
     B = A - B;  
@@ -9,16 +8,14 @@ function Bikoeff(A,B)
   return F;
  }
  
- function fak(n)
- {
+ function fak(n) {
   var res=1;
   for (var i = 2;  i <= n;  i++)
     res=res*i;
   return res;
  }
  
- function gue(n)
- {
+ function gue(n) {
  var guenstig=new Array();
  for (var k = 1; k < 46; k++)
      guenstig[k]=0;
@@ -37,8 +34,7 @@ function Bikoeff(A,B)
    return(guenstig);
  }
  
-function control(n,moeglich,guenstig)
- {
+function control(n,moeglich,guenstig) {
    var sum=0; 
    for (var i = 0; i <= n; i++)
        sum = sum+guenstig[i]; 
@@ -46,8 +42,7 @@ function control(n,moeglich,guenstig)
    return(result);
  }
  
- function EW(n,moeglich,guenstig)
- {
+ function EW(n,moeglich,guenstig) {
    var sum=0; 
    for (var i = 0; i < n; i++)
        sum = sum+i*guenstig[i];
@@ -56,16 +51,14 @@ function control(n,moeglich,guenstig)
  } 
  
   function ausgabe(zahl) {
-    var hilf=zahl.toString();
-    if (hilf.length>14) {
-		var str=hilf.split("e");
-		if (str[1]>"") {
-			hilf=hilf.substr(0, 10)+"e"+str[1];
-	    }
+	var hilf=zahl.toString();
+    if (hilf.length>10) {
+      if (zahl<1e-3) return (zahl.toExponential(6)); 		
+	    else return (zahl.toPrecision(6));
 	}
-    return(hilf);
-}
- 
+      else return(zahl);
+  }
+  
  function rechne() {
   var n=9;
   n=parseInt(document.getElementById("n").value);
