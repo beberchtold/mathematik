@@ -1,1 +1,0 @@
-function chkFormular(){if(""==document.a.n.value)return alert("Wert für n eingeben!"),document.a.n.focus(),!1;var e=parseInt(document.a.n.value);return 2>e||e>100||isNaN(e)?(alert("falscher Wert für n"),document.a.n.value="",document.a.n.focus(),!1):(document.a.n.value=e,void 0)}
