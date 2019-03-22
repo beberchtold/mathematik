@@ -1,1 +1,124 @@
-function resizeCanvas(){var e=document.getElementById("containercanvas");e.width=e.offsetWidth,W=e.width,H=W/2,initmade?(resize1(),30>=n&&zeichne()):init()}function Bikoeff(e,n){var t;t=n>e?0:1,n>e-n&&(n=e-n);for(var r=1;n>=r;r++)t=t*(e-r+1)/r;return t}function calcwk(e,n,t){var r=Bikoeff(e,t);for(x=0;t>=x;x++)wkeit[x]=Bikoeff(n,x)*Bikoeff(e-n,t-x)/r}function init(){initmade=!0,window.addEventListener("resize",function(){resizeCanvas()}),canvas1=document.getElementById("myCanvas"),resize1(),ctx=canvas1.getContext("2d"),rechne()}function resize1(){canvas1.width=W,canvas1.height=H}function rechne(){if(""==document.getElementById("m").value)return alert("Wert für n eingeben!"),void 0;if(m=parseInt(document.getElementById("m").value),1>=m||isNaN(m))return alert("falscher Wert für m"),void 0;if(""==document.getElementById("r").value)return alert("Wert für r eingeben!"),void 0;if(r=parseInt(document.getElementById("r").value),0>=r||r>m||isNaN(r))return alert("falscher Wert für r"),void 0;if(""==document.getElementById("n").value)return alert("Wert für n eingeben!"),void 0;if(n=parseInt(document.getElementById("n").value),0>=n||n>m||isNaN(n))return alert("falscher Wert für n"),void 0;if(""==document.getElementById("a").value)return alert("Wert für a eingeben!"),void 0;if(a=parseInt(document.getElementById("a").value),0>a||isNaN(a)||a>n||a>r)return alert("falscher Wert für a"),void 0;if(""==document.getElementById("b").value)return alert("Wert für b eingeben!"),void 0;if(b=parseInt(document.getElementById("b").value),isNaN(b)||b>n||a>b||b>r)return alert("falscher Wert für b"),void 0;summe=0,calcwk(m,r,n);for(var e=a;b>=e;e++)summe+=wkeit[e];mue=n*r/m,sigma=Math.sqrt(n*r/m*(1-r/m)*(m-n)/(m-1)),schreibeWerte(),30>=n?zeichne():ctx.clearRect(0,0,W,H)}function zeichne(){ctx.clearRect(0,0,W,H),ctx.font="11px Arial";for(var e=W/(n+1),t=0;n>=t;t++)ctx.fillStyle=a>t||t>b?"rgb(10,36,106)":"green",ctx.fillRect(t*e,(H-20)*(1-2.5*wkeit[t]),e,2.5*(H-20)*wkeit[t]),ctx.fillText(t,t*e+e/2,H-5)}function schreibeWerte(){var e=sigma*sigma;document.getElementById("M").innerHTML=m,document.getElementById("N").innerHTML=n,document.getElementById("R").innerHTML=r,document.getElementById("A").innerHTML=a,document.getElementById("B").innerHTML=b,document.getElementById("MU").innerHTML=runde(mue),document.getElementById("VAR").innerHTML=runde(e),document.getElementById("SIGMA").innerHTML=runde(sigma),document.getElementById("RESHY").innerHTML=Math.round(1e6*summe)/1e6}function runde(e){return Math.round(1e5*e)/1e5}var W,H,m,r,n,a,b,mue,sigma,wkeit=new Array,summe,canvas1,initmade=!1;window.onload=resizeCanvas;
+  // Progamm zur hypergeometrischen Verteilung auf www.mathematik.ch
+  // November 2015: php-Programm vom Januar 2002 umgeschrieben auf html5 und Javascript
+  // copyright Bernhard Berchtold
+
+    var W,H;
+	var m,r,n,a,b,mue,sigma;
+	var wkeit=new Array();
+	var summe;
+	var canvas1;
+	var initmade=false;
+	
+window.onload=resizeCanvas;	
+    
+  function resizeCanvas() {
+    var canvs = document.getElementById("containercanvas");
+    canvs.width = canvs.offsetWidth;
+	W=canvs.width;
+	H=W/2;
+	if (initmade) {
+	  resize1();
+      if (n<=30) zeichne();
+	} else init();	
+  }
+  
+  function Bikoeff(A,B) {
+    var F;
+    if (B>A) F = 0;
+     else F = 1;
+    if (B > A - B) B = A - B;
+    for (var i=1;i<=B;i++)
+      F = F * (A - i + 1) / i ;
+    return F;
+  }
+
+  function calcwk(m,r,n) {
+    var Nenner=Bikoeff(m,n);
+    for (x=0;x<=n;x++)
+     wkeit[x] = Bikoeff(r,x) * Bikoeff(m-r,n-x)/Nenner;
+  }
+
+  function init() {
+    initmade=true;
+	window.addEventListener('resize', function(event){
+      resizeCanvas()
+    });
+    canvas1 = document.getElementById('myCanvas');
+	resize1();
+    ctx = canvas1.getContext('2d');
+    rechne();
+  }
+
+  function resize1() {
+	 canvas1.width=W; canvas1.height=H; 
+  }
+
+  function rechne() {    // und zeichne()
+    if (document.getElementById("m").value == '') 
+     {alert ("Wert für n eingeben!"); return;}
+    m=parseInt(document.getElementById("m").value);
+	if  ((m<=1) || (isNaN(m)) )
+     {alert ("falscher Wert für m"); return;}
+    if (document.getElementById("r").value == '') 
+     {alert ("Wert für r eingeben!"); return;}
+    r=parseInt(document.getElementById("r").value);
+	if ((r<=0) || (r>m) || (isNaN(r)) )
+     {alert ("falscher Wert für r"); return;}
+    if (document.getElementById("n").value == '') 
+     {alert ("Wert für n eingeben!"); return;}
+    n=parseInt(document.getElementById("n").value);
+	if ((n<=0) || (n>m) || (isNaN(n)) )
+     {alert ("falscher Wert für n"); return;}	
+    if (document.getElementById("a").value == '') 
+     {alert ("Wert für a eingeben!"); return;}
+    a=parseInt(document.getElementById("a").value);
+	if ((a<0) || isNaN(a) || (a>n) || (a>r))
+	  {alert ("falscher Wert für a"); return;}	
+    if (document.getElementById("b").value == '') 
+     {alert ("Wert für b eingeben!"); return;}
+	b=parseInt(document.getElementById("b").value);
+	if ( (isNaN(b)) || (b>n) || (b<a) || (b>r) )
+     {alert ("falscher Wert für b"); return;}
+	// calc Hypergeovert
+	summe = 0;
+    calcwk(m,r,n);
+	for (var x=a;x<=b;x++) summe += wkeit[x];
+    mue=n*r/m;
+    sigma=Math.sqrt(n*r/m*(1-r/m)*(m-n)/(m-1))
+	schreibeWerte();
+	if (n<=30) zeichne();
+	  else ctx.clearRect(0,0,W,H);
+  }
+
+  function zeichne() {  // wird durch Drücken auf button ausgelöst
+    ctx.clearRect(0,0,W,H);
+    ctx.font="11px Arial";
+ 	var breite = W/(n+1);   	   
+    for (var x=0;x<=n;x++) {
+	  if ((x<a) || (x>b)) ctx.fillStyle = "rgb(10,36,106)";
+        else ctx.fillStyle = "green";
+      ctx.fillRect(x*breite,(H-20)*(1-2.5*wkeit[x]),breite,(H-20)*2.5*wkeit[x]);
+      ctx.fillText(x,x*breite+breite/2,H-5);
+	}
+  }
+  
+  function schreibeWerte() {
+	var varianz=sigma*sigma;
+    document.getElementById("M").innerHTML=m;	
+	document.getElementById("N").innerHTML=n;
+	document.getElementById("R").innerHTML=r;
+	document.getElementById("A").innerHTML=a;
+	document.getElementById("B").innerHTML=b;
+	document.getElementById("MU").innerHTML=runde(mue);
+	document.getElementById("VAR").innerHTML=runde(varianz);
+	document.getElementById("SIGMA").innerHTML=runde(sigma);
+	document.getElementById("RESHY").innerHTML=Math.round(1e8*summe)/1e8;
+  }
+
+  function runde(x) {
+	return Math.round(100000*x)/100000;  
+  }
+
+
+
+ 
