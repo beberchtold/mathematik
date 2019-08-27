@@ -1,4 +1,4 @@
 Sitemap: https://www.mathematik.ch/sitemap.xml
 
 User-agent: *
-Disallow: /mail/
+Disallow: /padras/
