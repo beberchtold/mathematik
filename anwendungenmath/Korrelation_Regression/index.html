@@ -46,6 +46,10 @@
 
 <p>Geben Sie die Koordinaten ( x<sub>i</sub> / y<sub>i</sub> )  von maximal 30 Punkten in die Felder ein.</p>
 
+<div class="colgroup-2">
+ <div class="col">
+  <div style="padding:5px;">
+
 <FORM action="#">
       <p>
        01 <INPUT value=80 name=element0> <INPUT value=120 name=element10> 11 
@@ -74,8 +78,12 @@
       <INPUT value=150 name=element19> 20 <INPUT name=element29> <INPUT name=element39> 30 
       <INPUT name=element49> <INPUT name=element59><br><br>
       <INPUT onclick="uttest(form,data1,data2,data4,data5)" type=button value="Berechne Korrelation und Regression" style="width:18em">
-	  <p><b>n = <span id="n"> </span></b>
-      <br>
+
+  </div></div>
+  <div class="col">
+  <div>
+	  <p><b>Resultate der Regression für n = <span id="n"></span></b><br><br>
+
       <p><b>Mittelwerte:&nbsp;&nbsp; <span class="ol">x</span> = <span id="mw1"> </span>&nbsp;&nbsp;&nbsp;
       <span class="ol">y</span> = <span id="mw2"> </span></b> 
       <p><b>Standardabweichung:&nbsp;&nbsp; s<sub>x</sub> = <span id="s1"> </span>&nbsp;&nbsp;&nbsp; 
@@ -87,6 +95,9 @@
       <p><b>Korrelationskoeffizient r = <span id="r"> </span></b>
 </FORM>
 
+  </div>
+  </div>
+  </div>  
 <p><small>Quelle: Das ursprüngliche Programm stammt von der site http://medweb.uni-muenster.de/institute/imib/lehre/skripte/biomathe/bio/koreg.html<br>
   s. auch unter Links: JUMBO</small></p>
 
