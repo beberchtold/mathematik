@@ -24,4 +24,4 @@ img.center{display:block;margin-left:auto;margin-right:auto}
 .group:after,[class*=colgroup]:after{content:".";display:block;height:0;clear:both;visibility:hidden}
 .col{position:relative}
 .col:first-child{margin-top:0}
-@media all and (min-width:36em){[class*=colgroup] .col{float:left;width:47.5%;margin-left:5%}[class*=colgroup] .col:nth-of-type(2n+1),.colspan-2+.col{clear:left;margin-left:0}.colgroup-1 .col{width:100%;float:none;margin-left:0}}
+@media all and (min-width:50em){[class*=colgroup] .col{float:left;width:47.5%;margin-left:3%}[class*=colgroup] .col:nth-of-type(2n+1),.colspan-2+.col{clear:left;margin-left:0}.colgroup-1 .col{width:100%;float:none;margin-left:0}}
