@@ -1,1 +1,27 @@
-function rechne(){var e=1e3,n=new Array,r=0;e=parseInt(document.getElementById("n").value),(isNaN(e)||100>e||e>1e4)&&(e=1e3),document.getElementById("n").value=e,document.getElementById("N").innerHTML=e;for(var t=1;e>=t;t++){for(var a=1;6>=a;a++)n[a]=!0;for(var o=0;n[1]||n[2]||n[3]||n[4]||n[5]||n[6];){var d=Math.floor(6*Math.random())+1;o++,n[d]=!1}r+=o}var m=r/e;document.getElementById("RES").innerHTML=m}
+ 
+function rechne() {
+  var n=1000;
+  var Ziffer=new Array();
+  var summe=0;
+  n=parseInt(document.getElementById("n").value);
+  if (isNaN(n) || n<100 || n>10000) n=1000;
+  document.getElementById("n").value=n;
+  document.getElementById("N").innerHTML=n;
+  for (var j = 1; j <= n; j++)  
+  {
+    for (var k = 1; k <= 6; k++) Ziffer[k]=true;   
+    var zaehler=0;
+    // Zufallszahlen mit Werten zwischen 1 und 6 solange erzeugen, bis alle Ziffern gewürfelt.
+
+    while (Ziffer[1] || Ziffer[2] || Ziffer[3] || Ziffer[4] || Ziffer[5] || Ziffer[6])  
+    {    	
+      var hilf = Math.floor(6*Math.random())+1;
+      zaehler++;
+      Ziffer[hilf]=false;      
+    }
+    summe=summe+zaehler;
+  } // end for j
+
+  var result=summe/n;
+  document.getElementById("RES").innerHTML=result;
+}
