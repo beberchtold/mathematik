@@ -7,6 +7,12 @@
 <LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
 <script src="bezier_min.js"></script>
 <script async src="/script/show-hide.js"></script>
+<style>input[type=number] {
+  width:2em;
+  margin-right:20px;
+  -moz-appearance: textfield;
+}
+</style>
 </head>
 
 <body>
@@ -57,14 +63,14 @@
   <div class="col">
     <br>
     <div><input id="comp" type="checkbox"> Zufallsfigur</div><br>
-    x0 <input id="x0" style="width:2.2em;" type="number" min=0 max=10 step="any" value="5"> &nbsp;&nbsp;	
-    x1 <input id="x1" style="width:2.2em;" type="number" min=0 max=10 step="any" value="5"> &nbsp;&nbsp;
-	x2 <input id="x2" style="width:2.2em;" type="number" min=0 max=10 step="any" value="1"> &nbsp;&nbsp;
-    x3 <input id="x3" style="width:2.2em;" type="number" min=0 max=10 step="any" value="2"><br>
-    y0 <input id="y0" style="width:2.2em;" type="number" min=0 max=10 step="any" value="2"> &nbsp;&nbsp;	
-	y1 <input id="y1" style="width:2.2em;" type="number" min=0 max=10 step="any" value="7"> &nbsp;&nbsp;	
-    y2 <input id="y2" style="width:2.2em;" type="number" min=0 max=10 step="any" value="3"> &nbsp;&nbsp;
-    y3 <input id="y3" style="width:2.2em;" type="number" min=0 max=10 step="any" value="7"><br>
+    x0 <input id="x0" type="number" min=0 max=10 step="any" value="5"> 	
+    x1 <input id="x1" type="number" min=0 max=10 step="any" value="5">
+	x2 <input id="x2" type="number" min=0 max=10 step="any" value="1">
+    x3 <input id="x3" type="number" min=0 max=10 step="any" value="2"><br>
+    y0 <input id="y0" type="number" min=0 max=10 step="any" value="2">	
+	y1 <input id="y1" type="number" min=0 max=10 step="any" value="7">	
+    y2 <input id="y2" type="number" min=0 max=10 step="any" value="3">
+    y3 <input id="y3" type="number" min=0 max=10 step="any" value="7"><br>
     <p><input type="button" value="Zeichne!" onclick="zeichne()"></p>		
   </div>
         
