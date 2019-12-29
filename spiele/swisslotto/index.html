@@ -10,7 +10,9 @@
 <script async src="swisslotto_min.js"></script>
 <script async src="/script/show-hide.js"></script>
 <style>input[type=number] {
-    -moz-appearance: textfield;
+  width:2em;
+  margin-right:20px;
+  -moz-appearance: textfield;
 }
 </style>
 </head>
@@ -58,21 +60,21 @@ Es gibt 8 Gewinnränge: Von 6 Richtigen mit Glückszahl bis zu 3 Richtige ohne G
 
 <div class="colgroup-2">
   <div class="col">
-  Geben Sie 6 Zahlen zwischen 1 und 42 an oder <input type=button value="Erzeuge 6 Zufallszahlen" onClick="generatenumbers()"><br>
+  Geben Sie 6 Zahlen zwischen 1 und 42 an oder <input type="button" value="Erzeuge 6 Zufallszahlen" onClick="generatenumbers()"><br>
   <table>
     <tr>
-      <td><input id="z1" style="width:2em;" type="number" min="1" max="42" value="">&nbsp;&nbsp;&nbsp;&nbsp;</td>
-      <td><input id="z2" style="width:2em;" type="number" min="1" max="42" value="">&nbsp;&nbsp;&nbsp;&nbsp;</td>
-      <td><input id="z3" style="width:2em;" type="number" min="1" max="42" value="">&nbsp;&nbsp;&nbsp;&nbsp;</td>
-      <td><input id="z4" style="width:2em;" type="number" min="1" max="42" value="">&nbsp;&nbsp;&nbsp;&nbsp;</td>
-	  <td><input id="z5" style="width:2em;" type="number" min="1" max="42" value="">&nbsp;&nbsp;&nbsp;&nbsp;</td>  
-      <td><input id="z6" style="width:2em;" type="number" min="1" max="42" value=""></td>
+      <td><input id="z1" type="number" min="1" max="42" value=""></td>
+      <td><input id="z2" type="number" min="1" max="42" value=""></td>
+      <td><input id="z3" type="number" min="1" max="42" value=""></td>
+      <td><input id="z4" type="number" min="1" max="42" value=""></td>
+	  <td><input id="z5" type="number" min="1" max="42" value=""></td>  
+      <td><input id="z6" type="number" min="1" max="42" value=""></td>
     </tr>
   </table><br> 
-  Geben Sie eine Glückszahl zwischen 1 und 6 an oder <input type=button value="Erzeuge 1 Glückszahl" onClick="generatestar()">&nbsp;&nbsp;&nbsp;&nbsp;
-  <input id="s1" style="width:2em;" type="number"  min="1" max="6" value=""><br><br>
+  Geben Sie eine Glückszahl zwischen 1 und 6 an oder <input type="button" value="Erzeuge 1 Glückszahl" onClick="generatestar()">&nbsp;&nbsp;&nbsp;&nbsp;
+  <input id="s1" type="number"  min="1" max="6" value=""><br><br>
   Anzahl Ziehungen n (1 &le; n &le; 1000)<br>
-  <input id="n" style="width:3.5em;" type="number" min="1" max="1000" value="1">&nbsp;&nbsp;&nbsp;&nbsp;
+  <input id="n" style="width:3em;" type="number" min="1" max="1000" value="1">
   <input type="button" value="Mache n Ziehungen" onClick="ziehe()">
   </div>
 
