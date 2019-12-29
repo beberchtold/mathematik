@@ -10,7 +10,9 @@
 <script async src="euromillions.js"></script>
 <script async src="/script/show-hide.js"></script>
 <style>input[type=number] {
-    -moz-appearance: textfield;
+  width:2em;
+  margin-right:20px;
+  -moz-appearance: textfield;
 }
 </style>
 </head>
@@ -61,26 +63,21 @@ Klicken Sie zur weiteren Info der Schlussbilanz auf das Fragezeichen.
 
 <div class="colgroup-2">
   <div class="col">
-  Geben Sie 5 Zahlen zwischen 1 und 50 an oder <input type=button value="Erzeuge 5 Zufallszahlen" onClick="generatenumbers()"><br>
-   <table>
-    <tr>
-      <td><input id="z1" style="width:2em;" type="number" min="1" max="50" value="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-      <td><input id="z2" style="width:2em;" type="number" min="1" max="50" value="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-      <td><input id="z3" style="width:2em;" type="number" min="1" max="50" value="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-      <td><input id="z4" style="width:2em;" type="number" min="1" max="50" value="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-      <td><input id="z5" style="width:2em;" type="number" min="1" max="50" value=""></td>
-    </tr>
-   </table> 
-  Geben Sie noch zwei Sterne zwischen 1 und 12 an oder <input type=button value="Erzeuge 2 Zufallssterne" onClick="generatestars()"><br>
-   <table>
-    <tr> 
-      <td><input id="s1" style="width:2em;" type="number"  min="1" max="12" value="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-      <td><input id="s2" style="width:2em;" type="number"  min="1" max="12" value=""></td>
-    </tr>
-   </table>
-   <br>
+  Geben Sie 5 Zahlen zwischen 1 und 50 an oder <input type=button value="Erzeuge 5 Zufallszahlen" onClick="generatenumbers()">
+  <br><br>
+    <input id="z1" type="number" min="1" max="50" value="">
+    <input id="z2" type="number" min="1" max="50" value="">
+    <input id="z3" type="number" min="1" max="50" value="">
+    <input id="z4" type="number" min="1" max="50" value="">
+    <input id="z5" type="number" min="1" max="50" value="">
+  <br><br>
+  Geben Sie noch zwei Sterne zwischen 1 und 12 an oder <input type="button" value="Erzeuge 2 Zufallssterne" onClick="generatestars()">
+  <br><br>
+    <input id="s1" style="width:2em;" type="number"  min="1" max="12" value=""></td>
+    <input id="s2" style="width:2em;" type="number"  min="1" max="12" value=""></td>
+  <br><br>
   Anzahl Ziehungen n (1 &le; n &le; 1000)<br>
-  <p><input id="n" style="width:3.5em;" type="number" min="1" max="1000" value="1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <p><input id="n" style="width:3.5em;" type="number" min="1" max="1000" value="1">
   <input type="button" value="Mache n Ziehungen" onClick="ziehe()"></p>
   </div>
 
