@@ -9,6 +9,9 @@
 <LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
 <script src="komplexeZahlen_min.js"></script>
 <script async src="/script/show-hide.js"></script>
+<style>input[type=number] {width:2em;-moz-appearance: textfield;}
+input[type=checkbox] {width:16px; height:16px}
+</style>
 </head>
 
 <body>
@@ -46,7 +49,7 @@
 <p>Hier werden die Grundrechenarten mit komplexen Zahlen geometrisch gedeutet. 
 Der erste Operand ist durch einen schwarzen Punkt in der Gauss'schen Zahlenebene dargestellt, der
 zweite durch einen roten. Beide Operanden können mit gedrückter Maustaste verändert werden. Alternativ können Sie die 
-Operanden auch via Tastatur in die entsprechenden Felder eingeben.<br>
+Operanden auch via Tastatur in die entsprechenden Felder eingeben. Das Resultat erscheint dann nach Drücken der Returntaste.<br>
 Das Resultat wird durch den blauen Punkt repräsentiert.</p>
 
 <p>Wählen Sie mittels Checkbox, welche Operation Sie durchführen wollen und welches Koordinatensystem angezeigt werden soll.
@@ -62,11 +65,12 @@ Das Resultat wird durch den blauen Punkt repräsentiert.</p>
     <input id="Multiplikation" type="checkbox" onclick="OnChangeCheckbox3 (this)"> Multiplikation &nbsp;&nbsp;&nbsp;
 	<input id="Division" type="checkbox" onclick="OnChangeCheckbox4 (this)"> Division
 	</p>
-	<p>z1 = <input id="x1" style="width:2.5em;" type="number" min=-10 max=10 step="any" value="5" onchange="calc()"> 	
-    + <input id="y1" style="width:2.5em;" type="number" min=-10 max=10 step="any" value="5" onchange="calc()"> i &nbsp;&nbsp;&nbsp;&nbsp;
-	z2 = <input id="x2" style="width:2.5em;" type="number" min=-10 max=10 step="any" value="1" onchange="calc()"> 
-    + <input id="y2" style="width:2.5em;" type="number" min=-10 max=10 step="any" value="2" onchange="calc()"> i</p>
-	<p>Resultat = <span id="Resultat">   </span></p>
+	<p>z1 = <input id="x1" type="number" min=-10 max=10 step="any" value="5" onchange="calc()"> 	
+    + <input id="y1" type="number" min=-10 max=10 step="any" value="5" onchange="calc()"> i &nbsp;&nbsp;&nbsp;&nbsp;
+	z2 = <input id="x2" type="number" min=-10 max=10 step="any" value="1" onchange="calc()"> 
+    + <input id="y2" type="number" min=-10 max=10 step="any" value="2" onchange="calc()"> i</p>
+	<p><b>Resultat = </b><span id="Resultat"></span></p>
+	<p>Resultat in Polarform = <span id="Resultat_polar"></span></p>
     <p><input id="kartesisch" type="checkbox" onclick="OnChangeCheckbox5 (this)"> Kartesisches KS &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 	<input id="polar" type="checkbox" onclick="OnChangeCheckbox6 (this)"> PolarKS</p>	
   </div>
