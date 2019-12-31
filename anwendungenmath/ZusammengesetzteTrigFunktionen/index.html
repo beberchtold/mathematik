@@ -9,6 +9,9 @@
 <LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
 <script src="sincos_min.js"></script>
 <script async src="/script/show-hide.js"></script>
+<style>input[type=number] {width:2em;-moz-appearance: textfield;}
+input[type=checkbox] {width:16px; height:16px}
+</style>
 </head>
 
 <body>
@@ -65,15 +68,15 @@ Sie können die Werte aber auch direkt in die entsprechenden Felder schreiben.<b
 	<input id="ch6" type="checkbox" onclick="OnChangeCheckbox6 (this)" style="margin-left:60px"> Cosinus</p>
     <p>Verändern von:<br>
     <input id="ch1" type="checkbox" onclick="OnChangeCheckbox1 (this)">a
-	<input id="ch2" type="checkbox" onclick="OnChangeCheckbox2 (this)" style="margin-left:50px">&omega;
-	<input id="ch3" type="checkbox" onclick="OnChangeCheckbox3 (this)" style="margin-left:50px">h
-	<input id="ch4" type="checkbox" onclick="OnChangeCheckbox4 (this)" style="margin-left:50px">k
+	<input id="ch2" type="checkbox" onclick="OnChangeCheckbox2 (this)" style="margin-left:40px">&omega;
+	<input id="ch3" type="checkbox" onclick="OnChangeCheckbox3 (this)" style="margin-left:40px">h
+	<input id="ch4" type="checkbox" onclick="OnChangeCheckbox4 (this)" style="margin-left:40px">k
     </p>		
     <p><input type="button" value="Step" onclick="dostep()"><p>
-    <p>a=<input id="a" style="width:2.5em;" type="number" step="any" value="1"  onchange="zeichne1()">&nbsp;&nbsp;&nbsp;
-        &omega;=<input id="b" style="width:2.5em;" type="number" min="0.01" step="any" value="1" onchange="zeichne1()">&nbsp;&nbsp;&nbsp;
-        h=<input id="h" style="width:2.5em;" type="number" min="-2.0" max="2.0" step="any" value="0" onchange="zeichne1()">&nbsp;&nbsp;&nbsp;
-        k=<input id="k" style="width:2.5em;" type="number" step="any" value="0" onchange="zeichne1()">
+    <p>a=<input id="a" type="number" step="any" value="1"  onchange="zeichne1()">&nbsp;&nbsp;&nbsp;
+        &omega;=<input id="b" type="number" min="0.01" step="any" value="1" onchange="zeichne1()">&nbsp;&nbsp;&nbsp;
+        h=<input id="h" type="number" min="-2.0" max="2.0" step="any" value="0" onchange="zeichne1()">&nbsp;&nbsp;&nbsp;
+        k=<input id="k" type="number" step="any" value="0" onchange="zeichne1()">
 	</p>
 		
 	<p>Grenzen Koordinatensystem:<br>
