@@ -2,7 +2,7 @@ RewriteEngine On
  RewriteCond %{HTTP_HOST} !^www\.mathematik\.ch [NC]
  RewriteRule ^(.*) https://www\.mathematik\.ch/$1 [R=301,L]
 
-RedirectMatch 301 (.*)\.php$ $1.html
+RedirectMatch 301 (.*)\.php$ http://test.mathematik.ch$1.html
 
 AddCharset UTF-8 .js
 
