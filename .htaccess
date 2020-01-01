@@ -1,6 +1,8 @@
 RewriteEngine On
  RewriteCond %{HTTP_HOST} !^www\.mathematik\.ch [NC]
  RewriteRule ^(.*) https://www\.mathematik\.ch/$1 [R=301,L]
+ 
+ RewriteRule ^(.*)\.php$ http://%{HTTP_HOST}/$1.html [R=301,L]
 
 AddCharset UTF-8 .js
 
