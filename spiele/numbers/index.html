@@ -8,6 +8,12 @@
 <LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
 <script src="numbers_min.js"></script>
 <script async src="/script/show-hide.js"></script>
+<style>input[type=number] {
+  width:2em;
+  margin-right:20px;
+  -moz-appearance: textfield;
+}
+</style>
 </head>
 
 <body>
@@ -51,14 +57,14 @@ Das Programm kann selbst Probleme lösen, oder Sie können die Probleme lösen.<
 
 <div class="colgroup-2">
   <div class="col">
-  <p><input id="Zahl[0]" type="number" style="width:2.5em" min=1 max=100 value="4"> &nbsp;&nbsp;
-     <input id="Zahl[1]" type="number" style="width:2.5em" min=1 max=100 value="6"> &nbsp;&nbsp;
-     <input id="Zahl[2]" type="number" style="width:2.5em" min=1 max=100 value="8"> &nbsp;&nbsp;
-     <input id="Zahl[3]" type="number" style="width:2.5em" min=1 max=100 value="8"> &nbsp;&nbsp;
-     <input id="Zahl[4]" type="number" style="width:2.5em" min=1 max=100 value="10"> &nbsp;&nbsp;
-     <input id="Zahl[5]" type="number" style="width:2.5em" min=1 max=100 value="100">
+  <p><input id="Zahl[0]" type="number" min=1 max=100 value="4">
+     <input id="Zahl[1]" type="number" min=1 max=100 value="6">
+     <input id="Zahl[2]" type="number" min=1 max=100 value="8">
+     <input id="Zahl[3]" type="number" min=1 max=100 value="8">
+     <input id="Zahl[4]" type="number" min=1 max=100 value="10">
+     <input id="Zahl[5]" type="number" min=1 max=100 value="100">
    </p>
-   <p>Zielzahl: <input id="Zielzahl" type="number" min=101 max=1000 style="width:3em" value="267">
+   <p>Zielzahl: <input id="Zielzahl" type="number" min=101 max=1000 value="267">
       <input id="NewTarget" type="button" value="Neue Zielzahl" onclick="makeTarget()" style="margin-left:36px"></p>
    <p><input id="NewProblem" type="button" value="Neues Problem" onclick="mix()">     
       <input type="button" value="Reset" onclick="init()" style="margin-left:42px">
