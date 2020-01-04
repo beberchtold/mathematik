@@ -12,12 +12,14 @@ Switzerland, Wahrscheinlichkeit, Analysis, Mandelbrot, Julia, Unterrichtsunterla
 window.onload=function(){if (window.innerWidth<578){document.getElementById('tablet').style.display="none";}
 var anzahl=z.length;var i=Math.floor(anzahl*Math.random());document.getElementById("message").innerHTML=z[i]+"<br><small>"+a[i]+"</small><br>";
 anzahl=Spiel.length; i=Math.floor(anzahl*Math.random());document.getElementById("message_spiel").innerHTML=Spiel[i];
-anzahl=Link.length; i=Math.floor(anzahl*Math.random());document.getElementById("message_raetsel").innerHTML=Link[i];}
+anzahl=Link.length; i=Math.floor(anzahl*Math.random());document.getElementById("message_raetsel").innerHTML=Link[i];
+i=Math.floor(2*Math.random());document.getElementById("message_pl").innerHTML=Wahl[i];
+document.getElementById("text_pl").innerHTML=txt[i];}
 function ReverseDisplay(){if(document.getElementById("menu").style.display=="none"){document.getElementById("menu").style.display="block";document.getElementById("content").style.display="none";window.document.images[0].src="/img/menu_closeicon.gif"}else{document.getElementById("menu").style.display="none";document.getElementById("content").style.display="block";window.document.images[0].src="/img/menuicon.png"}};
 </script>
 <link REL="stylesheet" HREF="css/mathematik.css" TYPE="text/css">
 <script src="/zitate/zitate.js"></script>
-<script src="zufallstuff.js"></script>
+<script src="zufallstuff_min.js"></script>
 <link rel="SHORTCUT ICON" href="/favicon.ico">
 <style>li {padding:4px}</style>
 </head>
@@ -94,7 +96,7 @@ function ReverseDisplay(){if(document.getElementById("menu").style.display=="non
   <tr>
     <td class="c" colspan="3">
     <strong>Das zufällige Zitat:</strong><br>
-    <span id="message"> </span>
+    <span id="message"></span>
   </td>
 </tr>
 <tr>
@@ -107,13 +109,12 @@ function ReverseDisplay(){if(document.getElementById("menu").style.display=="non
     <img class="a" src="/img/mandelbrot.png" alt="Mandelbrotmenge"></a>
   </td>
   <td class="c">
-    <small>Platon Körper</small><br>
-    <a href="anwendungenmath/PlatonKoerper/">
-    <img class="a" src="/img/ikosaeder.png" alt="Ikosaeder"></a>
+    <small><span id="text_pl"></span></small><br>
+    <span id="message_pl"></span>
   </td>
   <td class="c">
     <small>Zufallsrätsel</small><br><br>
-    <span id="message_raetsel"> </span>
+    <span id="message_raetsel"></span>
   </td>
 </tr>
 </table>
