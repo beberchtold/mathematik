@@ -6,7 +6,7 @@ RewriteEngine On
 
 AddCharset UTF-8 .js
 
-ErrorDocument 404 /404.php
+ErrorDocument 404 /404.html
 Options -Indexes
 
 <IfModule mod_expires.c>
