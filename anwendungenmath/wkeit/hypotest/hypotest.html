@@ -9,6 +9,11 @@
 <LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
 <script src="hypotest_min.js"></script>
 <script async src="/script/show-hide.js"></script>
+<style>input[type=number] {
+  width:2.5em;
+  -moz-appearance: textfield;
+}
+</style>
 </head>
 
 <body>
@@ -76,9 +81,9 @@
   
   <div class="col">
     <br>
-    <p>p<sub>0</sub> <input id="p0" style="width:2.5em;" type="number" min=0 max=1 step="any" value="0.5"> &nbsp;&nbsp;&nbsp;
-    Umfang n <input id="Anz" style="width:3em;" type="number" min="10" max="300" value="100"> &nbsp;&nbsp;&nbsp;
-    S-niveau <input id="Sniveau" style="width:2.5em;" type="number" min=0.5 max=8.5 step="any" value="5">
+    <p>p<sub>0</sub> <input id="p0" type="number" min=0 max=1 step="any" value="0.5" lang="en"> &nbsp;&nbsp;&nbsp;
+    Umfang n <input id="Anz" type="number" min="10" max="300" value="100"> &nbsp;&nbsp;&nbsp;
+    S-niveau <input id="Sniveau" type="number" min=0.5 max=8.5 step="any" value="5" lang="en">
     </p>
 	<p><input type="button" value="Start" onclick="einlesen()"></p>
 	<p>linksseitig <input id="Links" type="checkbox" onclick="OnChangeCheckbox1 (this)"> &nbsp;&nbsp;&nbsp;
