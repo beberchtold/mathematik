@@ -45,3 +45,10 @@ Wahl[0]='<a href="/anwendungenmath/lissajou/"><img src="/img/lissajou.jpg" class
 Wahl[1]='<a href="/anwendungenmath/PlatonKoerper/"><img src="/img/ikosaeder.png" class="a"></a>';
 txt[0]="Lissajou Figur";
 txt[1]="Platon Körper";
+
+// Binomialverteilung oder Approximation
+var Wahlbi=new Array();var txtbi=new Array();
+Wahlbi[0]='<a href="/anwendungenmath/wkeit/binomialvert.html"><img src="/img/binomialverteilung.png" class="a"></a>';
+Wahlbi[1]='<a href="/anwendungenmath/wkeit/approx_bin_norm.html"><img src="/img/approx.jpg" class="a"></a>';
+txtbi[0]="Binomialverteilung";
+txtbi[1]="Approximation<br>";

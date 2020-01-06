@@ -14,7 +14,10 @@ var anzahl=z.length;var i=Math.floor(anzahl*Math.random());document.getElementBy
 anzahl=Spiel.length; i=Math.floor(anzahl*Math.random());document.getElementById("message_spiel").innerHTML=Spiel[i];
 anzahl=Link.length; i=Math.floor(anzahl*Math.random());document.getElementById("message_raetsel").innerHTML=Link[i];
 i=Math.floor(2*Math.random());document.getElementById("message_pl").innerHTML=Wahl[i];
-document.getElementById("text_pl").innerHTML=txt[i];}
+document.getElementById("text_pl").innerHTML=txt[i];
+i=Math.floor(2*Math.random());document.getElementById("message_bi").innerHTML=Wahlbi[i];
+document.getElementById("text_bi").innerHTML=txtbi[i];
+}
 function ReverseDisplay(){if(document.getElementById("menu").style.display=="none"){document.getElementById("menu").style.display="block";document.getElementById("content").style.display="none";window.document.images[0].src="/img/menu_closeicon.gif"}else{document.getElementById("menu").style.display="none";document.getElementById("content").style.display="block";window.document.images[0].src="/img/menuicon.png"}};
 </script>
 <link REL="stylesheet" HREF="css/mathematik.css" TYPE="text/css">
@@ -84,9 +87,8 @@ function ReverseDisplay(){if(document.getElementById("menu").style.display=="non
       <img class="a" src="/img/farn.png" alt="Farn"></a>
     </td>
 	<td class="c" style="width:33%">
-      <small>Approximation<br>Binomialver&shy;teilung</small><br>
-	  <a href="/anwendungenmath/wkeit/approx_bin_norm.html">
-      <img class="a" src="/img/approx.jpg" alt="Approx"></a> 
+      <small><span id="text_bi"></span></small><br>
+	  <span id="message_bi"></span> 
     </td>
     <td class="c" style="width:33%">
       <div style="margin-bottom:10px;"><small>Zufallsspiel</small></div>
