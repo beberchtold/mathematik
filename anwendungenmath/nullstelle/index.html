@@ -9,6 +9,7 @@
 <LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
 <script src="newton.js"></script>
 <script async src="/script/show-hide.js"></script>
+<style>input[type=number] {-moz-appearance: textfield;}</style>
 </head>
 
 <body>
@@ -55,10 +56,10 @@
 	<input id="f" type="text" value="pow(x,4)-3*pow(x,3)+2*x+1" style="width:12em;"> 
 	<a href="info_newton.html" target="_blank">
 	<img src="help.gif" width=32 height=40 style="vertical-align:middle" alt="help"></a><br>
-    Linke Grenze: <input id="Xmin" style="width:2.5em;" type="number" step="any" value="-0.2">  &nbsp;&nbsp;&nbsp;
-    Rechte Grenze: <input id="Xmax" style="width:2.5em;" type="number" step="any" value="3.1"><br>
-    Startwert x0: &nbsp;&nbsp;<input id="x0" style="width:3em;" type="number" step="any" value="0.8"><br>
-    Stop falls |x(n+1)-xn| &le; <input id="eps" style="width:4em;" type="number" step="any" value="1E-7"><br>
+    Linke: <input id="Xmin" style="width:3em;" type="number" step="any" value="-0.2" lang="en">  &nbsp;&nbsp;&nbsp;
+    Rechte Grenze: <input id="Xmax" style="width:3em;" type="number" step="any" value="3.1" lang="en"><br>
+    Startwert x0: &nbsp;&nbsp;<input id="x0" style="width:3em;" type="number" step="any" value="0.8" lang="en"><br>
+    Stop falls |x(n+1)-xn| &le; <input id="eps" style="width:5em;" type="number" step="any" value="1E-7" lang="en"><br>
     Max Iterationen: <input id="max" style="width:3em;" type="number" min="1" max="100" value="50"></p>
     <p><input type="button" value="Reset" onclick="reset()">
 	   <input id="Run" type="button" value="Run" onclick="run()" style="margin-left:40px">
