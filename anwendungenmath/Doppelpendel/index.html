@@ -8,6 +8,8 @@
 <LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
 <script src="doppelpendel.js"></script>
 <script src="/script/show-hide.js"></script>
+<style>input[type=number] {width:3em;-moz-appearance: textfield;}
+</style>
 </head>
 
 <body>
@@ -48,9 +50,9 @@
   </div>
   
   <div class="col">
-    <input id="PHI1" style="width:3em" type="number" min=-3.1415 max=3.1415 step="any" value=2.84> Phi1 &nbsp;&nbsp;&nbsp;
-    <input id="PHI2" style="width:3em" type="number" min=-3.1415 max=3.1415 step="any" value=-1.57> Phi2<br>
-    <input id="Schrittweite" style="width:3em" type="number" min=0.0001 max=0.04 step="any" value=0.01> Schrittweite h<br><br>
+    <input id="PHI1" type="number" min=-3.1415 max=3.1415 step="any" value=2.84 lang="en"> Phi1 &nbsp;&nbsp;&nbsp;
+    <input id="PHI2" type="number" min=-3.1415 max=3.1415 step="any" value=-1.57 lang="en"> Phi2<br>
+    <input id="Schrittweite" type="number" min=0.0001 max=0.04 step="any" value=0.01 lang="en" style="margin-top:10px;"> Schrittweite h<br><br>
     <input type="button" value="Start" onclick="start()"> &nbsp;&nbsp;&nbsp;&nbsp;
 	<input type="button" id="STEP" value="Step" onclick="dostep()"> &nbsp;&nbsp;&nbsp;&nbsp;
 	<input type="button" value="Run/Stop" onclick="run()">
