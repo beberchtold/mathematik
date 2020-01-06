@@ -51,4 +51,4 @@ var Wahlbi=new Array();var txtbi=new Array();
 Wahlbi[0]='<a href="/anwendungenmath/wkeit/binomialvert.html"><img src="/img/binomialverteilung.png" class="a"></a>';
 Wahlbi[1]='<a href="/anwendungenmath/wkeit/approx_bin_norm.html"><img src="/img/approx.jpg" class="a"></a>';
 txtbi[0]="Binomial&shy;verteilung";
-txtbi[1]="Approximation<br>";
+txtbi[1]="Approximation<br>Binomial&shy;verteilung";
