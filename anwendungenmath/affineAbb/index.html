@@ -9,6 +9,7 @@
 <LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
 <script src="affineabb.js"></script>
 <script async src="/script/show-hide.js"></script>
+<style>input[type=number] {width:2.5em;margin-bottom:5px;-moz-appearance: textfield;}</style>
 </head>
 
 <body>
@@ -51,12 +52,12 @@
           mit  &Delta; = a<sub>1</sub>*b<sub>2</sub> - b<sub>1</sub>*a<sub>2</sub> &ne; 0
    </div>
    <div class="col">
-   a<sub>1</sub>&nbsp;<input id="a1" style="width:2.5em;" type="number" step="any" value="1" lang="en">&nbsp;&nbsp;&nbsp;
-    b<sub>1</sub>&nbsp;<input id="b1" style="width:2.5em;" type="number" step="any" value="-2" lang="en">&nbsp;&nbsp;&nbsp;
-    v<sub>1</sub>&nbsp;<input id="v1" style="width:2.5em;" type="number" step="any" value="2" lang="en"><br>
-    a<sub>2</sub>&nbsp;<input id="a2" style="width:2.5em;" type="number" step="any" value="2" lang="en">&nbsp;&nbsp;&nbsp;
-    b<sub>2</sub>&nbsp;<input id="b2" style="width:2.5em;" type="number" step="any" value="2" lang="en">&nbsp;&nbsp;&nbsp;
-    v<sub>2</sub>&nbsp;<input id="v2" style="width:2.5em;" type="number" step="any" value="-3" lang="en">
+   a<sub>1</sub>&nbsp;<input id="a1" type="number" step="any" value="1" lang="en">&nbsp;&nbsp;&nbsp;
+    b<sub>1</sub>&nbsp;<input id="b1" type="number" step="any" value="-2" lang="en">&nbsp;&nbsp;&nbsp;
+    v<sub>1</sub>&nbsp;<input id="v1" type="number" step="any" value="2" lang="en"><br>
+    a<sub>2</sub>&nbsp;<input id="a2" type="number" step="any" value="2" lang="en">&nbsp;&nbsp;&nbsp;
+    b<sub>2</sub>&nbsp;<input id="b2" type="number" step="any" value="2" lang="en">&nbsp;&nbsp;&nbsp;
+    v<sub>2</sub>&nbsp;<input id="v2" type="number" step="any" value="-3" lang="en">
    </div>
 </div>   
 <br>
@@ -69,17 +70,17 @@
 <ul>
 <li><input type="checkbox" id="Quadrat" onclick="OnChangeCheckbox1 (this)"> Bild des Einheitsquadrates</li>
 <li><input type="checkbox" id="Kreis" checked onclick="OnChangeCheckbox2 (this)"> Bild des Kreises mit Mittelpunkt<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mx <input id="mx" style="width:2.5em;" type="number" step="any" value="0" lang="en">
-my <input id="my" style="width:2.5em;" type="number" step="any" value="0" lang="en">      
-und Radius <input id="r" style="width:2em;" type="number" step="any" min=0 value="1" lang="en"></li>        
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mx <input id="mx" type="number" step="any" value="0" lang="en">
+my <input id="my" type="number" step="any" value="0" lang="en">      
+Radius <input id="r" type="number" step="any" min=0 value="1" lang="en"></li>        
 <li><input type="checkbox" id="F" onclick="OnChangeCheckbox3 (this)"> Bild des Buchstaben F</li>
 <li><input type="checkbox" id="Dreieck" onclick="OnChangeCheckbox4 (this)"> Bild des Dreiecks mit<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x1 <input id="x1" style="width:2em;" type="number" step="any" value="0">
-y1 <input id="y1" style="width:2em;" type="number" step="any" value="0" lang="en">     
-x2 <input id="x2" style="width:2em;" type="number" step="any" value="4" lang="en">       
-y2 <input id="y2" style="width:2em;" type="number" step="any" value="1" lang="en">
-x3 <input id="x3" style="width:2em;" type="number" step="any" value="2" lang="en">      
-y3 <input id="y3" style="width:2em;" type="number" step="any" value="-1" lang="en"></li>    
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x1 <input id="x1" type="number" step="any" value="0">
+y1 <input id="y1" type="number" step="any" value="0" lang="en">     
+x2 <input id="x2" type="number" step="any" value="4" lang="en">       
+y2 <input id="y2" type="number" step="any" value="1" lang="en"><br>
+<div style="margin-left:25px;">x3 <input id="x3" type="number" step="any" value="2" lang="en">      
+y3 <input id="y3" type="number" step="any" value="-1" lang="en"></div></li>    
 <li><input type="checkbox" id="Funktion" onclick="OnChangeCheckbox5 (this)"> Bild der Funktion mit Gleichung <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;y = f(x) = <input id="f" type="text" style="width:8em;" value='x*x-1'> 
       <a href="infos.html">
