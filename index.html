@@ -17,6 +17,10 @@ i=Math.floor(2*Math.random());document.getElementById("message_pl").innerHTML=Wa
 document.getElementById("text_pl").innerHTML=txt[i];
 i=Math.floor(2*Math.random());document.getElementById("message_bi").innerHTML=Wahlbi[i];
 document.getElementById("text_bi").innerHTML=txtbi[i];
+i=Math.floor(2*Math.random());document.getElementById("message_frac").innerHTML=fractal[i];
+document.getElementById("text_frac").innerHTML=txtfrac[i];
+i=Math.floor(4*Math.random());document.getElementById("message_math").innerHTML=math[i];
+document.getElementById("text_math").innerHTML=txtmath[i];
 }
 function ReverseDisplay(){if(document.getElementById("menu").style.display=="none"){document.getElementById("menu").style.display="block";document.getElementById("content").style.display="none";window.document.images[0].src="/img/menu_closeicon.gif"}else{document.getElementById("menu").style.display="none";document.getElementById("content").style.display="block";window.document.images[0].src="/img/menuicon.png"}};
 </script>
@@ -81,12 +85,11 @@ function ReverseDisplay(){if(document.getElementById("menu").style.display=="non
   <li><a href="/search/">Suche</a></li>
 </ul>    </div>
 	</td>	
-    <td class="c" style="width:34%">
-      <small>Fraktale</small><br>
-      <a href="anwendungenmath/fractal/">	
-      <img class="a" src="/img/farn.png" alt="Farn"></a>
+    <td class="c" style="width:33%">
+      <small><span id="text_frac"></span></small><br>
+	  <span id="message_frac"></span>
     </td>
-	<td class="c" style="width:33%">
+	<td class="c" style="width:34%">
       <small><span id="text_bi"></span></small><br>
 	  <span id="message_bi"></span> 
     </td>
@@ -105,10 +108,9 @@ function ReverseDisplay(){if(document.getElementById("menu").style.display=="non
   <td colspan="3">&nbsp;</td>
 </tr>
 <tr>
-  <td class="c">
-    <small>Mandelbrot</small><br>
-	<a href="anwendungenmath/fractal/julia/julia.html">
-    <img class="a" src="/img/mandelbrot.png" alt="Mandelbrotmenge"></a>
+  <td class="c" style="max-height:120px;">
+    <small><span id="text_math"></span></small><br>
+    <span id="message_math"></span>
   </td>
   <td class="c">
     <small><span id="text_pl"></span></small><br>

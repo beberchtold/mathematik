@@ -52,3 +52,22 @@ Wahlbi[0]='<a href="/anwendungenmath/wkeit/binomialvert.html"><img src="/img/bin
 Wahlbi[1]='<a href="/anwendungenmath/wkeit/approx_bin_norm.html"><img src="/img/approx.jpg" class="a"></a>';
 txtbi[0]="Binomial&shy;verteilung";
 txtbi[1]="Approximation<br>Binomial&shy;verteilung";
+
+// fractal oder Mandelbrot
+var fractal=new Array();var txtfrac=new Array();
+fractal[0]='<a href="/anwendungenmath/fractal"><img src="/img/farn.png" class="a"></a>';
+fractal[1]='<a href="/anwendungenmath/fractal/julia/julia.html"><img src="/img/mandelbrot.png" class="a"></a>';
+txtfrac[0]="Fraktale";
+txtfrac[1]="Mandelbrot";
+
+//Zufallsmathematiker
+var math=new Array();var txtmath=new Array();
+math[0]='<a href="mathematiker/euler.html"><img src="/img/euler.jpg" class="b"></a>';
+math[1]='<a href="/mathematiker/newton.html"><img src="/img/newton.jpg" class="b"></a>';
+math[2]='<a href="/mathematiker/fermat.html"><img src="/img/fermat.jpg" class="b"></a>';
+math[3]='<a href="/mathematiker/gauss.html"><img src="/img/gauss.jpg" class="b"></a>';
+txtmath[0]="Euler";
+txtmath[1]="Newton";
+txtmath[2]="Fermat";
+txtmath[3]="Gauss";
+
