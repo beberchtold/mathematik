@@ -73,7 +73,7 @@ var math=[
 '<a href="/mathematiker/goedel.html"><img src="/img/goedel.jpg" class="b"></a>',
 '<a href="/mathematiker/hilbert.html"><img src="/img/hilbert.jpg" class="b"></a>',
 '<a href="/mathematiker/einstein.html"><img src="/mathematiker/Einstein.jpg" class="a"></a>',
-'<a href="/mathematiker/leibniz.html"><img src="/img/leibniz.jpg" class="a"></a>'
+'<a href="/mathematiker/leibniz.html"><img src="/img/leibniz.jpg" class="a" style="max-width:190px"></a>'
 ];
 var txtmath=["Leonhard Euler","Isaac Newton","Pierre Fermat","C.F. Gauss","Evariste Galois","Kurt Gödel","David Hilbert","Albert Einstein","G.W. Leibniz"];
 
