@@ -75,5 +75,5 @@ var math=[
 '<a href="/mathematiker/einstein.html"><img src="/mathematiker/Einstein.jpg" class="a"></a>',
 '<a href="/mathematiker/leibniz.html"><img src="/img/leibniz.jpg" class="a"></a>'
 ];
-var txtmath=["Leonhard Euler","Isaac Newton","Pierre Fermat","C.F. Gauss","Evariste Galois","Kurt Goedel","David Hilbert","Albert Einstein","G.W. Leibniz"];
+var txtmath=["Leonhard Euler","Isaac Newton","Pierre Fermat","C.F. Gauss","Evariste Galois","Kurt Gödel","David Hilbert","Albert Einstein","G.W. Leibniz"];
 
