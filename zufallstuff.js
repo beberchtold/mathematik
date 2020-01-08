@@ -71,7 +71,9 @@ var math=[
 '<a href="/mathematiker/gauss.html"><img src="/img/gauss.jpg" class="b"></a>',
 '<a href="mathematiker/galois.html"><img src="/img/galois.jpg" class="b"></a>',
 '<a href="/mathematiker/goedel.html"><img src="/img/goedel.jpg" class="b"></a>',
-'<a href="/mathematiker/hilbert.html"><img src="/img/hilbert.jpg" class="b"></a>'
+'<a href="/mathematiker/hilbert.html"><img src="/img/hilbert.jpg" class="b"></a>',
+'<a href="/mathematiker/einstein.html"><img src="/mathematiker/Einstein.jpg" class="a"></a>',
+'<a href="/mathematiker/leibniz.html"><img src="/img/leibniz.jpg" class="a"></a>'
 ];
-var txtmath=["Leonhard Euler","Isaac Newton","Pierre de Fermat","C. F. Gauss","Evariste Galois","Kurt Goedel","David Hilbert"];
+var txtmath=["Leonhard Euler","Isaac Newton","Pierre Fermat","C.F. Gauss","Evariste Galois","Kurt Goedel","David Hilbert","Albert Einstein","G.W. Leibniz"];
 
