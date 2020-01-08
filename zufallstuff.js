@@ -67,7 +67,7 @@ var txtfrac=["Fraktale","Mandelbrot"];
 var math=[
 '<a href="mathematiker/euler.html"><img src="/img/euler.jpg" class="b"></a>',
 '<a href="/mathematiker/newton.html"><img src="/img/newton.jpg" class="b"></a>',
-'<a href="/mathematiker/fermat.html"><img src="/img/fermat.jpg" class="b"></a>',
+'<a href="/mathematiker/fermat.html"><img src="/img/fermat.jpg" class="a"></a>',
 '<a href="/mathematiker/gauss.html"><img src="/img/gauss.jpg" class="b"></a>',
 '<a href="mathematiker/galois.html"><img src="/img/galois.jpg" class="b"></a>',
 '<a href="/mathematiker/goedel.html"><img src="/img/goedel.jpg" class="b"></a>',
