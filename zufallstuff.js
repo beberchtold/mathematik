@@ -1,4 +1,18 @@
 // Zufallsspiel
+
+function start() {
+	var anzahl=Spiel.length; var i=Math.floor(anzahl*Math.random());document.getElementById("message_spiel").innerHTML=Spiel[i];
+    anzahl=Link.length; i=Math.floor(anzahl*Math.random());document.getElementById("message_raetsel").innerHTML=Link[i];
+    i=Math.floor(2*Math.random());document.getElementById("message_pl").innerHTML=Wahl[i];
+    document.getElementById("text_pl").innerHTML=txt[i];
+    i=Math.floor(2*Math.random());document.getElementById("message_bi").innerHTML=Wahlbi[i];
+    document.getElementById("text_bi").innerHTML=txtbi[i];
+    i=Math.floor(2*Math.random());document.getElementById("message_frac").innerHTML=fractal[i];
+    document.getElementById("text_frac").innerHTML=txtfrac[i];
+    i=Math.floor(9*Math.random());document.getElementById("message_math").innerHTML=math[i];
+    document.getElementById("text_math").innerHTML=txtmath[i];
+}
+
 var Spiel=[
 '<a href="anwendungenmath/blackjack/"><img src="/img/blackjack.jpg" class="a"></a>',
 '<a href="/anwendungenmath/solitaire/"><img src="/img/solitaire.png" class="a"></a>',
