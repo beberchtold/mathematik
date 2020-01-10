@@ -12,6 +12,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-alpha/contrib/auto-render.min.js"></script>
 <script src="binomialvert_min.js"></script>
 <script async src="/script/show-hide.js"></script>
+<style>input[type=number] {width:3em;-moz-appearance: textfield;}
+li {padding:4px;}</style>
 </head>
 
 <body>
@@ -65,11 +67,11 @@ Erwartungswert &mu; = n&sdot;p, Varianz &sigma;<sup>2</sup> = n&sdot;p&sdot;q, S
   
   <div class="col">
     <ul>
-      <li style="padding:4px;">Anzahl Züge (n&lt;1001): <input id="n" type="number" min=1 max=1000 style="width:50px;margin-left:17px;" value="12"></li>
-      <li style="padding:4px;">Einzelw'keit p (0&le;p&le;1): <input id="p" style="width:50px;" value="1/6"></li>
-      <li style="padding:4px;">Untere Grenze a: <input id="a" type="number" min=0 style="width:50px;;margin-left:34px;" value="2"></li>
-      <li style="padding:4px;">Obere Grenze b (b&ge;a): <input id="b" type="number" min=0 style="width:50px;" value="4"></li>
-      <li style="padding:4px;"><input type="button" value="Berechne!" onclick="rechne()"></li>  
+      <li>Anzahl Züge (n&lt;1001): <input id="n" type="number" min=1 max=1000 value="12"></li>
+      <li>Einzelw'keit p (0&le;p&le;1): <input id="p" style="width:50px;" value="1/6"></li>
+      <li>Untere Grenze a: <input id="a" type="number" min=0 style="margin-left:36px;" value="2"></li>
+      <li>Obere Grenze b (b&ge;a): <input id="b" type="number" min=0 value="4"></li>
+      <li><input type="button" value="Berechne!" onclick="rechne()"></li>  
     </ul>
 	<br>
     <p><b>Resultat</b><br><br> 
@@ -81,7 +83,7 @@ Erwartungswert &mu; = n&sdot;p, Varianz &sigma;<sup>2</sup> = n&sdot;p&sdot;q, S
 Wie gross ist die Wahrscheinlichkeit, in 12 Würfen mit einem idealen Würfel mindestens zweimal und 
  höchstens viermal eine "6" zu würfeln?<br>
  n = 12, p = 1/6, a = 2, b= 4.</p>
-<br>
+
 <p><a href="approx_bin_norm.html">Approximation der Binomialverteilung durch Normalverteilung</a></p>
 <p><a href="hypotest/hypotest.html">Testen von Hypothesen mit Binomialverteilung</a></p>
 
