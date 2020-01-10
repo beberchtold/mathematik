@@ -80,13 +80,14 @@
 </div>
 <p><input type=button id="hitButton" value="Neue Karte" onclick="hit()" disabled>
 <input type=button id="standButton" value="Wette gilt" onclick="stand()" disabled>
-<input type=button id="newGameButton" value="Neues Spiel" onClick="startGame()"></p>
+<input type=button id="newGameButton" style="margin-left:15px" value="Neues Spiel" onClick="startGame()"></p>
 
 <p><b><span id="message" style="color:#600">Willkommen zu Blackjack!<br>
 Klicken Sie "Neues Spiel" zum Starten.</span></b></p>
-Total&nbsp;&nbsp;&nbsp;&nbsp;Gewonnen&nbsp;&nbsp;&nbsp;&nbsp;Verloren&nbsp;&nbsp;&nbsp;&nbsp;(Gleichstand)<br>
+Total&nbsp;&nbsp;&nbsp;&nbsp;Gewonnen&nbsp;&nbsp;&nbsp;&nbsp;Verloren&nbsp;&nbsp;&nbsp;(<small>Gleichstand</small>)<br>
 <span id="Total" style="margin-left:15px">0</span><span id="Gewonnen" style="margin-left:60px">0</span>
-<span id="Verloren" style="margin-left:70px">0</span><span id="Gleichstand" style="margin-left:80px">0</span>
+<span id="Verloren" style="margin-left:70px">0</span><span id="Gleichstand" style="margin-left:80px">0</span><br>
+<small>Bei Gleichstand gewinnt die Bank</small>
 
 </div>
 <!-- EOF: CONTENT -->
