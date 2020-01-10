@@ -9,7 +9,7 @@ function start() {
     document.getElementById("text_bi").innerHTML=txtbi[i];
     i=Math.floor(2*Math.random());document.getElementById("message_frac").innerHTML=fractal[i];
     document.getElementById("text_frac").innerHTML=txtfrac[i];
-    i=Math.floor(9*Math.random());document.getElementById("message_math").innerHTML=math[i];
+	anzahl=math.length; i=Math.floor(anzahl*Math.random());document.getElementById("message_math").innerHTML=math[i];
     document.getElementById("text_math").innerHTML=txtmath[i];
 }
 
@@ -87,7 +87,8 @@ var math=[
 '<a href="/mathematiker/goedel.html"><img src="/img/goedel.jpg" class="b"></a>',
 '<a href="/mathematiker/hilbert.html"><img src="/img/hilbert.jpg" class="b"></a>',
 '<a href="/mathematiker/einstein.html"><img src="/mathematiker/Einstein.jpg" class="a"></a>',
-'<a href="/mathematiker/leibniz.html"><img src="/img/leibniz.jpg" class="a" style="max-width:190px"></a>'
+'<a href="/mathematiker/leibniz.html"><img src="/img/leibniz.jpg" class="a" style="max-width:190px"></a>',
+'<a href="/mathematiker/abel.html"><img src="/img/abel.jpg" class="b"></a>'
 ];
-var txtmath=["Leonhard Euler","Isaac Newton","Pierre Fermat","C.F. Gauss","Evariste Galois","Kurt Gödel","David Hilbert","Albert Einstein","G.W. Leibniz"];
+var txtmath=["Leonhard Euler","Isaac Newton","Pierre Fermat","C.F. Gauss","Evariste Galois","Kurt Gödel","David Hilbert","Albert Einstein","G.W. Leibniz","Niels Abel"];
 
