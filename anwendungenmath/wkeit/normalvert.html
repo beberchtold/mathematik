@@ -12,6 +12,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-alpha/contrib/auto-render.min.js"></script>
 <script src="normalvert.js"></script>
 <script async src="/script/show-hide.js"></script>
+<style>input[type=number] {width:3em;-moz-appearance: textfield;}
+li {padding:4px;}</style>
 </head>
 
 <body>
@@ -64,15 +66,15 @@ b) die Abweichung &Delta; vom Erwartungswert bei vorgegebener Wkeit W gemäss P(
   
   <div class="col">
     <ul>
-      <li style="padding:4px;">&mu;: <input id="mue" type="number" style="width:50px" value="25">&nbsp;&nbsp;&nbsp;&nbsp;
-      &sigma;: <input id="sigma" style="width:50px" value="0.2"></li>
-      <li style="padding:4px;">Untere Grenze a: <input id="a" type="number" style="width:50px;margin-left:34px;" step="any" value="24.5"></li>
-      <li style="padding:4px;">Obere Grenze b (b&gt;a): <input id="b" type="number" style="width:50px;" step="any" value="25.5"></li>
-      <li style="padding:4px;">a) <input type="button" value="Berechne Wkeit" onclick="rechne()"></li>
-	  <li style="padding:4px;">Wkeit: <input id="wkeit" type="number" style="width:50px" min=0 max=1 step="any" value="0.98"></li>
-      <li style="padding:4px;">b) <input type="button" value="Berechne Grenzen" onclick="rechne_grenze()"></li>
+      <li>&mu;: <input id="mue" type="number" step="any" value="25" lang="en">&nbsp;&nbsp;&nbsp;&nbsp;
+      &sigma;: <input id="sigma" type="number" step="any" value="0.2" lang="en"></li>
+      <li>Untere Grenze a: <input id="a" type="number" style="margin-left:34px;" step="any" value="24.5" lang="en"></li>
+      <li>Obere Grenze b (b&gt;a): <input id="b" type="number" step="any" value="25.5" lang="en"></li>
+      <li>a) <input type="button" value="Berechne Wkeit" onclick="rechne()"></li>
+	  <br>
+	  <li>b) Wkeit: <input id="wkeit" type="number" min=0 max=1 step="any" value="0.98" lang="en"></li>
+      <li><input type="button" value="Berechne Grenzen" onclick="rechne_grenze()"></li>
 	</ul>
-	<br>
     <p><b>Resultat</b><br>
 	<b><span id="RES"></span></b></p>
 	<p><span id="message"></span></p>
