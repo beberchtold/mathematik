@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Brachystochron-Problem">
+<title>Brachystochronen-Problem</title>
+<LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-alpha/katex.min.css" TYPE="text/css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-alpha/katex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-alpha/contrib/auto-render.min.js"></script>
+<script async src="/script/show-hide.js"></script>
+</head>
+
+<body>
+<div class="page">
+<table class="c">
+<tr><td style="width:10%">
+<img width=28 height=27 src="/img/menuicon.png" style="cursor:pointer" title="Inhalt" alt="menu" onClick="ReverseDisplay()">
+</td><td class="c" style="width:80%">
+<a href="/"><img width=257 height=35 src="/img/mathematik.png" alt="mathematik.ch"></a>
+</td><td style="width:10%">&nbsp;</td></tr>
+</table>
+<div id="menu" style="display:none;">
+  <h4>Inhalt</h4>
+
+<ul>
+  <li><a href="/anwendungenmath/">Anwendungen + Unterrichtshilfen</a></li>
+  <li><a href="/puzzle/">Puzzles (Rätsel)</a></li> 
+  <li><a href="/spiele/">'Spiele'</a></li>
+  <li><a href="/spiele/euromillions/">Euromillions</a></li>
+  <li><a href="/spiele/swisslotto/">Swisslotto</a></li>
+  <li><a href="/geschichte/">Geschichte</a></li>
+  <li><a href="/mathematiker/">Mathematiker</a></li>
+  <li><a href="/zitate/">Zitate</a></li> 
+  <li><a href="/maturapruefungen/">Maturaprüfungen</a></li>
+  <li><a HREF="/witze/">Witze (+IQ-Test)</a></li>
+  <li><a HREF="/about.html">Kontakt</a></li>
+  <li><a HREF="/links.html">Links</a></li>
+  <li><a href="/search/">Suche</a></li>
+</ul></div>
+<!-- CONTENT -->
+<div id="content" style="display:block;">
+
+<h4>Brachystochronen-Problem</h4>
+
+<p>Das Problem der Brachystochrone wurde 1696 von <a href="johann_bernoulli.html">Johann Bernoulli</a> öffentlich gestellt.<br>
+Wenn zwei Punkte P<sub>1</sub> und P<sub>2</sub> gegeben sind, die auf verschiedener Höhe (aber nicht untereinander) liegen, dann sollte unter 
+allen möglichen Verbindungskurven, auf denen sich ein materieller Punkt unter dem Einfluss der Schwerkraft (ohne Berücksichtigung der Reibung) 
+von P<sub>1</sub> nach P<sub>2</sub> bewegt, diejenige aufgefunden werden, für die die Zeit des Durchlaufens ein Minimum wird.</p>
+<p><small>Folgende Information stammt aus dem Buch "Kleine Enzyklopädie - Mathematik", 1977, Verlag Harri Deutsch, Thun und Frankfurt/M.</small></p>
+
+ <img src="brachy.png" width="312" height="212" style="float:left;margin-right:10px" alt="Figur">
+ 
+ <p>In einem passend gewählten Koordinaten&shy;system sind zwischen den Punkten P<sub>1</sub> und P<sub>2</sub> einige solcher Verbindungskurven y = y(x) 
+ als mögliche Fallkurven eingezeichnet.<br>
+ Da in jedem Punkt dieser Kurven der Weg s, die Zeit t und die momentane Geschwindigkeit v durch die Beziehungen <span>\(\rm v=\large\frac {ds} {dt}\)</span> verknüpft 
+ sind, da die durch  die Erdbeschleunigung g erhaltene Geschwindigkeit den Wert <span>\(\rm v=\sqrt {2gy}\)</span> hat und das Bogenelement ds schliesslich 
+ die bekannte Funktion <span>\(\rm ds=\sqrt {1+y'^2}dx\)</span> von y’ und x ist, erhält man die zum Durchlaufen nötige Gesamtzeit T als ein 
+ bestimmtes Integral zwischen den Grenzen x<sub>1</sub> und x<sub>2</sub>:<br>
+ Aus <span style="margin-right:10px;">\(\rm dt=\large\frac {ds} {\sqrt{2g y}} = (\frac {\sqrt {1+y'^2}} {\sqrt{2g y}})\normalsize dx \)</span> folgt 
+ <span style="margin-left:10px;">\(\rm T = \large\frac 1 {\sqrt{2g}} \Large\int_{x_1}^{x_2}\large{(\frac {\sqrt {1+y'^2}} {\sqrt{y}})\normalsize dx} \)</span>
+ </p>
+ <p>Dieses Integral soll für eine gesuchte Funktion y<sub>0</sub> = y<sub>0</sub>(x) den kleinsten Wert haben, d.h., sein Wert ist für alle von 
+ y<sub>0</sub> verschiedenen Funktionen y*(x) größer. Nach der Methoden der Lösung der Eulerschen Differentialgleichung erhält man mit &alpha; als 
+ Parameter und zwei Konstanten C<sub>1</sub> und C<sub>2</sub> als Lösung die <b>Zykloide<br>
+ x<sub>0</sub> = &plusmn;<span>\(\bold {\large\frac {C_1} {2}}\)</span>(&alpha; - sin &alpha;) + C<sub>2</sub>, 
+ y<sub>0</sub> = <span>\(\bold {\large\frac {C_1} {2}}\)</span>(1 - cos &alpha;)</b>
+ </p>
+ <br>
+</div>
+<script>
+   renderMathInElement(document.body);
+</script>
+<!-- EOF: CONTENT -->
+
+<div id="footer">
+<p><small>
+©1997 -
+<script>document.write(new Date().getFullYear());</script> www.mathematik.ch | <a href="/search/"><img style="vertical-align:middle" width=27 height=27 src="/img/lupe.jpg" alt="Suche"></a>
+</small></p>
+</div>
+
+</div>
+</body>
+</html>
