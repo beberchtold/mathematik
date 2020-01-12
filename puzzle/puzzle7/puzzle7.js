@@ -17,8 +17,6 @@
   var mitUmwahlGewonnen=0;   // davon mit Umwahl gewonnen
   var VerbotKlick=false;
   var zufallspiel=false;
- 
-  Bildnrverschiebung=3;     // 3 Bilder werden vor dem ersten massgebenden Bild door.gif geladen
 
 
   zufall =  Math.floor(Math.random()*3)+1;    // Hinter dieser Tür ist das Auto   
