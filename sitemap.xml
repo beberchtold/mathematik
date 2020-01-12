@@ -84,6 +84,9 @@
     <url>
         <loc>https://www.mathematik.ch/anwendungenmath/diffgl/</loc>
     </url>
+	<url>
+	    <loc>https://www.mathematik.ch/anwendungenmath/diffgl/info_diffgl.html</loc>
+	</url>
     <url>
         <loc>https://www.mathematik.ch/anwendungenmath/einseitigeAbleitung/</loc>
     </url>
@@ -142,11 +145,20 @@
         <loc>https://www.mathematik.ch/anwendungenmath/nullstelle/</loc>
     </url>
 	<url>
+	    <loc>https://www.mathematik.ch/anwendungenmath/nullstelle/info_newton.html</loc>
+	</url>
+	<url>
         <loc>https://www.mathematik.ch/anwendungenmath/nullstelle/schachtelung.html</loc>
+	</url>
+	<url>
+		<loc>https://www.mathematik.ch/anwendungenmath/nullstelle/info_iteration.html</loc>
 	</url>
     <url>
         <loc>https://www.mathematik.ch/anwendungenmath/nullstelle/iteration.html</loc>
-	</url>		
+	</url>
+	<url>
+		<loc>https://www.mathematik.ch/anwendungenmath/nullstelle/info_schachtelung.html</loc>
+	</url>
     <url>
         <loc>https://www.mathematik.ch/anwendungenmath/numint/</loc>
     </url>
