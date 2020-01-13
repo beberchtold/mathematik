@@ -52,12 +52,14 @@
 	<input id="STEP" type="button" value="Step" onclick="dostep()"> Zufallsfigur mit Zufallsfarbe rot, grün, blau oder gelb.</p>
 	<p><input type="button" value="Run/Stop" onclick="run()"> Permanent Zufallsfigur erzeugen</p>
 	<p>Sie können die Werte a, b und k aber auch hier eingeben:<br>
-	1&le;a&le;5: <input id="a" type="number" value=4 min=1 max=5 style="width:1.8em"> &nbsp;&nbsp;
-	1&le;b&le;5: <input id="b" type="number" value=3 min=1 max=5 style="width:1.8em"> &nbsp;&nbsp;
-	1&le;k&le;359: <input id="k" type="number" value=329 min=1 max=359 style="width:3em">
+	1&le;a&le;10: <input id="a" style="margin-bottom:5px;margin-top:5px;width:2em;" type="number" value=4 min=1 max=10> &nbsp;&nbsp;
+	1&le;b&le;10: <input id="b" type="number" value=3 min=1 max=10 style="width:2em"> &nbsp;&nbsp;
+	<span style="white-space:nowrap;">1&le;k&le;359: <input id="k" type="number" value=329 min=1 max=359 style="width:3em"></span>
 	</p>
-    <p><input id="USER" type="button" value="Zeichne!" onclick="benutzer()"><br><br>
-    Klick auf 'Zeichne' erzeugt die dazugehörige Figur mit einer Zufallsfarbe rot, grün, blau oder gelb.</p>	
+    <p><input id="USER" style="margin-right:30px;" type="button" value="Zeichne" onclick="benutzer()">
+	<input id="USER1" type="button" value="Zeichne mit k=1" onclick="benutzer1()"><br><br>
+    Klick auf 'Zeichne' erzeugt die dazugehörige Figur mit einer Zufallsfarbe rot, grün, blau oder gelb.<br>
+	Klick auf 'Zeichne mit k=1' erzeugt die dazugehörige Lissajousfigur.</p>	
   </div>       
 </div>	   
 
@@ -67,9 +69,11 @@
 <a href="#" onClick="Figur(4,1,247)"> 4,1,247; </a>&nbsp;&nbsp; <a href="#" onClick="Figur(4,2,137)"> 4,2,137; </a>&nbsp;&nbsp;
 <a href="#" onClick="Figur(5,1,127)"> 5,1,127; </a>&nbsp;&nbsp; <a href="#" onClick="Figur(5,2,331)"> 5,2,331</a></p>
 
-<p>Punkte (xi|yi) der Figur entstehen im Prinzip gemäss xi = cos(a*k*i), yi = sin(b*k*i) für i = 1,2,3,...,L; k in Grad. 
-Aufeinanderfolgende Punkte werden durch eine Strecke verbunden. Sie erhalten also für a=b=1 und k=60 für i=1 bis 6 ein 
-regelmässiges Sechseck.</p>
+<p>Lissajous-Figuren sind Überlagerungen zweier zueinander senkrecht stehender Schwingungen. Bei einem rationalen Verhältnis der Frequenzen 
+erhält man geschlossene Kurven.<br>
+Hier entstehen Punkte (x<sub>i</sub>|y<sub>i</sub>) der Figur im Prinzip gemäss x<sub>i</sub> = cos(a*k*i), y<sub>i</sub> = sin(b*k*i) für i = 1,2,3,...,L; k in Grad. 
+Aufeinanderfolgende Punkte werden durch eine Strecke verbunden. k=1 liefert also im Wesentlichen die eigentliche Lissajousfigur.
+Sie erhalten z.B. für a=b=1 und k=60 für i=1 bis 6 ein regelmässiges Sechseck, die dazugehörige Lissajousfigur (k=1) ist ein Kreis.</p>
 
 </div>
 <!-- EOF: CONTENT -->
