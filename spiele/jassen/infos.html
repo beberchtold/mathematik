@@ -6,12 +6,38 @@
 <meta NAME="Description" CONTENT="Information zur Simulation Wahrscheinlichkeit für Weise beim Jassen">
 <title>Information zur Simulation Jassen</title>
 <LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
+<script async src="/script/show-hide.js"></script>
 </head>
+
 <body>
 <div class="page">
+<table class="c">
+<tr><td style="width:10%">
+<img width=28 height=27 src="/img/menuicon.png" style="cursor:pointer" title="Inhalt" alt="menu" onClick="ReverseDisplay()">
+</td><td class="c" style="width:80%">
+<a href="/"><img width=257 height=35 src="/img/mathematik.png" alt="mathematik.ch"></a>
+</td><td style="width:10%">&nbsp;</td></tr>
+</table>
+<div id="menu" style="display:none;">
+  <h4>Inhalt</h4>
 
-<p><a href="https://www.mathematik.ch">
-<img class="center "src="/img/mathematik.png" width="257" height="35" alt="mathematik.ch"></a></p>
+<ul>
+  <li><a href="/anwendungenmath/">Anwendungen + Unterrichtshilfen</a></li>
+  <li><a href="/puzzle/">Puzzles (Rätsel)</a></li> 
+  <li><a href="/spiele/">'Spiele'</a></li>
+  <li><a href="/spiele/euromillions/">Euromillions</a></li>
+  <li><a href="/spiele/swisslotto/">Swisslotto</a></li>
+  <li><a href="/geschichte/">Geschichte</a></li>
+  <li><a href="/mathematiker/">Mathematiker</a></li>
+  <li><a href="/zitate/">Zitate</a></li> 
+  <li><a href="/maturapruefungen/">Maturaprüfungen</a></li>
+  <li><a HREF="/witze/">Witze (+IQ-Test)</a></li>
+  <li><a HREF="/about.html">Kontakt</a></li>
+  <li><a HREF="/links.html">Links</a></li>
+  <li><a href="/search/">Suche</a></li>
+</ul></div>
+<!-- CONTENT -->
+<div id="content" style="display:block;">
 
 <h4>Infos zur Berechnung der W'keiten beim Jassen</h4>
 
@@ -29,11 +55,28 @@ Für vier gleiche 10-er, bzw. Damen, Könige und Asse gibt es 100 Punkte.</p>
 für genau ein Dreiblatt (Weis von 20): 21.5%<br>
 für zwei Dreiblätter: 0.94%<br>
 für ein Vierblatt (Weis von 50): 3.8%<br>
-für vier gleiche (4 Asse oder 4 Könige .. bis 4 9-er ): 1.28%<br>
+für vier gleiche (4 Asse oder 4 Könige .. bis 4 9-er ): 6*0.214% &asymp; 1.28%<br>
 für ein Fünfblatt (Weis von 100): 0.536%<br>
 für ein Sechsblatt (Weis von 100): 0.06%
+
+<p>Zur Berechnung der Wahrscheinlichkeit von z.B. 4 Assen für einen Spieler:<br>
+Ein Spieler erhält zufällig 9 der 36 Karten. Es gibt also 
+<img src="img/36_tief_9.gif" width="34" height="44" align="middle" alt="36 tief 9"> = 94'143'280 mögliche Fälle. Günstig davon sind 
+<img src="img/32_tief_5.gif" width="34" height="44" align="middle" alt="32 tief 5"> = 201'376. Dies ergibt eine Wahrscheinlichkeit von
+0.214%.</p>
+
+<p><a href="./">Zur Simulation Wahrscheinlichkeit von Dreiblatt, Vierblatt usw. beim Jassen</a></p>
+
+</div>
+<!-- EOF: CONTENT -->
+
+<div id="footer">
+<p><small>
+©1997 -
+<script>document.write(new Date().getFullYear());</script> www.mathematik.ch | <a href="/search/"><img style="vertical-align:middle" width=27 height=27 src="/img/lupe.jpg" alt="Suche"></a>
+</small></p>
+</div>
 
 </div>
 </body>
 </html>
-
