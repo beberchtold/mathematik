@@ -56,12 +56,12 @@ var Link=[
 '<a href="/puzzle/puzzle35.html"><img src="/img/puzzle35.jpg" class="a"></a>'
 ];
 
-// Lissajou oder PlatonKörper
+// Lissajous oder PlatonKörper
 var Wahl=[
 '<a href="/anwendungenmath/lissajou/"><img src="/img/lissajou.jpg" class="a"></a>',
 '<a href="/anwendungenmath/PlatonKoerper/"><img src="/img/ikosaeder.png" class="a"></a>'
 ];
-var txt=["Lissajou Figur","Platon Körper"];
+var txt=["Lissajous Figur","Platon Körper"];
 
 // Binomialverteilung oder Approximation
 var Wahlbi=[
