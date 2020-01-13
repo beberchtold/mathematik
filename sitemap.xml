@@ -604,9 +604,6 @@
         <loc>https://www.mathematik.ch/puzzle/puzzle36/</loc>
     </url>
     <url>
-        <loc>https://www.mathematik.ch/puzzle/puzzle36/infos.html</loc>
-    </url>
-    <url>
         <loc>https://www.mathematik.ch/puzzle/puzzle36/solut36.html</loc>
     </url>
     <url>
@@ -705,6 +702,9 @@
     <url>
         <loc>https://www.mathematik.ch/search/</loc>
     </url>
+	<url>
+		<loc>https://www.mathematik.ch/sitemap.xml</loc>
+	</url>
     <url>
         <loc>https://www.mathematik.ch/spiele/</loc>
     </url>
