@@ -49,18 +49,17 @@
      <canvas id="myCanvas">Ihr Browser kann kein Canvas!</canvas>
   </div>
   <div class="col">	
-	<input id="b1" type="button" value="Step" onclick="dostep()"> Zufallsfigur mit Zufallsfarbe<br>
-	<input type="button" value="Run/Stop" onclick="run()"> Permanent Zufallsfiguren erzeugen
+	<input id="b1" type="button" value="Step" onclick="dostep()">
+	<input type="button" value="Run/Stop" onclick="run()"><br>
 
-    <p><input id="b2" type="button" value="a+" onclick="change_a()">
+    <input id="b2" type="button" value="a+" onclick="change_a()">
 	<input id="b3" type="button" value="b+" onclick="change_b()">
 	<input id="b4" type="button" value="k+" onclick="change_k()">
 	<input id="b5" type="button" value="k+10" onclick="change_k10()"><br>
-	Klick auf 'a+', 'b+', 'k+' erhöht den betreffenden Wert um 1 und zeichnet die dazugehörige Figur in der aktuellen Farbe.<br>
-	Klick auf 'k+10' erhöht k um 10.<br><br>
-	<input id="b6" type="button" value="Zeichne mit k=1" onclick="benutzer1()"> Erzeugt die dazugehörige Lissajousfigur</p>
-
-	<p>Interessante Figuren sind z.B.:<br>
+	<input id="b6" type="button" value="Zeichne mit k=1" onclick="benutzer1()"><br>	
+    <input id="b18" type="button" value="Save" onclick="save()">
+	<input id="b17" type="button" value="Load" onclick="load()">
+	<br>
 	<input id="b7" style="margin-top:10px;" type="button" value="F1" onclick="Figur(1,1,103)">
 	<input id="b8" type="button" value="F2" onclick="Figur(1,2,269)">
 	<input id="b9" type="button" value="F3" onclick="Figur(2,5,29)">
@@ -70,12 +69,18 @@
 	<input id="b13" type="button" value="F7" onclick="Figur(5,1,127)">
 	<input id="b14" type="button" value="F8" onclick="Figur(5,2,331)">
 	<input id="b15" type="button" value="F9" onclick="Figur(5,3,329)">
-    </p>
+	<input id="b16" type="button" value="F10" onclick="Figur(8,1,29)">
+    <p>
+	'Step' zeichnet Zufallsfigur mit Zufallsfarbe, 'Run/Stop' erzeugt permanent Zufallsfiguren.<br> 
+	Klick auf 'a+', 'b+', 'k+' erhöht den betreffenden Wert um 1 und zeichnet die dazugehörige Figur in der aktuellen Farbe.<br>
+	Klick auf 'k+10' erhöht k um 10.<br>
+	'Zeichne mit k=1' erzeugt die dazugehörige Lissajousfigur.<br>
+	Mit 'Save' können Sie eine Figur speichern und sie später mit 'Load' (in der aktuellen Farbe) wieder laden.<br>
+	F1 bis F10 zeigen vordefinierte, interessante Figuren.</p>
   </div>       
 </div>	   
 
-<p>Lissajous-Figuren sind Überlagerungen zweier zueinander senkrecht stehender Schwingungen. Bei einem rationalen Verhältnis der Frequenzen 
-erhält man geschlossene Kurven.<br>
+<p>Lissajous-Figuren sind Überlagerungen zweier zueinander senkrecht stehender Schwingungen.<br>
 Hier entstehen Punkte (x<sub>i</sub>|y<sub>i</sub>) der Figur gemäss x<sub>i</sub> = cos(a*k*i), y<sub>i</sub> = sin(b*k*i) für i = 1,2,3,...,L; 
 1&le;a&le;10, 1&le;b&le;10, 1&le;k&le;359, k in Grad.<br> 
 Aufeinanderfolgende Punkte werden durch eine Strecke verbunden. k=1 liefert also die eigentliche Lissajousfigur.<br>
