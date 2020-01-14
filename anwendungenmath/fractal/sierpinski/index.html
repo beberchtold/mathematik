@@ -9,6 +9,9 @@
 <LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
 <script src="sierpinski.js"></script>
 <script async src="/script/show-hide.js"></script>
+<style>input[type=button] {margin-bottom:10px;margin-right:20px;}
+input[type=checkbox] {width:16px; height:16px}
+</style>
 </head>
 
 <body>
@@ -45,13 +48,13 @@
 
 <div class="colgroup-2">
   <div class="col" id="containercanvas">
-    <p>Anzahl <span id="Strecke"></span> = <span id="N"> </span></p>
+    Anzahl <span id="Strecke"></span> = <span id="N"> </span>
     <canvas id="myCanvas">Ihr Browser kann kein Canvas!</canvas>
-	<p><a href="#" onClick="doppelt()">Doppelte Anzahl</a>
-	<a href="#" onClick="halb()" style="margin-left:30px">Halbe Anzahl</a></p>
-	<p><input id="Punkte" type="checkbox" onclick="OnChangeCheckbox (this)">Punkte statt Streckenzüge</p>
   </div>
   <div class="col">
+    <input type="button" value="Doppelte Anzahl" onclick="doppelt()">
+	<input type="button" value="Halbe Anzahl" onclick="halb()">
+    <p><input id="Punkte" type="checkbox" onclick="OnChangeCheckbox (this)">Punkte statt Streckenzüge</p>
 	<p>Gegeben ist ein gleichseitiges Dreieck.<br>
 	Start ist im Punkt P = Ecke oben.<br>
     1. Es wird nun eine der drei Ecken zufällig gewählt und die halbe Strecke von P bis zur gewählten Ecke gezeichnet.<br>
@@ -64,7 +67,7 @@
 	<p>Anzahl Strecken bzw. Punkte: min=3, max=49152</p>
    </div>
 </div>
-
+<br>
 <p>Interessant sind auch die <a href="/anwendungenmath/fractal/">Fraktale mit IFS</a>.</p>
 
 </div>

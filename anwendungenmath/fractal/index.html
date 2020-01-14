@@ -9,6 +9,7 @@
 <LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
 <script src="fractal_min.js"></script>
 <script async src="/script/show-hide.js"></script>
+<style>input[type=button] {margin-bottom:10px;margin-right:20px;}</style>
 </head>
 
 <body>
@@ -49,22 +50,26 @@
      <canvas id="myCanvas">Ihr Browser kann kein Canvas!</canvas>
   </div>
   <div class="col">
-     <table><tr><td style="width:80px"><a href="#" onClick="farn()">Farn</a></td><td style="width:80px"><a href="#" onClick="ahorn()">Ahorn</a></td>
-	 <td style="width:80px"><a href="#" onClick="sierpinski()">Sierpinski</a></td><td style="width:70px"><a href="#" onClick="eiche()">Eiche</a></td></tr><tr>
-	 <td><a href="#" onClick="baum()">Baum</a></td><td><a href="#" onClick="koch()">Koch</a></td>
-	 <td><a href="#" onClick="duerer()">Dürer</a></td><td><a href="#" onClick="menger()">Menger</a></td></tr>
-	 </table>
-	 <p><a href="#" onclick="doppelt()">Doppelte Anzahl</a>
-	 <a href="#" style="margin-left:50px" onClick="halb()">Halbe Anzahl</a></p>
-	 <p>Die Fraktale werden mittels Chaosspiel mit Startwert 40000 Iterationen gezeichnet. Die minimale Anzahl 
-	 ist 5000, die maximale 160000. Je grösser die Anzahl, desto besser wird die Qualität des Fraktals.</p>
-	 <p>Jede Farbe entspricht genau einer linearen Abbildung der Form<br>
-     x' = a1*x + b1*y + v1<br>
-     y' = a2*x + b2*y + v2<br><br>
-     Das Fraktal "Farn" wird also z.B. durch vier, das Fraktal "Sierpinski-Dreieck" durch drei Abbildungen erzeugt.</p>
+    <input type="button" value="Farn" onclick="farn()">
+	<input type="button" value="Ahorn" onclick="ahorn()">
+	<input type="button" value="Sierpinski" onclick="sierpinski()">
+	<input type="button" value="Eiche" onclick="eiche()">
+	<input type="button" value="Baum" onclick="baum()">
+	<input type="button" value="Koch" onclick="koch()">
+	<input type="button" value="Dürer" onclick="duerer()">
+	<input type="button" value="Menger" onclick="menger()">
+    <p>
+	<input type="button" value="Doppelte Anzahl" onclick="doppelt()">
+	<input type="button" value="Halbe Anzahl" onclick="halb()">
+	</p>
+	<p>Die Fraktale werden mittels Chaosspiel mit Startwert 40000 Iterationen gezeichnet. Die minimale Anzahl 
+	ist 5000, die maximale 160000. Je grösser die Anzahl, desto besser wird die Qualität des Fraktals.</p>
+	<p>Jede Farbe entspricht genau einer linearen Abbildung der Form<br>
+    x' = a1*x + b1*y + v1<br>
+    y' = a2*x + b2*y + v2<br><br>
+    Das Fraktal "Farn" wird also z.B. durch vier, das Fraktal "Sierpinski-Dreieck" durch drei Abbildungen erzeugt.</p>
    </div>
 </div>
-
 
 <p><a href="fractal.html">Zur Info Fraktale mit IFS</a>.</p>
 <br>

@@ -9,6 +9,9 @@
 <LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
 <script src="hilbert_min.js"></script>
 <script async src="/script/show-hide.js"></script>
+<style>input[type=button] {margin-bottom:10px;margin-right:20px;}
+input[type=checkbox] {width:16px; height:16px}
+</style>
 </head>
 
 <body>
@@ -45,13 +48,12 @@
 
 <div class="colgroup-2">
   <div class="col" id="containercanvas">
-    <p>Kurve <span id="Peanotxt"> </span> mit Ordnung <span id="N"> </span></p>
+    Kurve <span id="Peanotxt"> </span> mit Ordnung <span id="N"></span><br><br>
     <canvas id="myCanvas">Ihr Browser kann kein Canvas!</canvas>
   </div>
   <div class="col">
-	<p><a href="#" onClick="ordnungh()">Ordnung höher</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	<a href="#" onClick="ordnungt()">Ordnung tiefer</a>
-	</p>
+	<input type="button" value="Ordnung höher" onclick="ordnungh()">
+	<input type="button" value="Ordnung tiefer" onclick="ordnungt()">
 	<p><input id="Peano" type="checkbox" onclick="OnChangeCheckbox (this)">Peanokurve statt Hilbertkurve</p>
 	<p>Die Kurven sind nach den Mathematikern <a href="/mathematiker/hilbert.html">David Hilbert</a> und 
 	<a href="/mathematiker/peano.html">Guiseppe Peano</a> benannt.<br>
