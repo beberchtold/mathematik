@@ -8,7 +8,7 @@
 <LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
 <script src="Lissajou_min.js"></script>
 <script async src="/script/show-hide.js"></script>
-<style>input[type=number] {width:3em;margin-bottom:5px;}</style>
+<style>input[type=button] {margin-bottom:10px;margin-right:20px;}</style>
 </HEAD>
 
 <body>
@@ -45,35 +45,40 @@
 
 <div class="colgroup-2">
   <div class="col" id="containercanvas">
-     <p>Figur mit a = <span id="A">   </span>, b = <span id="B">   </span> und k = <span id="K">   </span></p>
+     Figur mit a = <span id="A"></span>, b = <span id="B"></span> und k = <span id="K"></span><br><br>
      <canvas id="myCanvas">Ihr Browser kann kein Canvas!</canvas>
   </div>
-  <div class="col">
-    <p>Sie können die drei Werte a,b und k durch den Computer bestimmen lassen:<br>	
-	<input id="STEP" type="button" value="Step" onclick="dostep()"> Zufallsfigur mit Zufallsfarbe rot, grün, blau oder gelb.</p>
-	<p><input type="button" value="Run/Stop" onclick="run()"> Permanent Zufallsfigur erzeugen</p>
-	<p>Sie können die Werte a, b und k aber auch hier eingeben:<br>
-	1&le;a&le;10: <input id="a" style="margin-top:5px;" type="number" value=4 min=1 max=10> &nbsp;&nbsp;
-	1&le;b&le;10: <input id="b" type="number" value=3 min=1 max=10> &nbsp;&nbsp;
-	<span style="white-space:nowrap;">1&le;k&le;359: <input id="k" type="number" value=329 min=1 max=359></span>
-	</p>
-    <p><input id="USER" style="margin-right:30px;" type="button" value="Zeichne" onclick="benutzer()">
-	<input id="USER1" type="button" value="Zeichne mit k=1" onclick="benutzer1()"><br><br>
-    Klick auf 'Zeichne' erzeugt die dazugehörige Figur mit einer Zufallsfarbe rot, grün, blau oder gelb.<br>
-	Klick auf 'Zeichne mit k=1' erzeugt die dazugehörige Lissajousfigur.</p>	
+  <div class="col">	
+	<input id="b1" type="button" value="Step" onclick="dostep()"> Zufallsfigur mit Zufallsfarbe<br>
+	<input type="button" value="Run/Stop" onclick="run()"> Permanent Zufallsfiguren erzeugen
+
+    <p><input id="b2" type="button" value="a+" onclick="change_a()">
+	<input id="b3" type="button" value="b+" onclick="change_b()">
+	<input id="b4" type="button" value="k+" onclick="change_k()">
+	<input id="b5" type="button" value="k+10" onclick="change_k10()"><br>
+	Klick auf 'a+', 'b+', 'k+' erhöht den betreffenden Wert um 1 und zeichnet die dazugehörige Figur in der aktuellen Farbe.<br>
+	Klick auf 'k+10' erhöht k um 10.<br><br>
+	<input id="b6" type="button" value="Zeichne mit k=1" onclick="benutzer1()"> Erzeugt die dazugehörige Lissajousfigur</p>
+
+	<p>Interessante Figuren sind z.B.:<br>
+	<input id="b7" style="margin-top:10px;" type="button" value="F1" onclick="Figur(1,1,103)">
+	<input id="b8" type="button" value="F2" onclick="Figur(1,2,269)">
+	<input id="b9" type="button" value="F3" onclick="Figur(2,5,29)">
+	<input id="b10" type="button" value="F4" onclick="Figur(3,2,41)">
+	<input id="b11" type="button" value="F5" onclick="Figur(4,1,247)">
+	<input id="b12" type="button" value="F6" onclick="Figur(4,2,137)">
+	<input id="b13" type="button" value="F7" onclick="Figur(5,1,127)">
+	<input id="b14" type="button" value="F8" onclick="Figur(5,2,331)">
+	<input id="b15" type="button" value="F9" onclick="Figur(5,3,329)">
+    </p>
   </div>       
 </div>	   
 
-<p>Interessante Figuren erhalten Sie z.B. für folgende Werte von a, b und k:<br>
-<a href="#" onClick="Figur(1,1,103)">1,1,103; </a>&nbsp;&nbsp;<a href="#" onClick="Figur(1,2,269)"> 1,2,69; </a>&nbsp;&nbsp;
-<a href="#" onClick="Figur(2,5,29)"> 2,5,29; </a>&nbsp;&nbsp;<a href="#" onClick="Figur(3,2,41)"> 3,2,41; </a>&nbsp;&nbsp;
-<a href="#" onClick="Figur(4,1,247)"> 4,1,247; </a>&nbsp;&nbsp; <a href="#" onClick="Figur(4,2,137)"> 4,2,137; </a>&nbsp;&nbsp;
-<a href="#" onClick="Figur(5,1,127)"> 5,1,127; </a>&nbsp;&nbsp; <a href="#" onClick="Figur(5,2,331)"> 5,2,331</a></p>
-
 <p>Lissajous-Figuren sind Überlagerungen zweier zueinander senkrecht stehender Schwingungen. Bei einem rationalen Verhältnis der Frequenzen 
 erhält man geschlossene Kurven.<br>
-Hier entstehen Punkte (x<sub>i</sub>|y<sub>i</sub>) der Figur im Prinzip gemäss x<sub>i</sub> = cos(a*k*i), y<sub>i</sub> = sin(b*k*i) für i = 1,2,3,...,L; k in Grad. 
-Aufeinanderfolgende Punkte werden durch eine Strecke verbunden. k=1 liefert also im Wesentlichen die eigentliche Lissajousfigur.
+Hier entstehen Punkte (x<sub>i</sub>|y<sub>i</sub>) der Figur gemäss x<sub>i</sub> = cos(a*k*i), y<sub>i</sub> = sin(b*k*i) für i = 1,2,3,...,L; 
+1&le;a&le;10, 1&le;b&le;10, 1&le;k&le;359, k in Grad.<br> 
+Aufeinanderfolgende Punkte werden durch eine Strecke verbunden. k=1 liefert also die eigentliche Lissajousfigur.<br>
 Sie erhalten z.B. für a=b=1 und k=60 für i=1 bis 6 ein regelmässiges Sechseck, die dazugehörige Lissajousfigur (k=1) ist ein Kreis.</p>
 
 </div>
