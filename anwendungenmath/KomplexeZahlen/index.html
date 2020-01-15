@@ -9,8 +9,8 @@
 <LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
 <script src="komplexeZahlen_min.js"></script>
 <script async src="/script/show-hide.js"></script>
-<style>input[type=number] {width:2em;-moz-appearance: textfield;}
-input[type=checkbox] {width:16px; height:16px}
+<style>input[type=number] {width:2.3em;-moz-appearance: textfield;}
+input[type=checkbox] {width:16px;height:16px;outline:2px solid;}
 </style>
 </head>
 
@@ -60,19 +60,19 @@ Das Resultat wird durch den blauen Punkt repräsentiert.</p>
        <canvas id="myCanvas" style="border:1px solid; border-color:#A0A0A0">Ihr Browser kann kein Canvas!</canvas>
   </div>
   <div class="col">
-    <p><input id="Addition" type="checkbox" onclick="OnChangeCheckbox1 (this)"> Addition &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	<input id="Subtraktion" type="checkbox" onclick="OnChangeCheckbox2 (this)"> Subtraktion<br><br>
-    <input id="Multiplikation" type="checkbox" onclick="OnChangeCheckbox3 (this)"> Multiplikation &nbsp;&nbsp;&nbsp;
-	<input id="Division" type="checkbox" onclick="OnChangeCheckbox4 (this)"> Division
+    <p><input id="Addition" type="checkbox" onclick="OnChangeCheckbox1 (this)"> Addition
+	<input id="Subtraktion" style="margin-left:50px;" type="checkbox" onclick="OnChangeCheckbox2 (this)"> Subtraktion<br><br>
+    <input id="Multiplikation" type="checkbox" onclick="OnChangeCheckbox3 (this)"> Multiplikation
+	<input id="Division" style="margin-left:20px;" type="checkbox" onclick="OnChangeCheckbox4 (this)"> Division
 	</p>
-	<p>z1 = <input id="x1" type="number" min=-10 max=10 step="any" value="5" onchange="calc()"> 	
-    + <input id="y1" type="number" min=-10 max=10 step="any" value="5" onchange="calc()"> i &nbsp;&nbsp;&nbsp;&nbsp;
-	z2 = <input id="x2" type="number" min=-10 max=10 step="any" value="1" onchange="calc()"> 
-    + <input id="y2" type="number" min=-10 max=10 step="any" value="2" onchange="calc()"> i</p>
-	<p><b>Resultat = </b><span id="Resultat"></span></p>
-	<p>Resultat in Polarform = <span id="Resultat_polar"></span></p>
-    <p><input id="kartesisch" type="checkbox" onclick="OnChangeCheckbox5 (this)"> Kartesisches KS &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	<input id="polar" type="checkbox" onclick="OnChangeCheckbox6 (this)"> PolarKS</p>	
+	<p>z1=<input id="x1" type="number" min=-10 max=10 step="any" value="5" lang="en" onchange="calc()">	
+    +<input id="y1" type="number" min=-10 max=10 step="any" value="5" lang="en" onchange="calc()"> i <span style="margin-right:25px;"></span>
+	z2=<input id="x2" type="number" min=-10 max=10 step="any" value="1" lang="en" onchange="calc()">
+    +<input id="y2" type="number" min=-10 max=10 step="any" value="2" lang="en" onchange="calc()"> i</p>
+	<p><b>Resultat z = </b><span id="Resultat"></span></p>
+	<p>in Polarform z = <span id="Resultat_polar"></span></p>
+    <p><input id="kartesisch" type="checkbox" onclick="OnChangeCheckbox5 (this)"> Kartesisches KS
+	<input id="polar" style="margin-left:30px;" type="checkbox" onclick="OnChangeCheckbox6 (this)"> PolarKS</p>	
   </div>
         
 </div>	   
