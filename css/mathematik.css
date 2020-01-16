@@ -11,7 +11,8 @@ h4{font-size:20px;font-family:Helvetica,Arial;margin-top:5px;margin-bottom:15px}
 small{font-size:14px}
 ul{list-style-type:none;margin:0;padding:0}
 #menu ul>li{padding:6px}
-input[type=checkbox] {width:16px;height:16px;outline:2px solid;}
+input[type=checkbox] {width:17px;height:17px;outline:2px solid;margin-top:8px;margin-bottom:-2px;background:white;-webkit-appearance:none;-moz-appearance:none;}
+input[type=checkbox]:checked:after {font-size:14px;content:"\2714";}
 input{font-size:16px;background:#fff}
 option{font-size:16px;background:#fff}
 table.c{width:100%}
