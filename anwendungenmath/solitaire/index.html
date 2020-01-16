@@ -9,6 +9,7 @@
 <script src="solitaire1_min.js"></script>
 <script async src="solitaire2.js"></script>
 <script async src="/script/show-hide.js"></script>
+<style>input[type=button] {margin-bottom:10px;margin-right:20px;}</style>
 </head>
 
 <body>
@@ -43,13 +44,9 @@
 
 <h4>Solitaire</h4>
 
-<table class="c">
-  <tr>
-    <td><a href="#" onClick="Kreuz()"> Steine als Kreuz</a> (33)</td>
-    <td><a href="#" onClick="Quadrat()"> Steine als Quadrat</a> (49)</td>
-    <td><a href="#" onClick="Achteck()"> Steine als Achteck</a> (37)</td>
-  </tr>
-</table>
+<input type="button" value="Steine als Kreuz (33)" onclick="Kreuz()">
+<input type="button" value="Steine als Quadrat (49)" onclick="Quadrat()">
+<input type="button" value="Steine als Achteck (37)" onclick="Achteck()">
 
 <div class="colgroup-2">
   <div class="col">
@@ -83,9 +80,9 @@
   </div>
   
   <div class="col">
-  <p style="margin-top:10px"><a href="#" onClick="Zugruecknehmen()">Zug zurücknehmen</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <a href="#" onClick="Wiederausfuehren()">Zug wieder ausführen</a>  
-  </p>
+    <br><input type="button" value="Zug zurücknehmen" onclick="Zugruecknehmen()">
+	<input type="button" value="Zug wieder ausführen" onclick="Wiederausfuehren()">
+	  
   <noscript>In Ihrem Browser muss JavaScript aktiviert sein.</noscript>
   <p>Klicken Sie zuerst auf einen Spielstein, um ihn zu entfernen.<br>
   Klicken Sie dann auf einen Spielstein, um mit ihm zu ziehen! Falls es ein zulässiger Zug ist, so wird der Stein 'halb' 
@@ -101,17 +98,10 @@
   Lösung, einen beliebigen Stein zu entfernen und den letzten Stein in einem
   vorgewählten Feld zu haben, also z.B. von Mitte zu Mitte (s. Demolösung)<br>
   2. Sie können auch versuchen, vorgewählte Figuren am Ende zu erzeugen.</p>
-<hr>
 
-<table class="c">
-  <tr>
-    <td><a href="#" onClick="loesung1()">Lösung Kreuz</a></td>  
-    <td><a href="#" onClick="loesungQuadrat()">Lösung Quadrat</a></td> 
-    <td><a href="#" onClick="loesungAchteck()">Lösung Achteck</a></td>
-  </tr>
-</table>  
-
-<p>Copyright für das Programm: <a href="/about.html">Bernhard Berchtold</a></p>
+<input type="button" value="Lösung Kreuz" onclick="loesung1()">
+<input type="button" value="Lösung Quadrat" onclick="loesungQuadrat()">
+<input type="button" value="Lösung Achteck" onclick="loesungAchteck()">
 
 <p>Falls Sie ein Programm suchen, das Ihnen die Suche der Lösungen für das 'Kreuz' abnimmt, so empfehle ich Ihnen 
   <a href="http://www.extrabit.com/pegsol/" target="_blank">32-PegSolitair von Mark Williams.</a></p>

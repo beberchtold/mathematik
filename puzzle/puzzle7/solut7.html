@@ -9,6 +9,7 @@
 <script src="puzzle7.js"></script>
 <LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
 <script async src="/script/show-hide.js"></script>
+<style>input[type=button] {margin-bottom:10px;margin-right:20px;}</style>
 </head>
 
 <body>
@@ -59,14 +60,16 @@
     <b><span id="Antwort">Klicken Sie auf eine Türe</span></b>
    </div>
    <div class="col">
-	  <a href="#" onClick="neuesSpiel()">Neues Spiel</a><br><br> 
-      <a href="#" onClick="Zufallspiel()">100 Zufallspiele durch Computer</a><br><br>
-	  Sie haben von insgesamt <b><span id="Anzahl"> 0 </span></b> Spielen <b><span id="Gewonnen"> 0 </span></b> Spiele gewonnen.<br>
-      Durch permanentes Umwählen hätte man von allen Spielen <b><span id="Umwahl"> 0 </span></b> Spiele gewonnen.<br><br> 
-      Beim Zufallspiel trifft der Computer seine zweite Wahl rein zufällig.
+    <input type="button" value="Neues Spiel" onclick="neuesSpiel()">
+    <input type="button" value="100 Zufallspiele durch Computer" onclick="Zufallspiel()">
+    <br>
+	Sie haben von insgesamt <b><span id="Anzahl"> 0 </span></b> Spielen <b><span id="Gewonnen"> 0 </span></b> Spiele gewonnen.<br>
+    Durch permanentes Umwählen hätte man von allen Spielen <b><span id="Umwahl"> 0 </span></b> Spiele gewonnen.<br><br> 
+    Beim Zufallspiel trifft der Computer seine zweite Wahl rein zufällig.
   </div>
 </div>
 
+<p><img src="3Tuer.png" style="width:200px; height:200px; float:left;" alt="Baumdiagramm"></p>
 <p><u>Begründung</u>: Ohne Einschränkung der Allgemeinheit kann vom Beispiel
     ausgegangen werden. Tür 2 bzw. Tür 3 öffnet sich mit W'keit 1/2. Da bei <strong>beiden</strong>
     Fällen das Auto noch hinter Tür 1 stehen kann, insgesamt die W'keit des Preises hinter
@@ -75,10 +78,10 @@
     bzw. Tür 3 geöffnet hat, beträgt also immer noch 1/3.<br>
     mathematisch: P(T2 geöffnet) = 1/6 + 0 + 1/3 = 0.5<br>
     P(Preis hinter T1 | T2 geöffnet) = (1/6)  / 0.5 = 1/3<br>
-    P(Preis hinter T3 | T2 geöffnet) = (1/3)  / 0.5 = 2/3</p>
-    <p><img src="3Tuer.png" style="width:200px; height:200px; vertical-align: middle;" alt="Baumdiagramm"></p>
-
-<p><a href="./">Zurück zur Frage</a></p>
+    P(Preis hinter T3 | T2 geöffnet) = (1/3)  / 0.5 = 2/3
+</p>
+  
+<p style="clear: left;"><br><a href="./">Zurück zur Frage</a></p>
 
 </div>
 <!-- EOF: CONTENT -->

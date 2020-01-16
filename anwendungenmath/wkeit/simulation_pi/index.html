@@ -9,6 +9,7 @@
 <LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
 <script src="simu_pi.js"></script>
 <script async src="/script/show-hide.js"></script>
+<style>input[type=button] {margin-bottom:10px;margin-right:20px;}</style>
 </head>
 
 <body>
@@ -45,13 +46,13 @@
 
 <div class="colgroup-2">
   <div class="col" id="containercanvas">
-     <p>Berechnung mit <span id="N">16000</span> Punkten.</p>
+     Berechnung mit <span id="N">16000</span> Punkten.<br><br>
      <canvas id="myCanvas">Ihr Browser kann kein Canvas!</canvas>
   </div>
   <div class="col">
-	 <p><a href="#" onClick="zeichne()">Nochmals mit gleicher Anzahl</a> 
-	 <p><a href="#" onClick="doppelt()">Doppelte Anzahl</a> 
-	 <a href="#" onClick="halb()" style="margin-left:50px">Halbe Anzahl</a></p>
+    <br><input type="button" value="Nochmals mit gleicher Anzahl" onclick="zeichne()"><br>
+	<input type="button" value="Doppelte Anzahl" onclick="doppelt()">
+	<input type="button" value="Halbe Anzahl" onclick="halb()">
 	 <p>Pi wird mit Startwert 32000 Punkten berechnet. Sie können diese Anzahl verändern: min=8000, max=512000.<br>
      Je mehr Punkte Sie wählen, desto besser wird i.a. die Approximation für Pi.</p>
 	 <p><b>Resultat:</b><br>
