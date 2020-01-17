@@ -58,20 +58,19 @@ Je mehr Würfe Sie wählen, desto besser wird i.a. die Approximation für <span>
 
 <div class="colgroup-2">
   <div class="col" id="containercanvas">
-     <p>Berechnung mit <span id="N">400</span> Würfen.</p>
+     Berechnung mit <span id="N">400</span> Würfen.<br>
      <canvas id="myCanvas">Ihr Browser kann kein Canvas!</canvas>
   </div>
   <div class="col">
-	 <p><a href="#" onClick="zeichne()">Nochmals mit gleicher Anzahl</a> 
-	 <p><a href="#" onClick="doppelt()">Doppelte Anzahl</a> 
-	 <a href="#" onClick="halb()" style="margin-left:50px">Halbe Anzahl</a></p>
+    <input type="button" value="Nochmals mit gleicher Anzahl" onclick="zeichne()"><br><br>
+    <input type="button" value="Doppelte Anzahl" onclick="doppelt()">
+	<input type="button" style="margin-left:40px" value="Halbe Anzahl" onclick="halb()">
 	 <p><b>Resultat:</b><br>
 	 W'keit P(A) = <b><span id="Anzb"> </span></b>. Daher <span>\(\pi\)</span> &asymp; <b><span id="Res"> </span></b></p>
 	 <p>Vergleich: Exakter Wert für <span>\(\pi\)</span> = 3.14159265...</p>
    </div>
 </div>
-
-<p>Beweis:<br>
+Beweis:<br>
 Die möglichen Fälle m (des Ereignisraumes) werden repräsentiert durch die Lage der Nadel: Winkel &alpha; 
 der Nadel gegenüber der Horizontalen und Distanz d der Nadelspitze zu einer Parallelen
 (0 &le; &alpha; &le; <span>\(\pi\)</span>, 0 &le; d &le; a), also m = a<span>\(\,\pi\)</span>.<br>
@@ -82,7 +81,7 @@ g = <span>\(\sf\int\limits_0^\pi c \cdot sin\alpha \,d\alpha = c \int\limits_0^\
 = c(1&nbsp;-&nbsp;(-1)) = 2c
 <br>
 Damit gilt für die W'keit P(A), dass die Nadel trifft:
-P(A) = <span>\(\sf\large\frac{2c}{a \pi}\)</span></p>
+P(A) = <span>\(\sf\large\frac{2c}{a \pi}\)</span>
 
 </div>
 <script>

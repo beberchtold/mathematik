@@ -51,23 +51,24 @@ Problem, weshalb es irrtümlich häufig auf ihn zurückgeführt wird.<br>
 Nauck verallgemeinerte die Problemstellung und fragte, auf wie viele verschiedene Arten N Damen auf einem N×N-Schachbrett
  aufgestellt werden können.</p>
  
-<div style="width:350px;float:left">
-  <canvas id="myCanvas" width="321" height="321"> Ihr Browser kann kein Canvas! </canvas>
-</div>  
+<div class="colgroup-2">
+  <div class="col">
+    <canvas id="myCanvas" width="321" height="321"> Ihr Browser kann kein Canvas! </canvas>
+  </div>  
 
-<div style="width:350px;float:left">  
-  <p>Brettgrösse NxN <input id="Anz" type="number" style="width:3em" min=4 max=12 value="8" onChange="Start()">
-  </p>
+  <div class="col"> 
+  Brettgrösse NxN <input id="Anz" type="number" style="width:2.5em" min=4 max=12 value="8" onChange="Start()">
+  <br><br>
   Verzögerung in Millisekunden &nbsp;&nbsp;
-  <select name="Delay" id="Delay">
+  <select name="Delay" id="Delay" style="width:4em;">
     <option value="1">1</option>
     <option value="10">10</option>
     <option value="100" selected>100</option>
     <option value="500">500</option>
     <option value="1000">1000</option>
   </select><br>
-  <input type="checkbox" id="ohneHalt"> Ohne Halt bei gefundener Lösung<br>
-  <input type="button" id="start" value="Start" onclick="Start()"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+  <input type="checkbox" id="ohneHalt"> Ohne Halt bei gefundener Lösung<br><br>
+  <input style="margin-right:30px;" type="button" id="start" value="Start" onclick="Start()">  
   <input type="button" id="run_stop" value="Stop" disabled="disabled">
   <br><br>
   <div id="label">Anzahl Lösungen: 0</div>
@@ -75,10 +76,10 @@ Nauck verallgemeinerte die Problemstellung und fragte, auf wie viele verschieden
   <div id="label2">Klicken Sie auf Start zum Suchen der ersten Lösung</div>
   <br>
   Das Javascript-Programm zeigt den Algorithmus zum Finden der Lösungen für N=4 bis N=12. Falls es eine Lösung gefunden hat, so 
-checkt es diese Lösung auf Kongruenz mit allen vorhergehenden Lösungen.
+  checkt es diese Lösung auf Kongruenz mit allen vorhergehenden Lösungen.
+  </div>
 </div>
 
-<div style="clear: both"></div>  
 <p>Betrachtet man die nichtkongruenten Lösungen, so gibt es für das 8x8 Schachbrett nur 12 statt 92 Lösungen.<br> 
 1991 wurde von B. Bernhardsson eine explizite Lösung des N-Damenproblems für jede beliebige Schachbrettgrösse im ACM SIGART 
 Bulletin, Vol. 2, No. 7 angegeben.<br> 
