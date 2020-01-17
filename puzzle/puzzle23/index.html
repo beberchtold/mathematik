@@ -9,6 +9,7 @@
 <LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
 <script async src="puzzle23_min.js"></script>
 <script async src="/script/show-hide.js"></script>
+<style>input[type=button] {margin-bottom:10px;margin-right:20px;}</style>
 </head>
 
 <body>
@@ -60,20 +61,19 @@ Klicken Sie auf einen Hasen, um mit ihm zu ziehen! Falls es ein zulässiger Zug 
   </div>
   
   <div class="col">
-  <p><a href="#" onClick="Zugruecknehmen()">Zug zurücknehmen</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <a href="#" onClick="Wiederausfuehren()">Zug wieder ausführen</a><br><br>
-  <a href="">von vorne beginnen</a></p>
-
-  Zugnummer: <span id="Zugnummer">0</span><br><br>
-  <span id="Antwort">"Viel Erfolg!"</span>
+    <br><input type="button" value="Zug zurücknehmen" onclick="Zugruecknehmen()">
+	<input type="button" value="Zug wieder ausführen" onclick="Wiederausfuehren()"><br><br>
+    <a href="">von vorne beginnen</a><br><br>
+    Zugnummer: <span id="Zugnummer">0</span><br><br>
+    <span id="Antwort">"Viel Erfolg!"</span>
   </div>
 </div>  
-  
-<div style="text-align: right;">
-<p>4. März 2005 &nbsp;</p>
+<br>  
+<div style="text-align: right;margin-right:10px;">
+  4. März 2005
 </div>
 
-<p><a href="#" onClick="loesung()">Lösung</a></p>
+<input type="button" value="Lösung" onclick="loesung()">
 
 </div>
 <!-- EOF: CONTENT -->
