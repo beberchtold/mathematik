@@ -9,6 +9,16 @@ AddCharset UTF-8 .js
 ErrorDocument 404 /404.html
 Options -Indexes
 
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteCond %{HTTP_REFERER} !^$
+RewriteCond %{HTTP_REFERER} !^https://www\.mathematik\.ch.*$ [NC]
+RewriteCond %{HTTP_REFERER} !^https://www\.google\..*$ [NC]
+RewriteCond %{HTTP_REFERER} !^https://www\.bing\..*$ [NC]
+RewriteCond %{REQUEST_URI} !^.*hotlink\.png$ [NC]
+RewriteRule ^(.*)\.(gif|jpg|png|jpeg)$ https://www.mathematik.ch/img/hotlink.png [NC,R,L]
+</IfModule>
+
 <IfModule mod_expires.c>
 ExpiresActive On
 ExpiresByType text/css "access plus 1 week"
