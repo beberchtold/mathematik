@@ -43,13 +43,14 @@
 <h4>Lösung Puzzle 14: Schiebepuzzle</h4>  
 
 <p>
-Sie erhalten eine Lösung mit 24 Zügen.<br>
-Klicken Sie pro Zug auf 'Zug +'.<br>
-Diese Lösung ist nicht die einzig mögliche. <br>
-Finden Sie eine Lösung mit weniger als 24 Zügen?
+Sie erhalten eine Lösung mit 24 Zügen. Klicken Sie pro Zug auf 'Zug +'.<br>
+Diese Lösung ist nicht die einzig mögliche. Finden Sie eine Lösung mit weniger als 24 Zügen?
 </p>
 
-<div class="colgroup-2">
+<div class="colgroup-2">   
+  <div class="col">
+       <canvas id="myCanvas" width=336 height=336>Ihr Browser kann kein Canvas!</canvas>
+  </div>
   <div class="col">
     Vorlage: <img src="vorlage14.png" width="104" height="105" style="vertical-align:top" alt="vorlage">
 	<p>Den jeweils letzten Zug können Sie durch Klicken auf 'Zug -' rückgängig machen.<br>
@@ -58,10 +59,6 @@ Finden Sie eine Lösung mit weniger als 24 Zügen?
 	   <input type="button" id="Zug-" value="Zug-" onclick="back()" style="margin-left:40px">
 	   <input type="button" value="Clear" onclick="doClear()" style="margin-left:40px"></p>
 	 <p><span id="message">  </span></p>			
-  </div>
-        
-  <div class="col">
-       <canvas id="myCanvas" width=336 height=336>Ihr Browser kann kein Canvas!</canvas>
   </div>
 </div>	   
 
