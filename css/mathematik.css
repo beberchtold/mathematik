@@ -28,6 +28,7 @@ img{border:0}img.a{width:100%;height:auto;min-width:90px;max-width:200px}
 img{border:0}img.b{width:100%;height:auto;min-width:80px;max-width:120px}
 img.center{display:block;margin-left:auto;margin-right:auto}
 img[src="/img/help.gif"]{width:24px;height:30px;vertical-align:middle;}
+span.b{padding:8px;font-size:20px;}
 .group:after,[class*=colgroup]:after{content:".";display:block;height:0;clear:both;visibility:hidden}
 .col{position:relative}
 .col:first-child{margin-top:0}
