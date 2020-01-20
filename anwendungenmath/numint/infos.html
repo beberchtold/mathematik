@@ -63,30 +63,26 @@
   </ul>
 </li>
 
-<li>Startwert x0 und Endwert xn für x (Integrationsgrenzen). f muss stetig sein auf [x0,xn].
+<li>Startwert x0 und Endwert xn für x (Integrationsgrenzen). <b>f muss stetig sein auf [x0,xn].</b>
 </li>
-
 <li>Geben Sie die Anzahl Intervalle ein, in die Sie das Intervall [x0,xn] einteilen wollen.<br>
   Um grosse Rechenzeiten zu vermeiden, beträgt die maximale Anzahl 200.
-  Normalerweise genügen 20 bis 50.<br>
+  Normalerweise reichen 20 bis 50 für eine genügende Genauigkeit mit der Simpson-Methode.<br>
   Die Simpson-Methode benötigt eine gerade Anzahl Intervalle.</li>
-
 <li>Wählen Sie die Graphik durch Ankreuzen einer Checkbox. Auf die Graphik der Simpson-Methode wird verzichtet.</li>
-
 <li>Falls ein Syntaxfehler bei der Funktionsgleichung auftritt, so
   erhalten Sie eine entsprechende Meldung. Sonst wird der Graph gezeichnet und
   die Werte gemäss den Methoden Trapez, Simpson, linker Endpunkt usw. werden
   ausgegeben. Der Graph wird gemäss der gewählten Methode schraffiert.
   Nachdem der Graph gezeichnet ist, können Sie die Graphik durch Ankreuzen der entsprechenden Checkbox ändern.
 </li>
-
 <li>Bei Division durch Null oder einer anderweitigen Operation, die keine Zahl
   ergibt, wird das Symbol NaN ausgegeben (Definition für "Not a Number").
 </li>
-
 <li>Über die Genauigkeit des Resultates wird nichts ausgesagt:<br>
   Wählen Sie z.B. die Funktion f(x) = 1/x mit den Integrationsgrenzen 0.00001 und 1. Bei 200 Teilintervallen 
-  gibt die Methode nach Simpson den Wert 172.76776 aus. Der genaue Wert wäre 5*ln(10) = 11.512925...
+  gibt die Methode nach Simpson den Wert 172.76776 aus. Der genaue Wert wäre 5*ln(10) = 11.512925...<br>
+  Insbesondere prüft das Programm auch nicht, ob die Funktion im angegebenen Intervall stetig ist!
 </li>
 </ol>
 <p><a href="./">zum Programm Numerische Integration</a></p>

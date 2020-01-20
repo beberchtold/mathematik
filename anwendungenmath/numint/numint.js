@@ -408,9 +408,11 @@ window.onload=resizeCanvas;
 	}
 	DiffY=Ymax-Ymin;
 	if (DiffY<50) {Ymin=Ymin-0.1*DiffY; Ymax=Ymax+0.1*DiffY;}
+	if (DiffY==0) 
 	if (Ymax>50) Ymax=50;
 	if (Ymin<-50) Ymin=-50;
     DiffY=Ymax-Ymin;
+	if (DiffY==0) {DiffY=1.03*Ymax}     // bei konstanter Funktion 
 	}
 
   // Umrechnung von x-Koordinate in Bildschirmspalte
