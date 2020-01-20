@@ -27,7 +27,7 @@ span.ol{font-size:15px;font-family:Arial,Helvetica;text-decoration:overline}
 img{border:0}img.a{width:100%;height:auto;min-width:90px;max-width:200px}
 img{border:0}img.b{width:100%;height:auto;min-width:80px;max-width:120px}
 img.center{display:block;margin-left:auto;margin-right:auto}
-img[src="help.gif"]{width:24px;height:30px;vertical-align:middle;}
+img[src="/img/help.gif"]{width:24px;height:30px;vertical-align:middle;}
 .group:after,[class*=colgroup]:after{content:".";display:block;height:0;clear:both;visibility:hidden}
 .col{position:relative}
 .col:first-child{margin-top:0}
