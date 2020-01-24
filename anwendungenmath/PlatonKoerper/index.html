@@ -6,19 +6,14 @@
 <meta NAME="Description" CONTENT="Platonische Körper, Tetraeder, Würfel, Oktaeder, Dodekader, Isokaeder">
 <TITLE>Platonische Körper</title>
 <LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
-<script src="platon_min.js"></script>
+<script src="platon.js"></script>
 <script async src="/script/show-hide.js"></script>
+<style>td{padding:6px;}</style>
 </HEAD>
 
 <body>
-<div class="page">
-<table class="c">
-<tr><td style="width:10%">
-<img width=28 height=27 src="/img/menuicon.png" style="cursor:pointer" title="Inhalt" alt="menu" onClick="ReverseDisplay()">
-</td><td class="c" style="width:80%">
-<a href="/"><img width=257 height=35 src="/img/mathematik.png" alt="mathematik.ch"></a>
-</td><td style="width:10%">&nbsp;</td></tr>
-</table>
+<div class="page"><div style="display:flex;align-items:center;">
+<span id="menuicon" style="display:inline-block;"><img src="/img/menuicon.png" title="Inhalt" alt="menu" onClick="ReverseDisplay()"></span><span id="closeicon" style="display:none;"><img src="/img/closeicon.png" title="schliessen" alt="schliessen" onClick="ReverseDisplay()"></span><span class="Haupt"><a href="/" style="color:black"><img src="/img/fractal_logo.png" alt="Logo">mathematik.ch</a></span></div>
 <div id="menu" style="display:none;">
   <h4>Inhalt</h4>
 
@@ -57,11 +52,11 @@ Der Eulersche Polyedersatz gilt natürlich auch für die Platonischen Körper:
 <div style="margin-top:6px;outline:2px solid;padding:2px;">In jedem konvexen Polyeder mit e Ecken, f Flächen und k Kanten gilt: 
 e + f – k = 2.</div>
 
-<p>Wählen Sie mittels Checkbox einen Körper aus. Die Rotationsachse verläuft immer senkrecht 
+<p>Wählen Sie mittels Radiobutton einen Körper aus. Die Rotationsachse verläuft immer senkrecht 
 durch den roten Punkt. Die Achse kann wahlweise durch eine Ecke, einen Kantenmittelpunkt oder einen Flächenmittelpunkt 
 verlaufen (Umschaltmöglichkeit mit dem Button 'Rotationsachse').<br>
 Klick auf 'Step' lässt den Körper um jeweils &pi;/20 rotieren.<br>
-Klick auf 'Run/Stop' lässt den Körper permanent rotieren, nochmaliger Klick stoppt diese Rotation.<br>
+Klick auf 'Run' lässt den Körper permanent rotieren, Klick auf 'Stop' stoppt diese Rotation.<br>
 Der Höhenwinkel lässt sich im entsprechenden Textfeld zwischen 90&deg; (Anblick senkrecht von oben) 
 und -90&deg; (Anblick senkrecht von unten) verändern.</p>
 
@@ -73,21 +68,21 @@ und -90&deg; (Anblick senkrecht von unten) verändern.</p>
   <div class="col">
 	<table>
 	  <tr>
-	    <td style="padding:6px;"><input id="Tetraeder" type="checkbox" onclick="OnChangeCheckbox1 (this)"> Tetraeder</td>
-	    <td style="padding:6px;"><input id="Hexaeder" type="checkbox" onclick="OnChangeCheckbox2 (this)"> Hexaeder (Würfel)</td>
+	    <td><label><input id="Tetraeder" type="radio" name="Poly" onclick="OnChangeradio1 (this)">Tetraeder</label></td>
+	    <td><label><input id="Hexaeder" type="radio" name="Poly" onclick="OnChangeradio2 (this)">Hexaeder (Würfel)</label></td>
 	  </tr><tr>
-        <td style="padding:6px;"><input id="Oktaeder" type="checkbox" onclick="OnChangeCheckbox3 (this)"> Oktaeder</td>
-        <td style="padding:6px;"><input id="Dodekaeder" type="checkbox" onclick="OnChangeCheckbox4 (this)"> Dodekaeder</td>
+        <td><label><input id="Oktaeder" type="radio" name="Poly" onclick="OnChangeradio3 (this)">Oktaeder</label></td>
+        <td><label><input id="Dodekaeder" type="radio" name="Poly" onclick="OnChangeradio4 (this)">Dodekaeder</label></td>
 	  </tr><tr>	
-        <td style="padding:6px;" colspan="2"><input id="Ikosaeder" type="checkbox" onclick="OnChangeCheckbox5 (this)"> Ikosaeder</td>
+        <td colspan="2"><label><input id="Ikosaeder" type="radio" name="Poly" onclick="OnChangeradio5 (this)">Ikosaeder</label></td>
 	  </tr><tr>
-        <td style="padding:6px;" colspan="2">Höhenwinkel in Grad = <input id="theta" style="width:2.2em;" type="number" min=-90 max=90 value="15" onchange="calc()"></td>	
+        <td colspan="2">Höhenwinkel in Grad = <input id="theta" style="width:2.2em;" type="number" min=-90 max=90 value="15" onchange="calc()"></td>	
 	  </tr><tr>
-        <td style="padding:6px;" colspan="2"><input type="button" value="Rotationsachse" onclick="doAxis()"></td>  
+        <td colspan="2"><input type="button" value="Rotationsachse" onclick="doAxis()"></td>  
 	  </tr>
 	  <tr>
-	    <td style="padding:6px;"><input id="STEP" type="button" value="Step" onclick="dostep()"></td>
-	    <td style="padding:6px;"><input type="button" value="Run/Stop" onclick="run()"></td>
+	    <td><input id="STEP" type="button" value="Step" onclick="dostep()"></td>
+	    <td><input id="RUN" type="button" value="Run" onclick="run()"></td>
 	  </tr>
     </table>	
   </div>        

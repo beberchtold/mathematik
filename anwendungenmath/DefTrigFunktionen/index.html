@@ -7,19 +7,13 @@
 <meta name="description" content="Sinus, Cosinus und Tangens eines Winkels">
 <meta name="keywords" content="Mathematik, Trigonometrie, Sinus, Cosinus, Tangens">
 <LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
-<script src="trigFkt_min.js"></script>
+<script src="trigFkt.js"></script>
 <script async src="/script/show-hide.js"></script>
 </head>
 
 <body>
-<div class="page">
-<table class="c">
-<tr><td style="width:10%">
-<img width=28 height=27 src="/img/menuicon.png" style="cursor:pointer" title="Inhalt" alt="menu" onClick="ReverseDisplay()">
-</td><td class="c" style="width:80%">
-<a href="/"><img width=257 height=35 src="/img/mathematik.png" alt="mathematik.ch"></a>
-</td><td style="width:10%">&nbsp;</td></tr>
-</table>
+<div class="page"><div style="display:flex;align-items:center;">
+<span id="menuicon" style="display:inline-block;"><img src="/img/menuicon.png" title="Inhalt" alt="menu" onClick="ReverseDisplay()"></span><span id="closeicon" style="display:none;"><img src="/img/closeicon.png" title="schliessen" alt="schliessen" onClick="ReverseDisplay()"></span><span class="Haupt"><a href="/" style="color:black"><img src="/img/fractal_logo.png" alt="Logo">mathematik.ch</a></span></div>
 <div id="menu" style="display:none;">
   <h4>Inhalt</h4>
 
@@ -44,15 +38,15 @@
 <h4>Sinus, Cosinus und Tangens eines Winkels</h4>
 
 <p>Hier wird die Definition für den Sinus-, Cosinus- bzw. Tangenswert eines 
-Winkels graphisch dargestellt. Wählen Sie mit Hilfe der Checkbox eine dieser trigonometrischen Funktionen. Im 
+Winkels graphisch dargestellt. Wählen Sie mit Hilfe der radio eine dieser trigonometrischen Funktionen. Im 
 linken Teil (Einheitskreis) lässt sich der voreingestellte Winkel durch Ziehen mit der Maus verändern. 
 Alternativ können Sie auch durch Klicken auf 'Step' den Winkel schrittweise verändern.<br> 
 Rechts ist der Graph der betreffenden Winkelfunktion gezeichnet. Die gleichfarbig gekennzeichneten Strecken bzw. 
 Kreisbogen sind jeweils gleich lang.</p>
 
-<p><input id="Sinus" type="checkbox" onclick="OnChangeCheckbox1 (this)"> Sinus &nbsp;&nbsp;&nbsp;
-<input id="Cosinus" type="checkbox" onclick="OnChangeCheckbox2 (this)"> Cosinus &nbsp;&nbsp;&nbsp;
-<input id="Tangens" type="checkbox" onclick="OnChangeCheckbox3 (this)"> Tangens </p>
+<p><label><input id="Sinus" type="radio" name="TrigFkt" onclick="OnChangeradio1 (this)"> Sinus</label> &nbsp;&nbsp;&nbsp;
+<label><input id="Cosinus" type="radio" name="TrigFkt" onclick="OnChangeradio2 (this)"> Cosinus</label> &nbsp;&nbsp;&nbsp;
+<label><input id="Tangens" type="radio" name="TrigFkt" onclick="OnChangeradio3 (this)"> Tangens</label></p>
 
 <p><span style="color:red">Winkel = </span><span id="phi">   </span>° &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <span style="color:blue">Funktionswert = </span><span id="res">   </span></p>	

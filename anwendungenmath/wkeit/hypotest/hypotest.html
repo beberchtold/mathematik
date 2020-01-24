@@ -1,30 +1,18 @@
 <!DOCTYPE html>
 <html lang="de">
-<head>
-<meta charset="utf-8">
+<HEAD>
+<meta HTTP-EQUIV="Content-type" CONTENT="text/html; CHARSET=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta NAME="Description" CONTENT="Testen von Hypothesen, einseitig, zweiseitig">
-<meta name="author" content="B.Berchtold">
-<title>Testen von Hypothesen</title>
+<META HTTP-EQUIV="REFRESH" CONTENT="0; URL=https://www.mathematik.ch/anwendungenmath/wkeit/hypotest">
 <LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
-<script src="hypotest_min.js"></script>
-<script async src="/script/show-hide.js"></script>
-<style>input[type=number] {
-  width:2.5em;
-  -moz-appearance: textfield;
-}
-</style>
-</head>
+<script src="/script/show-hide.js"></script>
+</HEAD>
 
 <body>
-<div class="page">
-<table class="c">
-<tr><td style="width:10%">
-<img width=28 height=27 src="/img/menuicon.png" style="cursor:pointer" title="Inhalt" alt="menu" onClick="ReverseDisplay()">
-</td><td class="c" style="width:80%">
-<a href="/"><img width=257 height=35 src="/img/mathematik.png" alt="mathematik.ch"></a>
-</td><td style="width:10%">&nbsp;</td></tr>
-</table>
+<div class="page"><div style="display:flex;align-items:center;">
+<span id="menuicon" style="display:inline-block;"><img src="/img/menuicon.png" title="Inhalt" alt="menu" onClick="ReverseDisplay()"></span><span id="closeicon" style="display:none;"><img src="/img/closeicon.png" title="schliessen" alt="schliessen" onClick="ReverseDisplay()"></span><span class="Haupt"><a href="/" style="color:black"><img src="/img/fractal_logo.png" alt="Logo">mathematik.ch</a></span>
+</div>
+
 <div id="menu" style="display:none;">
   <h4>Inhalt</h4>
 
@@ -46,101 +34,14 @@
 <!-- CONTENT -->
 <div id="content" style="display:block;">
 
-<h4>Testen von Hypothesen</h4>
+<h4>Die Seite wurde verschoben</h4>
+<p>Falls Sie nicht automatisch weitergeleitet werden ...<br>
+Aendern Sie bitte Ihre bookmarks zu <a href="https://www.mathematik.ch/anwendungenmath/wkeit/hypotest">
+https://www.mathematik.ch/anwendungenmath/wkeit/hypotest/</a></p>
 
-  <p>Sie können folgende Parameter wählen:</p>
-  <ol>
-    <li><b>Wahrscheinlichkeit p<sub>0</sub></b>, die bei der Nullhypothese angenommen wird.</li>
-    <li><b>Stichprobenumfang n</b> (n &le; 300)</li>
-    <li><b>Signifikanzniveau S-niveau</b>  (S.niv &le;= 8.5)</li>
-    <li>Testtyp <b>linksseitig, rechtsseitig, zweiseitig</b></li>
-    <li>Histogramm der Wahrscheinlichkeiten oder der <b>Summe</b> der Wahrscheinlichkeiten (*1 oder *10)</li>
-  </ol>
-  <p><b>Klicken Sie nach Ende von Änderungen in einem Inputfeld (1. - 3.) auf den Start-Knopf!</b></p>
-
-<p>Im oberen Grafikfenster wird wechselweise das Histogramm der Wahrscheinlichkeiten
-  <b> P(X=k)</b> oder die Summenfunktion dargestellt. Der <b><span style="color:#FF0000"> Verwerfungsbereich
-  V</span></b> des Test ist jeweils rot gekennzeichnet. Die waagrechte magentafarbene Linie gibt das 
-  gewählte Signifikanzniveau an. (man redet von signifikant &rarr; Signifikanzniveau=5%, 
-  hochsignifikant &rarr; Signifikanzniveau=1%)</p>
-
-  <p>Bei einem linksseitigen Test wird die Summe der Wahrscheinlichkeiten <b>P(X &le; k) </b>dargestellt, bei einem 
-  rechtsseitigen Test die Summe <b>P(X &ge; k)</b>  . Bei einem zweiseitigen Test trennt die senkrechte grüne Linie die 
-  Bereiche, in denen <b>P(X &le; k)</b> bzw. <b>P(X &ge; k)</b> dargestellt werden.</p>
-  
-  <p>Im Resultat wird der <b><span style="color:#FF0000">Verwerfungsbereich V</span></b> und der <b>Alpha-Fehler</b> 
-  (Fehler 1. Art) angegeben.</p>
-  <p>Im unteren Grafikfenster wird der <b>Beta-Fehler</b> (Fehler 2. Art) in Abhängigkeit von p dargestellt.</p>
-
-<div class="colgroup-2">
-  <div class="col" id="containercanvas">
-     <canvas id="myCanvas">Ihr Browser kann kein Canvas!</canvas>
-	 <br><br>
-	 <canvas id="myCanvas2">Ihr Browser kann kein Canvas!</canvas>
-  </div>
-  
-  <div class="col">
-    <br>
-    <p>p<sub>0</sub> <input id="p0" type="number" min=0 max=1 step="any" value="0.5" lang="en"> &nbsp;&nbsp;&nbsp;
-    Umfang n <input id="Anz" type="number" min="10" max="300" value="100"> &nbsp;&nbsp;&nbsp;
-    S-niveau <input id="Sniveau" type="number" min=0.5 max=8.5 step="any" value="5" lang="en">
-    </p>
-	<p><input type="button" value="Start" onclick="einlesen()"></p>
-	<p>linksseitig <input id="Links" type="checkbox" onclick="OnChangeCheckbox1 (this)"> &nbsp;&nbsp;&nbsp;
-	rechtsseitig <input id="Rechts" type="checkbox" onclick="OnChangeCheckbox2 (this)"> &nbsp;&nbsp;&nbsp;
-    zweiseitig <input id="Zweis" type="checkbox" onclick="OnChangeCheckbox3 (this)"></p>
-    <p>Histogramm:<br>
-    W'keit <input id="Wkeit" type="checkbox" onclick="OnChangeCheckbox4 (this)"> &nbsp;&nbsp;
-    Summe *1 <input id="Summe" type="checkbox" onclick="OnChangeCheckbox5 (this)"> &nbsp;&nbsp;
-	Summe *10 <input id="Summe10" type="checkbox" onclick="OnChangeCheckbox6 (this)">
-	</p>	
-	<p style="margin-top:30px"><b>Resultate</b></p>
-	<p>Verwerfungsbereich = <span id="VerB"> </span><br>
-	Alpha-Fehler = <span id="Alpha"> </span><br><br>
-	Beta-Fehler (Punkt in unterer Grafik anklicken):<br>
-	Bei p = <span id="Pbeta"> </span> &nbsp;&nbsp;&nbsp; &beta; = <span id="Beta"> </span></p>
-  </div>       
-</div>	
-
-<p>Beispiele:</p>
-
-  <p>1. Voreingestellt ist das Testen einer Münze bei der
-  Nullhypothese H<sub>0</sub>: <i>Münze ist symmetrisch</i>. Die Behauptung <i>Münze ist
-  unsymmetrisch</i> wird mit einem zweiseitigen Test vom Umfang n = 100 und dem
-  Signifikanzniveau 5% geprüft. Der Verwerfungsbereich ergibt sich zu
-  {0..39} und {61..100}. Zeigt also die Münze 66-mal Kopf, so wird man H<sub>0</sub>
-  verwerfen. Die W'keit, dabei einen Fehler 1.Art begangen zu haben, beträgt
-  3.521%.<br>
-  Im oberen Grafikfenster wird bei der Wahl von 
-  "Summenfunktion *10&quot; das Signifikanzniveau als waagerechte Linie bei 0,025
-  dargestellt (zweiseitig!).</p>
-  <p>2.
-  Der Lieferant eines Artikels garantiert, dass der
-  Ausschussanteil höchstens 3% beträgt. Ein Abnehmer entnimmt einer Lieferung 100 
-  Artikel und findet 7 Ausschussstücke. Kann man daraus mit einer Signifikanz von (höchstens) 5% schliessen, 
-  dass der Ausschussanteil höher als 3% ist?<br>
-  Lösung: Der Test ist rechtsseitig, da eine grosse Anzahl defekter Artikel gegen die Behauptung des Lieferanten 
-  spricht. Es werden folgende Eingabeparameter eingestellt:<br>
-  p<sub>0</sub> = 0.03 (nachher Klick auf Start-Knopf) n = 100  S. niv = 5%; Testtyp rechtsseitig</p>
-  <p>Im oberen Grafikfenster wird bei der Wahl von 
-  "Summenfunktion *10&quot; das Signifikanzniveau als waagerechte Linie bei 0,05 
-  dargestellt. Die unterhalb dieser Linie liegenden Summenwerte&nbsp; P(X >=  k) sind rot eingezeichnet und definieren den 
-  Verwerfungsbereich. Bei 'Resultate' werden der Verwerfungsbereich und der Alpha-Fehler angezeigt: V = {7,..,100}
-  &nbsp;&nbsp;&nbsp; Alpha = 3.123%<br>
-  <br>
-  Wenn der Tester also 7 oder mehr defekte Stücke findet, wird er die Lieferung beanstanden. Die Wahrscheinlichkeit, dabei dem 
-  Lieferanten Unrecht zu tun, weil die defekten Stücke in der Stichprobe zufällig gehäuft auftraten, beträgt 3.123%.<br>
-  Im unteren Fenster kann die Wahrscheinlichkeit bestimmt werden, mit der der 
-  Tester einen von 3% abweichenden Anteil defekter Stücke beim Test nicht 
-  bemerkt (Beta-Fehler). Durch Anklicken des entsprechenden Punktes wird angezeigt, dass dieser Fehler bei einem 
-  Anteil defekter Artikel von 10% etwa 11.72% beträgt.</p>
-<p>Die Resultate können natürlich auch mit dem Formular unter
-   dem Link <a href="../binomialvert.html">'Binomialverteilung'</a> überprüft werden.</p>
-		
-</div>  
+</div>
 <!-- EOF: CONTENT -->
 
- 
 <div id="footer">
 <p><small>
 ©1997 -
@@ -150,4 +51,3 @@
 </div>
 </body>
 </html>
-

@@ -9,19 +9,13 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-alpha/katex.min.css" TYPE="text/css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-alpha/katex.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-alpha/contrib/auto-render.min.js"></script>
-<script src="einseitigeAbleitung_min.js"></script>
+<script src="einseitigeAbleitung.js"></script>
 <script async src="/script/show-hide.js"></script>
 </HEAD>
 
 <body>
-<div class="page">
-<table class="c">
-<tr><td style="width:10%">
-<img width=28 height=27 src="/img/menuicon.png" style="cursor:pointer" title="Inhalt" alt="menu" onClick="ReverseDisplay()">
-</td><td class="c" style="width:80%">
-<a href="/"><img width=257 height=35 src="/img/mathematik.png" alt="mathematik.ch"></a>
-</td><td style="width:10%">&nbsp;</td></tr>
-</table>
+<div class="page"><div style="display:flex;align-items:center;">
+<span id="menuicon" style="display:inline-block;"><img src="/img/menuicon.png" title="Inhalt" alt="menu" onClick="ReverseDisplay()"></span><span id="closeicon" style="display:none;"><img src="/img/closeicon.png" title="schliessen" alt="schliessen" onClick="ReverseDisplay()"></span><span class="Haupt"><a href="/" style="color:black"><img src="/img/fractal_logo.png" alt="Logo">mathematik.ch</a></span></div>
 <div id="menu" style="display:none;">
   <h4>Inhalt</h4>
 
@@ -74,15 +68,13 @@
        <canvas id="myCanvas">Ihr Browser kann kein Canvas!</canvas>
   </div>
   <div class="col">
-    <br>
-    <div><input id="x0" type="checkbox" onclick="OnChangeCheckbox0 (this)"> x &rarr; x<sub>0</sub>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	<input id="x1" type="checkbox" onclick="OnChangeCheckbox1 (this)"> x &rarr; x<sub>1</sub></div><br>
-    <div><input id="links" type="checkbox" onclick="OnChangeCheckboxl (this)"> linksseitig &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <p><label><input id="x0" type="radio" name="x" onclick="OnChangeradio0 (this)"> x &rarr; x<sub>0</sub></label>
+	<label style="margin-left:40px;"><input id="x1" type="radio" name="x" onclick="OnChangeradio1 (this)"> x &rarr; x<sub>1</sub></label></p>
+    <label style="margin-right:30px;"><input id="links" type="radio" name="lr" onclick="OnChangeradiol (this)"> linksseitig</label>
 	Sekantensteigung: <span id="lsteig">   </span>
-	</div><br>
-	<div><input id="rechts" type="checkbox" onclick="OnChangeCheckboxr (this)"> rechtsseitig &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<br>
+	<label style="margin-right:20px;"><input id="rechts" type="radio" name="lr" onclick="OnChangeradior (this)"> rechtsseitig</label>
 	Sekantensteigung: <span id="rsteig">   </span>
-	</div>
 	<br>
     <p><input type="button" value="Step" onclick="dostep()"></p>	
   </div>

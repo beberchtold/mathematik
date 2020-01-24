@@ -6,19 +6,13 @@
 <meta NAME="Description" CONTENT="Der Kreis des Apollonius">
 <TITLE>Der Kreis des Apollonius</title>
 <LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
-<script src="KreisdesApollonius_min.js"></script>
+<script src="KreisdesApollonius.js"></script>
 <script async src="/script/show-hide.js"></script>
 </HEAD>
 
 <body>
-<div class="page">
-<table class="c">
-<tr><td style="width:10%">
-<img width=28 height=27 src="/img/menuicon.png" style="cursor:pointer" title="Inhalt" alt="menu" onClick="ReverseDisplay()">
-</td><td class="c" style="width:80%">
-<a href="/"><img width=257 height=35 src="/img/mathematik.png" alt="mathematik.ch"></a>
-</td><td style="width:10%">&nbsp;</td></tr>
-</table>
+<div class="page"><div style="display:flex;align-items:center;">
+<span id="menuicon" style="display:inline-block;"><img src="/img/menuicon.png" title="Inhalt" alt="menu" onClick="ReverseDisplay()"></span><span id="closeicon" style="display:none;"><img src="/img/closeicon.png" title="schliessen" alt="schliessen" onClick="ReverseDisplay()"></span><span class="Haupt"><a href="/" style="color:black"><img src="/img/fractal_logo.png" alt="Logo">mathematik.ch</a></span></div>
 <div id="menu" style="display:none;">
   <h4>Inhalt</h4>
 
@@ -70,25 +64,23 @@ Entdeckung gemacht: </p>
 
 <p>Prüfen Sie diese Behauptungen an folgender Zeichnung:<br>
 Durch Verschieben der Ecke C1 (auf dem Kreis) sehen Sie, dass dieses Verhältnis konstant bleibt<br>
-Durch Verschieben der Ecke C (Checkbox aktivieren) können Sie das Verhältnis b:a verändern.
-Alternativ können Sie auch mit 'Step' die Position von C1 (bzw. C bei angekreuzter Checkbox) schrittweise verändern.
+Durch Verschieben der Ecke C (Radiobutton aktivieren) können Sie das Verhältnis b:a verändern.
+Alternativ können Sie auch mit 'Step' die Position von C1 (bzw. C bei angekreuztem Radiobutton) schrittweise verändern.
 </p>
 
 <div class="colgroup-2">
   <div class="col" id="containercanvas">
        <canvas id="myCanvas">Ihr Browser kann kein Canvas!</canvas>
-  </div>
-  
+  </div> 
   <div class="col">
     <p>Verhältnis AC : BC = b : a = <span id="b_zu_a">   </span></p>
 	<p><span style="color:red">Verhältnis AT<sub>1</sub> : BT<sub>1</sub> = </span><span id="AT1_zu_BT1">   </span></p>
     <p><span style="color:red">Verhältnis AT<sub>2</sub> : BT<sub>2</sub> = </span><span id="AT2_zu_BT2">   </span></p>
     <p><span style="color:green">Verhältnis AC<sub>1</sub> : BC<sub>1</sub> = </span><span id="AC1_zu_BC1">   </span></p>
-	<p><input id="VarC1" type="checkbox" onclick="OnChangeCheckbox1 (this)"> Position Punkt C1 verändern</p>
-	<p><input id="VarC" type="checkbox" onclick="OnChangeCheckbox2 (this)"> Position Punkt C verändern</p>
+	<p><label><input id="VarC1" type="radio" name="C1C"> Position Punkt C1 verändern</label></p>
+	<p><label><input id="VarC" type="radio" name="C1C"> Position Punkt C verändern</label></p>
     <p><input type="button" value="Step" onclick="dostep()"></p>	
-  </div>
-        
+  </div>     
 </div>	   
 
 </div>

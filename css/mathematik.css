@@ -1,5 +1,5 @@
 ﻿@media all and (min-width:60em){body{background:#ededed;margin-top:0}
-div.page{max-width:60em;margin-left:30px;margin-right:auto;padding-left:10px;padding-right:10px;padding-top:6px;font-size:16px;font-family:Arial,Helvetica,Verdana,Tahoma,Sans,sans-serif;background:#fff}}
+div.page{max-width:60em;margin-left:30px;margin-right:auto;padding-left:10px;padding-right:10px;padding-top:4px;font-size:16px;font-family:Arial,Helvetica,Verdana,Tahoma,Sans,sans-serif;background:#fff}}
 @media all and (max-width:60em){div.page{margin-left:auto;margin-right:auto;font-size:16px;font-family:Arial,Helvetica,Verdana,Tahoma,Sans,sans-serif;background:#fff}}
 A:link{color:#00f;text-decoration:none}
 A:active{color:red;text-decoration:none}
@@ -7,15 +7,16 @@ A:visited{color:#30f;text-decoration:none}
 A:hover{color:red;text-decoration:none}
 h2{font-size:24px;font-family:Helvetica,Arial}
 h3{font-size:22px;font-family:Helvetica,Arial}
-h4{font-size:20px;font-family:Helvetica,Arial;margin-top:5px;margin-bottom:15px}
+h4{font-size:20px;font-family:Helvetica,Arial;margin-top:15px;margin-bottom:15px}
 small{font-size:14px}
 ul{list-style-type:none;margin:0;padding:0}
 #menu ul>li{padding:6px}
-input[type=button] {background-color:#E0FFFF}
+input[type=button] {cursor:pointer;background-color:#E0FFFF}
 input[type=submit] {background-color:#E0FFFF}
 select{background-color:#E0FFFF}
-input[type=checkbox] {width:17px;height:17px;outline:2px solid;margin-top:8px;margin-bottom:-2px;background:#E0FFFF;-webkit-appearance:none;-moz-appearance:none;}
-input[type=checkbox]:checked:after {font-size:14px;content:"\2714";}
+input[type=radio]{width:16px;height:16px;cursor:pointer;}
+input[type=checkbox] {width:18px;height:18px;outline:1px solid;margin-top:8px;margin-bottom:-2px;background:#E0FFFF;-webkit-appearance:none;-moz-appearance:none;}
+input[type=checkbox]:checked:after {font-size:14px;content:"\2714";padding-left:3px;}
 input{font-size:16px;background:#fff}
 option{font-size:16px;background:#fff}
 table.c{width:100%}
@@ -24,10 +25,15 @@ td.c{vertical-align:top;text-align:center;background-color:#fff}
 td.r{vertical-align:top;text-align:right;background-color:#fff}
 td.amazon{font-size:11px;vertical-align:top;text-align:center;background-color:#fff}
 span.ol{font-size:15px;font-family:Arial,Helvetica;text-decoration:overline}
-img{border:0}img.a{width:100%;height:auto;min-width:90px;max-width:200px}
-img{border:0}img.b{width:100%;height:auto;min-width:80px;max-width:120px}
+span.Haupt{margin-left:auto;margin-right:auto;font-family:'Times New Roman',Times,serif;font-weight:bold;font-size:30px;}
+img{border:0}
+img.a{width:100%;height:auto;min-width:90px;max-width:200px}
+img.b{width:100%;height:auto;min-width:80px;max-width:120px}
 img.center{display:block;margin-left:auto;margin-right:auto}
 img[src="/img/help.gif"]{width:24px;height:30px;vertical-align:middle;}
+img[src="/img/menuicon.png"]{width:26px;height:26px;cursor:pointer;vertical-align:middle;}
+img[src="/img/closeicon.png"]{width:26px;height:26px;cursor:pointer;vertical-align:middle;}
+img[src="/img/fractal_logo.png"]{width:38px;height:33px;vertical-align:middle;}
 span.b{padding:8px;font-size:20px;}
 .group:after,[class*=colgroup]:after{content:".";display:block;height:0;clear:both;visibility:hidden}
 .col{position:relative}

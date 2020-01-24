@@ -9,18 +9,15 @@
 <LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
 <script src="affineabb.js"></script>
 <script async src="/script/show-hide.js"></script>
-<style>input[type=number] {width:2.5em;margin-bottom:5px;-moz-appearance: textfield;}</style>
+<style>input[type=number] {width:2.5em;margin-bottom:5px;-moz-appearance: textfield;}
+li{padding-bottom:5px;}</style>
+</style>
 </head>
 
 <body>
-<div class="page">
-<table class="c">
-<tr><td style="width:10%">
-<img width=28 height=27 src="/img/menuicon.png" style="cursor:pointer" title="Inhalt" alt="menu" onClick="ReverseDisplay()">
-</td><td class="c" style="width:80%">
-<a href="/"><img width=257 height=35 src="/img/mathematik.png" alt="mathematik.ch"></a>
-</td><td style="width:10%">&nbsp;</td></tr>
-</table>
+<div class="page"><div style="display:flex;align-items:center;">
+
+<span id="menuicon" style="display:inline-block;"><img src="/img/menuicon.png" title="Inhalt" alt="menu" onClick="ReverseDisplay()"></span><span id="closeicon" style="display:none;"><img src="/img/closeicon.png" title="schliessen" alt="schliessen" onClick="ReverseDisplay()"></span><span class="Haupt"><a href="/" style="color:black"><img src="/img/fractal_logo.png" alt="Logo">mathematik.ch</a></span></div>
 <div id="menu" style="display:none;">
   <h4>Inhalt</h4>
 
@@ -68,13 +65,13 @@
 
   <div class="col">
 <ul>
-<li><input type="checkbox" id="Quadrat" onclick="OnChangeCheckbox1 (this)"> Bild des Einheitsquadrates</li>
-<li><input type="checkbox" id="Kreis" checked onclick="OnChangeCheckbox2 (this)"> Bild des Kreises mit Mittelpunkt<br>
+<li><label><input type="radio" id="Quadrat" name="Obj" onclick="OnChangeradio1 (this)"> Bild des Einheitsquadrates</label></li>
+<li><label><input type="radio" id="Kreis" checked name="Obj" onclick="OnChangeradio2 (this)"> Bild des Kreises mit Mittelpunkt</label><br>
 <span style="margin-right:30px"></span>mx <input id="mx" type="number" step="any" value="0" lang="en">
 my <input id="my" type="number" step="any" value="1.5" lang="en">      
 Radius <input id="r" type="number" step="any" min=0 value="1.2" lang="en"></li>        
-<li><input type="checkbox" id="F" onclick="OnChangeCheckbox3 (this)"> Bild des Buchstaben F</li>
-<li><input type="checkbox" id="Dreieck" onclick="OnChangeCheckbox4 (this)"> Bild des Dreiecks mit<br>
+<li><label><input type="radio" id="F" name="Obj" onclick="OnChangeradio3 (this)"> Bild des Buchstaben F<label></li>
+<li><label><input type="radio" id="Dreieck" name="Obj" onclick="OnChangeradio4 (this)"> Bild des Dreiecks mit<label><br>
 <span style="margin-right:30px"></span>x1 <input id="x1" type="number" step="any" value="0">
 y1 <input id="y1" type="number" step="any" value="0" lang="en">     
 x2 <input id="x2" type="number" step="any" value="4" lang="en">       
@@ -82,7 +79,7 @@ y2 <input id="y2" type="number" step="any" value="1" lang="en"><br>
 <span style="margin-right:30px"></span>x3 <input id="x3" type="number" step="any" value="2" lang="en">      
 y3 <input id="y3" type="number" step="any" value="-1" lang="en">
 </li>    
-<li><input type="checkbox" id="Funktion" onclick="OnChangeCheckbox5 (this)"> Bild der Funktion mit Gleichung <br>
+<li><label><input type="radio" id="Funktion" name="Obj" onclick="OnChangeradio5 (this)"> Bild der Funktion mit Gleichung<label><br>
 <span style="margin-right:30px"></span>y = f(x) = <input id="f" type="text" style="width:9em;" value='x*x-1'> 
       <a href="infos.html"><img src="/img/help.gif" alt="Hilfe"></a></li>
 </ul>

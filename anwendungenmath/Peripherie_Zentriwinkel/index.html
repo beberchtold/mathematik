@@ -11,14 +11,8 @@
 </head>
 
 <body>
-<div class="page">
-<table class="c">
-<tr><td style="width:10%">
-<img width=28 height=27 src="/img/menuicon.png" style="cursor:pointer" title="Inhalt" alt="menu" onClick="ReverseDisplay()">
-</td><td class="c" style="width:80%">
-<a href="/"><img width=257 height=35 src="/img/mathematik.png" alt="mathematik.ch"></a>
-</td><td style="width:10%">&nbsp;</td></tr>
-</table>
+<div class="page"><div style="display:flex;align-items:center;">
+<span id="menuicon" style="display:inline-block;"><img src="/img/menuicon.png" title="Inhalt" alt="menu" onClick="ReverseDisplay()"></span><span id="closeicon" style="display:none;"><img src="/img/closeicon.png" title="schliessen" alt="schliessen" onClick="ReverseDisplay()"></span><span class="Haupt"><a href="/" style="color:black"><img src="/img/fractal_logo.png" alt="Logo">mathematik.ch</a></span></div>
 <div id="menu" style="display:none;">
   <h4>Inhalt</h4>
 
@@ -53,9 +47,9 @@ gleichen Bogen</strong><br>
 </div>
 
 <p>Prüfen Sie diese Behauptungen an folgender Figur:<br>
-Sie können den Scheitel P des Peripheriewinkels mit der Maus (auf dem Kreis) verschieben. Alternativ können Sie auch 
+Sie können den Scheitel P des Peripheriewinkels mit der Maus (auf dem Kreis) bewegen. Alternativ können Sie auch 
 mit 'Step' die Lage von P schrittweise verändern.<br>
-Durch Verschieben der Ecke B (Checkbox aktivieren) verändern Sie den Zentriwinkel und damit auch den dazugehörigen 
+Durch Verschieben der Ecke B (Radiobutton aktivieren) verändern Sie den Zentriwinkel und damit auch den dazugehörigen 
 Peripheriewinkel.<br> Immer gilt aber: Zentriwinkel = 2*Peripheriewinkel<br>
 Sie können dadurch auch den <strong>Satz des <a href="/mathematiker/thales.html">Thales</a></strong> experimentell nachvollziehen:<br>
 Der Peripheriewinkel über dem Kreisdurchmesser AB (also Zentriwinkel = 180°) misst 90° &rarr; <strong>Thaleskreis</strong>.</p>
@@ -68,9 +62,9 @@ Der Peripheriewinkel über dem Kreisdurchmesser AB (also Zentriwinkel = 180°) m
     <br>
     <p>Zentriwinkel = <span id="zentri">   </span>°</p>
 	<p><span style="color:red">Peripheriewinkel = </span><span id="peripherie">   </span>°</p>
-	<p><input id="VarP" type="checkbox" onclick="OnChangeCheckbox1 (this)"> Lage Punkt P verändern</p>
-	<p><input id="VarB" type="checkbox" onclick="OnChangeCheckbox2 (this)"> Lage Punkt B verändern</p>
-	<p><input id="Tk" type="checkbox" onclick="OnChangeCheckbox3 (this)"> Thaleskreis</p>
+    <p><label><input id="VarP" type="radio" checked="checked" name="PB"> Lage Punkt P verändern</label></p>
+    <p><label><input id="VarB" type="radio" name="PB" onclick="OnChangeradio2 (this)"> Lage Punkt B verändern</label></p>
+	<p><input id="Tk" type="checkbox" onclick="OnChangeCheckbox (this)"> Thaleskreis</p>
     <p><input type="button" value="Step" onclick="dostep()"></p>	
   </div>       
 </div>	   

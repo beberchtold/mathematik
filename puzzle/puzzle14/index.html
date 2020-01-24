@@ -6,19 +6,13 @@
 <meta NAME="Description" CONTENT="Puzzle14: Schiebepuzzle">
 <TITLE>Puzzle14: Schiebepuzzle</title>
 <LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
-<script src="puzzle14_min.js"></script>
+<script src="puzzle14.js"></script>
 <script async src="/script/show-hide.js"></script>
 </HEAD>
 
 <body>
-<div class="page">
-<table class="c">
-<tr><td style="width:10%">
-<img width=28 height=27 src="/img/menuicon.png" style="cursor:pointer" title="Inhalt" alt="menu" onClick="ReverseDisplay()">
-</td><td class="c" style="width:80%">
-<a href="/"><img width=257 height=35 src="/img/mathematik.png" alt="mathematik.ch"></a>
-</td><td style="width:10%">&nbsp;</td></tr>
-</table>
+<div class="page"><div style="display:flex;align-items:center;">
+<span id="menuicon" style="display:inline-block;"><img src="/img/menuicon.png" title="Inhalt" alt="menu" onClick="ReverseDisplay()"></span><span id="closeicon" style="display:none;"><img src="/img/closeicon.png" title="schliessen" alt="schliessen" onClick="ReverseDisplay()"></span><span class="Haupt"><a href="/" style="color:black"><img src="/img/fractal_logo.png" alt="Logo">mathematik.ch</a></span></div>
 <div id="menu" style="display:none;">
   <h4>Inhalt</h4>
 
@@ -44,7 +38,7 @@
 
 <p>
 Stellen Sie durch horizontales und vertikales Verschieben der einzelnen
-Bausteine (Zuerst Checkbox der Richtung wählen, dann Click auf Baustein) die Vorlage her!<br>
+Bausteine (Zuerst radio der Richtung wählen, dann Click auf Baustein) die Vorlage her!<br>
 Der Baustein bewegt sich so lange, bis er auf den nächsten Stein oder
 einen Farbblock trifft. Stösst er auf einen Farbblock, so nimmt er dessen Farbe an!
 </p>
@@ -62,10 +56,10 @@ einen Farbblock trifft. Stösst er auf einen Farbblock, so nimmt er dessen Farbe
 	   <span id="message" style="margin-left:40px">  </span>
 	</p>	
 	<p>Verschieben des Bausteins nach:<br>
-	<input id="links" type="checkbox" onclick="OnChangeCheckbox1 (this)"> links &nbsp;&nbsp;&nbsp;&nbsp;
-	<input id="rechts" type="checkbox" onclick="OnChangeCheckbox2 (this)"> rechts &nbsp;&nbsp;&nbsp;&nbsp;
-	<input id="oben" type="checkbox" onclick="OnChangeCheckbox3 (this)"> oben &nbsp;&nbsp;&nbsp;&nbsp;
-	<input id="unten" type="checkbox" onclick="OnChangeCheckbox4 (this)"> unten</p>		
+	<label><input id="links" type="radio" name="Richtung">links</label> &nbsp;&nbsp;&nbsp;
+	<label><input id="rechts" type="radio" name="Richtung">rechts</label> &nbsp;&nbsp;&nbsp;
+	<label><input id="oben" type="radio" name="Richtung">oben</label> &nbsp;&nbsp;&nbsp;
+	<label><input id="unten" type="radio" name="Richtung">unten</label></p>		
   </div>
 </div>	   
 

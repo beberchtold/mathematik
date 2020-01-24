@@ -6,19 +6,13 @@
 <meta NAME="Description" CONTENT="Eulersche Gerade, Schwerpunkt, Umkreismittelpunkt und Höhenschnittpunkt eines Dreiecks">
 <TITLE>Euler'sche Gerade</title>
 <LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
-<script src="EulerGerade_min.js"></script>
+<script src="EulerGerade.js"></script>
 <script async src="/script/show-hide.js"></script>
 </HEAD>
 
 <body>
-<div class="page">
-<table class="c">
-<tr><td style="width:10%">
-<img width=28 height=27 src="/img/menuicon.png" style="cursor:pointer" title="Inhalt" alt="menu" onClick="ReverseDisplay()">
-</td><td class="c" style="width:80%">
-<a href="/"><img width=257 height=35 src="/img/mathematik.png" alt="mathematik.ch"></a>
-</td><td style="width:10%">&nbsp;</td></tr>
-</table>
+<div class="page"><div style="display:flex;align-items:center;">
+<span id="menuicon" style="display:inline-block;"><img src="/img/menuicon.png" title="Inhalt" alt="menu" onClick="ReverseDisplay()"></span><span id="closeicon" style="display:none;"><img src="/img/closeicon.png" title="schliessen" alt="schliessen" onClick="ReverseDisplay()"></span><span class="Haupt"><a href="/" style="color:black"><img src="/img/fractal_logo.png" alt="Logo">mathematik.ch</a></span></div>
 <div id="menu" style="display:none;">
   <h4>Inhalt</h4>
 
@@ -43,7 +37,7 @@
 <h4>Euler'sche Gerade eines Dreiecks</h4>  
 
 <p>Im Dreieck <I>ABC</I> gibt es verschiedene interessante Punkte und spezielle Linien. Sie wandern alle entsprechend 
-mit, wenn Sie die Eckpunkte <I>C</I> und B (Checkbox aktivieren) mit der Maus (B und C bleiben auf dem Umkreis) 
+mit, wenn Sie die Eckpunkte <I>C</I> und B (Radiobutton aktivieren) mit der Maus (B und C bleiben auf dem Umkreis) 
 verschieben.<br>
 Alternativ können Sie auch mit 'Step' die Positionen von C (bzw.B) schrittweise verändern.</p>
 <div style="border:1px solid;padding:5px;"><b>Euler'sche Gerade des Dreiecks</b><br>
@@ -57,9 +51,9 @@ Die drei Punkte M, S und H liegen auf einer Geraden, der sog. <I>Euler'schen Ger
   </div>
 
   <div class="col">
-	<p><input id="VarC" type="checkbox" onclick="OnChangeCheckbox1 (this)"> Position Punkt C verändern</p>
-	<p><input id="VarB" type="checkbox" onclick="OnChangeCheckbox2 (this)"> Position Punkt B verändern</p>
-    <p><input type="button" value="Step" onclick="dostep()"></p>
+	<p><label><input id="VarC" type="radio" name="CB"> Position Punkt C verändern</label></p>
+	<p><label><input id="VarB" type="radio" name="CB"> Position Punkt B verändern</label></p>
+    <p><label><input type="button" value="Step" onclick="dostep()"></label></p>
 	<p>Klick auf <input type="button" value="Reset" onclick="reset()"> stellt Anfangszustand her.</p>
   </div>
 	
