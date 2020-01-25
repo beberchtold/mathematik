@@ -52,10 +52,12 @@ Kreisbogen sind jeweils gleich lang.</p>
 <label><input id="Tangens" type="radio" name="TrigFkt" onclick="OnChangeradio3 (this)"> Tangens</label></p>
 
 <p><span style="color:red">Winkel = </span><span id="phi">   </span>° &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<span style="color:blue">Funktionswert = </span><span id="res">   </span></p>	
+<span style="color:blue">Wert = </span><span id="res">   </span></p>	
 <p><input type="button" value="Step" onclick="dostep()"></p>	
 
-<canvas id="myCanvas" width=500 height=300>Ihr Browser kann kein Canvas!</canvas>
+<div id="containercanvas">
+     <canvas id="myCanvas">Ihr Browser kann kein Canvas!</canvas>
+  </div>
 
 </div>
 <!-- EOF: CONTENT -->
