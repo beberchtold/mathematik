@@ -83,12 +83,12 @@ var math=[
 '<a href="/mathematiker/newton.html"><img src="/img/newton.jpg" class="b"></a>',
 '<a href="/mathematiker/fermat.html"><img src="/img/fermat.jpg" class="a"></a>',
 '<a href="/mathematiker/gauss.html"><img src="/img/gauss.jpg" class="b"></a>',
-'<a href="mathematiker/galois.html"><img src="/img/galois.jpg" class="b"></a>',
-'<a href="/mathematiker/goedel.html"><img src="/img/goedel.jpg" class="b"></a>',
+'<a href="mathematiker/galois.html"><img src="/mathematiker/Galois.jpg" class="b"></a>',
+'<a href="/mathematiker/goedel.html"><img src="/mathematiker/goedel.jpg" class="b"></a>',
 '<a href="/mathematiker/hilbert.html"><img src="/img/hilbert.jpg" class="b"></a>',
 '<a href="/mathematiker/einstein.html"><img src="/mathematiker/Einstein.jpg" class="a"></a>',
 '<a href="/mathematiker/leibniz.html"><img src="/img/leibniz.jpg" class="a" style="max-width:190px"></a>',
-'<a href="/mathematiker/abel.html"><img src="/img/abel.jpg" class="b"></a>'
+'<a href="/mathematiker/abel.html"><img src="/mathematiker/Abel.jpg" class="b"></a>'
 ];
 var txtmath=["Leonhard Euler","Isaac Newton","Pierre Fermat","C.F. Gauss","Evariste Galois","Kurt Gödel","David Hilbert","Albert Einstein","G.W. Leibniz","Niels Abel"];
 
