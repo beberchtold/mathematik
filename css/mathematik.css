@@ -1,10 +1,11 @@
 ﻿@media all and (min-width:60em){body{background:#fff;margin-top:0}
 div.page{max-width:60em;margin-left:5px;margin-right:auto;padding-left:10px;padding-right:10px;padding-top:4px;font-size:16px;font-family:Arial,Helvetica,Verdana,Tahoma,Sans,sans-serif;background:#fff}}
 @media all and (max-width:60em){div.page{margin-left:auto;margin-right:auto;font-size:16px;font-family:Arial,Helvetica,Verdana,Tahoma,Sans,sans-serif;background:#fff}}
-A:link{color:#00f;text-decoration:none}
-A:active{color:red;text-decoration:none}
-A:visited{color:#30f;text-decoration:none}
-A:hover{color:red;text-decoration:none}
+a:link{color:#00f;text-decoration:none}
+a:active{color:red;text-decoration:none}
+a:visited{color:#30f;text-decoration:none}
+a:hover{color:red;text-decoration:none}
+a.a:link{color:black;text-decoration:none}
 h2{font-size:24px;font-family:Helvetica,Arial}
 h3{font-size:22px;font-family:Helvetica,Arial}
 h4{font-size:20px;font-family:Helvetica,Arial;margin-top:15px;margin-bottom:15px}
