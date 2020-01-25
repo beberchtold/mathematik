@@ -5,7 +5,6 @@ a:link{color:#00f;text-decoration:none}
 a:active{color:red;text-decoration:none}
 a:visited{color:#30f;text-decoration:none}
 a:hover{color:red;text-decoration:none}
-a.a:link{color:black;text-decoration:none}
 h2{font-size:24px;font-family:Helvetica,Arial}
 h3{font-size:22px;font-family:Helvetica,Arial}
 h4{font-size:20px;font-family:Helvetica,Arial;margin-top:15px;margin-bottom:15px}
