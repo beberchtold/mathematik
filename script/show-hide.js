@@ -10,3 +10,4 @@ else
     document.getElementById('closeicon').style.display = "none";
     document.getElementById('menuicon').style.display = "inline-block";	}
 }
+Jahreszahl.innerHTML=new Date().getFullYear();
