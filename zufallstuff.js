@@ -39,7 +39,7 @@ var Link=[
 '<a href="/puzzle/puzzle3.html"><img src="/img/puzzle3.png" class="a"></a>',
 '<a href="/puzzle/puzzle4.html"><img src="/img/puzzle4.png" class="a"></a>',
 '<a href="/puzzle/puzzle5.html"><img src="/puzzle/img/puzzle5.png" class="a"></a>',
-'<a href="/puzzle/puzzle6.html"><img src="/img/puzzle6.png" class="a"></a>',
+'<a href="/puzzle/puzzle6.html"><img src="/puzzle/img/puzzle6.jpg" class="a"></a>',
 '<a href="/puzzle/puzzle7/"><img src="/img/door.png" class="a"></a>',
 '<a href="/puzzle/puzzle9.html"><img src="/img/puzzle9.png" class="a"></a>',
 '<a href="/puzzle/puzzle10.html"><img src="/img/puzzle10.jpg" class="a"></a>',
