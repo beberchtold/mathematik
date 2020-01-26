@@ -14,7 +14,7 @@ function start() {
 }
 
 var Spiel=[
-'<a href="anwendungenmath/blackjack/"><img src="/img/blackjack.jpg" class="a"></a>',
+'<a href="/anwendungenmath/blackjack/"><img src="/img/blackjack.jpg" class="a"></a>',
 '<a href="/anwendungenmath/solitaire/"><img src="/img/solitaire.png" class="a"></a>',
 '<a href="/spiele/Sokoban/"><img src="/img/sokoban.png" class="a"></a>',
 '<a href="/spiele/hanoi_mit_grafik/"><img src="/img/hanoi.png" class="a"></a>',
@@ -68,7 +68,10 @@ var Wahlbi=[
 '<a href="/anwendungenmath/wkeit/binomialvert.html"><img src="/img/binomialverteilung.png" class="a"></a>',
 '<a href="/anwendungenmath/wkeit/approx_bin_norm.html"><img src="/img/approx.jpg" class="a"></a>'
 ];
-var txtbi=["Binomial&shy;verteilung","Approximation<br>Binomial&shy;verteilung"];
+var txtbi = [];
+txtbi[0]="Binomial&shy;verteilung";
+if (window.innerWidth > 400) txtbi[1]="Approximation<br>Binomialverteilung";
+    else txtbi[1]="Approximation<br>Binomialvert";
 
 // fractal oder Mandelbrot
 var fractal=[
@@ -79,16 +82,16 @@ var txtfrac=["Fraktale","Mandelbrot"];
 
 //Zufallsmathematiker
 var math=[
-'<a href="mathematiker/euler.html"><img src="/img/euler.jpg" class="b"></a>',
+'<a href="/mathematiker/euler.html"><img src="/img/euler.jpg" class="b"></a>',
 '<a href="/mathematiker/newton.html"><img src="/img/newton.jpg" class="b"></a>',
-'<a href="/mathematiker/fermat.html"><img src="/img/fermat.jpg" class="a"></a>',
+'<a href="/mathematiker/fermat.html"><img src="/img/fermat.jpg" class="b"></a>',
 '<a href="/mathematiker/gauss.html"><img src="/img/gauss.jpg" class="b"></a>',
-'<a href="mathematiker/galois.html"><img src="/mathematiker/Galois.jpg" class="b"></a>',
-'<a href="/mathematiker/goedel.html"><img src="/mathematiker/goedel.jpg" class="b"></a>',
+'<a href="/mathematiker/galois.html"><img src="/img/galois.jpg" class="b"></a>',
+'<a href="/mathematiker/goedel.html"><img src="/img/goedel.jpg" class="b"></a>',
 '<a href="/mathematiker/hilbert.html"><img src="/img/hilbert.jpg" class="b"></a>',
-'<a href="/mathematiker/einstein.html"><img src="/mathematiker/Einstein.jpg" class="a"></a>',
-'<a href="/mathematiker/leibniz.html"><img src="/img/leibniz.jpg" class="a" style="max-width:190px"></a>',
-'<a href="/mathematiker/abel.html"><img src="/mathematiker/Abel.jpg" class="b"></a>'
+'<a href="/mathematiker/einstein.html"><img src="/mathematiker/Einstein.jpg" class="b"></a>',
+'<a href="/mathematiker/leibniz.html"><img src="/img/leibniz.jpg" class="b"></a>',
+'<a href="/mathematiker/abel.html"><img src="/img/abel.jpg" class="b"></a>'
 ];
 var txtmath=["Leonhard Euler","Isaac Newton","Pierre Fermat","C.F. Gauss","Evariste Galois","Kurt Gödel","David Hilbert","Albert Einstein","G.W. Leibniz","Niels Abel"];
 

@@ -11,7 +11,7 @@ h4{font-size:20px;font-family:Helvetica,Arial;margin-top:15px;margin-bottom:15px
 small{font-size:14px}
 ul{list-style-type:none;margin:0;padding:0}
 #menu ul>li{padding:6px}
-input[type=button] {cursor:pointer;background-color:#E0FFFF}
+input[type=button] {border:1px solid;cursor:pointer;background-color:#E0FFFF}
 input[type=submit] {background-color:#E0FFFF}
 select{background-color:#E0FFFF}
 input[type=radio]{width:16px;height:16px;cursor:pointer;}
@@ -27,8 +27,8 @@ td.amazon{font-size:11px;vertical-align:top;text-align:center;background-color:#
 span.ol{font-size:15px;font-family:Arial,Helvetica;text-decoration:overline}
 span.Haupt{margin-left:auto;margin-right:auto;font-family:'Times New Roman',Times,serif;font-weight:bold;font-size:30px;}
 img{border:0}
-img.a{width:100%;height:auto;min-width:90px;max-width:200px}
-img.b{width:100%;height:auto;min-width:80px;max-width:120px}
+img.a{width:100%;height:auto;min-width:80px;max-width:190px}
+img.b{width:100%;height:auto;min-width:80px;max-width:170px}
 img.center{display:block;margin-left:auto;margin-right:auto}
 img[src="/img/help.gif"]{width:24px;height:30px;vertical-align:middle;}
 img[src="/img/menuicon.png"]{width:26px;height:26px;cursor:pointer;vertical-align:middle;}
