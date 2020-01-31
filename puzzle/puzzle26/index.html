@@ -8,10 +8,15 @@
 <script src="runtime.js"></script>
 <script src="object.js"></script>
 <script>
-window.onload=function() {if (window.innerWidth < 500) {document.getElementById('phone').style.display="block";}}  
+window.onload=function() {if (window.innerWidth < 330) {document.getElementById('phone').style.display="block";}}  
 </script>
 <LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
 <script async src="/script/show-hide.js"></script>
+<style>
+@media all and (min-width:600px) {div.container {width:600px;height:380px;}}
+@media all and (min-width:450px) and (max-width:599px) {div.container {width:450px;height:285px;}}
+@media all and (max-width:449px) {div.container {width:330px;height:190px;}}
+</style>
 </head>
 
 <body>
@@ -45,7 +50,7 @@ window.onload=function() {if (window.innerWidth < 500) {document.getElementById(
 <p>Dies ist eine (kompliziertere) Variante des Fährmann, Ziegen, Wolf und Kohl-Problems. Das Ziel besteht 
 darin, alle Personen mit Hilfe eines Flosses gemäss bestimmten Regeln über den Fluss zu bringen.<br>
 </p>
-  <div id="swiffycontainer" style="width:500px;height:317px"></div>
+  <div id="swiffycontainer" class="container"></div>
   <script>    
     var stage = new swiffy.Stage(document.getElementById('swiffycontainer'),swiffyobject, {});
     stage.start();
