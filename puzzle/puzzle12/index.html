@@ -8,6 +8,7 @@
 <LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
 <script src="theseus.js"></script>
 <script async src="/script/show-hide.js"></script>
+<style>input[type="button"] {padding:4px;}</style>
 </head>
 
 <body onkeyup="keyPress(event.keyCode)">
@@ -47,11 +48,11 @@
 	   
   <div class="col">
     <div id="user" style="display:block">
-      <input type="button" style="margin-left:45px;height:25px;margin-bottom:10px;" value="&uarr;" onClick="move(Tx-1,Ty)"><br>
+      <input type="button" style="margin-left:45px;margin-bottom:10px;" value="&uarr;" onClick="move(Tx-1,Ty)"><br>
 	  <input type="button" style="width:32px" value="&larr;" onClick="move(Tx,Ty-1)">&nbsp;&nbsp;
 	  <input type="button" value="d" onClick="move(Tx,Ty)">&nbsp;&nbsp;
 	  <input type="button" value="&rarr;" style="width:32px;margin-right:50px;" onClick="move(Tx,Ty+1)"><br>
-	  <input type="button" style="height:25px;margin-left:45px;margin-right:80px;margin-top:10px;" value="&darr;" onClick="move(Tx+1,Ty)">
+	  <input type="button" style="margin-left:45px;margin-right:80px;margin-top:10px;" value="&darr;" onClick="move(Tx+1,Ty)">
       <span id="Antwort">Viel Erfolg!</span><br><br>
 	  <p><input type="button" value="Restart" onClick="restart()"></p>
 	</div>
@@ -91,7 +92,7 @@ Um von vorne zu beginnen klicken Sie auf den Restart-Button.</p>
 <div id="footer">
 <p><small>
 ©1997 -
-<script>document.write(new Date().getFullYear())</script> www.mathematik.ch</small> |<a href="/search/"><span class="b">&#x1F50D;</span></a></p>
+<script>document.write(new Date().getFullYear())</script> www.mathematik.ch</small> |<a href="/search/"><span class="b" title="Suche">&#x1F50D;</span></a></p>
 </div>
 <script>restart()</script>
 </div>
