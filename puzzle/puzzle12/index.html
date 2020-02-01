@@ -4,8 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Puzzle12: Theseus und Minotaur</title>
+<meta NAME="Description" CONTENT="Puzzle12: Aufgabe und Lösung">
 <LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
-<script src="theseus_min.js"></script>
+<script src="theseus.js"></script>
 <script async src="/script/show-hide.js"></script>
 </head>
 
@@ -34,15 +35,34 @@
 <div id="content" style="display:block;">
 
 <h4>Puzzle 12: Theseus und der Minotaur</h4>
-      <script>
-	 if( !( document.all ) )
-	 {
-		// IE does not require registering the events
-		window.captureEvents(Event.keyUp);
-	 }
-	 init();
-	 restart();
-      </script>
+
+<div class="colgroup-2">
+  <div class="col">
+  <div style="position: relative; width:330px; height:210px">
+    <script>
+	  init();	  
+    </script>
+  </div>
+  </div>
+	   
+  <div class="col">
+    <div id="user" style="display:block">
+      <input type="button" style="margin-left:45px;height:25px;margin-bottom:10px;" value="&uarr;" onClick="move(Tx-1,Ty)"><br>
+	  <input type="button" style="width:32px" value="&larr;" onClick="move(Tx,Ty-1)">&nbsp;&nbsp;
+	  <input type="button" value="d" onClick="move(Tx,Ty)">&nbsp;&nbsp;
+	  <input type="button" value="&rarr;" style="width:32px;margin-right:50px;" onClick="move(Tx,Ty+1)"><br>
+	  <input type="button" style="height:25px;margin-left:45px;margin-right:80px;margin-top:10px;" value="&darr;" onClick="move(Tx+1,Ty)">
+      <span id="Antwort">Viel Erfolg!</span><br><br>
+	  <p><input type="button" value="Restart" onClick="restart()"></p>
+	</div>
+	<div id="computer" style="display:none">
+	   <p>Hier die Lösung. Klicken Sie pro Zug auf den Button "Zug+".</p>
+	   <input type="button" value="Zug+" onClick="loesung()">
+	   <p><input type="button" value="Restart" onClick="restart()"></p><br>
+	   <p><a href="./">zurück zur Aufgabenstellung</a></p>
+	</div>
+  </div>
+</div>  
 
 <p>
 Theseus (rote Kreisfläche) ist im Labyrinth gefangen und muss einen Weg zum
@@ -63,7 +83,7 @@ Um von vorne zu beginnen klicken Sie auf den Restart-Button.</p>
   7. Februar 2001
 </div>
 
-<a href="solut12.html">Lösung</a>: B.Berchtold
+<input type="button" value="Lösung" onClick="initloesung()"> (von B.Berchtold)
 
 </div>
 <!-- EOF: CONTENT -->
@@ -73,7 +93,7 @@ Um von vorne zu beginnen klicken Sie auf den Restart-Button.</p>
 ©1997 -
 <script>document.write(new Date().getFullYear())</script> www.mathematik.ch</small> |<a href="/search/"><span class="b">&#x1F50D;</span></a></p>
 </div>
-
+<script>restart()</script>
 </div>
 </body>
 </html>
