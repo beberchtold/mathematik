@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Puzzle12: Theseus und Minotaur</title>
-<meta NAME="Description" CONTENT="Puzzle12: Aufgabe und Lösung">
+<meta NAME="Description" CONTENT="Puzzle 12: Theseus und Minotaur im Labyrinth; mit Lösung">
 <LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
 <script src="theseus.js"></script>
 <script async src="/script/show-hide.js"></script>
@@ -48,16 +48,16 @@
 	   
   <div class="col">
     <div id="user" style="display:block">
-      <input type="button" style="margin-left:45px;margin-bottom:10px;" value="&uarr;" onClick="move(Tx-1,Ty)"><br>
+      <input type="button" style="margin-left:45px;margin-bottom:10px;width:28px;" value="&uarr;" onClick="move(Tx-1,Ty)"><br>
 	  <input type="button" style="width:32px" value="&larr;" onClick="move(Tx,Ty-1)">&nbsp;&nbsp;
-	  <input type="button" value="d" onClick="move(Tx,Ty)">&nbsp;&nbsp;
+	  <input type="button" style="width:28px;" value="d" onClick="move(Tx,Ty)">&nbsp;&nbsp;
 	  <input type="button" value="&rarr;" style="width:32px;margin-right:50px;" onClick="move(Tx,Ty+1)"><br>
-	  <input type="button" style="margin-left:45px;margin-right:80px;margin-top:10px;" value="&darr;" onClick="move(Tx+1,Ty)">
+	  <input type="button" style="margin-left:45px;margin-right:80px;margin-top:10px;width:28px;" value="&darr;" onClick="move(Tx+1,Ty)">
       <span id="Antwort">Viel Erfolg!</span><br><br>
 	  <p><input type="button" value="Restart" onClick="restart()"></p>
 	</div>
 	<div id="computer" style="display:none">
-	   <p>Hier die Lösung. Klicken Sie pro Zug auf den Button "Zug+".</p>
+	   <p>Lösung: Klicken Sie pro Zug auf den Button "Zug+".</p>
 	   <input type="button" value="Zug+" onClick="loesung()">
 	   <p><input type="button" value="Restart" onClick="restart()"></p><br>
 	   <p><a href="./">zurück zur Aufgabenstellung</a></p>
