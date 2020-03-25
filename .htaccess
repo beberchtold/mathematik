@@ -4,8 +4,7 @@ RewriteEngine On
  
  RewriteRule ^(.*)\.php$ https://%{HTTP_HOST}/$1.html [R=301,L]
 
-AddCharset UTF-8 .html
-AddCharset UTF-8 .js
+AddCharset UTF-8 .html .js
 
 ErrorDocument 404 /404.html
 Options -Indexes
