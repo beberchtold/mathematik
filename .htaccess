@@ -1,8 +1,6 @@
 AddDefaultCharset UTF-8
-
-ErrorDocument 404 /404.html
-
 RedirectMatch 301 ^/([a-zA-Z0-9_-]+)\.php$ https://%{HTTP_HOST}/$1.html
+ErrorDocument 404 /404.html
 
 Options -Indexes
 
