@@ -1,11 +1,9 @@
-<IfModule mod_rewrite.c>
- RewriteEngine On
- RewriteRule ^(.*)\.php$ https://%{HTTP_HOST}/$1.html [R=301,L]
-</IfModule>
-
-AddCharset UTF-8 .html .js
+AddDefaultCharset UTF-8
 
 ErrorDocument 404 /404.html
+
+RedirectMatch 301 ^/([a-zA-Z0-9_-]+)\.php$ https://www.mathematik.ch/$1.html
+
 Options -Indexes
 
 <IfModule mod_rewrite.c>
