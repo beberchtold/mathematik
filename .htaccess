@@ -2,7 +2,7 @@ AddDefaultCharset UTF-8
 
 ErrorDocument 404 /404.html
 
-RedirectMatch 301 ^/([a-zA-Z0-9_-]+)\.php$ http://www.mathematik.ch/$1.html
+RedirectMatch 301 ^/([a-zA-Z0-9_-]+)\.php$ https://%{HTTP_HOST}/$1.html
 
 Options -Indexes
 
