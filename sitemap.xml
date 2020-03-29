@@ -576,6 +576,9 @@
     <url>
         <loc>https://www.mathematik.ch/maturapruefungen/2006/2006_GF.pdf</loc>
     </url>
+   <url>
+        <loc>https://www.mathematik.ch/maturapruefungen/2006/Matur06_SFPM.pdf</loc>
+    </url>
     <url>
         <loc>https://www.mathematik.ch/maturapruefungen/2007/2007_GF.pdf</loc>
     </url>
@@ -607,10 +610,19 @@
         <loc>https://www.mathematik.ch/maturapruefungen/2009/Matur09_LoesungGF.pdf</loc>
     </url>
     <url>
+        <loc>https://www.mathematik.ch/maturapruefungen/2009/2009_SF.pdf</loc>
+    </url>
+    <url>
+        <loc>https://www.mathematik.ch/maturapruefungen/2009/Matur09_LoesungSF.pdf</loc>
+    </url>	
+    <url>
         <loc>https://www.mathematik.ch/maturapruefungen/2010/2010_GF.pdf</loc>
     </url>
     <url>
         <loc>https://www.mathematik.ch/maturapruefungen/2010/Matur10_LoesungGF.pdf</loc>
+    </url>
+    <url>
+        <loc>https://www.mathematik.ch/maturapruefungen/2010/2010_SF.pdf</loc>
     </url>
     <url>
         <loc>https://www.mathematik.ch/maturapruefungen/2011/2011_GF.pdf</loc>
@@ -630,6 +642,12 @@
     <url>
         <loc>https://www.mathematik.ch/maturapruefungen/2012/Matur12_LoesungGF.pdf</loc>
     </url>
+    <url>
+        <loc>https://www.mathematik.ch/maturapruefungen/2012/2012_SF.pdf</loc>
+    </url>
+    <url>
+        <loc>https://www.mathematik.ch/maturapruefungen/2012/Matur12_LoesungSF.pdf</loc>
+    </url>	
     <url>
         <loc>https://www.mathematik.ch/puzzle/</loc>
     </url>
