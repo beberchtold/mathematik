@@ -10,7 +10,6 @@ h3{font-size:22px;font-family:Helvetica,Arial}
 h4{font-size:20px;font-family:Helvetica,Arial;margin-top:15px;margin-bottom:15px}
 small{font-size:14px}
 ul{list-style-type:none;margin:0;padding:0}
-#menu ul>li{padding:6px}
 input[type="button"] {border:1px solid;cursor:pointer;background-color:#E0FFFF}
 input[type="submit"] {background-color:#E0FFFF}
 select{background-color:#E0FFFF}
