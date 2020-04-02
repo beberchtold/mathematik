@@ -34,7 +34,7 @@ Der Eulersche Polyedersatz gilt natürlich auch für die Platonischen Körper:
 <div style="margin-top:6px;outline:2px solid;padding:2px;">In jedem konvexen Polyeder mit e Ecken, f Flächen und k Kanten gilt: 
 e + f – k = 2.</div>
 
-<p>Wählen Sie mittels Radiobutton einen Körper aus. Die Rotationsachse verläuft immer senkrecht 
+<p>Wählen Sie mittels Button einen Körper aus. Die Rotationsachse verläuft immer senkrecht 
 durch den roten Punkt. Die Achse kann wahlweise durch eine Ecke, einen Kantenmittelpunkt oder einen Flächenmittelpunkt 
 verlaufen (Umschaltmöglichkeit mit dem Button 'Rotationsachse').<br>
 Klick auf 'Step' lässt den Körper um jeweils &pi;/20 rotieren.<br>
@@ -50,17 +50,18 @@ und -90&deg; (Anblick senkrecht von unten) verändern.</p>
   <div class="col">
 	<table>
 	  <tr>
-	    <td><label><input id="Tetraeder" type="radio" name="Poly" onclick="OnChangeradio1 (this)">Tetraeder</label></td>
-	    <td><label><input id="Hexaeder" type="radio" name="Poly" onclick="OnChangeradio2 (this)">Hexaeder (Würfel)</label></td>
+	    <td><input id="1" type="button" value="Tetraeder" onclick="button1()"></td>
+	    <td><input id="2" type="button" value="Hexaeder (Würfel)" onclick="button2()"></td>
 	  </tr><tr>
-        <td><label><input id="Oktaeder" type="radio" name="Poly" onclick="OnChangeradio3 (this)">Oktaeder</label></td>
-        <td><label><input id="Dodekaeder" type="radio" name="Poly" onclick="OnChangeradio4 (this)">Dodekaeder</label></td>
+        <td><input id="3" type="button" value="Oktaeder" onclick="button3()"></td>
+        <td><input id="4" type="button" value="Dodekaeder" onclick="button4()"></td>
 	  </tr><tr>	
-        <td colspan="2"><label><input id="Ikosaeder" type="radio" name="Poly" onclick="OnChangeradio5 (this)">Ikosaeder</label></td>
+        <td colspan="2"><input id="5" type="button" value="Ikosaeder" onclick="button5()"></td>
 	  </tr><tr>
-        <td colspan="2">Höhenwinkel in Grad = <input id="theta" style="width:2.2em;" type="number" min=-90 max=90 value="15" onchange="calc()"></td>	
+        <td colspan="2">Höhenwinkel in Grad = <input id="theta" style="width:2.2em;" type="number" min=-90 max=90 value="15" onclick="calc()"></td>	
 	  </tr><tr>
-        <td colspan="2"><input type="button" value="Rotationsachse" onclick="doAxis()"></td>  
+        <td><input type="button" value="Rotationsachse" onclick="doAxis()"></td>
+		<td><span id="ax">durch Ecke</span></td>  
 	  </tr>
 	  <tr>
 	    <td><input id="STEP" type="button" value="Step" onclick="dostep()"></td>
