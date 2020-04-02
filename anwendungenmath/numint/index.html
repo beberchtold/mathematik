@@ -32,13 +32,13 @@
 	<a href="infos.html"><img src="/img/help.gif" alt="Hilfe"></a><br>
     x0: <input id="Xmin" type="number" step="any" value="0" lang="en">  &nbsp;&nbsp;&nbsp;&nbsp;
     xn: <input id="Xmax" type="number" step="any" value="5" lang="en"><br>
-    Anzahl Teilintervalle (max 200): <input id="Anz" type="number" min="1" max="200" value="20"></p>
-	<p><input type="button" value="Berechne!" onclick="reset()"></p>
+    Anzahl Teilintervalle (max 200): <input id="Anz" type="number" min="1" max="200" value="20"><br>
+	<input type="button" value="Berechne!" onclick="reset()"></p>
 	<p><b>Graphik</b><br>
-    <label><input id="Trapez" type="radio" name="plot" onclick="OnChangeradio1 (this)">Trapez</label> &nbsp;&nbsp;
-    <label><input id="LPunkt" type="radio" name="plot" onclick="OnChangeradio2 (this)">Links</label> &nbsp;&nbsp;
-    <label><input id="RPunkt" type="radio" name="plot" onclick="OnChangeradio3 (this)">Rechts</label> &nbsp;&nbsp;
-	<span style="display:inline-block"><label><input id="MPunkt" type="radio" name="plot" onclick="OnChangeradio4 (this)">Mitte</label></span>
+    <input id="1" type="button" value="Trapez" onclick="button1()">&nbsp;&nbsp;
+    <input id="2" type="button" value="Links" onclick="button2()">&nbsp;&nbsp;
+    <input id="3" type="button" value="Rechts" onclick="button3()">&nbsp;&nbsp;
+	<span style="display:inline-block"><input id="4" type="button" value="Mitte" onclick="button4()"></span>
     </p>
 	<p><b>Resultate</b><br>
     Trapez: <span id="trapez" style="color:black"> </span> &nbsp;&nbsp;&nbsp;
