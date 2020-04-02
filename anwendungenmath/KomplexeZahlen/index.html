@@ -26,7 +26,7 @@ zweite durch einen roten. Beide Operanden können mit gedrückter Maustaste ver�
 Operanden auch via Tastatur in die entsprechenden Felder eingeben. Das Resultat erscheint dann nach Drücken der Returntaste.<br>
 Das Resultat wird durch den blauen Punkt repräsentiert.</p>
 
-<p>Wählen Sie mittels Radiobutton, welche Operation Sie durchführen wollen und welches Koordinatensystem angezeigt werden soll.
+<p>Wählen Sie mittels Button, welche Operation Sie durchführen wollen und welches Koordinatensystem angezeigt werden soll.
 </p>
 
 <div class="colgroup-2">
@@ -34,10 +34,10 @@ Das Resultat wird durch den blauen Punkt repräsentiert.</p>
        <canvas id="myCanvas" style="border:1px solid; border-color:#A0A0A0">Ihr Browser kann kein Canvas!</canvas>
   </div>
   <div class="col">
-    <p><label><input id="Addition" type="radio" name="Op" onclick="OnChangeradio1 (this)"> Addition</label>
-	<label><input id="Subtraktion" style="margin-left:50px;" type="radio" name="Op" onclick="OnChangeradio2 (this)"> Subtraktion</label><br><br>
-    <label><input id="Multiplikation" type="radio" name="Op" onclick="OnChangeradio3 (this)"> Multiplikation</label>
-	<label><input id="Division" style="margin-left:20px;" type="radio" name="Op" onclick="OnChangeradio4 (this)"> Division</label>
+    <p><input id="1" type="button" value="Addition" onclick="button1()">
+	<input id="2" style="margin-left:50px;" type="button" value="Subtraktion" onclick="button2()"><br><br>
+    <input id="3" type="button" value="Multiplikation" onclick="button3()">
+	<input id="4" style="margin-left:20px;" type="button" value="Division" onclick="button4()">
 	</p>
 	<p>z1=<input id="x1" type="number" min=-10 max=10 step="any" value="5" lang="en" onchange="calc()">	
     +<input id="y1" type="number" min=-10 max=10 step="any" value="5" lang="en" onchange="calc()"> i <span style="margin-right:25px;"></span>
@@ -45,8 +45,8 @@ Das Resultat wird durch den blauen Punkt repräsentiert.</p>
     +<input id="y2" type="number" min=-10 max=10 step="any" value="2" lang="en" onchange="calc()"> i</span></p>
 	<p style="color:blue"><b>Resultat z = </b><span id="Resultat"></span></p>
 	<p style="color:blue">in Polarform z = <span id="Resultat_polar"></span></p>
-    <p><label><input id="kartesisch" type="radio" name="KS" onclick="OnChangeradio5 (this)"> Kartesisches KS</label>
-	<label><input id="polar" style="margin-left:30px;" type="radio" name="KS" onclick="OnChangeradio6 (this)"> PolarKS</label></p>	
+    <p><input id="kartesisch" type="button" value="Kartesisches KS" onclick="button5()">
+	<input id="polar" style="margin-left:30px;" value="Polar KS" type="button" onclick="button6()"></p>	
   </div>
         
 </div>	   
