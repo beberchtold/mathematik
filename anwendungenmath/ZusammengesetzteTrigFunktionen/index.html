@@ -20,13 +20,13 @@
 
 <h4>Graphen von zusammengesetzten Sinus und Cosinusfunktionen</h4>
 
-<p>Wählen Sie zuerst mittels Radiobutton (Sinus oder Cosinus), ob der Graph der Funktion mit Gleichung
+<p>Wählen Sie zuerst mittels Button (Sinus oder Cosinus), ob der Graph der Funktion mit Gleichung
 y = a sin[&omega;(x - h &pi;)] + k  oder der Graph der Funktion y = a cos[&omega;(x - h &pi;)] + k dargestellt
 werden soll.</p>
 <p>Sie können die Werte von a, &omega;, h und k mit der Maus verändern, nachdem Sie den entsprechenden Radiobutton 
 aktiviert haben:<br>
-Verschieben Sie die Maus im Diagramm vertikal (Verändern von a bzw. k).<br>
-Verschieben Sie die Maus horizontal (Verändern von &omega; bzw. h).<br>
+Verschieben Sie die Maus bei gedrückter Maustaste im Diagramm vertikal (Verändern von a bzw. k).<br>
+Verschieben Sie die Maus bei gedrückter Maustaste horizontal (Verändern von &omega; bzw. h).<br>
 Alternativ können Sie diese Werte mit 'Step' auch schrittweise verändern.<br>
 Sie können die Werte aber auch direkt in die entsprechenden Felder schreiben.<br>
 </p>
@@ -38,20 +38,21 @@ Sie können die Werte aber auch direkt in die entsprechenden Felder schreiben.<b
   </div>
 
   <div class="col">
-    <p><label><input id="ch5" type="radio" name="Fkt" onclick="OnChangeradio5 (this)"> Sinus</label>
-	<label><input id="ch6" type="radio" name="Fkt" onclick="OnChangeradio6 (this)" style="margin-left:60px"> Cosinus</label></p>
+    <p><input id="ch5" type="button" value="Sinus" onclick="button5()">
+	<input id="ch6" type="button" value="Cosinus" onclick="button6()" style="margin-left:60px"></p>
     <p>Verändern von:<br>
-    <label><input id="ch1" type="radio" name="Param">a</label>
-	<label><input id="ch2" type="radio" name="Param" style="margin-left:40px">&omega;</label>
-	<label><input id="ch3" type="radio" name="Param" style="margin-left:40px">h</label>
-	<label><input id="ch4" type="radio" name="Param" style="margin-left:40px">k</label>
+    <label><input id="ch1" type="radio" name="Param"> a </label>
+	<label><input id="ch2" type="radio" name="Param" style="margin-left:40px"> &omega; </label>
+	<label><input id="ch3" type="radio" name="Param" style="margin-left:40px"> h </label>
+	<label><input id="ch4" type="radio" name="Param" style="margin-left:40px"> k </label>
     </p>		
     <p><input type="button" value="Step" onclick="dostep()"><p>
     <p>a=<input id="a" type="number" step="any" value="1"  onchange="zeichne1()" lang="en">&nbsp;&nbsp;&nbsp;
-        &omega;=<input id="b" type="number" min="0.01" step="any" value="1" onchange="zeichne1()" lang="en">&nbsp;&nbsp;&nbsp;
-        h=<input id="h" type="number" min="-2.0" max="2.0" step="any" value="0" onchange="zeichne1()" lang="en">&nbsp;&nbsp;&nbsp;
+        &omega;=<input id="b" type="number" step="any" value="1" onchange="zeichne1()" lang="en">&nbsp;&nbsp;&nbsp;
+        h=<input id="h" type="number" step="any" value="0" onchange="zeichne1()" lang="en">&nbsp;&nbsp;&nbsp;
         k=<input id="k" type="number" step="any" value="0" onchange="zeichne1()" lang="en">
 	</p>
+	<p><input type="button" value="Startwerte für a, &omega;, h und k" onclick="startwerte()"></p>
 	<p>Grenzen Koordinatensystem:<br>
         Links: &nbsp;<input id="Xmin" type="number" step="any" value="-1.1" onchange="zeichne()" lang="en">&nbsp;&nbsp;&nbsp;&nbsp;
         Rechts: <input id="Xmax" type="number" step="any" value="7.1" onchange="zeichne()" lang="en"><br>
