@@ -62,13 +62,13 @@
     <span style="display:inline-block">S-niveau <input id="Sniveau" type="number" min=0.5 max=8.5 step="any" value="5" lang="en"></span>
     </p>
 	<p><input type="button" value="Start" onclick="einlesen()"></p>
-	<p><label><input id="Links" type="radio" name="Seite" onclick="OnChangeradio1 (this)">linksseitig</label> &nbsp;&nbsp;&nbsp;
-	<label><input id="Rechts" type="radio" name="Seite" onclick="OnChangeradio2 (this)">rechtsseitig</label> &nbsp;&nbsp;&nbsp;
-    <span style="display:inline-block"><label><input id="Zweis" type="radio" name="Seite" onclick="OnChangeradio3 (this)">zweiseitig</label></span></p>
+	<p><input id="1" type="button" value="linksseitig" onclick="button1()">&nbsp;&nbsp;&nbsp;
+	<input id="2" type="button" value="rechtsseitig" onclick="button2()">&nbsp;&nbsp;&nbsp;
+    <span style="display:inline-block"><input id="3" type="button" value="zweiseitig" onclick="button3()"></span></p>
     <p>Histogramm:<br>
-    <label><input id="Wkeit" type="radio" name="Darst" onclick="OnChangeradio4 (this)">W'keit</label> &nbsp;&nbsp;&nbsp;
-    <label><input id="Summe" type="radio" name="Darst" onclick="OnChangeradio5 (this)">Summe*1</label> &nbsp;&nbsp;&nbsp;
-	<span style="display:inline-block"><label><input id="Summe10" type="radio" name="Darst" onclick="OnChangeradio6 (this)">Summe*10</label></span>
+    <input id="4" type="button" value="W'keit" onclick="button4()">&nbsp;&nbsp;&nbsp;
+    <input id="5" type="button" value="Summe*1" onclick="button5()">&nbsp;&nbsp;&nbsp;
+	<span style="display:inline-block"><input id="6" type="button" value="Summe*10" onclick="button6()"></span>
 	</p>	
 	<p style="margin-top:30px"><b>Resultate</b></p>
 	<p>Verwerfungsbereich = <span id="VerB"> </span><br>
