@@ -40,9 +40,9 @@
 </p>
 
 <p>Wählen Sie zuerst, ob x &rarr; x<sub>0</sub> oder x &rarr; x<sub>1</sub> gehen soll.<br>
-      Wählen Sie nun, ob Sie den Grenzwert linksseitig oder rechtsseitig betrachten wollen.<br>
-      Verschieben Sie dann (bei gedrückter Maustaste) den roten Punkt gegen den blauen Punkt. 
-	  Alternativ können Sie auch durch Klicken auf 'Step' die Annäherung schrittweise vollziehen.
+   Wählen Sie nun, ob Sie den Grenzwert linksseitig oder rechtsseitig betrachten wollen.<br>
+   Verschieben Sie dann (bei gedrückter Maustaste) den roten Punkt gegen den blauen Punkt. 
+   Alternativ können Sie auch durch Klicken auf 'Step' die Annäherung schrittweise vollziehen.
 </p>
 
 <div class="colgroup-2">
@@ -50,14 +50,14 @@
        <canvas id="myCanvas">Ihr Browser kann kein Canvas!</canvas>
   </div>
   <div class="col">
-    <p><label><input id="x0" type="radio" name="x" onclick="OnChangeradio0 (this)"> x &rarr; x<sub>0</sub></label>
-	<label style="margin-left:40px;"><input id="x1" type="radio" name="x" onclick="OnChangeradio1 (this)"> x &rarr; x<sub>1</sub></label></p>
-    <label style="margin-right:30px;"><input id="links" type="radio" name="lr" onclick="OnChangeradiol (this)"> linksseitig</label>
+    <p><input id="0" type="button" value="x &rarr; x0" onclick="button0()">
+	<span style="margin-left:40px;"><input id="1" type="button" value="x &rarr; x1" onclick="button1()"></span></p><br>
+    <p><span style="margin-right:30px;"><input id="2" type="button" value="linksseitig" onclick="buttonl()"></span> 
 	Sekantensteigung: <span id="lsteig">   </span>
-	<br>
-	<label style="margin-right:20px;"><input id="rechts" type="radio" name="lr" onclick="OnChangeradior (this)"> rechtsseitig</label>
+	<br><br>
+	<span style="margin-right:20px;"><input id="3" type="button" value="rechtsseitig" onclick="buttonr()"></span>
 	Sekantensteigung: <span id="rsteig">   </span>
-	<br>
+	</p>
     <p><input type="button" value="Step" onclick="dostep()"></p>	
   </div>      
 </div>	   
