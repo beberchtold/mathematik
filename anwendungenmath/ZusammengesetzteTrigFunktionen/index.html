@@ -41,10 +41,10 @@ Sie können die Werte aber auch direkt in die entsprechenden Felder schreiben.<b
     <p><input id="ch5" type="button" value="Sinus" onclick="button5()">
 	<input id="ch6" type="button" value="Cosinus" onclick="button6()" style="margin-left:60px"></p>
     <p>Verändern von:<br>
-    <label><input id="ch1" type="radio" name="Param"> a </label>
-	<label><input id="ch2" type="radio" name="Param" style="margin-left:40px"> &omega; </label>
-	<label><input id="ch3" type="radio" name="Param" style="margin-left:40px"> h </label>
-	<label><input id="ch4" type="radio" name="Param" style="margin-left:40px"> k </label>
+    <span style="background-color:#E0FFFF"><label><input id="ch1" type="radio" name="Param"> a </label></span>
+	<span style="background-color:#E0FFFF;margin-left:35px"><label><input id="ch2" type="radio" name="Param"> &omega; </label></span>
+	<span style="background-color:#E0FFFF;margin-left:35px"><label><input id="ch3" type="radio" name="Param"> h </label></span>
+	<span style="background-color:#E0FFFF;margin-left:35px"><label><input id="ch4" type="radio" name="Param"> k </label></span>
     </p>		
     <p><input type="button" value="Step" onclick="dostep()"><p>
     <p>a=<input id="a" type="number" step="any" value="1"  onchange="zeichne1()" lang="en">&nbsp;&nbsp;&nbsp;
@@ -52,7 +52,7 @@ Sie können die Werte aber auch direkt in die entsprechenden Felder schreiben.<b
         h=<input id="h" type="number" step="any" value="0" onchange="zeichne1()" lang="en">&nbsp;&nbsp;&nbsp;
         k=<input id="k" type="number" step="any" value="0" onchange="zeichne1()" lang="en">
 	</p>
-	<p><input type="button" value="Startwerte für a, &omega;, h und k" onclick="startwerte()"></p>
+	<p><input type="button" value="Reset" onclick="startwerte()"> stellt Startwerte für a, &omega;, h und k her.</p>
 	<p>Grenzen Koordinatensystem:<br>
         Links: &nbsp;<input id="Xmin" type="number" step="any" value="-1.1" onchange="zeichne()" lang="en">&nbsp;&nbsp;&nbsp;&nbsp;
         Rechts: <input id="Xmax" type="number" step="any" value="7.1" onchange="zeichne()" lang="en"><br>
