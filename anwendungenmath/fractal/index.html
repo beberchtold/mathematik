@@ -6,7 +6,7 @@
 <meta name="description" content="Fraktale mit IFS (Iterated Function Systems)">
 <meta name="keywords" content="Fraktal, Farn, Ahorn, Sierpinski, Menger, Kochkurve">
 <LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
-<script src="fractal_min.js"></script>
+<script src="fractal.js"></script>
 <style>input[type="button"] {margin-bottom:10px;margin-right:20px;}</style>
 </head>
 
@@ -35,8 +35,8 @@
 	<input type="button" id="7" value="Dürer" onclick="duerer()">
 	<input type="button" id="8" value="Menger" onclick="menger()">
     <p>
-	<input type="button" value="Doppelte Anzahl" onclick="doppelt()">
-	<input type="button" value="Halbe Anzahl" onclick="halb()">
+	<input type="button" id="double" value="Doppelte Anzahl" onclick="doppelt()">
+	<input type="button" id="half" value="Halbe Anzahl" onclick="halb()">
 	</p>
 	<p>Die Fraktale werden mittels Chaosspiel mit Startwert 40000 Iterationen gezeichnet. Die minimale Anzahl 
 	ist 5000, die maximale 160000. Je grösser die Anzahl, desto besser wird die Qualität des Fraktals.</p>
