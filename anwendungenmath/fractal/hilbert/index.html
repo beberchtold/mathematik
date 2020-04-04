@@ -6,7 +6,7 @@
 <meta name="description" content="Hilbert- und Peanokurven">
 <meta name="keywords" content="Hilbertkurve, Peanokurve, flächenfüllende Kurven">
 <LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
-<script src="hilbert_min.js"></script>
+<script src="hilbert.js"></script>
 <style>input[type="button"] {margin-bottom:10px;margin-right:20px;}</style>
 </head>
 
@@ -26,8 +26,8 @@
     <canvas id="myCanvas">Ihr Browser kann kein Canvas!</canvas>
   </div>
   <div class="col">
-	<input type="button" value="Ordnung höher" onclick="ordnungh()">
-	<input type="button" value="Ordnung tiefer" onclick="ordnungt()">
+	<input type="button" id="ordh" value="Ordnung höher" onclick="ordnungh()">
+	<input type="button" id="ordt" value="Ordnung tiefer" onclick="ordnungt()">
 	<p><input id="Peano" type="checkbox" onclick="OnChangeCheckbox (this)">Peanokurve statt Hilbertkurve</p>
 	<p>Die Kurven sind nach den Mathematikern <a href="/mathematiker/hilbert.html">David Hilbert</a> und 
 	<a href="/mathematiker/peano.html">Guiseppe Peano</a> benannt.<br>
