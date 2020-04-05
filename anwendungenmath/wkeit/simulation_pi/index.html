@@ -27,20 +27,20 @@
   </div>
   <div class="col">
     <br><input type="button" value="Nochmals mit gleicher Anzahl" onclick="zeichne()"><br>
-	<input type="button" value="Doppelte Anzahl" onclick="doppelt()">
-	<input type="button" value="Halbe Anzahl" onclick="halb()">
+	<input type="button" id="double" value="Doppelte Anzahl" onclick="doppelt()">
+	<input type="button" id="half" value="Halbe Anzahl" onclick="halb()">
 	 <p>Pi wird mit Startwert 32000 Punkten berechnet. Sie können diese Anzahl verändern: min=8000, max=512000.<br>
      Je mehr Punkte Sie wählen, desto besser wird i.a. die Approximation für Pi.</p>
 	 <p><b>Resultat:</b><br>
 	 Anzahl blaue Punkte = <b><span id="Anzb"> </span></b>. Daher &pi; &asymp; <b><span id="Res"> </span></b></p>
-	 <p>Vergleich: Exakter Wert für Pi = 3.14159265...</p>
+	 <p>Vergleich: Exakter Wert  &pi; = 3.14159265...</p>
    </div>
 </div>
 
 <p>Man bestimmt eine vorgewählte Anzahl Zufallspunkte in einem Quadrat der Seitenlänge 1 (die x-Koordinate und die 
 y-Koordinate sind also Zufallszahlen zwischen 0 und 1).<br>
 Liegt der Punkt im Viertels-Einheitskreis, so wird er blau gezeichnet, sonst rot.<br>
-Das Verhältnis der Anzahl blauen Punkte zur Total Anzahl Punkte ist eine Näherung für Pi/4.</p>
+Das Verhältnis der Anzahl blauen Punkte zur Total Anzahl Punkte ist eine Näherung für &pi;/4.</p>
 
 </div>
 <!-- EOF: CONTENT -->
