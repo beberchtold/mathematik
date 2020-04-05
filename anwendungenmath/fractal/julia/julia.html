@@ -5,7 +5,7 @@
 <title>Julia-Mengen und Mandelbrotmenge</title>
 <meta name="description" content="Juliamengen mit Javascript, Juliamengen mit Klick aus Mandelbrotmenge">
 <LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
-<script src="julia1_min.js"></script>
+<script src="julia.js"></script>
 <style>input[type=number] {width:3em;margin-bottom:5px;-moz-appearance: textfield;}</style>
 </head>
 
@@ -21,17 +21,18 @@
 
 <div class="colgroup-2">
   <div class="col" id="containercanvas">
-     <p>Re(c) = <span id="Rec">-0.7</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Im(c) = <span id="Imc">0.3</span></p>
+     <p>Re(c)=<span id="Rec">-0.7</span>&nbsp;&nbsp;&nbsp; Im(c)=<span id="Imc">0.3</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;n=<span id="N">100</span></p>
      <a href="#" onClick="mandel()"><canvas id="myCanvas">Ihr Browser kann kein Canvas!</canvas></a> 
   </div>
   <div class="col">
 	<br>
-    <p>20 &le; n &le; 200: <input id="N" type="number" min=20 max=200 value="100"><br>
-    -2.4&le;Re(c)&le;1.4: <input id="rc" type="number" step="any" min=-2.4 max=1.4 value="-0.7" lang="en">&nbsp;&nbsp;&nbsp;
+    <p>Anzahl Iterationen n <input type="button" id="double" value="verdoppeln" onclick="doppelt()">&nbsp;&nbsp;
+	<input type="button" id="half" value="halbieren" onclick="halb()"><br>
+	Je höher Sie n wählen, desto genauer wird das Fraktal gezeichnet. (25&lt;=n&lt;=400)</p>
+    <p>-2.4&le;Re(c)&le;1.4: <input id="rc" type="number" step="any" min=-2.4 max=1.4 value="-0.7" lang="en">&nbsp;&nbsp;&nbsp;
     -1.3&le;Im(c)&le;1.3: <input id="ic" type="number" step="any" min=-1.3 max=1.3 value="0.3" lang="en"></p>
     <p><input type="button" value="Zeichne Juliamenge" onclick="einlesen()"></p>
-    <p>Das Fraktal Juliamenge wird durch die komplexe Zahl c bestimmt: Realteil Re(c), Imaginärteil Im(c).<br>
-     Je höher Sie n wählen, desto genauer wird das Fraktal gezeichnet.</p>
+    <p>Das Fraktal Juliamenge wird durch die komplexe Zahl c bestimmt: Realteil Re(c), Imaginärteil Im(c).</p>
     <p>Mit c=i (Re(c)=0, Im(c)=1) erhalten Sie das Logo von mathematik.ch:
 	<input type="button" value="Zeichne Logo" onclick="logo()">
 	</p>	  
