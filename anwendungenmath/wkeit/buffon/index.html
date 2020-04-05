@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-alpha/katex.min.css" TYPE="text/css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-alpha/katex.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-alpha/contrib/auto-render.min.js"></script>
-<script src="buffon_min.js"></script>
+<script src="buffon.js"></script>
 </head>
 
 <body>
@@ -39,8 +39,8 @@ Je mehr Würfe Sie wählen, desto besser wird i.a. die Approximation für <span>
   </div>
   <div class="col">
     <input type="button" value="Nochmals mit gleicher Anzahl" onclick="zeichne()"><br><br>
-    <input type="button" value="Doppelte Anzahl" onclick="doppelt()">
-	<input type="button" style="margin-left:40px" value="Halbe Anzahl" onclick="halb()">
+    <input type="button" id="double" value="Doppelte Anzahl" onclick="doppelt()">
+	<input type="button" id="half" style="margin-left:40px" value="Halbe Anzahl" onclick="halb()">
 	 <p><b>Resultat:</b><br>
 	 W'keit P(A) = <b><span id="Anzb"> </span></b>. Daher <span>\(\pi\)</span> &asymp; <b><span id="Res"> </span></b></p>
 	 <p>Vergleich: Exakter Wert für <span>\(\pi\)</span> = 3.14159265...</p>
