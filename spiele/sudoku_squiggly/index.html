@@ -21,8 +21,8 @@
 <h4>Squiggly Sudoku</h4>
 
 <p>Das Ziel des Spiels ist, in jeder Zeile, Kolonne und jeder Box (eine Box ist durch fette 
-Linien abgetrennt und gefärbt) genau die Ziffern 1 bis 6 (bzw. 9) zu haben. Voreingestellt ist die Situation 6x6. 
-Mit Hilfe der Checkbox wählen Sie Situation 9x9.</p>
+Linien abgetrennt und gefärbt) genau die Ziffern 1 bis 6 (bzw. 9) zu haben. Voreingestellt ist die Situation 6x6 und symmetrische Boxen. 
+Mit Hilfe der Checkboxen wählen Sie Situation 9x9 oder asymmetrische Boxen.</p>
 <p>Sie können mit <b>Create</b> ein neues Puzzle erzeugen oder durch Wahl von p1 bis p5 aus dem Auswahlfeld 'Prob' ein gespeichertes 
 Problem laden und dann lösen.<br>
 Das Programm lässt für die Eingabe die - gemäss den Regeln - in den Leerfeldern noch möglichen Ziffern zu. 
@@ -85,8 +85,8 @@ Weitere Informationen, insbesondere zur Hilfe: Klicken Sie auf <a href="infos.ht
 	<td style="padding-top:10px;"><input type="button" value="Back" onclick="backtrack_user()"></td>	
 	</tr></table>
 	
-	<p><input id="9x9" type="checkbox" onclick="OnChangeCheckbox3 (this)">Squiggly Sudoku: Situation 9x9<br>
-	
+	<p><input id="symm" type="checkbox" onclick="OnChangeCheckbox4 (this)" checked>Symmetrische Boxen<br>
+	<input id="9x9" type="checkbox" onclick="OnChangeCheckbox3 (this)">Squiggly Sudoku: Situation 9x9</p>
   </div>       
 </div>	
 
