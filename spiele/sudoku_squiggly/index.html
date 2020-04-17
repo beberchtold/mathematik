@@ -37,7 +37,7 @@ Für weitere Infos: klicken Sie auf <a href="infos.html"><img src="/img/help.gif
   
   <div class="col">
   <span id="zifferbuttons">
-    <p>Eingabe der Ziffer ins aktuelle Feld:<br>
+    Eingabe der Ziffer ins aktuelle Feld:<br>
 	<input id="1" type="button" value="1" onclick="eingabe(1)" style="margin-right:8px;">
 	<input id="2" type="button" value="2" onclick="eingabe(2)" style="margin-right:8px;">
 	<input id="3" type="button" value="3" onclick="eingabe(3)" style="margin-right:8px;">
@@ -49,10 +49,10 @@ Für weitere Infos: klicken Sie auf <a href="infos.html"><img src="/img/help.gif
 	<input id="8" type="button" value="8" onclick="eingabe(8)" style="margin-right:8px;">
 	<input id="9" type="button" value="9" onclick="eingabe(9)">
 	</span>
-	</p>
-	<p style="margin-top:20px"><input id="Show" type="checkbox" onclick="OnChangeCheckbox1 (this)">Mögliche Ziffern im akt. Feld: <span id="Verf"> </span></p>
+	<br>
+	<input id="Show" type="checkbox" onclick="OnChangeCheckbox1(this)" style="margin-top:20px">Mögliche Ziffern im akt. Feld: <span id="Verf"> </span>
 
-    <p style="margin-bottom:6px"><input id="Hilfe" type="checkbox" onclick="OnChangeCheckbox2 (this)">Mögliche Felder für Ziffer:</p>
+    <p style="margin-bottom:6px"><input id="Hilfe" type="checkbox" onclick="OnChangeCheckbox2(this)">Mögliche Felder für Ziffer:</p>
 	<input id="H1" type="button" value="1" onclick="hilf(1)" style="margin-right:8px;">
 	<input id="H2" type="button" value="2" onclick="hilf(2)" style="margin-right:8px;">
 	<input id="H3" type="button" value="3" onclick="hilf(3)" style="margin-right:8px;">
@@ -64,7 +64,7 @@ Für weitere Infos: klicken Sie auf <a href="infos.html"><img src="/img/help.gif
 	<input id="H8" type="button" value="8" onclick="hilf(8)" style="margin-right:8px;">
 	<input id="H9" type="button" value="9" onclick="hilf(9)">	
 	</span>
-	</span>
+  </span>
 	<p style="margin-top:20px"><b><span id="message"></span></b></p>
 	<p style="margin-top:20px"><b><span id="messageBox"></span></b></p>
 	<span id="steuerbuttons">
@@ -86,8 +86,8 @@ Für weitere Infos: klicken Sie auf <a href="infos.html"><img src="/img/help.gif
 	</span>
 	<p><input type="button" value="Neue Boxstruktur" style="margin-right:40px;" onclick="erzeugeStruktur()"><input type="button" value="Clear" onclick="initPuzzle()"></p>
 	<p><span id="chb3u4">
-	<input id="symm" type="checkbox" onclick="OnChangeCheckbox4 (this)" checked>Symmetrische Boxstruktur<br>
-	<input id="9x9" type="checkbox" onclick="OnChangeCheckbox3 (this)">Squiggly Sudoku: Situation 9x9
+	<input id="symm" type="checkbox" onclick="OnChangeCheckbox4(this)" checked>Symmetrische Boxstruktur<br>
+	<input id="9x9" type="checkbox" onclick="OnChangeCheckbox3(this)">Squiggly Sudoku: Situation 9x9
 	</span></p>
   </div>       
 </div>	
