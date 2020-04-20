@@ -7,7 +7,7 @@
 <meta name="author" content="B.Berchtold">
 <title>Squiggly Sudoku</title>
 <LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
-<script src="sudoku_sq.v3.0.0.js"></script>
+<script src="sudoku_sq.v3.1.0.js"></script>
 <script async src="problems_sq.v3.0.0.js"></script>
 </head>
 
@@ -92,7 +92,7 @@ Für weitere Infos: klicken Sie auf <a href="infos.html"><img src="/img/help.gif
 	<br>
 	<p><input type="button" value="Neue Boxstruktur" style="margin-right:40px;" onclick="erzeugeStruktur()"><input type="button" value="Clear" onclick="initPuzzle()"></p>
 	<p><span id="chb3u4">
-	<input type="button" value="Neue Boxstruktur durch Computer" onclick="comperzeugeStruktur()"><br><br>
+	<input type="button" id="NBsC" value="Neue Boxstruktur durch Computer" onclick="comperzeugeStruktur()"><br><br>
 	<input id="symm" type="checkbox" onclick="OnChangeCheckbox4(this)" checked>Symmetrische Boxstruktur<br>
 	<input id="9x9" type="checkbox" onclick="OnChangeCheckbox3(this)">Squiggly Sudoku: Situation 9x9
 	</span></p>
