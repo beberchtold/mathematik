@@ -7,7 +7,7 @@
 <title>Numerische Integration</title>
 <LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
 <script src="numint.js"></script>
-<style>input[type=number] {width:3em;margin-bottom:5px;-moz-appearance: textfield;}</style>
+<style>input[type=number] {width:4em;margin-bottom:5px;-moz-appearance: textfield;}</style>
 </head>
 
 <body>
@@ -32,15 +32,15 @@
 	<a href="infos.html"><img src="/img/help.gif" alt="Hilfe"></a><br>
     x0: <input id="Xmin" type="number" step="any" value="0" lang="en">  &nbsp;&nbsp;&nbsp;&nbsp;
     xn: <input id="Xmax" type="number" step="any" value="5" lang="en"><br>
-    Anzahl Teilintervalle (max 200): <input id="Anz" type="number" min="1" max="200" value="20"><br>
+    Anzahl Teilintervalle (max 200): <input id="Anz" type="number" style="width:3em;" min="1" max="200" value="20"><br>
 	<input type="button" value="Berechne!" onclick="reset()"></p>
-	<p><b>Graphik</b><br>
+	<h3>Graphik</h3>
     <input id="1" type="button" value="Trapez" onclick="button1()">&nbsp;&nbsp;
     <input id="2" type="button" value="Links" onclick="button2()">&nbsp;&nbsp;
     <input id="3" type="button" value="Rechts" onclick="button3()">&nbsp;&nbsp;
 	<span style="display:inline-block"><input id="4" type="button" value="Mitte" onclick="button4()"></span>
     </p>
-	<p><b>Resultate</b><br>
+	<h3>Resultate</h3>
     Trapez: <span id="trapez" style="color:black"> </span> &nbsp;&nbsp;&nbsp;
     Simpson: <b><span id="simpson" style="color:black"> </span></b><br>
     Links: <span id="lpunkt" style="color:black"> </span> &nbsp;&nbsp;&nbsp;
@@ -52,16 +52,25 @@
   </div>      
 </div>	
 
-<p><b>Anwendungsbeispiel</b>: Wie gross ist der Umfang u einer Ellipse mit den Halbachsen a = 11 und b = 1.75?</p>
-<p>Für das (elliptische!) Integral <img src="ellipsenumfang.png" width="232" height="56" style="vertical-align:middle" alt="Umfang Ellipse"> gibt es keine exakte Formel.<br>
-Geben Sie also bei y = die folgende Funktion ein: &nbsp; &nbsp; 4*sqrt(11*11*cos(x)*cos(x)+1.75*1.75*sin(x)*sin(x))<br>
- bei x0 = 0 und bei xn = 1.5707963267948966 &nbsp; &nbsp; &nbsp; (copy and paste!).<br>
-Wählen Sie für die Anzahl Intervalle 40, klicken Sie dann auf 'Berechne!' und Sie erhalten den Simpson-Wert <b>u = 45.528581</b>.</p>
+<h2>Anwendungsbeispiele</h2>
+1) Siehe Beispiel beim Start: Wie gross ist der Inhalt der Fläche unter der Gausskurve von 0 bis 5?<br>
+Resultat: Simpson-Wert = <b>0.5</b> (wäre der exakte Wert für das Integral von 0 bis &infin;)<br><br>
+2) Wie gross ist der Umfang u einer Ellipse mit den Halbachsen a = 11 und b = 1.75?<br>
+Nimmt man die Parameterdarstellung x=a*sint, y=b*cost  (t &isin; [0,2&pi;]), so gilt:<br>
+<img src="ellipsenumfang.png" width="240" height="72" style="vertical-align:middle" alt="Umfang Ellipse">.<br>
+Für dieses (elliptische!) Integral gibt es keine exakte Formel, man muss sich also mit numerischer Integration behelfen.<br>
+Eingabe im Feld Funktionsgleichung: &nbsp; &nbsp; 4*sqrt(11*11*sin(x)*sin(x)+1.75*1.75*cos(x)*cos(x))<br>
+bei x0 = 0 und bei xn = 1.5707963267948966 &nbsp; &nbsp; &nbsp; (copy and paste!).<br>
+Wählen Sie für die Anzahl Intervalle 40, klicken Sie dann auf 'Berechne!' und Sie erhalten den Simpson-Wert <b>u = 45.528581</b>.<br><br>
+3) Wie gross ist die Bogenlänge L einer Ellipse mit den Halbachsen a = 11 und b = 1.75 zwischen t1=0 und t2=&pi;/4?<br>
+<img src="Bogenlaenge.png" width="164" height="94" style="vertical-align:middle" alt="Bogenlänge Ellipse"><img src="bogenlaenge_ellipse.png" width="240" height="79" style="vertical-align:middle;margin-left:30px;" alt="Formel Bogenlänge Ellipse">= ?<br>
+Eingabe im Feld Funktionsgleichung: &nbsp; &nbsp; sqrt(11*11*sin(x)*sin(x)+1.75*1.75*cos(x)*cos(x))<br>
+Eingabe bei x0 = 0 und bei xn = 0.785398163397 &nbsp;&nbsp; Wählen Sie Anzahl Intervalle 40.<br>
+Sie erhalten den Simpson-Wert <b>L = 3.579792</b>
 	
 </div>  
 <!-- EOF: CONTENT -->
 
- 
 <div id="footer">
 <p><small>
 ©1997 -
