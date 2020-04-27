@@ -27,9 +27,9 @@ Mit Hilfe der Checkbox wählen Sie die Situation 9x9.<br>
 Sie können mit <b>Create</b> ein neues Problem mit aktueller Boxstruktur erzeugen oder durch Wahl von p1 bis p8 aus 'Prob' ein 
 gespeichertes Problem laden und dann lösen (p8 ist Standard-Sudoku).<br>
 <b>Solve</b> versucht, eine Lösung der Stellung vom aktuellen Brett zu finden.<br>
-Mit Klick auf <b>Neue Boxstruktur Benutzer</b> können Sie eine eigene Struktur schaffen und so z.B. auch jede vorgegebene Problemstellung eines 
-Freiform-Sudokus eingeben und vom Computer lösen lassen.<br>
-<b>Neue Boxstruktur Comp</b> lässt den Computer eine Zufallsstruktur erzeugen.<br>
+Mit Klick auf <b>NeueBoxstruktur Benutzer</b> können Sie eine eigene Struktur schaffen und so z.B. auch jede vorgegebene Problemstellung 
+eines Freiform-Sudokus eingeben und vom Computer lösen lassen.<br>
+<b>NeueBoxstruktur Comp</b> lässt den Computer eine Zufallsstruktur erzeugen.<br>
 Das erste Problem nach jeweils neuer Boxstruktur wird gespeichert und ist via 'Probneu' abrufbar.<br>
 Für weitere Infos: klicken Sie auf <a href="infos.html"><img src="/img/help.gif" alt="help"></a></p>
 
@@ -95,10 +95,10 @@ Für weitere Infos: klicken Sie auf <a href="infos.html"><img src="/img/help.gif
 	</span>
 	<br>
 	<p><span id="bNBCle">
-	<input type="button" value="Neue Boxstruktur Benutzer" style="margin-right:40px;" onclick="erzeugeStruktur()"><input type="button" value="Clear" onclick="initPuzzle()">
+	<input type="button" value="NeueBoxstruktur Benutzer" style="margin-right:40px;" onclick="erzeugeStruktur()"><input type="button" value="Clear" onclick="initPuzzle()">
 	</span></p>
 	<p><span id="chb3u4">
-	<input type="button" id="NBsC" value="Neue Boxstruktur Comp" style="margin-right:20px;" onclick="comperzeugeStruktur()">
+	<input type="button" id="NBsC" value="NeueBoxstruktur Comp" style="margin-right:15px;" onclick="comperzeugeStruktur()">
 	<span id="prob6">
 	<select id="probneu6" size="1" onchange="problemneu(this[selectedIndex].index)">
       <option selected>Probneu</option>
