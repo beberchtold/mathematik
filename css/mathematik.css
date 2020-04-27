@@ -13,7 +13,8 @@ small{font-size:14px}
 ul{list-style-type:none;margin:0;padding:0}
 input[type="button"] {border:1px solid;cursor:pointer;background-color:#E0FFFF}
 input[type="submit"] {background-color:#E0FFFF}
-select{background-color:#E0FFFF}
+select{padding:1px;font-size:15px;background-color:#E0FFFF; appearance:none;}
+select:-ms-expand {display: none;}
 input[type="radio"]{width:16px;height:16px;cursor:pointer;}
 input[type="checkbox"] {width:19px;height:19px;outline:1px solid;margin-top:8px;margin-bottom:-3px;background:#E0FFFF;-webkit-appearance:none;-moz-appearance:none;}
 input[type="checkbox"]:checked:after {font-size:14px;content:"\2714";padding-left:3px;}
