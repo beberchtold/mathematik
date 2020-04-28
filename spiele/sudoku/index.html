@@ -2,9 +2,9 @@
 <html lang="de">
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta NAME="Description" CONTENT="Spiel Sudoku mit Javascript">
+<meta NAME="Description" CONTENT="Spiel Sudoku mit Javascript: Generator und Solver">
 <meta name="author" content="B.Berchtold">
-<title>Sudoku 9x9</title>
+<title>Sudoku 9x9 (Standard-Sudoku)</title>
 <LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
 <script src="sudoku.js"></script>
 <script async src="problems_min.js"></script>
@@ -18,7 +18,7 @@
 <!-- CONTENT -->
 <div id="content" style="display:block;">
 
-<h1>Sudoku 9x9</h1>
+<h1>Sudoku 9x9 (Standard-Sudoku)</h1>
 
 <p>Das Ziel des Spiels ist, in jeder Zeile, Kolonne und Box (eine Box ist durch fette Linien abgetrennt) 
 genau die Ziffern 1 bis 9 zu haben.</p>
@@ -64,7 +64,7 @@ Weitere Informationen, insbesondere zur Hilfe: Klicken Sie auf <a href="infos.ht
 	<table><tr>
 	<td><input type="button" value="Create" onclick="docreate()">&nbsp;&nbsp;</td>
     <td style="padding-right:12px;">
-    <select id="wahl" size="1" onchange="problem(this[selectedIndex].index)">
+    <select id="wahl" onchange="problem(this[selectedIndex].index)">
       <option selected>Prob</option>
 	  <option>p1</option>
       <option>p2</option>
@@ -90,8 +90,10 @@ Weitere Informationen, insbesondere zur Hilfe: Klicken Sie auf <a href="infos.ht
   </div>       
 </div>	
 
-<p>Ein Sudoku benötigt mindestens 17 Vorgaben (Gary McGuire, Januar 2012)</p>
-<p><span style="margin-right:60px;"><a href="/spiele/sudoku_x/">Zu SudokuX</a></span><a href="/spiele/sudoku_squiggly/">Zu Squiggly Sudoku</a></p>
+<p>Ein Standard-Sudoku ist ein Spezialfall des Squiggly-Sudoku.<br>
+Es benötigt mindestens 17 Vorgaben (Gary McGuire, Januar 2012)</p>
+<p><span style="margin-right:60px;"><a href="/spiele/sudoku_x/">Zu SudokuX</a></span>
+<a href="/spiele/sudoku_squiggly/">Zu Squiggly Sudoku</a></p>
 
 </div>  
 <!-- EOF: CONTENT -->
