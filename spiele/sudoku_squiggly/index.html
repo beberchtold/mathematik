@@ -7,7 +7,7 @@
 <meta name="author" content="B.Berchtold">
 <title>Squiggly Sudoku (Freiform-Sudoku)</title>
 <LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
-<script src="sudoku_sq.v3.5.4.js"></script>
+<script src="sudoku_sq.v3.5.5.js"></script>
 <script src="problems_sq.v3.5.3.js"></script>
 </head>
 
@@ -19,7 +19,7 @@
 <!-- CONTENT -->
 <div id="content" style="display:block;">
 
-<h1>Squiggly Sudoku v3.5.4 (Freiform-Sudoku)</h1>
+<h1>Squiggly Sudoku v3.5.5 (Freiform-Sudoku)</h1>
 
 <p>Das Ziel des Spiels ist, in jeder Zeile, Kolonne und jeder Box (eine Box ist durch fette 
 Linien abgetrennt und gefärbt) genau die Ziffern 1 bis 6 (bzw. 9) zu haben. Voreingestellt ist die Situation 6x6. 
@@ -69,8 +69,8 @@ Für weitere Infos: Klicken Sie auf <a href="infos.html" target="_blank"><img sr
 	<input id="H9" type="button" value="9" onclick="hilf(9)">	
 	</span>
   </span>
-	<p style="margin-top:20px"><span id="message"></span></p>
-	<p style="margin-top:20px"><span id="messageBox"></span></p>
+	<p style="margin-top:20px"><span id="message"></span><br>
+	<span id="messageBox"></span></p>
 	<span id="steuerbuttons1">
 	<input id="Cre" style="margin-right:20px;" type="button" value="Create" onclick="docreate()">
 	<input id="Sol"  style="margin-right:40px;" type="button" value="Solve" onclick="solvebutton()">
@@ -98,20 +98,23 @@ Für weitere Infos: Klicken Sie auf <a href="infos.html" target="_blank"><img sr
 	<input type="button" value="NeueBoxstruktur Benutzer" style="margin-right:40px;" onclick="erzeugeStruktur()"><input type="button" value="Clear" onclick="initPuzzle()">
 	</span></p>
 	<p><span id="chb3u4">
-	<input type="button" id="NBsC" value="NeueBoxstruktur Comp" style="margin-right:20px;" onclick="comperzeugeStruktur()">
-	<span id="prob6">
-	<select id="probneu6" style="width:90px;" onchange="problemneu(this[selectedIndex].index)">
-      <option selected>Probneu</option>
-    </select>
-	</span>
-	<span id="prob9" style="display:none;">
-	<select id="probneu9" style="width:90px;" onchange="problemneu(this[selectedIndex].index)">
-      <option selected>Probneu</option>
-    </select>
-	</span>
-	<br><br><input type="button" value="Save aktuelles Problem als Probneu" onclick="usersaveneu()">
-	<br><br>
-	<input id="9x9" type="checkbox" onclick="OnChangeCheckbox3(this)">Squiggly Sudoku: Situation 9x9
+	  <input type="button" id="NBsC" value="NeueBoxstruktur Comp" style="margin-right:20px;" onclick="comperzeugeStruktur()">
+	  <span id="prob6">
+	    <select id="probneu6" style="width:90px;" onchange="problemneu(this[selectedIndex].index)">
+          <option selected>Probneu</option>
+        </select>
+	  </span>
+	  <span id="prob9" style="display:none;">
+	    <select id="probneu9" style="width:90px;" onchange="problemneu(this[selectedIndex].index)">
+          <option selected>Probneu</option>
+        </select>
+	  </span>
+	  <br><br>
+	  <span id="saveaktprob" style="display:none;">
+	    <input type="button" value="Save aktuelles Problem als Probneu" onclick="usersaveneu()">
+		<br>
+	  </span>
+	  <input id="9x9" type="checkbox" onclick="OnChangeCheckbox3(this)">Squiggly Sudoku: Situation 9x9
 	</span></p>
   </div>       
 </div>	
