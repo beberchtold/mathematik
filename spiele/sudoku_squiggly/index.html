@@ -7,8 +7,8 @@
 <meta name="author" content="B.Berchtold">
 <title>Squiggly Sudoku (Freiform-Sudoku)</title>
 <LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
-<script src="sudoku_sq.v3.6.1.js"></script>
-<script src="problems_sq.v3.6.0.js"></script>
+<script src="sudoku_sq.v3.7.0.js"></script>
+<script src="problems_sq.v3.7.0.js"></script>
 </head>
 
 <body onload="resizeCanvas()" onkeyup="keyPress(event.keyCode)">
@@ -19,7 +19,7 @@
 <!-- CONTENT -->
 <div id="content" style="display:block;">
 
-<h1>Squiggly Sudoku v3.6.1 (Freiform-Sudoku)</h1>
+<h1>Squiggly Sudoku v3.7.0 (Freiform-Sudoku)</h1>
 
 <p>Das Ziel des Spiels ist, in jeder Zeile, Kolonne und jeder Box (eine Box ist durch fette 
 Linien abgetrennt und gefärbt) genau die Ziffern 1 bis 6 (bzw. 9) zu haben. Voreingestellt ist die Situation 6x6. 
@@ -73,11 +73,12 @@ Für weitere Infos: Klicken Sie auf <a href="infos.html" target="_blank"><img sr
   <br><br>
   <span id="message" style="margin-top:10px"></span><br>
   <span id="messageBox"></span>
+  <span id="right" style="margin-top:8px;margin-bottom:10px;display:none">
+    <input type="button" style="margin-right:15px;" value="Richtig?" onclick="richtig()">
+  </span><span id="Antwort"></span>
   <span id="testeind" style="margin-top:10px;margin-bottom:10px;display:none">
-	<input type="button" style="margin-right:20px;" value="Test:Eindeutig?" onclick="dotest()">
-	<br>
-  </span>
-  <span id="Resultat"></span>
+	<input type="button" style="margin-right:15px;" value="Test:Eindeutig?" onclick="dotest()">
+  </span><span id="Resultat"></span>
   <br>
   <span id="steuerbuttons1">
 	<input id="Sav" style="margin-right:20px;margin-top:8px;margin-bottom:8px;" type="button" value="Save" onclick="save_user()">

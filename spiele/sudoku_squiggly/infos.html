@@ -16,40 +16,42 @@
 <!-- CONTENT -->
 <div id="content" style="display:block;">
 
-<h1>Infos zum Programm Squiggly Sudoku (v3.6.1) auf www.mathematik.ch</h1>
+<h1>Infos zum Programm Squiggly Sudoku (v3.7.0) auf www.mathematik.ch</h1>
 
 <ul>
-<li>Vorgewählt ist Situation 6x6. Unterste Checkbox angekreuzt wählt Situation 9x9.</li>
 <li>Ein Feld kann durch Mausklick oder mit den Cursortasten aktiviert werden (Aktuelles Feld hat hellblauen Hintergrund)</li>
 <li>Die Eingabe der Ziffern erfolgt mit den Buttons oder mit Hilfe der Tastatur.<br>
 Das Programm lässt für die Eingabe die - gemäss den Regeln - in den Leerfeldern noch möglichen Ziffern zu. 
 Es ist aber wegen der Eindeutigkeit der Lösung jeweils natürlich nur genau eine dieser Ziffern richtig!</li>
-<li><b>Create-Button</b>: erzeugt ein neues, eindeutig zu lösendes Problem. Bitte etwas Geduld! Eventuell kann der Computer in vernünftiger
- Zeit kein Problem erzeugen. Klicken Sie dann einfach nochmals auf 'Create'.<br>
-Falls Sie ein neues Problem erzeugen, so wird die Problemstellung gespeichert und Sie können sie mit Load wieder 
-laden - solange Sie sie nicht mit Save überschrieben haben.</li>
-<li><b>Auswahlfeld 'Prob'</b>: ladet gespeicherte Probleme p1 bis p8 (mit p8 laden Sie die originale Sudoku Boxstruktur)</li>
-<li><b>Solve-Button</b>: versucht, eine Lösung der Stellung vom aktuellen Brett zu finden.</li>
-<li><b>Clear-Button</b>: erzeugt leeres Startfeld (reset) mit der aktuellen Boxstruktur.<br>
-Drücken Sie 'Clear' während Sie eine neue Boxstruktur erzeugen, so brechen Sie diese Erzeugung ab und laden eine gegebene Boxstruktur.
+<li>Sobald Sie Ziffern zu einem Lösungsversuch eingeben, erscheint der <b>Richtig?-Button</b>. Er zeigt, ob Ihr 
+Versuch noch korrekt ist.</li>
+<li>Aktivierung der Checkbox <b>'Verfügbare Ziffern im akt. Feld'</b> zeigt die verfügbaren Ziffern im aktuellen Feld.</li>
+<li>Aktivierung der Checkbox <b>'Nicht mögliche Felder für Ziffer'</b>:<br>
+Ziffern 1 bis 6 (bzw.9): die nicht mehr möglichen Felder für die gewählte Ziffer sind hellgrün, die möglichen haben die Farbe der entsprechenden Box..<br>
 </li>
 <li><b>Save-Button</b>: speichert den aktuellen Zwischenstand.</li>
 <li><b>Load-Button</b>: ladet den vorher mit Save gespeicherten Zwischenstand.</li>
 <li><b>Back-Button</b>: macht den jeweils letzten Zug rückgängig.</li>
-<li>Aktivierung der Checkbox <b>'Verfügbare Ziffern im akt. Feld'</b> zeigt die verfügbaren Ziffern im aktuellen Feld.</li>
-<li>Aktivierung der Checkbox <b>'Nicht mögliche Felder für Ziffer'</b>:<br>
-Ziffern 1 bis 6 (bzw.9): die nicht mehr möglichen Felder für die gewählte Ziffer sind hellgrün, die möglichen haben die Farbe der entsprechenden Box..<br>
+<li><b>Solve-Button</b>: versucht, eine Lösung der Stellung vom aktuellen Brett zu finden. Wenn Sie 'Solve' wählen, so wird Ihr Lösungsversuch abgebrochen.
+Wählen Sie also zur Kontrolle Ihrer Lösungsversuche den Button 'Richtig?' und nicht 'Solve'.</li>
+<li><b>Auswahlfeld 'Prob'</b>: ladet gespeicherte Probleme p1 bis p8 (mit p8 laden Sie die originale Sudoku Boxstruktur)</li>
+<li><b>Create-Button</b>: erzeugt ein neues, eindeutig zu lösendes Problem. Bitte etwas Geduld! Eventuell kann der Computer in vernünftiger
+ Zeit kein Problem erzeugen. Klicken Sie dann einfach nochmals auf 'Create'.<br>
+Falls ein neues Problem erzeugt wird, so wird die Problemstellung gespeichert und Sie können sie mit Load wieder 
+laden - solange Sie sie nicht mit Save überschrieben haben. Sie können sie aber auch in 'Probneu' speichern.</li>
+<li><b>Clear-Button</b>: erzeugt leeres Startfeld mit der aktuellen Boxstruktur.<br>
+Drücken Sie 'Clear' während Sie eine neue Boxstruktur erzeugen, so brechen Sie diese Erzeugung ab und laden eine gegebene Boxstruktur.
+</li>
+<li><b>NeueBoxstruktur Comp</b> lässt den Computer eine Zufallsstruktur (zusammenhängende Boxen) erzeugen. Bei Situation 9x9 
+brauchen Sie dann bei der Erzeugung einer eindeutigen Problemstellung (mit Create) meistens viel Geduld. Es lohnt sich aber, mehrere Versuche 
+mit Create zu starten. Hat der Computer mal eine eindeutige Problemstellung gefunden, so findet er die nächste eindeutige Problemstellung 
+derselben Boxstruktur leichter.
 </li>
 <li>Durch Klick auf <b>NeueBoxstruktur User</b> können Sie eine eigene Struktur schaffen. 
 Die letzte Box (übriggebliebene 6 bzw 9 Felder) wird vom Computer hinzugefügt.<br>
 Klick auf Create erzeugt dann ein neues Problem. Falls Sie mehrmals hintereinander die Meldung 'Create nicht gelungen' erhalten, so
  gibt es eventuell für Ihre erzeugte Boxstruktur kein mögliches eindeutiges Problem. Erzeugen Sie dann eine neue Struktur oder 
  klicken Sie auf 'Clear', um eine vordefinierte Struktur zu laden.
-</li>
-<li><b>NeueBoxstruktur Comp</b> lässt den Computer eine Zufallsstruktur (zusammenhängende Boxen) erzeugen. Bei Situation 9x9 
-brauchen Sie dann bei der Erzeugung einer eindeutigen Problemstellung (mit Create) meistens viel Geduld. Es lohnt sich aber, mehrere Versuche 
-mit Create zu starten. Hat der Computer mal eine eindeutige Problemstellung gefunden, so findet er die nächste eindeutige Problemstellung 
-derselben Boxstruktur leichter.
 </li>
 <li>
 Das erste durch <b>Create</b> entstandene Problem nach jeweils neuer Boxstruktur wird automatisch gespeichert und ist via 'Probneu' abrufbar.
