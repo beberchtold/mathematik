@@ -36,8 +36,9 @@ Weitere Informationen, insbesondere zur Hilfe: Klicken Sie auf <a href="infos.ht
   </div>
   
   <div class="col">
-    <p>Eingabe der Ziffer ins aktuelle Feld:<br>
-	<input id="1" type="button" value="1" onclick="eingabe(1)" style="margin-right:8px;">
+  <div id="zifferbuttons">
+    Eingabe der Ziffer ins akt. (hellblaue) Feld:<br>
+	<input id="1" type="button" value="1" onclick="eingabe(1)" style="margin-right:8px;margin-top:5px;">
 	<input id="2" type="button" value="2" onclick="eingabe(2)" style="margin-right:8px;">
 	<input id="3" type="button" value="3" onclick="eingabe(3)" style="margin-right:8px;">
     <input id="4" type="button" value="4" onclick="eingabe(4)" style="margin-right:8px;">
@@ -45,20 +46,24 @@ Weitere Informationen, insbesondere zur Hilfe: Klicken Sie auf <a href="infos.ht
 	<input id="6" type="button" value="6" onclick="eingabe(6)" style="margin-right:8px;">
     <input id="7" type="button" value="7" onclick="eingabe(7)" style="margin-right:8px;">
 	<input id="8" type="button" value="8" onclick="eingabe(8)" style="margin-right:8px;">
-	<input id="9" type="button" value="9" onclick="eingabe(9)">	
-	</p>
-	<p style="margin-top:20px"><input id="Show" type="checkbox" onclick="OnChangeCheckbox1 (this)">Mögliche Ziffern im akt. Feld: <span id="Verf"> </span></p>
-
-    <p style="margin-bottom:6px"><input id="Hilfe" type="checkbox" onclick="OnChangeCheckbox2 (this)">Mögliche Felder für Ziffer:</p>
-	<input id="H1" type="button" value="1" onclick="hilf(1)" style="margin-right:8px;">
-	<input id="H2" type="button" value="2" onclick="hilf(2)" style="margin-right:8px;">
-	<input id="H3" type="button" value="3" onclick="hilf(3)" style="margin-right:8px;">
-    <input id="H4" type="button" value="4" onclick="hilf(4)" style="margin-right:8px;">
-	<input id="H5" type="button" value="5" onclick="hilf(5)" style="margin-right:8px;">
-	<input id="H6" type="button" value="6" onclick="hilf(6)" style="margin-right:8px;">
-    <input id="H7" type="button" value="7" onclick="hilf(7)" style="margin-right:8px;">
-	<input id="H8" type="button" value="8" onclick="hilf(8)" style="margin-right:8px;">
-	<input id="H9" type="button" value="9" onclick="hilf(9)">	
+	<input id="9" type="button" value="9" onclick="eingabe(9)">
+	<br>
+	<div style="margin-top:14px;outline:1px solid;padding:0px 0px 3px 2px;">
+	  <input id="Show" type="checkbox" onclick="OnChangeCheckbox1(this)">Verfügbare Ziffern im akt. Feld: <span id="Verf"></span>
+      <br>
+      <input id="Hilfe" type="checkbox" onclick="OnChangeCheckbox2(this)">Nicht mögliche Felder für Ziffer:
+	  <br>
+	  <input id="H1" type="button" value="1" onclick="hilf(1)" style="margin-right:8px;margin-top:5px;">
+	  <input id="H2" type="button" value="2" onclick="hilf(2)" style="margin-right:8px;">
+	  <input id="H3" type="button" value="3" onclick="hilf(3)" style="margin-right:8px;">
+      <input id="H4" type="button" value="4" onclick="hilf(4)" style="margin-right:8px;">
+	  <input id="H5" type="button" value="5" onclick="hilf(5)" style="margin-right:8px;">
+	  <input id="H6" type="button" value="6" onclick="hilf(6)" style="margin-right:8px;">
+      <input id="H7" type="button" value="7" onclick="hilf(7)" style="margin-right:8px;">
+	  <input id="H8" type="button" value="8" onclick="hilf(8)" style="margin-right:8px;">
+	  <input id="H9" type="button" value="9" onclick="hilf(9)">
+	</div>
+  </div>	
 	
 	<p style="margin-top:20px"><b><span id="message"></span></b></p>
 	<table><tr>
@@ -90,8 +95,11 @@ Weitere Informationen, insbesondere zur Hilfe: Klicken Sie auf <a href="infos.ht
   </div>       
 </div>	
 
-<p>Ein Standard-Sudoku ist ein Spezialfall des Squiggly-Sudoku.<br>
-Es benötigt mindestens 17 Vorgaben (Gary McGuire, Januar 2012)</p>
+<p>Ein Standard-Sudoku ist ein Spezialfall des Squiggly-Sudoku. Es benötigt mindestens 17 Vorgaben (Gary McGuire, Januar 2012).<br>
+Sie können dieses Standard-Sudoku auch bei <a href="/spiele/sudoku_squiggly/">Squiggly Sudoku</a> spielen. Wählen Sie dort Problem p8.
+Die 9 Unterquadrate sind dann farbig und Sie haben mehr Möglichkeiten zur Auswahl (z.B. Check, ob Ihre Zwischenlösung korrekt ist, 
+Speichern von neuen Problemen usw.).</p>
+
 <p><span style="margin-right:60px;"><a href="/spiele/sudoku_x/">Zu SudokuX</a></span>
 <a href="/spiele/sudoku_squiggly/">Zu Squiggly Sudoku</a></p>
 
