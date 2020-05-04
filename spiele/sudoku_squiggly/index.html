@@ -40,7 +40,7 @@ Für weitere Infos: Klicken Sie auf <a href="infos.html" target="_blank"><img sr
   </div>
   
   <div class="col">
-  <span id="zifferbuttons">
+  <div id="zifferbuttons">
     Eingabe der Ziffer ins akt. (hellblaue) Feld:<br>
 	<input type="button" value=" " onclick="eingabe(0)" style="margin-right:8px;margin-top:5px;">
 	<input type="button" value="1" onclick="eingabe(1)" style="margin-right:8px;">
@@ -72,7 +72,7 @@ Für weitere Infos: Klicken Sie auf <a href="infos.html" target="_blank"><img sr
 	  <input id="H9" type="button" value="9" onclick="hilf(9)">	
 	  </span>
 	</div>
-  </span>
+  </div>
   <br><br>
   <span id="message" style="margin-top:10px"></span><br>
   <span id="messageBox"></span>
@@ -83,13 +83,13 @@ Für weitere Infos: Klicken Sie auf <a href="infos.html" target="_blank"><img sr
 	<input type="button" style="margin-right:15px;" value="Test:Eindeutig?" onclick="dotest()">
   </span><span id="Resultat"></span>
   <br>
-  <span id="steuerbuttons1">
+  <div id="steuerbuttons1">
 	<input id="Sav" style="margin-right:20px;margin-top:8px;margin-bottom:8px;" type="button" value="Save" onclick="save_user()">
 	<input id="Loa" style="margin-right:87px;" type="button" value="Load" onclick="load_user()">
 	<input id="Sol" type="button" value="Solve" onclick="solvebutton()">
-  </span>
+  </div>
   <br>
-  <span id="steuerbuttons2">
+  <div id="steuerbuttons2">
 	<input id="Cre" style="margin-right:20px;" type="button" value="Create" onclick="docreate()">
 	<input id="Creuser" style="margin-right:30px;" type="button" value="CreateUser" onclick="createuser()">
 	<select id="wahl" onchange="problem(this[selectedIndex].index)">
@@ -103,13 +103,13 @@ Für weitere Infos: Klicken Sie auf <a href="infos.html" target="_blank"><img sr
 	  <option>p7</option>
 	  <option>p8</option>
     </select>
-  </span>
+  </div>
   <br><br>
-  <span id="bNBCle">
+  <div id="bNBCle">
 	<input type="button" value="NeueBoxstruktur User" style="margin-right:45px;" onclick="erzeugeStruktur()"><input type="button" value="Clear" onclick="clearf()">
-  </span>
+  </div>
   <br>
-  <span id="chb3u4">
+  <div id="chb3u4">
 	<input type="button" id="NBsC" value="NeueBoxstruktur Comp" style="margin-right:32px;margin-top:8px;" onclick="comperzeugeStruktur()">
 	<span id="prob6">
 	    <select id="probneu6" style="width:90px;" onchange="problemneu(this[selectedIndex].index)">
@@ -127,7 +127,7 @@ Für weitere Infos: Klicken Sie auf <a href="infos.html" target="_blank"><img sr
 	</span>
 	<br>
 	<input id="9x9" type="checkbox" onclick="OnChangeCheckbox3(this)">Squiggly Sudoku: Situation 9x9
-  </span>
+  </div>
   </div>       
 </div>	
 
