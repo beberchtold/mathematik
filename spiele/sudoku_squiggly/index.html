@@ -7,7 +7,7 @@
 <meta name="author" content="B.Berchtold">
 <title>Squiggly Sudoku (Freiform-Sudoku)</title>
 <LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
-<script src="sudoku_sq.v3.7.2.js"></script>
+<script src="sudoku_sq.v3.7.3.js"></script>
 <script src="problems_sq.v3.7.0.js"></script>
 </head>
 
@@ -19,7 +19,7 @@
 <!-- CONTENT -->
 <div id="content" style="display:block;">
 
-<h1>Squiggly Sudoku v3.7.2 (Freiform-Sudoku)</h1>
+<h1>Squiggly Sudoku v3.7.3 (Freiform-Sudoku)</h1>
 
 <p>Das Ziel des Spiels ist, in jeder Zeile, Kolonne und jeder Box (eine Box ist durch fette 
 Linien abgetrennt und gefärbt) genau die Ziffern 1 bis 6 (bzw. 9) zu haben. Voreingestellt ist die Situation 6x6. 
@@ -90,8 +90,8 @@ Für weitere Infos: Klicken Sie auf <a href="infos.html" target="_blank"><img sr
   </div>
   <br>
   <div id="steuerbuttons2">
-	<input id="Cre" style="margin-right:20px;" type="button" value="Create" onclick="docreate()">
-	<input id="Creuser" style="margin-right:30px;" type="button" value="CreateUser" onclick="createuser()">
+	<input style="margin-right:20px;" type="button" value="Create" onclick="docreate()">
+	<input style="margin-right:30px;" type="button" value="CreateUser" onclick="createuser()">
 	<select id="wahl" onchange="problem(this[selectedIndex].index)">
       <option selected>Prob</option>
 	  <option>p1</option>
@@ -106,7 +106,7 @@ Für weitere Infos: Klicken Sie auf <a href="infos.html" target="_blank"><img sr
   </div>
   <br><br>
   <div id="bNBCle">
-	<input type="button" value="NeueBoxstruktur User" style="margin-right:45px;" onclick="erzeugeStruktur()"><input type="button" value="Clear" onclick="clearf()">
+	<input type="button" value="NeueBoxstruktur User" style="margin-right:45px;" onclick="erzeugeStruktur()"><span><input type="button" value="Clear" onclick="clearf()"></span>
   </div>
   <br>
   <div id="chb3u4">
