@@ -9,7 +9,6 @@
 <LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
 <script src="sudoku_sq.v3.7.1.js"></script>
 <script src="problems_sq.v3.7.0.js"></script>
-</style>
 </head>
 
 <body onload="resizeCanvas()" onkeyup="keyPress(event.keyCode)">
@@ -56,21 +55,23 @@ Für weitere Infos: Klicken Sie auf <a href="infos.html" target="_blank"><img sr
 	<input type="button" value="9" onclick="eingabe(9)">
 	</span>
 	<br>
-	<input id="Show" type="checkbox" onclick="OnChangeCheckbox1(this)" style="margin-top:20px;">Verfügbare Ziffern im akt. Feld: <span id="Verf"> </span>
-    <br>
-    <input id="Hilfe" type="checkbox" onclick="OnChangeCheckbox2(this)">Nicht mögliche Felder für Ziffer:
-	<br>
-	<input id="H1" type="button" value="1" onclick="hilf(1)" style="margin-right:8px;margin-top:5px;">
-	<input id="H2" type="button" value="2" onclick="hilf(2)" style="margin-right:8px;">
-	<input id="H3" type="button" value="3" onclick="hilf(3)" style="margin-right:8px;">
-    <input id="H4" type="button" value="4" onclick="hilf(4)" style="margin-right:8px;">
-	<input id="H5" type="button" value="5" onclick="hilf(5)" style="margin-right:8px;">
-	<input id="H6" type="button" value="6" onclick="hilf(6)" style="margin-right:8px;">
-	<span id="H9x9" style="display:none;">
-    <input id="H7" type="button" value="7" onclick="hilf(7)" style="margin-right:8px;">
-	<input id="H8" type="button" value="8" onclick="hilf(8)" style="margin-right:8px;">
-	<input id="H9" type="button" value="9" onclick="hilf(9)">	
-	</span>
+	<div style="margin-top:14px;outline:1px solid;padding:0px 0px 3px 2px;">
+	  <input id="Show" type="checkbox" onclick="OnChangeCheckbox1(this)">Verfügbare Ziffern im akt. Feld: <span id="Verf"></span>
+      <br>
+      <input id="Hilfe" type="checkbox" onclick="OnChangeCheckbox2(this)">Nicht mögliche Felder für Ziffer:
+	  <br>
+	  <input id="H1" type="button" value="1" onclick="hilf(1)" style="margin-right:8px;margin-top:5px;">
+	  <input id="H2" type="button" value="2" onclick="hilf(2)" style="margin-right:8px;">
+	  <input id="H3" type="button" value="3" onclick="hilf(3)" style="margin-right:8px;">
+      <input id="H4" type="button" value="4" onclick="hilf(4)" style="margin-right:8px;">
+	  <input id="H5" type="button" value="5" onclick="hilf(5)" style="margin-right:8px;">
+	  <input id="H6" type="button" value="6" onclick="hilf(6)" style="margin-right:8px;">
+	  <span id="H9x9" style="display:none;">
+      <input id="H7" type="button" value="7" onclick="hilf(7)" style="margin-right:8px;">
+	  <input id="H8" type="button" value="8" onclick="hilf(8)" style="margin-right:8px;">
+	  <input id="H9" type="button" value="9" onclick="hilf(9)">	
+	  </span>
+	</div>
   </span>
   <br><br>
   <span id="message" style="margin-top:10px"></span><br>
