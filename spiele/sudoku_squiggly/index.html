@@ -32,7 +32,7 @@ Mit Klick auf <b>NeueBoxstruktur User</b> können Sie eine eigene Struktur schaf
 eines Freiform-Sudokus eingeben und vom Computer lösen lassen.<br>
 Das erste Problem nach jeweils neuer Boxstruktur wird automatisch gespeichert und ist via 'Probneu' abrufbar.<br>
 Sie können mit <b>CreateUser</b> auch eine eigene Problemstellung eingeben und sie auf Eindeutigkeit prüfen lassen.<br>
-Für weitere Infos: Klicken Sie auf <a href="infos.html" target="_blank"><img src="/img/help.gif" alt="help"></a> (wird in neuem Tab geöffnet).</p>
+Für weitere Infos: Klicken Sie auf <a href="infos.html" title="Weitere Infos" target="_blank"><img src="/img/help.gif" alt="help"></a> (wird in neuem Tab geöffnet).</p>
 
 <div class="colgroup-2">
   <div class="col" id="containercanvas">
@@ -42,7 +42,7 @@ Für weitere Infos: Klicken Sie auf <a href="infos.html" target="_blank"><img sr
   <div class="col">
   <div id="zifferbuttons">
     Eingabe der Ziffer ins akt. (hellblaue) Feld:<br>
-	<input type="button" value=" " onclick="eingabe(0)" style="margin-right:8px;margin-top:5px;">
+	<input type="button" title="löscht (schwarze) Ziffer, funktioniert auch mit delete-Taste" value=" " onclick="eingabe(0)" style="margin-right:8px;margin-top:5px;">
 	<input type="button" value="1" onclick="eingabe(1)" style="margin-right:8px;">
 	<input type="button" value="2" onclick="eingabe(2)" style="margin-right:8px;">
 	<input type="button" value="3" onclick="eingabe(3)" style="margin-right:8px;">
@@ -77,22 +77,22 @@ Für weitere Infos: Klicken Sie auf <a href="infos.html" target="_blank"><img sr
   <span id="message" style="margin-top:10px"></span><br>
   <span id="messageBox"></span>
   <span id="right" style="margin-top:8px;margin-bottom:10px;display:none">
-    <input type="button" style="margin-right:15px;" value="Richtig?" onclick="richtig()">
+    <input type="button" value="Richtig?" onclick="richtig()" style="margin-right:15px;">
   </span><span id="Antwort"></span>
   <span id="testeind" style="margin-top:10px;margin-bottom:10px;display:none">
-	<input type="button" style="margin-right:15px;" value="Test:Eindeutig?" onclick="dotest()">
+	<input type="button" value="Test:Eindeutig?" onclick="dotest()" style="margin-right:15px;">
   </span><span id="Resultat"></span>
   <br>
   <div id="steuerbuttons1">
-	<input id="Sav" style="margin-right:20px;margin-top:8px;margin-bottom:8px;" type="button" value="Save" onclick="save_user()">
-	<input id="Loa" style="margin-right:87px;" type="button" value="Load" onclick="load_user()">
-	<input id="Sol" type="button" value="Solve" onclick="solvebutton()">
+	<input id="Sav" type="button" value="Save" title="speichert aktuelle Stellung" onclick="save_user()" style="margin-right:20px;margin-top:8px;margin-bottom:8px;">
+	<input id="Loa" type="button" value="Load" title="ladet die mit Save gespeicherte Stellung" onclick="load_user()" style="margin-right:87px;">
+	<input id="Sol" type="button" value="Solve" title="Computer versucht Lösung der aktuellen Stellung zu finden" onclick="solvebutton()">
   </div>
   <br>
   <div id="steuerbuttons2">
-	<input style="margin-right:20px;" type="button" value="Create" onclick="docreate()">
-	<input style="margin-right:30px;" type="button" value="CreateUser" onclick="createuser()">
-	<select id="wahl" onchange="problem(this[selectedIndex].index)">
+	<input type="button" value="Create" title="Computer versucht neue Problemstellung zu erzeugen" onclick="docreate()" style="margin-right:20px;">
+	<input type="button" value="CreateUser" title="Hier können Sie Ihre Problemstellung eingeben" onclick="createuser()" style="margin-right:30px;">
+	<select id="wahl" title="vordefinierte Probleme" onchange="problem(this[selectedIndex].index)">
       <option selected>Prob</option>
 	  <option>p1</option>
       <option>p2</option>
@@ -106,24 +106,25 @@ Für weitere Infos: Klicken Sie auf <a href="infos.html" target="_blank"><img sr
   </div>
   <br><br>
   <div id="bNBCle">
-	<input type="button" value="NeueBoxstruktur User" style="margin-right:45px;" onclick="erzeugeStruktur()"><span><input type="button" value="Clear" onclick="clearf()"></span>
+	<input type="button" value="NeueBoxstruktur User" onclick="erzeugeStruktur()" style="margin-right:42px;">
+	<span><input type="button" value="Clear" title="erzeugt leeres Startfeld" onclick="clearf()"></span>
   </div>
   <br>
   <div id="chb3u4">
-	<input type="button" id="NBsC" value="NeueBoxstruktur Comp" style="margin-right:32px;margin-top:8px;" onclick="comperzeugeStruktur()">
+	<input type="button" id="NBsC" value="NeueBoxstruktur Comp" onclick="comperzeugeStruktur()" style="margin-right:32px;margin-top:8px;">
 	<span id="prob6">
-	    <select id="probneu6" style="width:90px;" onchange="problemneu(this[selectedIndex].index)">
+	    <select id="probneu6" title="neu erzeugte Probleme" onchange="problemneu(this[selectedIndex].index)" style="width:90px;">
            <option selected>Probneu</option>
         </select>
 	</span>
 	<span id="prob9" style="display:none;">
-	    <select id="probneu9" style="width:90px;" onchange="problemneu(this[selectedIndex].index)">
+	    <select id="probneu9" onchange="problemneu(this[selectedIndex].index)" style="width:90px;">
             <option selected>Probneu</option>
         </select>
 	</span>
 	<br>
 	<span id="saveaktprob" style="display:none;">
-	    <input style="margin-top:10px;margin-bottom:10px;" type="button" value="Save aktuelles Problem als Probneu" onclick="usersaveneu()">
+	    <input type="button" value="Save aktuelles Problem als Probneu" onclick="usersaveneu()" style="margin-top:10px;margin-bottom:10px;">
 	</span>
 	<br>
 	<input id="9x9" type="checkbox" onclick="OnChangeCheckbox3(this)">Squiggly Sudoku: Situation 9x9
