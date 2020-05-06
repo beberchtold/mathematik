@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta NAME="Description" CONTENT="Strategien zum Programm Squiggly Sudoku (Freiform-Sudoku) auf mathematik.ch">
+<title>Strategie zum Programm Squiggly Sudoku</title>
+<LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
+<style>li {padding:5px}</style>
+</head>
+
+<body>
+<div class="page"><div>
+<span class="Haupt"><a href="/" style="color:black" title="Home"><img src="/img/fractal_logo.png" alt="Logo">mathematik.ch</a></span>
+</div>
+
+<!-- CONTENT -->
+
+<h2>Strategien zum Programm Squiggly Sudoku</h2>
+
+Ausgangslage ist aktivierte Checkbox bei 'Nicht mögliche Felder für Ziffer' und die dort aktivierte Ziffer.
+
+<h3>Strategie 1:
+In einem farbigen (nicht-grünen) Feld, das allein in einer Zeile, in einer Kolonne oder in einer Box steht, muss die aktivierte Ziffer stehen.</h3>
+<img src="strategie1.png" width=180 height=180 style="float:left;margin:0px 6px 20px 4px" alt="Bsp1">Bsp: Im Feld <span style="color:blue">1</span> <b>muss</b> die 
+Ziffer 2 stehen, da das Feld allein in einer Kolonne steht.<br>
+Im Feld <span style="color:blue">2</span> <b>muss</b> die Ziffer 2 stehen, da das Feld allein in einer Box steht.
+
+<h3 style="clear:left;margin-top:8px;">Strategie 2: 
+Löscht eine Setzung alle Felder einer anderen Box aus, so kann die Ziffer nicht in diesem Feld stehen.</h3>
+<img src="strategie2.png" width=180 height=180 style="float:left;margin:0px 6px 20px 4px" alt="Bsp2">Bsp: Im Feld <span style="color:blue">1</span> <b>muss</b> die 
+Ziffer 2 stehen, da eine Setzung im danebenliegenden Feld alle Felder der orangen Box auslöschen würde und es in der Zeile von Feld 
+<span style="color:blue">1</span> keine weitere Möglichkeit mehr gibt.
+
+<h3 style="clear:left;margin-top:8px;">Strategie 3: 
+Weiterführende Strategie von Strategie 2</h3>
+<img src="strategie3.png" width=180 height=180 style="float:left;margin:0px 6px 20px 4px" alt="Bsp3">Bsp: Im Feld <span style="color:blue">1</span> <b>muss</b> die 
+Ziffer 6 stehen, da eine Setzung im Feld <span style="color:blue">3</span> alle Felder der gelben Box und eine Setzung in Feld 
+<span style="color:blue">2</span> alle Felder der hellbraunen Box auslöschen würde.
+
+
+<!-- EOF: CONTENT -->
+
+</div>
+</body>
+</html>
