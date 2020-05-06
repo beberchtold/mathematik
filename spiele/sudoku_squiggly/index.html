@@ -7,8 +7,9 @@
 <meta name="author" content="B.Berchtold">
 <title>Squiggly Sudoku (Freiform-Sudoku)</title>
 <LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
-<script src="sudoku_sq.v3.7.5.js"></script>
+<script src="sudoku_sq.3.8.0.js"></script>
 <script src="problems_sq.v3.7.0.js"></script>
+<script src="input_output.js"></script>
 </head>
 
 <body onload="resizeCanvas()" onkeyup="keyPress(event.keyCode)">
@@ -32,9 +33,8 @@ Mit Klick auf <b>NeueBoxstruktur User</b> können Sie eine eigene Struktur schaf
 eines Freiform-Sudokus eingeben und vom Computer lösen lassen.<br>
 Das erste Problem nach jeweils neuer Boxstruktur wird automatisch gespeichert und ist via 'Probneu' abrufbar.<br>
 Sie können mit <b>CreateUser</b> auch eine eigene Problemstellung eingeben und sie auf Eindeutigkeit prüfen lassen.<br>
-<input id="Infos" type="button" value="Weitere Infos"></p>
-
-
+Die neu entstandenen Probleme können Sie auf Ihre HD speichern und später wieder laden.<br>
+<input id="Infos" type="button" value="Weitere Infos" style="margin-top:5px;"></p>
 
 <div class="colgroup-2">
   <div class="col" id="containercanvas">
@@ -129,10 +129,18 @@ Sie können mit <b>CreateUser</b> auch eine eigene Problemstellung eingeben und 
 	    <input type="button" value="Save aktuelles Problem als Probneu" onclick="usersaveneu()" style="margin-top:10px;margin-bottom:10px;">
 	</span>
 	<br>
-	<input id="9x9" type="checkbox" onclick="OnChangeCheckbox3(this)">Squiggly Sudoku: Situation 9x9
+	<input id="9x9" type="checkbox" onclick="OnChangeCheckbox3(this)"><b>Squiggly Sudoku: Situation 9x9</b>
   </div>
-  </div>       
-</div>	
+  <br>
+  <p>
+  <input type="button" id="download" value="Download der neuen Probleme" onclick="OnDownloadFile()" style="display:none; margin-bottom:8px;">
+  <a id="downloadLink" href="" download="NeueProbleme.txt" style="display:none;"></a>
+  <input type="file" name="file" id="upload" accept=".txt" onchange="OnShowSelectedFile()" style="background-color:#E0FFFF">
+  <br>
+  <div id="uploadInfo" style="font-style:italic; color:red;"></div></p>
+  
+ </div>       
+</div>
 
 <p><span style="margin-right:50px;"><a href="/spiele/sudoku/">Zu Standard-Sudoku</a></span><a href="/spiele/sudoku_x/">Zu SudokuX</a>
 		
