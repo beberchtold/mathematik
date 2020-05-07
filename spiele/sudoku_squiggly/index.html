@@ -7,7 +7,7 @@
 <meta name="author" content="B.Berchtold">
 <title>Squiggly Sudoku (Freiform-Sudoku)</title>
 <LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
-<script src="sudoku_sq.3.8.3.js"></script>
+<script src="sudoku_sq.3.8.4.js"></script>
 <script src="problems_sq.3.8.1.js"></script>
 <script src="input_output.js"></script>
 </head>
@@ -86,6 +86,10 @@ Die neu entstandenen Probleme können Sie auf Ihre HD speichern und später wied
 	<input type="button" value="Test:Eindeutig?" onclick="dotest()" style="margin-right:15px;">
   </span><span id="Resultat"></span>
   <br>
+  <span id="saveaktprob" style="display:none;">
+	<input type="button" value="Save aktuelles Problem als Probneu" onclick="usersaveneu()" style="margin-top:10px;margin-bottom:10px;">
+    <br>
+  </span>
   <div id="steuerbuttons1">
 	<input id="Sav" type="button" value="Save" title="speichert aktuelle Stellung" onclick="save_user()" style="margin-right:20px;margin-top:8px;margin-bottom:8px;">
 	<input id="Loa" type="button" value="Load" title="ladet die mit Save gespeicherte Stellung" onclick="load_user()" style="margin-right:87px;">
@@ -115,7 +119,7 @@ Die neu entstandenen Probleme können Sie auf Ihre HD speichern und später wied
   </div>
   <br>
   <div id="chb3u4">
-	<input type="button" id="NBsC" value="NeueBoxstruktur Comp" onclick="comperzeugeStruktur()" style="margin-right:32px;margin-top:8px;">
+	<input type="button" id="NBsC" value="NeueBoxstruktur Comp" onclick="comperzeugeStruktur()" style="margin:8px 32px 8px 0px;">
 	<span id="prob6">
 	    <select id="probneu6" title="neu erzeugte Probleme" onchange="problemneu(this[selectedIndex].index)" style="width:90px;">
            <option selected>Probneu</option>
@@ -127,19 +131,16 @@ Die neu entstandenen Probleme können Sie auf Ihre HD speichern und später wied
         </select>
 	</span>
 	<br>
-	<span id="saveaktprob" style="display:none;">
-	    <input type="button" value="Save aktuelles Problem als Probneu" onclick="usersaveneu()" style="margin-top:10px;margin-bottom:10px;">
-	</span>
-	<br>
 	<input id="9x9" type="checkbox" onclick="OnChangeCheckbox3(this)"><b>Squiggly Sudoku: Situation 9x9</b>
   </div>
   <br><br>
   <input type="button" id="download" value="Download der neuen Probleme" onclick="OnDownloadFile()" style="display:none; margin-bottom:8px;">
   <a id="downloadLink" href="" download="NeueProbleme.txt" style="display:none;"></a><br>
-  <b>Upload: </b><input type="file" id="upload" accept=".txt" onchange="OnShowSelectedFile()" style="background-color:#E0FFFF">
-  <br>
-  <div id="uploadInfo" style="font-style:italic; color:red;"></div>
-  
+  <div id="uploadmoegl">
+    <b>Upload: </b><input type="file" id="upload" accept=".txt" onchange="OnShowSelectedFile()" style="background-color:#E0FFFF">
+    <br>
+    <div id="uploadInfo" style="font-style:italic; color:red;"></div>
+  </div>
  </div>       
 </div>
 
