@@ -7,7 +7,7 @@
 <meta name="author" content="B.Berchtold">
 <title>Squiggly Sudoku (Freiform-Sudoku)</title>
 <LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
-<script src="sudoku_sq.3.8.4.js"></script>
+<script src="sudoku_sq.orig.3.8.4.js"></script>
 <script src="problems_sq.3.8.1.js"></script>
 <script src="input_output.js"></script>
 </head>
@@ -134,8 +134,11 @@ Die neu entstandenen Probleme können Sie auf Ihre HD speichern und später wied
 	<input id="9x9" type="checkbox" onclick="OnChangeCheckbox3(this)"><b>Squiggly Sudoku: Situation 9x9</b>
   </div>
   <br><br>
-  <input type="button" id="download" value="Download der neuen Probleme" onclick="OnDownloadFile()" style="display:none; margin-bottom:8px;">
-  <a id="downloadLink" href="" download="NeueProbleme.txt" style="display:none;"></a><br>
+  <div id="downloadmoegl" style="display:none">
+    <input type="button" id="download" value="Download der neuen Probleme" onclick="OnDownloadFile()" style="margin-bottom:8px;">
+    <a id="downloadLink" href="" download="NeueProbleme.txt" style="display:none;"></a>
+    <br>
+  </div>
   <div id="uploadmoegl">
     <b>Upload: </b><input type="file" id="upload" accept=".txt" onchange="OnShowSelectedFile()" style="background-color:#E0FFFF">
     <br>
