@@ -9,19 +9,20 @@
 </head>
 
 <body>
-<div class="page"><div style="display:flex;align-items:center;">
-<span id="menuicon" style="display:inline-block;"><a href="/menu.html"><img src="/img/menuicon.png" title="Inhalt" alt="menu"></a></span>
+<div class="page"><div>
 <span class="Haupt"><a href="/" style="color:black" title="Home"><img src="/img/fractal_logo.png" alt="Logo">mathematik.ch</a></span>
 </div>
 
 <!-- CONTENT -->
 <div id="content" style="display:block;">
 
-<h1>Infos zum Programm Sudoku auf www.mathematik.ch</h1>
+<h1>Infos zum Programm Sudoku</h1>
 
 <ul>
-<li>Ein Feld kann durch Mausklick oder mit den Cursortasten aktiviert werden</li>
-<li>Die Eingabe der Ziffern erfolgt mit den Buttons oder mit Hilfe der Tastatur</li>
+<li>Ein Feld kann durch Mausklick oder mit den Cursortasten aktiviert werden (Aktuelles Feld hat hellblauen Hintergrund)</li>
+<li>Die Eingabe der Ziffern erfolgt mit den Buttons oder mit Hilfe der Tastatur (<b>delete-Taste</b> löscht die Ziffer).<br>
+Das Programm lässt für die Eingabe die - gemäss den Regeln - in den Leerfeldern noch möglichen Ziffern zu. 
+Es ist aber wegen der Eindeutigkeit der Lösung jeweils natürlich nur genau eine dieser Ziffern richtig!</li>
 <li><b>Create-Button</b>: erzeugt ein neues, eindeutig zu lösendes Problem. Bitte etwas Geduld!<br>
 Falls Sie ein neues Puzzle erzeugen, so wird die Problemstellung gespeichert und Sie können sie mit Load wieder 
 laden - solange Sie sie nicht mit Save überschrieben haben.</li>
@@ -30,15 +31,13 @@ laden - solange Sie sie nicht mit Save überschrieben haben.</li>
 <li><b>Clear-Button</b>: erzeugt leeres Startfeld (reset).</li>
 <li><b>Save-Button</b>: speichert den aktuellen Zwischenstand.</li>
 <li><b>Load-Button</b>: ladet den vorher mit Save gespeicherten Zwischenstand.</li>
-<li><b>Lock-Button</b>: aktuelle Ziffern können nachher nicht mehr verändert werden (rote Ziffern).</li>
-<li><b>Back-Button</b>: macht den jeweils letzten Zug rückgängig.</li>
 <li><b>Aktivierung der Checkbox 'Verfübare Ziffern'</b>: zeigt die verfügbaren Ziffern im aktuellen Feld</li>
 <li><b>Aktivierung der Checkbox 'Nicht mögliche Felder'</b>:<br>
     Ziffern 1 bis 9: die noch möglichen Felder für die gewählte Ziffer sind weiss, die andern hellgrün.<br>
 </li>
 </ul>
 
-<p><a href="./">zum Programm Sudoku 9x9</a></p>
+<p><script>if (window.opener==undefined) document.write("<a href=\"./\">Zum Programm Standard Sudoku</a>")</script></p>
 </div>
 <!-- EOF: CONTENT -->
 
