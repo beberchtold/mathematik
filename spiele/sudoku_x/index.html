@@ -26,8 +26,6 @@ Linien abgetrennt) genau die Ziffern 1 bis 6 (bzw. 9) zu haben. Voreingestellt i
 Mit Hilfe der Checkbox wählen Sie Situation 9x9.</p>
 <p>Sie können die Ziffern einer Problemstellung in die Felder eingeben oder mit <b>Create</b> ein neues Puzzle erzeugen.<br>
 Durch Wahl von p1 bis p5 aus dem Auswahlfeld 'Prob' lässt sich ein gespeichertes Problem laden und dann lösen.<br>
-Das Programm lässt für die Eingabe die - gemäss den Regeln - in den Leerfeldern noch möglichen Ziffern zu. 
-Es ist aber wegen der Eindeutigkeit der Lösung jeweils natürlich nur genau eine dieser Ziffern richtig!<br>
 <input id="Infos" type="button" value="Weitere Informationen" style="margin-top:5px;">
 </p>
 
@@ -72,12 +70,12 @@ Es ist aber wegen der Eindeutigkeit der Lösung jeweils natürlich nur genau ein
   </div>
   <p style="margin-top:20px"><b><span id="message"></span></b></p>
 	<table><tr>
-	<td style="padding-right:25px;"><input type="button" value="Save" onclick="save_user()"></td>
-    <td style="padding-right:25px;"><input type="button" value="Load" onclick="load_user()"></td>
-	<td><input type="button" value="Solve" onclick="solvebutton()"></td>
+	<td style="padding-right:25px;"><input type="button" value="Save" title="speichert aktuelle Stellung" onclick="save_user()"></td>
+    <td style="padding-right:25px;"><input type="button" value="Load" title="ladet die mit Save gespeicherte Stellung" onclick="load_user()"></td>
+	<td><input type="button" value="Solve" title="Computer versucht Lösung der aktuellen Stellung zu finden" onclick="solvebutton()"></td>
 	</tr><tr>
-	<td style="padding-top:10px;"><input type="button" value="Create" onclick="docreate()"></td>
-	<td style="padding-top:10px;"><input type="button" value="Clear" onclick="initPuzzle()"></td>
+	<td style="padding-top:10px;"><input type="button" value="Create" title="Computer versucht neue Problemstellung zu erzeugen" onclick="docreate()"></td>
+	<td style="padding-top:10px;"><input type="button" value="Clear" title="erzeugt leeres Startfeld" onclick="initPuzzle()"></td>
 	<td style="padding-top:10px;">
 	<select id="wahl" onchange="problem(this[selectedIndex].index)">
       <option selected>Prob</option>
