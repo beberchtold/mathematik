@@ -19,23 +19,25 @@
 <h1>Infos zum Programm SudokuX</h1>
 
 <ul>
-<li>Vorgewählt ist Situation 6x6. Unterste Checkbox angekreuzt wählt Situation 9x9.</li>
 <li>Ein Feld kann durch Mausklick oder mit den Cursortasten aktiviert werden (Aktuelles Feld hat hellblauen Hintergrund)</li>
-<li>Die Eingabe der Ziffern erfolgt mit den Buttons oder mit Hilfe der Tastatur (<b>delete-Taste</b> löscht die Ziffer).</li>
+<li>Die Eingabe der Ziffern erfolgt mit den Buttons oder mit Hilfe der Tastatur (<b>delete-Taste</b> löscht die Ziffer).<br>
+Das Programm lässt für die Eingabe die - gemäss den Regeln - in den Leerfeldern noch möglichen Ziffern zu. 
+Es ist aber wegen der Eindeutigkeit der Lösung jeweils natürlich nur genau eine dieser Ziffern richtig!</li>
+<li><b>Aktivierung der Checkbox 'Verfübare Ziffern'</b>: zeigt die verfügbaren Ziffern im aktuellen Feld<br>
+<b>Aktivierung der Checkbox 'Nicht mögliche Felder'</b>:<br>
+    Ziffern 1 bis 6 (bzw.9): die noch möglichen Felder für die gewählte Ziffer sind weiss, die andern hellgrün.<br>
+</li>
+<li><b>Auswahlfeld 'Prob'</b>: ladet gespeicherte Probleme p1 bis p5</li>
+<li><b>Save-Button</b>: speichert den aktuellen Zwischenstand.</li>
+<li><b>Load-Button</b>: ladet den vorher mit Save gespeicherten Zwischenstand.</li>
+<li><b>Solve-Button</b>: versucht, eine Lösung der Stellung vom aktuellen Brett zu finden. Speichern Sie mit 'Save' den Zwischenstand 
+ab, bevor Sie ihn mit 'Solve' auf Korrektheit überprüfen. So können Sie den Zwischenstand nachher wieder mit 'Load' laden.</li>
 <li><b>Create-Button</b>: erzeugt ein neues, eindeutig zu lösendes Problem. Bitte etwas Geduld!<br>
 Falls Sie ein neues Puzzle erzeugen, so wird die Problemstellung gespeichert und Sie können sie mit Load wieder 
 laden - solange Sie sie nicht mit Save überschrieben haben.</li>
-<li><b>Auswahlfeld 'prob'</b>: ladet gespeicherte Probleme p1 bis p5</li>
-<li><b>Solve-Button</b>: versucht, eine Lösung der Stellung vom aktuellen Brett zu finden. Speichern Sie mit 'Save' den Zwischenstand 
-ab, bevor Sie ihn mit 'Solve' auf Korrektheit überprüfen. So können Sie den Zwischenstand nachher wieder mit 'Load' laden.</li>
 <li><b>Clear-Button</b>: erzeugt leeres Startfeld (reset).</li>
-<li><b>Save-Button</b>: speichert den aktuellen Zwischenstand.</li>
-<li><b>Load-Button</b>: ladet den vorher mit Save gespeicherten Zwischenstand.</li>
-<li><b>Lock-Button</b>: aktuelle Ziffern können nachher nicht mehr verändert werden (rote Ziffern).</li>
-<li><b>Aktivierung der Checkbox 'Verfübare Ziffern'</b>: zeigt die verfügbaren Ziffern im aktuellen Feld</li>
-<li><b>Aktivierung der Checkbox 'Nicht mögliche Felder'</b>:<br>
-    Ziffern 1 bis 6 (bzw.9): die noch möglichen Felder für die gewählte Ziffer sind weiss, die andern hellgrün.<br>
-</li>
+
+
 </ul>
 
 <p><script>if (window.opener==undefined) document.write("<a href=\"./\">Zum Programm Squiggly Sudoku</a>")</script></p>
