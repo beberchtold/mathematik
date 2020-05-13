@@ -1,6 +1,6 @@
-﻿@media all and (min-width:65em){body{background:#fff;margin-top:0}
-div.page{max-width:65em;margin-left:5px;margin-right:auto;padding-left:10px;padding-right:10px;padding-top:4px;font-size:16px;font-family:Arial,Helvetica,Verdana,Tahoma,Sans,sans-serif;background:#fff}}
-@media all and (max-width:65em){div.page{margin-left:auto;margin-right:auto;font-size:16px;font-family:Arial,Helvetica,Verdana,Tahoma,Sans,sans-serif;background:#fff}}
+﻿@media all and (min-width:60em){body{background:#fff;margin-top:0}
+div.page{max-width:60em;margin-left:5px;margin-right:auto;padding-left:10px;padding-right:10px;padding-top:4px;font-size:16px;font-family:Arial,Helvetica,Verdana,Tahoma,Sans,sans-serif;background:#fff}}
+@media all and (max-width:60em){div.page{margin-left:auto;margin-right:auto;font-size:16px;font-family:Arial,Helvetica,Verdana,Tahoma,Sans,sans-serif;background:#fff}}
 a:link{color:#00f;text-decoration:none}
 a:active{color:red;text-decoration:none}
 a:visited{color:#30f;text-decoration:none}
@@ -28,8 +28,8 @@ td.amazon{font-size:11px;vertical-align:top;text-align:center;background-color:#
 span.ol{font-size:15px;font-family:Arial,Helvetica;text-decoration:overline}
 span.Haupt{margin-left:auto;margin-right:auto;font-family:"Times New Roman",Times,serif;font-weight:bold;font-size:30px;}
 img{border:0}
-img.a{width:100%;height:auto;min-width:80px;max-width:220px}
-img.b{width:100%;height:auto;min-width:70px;max-width:180px}
+img.a{width:100%;height:auto;min-width:80px;max-width:200px}
+img.b{width:100%;height:auto;min-width:70px;max-width:170px}
 img.center{display:block;margin-left:auto;margin-right:auto}
 img[src="/img/help.gif"]{width:24px;height:30px;vertical-align:middle;}
 img[src="/img/menuicon.png"]{width:26px;height:26px;cursor:pointer;vertical-align:middle;}
