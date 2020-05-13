@@ -1,19 +1,19 @@
-﻿@media all and (min-width:70em){body{background:#fff;margin-top:0}
-div.page{max-width:70em;margin-left:5px;margin-right:auto;padding-left:10px;padding-right:10px;padding-top:4px;font-size:16px;font-family:Arial,Helvetica,Verdana,Tahoma,Sans,sans-serif;background:#fff}}
-@media all and (max-width:70em){div.page{margin-left:auto;margin-right:auto;font-size:16px;font-family:Arial,Helvetica,Verdana,Tahoma,Sans,sans-serif;background:#fff}}
+﻿@media all and (min-width:65em){body{background:#fff;margin-top:0}
+div.page{max-width:65em;margin-left:5px;margin-right:auto;padding-left:10px;padding-right:10px;padding-top:4px;font-size:16px;font-family:Arial,Helvetica,Verdana,Tahoma,Sans,sans-serif;background:#fff}}
+@media all and (max-width:65em){div.page{margin-left:auto;margin-right:auto;font-size:16px;font-family:Arial,Helvetica,Verdana,Tahoma,Sans,sans-serif;background:#fff}}
 a:link{color:#00f;text-decoration:none}
 a:active{color:red;text-decoration:none}
 a:visited{color:#30f;text-decoration:none}
 a:hover{color:red;text-decoration:none}
 h1{font-size:20px;font-family:Helvetica,Arial;margin-top:15px;margin-bottom:15px}
-h2{font-size:18px;font-family:Helvetica,Arial}
+h2{font-size:18px;font-family:Helvetica,Arial;margin-top:10px;margin-bottom:10px}
 h3{font-size:17px;font-family:Helvetica,Arial}
-h4{font-size:16px;font-family:Helvetica,Arial;margin-top:15px;margin-bottom:15px}
+h4{font-size:16px;font-family:Helvetica,Arial}
 small{font-size:14px}
 ul{list-style-type:none;margin:0;padding:0}
 input[type="button"] {border:1px solid;cursor:pointer;background-color:#E0FFFF}
 input[type="submit"] {background-color:#E0FFFF}
-select{font-size:15px;background-color:#E0FFFF;}
+select{font-size:16px;background-color:#E0FFFF;}
 select:-ms-expand {display: none;}
 input[type="radio"]{width:16px;height:16px;cursor:pointer;}
 input[type="checkbox"] {width:19px;height:19px;outline:1px solid;margin-top:8px;margin-bottom:-3px;background:#E0FFFF;-webkit-appearance:none;-moz-appearance:none;}
@@ -28,8 +28,8 @@ td.amazon{font-size:11px;vertical-align:top;text-align:center;background-color:#
 span.ol{font-size:15px;font-family:Arial,Helvetica;text-decoration:overline}
 span.Haupt{margin-left:auto;margin-right:auto;font-family:"Times New Roman",Times,serif;font-weight:bold;font-size:30px;}
 img{border:0}
-img.a{width:100%;height:auto;min-width:80px;max-width:250px}
-img.b{width:100%;height:auto;min-width:80px;max-width:200px}
+img.a{width:100%;height:auto;min-width:80px;max-width:220px}
+img.b{width:100%;height:auto;min-width:70px;max-width:180px}
 img.center{display:block;margin-left:auto;margin-right:auto}
 img[src="/img/help.gif"]{width:24px;height:30px;vertical-align:middle;}
 img[src="/img/menuicon.png"]{width:26px;height:26px;cursor:pointer;vertical-align:middle;}
