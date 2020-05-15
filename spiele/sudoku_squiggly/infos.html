@@ -33,11 +33,12 @@ Ziffern 1 bis 6 (bzw.9): die nicht mehr möglichen Felder für die gewählte Zif
 <li><b>Solve-Button</b>: versucht, eine Lösung der Stellung vom aktuellen Brett zu finden. Wenn Sie 'Solve' wählen, so wird Ihr Lösungsversuch abgebrochen.
 Wählen Sie also zur Kontrolle Ihrer Lösungsversuche den Button 'Richtig?' und nicht 'Solve'.</li>
 <li><b>Auswahlfeld 'Prob'</b>: vorgespeicherte Probleme p1 bis p9 (p8 ist ein Problem mit originaler Boxstruktur).</li> 
-<li><b>Standard Probleme in Probneu laden</b> ladet 9 Probleme mit originaler Boxstruktur in 'Probneu', darunter auch ein Minimal-Problem mit 17 Zeichen.</li>
 <li><b>Create-Button</b>: erzeugt ein neues, eindeutig zu lösendes Problem. Bitte etwas Geduld! Eventuell kann der Computer in vernünftiger
  Zeit kein Problem erzeugen. Klicken Sie dann einfach nochmals auf 'Create'.<br>
 Falls ein neues Problem erzeugt wird, so wird die Problemstellung gespeichert und Sie können sie mit Load wieder 
-laden - solange Sie sie nicht mit Save überschrieben haben. Sie können sie aber auch in 'Probneu' speichern.</li>
+laden - solange Sie sie nicht mit Save überschrieben haben.<br>
+Mit <b>Save aktuelles Problem als Probneu</b> wird die aktuelle Problemstellung zu den Problemen in 'Probneu' hinzugefügt.<br>
+Insgesamt können für 6x6 und 9x9 je <b>9</b> neue Probleme gespeichert werden.</li>
 <li><b>Clear-Button</b>: erzeugt leeres Startfeld mit der aktuellen Boxstruktur.</li>
 <li><b>NeueBoxstruktur Comp</b> lässt den Computer eine Zufallsstruktur (zusammenhängende Boxen) erzeugen. Bei Situation 9x9 
 brauchen Sie dann bei der Erzeugung einer eindeutigen Problemstellung (mit Create) meistens viel Geduld. Es lohnt sich aber, mehrere Versuche 
@@ -51,16 +52,17 @@ Klick auf Create erzeugt dann ein neues Problem. Falls Sie mehrmals hintereinand
  klicken Sie auf 'Clear', um eine vordefinierte Struktur zu laden.
 </li>
 <li>
-Das erste durch <b>Create</b> entstandene Problem nach jeweils neuer Boxstruktur wird automatisch gespeichert und ist via 'Probneu' abrufbar.
-Mit <b>Save aktuelles Problem als Probneu</b> wird die aktuelle Problemstellung zu den Problemen in 'Probneu' hinzugefügt.<br>
-Insgesamt können für 6x6 und 9x9 je <b>9</b> neue Probleme gespeichert werden.<br>
-Sie können diese gespeicherten Probleme mit <b>Download der neuen Probleme</b> als Textdatei (NeueProbleme.txt) auf der Harddisk sichern. 
-Je nach Ihren gewählten Einstellungen im Browser können Sie den Speicherort auswählen oder Sie finden die Datei im Ordner 'Downloads' auf Ihrem Compi.<br>
-Beim upload der Textdatei werden ev. vorhandene Probleme in 'Probneu' gelöscht. Sie sollten sie also vor dem Laden mit NeueProbleme(1).txt usw. sichern.
+Das erste durch <b>Create</b> entstandene Problem nach jeweils neuer Boxstruktur wird automatisch in 'Probneu' gespeichert.
 </li>
 <li>Nach Klick auf <b>CreateUser</b> können Sie die Ziffern für eine neue Problemstellung selbst eingeben. Mit <b>Test:Eindeutig?</b> prüfen 
 Sie die Stellung auf Eindeutigkeit. Bei der Situation 9x9 und geringer Anzahl Ziffern kann diese Prüfung sehr lange dauern.
 Wenn die Stellung eindeutig ist, erscheint der Button 'Save aktuelles Problem ...' und Sie können sie unter 'Probneu' speichern.";
+</li>
+<li>Sie können die gespeicherten Probleme mit <b>Download von 'Probneu'</b> als Textdatei (NeueProbleme.txt) auf der Harddisk sichern. 
+Je nach Ihren gewählten Einstellungen im Browser können Sie den Speicherort auswählen oder Sie finden die Datei im Ordner 'Downloads' auf Ihrem Compi.<br>
+Beim <b>Upload in 'Probneu'</b> der Textdatei werden ev. vorhandene Probleme in 'Probneu' gelöscht. Sie sollten sie also vor dem Laden mit NeueProbleme(1).txt usw. downloaden.
+</li>
+<li>Mit <b>Upload Standard-Probleme</b> laden Sie je 9 Standardprobleme in 'Probneu'. Ev. vorhandene Probleme werden gelöscht.
 </li>
 </ul>
 <p><script>if (window.opener==undefined) document.write("<a href=\"./\">Zum Programm Squiggly Sudoku</a>")</script></p>

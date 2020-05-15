@@ -7,7 +7,7 @@
 <meta name="author" content="B.Berchtold">
 <title>Squiggly Sudoku (Freiform-Sudoku)</title>
 <LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
-<script src="sudoku_sq.3.8.9.js"></script>
+<script src="sudoku_sq.3.9.0.js"></script>
 <script src="problems_sq.3.8.1.js"></script>
 <script src="input_output.js" defer></script>
 <script src="standard.js" defer></script>
@@ -135,18 +135,19 @@ Die neu entstandenen Probleme in 'Probneu' können Sie auf Ihre HD downloaden un
 	<input id="9x9" type="checkbox" onclick="OnChangeCheckbox3(this)"><b>Squiggly Sudoku: Situation 9x9</b>
   </div>
   <br><br>
-  <div id="downloadmoegl" style="display:none">
-    <input type="button" id="download" value="Download der neuen Probleme" onclick="OnDownloadFile()" style="margin-bottom:8px;">
-    <a id="downloadLink" href="" download="NeueProbleme.txt" style="display:none;"></a>
-    <br>
-  </div>
-  <div id="uploadmoegl">
+  <select id="dateien" title="Upload und Download Probleme in 'Probneu'" onchange="dateihandling(this[selectedIndex].index)">
+	<option>Upload und Download 'Probneu'</option>
+	<option>Upload in 'Probneu'</option>
+	<option>Download von 'Probneu'</option>
+	<option>Upload Standard-Probleme</option>
+  </select>
+  <br>
+  <a id="downloadLink" href="" download="NeueProbleme.txt" style="display:none;"></a>
+  <div id="uploadmoegl" style="display:none;margin-top:8px;">
     <b>Upload: </b><input type="file" id="upload" accept=".txt"  title="Ev. vorhandene Probleme in 'Probneu' werden gelöscht!" onchange="OnShowSelectedFile()" style="background-color:#E0FFFF">
     <br>
     <div id="uploadInfo" style="font-style:italic; color:red;"></div>
   </div>
-  <br>
-  <input id="stand" type="button" value="Standard Probleme in Probneu laden" title="Ev. vorhandene Probleme in 'Probneu' werden gelöscht!" onclick="standard()">  
  </div>       
 </div>
 
