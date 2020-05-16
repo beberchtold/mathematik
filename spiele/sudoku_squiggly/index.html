@@ -7,7 +7,7 @@
 <meta name="author" content="B.Berchtold">
 <title>Squiggly Sudoku (Freiform-Sudoku)</title>
 <LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
-<script src="sudoku_sq.3.9.1.js"></script>
+<script src="sudoku_sq.3.9.2.js"></script>
 <script src="problems_sq.3.8.1.js"></script>
 <script src="input_output.js" defer></script>
 <script src="standard.js" defer></script>
@@ -143,11 +143,8 @@ Die neu entstandenen Probleme in 'Probneu' können Sie auf Ihre HD downloaden un
   </select>
   <br>
   <a id="downloadLink" href="" download="NeueProbleme.txt" style="display:none;"></a>
-  <div id="uploadmoegl" style="display:none;margin-top:8px;">
-    <b>Upload: </b><input type="file" id="upload" accept=".txt"  title="Ev. vorhandene Probleme in 'Probneu' werden gelöscht!" onchange="OnShowSelectedFile()" style="background-color:#E0FFFF">
-    <br>
-    <div id="uploadInfo" style="font-style:italic; color:red;"></div>
-  </div>
+  <input type="file" id="upload" accept=".txt" onchange="OnShowSelectedFile()" style="display:none;">
+  <div id="uploadInfo" style="font-style:italic; color:red;"></div>
  </div>       
 </div>
 
