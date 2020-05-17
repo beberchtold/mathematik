@@ -7,7 +7,7 @@
 <meta name="author" content="B.Berchtold">
 <title>Squiggly Sudoku (Freiform-Sudoku)</title>
 <LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
-<script src="sudoku_sq.3.9.2.js"></script>
+<script src="sudoku_sq.3.9.3.js"></script>
 <script src="problems_sq.3.8.1.js"></script>
 <script src="input_output.js" defer></script>
 <script src="standard.js" defer></script>
@@ -89,19 +89,19 @@ Die neu entstandenen Probleme in 'Probneu' können Sie auf Ihre HD downloaden un
   <br>
   <span id="saveaktprob" style="display:none;">
 	<input type="button" value="Save aktuelles Problem als Probneu" onclick="usersaveneu()" style="margin-top:10px;margin-bottom:10px;">
-    <br><br>
+    <br>
   </span>
   <div id="steuerbuttons1">
 	<input id="Sav" type="button" value="Save" title="speichert aktuelle Stellung" onclick="save_user()" style="margin-right:20px;margin-top:8px;margin-bottom:8px;">
-	<input id="Loa" type="button" value="Load" title="ladet die mit Save gespeicherte Stellung" onclick="load_user()" style="margin-right:87px;">
+	<input id="Loa" type="button" value="Load" title="ladet die mit Save gespeicherte Stellung" onclick="load_user()" style="margin-right:82px;">
 	<input id="Sol" type="button" value="Solve" title="Computer versucht Lösung der aktuellen Stellung zu finden" onclick="solvebutton()">
   </div>
   <br>
   <div id="steuerbuttons2">
 	<input type="button" value="Create" title="Computer versucht neue Problemstellung zu erzeugen" onclick="docreate()" style="margin-right:20px;">
-	<input type="button" value="CreateUser" title="Hier können Sie Ihre Problemstellung eingeben" onclick="createuser()" style="margin-right:30px;">
+	<input type="button" value="CreateUser" title="Hier können Sie Ihre Problemstellung eingeben" onclick="createuser()" style="margin-right:25px;">
 	<select id="wahl" title="vordefinierte Probleme" onchange="problem(this[selectedIndex].index)">
-      <option selected>Prob</option>
+      <option>Prob</option>
 	  <option>p1</option>
       <option>p2</option>
       <option>p3</option>
@@ -115,20 +115,20 @@ Die neu entstandenen Probleme in 'Probneu' können Sie auf Ihre HD downloaden un
   </div>
   <br><br>
   <div id="bNBCle">
-	<input type="button" value="NeueBoxstruktur User" onclick="erzeugeStruktur()" style="margin-right:42px;">
+	<input type="button" value="NeueBoxstruktur User" onclick="erzeugeStruktur()" style="margin-right:37px;">
 	<span><input type="button" value="Clear" title="erzeugt leeres Startfeld" onclick="clearf()"></span>
   </div>
   <br>
   <div id="chb3u4">
-	<input type="button" id="NBsC" value="NeueBoxstruktur Comp" onclick="comperzeugeStruktur()" style="margin:8px 32px 8px 0px;">
+	<input type="button" id="NBsC" value="NeueBoxstruktur Comp" onclick="comperzeugeStruktur()" style="margin:8px 28px 8px 0px;">
 	<span id="prob6">
 	    <select id="probneu6" title="neu erzeugte Probleme" onchange="problemneu(this[selectedIndex].index)" style="width:90px;">
-           <option selected>Probneu</option>
+           <option>Probneu</option>
         </select>
 	</span>
 	<span id="prob9" style="display:none;">
 	    <select id="probneu9" onchange="problemneu(this[selectedIndex].index)" style="width:90px;">
-            <option selected>Probneu</option>
+            <option>Probneu</option>
         </select>
 	</span>
 	<br>
