@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta NAME="Description" CONTENT="Lösungs-Strategien zu Squiggly Sudoku (Freiform-Sudoku) auf mathematik.ch">
+<meta name="Keywords" content="Lösungsstrategie,Squiggly,Jigsaw,Nonomino,Hexomino,Schnörkel,Sudoku,irregulär,Freiform-Sudoku,Gebiets-Sudoku,Chaos-Sudoku,Lösen,solve">
+<title>Strategie zum Programm Squiggly Sudoku</title>
+<LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
+<style>li {padding:5px}</style>
+</head>
+
+<body>
+<div class="page"><div>
+<span class="Haupt"><a href="/" style="color:black" title="Home"><img src="/img/fractal_logo.png" alt="Logo">mathematik.ch</a></span>
+</div>
+
+<!-- CONTENT -->
+
+<h2>Strategien zum Programm SudokuX</h2>
+
+Ausgangslage ist aktivierte Checkbox bei 'Nicht mögliche Felder für Ziffer' und die dort aktivierte Ziffer.
+
+<h3>Strategie 1:
+In einem nichtgrünen Feld, das allein in einer Zeile, in einer Kolonne, in einer Box oder in einer Diagonalen steht, 
+muss die aktivierte Ziffer stehen.</h3>
+<img src="strategie1.png" width=180 height=180 style="float:left;margin:0px 6px 20px 4px" alt="Bsp1">Bsp: Im Feld <span style="color:blue">1</span> <b>muss</b> die 
+Ziffer 2 stehen, da das Feld allein in einer Kolonne steht.
+
+<h3 style="clear:left;margin-top:8px;">Strategie 2: 
+Löscht eine Setzung alle Felder einer anderen Box aus, so kann die Ziffer nicht in diesem Feld stehen.</h3>
+<img src="strategie2.png" width=180 height=180 style="float:left;margin:0px 6px 20px 4px" alt="Bsp2">Bsp: Im Feld <span style="color:blue">1</span> <b>muss</b> die 
+Ziffer 1 stehen, da eine Setzung im sonst noch einzig möglichen Diagonalfeld <span style="color:blue">2</span> alle 
+Felder der darüberliegenden (mittleren linken) Box auslöschen würde.
+
+
+<h3 style="clear:left;margin-top:8px;">Strategie 3: Weiterführende Strategie von Strategie 2</h3>
+<img src="strategie3.png" width=180 height=180 style="float:left;margin:0px 6px 20px 4px" alt="Bsp3">Bsp: Die Ziffer 
+4 muss in einem der beiden noch möglichen Diagonalfeldern <span style="color:blue">1</span> oder 
+<span style="color:blue">2</span> stehen. Sie kann <b>nicht</b> im Feld <span style="color:blue">2</span> stehen, da
+sonst eines von zwei möglichen Feldern in der darüberstehenden mittleren rechten Box ausgelöscht würde, das Diagonalfeld 
+<span style="color:blue">3</span> ausgelöscht würde, somit nur noch Diagonalfeld <span style="color:blue">4</span> übrigbliebe, 
+diese Setzung aber das zweite noch mögliche Feld der erwähnten Box auslöschen würde.<br>
+Also <b>muss</b> die 4 im Feld <span style="color:blue">1</span> liegen.
+
+<h3 style="clear:left;margin-top:8px;">Lösungsverfahren</h3>
+<b>Eine</b> mögliche Grundstrategie: Aktivieren Sie der Reihe nach die Ziffern 1 bis 6 (bzw 9) bei 'Nicht mögliche Felder für Ziffer'.<br>
+Gehen Sie pro Ziffer die Strategien 1, 2 und 3 durch. Nach der letzten Ziffer beginnen Sie wieder von vorne, bis keine Ziffer mehr gesetzt werden kann.<br>
+In vielen Fällen haben Sie dann das SudokuX schon gelöst.<br>
+Wenn nicht, so wählen Sie eine Ziffer, bei der es noch genau 2 mögliche Felder gibt. 
+Machen Sie eine Zwischenspeicherung mit 'Save'. Setzen Sie nun die gewählte Ziffer in eines der beiden Felder ('Versuchssetzung').<br>
+Fahren Sie fort gemäss der oben angegebenen Grundstrategie. Falls Sie einen Widerspruch bemerken, so laden Sie mit 'Load' den vorher 
+gespeicherten Zwischenstand und setzen die gewählte Ziffer ins zweite Feld.<br>
+Falls Sie <b>vor</b> Bemerkung des Widerspruchs wieder keine eindeutige Setzung machen können, so müssen Sie eine zweite 'Versuchssetzung' machen. 
+
+<p><script>if (window.opener==undefined) document.write("<a href=\"./\">Zum Programm SudokuX</a>")</script></p>
+
+<!-- EOF: CONTENT -->
+
+</div>
+</body>
+</html>
