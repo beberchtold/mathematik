@@ -22,7 +22,7 @@ input{font-size:16px;background:#fff}
 option{font-size:16px;background:#fff}
 table.c{width:100%}
 table.amazon{width:124px;border:1px solid;margin-left:10px;border-spacing:0;border-collapse:collapse}
-td.c{vertical-align:top;text-align:center;background-color:#fff}
+td.c{vertical-align:top;text-align:center;background-color:#fff;padding:4px;}
 td.r{vertical-align:top;text-align:right;background-color:#fff}
 td.amazon{font-size:11px;vertical-align:top;text-align:center;background-color:#fff}
 span.ol{font-size:15px;font-family:Arial,Helvetica;text-decoration:overline}
