@@ -8,8 +8,7 @@
 <LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
 <script src="affineabb.js"></script>
 <style>input[type=number] {width:2.5em;margin-bottom:5px;-moz-appearance: textfield;}
-li{padding-bottom:8px;}
-input[type="button"]:hover {background-color:#00FF00}
+input[type="button"]:hover {background-color:#00FF00;}
 </style>
 </head>
 
@@ -49,12 +48,12 @@ input[type="button"]:hover {background-color:#00FF00}
   <div class="col">
 <ul>
 <li><input type="button" id="1" value="Bild des Einheitsquadrates" onclick="button1()"></li>
-<li><input type="button" id="2" value="Bild des Kreises mit Mittelpunkt" onclick="button2()"><br>
+<li><input type="button" id="2" value="Bild des Kreises mit Mittelpunkt" style="margin-bottom:5px;" onclick="button2()"><br>
 <span style="margin-right:30px"></span>mx <input id="mx" type="number" step="any" value="0" lang="en">
 my <input id="my" type="number" step="any" value="1.5" lang="en">      
 Radius <input id="r" type="number" step="any" min=0 value="1.2" lang="en"></li>        
 <li><input type="button" id="3" value="Bild des Buchstaben F" onclick="button3()"></li>
-<li><input type="button" id="4" value="Bild des Dreiecks mit" onclick="button4()"><br>
+<li><input type="button" id="4" value="Bild des Dreiecks mit" style="margin-bottom:5px;" onclick="button4()"><br>
 <span style="margin-right:30px"></span>x1 <input id="x1" type="number" step="any" value="0">
 y1 <input id="y1" type="number" step="any" value="0" lang="en">     
 x2 <input id="x2" type="number" step="any" value="4" lang="en">       
@@ -64,7 +63,7 @@ y3 <input id="y3" type="number" step="any" value="-1" lang="en">
 </li>    
 <li><input type="button" id="5" value="Bild der Funktion mit Gleichung" onclick="button5()"><br>
 <span style="margin-right:30px"></span>y = f(x) = <input id="f" type="text" style="width:9em;" value='x*x-1'> 
-      <a href="infos.html"><img src="/img/help.gif" alt="Hilfe"></a></li>
+      <span id="Infos"><img src="/img/help.gif" style="cursor:pointer" alt="Hilfe"></span></li>
 </ul>
 <p>Klicken Sie nach einer Änderung eines Wertes auf einen Button.</p>
 		
