@@ -5,12 +5,14 @@
 <meta NAME="Description" CONTENT="Sokoban, 50 Originalprobleme">
 <TITLE>Sokoban</title>
 <LINK REL="stylesheet" HREF="/css/mathematik.css" type="text/css">
+<script src="/script/menuopen.js"></script>
 <script src="sokoban.js"></script>
+<script>window.onload=function() {initmenu(); resizeCanvas();}</script>
 <script async src="solut_min.js"></script>
 <style>input[type="button"] {padding:4px;}</style>
 </head>
 
-<body onload="resizeCanvas()" onkeyup="keyPress(event.keyCode)">
+<body onkeyup="keyPress(event.keyCode)">
 <div class="page"><div style="display:flex;align-items:center;">
 <span id="menuicon" style="display:inline-block;"><img src="/img/menuicon.png" title="Inhalt" alt="menu"></span><span class="Haupt"><a href="/" style="color:black" title="Home"><img src="/img/fractal_logo.png" alt="Logo">mathematik.ch</a></span>
 </div>

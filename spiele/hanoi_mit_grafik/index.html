@@ -2,10 +2,13 @@
 <html lang="de">
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta NAME="Description" CONTENT="Türme von Hanoi, mit html5 und Javascript">
 <TITLE>Türme von Hanoi</title>
+<meta NAME="Description" CONTENT="Türme von Hanoi, mit html5 und Javascript">
+<meta name="author" content="B.Berchtold">
 <LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
+<script src="/script/menuopen.js"></script>
 <script src="hanoi.js"></script>
+<script>window.onload=function() {initmenu();resizeCanvas();}</script>
 </head>
 
 <body>
@@ -40,14 +43,14 @@ Bei Ihrem <b>ersten</b> Zug wird die Uhr dann gestartet, beim Erreichen des Ziel
 	<input type="checkbox" id="Stoppuhr"> mit Stoppuhr
 	<p style="margin-top:20px">Stoppuhr: &nbsp;&nbsp;
 	<span id="tracker">0.0</span><input type="button" id="resetUhr" value="Reset Uhr" style="margin-left:30px;" onclick="resetUhr()"></p>
-	<p style="margin-top:30px"><input type="button" id="reset" value="Reset" onclick="doClear()"> Stellt Anfangszustand wieder her</p>
+	<p style="margin-top:30px"><input type="button" id="reset" value="Reset" onclick="doClear()"> Stellt Anfangszustand her</p>
 	<p style="margin-top:30px"><input type="button" id="solut" value="Lösung" onclick="solution()">
-	     <input type="button" id="Zug+" value="Zug+" onclick="zugplus()" style="margin-left:30px"></p>  
+	<input type="button" id="Zug+" value="Zug+" onclick="zugplus()" style="margin-left:30px"></p>  
   </div>      
 </div>	   
 
 <div style="display:none">
-  <img id="boardpng" src="board.png" width=450 height=250 alt="none">
+  <img id="boardpng" src="board.png" style="max-width:450px; height;auto" alt="none">
 </div>
 
 </div>

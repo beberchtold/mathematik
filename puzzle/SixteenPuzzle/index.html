@@ -5,8 +5,10 @@
 <title>Puzzle 16</title>
 <meta NAME="Description" CONTENT="Puzzle16: Sixteen Puzzle">
 <meta name="author" content="B.Berchtold">
-<script src="puzzle16.js"></script>
 <LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
+<script src="/script/menuopen.js"></script>
+<script src="puzzle16.js"></script>
+<script>window.onload=function() {initmenu(); init();}</script>
 <style>input[type="button"] {margin-bottom:10px;margin-right:20px;}</style>
 </head>
 
@@ -44,7 +46,7 @@ Sie dürfen höchstens 80 Züge durchführen.</p>
    <img id="15" src="silber.png" width=40 height=40 onClick="Pruefe(15)" alt="15"><img id="16" src="silber.png" width=40 height=40 onClick="Pruefe(16)" alt="16"><img id="17" src="silber.png" width=40 height=40 onClick="Pruefe(17)" alt="17">
   </div>
   </td><td class="c">
-  Zugnummer: <span id="Zugnummer">0</span>
+  Zug: <span id="Zugnummer">0</span>
   </td></tr></table>
   </div>
   <div class="col">
