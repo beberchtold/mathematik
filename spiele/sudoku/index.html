@@ -2,15 +2,17 @@
 <html lang="de">
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sudoku 9x9 (Standard-Sudoku)</title>
 <meta NAME="Description" CONTENT="Spiel Sudoku mit Javascript: Generator und Solver">
 <meta name="author" content="B.Berchtold">
-<title>Sudoku 9x9 (Standard-Sudoku)</title>
 <LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
-<script src="sudoku.js"></script>
-<script async src="problems.js"></script>
+<script src="/script/menuopen.js"></script>
+<script src="sudoku.orig.js"></script>
+<script>window.onload=function() {initmenu(); resizeCanvas(); onkeyup="keyPress(event.keyCode)"}</script>
+<script src="problems.js"></script>
 </head>
 
-<body onload="resizeCanvas()" onkeyup="keyPress(event.keyCode)">
+<body>
 <div class="page"><div style="display:flex;align-items:center;">
 <span id="menuicon" style="display:inline-block;"><img src="/img/menuicon.png" title="Inhalt" alt="menu"></span><span class="Haupt"><a href="/" style="color:black" title="Home"><img src="/img/fractal_logo.png" alt="Logo">mathematik.ch</a></span>
 </div>
