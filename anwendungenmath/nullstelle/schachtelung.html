@@ -6,7 +6,7 @@
 <meta name="author" content="B.Berchtold">
 <title>Nullstelle mit Intervallschachtelung</title>
 <LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
-<script src="schachtelung.orig.js"></script>
+<script src="schachtelung.js"></script>
 <style>input[type=number] {width:3em;-moz-appearance: textfield;}</style>
 </head>
 
@@ -23,8 +23,7 @@
 <p>Gesucht ist eine Nullstelle der Funktion mit Gleichung y = f(x).</p>
 
 <p>y = <input id="f" type="text" value="cos(x)" style="width:12em;">
-	<a href="info_schachtelung.html">
-	<img src="/img/help.gif" alt="help"></a><br>
+	<span id="Infos"><img src="/img/help.gif" style="cursor:pointer" alt="help"></span><br>
     Linke: <input id="Xmin" type="number" value="1">  &nbsp;&nbsp;&nbsp;
 	Rechte Grenze: <span id="Xr"> </span><br>
     Anzahl Dezimalstellen &le; 14: <input id="Anz" type="number" min="1" max="14" value="8"></p>

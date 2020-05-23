@@ -8,10 +8,10 @@
 </head>
 
 <body>
-<div class="page"><div style="display:flex;align-items:center;">
-<span id="menuicon" style="display:inline-block;"><a href="/menu.html"><img src="/img/menuicon.png" title="Inhalt" alt="menu"></a></span>
-<span class="Haupt"><a href="/" style="color:black" title="Home"><img src="/img/fractal_logo.png" alt="Logo">mathematik.ch</a></span>
-</div>
+<div class="page">  <div style="display:flex;align-items:center;">
+    <img src="/img/closeicon.png" title="schliessen" alt="schliessen" onClick="javascript:window.close();">
+    <span class="Haupt"><img src="/img/fractal_logo.png" alt="Logo">mathematik.ch</span>
+  </div>
 
 <!-- CONTENT -->
 <div id="content" style="display:block;">
@@ -72,7 +72,7 @@ und die einzige Nullstelle im Intervall [x<sub>0</sub>,b] (bzw. [b,x<sub>0</sub>
 <li> Sei m:= max |f''(x)| in [x<sub>0</sub>,b]; Dann muss gelten: m &le; |f'(x<sub>0</sub>) / (b - x<sub>0</sub>)|
 </li>
 </ol>
-<p><a href="./">zum Programm Nullstelle nach Newton</a></p>
+<p><script>if (window.opener==undefined) document.write("<a href=\"./\">Zum Programm Nullstelle nach Newton</a>")</script></p>
 </div>
 <!-- EOF: CONTENT -->
 
