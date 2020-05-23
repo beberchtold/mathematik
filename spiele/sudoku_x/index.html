@@ -9,11 +9,11 @@
 <LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
 <script src="/script/menuopen.js"></script>
 <script src="sudoku_x.js"></script>
-<script>window.onload=function() {initmenu(); resizeCanvas(); onkeyup="keyPress(event.keyCode)"}</script>
+<script>window.onload=function() {initmenu(); resizeCanvas();}</script>
 <script src="problems_x.js"></script>
 </head>
 
-<body>
+<body onkeyup="keyPress(event.keyCode)">
 <div class="page"><div style="display:flex;align-items:center;">
 <span id="menuicon" style="display:inline-block;"><img src="/img/menuicon.png" title="Inhalt" alt="menu"></span><span class="Haupt"><a href="/" style="color:black" title="Home"><img src="/img/fractal_logo.png" alt="Logo">mathematik.ch</a></span>
 </div>
