@@ -10,6 +10,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-alpha/katex.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-alpha/contrib/auto-render.min.js"></script>
 <script src="hypergeo.js"></script>
+<style>input[type=number] {width:3em;-moz-appearance: textfield;}</style>
 </head>
 
 <body>
@@ -42,12 +43,12 @@ Erwartungswert &mu; = <span>\(\rm n\cdot\frac{r}{m}\)</span>, Varianz &sigma;<su
   
   <div class="col">
     <ul>
-	  <li style="padding:4px;">Gesamtanzahl Kugeln m: <input id="m" type="number" min=2 style="width:50px;" value="45"></li>
-      <li style="padding:4px;">Anzahl rote Kugeln r: <input id="r" type="number" min=1 style="width:50px;margin-left:10px;" value="6"></li>
-	  <li style="padding:4px;">Anzahl Züge n: <input id="n" type="number" min=1 max=1000 style="width:50px;margin-left:52px;" value="6"></li>
-      <li style="padding:4px;">Untere Grenze a: <input id="a" type="number" min=0 style="width:50px;margin-left:38px;" value="0"></li>
-      <li style="padding:4px;">Obere Grenze b (b&ge;a): <input id="b" type="number" min=0 style="width:50px;" value="2"></li>
-      <li style="padding:4px;"><input type="button" value="Berechne!" onclick="rechne()"></li>  
+	  <li>Gesamtanzahl Kugeln m: <input id="m" type="number" min=2 value="45"></li>
+      <li>Anzahl rote Kugeln r: <input id="r" type="number" min=1 style="margin-left:10px;" value="6"></li>
+	  <li>Anzahl Züge n: <input id="n" type="number" min=1 max=1000 style="margin-left:52px;" value="6"></li>
+      <li>Untere Grenze a: <input id="a" type="number" min=0 style="margin-left:38px;" value="0"></li>
+      <li>Obere Grenze b (b&ge;a): <input id="b" type="number" min=0 value="2"></li>
+      <li><input type="button" value="Berechne!" onclick="rechne()"></li>  
     </ul>
 	<br>
     <p><b>Resultat</b><br><br> 
