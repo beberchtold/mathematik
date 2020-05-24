@@ -8,13 +8,12 @@
 <LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
 <script src="/script/menuopen.js"></script>
 <script src="sudoku.js"></script>
-<script>window.onload=function() {initmenu(); resizeCanvas();}</script>
 <script src="problems.js"></script>
 </head>
 
 <body onkeyup="keyPress(event.keyCode)">
 <div class="page"><div style="display:flex;align-items:center;">
-<span id="menuicon" style="display:inline-block;"><img src="/img/menuicon.png" title="Inhalt" alt="menu"></span><span class="Haupt"><a href="/" style="color:black" title="Home"><img src="/img/fractal_logo.png" alt="Logo">mathematik.ch</a></span>
+<span id="menuicon" style="display:inline-block;"><img src="/img/menuicon.png" title="Inhalt" alt="menu" onClick="menu()"></span><span class="Haupt"><a href="/" style="color:black" title="Home"><img src="/img/fractal_logo.png" alt="Logo">mathematik.ch</a></span>
 </div>
 
 <!-- CONTENT -->
@@ -29,7 +28,7 @@ erzeugen lassen.
 <br>
 Sie können auch durch Wahl von p1 bis p11 aus dem Auswahlfeld 'Prob' ein gespeichertes Problem laden und dann lösen.
 <br>
-<input id="Infos" type="button" value="Weitere Informationen" style="margin-top:5px;">
+<input type="button" value="Weitere Informationen" style="margin-top:5px;" onClick="infos()">
 </p>
 
 <div class="colgroup-2">
