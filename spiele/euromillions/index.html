@@ -13,7 +13,7 @@
 
 <body>
 <div class="page"><div style="display:flex;align-items:center;">
-<span id="menuicon" style="display:inline-block;"><img src="/img/menuicon.png" title="Inhalt" alt="menu" onClick="menu()"></span><span class="Haupt"><a href="/" style="color:black" title="Home"><img src="/img/fractal_logo.png" alt="Logo">mathematik.ch</a></span>
+<span id="menuicon" style="display:inline-block;"><img src="/img/menuicon.png" title="Inhalt" alt="menu" onclick="menu()"></span><span class="Haupt"><a href="/" style="color:black" title="Home"><img src="/img/fractal_logo.png" alt="Logo">mathematik.ch</a></span>
 </div>
 
 <!-- CONTENT -->
@@ -29,12 +29,12 @@ Haben Sie (eine Zahl und beide Sterne richtig) oder (mindestens zwei Zahlen rich
 Wählen Sie n = 1, so werden Ihnen die - vom Computer - gezogenen Zahlen angezeigt.<br>
 Für n &gt; 1 werden Ihnen diejenigen Spiele, in denen Sie etwas gewonnen hätten und Ihre <b>Schlussbilanz</b> angezeigt.<br> 
 Klicken Sie zur weiteren Info der Schlussbilanz auf das Fragezeichen.
-  <img src="/img/help.gif" style="cursor:pointer" alt="Hilfe" onClick="infos('infos.html','Infofenster')">
+  <img src="/img/help.gif" style="cursor:pointer" alt="Hilfe" onclick="infos('infos.html','Infofenster')">
 </p>
 
 <div class="colgroup-2">
   <div class="col">
-  Geben Sie 5 Zahlen zwischen 1 und 50 an oder <input type="button" value="Erzeuge 5 Zufallszahlen" onClick="generatenumbers()">
+  Geben Sie 5 Zahlen zwischen 1 und 50 an oder <input type="button" value="Erzeuge 5 Zufallszahlen" onclick="generatenumbers()">
   <br><br>
     <input id="z1" type="number" min="1" max="50" value="">
     <input id="z2" type="number" min="1" max="50" value="">
@@ -42,14 +42,14 @@ Klicken Sie zur weiteren Info der Schlussbilanz auf das Fragezeichen.
     <input id="z4" type="number" min="1" max="50" value="">
     <input id="z5" type="number" min="1" max="50" value="">
   <br><br>
-  Geben Sie noch zwei Sterne zwischen 1 und 12 an oder <input type="button" value="Erzeuge 2 Zufallssterne" onClick="generatestars()">
+  Geben Sie noch zwei Sterne zwischen 1 und 12 an oder <input type="button" value="Erzeuge 2 Zufallssterne" onclick="generatestars()">
   <br><br>
     <input id="s1" style="width:2em;" type="number"  min="1" max="12" value="">
     <input id="s2" style="width:2em;" type="number"  min="1" max="12" value="">
   <br><br>
   Anzahl Ziehungen n (1 &le; n &le; 1000)<br>
   <p><input id="n" style="width:3.5em;" type="number" min="1" max="1000" value="1">
-  <input type="button" value="Mache n Ziehungen" onClick="ziehe()"></p>
+  <input type="button" value="Mache n Ziehungen" onclick="ziehe()"></p>
   </div>
 
   <div class="col">

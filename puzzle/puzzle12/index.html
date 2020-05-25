@@ -31,19 +31,19 @@
 	   
   <div class="col">
     <div id="user" style="display:block">
-      <input type="button" style="margin-left:45px;margin-bottom:10px;width:28px;" value="&uarr;" onClick="move(Tx-1,Ty)"><br>
-	  <input type="button" style="width:32px" value="&larr;" onClick="move(Tx,Ty-1)">&nbsp;&nbsp;
-	  <input type="button" style="width:28px;" value="d" onClick="move(Tx,Ty)">&nbsp;&nbsp;
-	  <input type="button" value="&rarr;" style="width:32px;margin-right:50px;" onClick="move(Tx,Ty+1)"><br>
-	  <input type="button" style="margin-left:45px;margin-right:80px;margin-top:10px;width:28px;" value="&darr;" onClick="move(Tx+1,Ty)">
+      <input type="button" style="margin-left:45px;margin-bottom:10px;width:28px;" value="&uarr;" onclick="move(Tx-1,Ty)"><br>
+	  <input type="button" style="width:32px" value="&larr;" onclick="move(Tx,Ty-1)">&nbsp;&nbsp;
+	  <input type="button" style="width:28px;" value="d" onclick="move(Tx,Ty)">&nbsp;&nbsp;
+	  <input type="button" value="&rarr;" style="width:32px;margin-right:50px;" onclick="move(Tx,Ty+1)"><br>
+	  <input type="button" style="margin-left:45px;margin-right:80px;margin-top:10px;width:28px;" value="&darr;" onclick="move(Tx+1,Ty)">
       <span id="Antwort">Viel Erfolg!</span><br><br>
-	  <p><input type="button" value="Restart" onClick="restart()"> stellt Anfangszustand her.</p>
+	  <p><input type="button" value="Restart" onclick="restart()"> stellt Anfangszustand her.</p>
 	</div>
 	<div id="computer" style="display:none">
 	   <p>Lösung: Klicken Sie pro Zug auf den Button "Zug+".</p>
-	   <input type="button" value="Zug+" onClick="loesung()">
-	   <p><input type="button" value="Restart" onClick="restart()"> stellt Anfangszustand her.</p>
-	   <p style="margin-top:40px;"><input type="button" value="zur Aufgabe" onClick="start()"> zurück zur Aufgabe.</p>
+	   <input type="button" value="Zug+" onclick="loesung()">
+	   <p><input type="button" value="Restart" onclick="restart()"> stellt Anfangszustand her.</p>
+	   <p style="margin-top:40px;"><input type="button" value="zur Aufgabe" onclick="start()"> zurück zur Aufgabe.</p>
 	</div>
   </div>
 </div>  
@@ -66,7 +66,7 @@ Um dies zu veranlassen, schreiben Sie d oder klicken Sie auf den Button "d".</p>
   7. Februar 2001
 </div>
 
-<input type="button" value="Lösung" onClick="initloesung()"> <small>(von B.Berchtold)</small>
+<input type="button" value="Lösung" onclick="initloesung()"> <small>(von B.Berchtold)</small>
 
 </div>
 <!-- EOF: CONTENT -->
