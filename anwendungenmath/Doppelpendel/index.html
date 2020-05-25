@@ -6,13 +6,13 @@
 <title>Doppelpendel</title>
 <LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
 <script src="doppelpendel.js"></script>
-<style>input[type=number] {width:3em;-moz-appearance: textfield;}
-</style>
+<style>input[type=number] {width:3em;-moz-appearance: textfield;}</style>
+<script src="/script/menuopen.js" defer></script>
 </head>
 
 <body>
 <div class="page"><div style="display:flex;align-items:center;">
-<span id="menuicon" style="display:inline-block;"><a href="/menu.html"><img src="/img/menuicon.png" title="Inhalt" alt="menu"></a></span><span class="Haupt"><a href="/" style="color:black" title="Home"><img src="/img/fractal_logo.png" alt="Logo">mathematik.ch</a></span>
+<span id="menuicon" style="display:inline-block;"><img src="/img/menuicon.png" title="Inhalt" alt="menu" onClick="menu()"></span><span class="Haupt"><a href="/" style="color:black" title="Home"><img src="/img/fractal_logo.png" alt="Logo">mathematik.ch</a></span>
 </div>
 
 <!-- CONTENT -->
@@ -35,7 +35,7 @@
     <p>Sie können die Anfangswerte für Phi1, Phi2 (im
        Bogenmass zwischen -Pi und Pi) und die Schrittweite h (0&lt;h&lt;0.04) ändern.<br>
        Klicken Sie dann zuerst auf den Start-Button, um diese Werte zu übernehmen.</p>
-      <p>Klicken Sie für weitere Infos auf <img src="/img/help.gif" style="cursor:pointer" alt="Hilfe" onClick="infos()"></p>
+      <p>Klicken Sie für weitere Infos auf <img src="/img/help.gif" style="cursor:pointer" alt="Hilfe" onClick="infos('info_doppelpendel.html','Infofenster')"></p>
   </div>       
 </div>	
 		

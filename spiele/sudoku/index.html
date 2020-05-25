@@ -6,9 +6,9 @@
 <meta NAME="Description" CONTENT="Spiel Sudoku mit Javascript: Generator und Solver">
 <meta name="author" content="B.Berchtold">
 <LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
-<script src="/script/menuopen.js"></script>
 <script src="sudoku.js"></script>
 <script src="problems.js"></script>
+<script src="/script/menuopen.js" defer></script>
 </head>
 
 <body onkeyup="keyPress(event.keyCode)">
@@ -28,7 +28,7 @@ erzeugen lassen.
 <br>
 Sie können auch durch Wahl von p1 bis p11 aus dem Auswahlfeld 'Prob' ein gespeichertes Problem laden und dann lösen.
 <br>
-<input type="button" value="Weitere Informationen" style="margin-top:5px;" onClick="infos()">
+<input type="button" value="Weitere Informationen" style="margin-top:5px;" onClick="infos('infos.html','Infofenster')">
 </p>
 
 <div class="colgroup-2">

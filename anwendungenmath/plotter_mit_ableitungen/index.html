@@ -7,12 +7,13 @@
 <meta name="author" content="B.Berchtold">
 <LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
 <script src="ableitungen.js"></script>
+<script src="/script/menuopen.js" defer></script>
 <style>input[type=number] {width:2.5em;margin-bottom:10px;-moz-appearance:textfield;}</style>
 </head>
 
 <body>
 <div class="page"><div style="display:flex;align-items:center;">
-<span id="menuicon" style="display:inline-block;"><a href="/menu.html"><img src="/img/menuicon.png" title="Inhalt" alt="menu"></a></span><span class="Haupt"><a href="/" style="color:black" title="Home"><img src="/img/fractal_logo.png" alt="Logo">mathematik.ch</a></span>
+<span id="menuicon" style="display:inline-block;"><img src="/img/menuicon.png" title="Inhalt" alt="menu" onClick="menu()"></span><span class="Haupt"><a href="/" style="color:black" title="Home"><img src="/img/fractal_logo.png" alt="Logo">mathematik.ch</a></span>
 </div>
 
 <!-- CONTENT -->
@@ -27,7 +28,7 @@
   
   <div class="col">
     <span style="color:#008000;">y = </span><input id="f" type="text" value="sin(x)" style="width:12em;">
-	  <img src="/img/help.gif" style="cursor:pointer" alt="Hilfe" onClick="infos()"><br>
+	  <img src="/img/help.gif" style="cursor:pointer" alt="Hilfe" onClick="infos('hilfe_ableitungen.html','Infofenster')"><br>
     <div style="color:#FF0000"><input id="Abl1" type="checkbox" onclick="zeichne()"> 1. Ableitungsfunktion</div>
     <div style="color:#0000FF"><input id="Abl2" type="checkbox" onclick="zeichne()"> 2. Ableitungsfunktion</div><br>
     <input id="Xmin" type="number" step="any" value="-4.1" lang="en"> Linke &nbsp;&nbsp;&nbsp;

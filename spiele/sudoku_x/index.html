@@ -7,9 +7,9 @@
 <meta name="Keywords" content="Spiel,Nonomino,Hexomino,Sudoku,SudokuX,Sudoku X,Lösen,Erzeugen,create,solve">
 <meta name="author" content="B.Berchtold">
 <LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
-<script src="/script/menuopen.js"></script>
 <script src="sudoku_x.js"></script>
 <script src="problems_x.js"></script>
+<script src="/script/menuopen.js" defer></script>
 </head>
 
 <body onkeyup="keyPress(event.keyCode)">
@@ -28,8 +28,8 @@ Mit Hilfe der Checkbox wählen Sie Situation 9x9.<br>
 Sie können das angezeigte Problem lösen, die Ziffern einer Problemstellung in die Felder eingeben oder mit <b>Create</b> durch den Computer ein neues Problem 
 erzeugen lassen.<br>
 Durch Wahl von p1 bis p9 aus dem Auswahlfeld 'Prob' lässt sich ein gespeichertes Problem laden und dann lösen.<br>
-<input type="button" value="Weitere Infos" style="margin-top:5px;margin-right:30px;" onClick="infos()">
-<input type="button" value="Lösungs-Strategien" onClick="strategie()"></p>
+<input type="button" value="Weitere Infos" style="margin-top:5px;margin-right:30px;" onClick="infos('infos.html','Infofenster')">
+<input type="button" value="Lösungs-Strategien" onClick="infos('strategie.html','Strategiefenster')"></p>
 
 <div class="colgroup-2">
   <div class="col" id="containercanvas">

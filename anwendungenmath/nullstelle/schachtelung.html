@@ -7,12 +7,13 @@
 <title>Nullstelle mit Intervallschachtelung</title>
 <LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
 <script src="schachtelung.js"></script>
+<script src="/script/menuopen.js" defer></script>
 <style>input[type=number] {width:3em;-moz-appearance: textfield;}</style>
 </head>
 
 <body>
 <div class="page"><div style="display:flex;align-items:center;">
-<span id="menuicon" style="display:inline-block;"><a href="/menu.html"><img src="/img/menuicon.png" title="Inhalt" alt="menu"></a></span><span class="Haupt"><a href="/" style="color:black" title="Home"><img src="/img/fractal_logo.png" alt="Logo">mathematik.ch</a></span>
+<span id="menuicon" style="display:inline-block;"><img src="/img/menuicon.png" title="Inhalt" alt="menu" onClick="menu()"></span><span class="Haupt"><a href="/" style="color:black" title="Home"><img src="/img/fractal_logo.png" alt="Logo">mathematik.ch</a></span>
 </div>
 
 <!-- CONTENT -->
@@ -23,7 +24,7 @@
 <p>Gesucht ist eine Nullstelle der Funktion mit Gleichung y = f(x).</p>
 
 <p>y = <input id="f" type="text" value="cos(x)" style="width:12em;">
-	<img src="/img/help.gif" style="cursor:pointer" alt="Hilfe" onClick="infos()"><br>
+	<img src="/img/help.gif" style="cursor:pointer" alt="Hilfe" onClick="infos('info_schachtelung.html','Infofenster')"><br>
     Linke: <input id="Xmin" type="number" value="1">  &nbsp;&nbsp;&nbsp;
 	Rechte Grenze: <span id="Xr"> </span><br>
     Anzahl Dezimalstellen &le; 14: <input id="Anz" type="number" min="1" max="14" value="8"></p>

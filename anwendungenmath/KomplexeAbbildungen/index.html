@@ -6,11 +6,12 @@
 <meta name="description" content="Bilder von komplexen Abbildungen durch Zuordnung des Argumentes">
 <LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
 <script src="komplexeAbb.js"></script>
+<script src="/script/menuopen.js" defer></script>
 </head>
 
 <body>
 <div class="page"><div style="display:flex;align-items:center;">
-<span id="menuicon" style="display:inline-block;"><a href="/menu.html"><img src="/img/menuicon.png" title="Inhalt" alt="menu"></a></span><span class="Haupt"><a href="/" style="color:black" title="Home"><img src="/img/fractal_logo.png" alt="Logo">mathematik.ch</a></span>
+<span id="menuicon" style="display:inline-block;"><img src="/img/menuicon.png" title="Inhalt" alt="menu" onClick="menu()"></span><span class="Haupt"><a href="/" style="color:black" title="Home"><img src="/img/fractal_logo.png" alt="Logo">mathematik.ch</a></span>
 </div>
 
 <!-- CONTENT -->
@@ -24,7 +25,7 @@
   </div>
   <div class="col">
     <p>w = f(z) = <input id="f" style="width:14em;" type="text" value="(z*z-1)/(z-2+i)"> 
-	<img src="/img/help.gif" style="cursor:pointer" alt="Hilfe" onClick="infos()"></p>
+	<img src="/img/help.gif" style="cursor:pointer" alt="Hilfe" onClick="infos('infos.html','Infofenster')"></p>
 	<p><input type="button" value="Zeichne!" onclick="einlesen()"></p>
     <p>Die Figur stellt ein Phasendiagramm der komplexen Funktion mit Gleichung w = f(z) dar.<br>
 	 Zu jedem z = x+iy wird der Funktionswert w = r(cos&phi; + isin&phi;) berechnet. &phi; bestimmt dann die Farbe des 
