@@ -8,7 +8,7 @@
 <LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
 <script async src="euromillions.js"></script>
 <script src="/script/menuopen.js" defer></script>
-<style>input[type=number] {width:2em;margin-right:20px;-moz-appearance: textfield;}</style>
+<style>input[type=number] {width:2em;margin:8px 20px 0px 0px;-moz-appearance: textfield;}</style>
 </head>
 
 <body>
@@ -34,7 +34,7 @@ Klicken Sie zur weiteren Info der Schlussbilanz auf das Fragezeichen.
 <div class="colgroup-2">
   <div class="col">
   Geben Sie 5 Zahlen zwischen 1 und 50 an oder <input type="button" value="Erzeuge 5 Zufallszahlen" onclick="generatenumbers()">
-  <br><br>
+  <br>
     <input id="z1" type="number" min="1" max="50" value="">
     <input id="z2" type="number" min="1" max="50" value="">
     <input id="z3" type="number" min="1" max="50" value="">
@@ -42,13 +42,13 @@ Klicken Sie zur weiteren Info der Schlussbilanz auf das Fragezeichen.
     <input id="z5" type="number" min="1" max="50" value="">
   <br><br>
   Geben Sie noch zwei Sterne zwischen 1 und 12 an oder <input type="button" value="Erzeuge 2 Zufallssterne" onclick="generatestars()">
-  <br><br>
+  <br>
     <input id="s1" style="width:2em;" type="number"  min="1" max="12" value="">
     <input id="s2" style="width:2em;" type="number"  min="1" max="12" value="">
   <br><br>
   Anzahl Ziehungen n (1 &le; n &le; 1000)<br>
-  <p><input id="n" style="width:3.5em;" type="number" min="1" max="1000" value="1">
-  <input type="button" value="Mache n Ziehungen" onclick="ziehe()"></p>
+  <input id="n" style="width:3.5em;" type="number" min="1" max="1000" value="1">
+  <input type="button" value="Mache n Ziehungen" onclick="ziehe()">
   </div>
 
   <div class="col">
