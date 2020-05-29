@@ -6,12 +6,7 @@
 <title>Zahlenspiel</title>
 <LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
 <script src="numbers_min.js"></script>
-<style>input[type=number] {
-  width:1.8em;
-  margin-right:16px;
-  -moz-appearance: textfield;
-}
-</style>
+<style>input[type=number] {width:2em;margin-right:15px;-moz-appearance: textfield;}</style>
 </head>
 
 <body>
@@ -28,7 +23,6 @@ Das Problem besteht darin, aus 6 gegebenen Zahlen (zwischen 1 und 100) eine Ziel
 Dabei dürfen die Grundrechenarten verwendet werden, aber jede Zahl höchstens einmal.<br>
 Das Programm kann selbst Probleme lösen, oder Sie können die Probleme lösen.</p>
 <p>&quot;Reset&quot; löscht Lösungsversuche. Nach Klick auf 'Solve' sucht der Computer eine Lösung.</p>
-<br>
 
 <div class="colgroup-2">
   <div class="col">
@@ -37,9 +31,9 @@ Das Programm kann selbst Probleme lösen, oder Sie können die Probleme lösen.<
      <input id="Zahl[2]" type="number" min=1 max=100 value="8">
      <input id="Zahl[3]" type="number" min=1 max=100 value="8">
      <input id="Zahl[4]" type="number" min=1 max=100 value="10">
-     <input id="Zahl[5]" style="margin-right:0px;" type="number" min=1 max=100 value="100">
+     <input id="Zahl[5]" style="margin:8px 0px 0px 0px;" type="number" min=1 max=100 value="100">
    </p>
-   <p>Zielzahl: <input id="Zielzahl" style="width:2.5em;" type="number" min=101 max=1000 value="267">
+   <p>Zielzahl: <input id="Zielzahl" style="width:2.6em;" type="number" min=101 max=1000 value="267">
       <input id="NewTarget" type="button" value="Neue Zielzahl" onclick="makeTarget()" style="margin-left:40px"></p>
    <p><input id="NewProblem" type="button" value="Neues Problem" onclick="mix()">     
       <input type="button" value="Reset" onclick="init()" style="margin-left:42px">
