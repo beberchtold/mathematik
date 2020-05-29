@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta NAME="Description" CONTENT="Statistik: Korrelation und Regression">
-<meta name="format-detection" content="telephone=no">
+<meta id="viewport" content="width=device-width, initial-scale=1.0">
+<meta id="Description" CONTENT="Statistik: Korrelation und Regression">
+<meta id="format-detection" content="telephone=no">
 <title>Korrelation und Regression</title>
 <LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
-<script src="regression_min.js"></script>
+<script src="regression.js"></script>
 <style>input {width:40px; margin-right:18px; margin-bottom:6px;}</style>
 </head>
 
@@ -25,45 +25,41 @@
 <div class="colgroup-2">
  <div class="col">
   <div style="padding:5px;">
-
-<FORM action="#">
-	   01 <input value=80 name=element0><input value=120 name=element10>
-	   02 <input value=70 name=element1><input value=115 name=element11><br>
-	   03 <input value=80 name=element2><input value=125 name=element12>
-	   04 <input value=70 name=element3><input value=110 name=element13><br>
-	   05 <input value=70 name=element4><input value=115 name=element14>
-	   06 <input value=80 name=element5><input value=130 name=element15><br>
-	   07 <input value=85 name=element6><input value=140 name=element16>
-	   08 <input value=75 name=element7><input value=120 name=element17><br>
-	   09 <input value=75 name=element8><input value=125 name=element18>
-	   10 <input value=90 name=element9><input value=150 name=element19><br>
-	   11 <input value=80 name=element20><input value=140 name=element30>
-       12 <input value=70 name=element21><input value=135 name=element31><br>
-       13 <input value=95 name=element22><input value=140 name=element32>
-	   14 <input value=75 name=element23><input value=130 name=element33><br>
-	   15 <input value=90 name=element24><input value=145 name=element34>
-	   16 <input name=element25><input name=element35><br>
-	   17 <input name=element26><input name=element36>
-	   18 <input name=element27><input name=element37><br>
-	   19 <input name=element28><input name=element38>
-	   20 <input name=element29><input name=element39><br>
-	   21 <input name=element40><input name=element50>
-       22 <input name=element41><input name=element51><br>
-	   23 <input name=element42><input name=element52>
-	   24 <input name=element43><input name=element53><br>
-	   25 <input name=element44><input name=element54>
-	   26 <input name=element45><input name=element55><br>
-	   27 <input name=element46><input name=element56>
-	   28 <input name=element47><input name=element57><br>
-	   29 <input name=element48><input name=element58>
-	   30 <input name=element49><input name=element59><br><br>
-      <input type="button" value="Berechne Korrelation und Regression" style="width:18em" onclick="uttest(form,data1,data2,data4,data5)">
-</FORM>
+	   01 <input value=80 id="element0"><input value=120 id="element10">
+	   02 <input value=70 id="element1"><input value=115 id="element11"><br>
+	   03 <input value=80 id="element2"><input value=125 id="element12">
+	   04 <input value=70 id="element3"><input value=110 id="element13"><br>
+	   05 <input value=70 id="element4"><input value=115 id="element14">
+	   06 <input value=80 id="element5"><input value=130 id="element15"><br>
+	   07 <input value=85 id="element6"><input value=140 id="element16">
+	   08 <input value=75 id="element7"><input value=120 id="element17"><br>
+	   09 <input value=75 id="element8"><input value=125 id="element18">
+	   10 <input value=90 id="element9"><input value=150 id="element19"><br>
+	   11 <input value=80 id="element20"><input value=140 id="element30">
+       12 <input value=70 id="element21"><input value=135 id="element31"><br>
+       13 <input value=95 id="element22"><input value=140 id="element32">
+	   14 <input value=75 id="element23"><input value=130 id="element33"><br>
+	   15 <input value=90 id="element24"><input value=145 id="element34">
+	   16 <input id="element25"><input id="element35"><br>
+	   17 <input id="element26"><input id="element36">
+	   18 <input id="element27"><input id="element37"><br>
+	   19 <input id="element28"><input id="element38">
+	   20 <input id="element29"><input id="element39"><br>
+	   21 <input id="element40"><input id="element50">
+       22 <input id="element41"><input id="element51"><br>
+	   23 <input id="element42"><input id="element52">
+	   24 <input id="element43"><input id="element53"><br>
+	   25 <input id="element44"><input id="element54">
+	   26 <input id="element45"><input id="element55"><br>
+	   27 <input id="element46"><input id="element56">
+	   28 <input id="element47"><input id="element57"><br>
+	   29 <input id="element48"><input id="element58">
+	   30 <input id="element49"><input id="element59">
   </div></div>
   <div class="col">
   <div>
-	  <p><b>Resultate der Regression für n = <span id="n"></span></b><br><br>
-
+  <p><input type="button" value="Berechne Korrelation und Regression" style="width:18em" onclick="uttest(data1,data2,data4,data5)"></p>
+	  <h2>Resultate der Regression für n = <span id="n"></span></h2>
       <p><b>Mittelwerte:&nbsp;&nbsp; <span class="ol">x</span> = <span id="mw1"> </span>&nbsp;&nbsp;&nbsp;
       <span class="ol">y</span> = <span id="mw2"> </span></b> 
       <p><b>Standardabweichung:&nbsp;&nbsp; s<sub>x</sub> = <span id="s1"> </span>&nbsp;&nbsp;&nbsp; 
@@ -73,7 +69,6 @@
       &nbsp;&nbsp;
       <b>a1 = <span id="a1"> </span>&nbsp;&nbsp; a0 = <span id="a0"> </span></b>
       <p><b>Korrelationskoeffizient r = <span id="r"></span></b>
-
   </div>
   </div>
   </div>  
