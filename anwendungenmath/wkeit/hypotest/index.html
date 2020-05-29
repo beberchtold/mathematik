@@ -7,7 +7,7 @@
 <title>Testen von Hypothesen</title>
 <LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
 <script src="hypotest.js"></script>
-<style>input[type=number] {width:2.5em;-moz-appearance: textfield;}</style>
+<style>input[type=number] {width:2.6em;-moz-appearance: textfield;}</style>
 </head>
 
 <body>
@@ -23,7 +23,7 @@
   <ol>
     <li><b>Wahrscheinlichkeit p<sub>0</sub></b>, die bei der Nullhypothese angenommen wird.</li>
     <li><b>Stichprobenumfang n</b> (n &le; 300)</li>
-    <li><b>Signifikanzniveau S-niveau</b>  (S.niv &le;= 8.5)</li>
+    <li><b>Signifikanzniveau S-niveau</b>  (S.niv &le;= 8.5%)</li>
     <li>Testtyp <b>linksseitig, rechtsseitig, zweiseitig</b></li>
     <li>Histogramm der Wahrscheinlichkeiten oder der <b>Summe</b> der Wahrscheinlichkeiten (*1 oder *10)</li>
   </ol>
@@ -52,12 +52,12 @@
   
   <div class="col">
     <p>p<sub>0</sub> <input id="p0" type="number" min=0 max=1 step="any" value="0.5" lang="en"> &nbsp;&nbsp;&nbsp;
-    Umfang n <input id="Anz" type="number" min="10" max="300" value="100"> &nbsp;&nbsp;&nbsp;
-    <span style="display:inline-block">S-niveau <input id="Sniveau" type="number" min=0.5 max=8.5 step="any" value="5" lang="en"></span>
+    n <input id="Anz" type="number" min="10" max="300" value="100"> &nbsp;&nbsp;&nbsp;
+    <span style="display:inline-block">S-niv <input id="Sniveau" type="number" min=0.5 max=8.5 step="any" value="5" lang="en"></span>
     </p>
 	<p><input type="button" value="Start" onclick="einlesen()"></p>
-	<p><input id="1" type="button" value="linksseitig" onclick="button1()">&nbsp;&nbsp;&nbsp;
-	<input id="2" type="button" value="rechtsseitig" onclick="button2()">&nbsp;&nbsp;&nbsp;
+	<p><input id="1" type="button" value="linksseitig" onclick="button1()">&nbsp;&nbsp;
+	<input id="2" type="button" value="rechtsseitig" onclick="button2()">&nbsp;&nbsp;
     <span style="display:inline-block"><input id="3" type="button" value="zweiseitig" onclick="button3()"></span></p>
     <p>Histogramm:<br>
     <input id="4" type="button" value="W'keit" style="margin-top:6px;" onclick="button4()">&nbsp;&nbsp;&nbsp;
@@ -85,8 +85,7 @@
   Im oberen Grafikfenster wird bei der Wahl von 
   "Summenfunktion *10&quot; das Signifikanzniveau als waagerechte Linie bei 0,025
   dargestellt (zweiseitig!).</p>
-  <p>2.
-  Der Lieferant eines Artikels garantiert, dass der
+  <p>2. Der Lieferant eines Artikels garantiert, dass der
   Ausschussanteil höchstens 3% beträgt. Ein Abnehmer entnimmt einer Lieferung 100 
   Artikel und findet 7 Ausschussstücke. Kann man daraus mit einer Signifikanz von (höchstens) 5% schliessen, 
   dass der Ausschussanteil höher als 3% ist?<br>
