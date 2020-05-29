@@ -26,7 +26,7 @@
 Das Formular berechnet dann die Wahrscheinlichkeit P, in n Zügen mit Zurücklegen
 mindestens a und höchstens b rote Kugeln zu ziehen.<br>
 Dabei gilt: P = <span>\(\rm\sum\limits_{x=a}^b \binom{n}{x} p^x q^{n-x} \)</span>
-mit q = 1 - p<br>
+mit q = 1-p<br>
 Erwartungswert &mu; = n&sdot;p, Varianz &sigma;<sup>2</sup> = n&sdot;p&sdot;q, Standardweichung &sigma;</p>
 <p>Das Histogramm wird nur gezeichnet, falls n&le;30</p>
 
@@ -36,9 +36,7 @@ Erwartungswert &mu; = n&sdot;p, Varianz &sigma;<sup>2</sup> = n&sdot;p&sdot;q, S
 	&mu; = <span id="MU"></span> &nbsp;&nbsp; &sigma;<sup>2</sup> = <span id="VAR"></span> &nbsp;&nbsp; 
 	&sigma; = <span id="SIGMA"></span></p>
     <canvas id="myCanvas">Ihr Browser kann kein Canvas!</canvas>
- 
   </div>
-  
   <div class="col">
     <ul>
       <li>Anzahl Züge (n&lt;1001): <input id="n" type="number" min=1 max=1000 value="12"></li>
@@ -60,7 +58,6 @@ Wie gross ist die Wahrscheinlichkeit, in 12 Würfen mit einem idealen Würfel mi
 
 <p><a href="approx_bin_norm.html">Approximation der Binomialverteilung durch Normalverteilung</a></p>
 <p><a href="hypotest/">Testen von Hypothesen mit Binomialverteilung</a></p>
-
 <p><a href="hypergeovert.html">Hypergeometrische Verteilung</a></p>
 		
 <script>renderMathInElement(document.body);</script>
