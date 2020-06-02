@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" CONTENT="Bernhard Berchtold">
 <meta NAME="Description" CONTENT="Fibonacci Zahlen">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Fibonacci-Zahlen und Lucas-Zahlen</title>
 <LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-alpha/katex.min.css" TYPE="text/css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-alpha/katex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-alpha/contrib/auto-render.min.js"></script>
 <script async src="fibonacci_min.js"></script>
 </head>
 
@@ -60,14 +63,13 @@ Die Fibonacci-Folge ist also ein Spezialfall einer Lucas-Folge.
   <span id="txt"></span>
   </div>
 </div>
-
-<p>&nbsp;</p>
-<p>Die explizite Darstellung für die Fibonacci-Folge mit a<sub>1</sub> = 1 und a<sub>2</sub> = 1 heisst (nach Binet, 1843):</p> 
-<blockquote><img src="fibonacci.png" width=189 height=47 alt="fibonacci explizit">
-</blockquote>
-Daraus lässt sich die explizite Darstellung für eine Lucas-Folge (zwei beliebige Anfangszahlen) gewinnen.
-Das folgende Formular berechnet die n-te Zahl explizit (n &lt; 1422). 
 <br>
+<p>Die explizite Darstellung für die Fibonacci-Folge mit a<sub>1</sub> = 1 und a<sub>2</sub> = 1 heisst (nach Binet, 1843):<br> 
+a<sub>n</sub> = <span>\(\large\frac{1}{\sqrt{5}}\big((\frac{1+\sqrt{5}}{2})^n - (\frac{1-\sqrt{5}}{2})^n \big)\)</span>
+</p>
+<p>Daraus lässt sich die explizite Darstellung für eine Lucas-Folge (zwei beliebige Anfangszahlen) gewinnen.
+Das folgende Formular berechnet die n-te Zahl explizit (n &lt; 1422). 
+</p>
 <div class="colgroup-2">
   <div class="col">
   <table> 
@@ -97,6 +99,10 @@ Das folgende Formular berechnet die n-te Zahl explizit (n &lt; 1422).
 <br>
 Für die explizite Darstellung einer Lucas-Folge und den Zusammenhang mit dem Goldenen Schnitt:
  s. auch <a href="/puzzle/puzzle31.html">Puzzle 31</a> und die dazugehörige Lösung.
+
+<script>
+   renderMathInElement(document.body);
+</script>
 
 <!-- EOF: CONTENT -->
 
