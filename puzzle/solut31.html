@@ -6,6 +6,9 @@
 <meta NAME="Keywords" CONTENT="mathematics,Logical,Puzzle,Denkaufgabe,Knacknuss,Mathematik,Schule,Algebra,Unterricht">
 <title>Lösung Puzzle 31: Wie heisst die 57-ste Zahl? (Lucas-Folge)</title>
 <LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-alpha/katex.min.css" TYPE="text/css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-alpha/katex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-alpha/contrib/auto-render.min.js"></script>
 </head>
 
 <body>
@@ -30,22 +33,31 @@ b<sub>4</sub> = b<sub>3</sub> + b<sub>2</sub> = <span style="color:red">1</span>
 b<sub>5</sub> = b<sub>4</sub> + b<sub>3</sub> = <span style="color:red">2</span> b<sub>1</sub> + <span style="color:red">3</span> b<sub>2</sub> <br>
 b<sub>6</sub> = b<sub>5</sub> + b<sub>4</sub> = <span style="color:red">3</span> b<sub>1</sub> + <span style="color:red">5</span> b<sub>2</sub> <br>
 b<sub>7</sub> = b<sub>6</sub> + b<sub>5</sub> = <span style="color:red">5</span> b<sub>1</sub> + <span style="color:red">8</span> b<sub>2</sub> <br>
-....<br>
-Die roten Zahlen sind aber genau die Zahlen (a<sub>n</sub>) der Fibonacci-Folge. Es gilt daher<br>
+....</p>
+<p>Die roten Zahlen sind aber genau die Zahlen (a<sub>n</sub>) der Fibonacci-Folge. Es gilt daher<br>
 b<sub>n</sub> = b<sub>n-1</sub> + b<sub>n-2</sub> = <span style="color:red">a<sub>n-2</sub></span> b<sub>1</sub> + <span style="color:red">a<sub>n-1</sub></span> b<sub>2</sub> &nbsp;&nbsp; (n = 3, 4, 5, ...)<br>
 und damit gemäss der expliziten Darstellung der Fibonacci-Folge auf <a href="/anwendungenmath/fibonacci/">Fibonacci- und Lucas-Zahlen</a>:<br>
-<img src="img/solut31.lucas.png" width="441" height="45" alt="lucasfolge"><br>
-Die explizite Darstellung für die gesuchte Folge (b<sub>1</sub> = 1 , b<sub>2</sub> = 3) lautet daher:<br>
-<img src="img/solut31.lucas.loesung.png" width="419" height="45" alt="lucasfolge.loesung"><br>
-Also gilt:<br>
-<img src="img/solut31.b57.png" width="405" height="36" alt="b57"><br><br><br>
-Nun zum Grenzwert x der Quotientenfolge:<br>
-<img src="img/solut31.grenzwert.png" width="521" height="52" alt="grenzwert"><br>
+b<sub>n</sub> = <span>\(\frac{1}{\sqrt{5}}\big(((\frac{1+\sqrt{5}}{2})^{n-2} - (\frac{1-\sqrt{5}}{2})^{n-2})\rm\small b_1 + ((\frac{1+\sqrt{5}}{2})^{n-1} - (\frac{1-\sqrt{5}}{2})^{n-1})\rm\small b_2\big)\)</span>
+</p>
+<p>Die explizite Darstellung für die gesuchte Folge (b<sub>1</sub> = 1 , b<sub>2</sub> = 3) lautet daher:<br>
+b<sub>n</sub> = <span>\(\frac{1}{\sqrt{5}}\big(((\frac{1+\sqrt{5}}{2})^{n-2} - (\frac{1-\sqrt{5}}{2})^{n-2}) + 3((\frac{1+\sqrt{5}}{2})^{n-1} - (\frac{1-\sqrt{5}}{2})^{n-1})\big)\)</span>
+</p>
+<p>Also gilt:<br>
+<b>b<sub>57</sub></b> = ... = <span>\(\large\frac{\sqrt{5}+3}{2}(\frac{1+\sqrt{5}}{2})^{55} - \frac{\sqrt{5}-3}{2}(\frac{1-\sqrt{5}}{2})^{55}\)</span> = <b>817'138'163'596</b>
+</p>
+<p>Nun zum Grenzwert x der Quotientenfolge:<br>
+x = <span>\(\displaystyle\small\lim_{n \to \infty}\frac{b_{n+1}}{b_n} = \lim_{n \to \infty}\frac{b_{n+2}}{b_{n+1}} 
+= \lim_{n \to \infty}\frac{b_{n+1} + b_n}{b_{n+1}} = \lim_{n \to \infty}(1 +\frac{b_n}{b_{n+1}}) =
+1 + \frac{1}{\displaystyle\lim_{n \to \infty}\frac{b_{n+1}}{b_n}} = 1 + \frac{1}{\rm x}\)</span><br>
 Dies führt auf die Gleichung x<sup>2</sup> - x - 1 = 0 (Goldener Schnitt). Ihre positive Lösung ist <br>
-<img src="img/solut31.goldenerSchnitt.png" width="181" height="36" alt="goldenerSchnitt">
+x = <span>\(\large\frac{1 + \sqrt{5}}{2}\)</span> &asymp; <b>1.6180339887...</b>
 </p>
 
 <p><a href="puzzle31.html">Zurück zur Aufgabenstellung</a></p>
+
+<script>
+   renderMathInElement(document.body);
+</script>
 
 <!-- EOF: CONTENT -->
 
@@ -57,4 +69,5 @@ Dies führt auf die Gleichung x<sup>2</sup> - x - 1 = 0 (Goldener Schnitt). Ihre
 
 </div>
 </body>
+
 </html>
