@@ -25,8 +25,10 @@ Hier können Sie diese Ziehung simulieren.<br>
 Sie können entweder 'Ihre' Zahlen in die Felder eingeben oder - bequemer - die Zahlen und Glückszahl durch Klicken 
 auf die entsprechenden Buttons zufällig erzeugen lassen.<br>  
 Wählen Sie n = 1, so werden Ihnen die - vom Computer - gezogenen Zahlen angezeigt.<br>
-Für n &gt; 1 werden Ihnen diejenigen Spiele, in denen Sie etwas gewonnen hätten angezeigt.<br>
-Es gibt 8 Gewinnränge: Von 6 Richtigen mit Glückszahl bis zu 3 Richtige ohne Glückszahl. 
+Für n &gt; 1 werden Ihnen diejenigen Spiele, in denen Sie etwas gewonnen hätten und Ihre <b>Schlussbilanz</b> angezeigt.<br> 
+Klicken Sie zur weiteren Info der Schlussbilanz auf das Fragezeichen.
+  <img src="/img/help.gif" style="cursor:pointer" alt="Hilfe" onclick="infos('infos.html','Infofenster')">
+ 
 </p>
 
 <div class="colgroup-2">
@@ -42,7 +44,7 @@ Es gibt 8 Gewinnränge: Von 6 Richtigen mit Glückszahl bis zu 3 Richtige ohne G
   Geben Sie eine Glückszahl zwischen 1 und 6 an oder <input type="button" value="Erzeuge 1 Glückszahl" onclick="generatestar()">&nbsp;&nbsp;&nbsp;&nbsp;
   <input id="s1" type="number"  min="1" max="6" value=""><br><br>
   Anzahl Ziehungen n (1 &le; n &le; 1000)<br>
-  <input id="n" style="width:3em;" type="number" min="1" max="1000" value="1">
+  <input id="n" style="width:3.2em;" type="number" min="1" max="1000" value="1">
   <input type="button" value="Mache n Ziehungen" onclick="ziehe()">
   </div>
 
