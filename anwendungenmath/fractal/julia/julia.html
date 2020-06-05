@@ -7,7 +7,13 @@
 <LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
 <script src="julia.js"></script>
 <script src="/script/menuopen.js" defer></script>
-<style>input[type=number] {width:3.5em;margin-bottom:5px;-moz-appearance: textfield;}</style>
+<style>input[type=number] {width:3.5em;margin-bottom:5px;-moz-appearance:textfield;}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+</style>
 </head>
 
 <body>
@@ -33,7 +39,7 @@
     <p>Klicken Sie auf <input type="button" value="Zeichne Juliamenge" onclick="einlesen()">, falls Sie Re(c) oder Im(c) verändert haben.</p>
     <p>Iterationen n <input type="button" id="double" value="verdoppeln" onclick="doppelt()">&nbsp;&nbsp;
 	<input type="button" id="half" value="halbieren" onclick="halb()"><br>
-	Je höher Sie n wählen, desto genauer wird das Fraktal gezeichnet. (25&lt;=n&lt;=400)</p>
+	Je höher Sie n wählen, desto genauer wird i.a. das Fraktal gezeichnet. (25&lt;=n&lt;=400)</p>
     <p>Mit c=i (Re(c)=0, Im(c)=1) erhalten Sie das Logo von mathematik.ch:
 	<input type="button" value="Zeichne Logo" onclick="logo()"></p>
     <p><a href="./">Zur Info über Juliamengen und Mandelbrotmenge</a>.</p>	
