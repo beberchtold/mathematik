@@ -7,7 +7,9 @@
 <title>Graphen von zusammengesetzten Sinus und Cosinusfunktionen</title>
 <LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
 <script src="sincos.js"></script>
-<style>input[type=number] {width:2.4em;-moz-appearance: textfield;}</style>
+<style>input[type=number] {width:2.4em;-moz-appearance: textfield;}
+input.a::-webkit-outer-spin-button,input.a::-webkit-inner-spin-button {-webkit-appearance:none;margin:0;}
+</style>
 </head>
 
 <body>
@@ -50,12 +52,12 @@ Sie können die Werte aber auch direkt in die entsprechenden Felder schreiben.<b
         h=<input id="h" type="number" step="any" value="0" onchange="zeichne1()" lang="en">&nbsp;&nbsp;&nbsp;
         k=<input id="k" type="number" step="any" value="0" onchange="zeichne1()" lang="en">
 	</p>
-	<p><input type="button" value="Reset" onclick="startwerte()"> stellt Anfangszustand her.</p>
+	<p><input type="button" value="Reset" onclick="startwerte()"> stellt Anfangszustand her</p>
 	<p>Grenzen Koordinatensystem:<br>
-        Links: &nbsp;<input id="Xmin" type="number" step="any" value="-1.1" onchange="zeichne()" lang="en">&nbsp;&nbsp;&nbsp;&nbsp;
-        Rechts: <input id="Xmax" type="number" step="any" value="7.1" onchange="zeichne()" lang="en"><br>
-        Unten: <input id="Ymin" type="number" step="any" value="-3.1" onchange="zeichne()" lang="en">&nbsp;&nbsp;&nbsp;&nbsp;
-        Oben: &nbsp;&nbsp;<input id="Ymax" type="number" step="any" value="3.1" onchange="zeichne()" lang="en">
+        Links: &nbsp;<input class="a" id="Xmin" type="number" step="any" value="-1.1" onchange="zeichne()" lang="en">&nbsp;&nbsp;&nbsp;&nbsp;
+        Rechts: <input class="a" id="Xmax" type="number" step="any" value="7.1" onchange="zeichne()" lang="en"><br>
+        Unten: <input class="a" id="Ymin" type="number" step="any" value="-3.1" onchange="zeichne()" lang="en">&nbsp;&nbsp;&nbsp;&nbsp;
+        Oben: &nbsp;&nbsp;<input class="a" id="Ymax" type="number" step="any" value="3.1" onchange="zeichne()" lang="en">
 	</p>				
   </div>       
 </div>	
