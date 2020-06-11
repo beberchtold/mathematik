@@ -16,51 +16,51 @@
 
 <h1>Infos zum Programm Numerische Integration auf www.mathematik.ch</h1>
 
-<ol>
-<li>Geben Sie eine Gleichung der Form <i>y = f</i>(<i>x</i>) ein.<br>
-    Folgende Angaben können Sie ins Feld der Funktionsgleichung machen:<br>
+<h3>Geben Sie eine Gleichung der Form <i>y = f</i>(<i>x</i>) ein.</h3>
+
   <ul>
   <li>x: unabhängige Variable</li>
   <li>+, -, *, /: plus, minus, mal, dividiert durch</li>
-  <li>(...): Klammer</li>
-  <li>abs(...): Absolutbetrag</li>
-  <li>sqrt(...): Quadratwurzel</li>
-  <li>exp(...): Exponentialfunktion mit Basis e, z.B. exp(x) ist e^x oder exp(x*ln(2)) ist 2^x</li>
-  <li>pow(...,...): Exponentialfunktion mit bel. Basis, z.B. pow(2,x) ist 2^x</li>
-  <li>log(...) oder ln(...): natürlicher Logarithmus ln</li>
-  <li>sin(...): Sinus</li>
-  <li>cos(...): Cosinus</li>
-  <li>tan(...): Tangens</li>
-  <li>asin(...): Arcussinus</li>
-  <li>acos(...): Arcuscosinus</li>
-  <li>atan(...): Arcustangens</li>
+  <li>(..): Klammer</li>
+  <li>abs(..): Absolutbetrag</li>
+  <li>sqrt(..): Quadratwurzel</li>
+  <li>exp(..): Exponentialfunktion mit Basis e, z.B. exp(x) ist e^x</li>
+  <li>pow(..,..): Exponentialfunktion mit bel. Basis, z.B. pow(2,x) ist 2^x</li>
+  <li>log(..) oder ln(...): natürlicher Logarithmus ln</li>
+  <li>sin(..): Sinus</li>
+  <li>cos(..): Cosinus</li>
+  <li>tan(..): Tangens</li>
+  <li>asin(..): Arcussinus</li>
+  <li>acos(..): Arcuscosinus</li>
+  <li>atan(..): Arcustangens</li>
   <li>e: Eulersche Zahl e</li>
   <li>pi: Kreiszahl pi
   </ul>
-</li>
 
-<li>Startwert x0 und Endwert xn für x (Integrationsgrenzen). <b>f muss stetig sein auf [x0,xn].</b>
-</li>
-<li>Geben Sie die Anzahl Intervalle ein, in die Sie das Intervall [x0,xn] einteilen wollen.<br>
+<h3>Startwert x0 und Endwert xn für x (Integrationsgrenzen).</h3>
+ f muss stetig sein auf [x0,xn].
+
+<h3>Geben Sie die Anzahl Intervalle ein, in die Sie das Intervall [x0,xn] einteilen wollen.</h3>
   Um grosse Rechenzeiten zu vermeiden, beträgt die maximale Anzahl 200.
   Normalerweise reichen 20 bis 50 für eine genügende Genauigkeit mit der Simpson-Methode.<br>
-  Die Simpson-Methode benötigt eine gerade Anzahl Intervalle.</li>
-<li>Wählen Sie die Graphik durch Ankreuzen eines Radiobuttons. Auf die Graphik der Simpson-Methode wird verzichtet.</li>
-<li>Falls ein Syntaxfehler bei der Funktionsgleichung auftritt, so
+  Die Simpson-Methode benötigt eine gerade Anzahl Intervalle.
+  
+<h3>Wählen Sie die Graphik durch Ankreuzen eines Radiobuttons.</h3>
+ Auf die Graphik der Simpson-Methode wird verzichtet.<br>
+Falls ein Syntaxfehler bei der Funktionsgleichung auftritt, so
   erhalten Sie eine entsprechende Meldung. Sonst wird der Graph gezeichnet und
   die Werte gemäss den Methoden Trapez, Simpson, linker Endpunkt usw. werden
   ausgegeben. Der Graph wird gemäss der gewählten Methode schraffiert.
   Nachdem der Graph gezeichnet ist, können Sie die Graphik durch Ankreuzen des entsprechenden Buttons ändern.
-</li>
-<li>Bei Division durch Null oder einer anderweitigen Operation, die keine Zahl
+<br>
+<br>Bei Division durch Null oder einer anderweitigen Operation, die keine Zahl
   ergibt, wird das Symbol NaN ausgegeben (Definition für "Not a Number").
-</li>
-<li>Über die Genauigkeit des Resultates wird nichts ausgesagt:<br>
+<br>
+Über die Genauigkeit des Resultates wird nichts ausgesagt:<br>
   Wählen Sie z.B. die Funktion f(x) = 1/x mit den Integrationsgrenzen 0.00001 und 1. Bei 200 Teilintervallen 
   gibt die Methode nach Simpson den Wert 172.76776 aus. Der genaue Wert wäre 5*ln(10) = 11.512925...<br>
   Insbesondere prüft das Programm auch nicht, ob die Funktion im angegebenen Intervall stetig ist!
-</li>
-</ol>
+
 <p><script>if (window.opener==undefined) document.write("<a href=\"./\">Zum Programm Numerische Integration</a>")</script></p>
 
 <!-- EOF: CONTENT -->

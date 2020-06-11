@@ -15,57 +15,50 @@
 
 <!-- CONTENT -->
 
-<h1>Infos Nullstelle mit Intervallschachtelung</h1>
+<h2>Infos Nullstelle mit Intervallschachtelung</h2>
 
-<ol>
-<li>Geben Sie eine Gleichung der Form&nbsp; <i>y = f</i>(<i>x</i>)&nbsp; ein.<br>
-  x: unabhängige Variable<br>
-+, -, *, /: plus, minus, mal, dividiert durch<br>
-(...): Klammer<br>
-abs(...): Absolutbetrag<br>
-sqrt(...): Quadratwurzel<br>
-exp(...): Exponentialfunktion mit Basis e, z.B. exp(x) ist e^x oder exp(x*ln(2)) ist 2^x<br>
-pow(...,...): Exponentialfunktion mit bel. Basis, z.B. pow(2,x) ist 2^x<br>
-log(...) oder ln(...): natürlicher Logarithmus ln<br>
-sin(...): Sinus<br>
-cos(...): Cosinus<br>
-tan(...): Tangens<br>
-asin(...): Arcussinus<br>
-acos(...): Arcuscosinus<br>
-atan(...): Arcustangens<br>
-e: Eulersche Zahl e<br>
-pi: Kreiszahl pi
-</li>
+<h3>Geben Sie eine Gleichung der Form&nbsp; <i>y = f</i>(<i>x</i>)&nbsp; ein.</h3>
+  <ul>
+  <li>x: unabhängige Variable</li>
+  <li>+, -, *, /: plus, minus, mal, dividiert durch</li>
+  <li>(..): Klammer</li>
+  <li>abs(..): Absolutbetrag</li>
+  <li>sqrt(..): Quadratwurzel</li>
+  <li>exp(..): Exponentialfunktion mit Basis e, z.B. exp(x) ist e^x</li>
+  <li>pow(..,..): Exponentialfunktion mit bel. Basis, z.B. pow(2,x) ist 2^x</li>
+  <li>log(..) oder ln(...): natürlicher Logarithmus ln</li>
+  <li>sin(..): Sinus</li>
+  <li>cos(..): Cosinus</li>
+  <li>tan(..): Tangens</li>
+  <li>asin(..): Arcussinus</li>
+  <li>acos(..): Arcuscosinus</li>
+  <li>atan(..): Arcustangens</li>
+  <li>e: Eulersche Zahl e</li>
+  <li>pi: Kreiszahl pi
+  </ul>
 
-<li>Geben Sie die linke Intervallgrenze für x ein. Die rechte Intervallgrenze wird um eins höher gesetzt.
-</li>
+<h3>Geben Sie die linke Intervallgrenze für x ein. Die rechte Intervallgrenze wird um eins höher gesetzt</h3>
 
-<li>Wählen Sie die Genauigkeit der Nullstelle
-  (Anzahl Dezimalstellen: höchstens 14, vergleichen Sie Punkt 7) und die Höchstanzahl Iterationen.
-</li>
+<h3>Wählen Sie die Genauigkeit der Nullstelle und die Höchstanzahl Iterationen</h3>
+  Anzahl Dezimalstellen: höchstens 14. Beachten Sie auch die WARNUNG zuunterst.
 
-<li>Klicken Sie auf den Knopf 'Reset'. Falls ein Syntaxfehler
-  bei der Funktionsgleichung auftritt, so
-  erhalten Sie eine entsprechende Meldung.<br>
-  Wählen Sie nun entweder den Knopf 'Schritt', um die jeweils nächste
-  Iteration anzuzeigen oder wählen Sie den Knopf 'Run', um das Programm laufen zu lassen.
-</li>
+<h3>Klicken Sie auf 'Reset'</h3>
+ Falls ein Syntaxfehler bei der Funktionsgleichung auftritt, so erhalten Sie eine entsprechende Meldung.
+<h3>Wählen Sie nun entweder 'Schritt', um die jeweils nächste
+  Iteration anzuzeigen oder 'Run', um das Programm laufen zu lassen.</h3>
+Bei Division durch Null oder einer anderweitigen Operation, die keine Zahl
+  ergibt, wird das Symbol NaN ausgegeben (Definition für "Not a Number")
 
-<li>Bei Division durch Null oder einer anderweitigen Operation, die keine Zahl
-  ergibt, wird das Symbol NaN ausgegeben (Definition für&nbsp; "Not a Number").
-</li>
-
-<li>Vergessen Sie nicht, nach einer Änderung den Reset-Knopf anzuklicken.
+<h3>Vergessen Sie nicht, nach einer Änderung auf 'Reset' zu klicken.
  Die Return-Taste genügt nicht.
-</li>
+</h3>
 
-<li>WARNUNG: Die Methode wird je nach Genauigkeit
-  der Maschine ab einer bestimmten Dezimalstelle fehlerhaft!<br>
+<p>WARNUNG: Die Methode wird je nach Genauigkeit der Maschine ab einer bestimmten Dezimalstelle fehlerhaft!<br>
   Beispiel: Geben Sie y = pow(x-1000,5)-3, das Intervall von 1001 bis 1002 und die
   Genauigkeit 14 Dezstellen ein und lassen das Programm schrittweise laufen.
   Beobachten Sie, was geschieht!
-</li>
-</ol>
+</p>
+
 <p><script>if (window.opener==undefined) document.write("<a href=\"./schachtelung.html\">Zum Programm Nullstelle mit Intervallschachtelung</a>")</script></p>
 
 <!-- EOF: CONTENT -->
