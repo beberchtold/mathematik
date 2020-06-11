@@ -21,13 +21,13 @@
 
 <div class="colgroup-2">
   <div class="col" id="containercanvas">
-    Kurve <span id="Peanotxt"> </span> mit Ordnung <span id="N"></span><br><br>
-    <canvas id="myCanvas">Ihr Browser kann kein Canvas!</canvas>
+  <h3><span id="Peanotxt"></span>kurve mit Ordnung <span id="N"></span></h3>
+    <canvas id="myCanvas" style="margin-bottom:10px;">Ihr Browser kann kein Canvas!</canvas>
   </div>
   <div class="col">
 	<input type="button" id="ordh" value="Ordnung höher" onclick="ordnungh()">
-	<input type="button" id="ordt" value="Ordnung tiefer" onclick="ordnungt()">
-	<p><input id="Peano" type="checkbox" onclick="OnChangeCheckbox (this)">Peanokurve statt Hilbertkurve</p>
+	<input type="button" id="ordt" value="Ordnung tiefer" onclick="ordnungt()"><br>
+	<input id="Peano" type="checkbox" onclick="OnChangeCheckbox (this)">Peanokurve statt Hilbertkurve
 	<p>Die Kurven sind nach den Mathematikern <a href="/mathematiker/hilbert.html">David Hilbert</a> und 
 	<a href="/mathematiker/peano.html">Guiseppe Peano</a> benannt.<br>
     Sie sind im Grenzfall ( n &rarr; &infin; ) flächenfüllende Kurven (Fraktale mit Dimension 2).</p>
