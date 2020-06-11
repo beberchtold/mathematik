@@ -18,8 +18,9 @@
 
 <!-- CONTENT -->
 
-<h1>Lösung PUZZLE 31: Wie heisst die 57-ste Zahl?</h1>
+<h1>Lösung Puzzle 31: Wie heisst die 57-ste Zahl?</h1>
 
+<h3>Die 57-ste Zahl ist 817'138'163'596</h3>
 <p>Die rekursive Darstellung dieser Lucas-Folge lautet:</p>
 <p>
    &nbsp;&nbsp; b<sub>1</sub> = 1 , b<sub>2</sub> = 3<br>
@@ -45,7 +46,7 @@ b<sub>n</sub> = <span>\(\frac{1}{\sqrt{5}}\big(((\frac{1+\sqrt{5}}{2})^{n-2} - (
 <p>Also gilt:<br>
 <b>b<sub>57</sub></b> = ... = <span>\(\large\frac{\sqrt{5}+3}{2}(\frac{1+\sqrt{5}}{2})^{55} - \frac{\sqrt{5}-3}{2}(\frac{1-\sqrt{5}}{2})^{55}\)</span> = <b>817'138'163'596</b>
 </p>
-<p>Nun zum Grenzwert x der Quotientenfolge:<br>
+<p>Nun zum <b>Grenzwert</b> x der Quotientenfolge:<br>
 x = <span>\(\displaystyle\small\lim_{n \to \infty}\frac{b_{n+1}}{b_n} = \lim_{n \to \infty}\frac{b_{n+2}}{b_{n+1}} 
 = \lim_{n \to \infty}\frac{b_{n+1} + b_n}{b_{n+1}} = \lim_{n \to \infty}(1 +\frac{b_n}{b_{n+1}}) =
 1 + \frac{1}{\displaystyle\lim_{n \to \infty}\frac{b_{n+1}}{b_n}} = 1 + \frac{1}{\rm x}\)</span><br>
