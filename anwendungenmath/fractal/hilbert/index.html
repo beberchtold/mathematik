@@ -7,12 +7,13 @@
 <meta name="keywords" content="Hilbertkurve, Peanokurve, flächenfüllende Kurven">
 <LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
 <script src="hilbert.js"></script>
+<script src="/script/menuopen.js" defer></script>
 <style>input[type="button"] {margin-bottom:10px;margin-right:20px;}</style>
 </head>
 
 <body>
 <div class="page"><div style="display:flex;align-items:center;">
-<span id="menuicon" style="display:inline-block;"><a href="/menu.html"><img src="/img/menuicon.png" title="Inhalt" alt="menu"></a></span><span class="Haupt"><a href="/" style="color:black" title="Home"><img src="/img/fractal_logo.png" alt="Logo">mathematik.ch</a></span>
+<span id="menuicon" style="display:inline-block;"><img src="/img/menuicon.png" title="Inhalt" alt="menu" onclick="menu()"></span><span class="Haupt"><a href="/" style="color:black" title="Home"><img src="/img/fractal_logo.png" alt="Logo">mathematik.ch</a></span>
 </div>
 
 <!-- CONTENT -->
@@ -31,13 +32,13 @@
 	<p>Die Kurven sind nach den Mathematikern <a href="/mathematiker/hilbert.html">David Hilbert</a> und 
 	<a href="/mathematiker/peano.html">Guiseppe Peano</a> benannt.<br>
     Sie sind im Grenzfall ( n &rarr; &infin; ) flächenfüllende Kurven (Fraktale mit Dimension 2).</p>
-    <p>Es können für die Hilbert-Kurve Ordnungen zwischen 1 und 7, für die Peano-Kurve solche zwischen 1 und 5 betrachtet 
+    <p>Es können für die Hilbertkurve Ordnungen zwischen 1 und 7, für die Peanokurve solche zwischen 1 und 5 betrachtet 
 	werden. Ab höherer Ordnung ist die Kurve hier bereits flächenfüllend.</p>
-	<p>Die Hilbert-Kurve entsteht rekursiv gemäss:<br>
+	<p>Die Hilbertkurve entsteht rekursiv gemäss:<br>
     initiator = "X" (s. Ordnung 1)<br>
 	generatorX = "LYFRXFXRFYL"<br>
-	generatorY = "RXFLYFYLFXR"</p>
-    <p>Die Peano-Kurve entsteht rekursiv gemäss:<br>
+	generatorY = "RXFLYFYLFXR" <img src="/img/help.gif" style="cursor:pointer;margin-left:15px;" alt="Info" onclick="infos('info.html','Infofenster',430,600)"></p>
+    <p>Die Peanokurve entsteht rekursiv gemäss:<br>
     initiator = "X" (s. Ordnung 1)<br>
 	generatorX = "XFYFXLFLYFXFYRFRXFYFX"<br>
 	generatorY = "YFXFYRFRXFYFXLFLYFXFY"</p>
