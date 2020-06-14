@@ -6,7 +6,7 @@
 <TITLE>Lissajous-Figuren und Varianten</title>
 <LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
 <script src="Lissajous.js"></script>
-<style>input[type="button"] {margin-bottom:10px;margin-right:20px;}</style>
+<style>input[type="button"] {margin-bottom:10px;margin-right:15px;}</style>
 </HEAD>
 
 <body>
@@ -28,11 +28,14 @@
 	<input id="RUN" type="button" value="Run" onclick="run()"><br>
 
     <input id="b2" type="button" value="a+" onclick="change_a()">
+	<input id="b18" type="button" value="a-" onclick="change_aminus()">
 	<input id="b3" type="button" value="b+" onclick="change_b()">
+	<input id="b19" type="button" value="b-" onclick="change_bminus()">
 	<input id="b4" type="button" value="k+" onclick="change_k()">
-	<input id="b5" type="button" value="k+10" onclick="change_k10()"><br>
+	<input id="b20" type="button" value="k-" onclick="change_kminus()">
+	<input id="b5" type="button" value="k+10" onclick="change_k10()">
 	<input id="b6" type="button" value="Zeichne mit k=1" onclick="benutzer1()"><br>	
-    <input id="b18" type="button" value="Save" onclick="save()">
+    <input type="button" value="Save" onclick="save()">
 	<input id="b17" type="button" value="Load" onclick="load()">
 	<br>
 	<input id="b7" style="margin-top:10px;" type="button" value="F1" onclick="F1()">
@@ -48,7 +51,7 @@
     <p>
 	'Step' zeichnet Zufallsfigur mit Zufallsfarbe, 'Run/Stop' erzeugt permanent Zufallsfiguren.<br> 
 	Klick auf 'a+', 'b+', 'k+' erhöht den betreffenden Wert um 1 und zeichnet die dazugehörige Figur in der aktuellen Farbe.<br>
-	Klick auf 'k+10' erhöht k um 10.<br>
+	Analog für Klick auf 'a-', 'b-', ... Klick auf 'k+10' erhöht k um 10.<br>
 	'Zeichne mit k=1' erzeugt die dazugehörige Lissajousfigur.<br>
 	Mit 'Save' können Sie eine Figur speichern und sie später mit 'Load' (in der aktuellen Farbe) wieder laden.<br>
 	F1 bis F10 zeigen vordefinierte Figuren.</p>
