@@ -34,7 +34,6 @@ img.center{display:block;margin-left:auto;margin-right:auto}
 img[src="/img/help.gif"]{width:24px;height:30px;vertical-align:middle;}
 img[src="/img/menuicon.png"]{width:26px;height:26px;cursor:pointer;vertical-align:middle;}
 img[src="/img/closeicon.png"]{width:26px;height:26px;cursor:pointer;vertical-align:middle;}
-img[src="/img/menu_closeicon.gif"]{width:26px;height:26px;cursor:pointer;vertical-align:middle;}
 img[src="/img/fractal_logo.png"]{width:38px;height:33px;vertical-align:middle;}
 span.b{padding:8px;font-size:20px;}
 .group:after,[class*=colgroup]:after{content:".";display:block;height:0;clear:both;visibility:hidden}
