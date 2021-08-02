@@ -7,17 +7,40 @@
 <meta name="author" content="B.Berchtold">
 <title>Nullstelle mit allgemeiner Iteration</title>
 <LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
+<script src="/script/show-hide.js"></script>
 <script src="iteration.js"></script>
-<script src="/script/menuopen.js" defer></script>
 <style>input[type=number] {-moz-appearance: textfield;}</style>
 </head>
 
 <body>
-<div class="page"><div style="display:flex;align-items:center;">
-<span id="menuicon" style="display:inline-block;"><img src="/img/menuicon.png" title="Inhalt" alt="menu" onclick="menu()"></span><span class="Haupt"><a href="/" style="color:black" title="Home"><img src="/img/fractal_logo.png" alt="Logo">mathematik.ch</a></span>
-</div>
+<div class="page"> <div style="display:flex;align-items:center;">
+  <span id="menuicon" style="display:inline-block;">
+  <img src="/img/menuicon.png" style="cursor:pointer" title="Inhalt" alt="menu" onClick="ReverseDisplay()"></span>
+  <span id="closeicon" style="display:none;">
+  <img src="/img/closeicon.png" style="cursor:pointer" title="schliessen" alt="schliessen" onClick="ReverseDisplay()"></span>
+  <span class="Haupt"><a href="/" target="_self" style="color:black" title="Home"><img src="/img/fractal_logo.png" alt="Logo">mathematik.ch</a></span>
+ </div>
+ <div id="menu" style="display:none;">
+  <h4>Inhalt</h4>
+
+<ul>
+  <li><a href="/anwendungenmath/">Anwendungen + Unterrichtshilfen</a></li>
+  <li><a href="/puzzle/">Puzzles (Rätsel)</a></li> 
+  <li><a href="/spiele/">'Spiele'</a></li>
+  <li><a href="/spiele/euromillions/">Euromillions</a></li>
+  <li><a href="/spiele/swisslotto/">Swisslotto</a></li>
+  <li><a href="/geschichte/">Geschichte</a></li>
+  <li><a href="/mathematiker/">Mathematiker</a></li>
+  <li><a href="/zitate/">Zitate</a></li> 
+  <li><a href="/maturapruefungen/">Maturaprüfungen</a></li>
+  <li><a HREF="/witze/">Witze (+IQ-Test)</a></li>
+  <li><a HREF="/about.html">Kontakt</a></li>
+  <li><a HREF="/links.html">Links</a></li>
+  <li><a href="/search/">Suche</a></li>
+</ul></div>
 
 <!-- CONTENT -->
+<div id="content" style="display:block;">
 
 <h1>Nullstelle mit allgemeiner Iteration</h1>
 
@@ -59,7 +82,7 @@ Was entstehen für Resultate?
 
 <p><a HREF="./">Zu Nullstelle mit Newton</a></p>
 <p><a HREF="schachtelung.html">Zu Nullstelle mit Intervallschachtelung</a></p>
- 
+</div>
 <!-- EOF: CONTENT -->
 
  

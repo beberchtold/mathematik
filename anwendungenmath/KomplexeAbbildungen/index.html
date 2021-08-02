@@ -5,16 +5,39 @@
 <title>Phasendiagramm von komplexen Funktionen</title>
 <meta name="description" content="Bilder von komplexen Abbildungen durch Zuordnung des Argumentes">
 <LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
+<script src="/script/show-hide.js"></script>
 <script src="komplexeAbb.js"></script>
-<script src="/script/menuopen.js" defer></script>
 </head>
 
 <body>
-<div class="page"><div style="display:flex;align-items:center;">
-<span id="menuicon" style="display:inline-block;"><img src="/img/menuicon.png" title="Inhalt" alt="menu" onclick="menu()"></span><span class="Haupt"><a href="/" style="color:black" title="Home"><img src="/img/fractal_logo.png" alt="Logo">mathematik.ch</a></span>
-</div>
+<div class="page"> <div style="display:flex;align-items:center;">
+  <span id="menuicon" style="display:inline-block;">
+  <img src="/img/menuicon.png" style="cursor:pointer" title="Inhalt" alt="menu" onClick="ReverseDisplay()"></span>
+  <span id="closeicon" style="display:none;">
+  <img src="/img/closeicon.png" style="cursor:pointer" title="schliessen" alt="schliessen" onClick="ReverseDisplay()"></span>
+  <span class="Haupt"><a href="/" target="_self" style="color:black" title="Home"><img src="/img/fractal_logo.png" alt="Logo">mathematik.ch</a></span>
+ </div>
+ <div id="menu" style="display:none;">
+  <h4>Inhalt</h4>
+
+<ul>
+  <li><a href="/anwendungenmath/">Anwendungen + Unterrichtshilfen</a></li>
+  <li><a href="/puzzle/">Puzzles (Rätsel)</a></li> 
+  <li><a href="/spiele/">'Spiele'</a></li>
+  <li><a href="/spiele/euromillions/">Euromillions</a></li>
+  <li><a href="/spiele/swisslotto/">Swisslotto</a></li>
+  <li><a href="/geschichte/">Geschichte</a></li>
+  <li><a href="/mathematiker/">Mathematiker</a></li>
+  <li><a href="/zitate/">Zitate</a></li> 
+  <li><a href="/maturapruefungen/">Maturaprüfungen</a></li>
+  <li><a HREF="/witze/">Witze (+IQ-Test)</a></li>
+  <li><a HREF="/about.html">Kontakt</a></li>
+  <li><a HREF="/links.html">Links</a></li>
+  <li><a href="/search/">Suche</a></li>
+</ul></div>
 
 <!-- CONTENT -->
+<div id="content" style="display:block;">
 
 <h1>Phasendiagramm von komplexen Funktionen</h1>
 
@@ -37,7 +60,7 @@
 </div>
 Je komplizierter Sie den Term wählen, desto attraktivere Bilder erhalten Sie im Allgemeinen. Dafür wird die Rechenzeit grösser.<br>
 Ein schönes Bild entsteht, wenn Sie im Term (z*z-1)/(z-2+i)*(z-2-i)/(z*z+2+i) eingeben und Palette 2 wählen. (copy und paste)
-
+</div>
 <!-- EOF: CONTENT -->
 
 <div id="footer">
