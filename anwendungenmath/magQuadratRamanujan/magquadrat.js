@@ -2,8 +2,12 @@
 // AUTHOR and Copyright: Bernhard Berchtold
 // Dezember 2022
 
-
  var z1,z2,z3,z4;
+ const gruen="#00FF00";
+ const gelb="#FFFF00";
+ const blau="#00FFFF";
+ const vio="#FF68FF";
+ const weiss="#FFFFFF";
  
  function setvalues() {
  document.getElementById("z5").value=z4+3;
@@ -58,6 +62,14 @@
   setvalues();	  
  }
  
+ function generate() {
+  // erzeuge 4 Zufallszahlen
+   for (var i = 1;  i < 5;  i++)
+     document.getElementById("z"+i).value=Math.floor(99*Math.random())+1;
+   chkFormular(); 
+ }
+ 
+ 
  function change() {
    var Hilf=parseInt(document.getElementById("z5").value)-2;
    document.getElementById("z5").value=Hilf;
@@ -77,8 +89,107 @@
    document.getElementById("z16").value=Hilf;	 
  }
  
+ function horiz() {
+   for (var i = 1;  i < 5;  i++)
+	 document.getElementById("z"+i).style.backgroundColor=gruen;
+   for (var i = 5;  i < 9;  i++)
+	 document.getElementById("z"+i).style.backgroundColor=gelb;
+   for (var i = 9;  i < 13;  i++)
+	 document.getElementById("z"+i).style.backgroundColor=blau;
+   for (var i = 13;  i < 17;  i++)
+	 document.getElementById("z"+i).style.backgroundColor=vio;
+ }
+
+ function vertik() {
+   for (var i = 1;  i < 14;  i+=4)
+	 document.getElementById("z"+i).style.backgroundColor=gruen;
+   for (var i = 2;  i < 15;  i+=4)
+	 document.getElementById("z"+i).style.backgroundColor=gelb;
+   for (var i = 3;  i < 16;  i+=4)
+	 document.getElementById("z"+i).style.backgroundColor=blau;
+   for (var i = 4;  i < 17;  i+=4)
+	 document.getElementById("z"+i).style.backgroundColor=vio;
+ } 
+
+ function diag() {
+   for (var i = 1;  i < 17;  i+=5)
+	 document.getElementById("z"+i).style.backgroundColor=gruen;
+   for (var i = 13;  i > 3;  i-=3)
+	 document.getElementById("z"+i).style.backgroundColor=gelb;
+   document.getElementById("z2").style.backgroundColor=blau;
+   document.getElementById("z5").style.backgroundColor=blau;
+   document.getElementById("z12").style.backgroundColor=blau;
+   document.getElementById("z15").style.backgroundColor=blau;
+   document.getElementById("z3").style.backgroundColor=vio;
+   document.getElementById("z8").style.backgroundColor=vio;
+   document.getElementById("z9").style.backgroundColor=vio;
+   document.getElementById("z14").style.backgroundColor=vio;
+ } 
+
+ function eck() {
+   for (var i = 1;  i < 7;  i++) {
+	 document.getElementById("z"+i).style.backgroundColor=gruen;
+	 if (i==2) i=4;
+   }
+   for (var i = 3;  i < 9;  i++) {
+	 document.getElementById("z"+i).style.backgroundColor=gelb;
+	 if (i==4) i=6;
+   }
+   for (var i = 9;  i < 15;  i++) {
+	 document.getElementById("z"+i).style.backgroundColor=blau;
+	 if (i==10) i=12;
+   }
+   for (var i = 11;  i < 17;  i++) {
+	 document.getElementById("z"+i).style.backgroundColor=vio;
+	 if (i==12) i=14;
+   }
+ }
+
+ function mitte() {
+   for (var i = 1;  i < 17;  i+=3) {
+	 document.getElementById("z"+i).style.backgroundColor=gruen;
+	 if (i==4) i=10;
+   }
+   for (var i = 6;  i < 12;  i++) {
+	 document.getElementById("z"+i).style.backgroundColor=gelb;
+	 if (i==7) i=9;
+   }
+   for (var i = 2;  i < 16;  i++) {
+	 document.getElementById("z"+i).style.backgroundColor=blau;
+	 if (i==3) i=13;
+   }
+   for (var i = 5;  i < 13;  i+=3) {
+	 document.getElementById("z"+i).style.backgroundColor=vio;
+	 if (i==8) i=6;
+   }
+ }
+
+ function lire() {
+   for (var i = 1;  i < 15;  i++) {
+	 document.getElementById("z"+i).style.backgroundColor=gruen;
+	 if (i==2) i=12;
+   }
+   for (var i = 5;  i < 11;  i++) {
+	 document.getElementById("z"+i).style.backgroundColor=gelb;
+	 if (i==6) i=8;
+   }
+   for (var i = 7;  i < 13;  i++) {
+	 document.getElementById("z"+i).style.backgroundColor=blau;
+	 if (i==8) i=10;
+   }
+   for (var i = 3;  i < 17;  i++) {
+	 document.getElementById("z"+i).style.backgroundColor=vio;
+	 if (i==4) i=14;
+   }
+ }
+
+ function entfaerbe() {
+   for (var i = 1;  i < 17;  i++)
+	 document.getElementById("z"+i).style.backgroundColor=weiss;	
+ }
+ 
  function clearall() {
-  for (var i = 1;  i < 17;  i++)
+  for (var i = 1;  i < 17;  i++)  
     document.getElementById("z"+i).value="";
   document.getElementById("txt").innerHTML="";
   }
