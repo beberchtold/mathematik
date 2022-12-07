@@ -72,15 +72,15 @@
   document.getElementById("z1").value=z1;
   do 
 	z2=Math.floor(96*Math.random())+3;	
-  while (Math.abs(z1-z2)<4);
+  while (Math.abs(z1-z2)<5);
   document.getElementById("z2").value=z2;
   do
     z3=Math.floor(96*Math.random())+3;
-  while (Math.abs(z1-z3)<4 || Math.abs(z2-z3)<4);
+  while (Math.abs(z1-z3)<5 || Math.abs(z2-z3)<5);
   document.getElementById("z3").value=z3;
   do
     z4=Math.floor(96*Math.random())+3;
-  while (Math.abs(z1-z4)<4 || Math.abs(z2-z4)<4 || Math.abs(z3-z4)<4);	
+  while (Math.abs(z1-z4)<5 || Math.abs(z2-z4)<5 || Math.abs(z3-z4)<7);	
   document.getElementById("z4").value=z4;
    horiz();
    setvalues(); 
