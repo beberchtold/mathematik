@@ -44,23 +44,24 @@ Nach Klick auf 'Rechne' wird dann ein magisches Quadrat berechnet.</p>
   <div class="col">
 
 <div style="display:block;">
-<input id="z1" type="number" min="1" max="99" value=""><input id="z2" type="number" min="1" max="99" value=""><input id="z3" type="number" min="1" max="99" value=""><input id="z4" type="number" min="1" max="99" value="">
-&nbsp; Summe = <span id="txt"></span>
+  <input id="z1" type="number" min="1" max="99" value="" style="background-color:#00FF00"><input id="z2" type="number" min="1" max="99" value="" style="background-color:#FFFF00"><input id="z3" type="number" min="1" max="99" value="" style="background-color:#00FFFF"><input id="z4" type="number" min="1" max="99" value="" style="background-color:#00FFFF">
+  &nbsp; Summe = <span id="txt"></span>
 </div>
 <div style="display:block;">
-<input id="z5" type="number" disabled><input id="z6" type="number" disabled><input id="z7" type="number" disabled><input id="z8" type="number" disabled>
+  <input id="z5" type="number" disabled><input id="z6" type="number" disabled><input id="z7" type="number" disabled><input id="z8" type="number" disabled>
 </div>
 <div style="display:block;">
-<input id="z9" type="number" disabled><input id="z10" type="number" disabled><input id="z11" type="number" disabled><input id="z12" type="number" disabled>
+  <input id="z9" type="number" disabled><input id="z10" type="number" disabled><input id="z11" type="number" disabled><input id="z12" type="number" disabled>
 </div>
 <div style="display:block;">
-<input id="z13" type="number" disabled><input id="z14" type="number" disabled><input id="z15" type="number" disabled><input id="z16" type="number" disabled>
+  <input id="z13" type="number" disabled><input id="z14" type="number" disabled><input id="z15" type="number" disabled><input id="z16" type="number" disabled>
 </div>
 
   </div>
 
   <div class="col"> 
-<p><input type="button" value="Rechne" style="margin-right:25px"onclick="chkFormular()"><input type="button" value="Generiere" onclick="generate()"></p>
+<input type="button" value="Generiere" style="margin-right:15px;margin-top:10px;" onclick="generate()">Erzeugt Quadrat zufällig</p>
+<p><input type="button" value="Rechne" style="margin-right:15px" onclick="chkFormular()">mit Zahlen der Zeile 1</p>
 <p><input type="button" value="Ändere 2. und 4.Zeile" onclick="change()"></p>
 <p>Färbung:<br>
 <input type="button" value="horizontal" onclick="horiz()">&nbsp;&nbsp;<input type="button" value="vertikal" onclick="vertik()">

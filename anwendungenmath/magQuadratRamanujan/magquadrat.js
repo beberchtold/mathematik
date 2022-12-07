@@ -24,41 +24,41 @@
  document.getElementById("z16").value=z2+1;
  }
 
-
  function chkFormular() {
+  const fehler="Zahl zwischen 1 und 99";
   if (document.getElementById("z1").value == '') 
-     {alert ("Wert für z1 eingeben!");
+     {alert ("Wert für Feld1 eingeben!");
       return false};
   z1 = parseInt(document.getElementById("z1").value); 
   if  ((z1<1) || (z1>99))
-     {alert ("falscher Wert für z1");
+     {alert (fehler);
       document.getElementById("z1").value = ''; 
       return false};    
    if (document.getElementById("z2").value == '') 
-     {alert ("Wert für z2 eingeben!");
+     {alert ("Wert für Feld2 eingeben!");
       return false};
   z2 = parseInt(document.getElementById("z2").value); 
   if  ((z2<1) || (z2>99))
-     {alert ("falscher Wert für z2");
+     {alert (fehler);
       document.getElementById("z2").value = ''; 
       return false}; 
   if (document.getElementById("z3").value == '') 
-     {alert ("Wert für z3 eingeben!");
+     {alert ("Wert für Feld3 eingeben!");
       return false};
   z3 = parseInt(document.getElementById("z3").value); 
   if  ((z3<1) || (z3>99))
-     {alert ("falscher Wert für z3");
+     {alert (fehler);
       document.getElementById("z3").value = ''; 
       return false};    
   if (document.getElementById("z4").value == '') 
-     {alert ("Wert für z4 eingeben!");
+     {alert ("Wert für Feld4 eingeben!");
       return false};
   z4 = parseInt(document.getElementById("z4").value); 
   if  ((z4<1) || (z4>99))
-     {alert ("falscher Wert für z4");
+     {alert (fehler);
       document.getElementById("z4").value = ''; 
       return false};
-	  document.getElementById("txt").innerHTML=z1+z2+z3+z4;
+  document.getElementById("txt").innerHTML=z1+z2+z3+z4;
   setvalues();	  
  }
  
@@ -66,6 +66,7 @@
   // erzeuge 4 Zufallszahlen
    for (var i = 1;  i < 5;  i++)
      document.getElementById("z"+i).value=Math.floor(99*Math.random())+1;
+   horiz();
    chkFormular(); 
  }
  
@@ -189,6 +190,12 @@
  }
  
  function clearall() {
+  document.getElementById("z1").style.backgroundColor=gruen;
+  document.getElementById("z2").style.backgroundColor=gelb;
+  document.getElementById("z3").style.backgroundColor=blau;
+  document.getElementById("z4").style.backgroundColor=blau;
+  for (var i = 5;  i < 17;  i++)
+	document.getElementById("z"+i).style.backgroundColor=weiss;
   for (var i = 1;  i < 17;  i++)  
     document.getElementById("z"+i).value="";
   document.getElementById("txt").innerHTML="";
