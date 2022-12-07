@@ -10,18 +10,18 @@
  const weiss="#FFFFFF";
  
  function setvalues() {
- document.getElementById("z5").value=z4+3;
- document.getElementById("z6").value=z3-3;
- document.getElementById("z7").value=z2-1;
- document.getElementById("z8").value=z1+1;
- document.getElementById("z9").value=z2-2;
- document.getElementById("z10").value=z1+2;
- document.getElementById("z11").value=z4+2;
- document.getElementById("z12").value=z3-2;
- document.getElementById("z13").value=z3-1;
- document.getElementById("z14").value=z4+1;
- document.getElementById("z15").value=z1-1;
- document.getElementById("z16").value=z2+1;
+   document.getElementById("z5").value=z4+3;
+   document.getElementById("z6").value=z3-3;
+   document.getElementById("z7").value=z2-1;
+   document.getElementById("z8").value=z1+1;
+   document.getElementById("z9").value=z2-2;
+   document.getElementById("z10").value=z1+2;
+   document.getElementById("z11").value=z4+2;
+   document.getElementById("z12").value=z3-2;
+   document.getElementById("z13").value=z3-1;
+   document.getElementById("z14").value=z4+1;
+   document.getElementById("z15").value=z1-1;
+   document.getElementById("z16").value=z2+1;
  }
 
  function chkFormular() {
@@ -30,7 +30,7 @@
      {alert ("Wert für Feld1 eingeben!");
       return false};
    z1 = parseInt(document.getElementById("z1").value); 
-   if  ((z1<1) || (z1>99))
+   if  ((z1<1) || (z1>99) || isNaN(z1))
      {alert (fehler);
       document.getElementById("z1").value = ''; 
       return false};
@@ -39,7 +39,7 @@
      {alert ("Wert für Feld2 eingeben!");
       return false};
    z2 = parseInt(document.getElementById("z2").value); 
-   if  ((z2<1) || (z2>99))
+   if  ((z2<1) || (z2>99) || isNaN(z2))
      {alert (fehler);
       document.getElementById("z2").value = ''; 
       return false};
@@ -48,7 +48,7 @@
      {alert ("Wert für Feld3 eingeben!");
       return false};
    z3 = parseInt(document.getElementById("z3").value); 
-   if  ((z3<1) || (z3>99))
+   if  ((z3<1) || (z3>99) || isNaN(z3))
      {alert (fehler);
       document.getElementById("z3").value = ''; 
       return false};
@@ -57,7 +57,7 @@
      {alert ("Wert für Feld4 eingeben!");
       return false};
    z4 = parseInt(document.getElementById("z4").value); 
-   if  ((z4<1) || (z4>99))
+   if  ((z4<1) || (z4>99) || isNaN(z4))
      {alert (fehler);
       document.getElementById("z4").value = ''; 
       return false};
@@ -67,11 +67,23 @@
  }
  
  function generate() {
-  // erzeuge 4 Zufallszahlen
-   for (var i = 1;  i < 5;  i++)
-     document.getElementById("z"+i).value=Math.floor(99*Math.random())+1;
+  // erzeuge 4 Zufallszahlen >3 und <100
+  z1=Math.floor(96*Math.random())+3;
+  document.getElementById("z1").value=z1;
+  do 
+	z2=Math.floor(96*Math.random())+3;	
+  while (Math.abs(z1-z2)<4);
+  document.getElementById("z2").value=z2;
+  do
+    z3=Math.floor(96*Math.random())+3;
+  while (Math.abs(z1-z3)<4 || Math.abs(z2-z3)<4);
+  document.getElementById("z3").value=z3;
+  do
+    z4=Math.floor(96*Math.random())+3;
+  while (Math.abs(z1-z4)<4 || Math.abs(z2-z4)<4 || Math.abs(z3-z4)<4);	
+  document.getElementById("z4").value=z4;
    horiz();
-   chkFormular(); 
+   setvalues(); 
  }
  
  
