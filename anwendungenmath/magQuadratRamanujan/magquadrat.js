@@ -10,6 +10,7 @@
  const weiss="#FFFFFF";
  
  function setvalues() {
+   document.getElementById("txt").innerHTML=z1+z2+z3+z4;
    document.getElementById("z5").value=z4+3;
    document.getElementById("z6").value=z3-3;
    document.getElementById("z7").value=z2-1;
@@ -62,28 +63,27 @@
       document.getElementById("z4").value = ''; 
       return false};
   document.getElementById("z4").value=z4;
-  document.getElementById("txt").innerHTML=z1+z2+z3+z4;
   setvalues();	  
  }
  
  function generate() {
   // erzeuge 4 Zufallszahlen >3 und <100
-  z1=Math.floor(96*Math.random())+3;
+  z1=Math.floor(95*Math.random())+4;
   document.getElementById("z1").value=z1;
   do 
-	z2=Math.floor(96*Math.random())+3;	
+	z2=Math.floor(95*Math.random())+4;	
   while (Math.abs(z1-z2)<5);
   document.getElementById("z2").value=z2;
   do
-    z3=Math.floor(96*Math.random())+3;
+    z3=Math.floor(95*Math.random())+4;
   while (Math.abs(z1-z3)<5 || Math.abs(z2-z3)<5);
   document.getElementById("z3").value=z3;
   do
-    z4=Math.floor(96*Math.random())+3;
+    z4=Math.floor(95*Math.random())+4;
   while (Math.abs(z1-z4)<5 || Math.abs(z2-z4)<5 || Math.abs(z3-z4)<7);	
   document.getElementById("z4").value=z4;
-   horiz();
-   setvalues(); 
+  horiz();
+  setvalues();
  }
  
  
