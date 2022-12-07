@@ -25,39 +25,43 @@
  }
 
  function chkFormular() {
-  const fehler="Zahl zwischen 1 und 99";
-  if (document.getElementById("z1").value == '') 
+   const fehler="Zahl zwischen 1 und 99";
+   if (document.getElementById("z1").value == '') 
      {alert ("Wert für Feld1 eingeben!");
       return false};
-  z1 = parseInt(document.getElementById("z1").value); 
-  if  ((z1<1) || (z1>99))
+   z1 = parseInt(document.getElementById("z1").value); 
+   if  ((z1<1) || (z1>99))
      {alert (fehler);
       document.getElementById("z1").value = ''; 
-      return false};    
+      return false};
+   document.getElementById("z1").value=z1;	  
    if (document.getElementById("z2").value == '') 
      {alert ("Wert für Feld2 eingeben!");
       return false};
-  z2 = parseInt(document.getElementById("z2").value); 
-  if  ((z2<1) || (z2>99))
+   z2 = parseInt(document.getElementById("z2").value); 
+   if  ((z2<1) || (z2>99))
      {alert (fehler);
       document.getElementById("z2").value = ''; 
-      return false}; 
-  if (document.getElementById("z3").value == '') 
+      return false};
+   document.getElementById("z2").value=z2;  
+   if (document.getElementById("z3").value == '') 
      {alert ("Wert für Feld3 eingeben!");
       return false};
-  z3 = parseInt(document.getElementById("z3").value); 
-  if  ((z3<1) || (z3>99))
+   z3 = parseInt(document.getElementById("z3").value); 
+   if  ((z3<1) || (z3>99))
      {alert (fehler);
       document.getElementById("z3").value = ''; 
-      return false};    
-  if (document.getElementById("z4").value == '') 
+      return false};
+   document.getElementById("z3").value=z3;	  
+   if (document.getElementById("z4").value == '') 
      {alert ("Wert für Feld4 eingeben!");
       return false};
-  z4 = parseInt(document.getElementById("z4").value); 
-  if  ((z4<1) || (z4>99))
+   z4 = parseInt(document.getElementById("z4").value); 
+   if  ((z4<1) || (z4>99))
      {alert (fehler);
       document.getElementById("z4").value = ''; 
       return false};
+  document.getElementById("z4").value=z4;
   document.getElementById("txt").innerHTML=z1+z2+z3+z4;
   setvalues();	  
  }
