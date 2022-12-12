@@ -222,5 +222,4 @@
   for (var i = 1;  i < 17;  i++)  
     document.getElementById("z"+i).value="";
   document.getElementById("txt").innerHTML="";
-  document.getElementById("z1").focus();
   }
