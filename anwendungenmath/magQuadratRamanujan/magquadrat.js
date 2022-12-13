@@ -27,44 +27,32 @@
 
  function chkFormular() {
    const fehler="Zahl zwischen 1 und 99";
-   if (document.getElementById("z1").value == '') 
-     {alert ("Wert für Feld1 eingeben!");
-      document.getElementById("z1").focus();
-      return false};
-   z1 = parseInt(document.getElementById("z1").value); 
+   z1 = parseInt(document.getElementById("z1").value);
    if  ((z1<1) || (z1>99) || isNaN(z1))
      {alert (fehler);
-      document.getElementById("z1").value = ''; 
+      document.getElementById("z1").value = '';
+      document.getElementById("z1").focus();	  
       return false};
-   document.getElementById("z1").value=z1;	  
-   if (document.getElementById("z2").value == '') 
-     {alert ("Wert für Feld2 eingeben!");
-      document.getElementById("z2").focus();
-      return false};
+   document.getElementById("z1").value=z1;
    z2 = parseInt(document.getElementById("z2").value); 
    if  ((z2<1) || (z2>99) || isNaN(z2))
      {alert (fehler);
-      document.getElementById("z2").value = ''; 
+      document.getElementById("z2").value = '';
+      document.getElementById("z2").focus();	  
       return false};
-   document.getElementById("z2").value=z2;  
-   if (document.getElementById("z3").value == '')	   
-     {alert ("Wert für Feld3 eingeben!");
-      document.getElementById("z3").focus();
-      return false};
+   document.getElementById("z2").value=z2;
    z3 = parseInt(document.getElementById("z3").value); 
    if  ((z3<1) || (z3>99) || isNaN(z3))
      {alert (fehler);
-      document.getElementById("z3").value = ''; 
+      document.getElementById("z3").value = '';
+      document.getElementById("z3").focus();	  
       return false};
-   document.getElementById("z3").value=z3;	  
-   if (document.getElementById("z4").value == '') 
-     {alert ("Wert für Feld4 eingeben!");
-      document.getElementById("z4").focus();
-      return false};
+   document.getElementById("z3").value=z3;
    z4 = parseInt(document.getElementById("z4").value); 
    if  ((z4<1) || (z4>99) || isNaN(z4))
      {alert (fehler);
-      document.getElementById("z4").value = ''; 
+      document.getElementById("z4").value = '';
+      document.getElementById("z4").focus();	  
       return false};
   document.getElementById("z4").value=z4;
   setvalues();	  
