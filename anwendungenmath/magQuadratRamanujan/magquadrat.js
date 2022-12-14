@@ -81,7 +81,6 @@
   setvalues();
  }
  
- 
  function change() {
    var Hilf=parseInt(document.getElementById("z5").value)-2;
    document.getElementById("z5").value=Hilf;
