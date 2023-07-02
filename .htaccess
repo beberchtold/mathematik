@@ -1,2 +1,6 @@
 AddDefaultCharset UTF-8
 ErrorDocument 404 /404.html
+
+RewriteEngine on
+RewriteRule(.*)/$1?[R=permanent,L]
+
