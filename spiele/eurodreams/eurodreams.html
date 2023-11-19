@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" CONTENT="Bernhard Berchtold">
+<meta NAME="Description" CONTENT="Anwendungen der Mathematik, Wahrscheinlichkeit, Hypergeometrische Verteilung">
+<title>Eurodreams: Berechnung der Wahrscheinlichkeiten mit hypergeometrischer Verteilung</title>
+<LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
+</head>
+
+<body>
+<div class="page"><div style="display:flex;align-items:center;">
+<span id="menuicon" style="display:inline-block;"><a href="/menu.html"><img src="/img/menuicon.png" title="Inhalt" alt="menu"></a></span><span class="Haupt"><a href="/" style="color:black" title="Home"><img src="/img/fractal_logo.png" alt="Logo">mathematik.ch</a></span>
+</div>
+
+<!-- CONTENT -->
+
+<h1>Eurodreams: Resultate der Berechnung der Wahrscheinlichkeiten</h1>
+
+<p>Bei Eurodreams werden zufällig 6 aus 40 Zahlen und 1 von 5 Glückszahlen gezogen (die Traumzahl).<br>
+Die Tabelle gibt die Wahrscheinlichkeit der sechs Gewinnränge an - geordnet nach Grösse.<br>
+Die Berechnung erfolgt im Prinzip durch die Multiplikation von zwei <a href="/anwendungenmath/wkeit/hypergeovert.html">hypergeometrischen</a> 
+Wahrscheinlichkeiten. Allerdings reicht es, die Wahrscheinlichkeit für die Anzahl richtige Zahlen zu berechnen. 
+Diese muss dann nur noch mit 1/5 multipliziert werden, wenn die Traumzahl getroffen werden soll bzw. mit 4/5, wenn 
+die Traumzahl nicht getroffen werden soll.<br>
+Bei den Gewinnrängen 3 bis 6 spielt die Traumzahl keine Rolle.
+</p>
+
+  <table>
+    <tr>
+      <td class="c" style="width:60px">Zahlen</td>
+      <td class="c" style="width:70px">Traumzahl</td>
+	  <td style="width:180px">Wahrscheinlichkeit</td>
+    </tr>
+    <tr>
+      <td class="c"><b>6</b></td>
+      <td class="c"><b>1</b></td>
+	  <td>1 : 19´191´900 &asymp; 5.21E-8</td>
+    </tr>
+	<tr>
+      <td class="c"><b>6</b></td>
+      <td class="c"><b>0</b></td>
+	  <td>1 : 4´797'975 &asymp; 2.08E-7</td>
+    </tr>
+	<tr>
+      <td class="c"><b>5</b></td>
+      <td class="c"><b>0 oder 1</b></td>
+	  <td>1 : 18'815.6 &asymp; 5.315E-5</td>
+    </tr>
+	<tr>
+      <td class="c"><b>4</b></td>
+      <td class="c"><b>0 oder 1</b></td>
+	  <td>1 : 456.1 &asymp; 0.002192</td>
+    </tr>
+	<tr>
+      <td class="c"><b>3</b></td>
+      <td class="c"><b>0 oder 1</b></td>
+	  <td>1 : 32.1 &asymp; 0.0312</td>
+    </tr>
+	<tr>
+      <td class="c"><b>2</b></td>
+      <td class="c"><b>0 oder 1</b></td>
+	  <td>1 : 5.51 &asymp; 0.1812</td>
+    </tr>
+  </table>
+
+<p>Falls Sie die Ziehung der Zahlen und der Traumzahl simulieren wollen: <a href="./">Spiele (Eurodreams)</a></p>
+
+<!-- EOF: CONTENT -->
+
+<div id="footer">
+<p><small>
+©1997 -
+2023 www.mathematik.ch</small> |<a href="/search/"><span class="b" title="Suche">&#x1F50D;</span></a></p>
+</div>
+
+</div>
+</body>
+</html>
