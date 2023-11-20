@@ -26,6 +26,7 @@ var Spiel=[
 '<a href="/puzzle/puzzle20/"><img src="/img/puzzle20.png" class="a" alt="puzzle20"></a>',
 '<a href="/puzzle/puzzle26/"><img src="/puzzle/puzzle26/solut26.jpg" class="a" alt="puzzle26"></a>',
 '<a href="/spiele/euromillions/"><img src="/img/euromillions.png" class="a" alt="Euromillions"></a>',
+'<a href="/spiele/eurodreams/"><img src="/img/eurodreams.png" class="a" alt="Eurodreams"></a>',
 '<a href="/spiele/swisslotto/"><img src="/img/swisslotto.png" class="a" alt="Swisslotto"></a>',
 '<a href="/spiele/numbers/"><img src="/img/numbers.png" class="a" alt="numbers"></a>',
 '<a href="/spiele/sudoku/"><img src="/img/sudoku.png" class="a" alt="Sudoku"></a>',
