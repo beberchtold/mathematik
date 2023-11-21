@@ -81,7 +81,7 @@
     var a = vergleichzahlen(zahl,z1,z2,z3,z4,z5,z6);
     var b = vergleichsterne(zahl,s1);
     if (a==1) var z=" Zahl richtig, "; else var z=" Zahlen richtig, ";
-    if (b==1) var s=" Glückszahl richtig"; else var s=" Glückszahl falsch"; 
+    if (b==1) var s=" Traumzahl richtig"; else var s=" Traumzahl falsch"; 
     if ((n>1) &&  (a>=3))
         { gewinn=true;
           document.getElementById("txt").innerHTML+="Spiel "+i+": "+a+z+s+"<br>";
@@ -95,7 +95,7 @@
         document.getElementById("txt").innerHTML+=zahl[3]+"&nbsp;&nbsp;&nbsp;&nbsp;";
 		document.getElementById("txt").innerHTML+=zahl[4]+"&nbsp;&nbsp;&nbsp;&nbsp;";
         document.getElementById("txt").innerHTML+=zahl[5]+"<br>";
-        document.getElementById("txt").innerHTML+="Die gezogene Glückszahl ist ";
+        document.getElementById("txt").innerHTML+="Die gezogene Traumzahl ist ";
         document.getElementById("txt").innerHTML+=zahl[6]+"<br><br>";   
         document.getElementById("txt").innerHTML+="<h3>"+a+z+s+"</h3>";
         Gewinnsumme+=gewinn1(a,b); 		
