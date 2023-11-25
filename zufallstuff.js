@@ -4,13 +4,13 @@ function start() {
 	var anzahl=Spiel.length; var i=Math.floor(anzahl*Math.random());document.getElementById("message_spiel").innerHTML=Spiel[i];
     anzahl=Link.length; i=Math.floor(anzahl*Math.random());document.getElementById("message_raetsel").innerHTML=Link[i];
     i=Math.floor(2*Math.random());document.getElementById("message_pl").innerHTML=Wahl[i];
-    document.getElementById("text_pl").innerHTML=txt[i];
+    document.getElementById("text_pl").innerHTML="<b>"+txt[i]+"</b>";
     i=Math.floor(2*Math.random());document.getElementById("message_bi").innerHTML=Wahlbi[i];
-    document.getElementById("text_bi").innerHTML=txtbi[i];
+    document.getElementById("text_bi").innerHTML="<b>"+txtbi[i]+"</b>";
     i=Math.floor(2*Math.random());document.getElementById("message_frac").innerHTML=fractal[i];
-    document.getElementById("text_frac").innerHTML=txtfrac[i];
+    document.getElementById("text_frac").innerHTML="<b>"+txtfrac[i]+"</b>";
 	anzahl=math.length; i=Math.floor(anzahl*Math.random());document.getElementById("message_math").innerHTML=math[i];
-    document.getElementById("text_math").innerHTML=txtmath[i];
+    document.getElementById("text_math").innerHTML="<b>"+txtmath[i]+"</b>";
 }
 
 var Spiel=[
