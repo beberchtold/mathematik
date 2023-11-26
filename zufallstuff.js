@@ -63,20 +63,16 @@ var Wahl=[
 '<a href="/anwendungenmath/lissajou/"><img src="/img/lissajou.jpg" class="a" alt="Lissajou"></a>',
 '<a href="/anwendungenmath/PlatonKoerper/"><img src="/img/ikosaeder.png" class="a" alt="Ikosaeder"></a>'
 ];
-var txt=[];
-if (window.innerWidth > 420) txt[0]="Lissajous Figur";
-    else txt[0]="Lissajous";
-txt[1]="Platon Körper";
-	
+var txt=["Lissajous Figur","Platon Körper"];
+if (window.innerWidth < 420) txt[0]="Lissajous";
+
 // Binomialverteilung oder Approximation
 var Wahlbi=[
 '<a href="/anwendungenmath/wkeit/binomialvert.html"><img src="/img/binomialverteilung.png" class="a" alt="Binomialvert"></a>',
 '<a href="/anwendungenmath/wkeit/approx_bin_norm.html"><img src="/img/approx.jpg" class="a" alt="Approx"></a>'
 ];
-var txtbi = [];
-txtbi[0]="Binomial&shy;verteilung";
-if (window.innerWidth > 420) txtbi[1]="Approximation<br>Binomialverteilung";
-    else txtbi[1]="Approximation<br>Binomialvert";
+var txtbi = ["Binomial&shy;verteilung","Approximation<br>Binomialverteilung"];
+if (window.innerWidth < 420) txtbi[1]="Approximation<br>Binomialvert";
 
 // fractal oder Mandelbrot
 var fractal=[
@@ -99,4 +95,4 @@ var math=[
 '<a href="/mathematiker/abel.html"><img src="/img/abel.jpg" class="b" alt="Abel"></a>'
 ];
 var txtmath=["Leonhard Euler","Isaac Newton","Pierre Fermat","C.F. Gauss","Evariste Galois","Kurt Gödel","David Hilbert","Albert Einstein","G.W. Leibniz","Niels Abel"];
-
+if (window.innerWidth < 420) {txtmath[0]="L. Euler"; txtmath[4]="E. Galois"; txtmath[7]="A. Einstein";}
