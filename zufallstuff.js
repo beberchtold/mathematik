@@ -63,8 +63,11 @@ var Wahl=[
 '<a href="/anwendungenmath/lissajou/"><img src="/img/lissajou.jpg" class="a" alt="Lissajou"></a>',
 '<a href="/anwendungenmath/PlatonKoerper/"><img src="/img/ikosaeder.png" class="a" alt="Ikosaeder"></a>'
 ];
-var txt=["Lissajous Figur","Platon Körper"];
-
+var txt=[];
+if (window.innerWidth > 420) txt[0]="Lissajous Figur";
+    else txt[0]="Lissajous";
+txt[1]="Platon Körper";
+	
 // Binomialverteilung oder Approximation
 var Wahlbi=[
 '<a href="/anwendungenmath/wkeit/binomialvert.html"><img src="/img/binomialverteilung.png" class="a" alt="Binomialvert"></a>',
@@ -72,7 +75,7 @@ var Wahlbi=[
 ];
 var txtbi = [];
 txtbi[0]="Binomial&shy;verteilung";
-if (window.innerWidth > 400) txtbi[1]="Approximation<br>Binomialverteilung";
+if (window.innerWidth > 420) txtbi[1]="Approximation<br>Binomialverteilung";
     else txtbi[1]="Approximation<br>Binomialvert";
 
 // fractal oder Mandelbrot
