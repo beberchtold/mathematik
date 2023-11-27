@@ -1,7 +1,6 @@
 // zufallstuff.js für www.mathematik.ch (Hauptseite)
 // copyright Bernhard Berchtold
 
-
 // Zufallsknacknüsse
 var Link=[
 '<a href="/puzzle/puzzle1.html"><img src="/img/puzzle1.png" class="a" alt="puzzle1"></a>',
@@ -25,7 +24,6 @@ var Link=[
 '<a href="/puzzle/puzzle33.html"><img src="/puzzle/img/puzzle33_hund.gif" class="a" alt="puzzle33"></a>',
 '<a href="/puzzle/puzzle35.html"><img src="/img/puzzle35.jpg" class="a" alt="puzzle35"></a>'
 ];
-
 
 // Zufallsspiel
 var Spiel=[
@@ -84,13 +82,11 @@ function start() {
     document.getElementById("text_math").innerHTML="<b>"+txtmath[i]+"</b>";
 }
 
-
 // Lissajous oder PlatonKörper
 var Wahl=[
 '<a href="/anwendungenmath/lissajou/"><img src="/img/lissajou.jpg" class="a" alt="Lissajou"></a>',
 '<a href="/anwendungenmath/PlatonKoerper/"><img src="/img/ikosaeder.png" class="a" alt="Ikosaeder"></a>'
 ];
-
 
 // Binomialverteilung oder Approximation
 var Wahlbi=[
@@ -98,10 +94,8 @@ var Wahlbi=[
 '<a href="/anwendungenmath/wkeit/approx_bin_norm.html"><img src="/img/approx.jpg" class="a" alt="Approx"></a>'
 ];
 
-
 // fractal oder Mandelbrot
 var fractal=[
 '<a href="/anwendungenmath/fractal"><img src="/img/farn.png" class="a" alt="Farn"></a>',
 '<a href="/anwendungenmath/fractal/julia/julia.html"><img src="/img/mandelbrot.png" class="a" alt="Mandelbrot"></a>'
 ];
-
