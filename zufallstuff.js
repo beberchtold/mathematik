@@ -62,11 +62,11 @@ var math=[
 ];
 
 var txt=["Lissajous Figur","Platon Körper"];
-var txtbi = ["Binomial&shy;verteilung","Approximation<br>Binomialverteilung"];
+var txtbi = ["Binomial&shy;verteilung","Approximation Binomialverteilung"];
 var txtfrac=["Fraktale","Mandelbrot"]; 
 var txtmath=["Leonhard Euler","Isaac Newton","Pierre Fermat","C.F. Gauss","Evariste Galois","Kurt Gödel","David Hilbert","Albert Einstein","G.W. Leibniz","Niels Abel"];
 if (window.innerWidth < 420) {
-	txt[0]="Lissajous";txtbi[1]="Approximation<br>Binomialvert";txtmath[0]="L. Euler"; txtmath[4]="E. Galois"; txtmath[7]="A. Einstein";
+	txt[0]="Lissajous";txtbi[1]="Approximation Binomialvert";txtmath[0]="L. Euler"; txtmath[4]="E. Galois"; txtmath[7]="A. Einstein";
 	}
 
 function start() {
