@@ -6,7 +6,7 @@
     H=W;
 	sw=W/12;
 	sh=sw;
-	var zugnr;                     // Nr des Zuges
+	var zugnr=0;                     // Nr des Zuges
     var starti, startj, endi,endj;        // Bestimmungstücke des aktuellen Zuges
     var aktnr;
 	var board= new Array(12);
@@ -17,29 +17,14 @@
     var ctx;
 
 window.onload=init;
-
-	function init() {
+	
+  function init() {
+    window.onerror = Fehlerbehandlung();
     canvas1=document.getElementById('myCanvas');
-    ctx = canvas1.getContext('2d');  
-	canvas1.addEventListener('click', function(evt) {  
-	  var mousePos = getMousePos(canvas1, evt);
-      var mx = mousePos.x; var my = mousePos.y;
-      var i = Math.floor(mx/sw)+1; var j = Math.floor(my/sh)+1;
-      var nr= board[j-1][i-1];
-      if (nr>3 && nr<12)
-         { if (document.getElementById('links').checked)  
-            { move_left(i,j); document.getElementById('Zug-').disabled = false; return;}
-          if (document.getElementById('rechts').checked) 
-            { move_right(i,j); document.getElementById('Zug-').disabled = false; return;}
-          if (document.getElementById('oben').checked)  
-            { move_up(i,j); document.getElementById('Zug-').disabled = false; return;}
-          if (document.getElementById('unten').checked)  
-            { move_down(i,j); document.getElementById('Zug-').disabled = false;}
-         }     
-    }, false);
+    ctx = canvas1.getContext('2d');
     doClear();
   } 
-
+  
 
   function doClear()   
       {  for (var i=0;i<12;i++)               // zu Position (i,j) gehört board[j-1][i-1]  ; i = 1..12, j = 1..12
@@ -53,13 +38,13 @@ window.onload=init;
          board[2][1]=4; board[1][5]=9; board[3][7]=1; board[4][4]=10;
          board[4][8]=11; board[5][4]=2; board[5][6]=5; board[6][2]=2;
          board[6][8]=1; board[7][6]=3;
-         board[8][2]=7; board[8][3]=6;  board[8][9]=8; 
-
+         board[8][2]=7; board[8][3]=6;  board[8][9]=8;
+         zugnr=0;		 
+         message.innerHTML="Zugnummer: "+zugnr;
          for (i=0;i<8;i++) farbe[i]="blue";
          farbe[3]="red";  farbe[4]="red";
-         zugnr=0;
-         message.innerHTML="    Viel Glück!";
          document.getElementById('Zug-').disabled = true;
+		 document.getElementById('Zug+').disabled = false;
          zeichne();
     } 
 
@@ -137,9 +122,9 @@ window.onload=init;
 	   ctx.fillStyle = "white";
 	   ctx.fill();
 	   ctx.closePath();
-    }   
+    }  
 
-  function move_down(i,j)
+  function down(i,j)
   { nr=board[j-1][i-1];
     aktnr=nr; starti=i; startj=j; startcolor=farbe[nr-4]; endi=i;
     while (board[j][i-1]==0)
@@ -156,7 +141,7 @@ window.onload=init;
      ende();
    }   
 
- function move_up(i,j)
+ function up(i,j)
   { nr=board[j-1][i-1];
     aktnr=nr; starti=i; startj=j; startcolor=farbe[nr-4]; endi=i;
     while (board[j-2][i-1]==0)
@@ -173,7 +158,7 @@ window.onload=init;
      ende();
    }       
     
- function move_right(i,j)
+ function right(i,j)
   { nr=board[j-1][i-1];
     aktnr=nr; starti=i; startj=j; startcolor=farbe[nr-4]; endj=j; 
     while (board[j-1][i]==0)
@@ -189,7 +174,7 @@ window.onload=init;
       ende();
    }   
 
- function move_left(i,j)
+ function left(i,j)
   { nr=board[j-1][i-1];
     aktnr=nr; starti=i; startj=j; startcolor=farbe[nr-4]; endj=j;
     while (board[j-1][i-2]==0)
@@ -214,47 +199,43 @@ window.onload=init;
 	 board[startj-1][starti-1]=aktnr; farbe[aktnr-4]=startcolor;   
    }
    
-   function fertig()
-   { var hilf=true; 
-     for (var i=2;i<10;i++)
-       for (var j=2;j<10;j++)
-         { hilf=true;
-           var nr=board[j-1][i-1];
-          if ( nr < 4 || nr >6) hilf=false;
-            else  if (farbe[nr-4] != "blue")  hilf=false;
-          nr=board[j-1][i];
-          if ( nr < 4 || nr >6) hilf=false;
-             else if (farbe[nr-4] != "blue") hilf=false;
-          nr=board[j-1][i+1];
-          if ( nr < 4 || nr >6) hilf=false;
-             else if (farbe[nr-4] != "blue") hilf=false; 
-          nr=board[j][i-1];
-          if ( nr < 7 || nr >8) hilf=false;
-            else if (farbe[nr-4] != "red") hilf=false; 
-          nr=board[j][i];
-          if ( nr !=0) hilf=false;
-          nr=board[j][i+1];
-          if ( nr < 7 || nr >8) hilf=false;
-             else if (farbe[nr-4] != "red") hilf=false; 
-          nr=board[j+1][i-1];
-          if ( nr < 9 || nr >11) hilf=false;
-            else if (farbe[nr-4] != "blue") hilf=false;
-          nr=board[j+1][i];
-          if ( nr < 9 || nr >11) hilf=false;
-             else if (farbe[nr-4] != "blue") hilf=false; 
-          nr=board[j+1][i+1];
-          if ( nr < 9 || nr >11) hilf=false;
-             else if (farbe[nr-4] != "blue") hilf=false;
-          if (hilf) return true;
-         }
-     return false;
+   function go()
+   {  document.getElementById('Zug-').disabled = false;
+      if (zugnr<24)   zugnr++; 
+      message.innerHTML="Zug "+zugnr;
+      switch (zugnr)
+      { case 1: right(10,9); break;
+        case 2: down(6,2); break;
+        case 3: right(5,5); break;
+        case 4: down(8,5); break;
+        case 5: left(8,11); break;
+        case 6: right(9,5); break;
+        case 7: down(11,5); break;
+        case 8: left(11,8); break;
+        case 9: down(8,8); break;
+        case 10: right(7,6); break;
+        case 11: down(11,6); break;
+        case 12: left(11,8); break;
+        case 13: up(7,11); break;
+        case 14: left(11,9); break;
+        case 15: down(8,9); break;
+        case 16: down(8,8); break;
+        case 17: left(3,9); break;
+        case 18: down(2,3); break;
+        case 19: down(7,9); break;
+        case 20: right(4,9); break;
+        case 21: right(2,9); break;
+        case 22: down(6,9); break;
+        case 23: right(2,8); break;
+        case 24: down(6,8); break;
+      }
    }
 
-   function ende()
-  {   zugnr++; 
-      message.innerHTML="Zug "+zugnr;
-     if (fertig())
-       message.innerHTML="Gratuliere!!"; 
+  function ende() { 
+    if (zugnr==24) {
+	  document.getElementById('Zug-').disabled = true;
+      document.getElementById('Zug+').disabled = true;
+	}	  
   }
 	
   function getMousePos(canvas, evt) {
@@ -263,4 +244,9 @@ window.onload=init;
           x: evt.clientX - rect.left,
           y: evt.clientY - rect.top
         };
-      }	
+      }
+
+
+  function Fehlerbehandlung() {
+  }
+	
