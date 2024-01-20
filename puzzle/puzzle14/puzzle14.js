@@ -58,7 +58,7 @@ window.onload=init;
          for (i=0;i<8;i++) farbe[i]="blue";
          farbe[3]="red";  farbe[4]="red";
          zugnr=0;
-         message.innerHTML="    Viel Glück!";
+         message.innerHTML="           ";
          document.getElementById('Zug-').disabled = true;
          zeichne();
     } 
@@ -132,7 +132,7 @@ window.onload=init;
        var y = (j-1) * sh;
 	   ctx.beginPath();
 	   ctx.strokeStyle = "gray";
-       ctx.rect(x+1, y+1, sw - 1, sh - 1);
+       ctx.rect(x+1, y+1, sw-1, sh-1);
 	   ctx.stroke();
 	   ctx.fillStyle = "white";
 	   ctx.fill();
