@@ -2,7 +2,7 @@
   // Java-Applet vom April 2001 umgeschrieben in html5 und javascript im Oktober 2015
   // copyright Bernhard Berchtold
 
-    W=336;
+    W=324;
     H=W;
 	sw=W/12;
 	sh=sw;
