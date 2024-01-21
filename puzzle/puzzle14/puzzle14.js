@@ -2,7 +2,7 @@
   // Java-Applet vom April 2001 umgeschrieben in html5 und javascript im Oktober 2015
   // copyright Bernhard Berchtold
 
-    W=336;
+    W=324;
     H=W;
 	sw=W/12;
 	sh=sw;
@@ -254,7 +254,7 @@ window.onload=init;
   {   zugnr++; 
       message.innerHTML="Zug "+zugnr;
      if (fertig())
-       message.innerHTML="Gratuliere!!"; 
+       message.innerHTML="Gratuliere! In "+zugnr+" Zügen geschafft"; 
   }
 	
   function getMousePos(canvas, evt) {
