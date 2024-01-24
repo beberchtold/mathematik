@@ -136,7 +136,7 @@ var a=new Array();
      pruefe(R);
      zahl=sort(zahl);    // zahl jetzt von 0 bis 8 indiziert
      for (var j=0;j<9;j++) 
-      { document.getElementById("txt").innerHTML+="<img src=\"img/"+zahl[j]+".gif\" width=52 height=80 style=\"margin-left:10px\">";  
+      { document.getElementById("txt").innerHTML+="<img src=\"img/"+zahl[j]+".gif\" width=52 height=80>"+"&nbsp;";  
       }
      document.getElementById("txt").innerHTML+="<br><br>";
 	 if (a[9]+a[8]+a[7]+a[6]+a[5]+a[4]+a[3]+a[2] == 0)
