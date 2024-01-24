@@ -58,14 +58,14 @@ window.onload=resizeCanvas;
      else ctx.strokeStyle = "blue"; 
    ctx.lineWidth="1";
 
-   x=1; y=H-2; direction=0;
+   x=1; y=H-1; direction=0;
    if (!peano) {
-  	 distance = y / (Math.pow(2,n) - 1);       /* Laenge einer Vorwaertsbewegung */
+  	 distance = (H-2) / (Math.pow(2,n) - 1);       /* Laenge einer Vorwaertsbewegung */
   	 generatorX =  "LYFRXFXRFYL";          
      generatorY =  "RXFLYFYLFXR";         
    }
    else  {
-    distance = y / (Math.pow(3,n) - 1);        
+    distance = (H-2) / (Math.pow(3,n) - 1);        
     generatorX = "XFYFXLFLYFXFYRFRXFYFX";   
     generatorY = "YFXFYRFRXFYFXLFLYFXFY";
     ctx.strokeStyle = "red";    
