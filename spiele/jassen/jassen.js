@@ -136,7 +136,7 @@ var a=new Array();
      pruefe(R);
      zahl=sort(zahl);    // zahl jetzt von 0 bis 8 indiziert
      for (var j=0;j<9;j++) 
-      { document.getElementById("txt").innerHTML+="<img src=\"img/"+zahl[j]+".gif\" width=52 height=80 style=\"margin-left:4px\">";  
+      { document.getElementById("txt").innerHTML+="<img src=\"img/"+zahl[j]+".gif\" width=52 height=80 style=\"margin-left:10px\">";  
       }
      document.getElementById("txt").innerHTML+="<br><br>";
 	 if (a[9]+a[8]+a[7]+a[6]+a[5]+a[4]+a[3]+a[2] == 0)
@@ -145,11 +145,11 @@ var a=new Array();
      if (a[8]>0) document.getElementById("txt").innerHTML+="<b>Sie haben 1 Achtblatt</b><br>";
      if (a[7]>0) document.getElementById("txt").innerHTML+="<b>Sie haben 1 Siebenblatt</b><br>";
      if (a[6]>0) document.getElementById("txt").innerHTML+="<b>Sie haben 1 Sechsblatt</b><br>";
-     if (a[5]>0) document.getElementById("txt").innerHTML+="<b>Sie haben 1 Fuenfblatt</b><br>";
+     if (a[5]>0) document.getElementById("txt").innerHTML+="<b>Sie haben 1 Fünfblatt</b><br>";
      if (a[2]>0) document.getElementById("txt").innerHTML+="<b>Sie haben "+a[2]+"-mal 4 gleiche</b><br>";
-     if (a[4]==2) document.getElementById("txt").innerHTML+="<b>Sie haben 2 Vierblaetter</b><br>";
+     if (a[4]==2) document.getElementById("txt").innerHTML+="<b>Sie haben 2 Vierblätter</b><br>";
      if (a[4]==1) document.getElementById("txt").innerHTML+="<b>Sie haben 1 Vierblatt</b><br>";
-     if (a[3]>1) document.getElementById("txt").innerHTML+="Sie haben "+a[3]+" Dreiblaetter<br>";
+     if (a[3]>1) document.getElementById("txt").innerHTML+="Sie haben "+a[3]+" Dreiblätter<br>";
      if (a[3]==1) document.getElementById("txt").innerHTML+="Sie haben 1 Dreiblatt<br>"; 
   }	  
   if (n>1) {
