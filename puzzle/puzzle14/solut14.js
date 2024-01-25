@@ -49,23 +49,8 @@ window.onload=init;
     } 
 
   function zeichne() {  
-	ctx.clearRect(0,0,W,H);
-    ctx.beginPath();
-	ctx.strokeStyle = "black";
-	ctx.lineWidth="1";
-        for (var i = 0; i < 13; i++) {
-           var x = i * sw;
-		   ctx.moveTo(x,0);
-           ctx.lineTo(x,H);
-        }
-        for (i = 0; i < 13; i++) {
-           var y = i * sh;
-		   ctx.moveTo(0,y);
-           ctx.lineTo(W,y);
-        }
-		ctx.stroke();
-		ctx.closePath();
-        for (i = 1; i < 13; i++)
+	ctx.clearRect(0,0,W,H);		
+      for (i = 1; i < 13; i++)
         {  x = (i-1) * sw;
            for (var j = 1; j < 13; j++)
              { y = (j-1) * sh;
@@ -76,26 +61,26 @@ window.onload=init;
                if (nr== 1)   	ctx.fillStyle = "red";
                if (nr== 2)   	ctx.fillStyle = "yellow";
                if (nr== 3)   	ctx.fillStyle = "blue";
-               ctx.rect(x+1, y+1, sw-1, sh-1);
+               ctx.rect(x, y, sw, sh);
 			   ctx.fill();
                if ((nr>3) && (nr<12)) 
                    putSquare(nr, i, j, farbe[nr-4]);
 			   ctx.closePath();
              }
-          }
-    }    
+        }
+    }   
     
    function putSquare(nr,i,j,color) {     // "nr" ist Nummer des Stückes: 4,5,6; 7,8; 9,10,11
        var x = (i-1) * sw;
        var y = (j-1) * sh;
 	   ctx.beginPath();
        ctx.fillStyle = "white";
-       ctx.rect(x+1, y+1, sw-1, sh-1);
+       ctx.rect(x, y, sw, sh);
        ctx.fill();
 	   ctx.closePath();
        ctx.beginPath();
 	   ctx.strokeStyle = color;	   
-       ctx.rect(x+1, y+1, sw-1, sh-1);
+       ctx.rect(x+1, y+1, sw-2, sh-2);
 	   ctx.stroke();
 	   ctx.closePath();
        ctx.beginPath();	   
@@ -116,13 +101,11 @@ window.onload=init;
        var x = (i-1) * sw;
        var y = (j-1) * sh;
 	   ctx.beginPath();
-	   ctx.strokeStyle = "gray";
-       ctx.rect(x+1, y+1, sw - 1, sh - 1);
-	   ctx.stroke();
+       ctx.rect(x, y, sw, sh);
 	   ctx.fillStyle = "white";
 	   ctx.fill();
 	   ctx.closePath();
-    }  
+    }   
 
   function down(i,j)
   { nr=board[j-1][i-1];
