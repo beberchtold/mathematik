@@ -40,7 +40,7 @@ window.onload=init;
          board[6][8]=1; board[7][6]=3;
          board[8][2]=7; board[8][3]=6;  board[8][9]=8;
          zugnr=0;		 
-         message.innerHTML="Zugnummer: "+zugnr;
+         message.innerHTML="Zug 0         ";
          for (i=0;i<8;i++) farbe[i]="blue";
          farbe[3]="red";  farbe[4]="red";
          document.getElementById('Zug-').disabled = true;

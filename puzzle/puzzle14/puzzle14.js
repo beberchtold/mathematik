@@ -58,7 +58,7 @@ window.onload=init;
          for (i=0;i<8;i++) farbe[i]="blue";
          farbe[3]="red";  farbe[4]="red";
          zugnr=0;
-         message.innerHTML="           ";
+         message.innerHTML="Zug 0         ";
          document.getElementById('Zug-').disabled = true;
          zeichne();
     } 
@@ -237,7 +237,7 @@ window.onload=init;
   {   zugnr++; 
       message.innerHTML="Zug "+zugnr;
      if (fertig())
-       message.innerHTML="Gratuliere! "+zugnr+" Züge."; 
+       message.innerHTML="Gratuliere! "+zugnr+" Züge"; 
   }
 	
   function getMousePos(canvas, evt) {
