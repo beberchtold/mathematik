@@ -237,7 +237,7 @@ window.onload=init;
   {   zugnr++; 
       message.innerHTML="Zug "+zugnr;
      if (fertig())
-       message.innerHTML="Gratuliere! "+zugnr+" Züge"; 
+       message.innerHTML="Gratuliere!<br>"+zugnr+" Züge"; 
   }
 	
   function getMousePos(canvas, evt) {
