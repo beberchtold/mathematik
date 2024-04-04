@@ -198,17 +198,15 @@ window.onload=init;
                playPiece(p,square);	// Stück p wird gesetzt
 
                if (numused == 12) {  
-               	// puzzle ist gelöst oder wird unterbrochen
-                  if (!document.getElementById("haltlos").checked)  { 
-                    document.getElementById("stepBttn").disabled  = false;
-                    document.getElementById("goBttn").disabled  = false; 
-                    document.getElementById("pauseBttn").disabled  = true;
-                    document.getElementById("startBttn").disabled  = false;
-                    stopped = true;
-                    document.getElementById("label1").firstChild.data ="Klicken Sie auf Step oder Go";                             
-                  }
-                     anzahl++;
-                     document.getElementById("label").firstChild.data ="Lösung "+anzahl+" gefunden!";                   
+               	// puzzle ist gelöst oder wird unterbrochen 
+                  document.getElementById("stepBttn").disabled  = false;
+                  document.getElementById("goBttn").disabled  = false; 
+                  document.getElementById("pauseBttn").disabled  = true;
+                  document.getElementById("startBttn").disabled  = false;
+                  stopped = true;
+                  document.getElementById("label1").firstChild.data ="Klicken Sie auf Step oder Go";                             
+                  anzahl++;
+                  document.getElementById("label").firstChild.data ="Lösung "+anzahl+" gefunden!";                   
                }
            }
            else p++; 
