@@ -31,8 +31,9 @@ var aktsquare = new Array(13);
 var entfernt=false;
 var schrittweise=true;
 var timer;
-var delay=100;
+var delay=1;
 var Weiter=true;
+const infoStart="Klicken Sie auf Step oder Go oder wählen Sie eine andere Position von Kreuz";
 
 window.onload=init;
 
@@ -114,8 +115,10 @@ window.onload=init;
         pieces[59]=[12, 1,12,13,14];        
         pieces[60]=[12, 11,12,23,24];
         pieces[61]=[12, 1,2,13,14];
-        pieces[62]=[12, 1,12,13,24];    
-    }     	
+        pieces[62]=[12, 1,12,13,24];
+       Start();		
+    } 
+    	
 
     function zeichne() {  
         ctx.clearRect(0,0,W,B);
@@ -147,12 +150,11 @@ window.onload=init;
        document.getElementById("pauseBttn").onclick = function() {
            pause=true;
            document.getElementById("stepBttn").disabled  = false;
-           document.getElementById("goBttn").disabled  = false; 
-           document.getElementById("startBttn").disabled  = false;       
+           document.getElementById("goBttn").disabled  = false;       
        }
        document.getElementById("stepBttn").disabled  = false;
        document.getElementById("goBttn").disabled  = false;    
-       document.getElementById("label1").firstChild.data ="Klicken Sie auf Step oder Go";
+       document.getElementById("label1").firstChild.data =infoStart;
        document.getElementById("label").firstChild.data ="Anzahl Lösungen: 0";
        startpos = eval(document.getElementById("Startpos").value);
        switch(startpos)  {
@@ -202,9 +204,9 @@ window.onload=init;
                   document.getElementById("stepBttn").disabled  = false;
                   document.getElementById("goBttn").disabled  = false; 
                   document.getElementById("pauseBttn").disabled  = true;
-                  document.getElementById("startBttn").disabled  = false;
+				  document.getElementById("Startpos").disabled  = false;
                   stopped = true;
-                  document.getElementById("label1").firstChild.data ="Klicken Sie auf Step oder Go";                             
+                  document.getElementById("label1").firstChild.data =infoStart;                             
                   anzahl++;
                   document.getElementById("label").firstChild.data ="Lösung "+anzahl+" gefunden!";                   
                }
@@ -215,20 +217,23 @@ window.onload=init;
     function run() {      
       if ((!stopped) && (!pause) && Weiter) {
       	 Weiter=false;
-      	 if (numused==12 && success) success=false;      // nach gefundener Lösung: ohne Halt weiter
+      	 if (numused==12 && success) success=false;
          timer = setTimeout(function(){step()},delay); 
       }
     
-      if (pause) document.getElementById("label1").firstChild.data ="Pause. Für Weiter klicken Sie auf Step oder Go.";
-    
-      // Abbruch nach 100 gefundenen Lösungen
+      if (pause) {
+		document.getElementById("label1").firstChild.data ="Pause. Für Weiter klicken Sie auf Step oder Go. Oder wählen Sie eine andere Position von Kreuz";
+        document.getElementById("pauseBttn").disabled  = true;
+		document.getElementById("Startpos").disabled = false; 
+	  }
+      // Abbruch nach allen gefundenen Lösungen
       if (anzahl==endeanzahl) {
     	document.getElementById("label").firstChild.data ="Ende: Anzahl Lösungen: "+endeanzahl; 
         stopped=true;
-        document.getElementById("stepBttn").disabled  = false;
-        document.getElementById("goBttn").disabled  = false; 
+        document.getElementById("stepBttn").disabled  = true;
+        document.getElementById("goBttn").disabled  = true; 
         document.getElementById("pauseBttn").disabled  = true;
-        document.getElementById("startBttn").disabled  = false;
+		document.getElementById("Startpos").disabled = false;
       }  
     }
 
@@ -271,10 +276,10 @@ window.onload=init;
     }
 
     function doGo() {
-      document.getElementById("startBttn").disabled  = true;
       document.getElementById("pauseBttn").disabled  = false;
       document.getElementById("stepBttn").disabled  = true;
-      document.getElementById("goBttn").disabled  = true;      
+      document.getElementById("goBttn").disabled  = true;
+      document.getElementById("Startpos").disabled = true;      
       success=false;
       schrittweise=false;
       if (fromstart) {fromstart=false; success=true;}    // erstes Stück wird am Anfang mit Start() gesetzt
