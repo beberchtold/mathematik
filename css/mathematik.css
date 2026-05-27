@@ -1,0 +1,50 @@
+﻿body{background-color:#fff;font-size:clamp(1rem,1.5vw,1.7rem)}
+div.page{max-width:78rem;margin-left:0px;margin-right:auto;font-family:Arial,Verdana,Helvetica,Tahoma,Sans,sans-serif}
+div.flex{display:flex;align-items:center}
+.grid-container {
+  display: grid;
+  grid-template-columns: 32% 33% 32%;
+  gap:8px;
+}
+.grid-container > div {text-align: center;}
+div.am {width:12rem;border:1px solid;padding:3px;margin-left:10px;font-size:small}
+a:link{color:#00f;text-decoration:none}
+a:active{color:red;text-decoration:none}
+a:visited{color:#30f;text-decoration:none}
+a:hover{color:red;text-decoration:none}
+a.black{color:black}
+h1{font-size:130%;margin-top:0.5em;margin-bottom:0.5em}
+h2{font-size:120%;margin-top:0.4em;margin-bottom:0.4em}
+h3{font-size:110%;margin-top:0.3em;margin-bottom:0.3em}
+h4{font-size:100%;margin-top:0.2em;margin-bottom:0.2em}
+small{font-size:90%}
+ul{list-style-type:none;margin:0;padding:0}
+li{padding:5px 0px 5px 2px}
+input{font-size:100%}
+option{font-size:100%}
+input[type="button"] {min-width:3.75rem;min-height:1.1rem;border:1px solid;cursor:pointer;background-color:#E0FFFF}
+input[type=number] {width:4rem;min-height:1.1rem;font-size:105%;-moz-appearance:textfield;appearance:textfield}
+input::-webkit-outer-spin-button,input::-webkit-inner-spin-button {-webkit-appearance:none;margin:0;}
+input[type="submit"] {height:35px;font-size:130%;background-color:#E0FFFF;cursor:pointer;vertical-align:bottom}
+select{font-size:105%;background-color:#E0FFFF;border:1px solid}
+select:-ms-expand {display: none;}
+input[type="radio"]{width:1rem;height:1rem;cursor:pointer;}
+input[type="checkbox"] {width:1.2rem;height:1.2rem;vertical-align:middle}
+table.c{width:100%}
+td.c{vertical-align:top;text-align:center;background-color:#fff;padding:4px;}
+span.ol{font-size:1rem;text-decoration:overline}
+span.Haupt{margin-left:auto;margin-right:auto;font-family:"Times New Roman",Times,serif;font-weight:bold;font-size:180%;}
+img{border:0}
+img[src="/img/fractal_logo.svg"]{width:38px;height:33px;vertical-align:middle}
+img.H{width:100%;height:auto;min-width:80px;max-width:210px}
+img.center{display:block;margin-left:auto;margin-right:auto}
+img[src="/img/pdficon.png"]{width:20px;height:20px;vertical-align:middle}
+img[src="/img/help.png"]{width:25px;height:25px;cursor:pointer;vertical-align:middle}
+img[src="/img/menuicon.svg"]{width:28px;height:28px;cursor:pointer;vertical-align:middle}
+img[src="/img/closeicon.svg"]{width:24px;height:24px;cursor:pointer;vertical-align:middle}
+math{display:inline-block;font-size:110%}
+span.b{padding:8px}
+.group:after,[class*=colgroup]:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+.col{position:relative}
+.col:first-child{margin-top:0}
+@media all and (min-width:40rem){[class*=colgroup] .col{float:left;width:48%;margin-left:4%}[class*=colgroup] .col:nth-of-type(2n+1),.colspan-2+.col{clear:left;margin-left:0}.colgroup-1 .col{width:100%;float:none;margin-left:0}}
