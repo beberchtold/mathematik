@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="text-scale" content="scale">
+<title>N_Damenproblem</title>
+<meta name="Description" content="Spiele: N Damen-Problem, Backtracking-Algorithmus zur Lösung">
+<meta name="author" content="B.Berchtold">
+<link rel="stylesheet" href="/css/mathematik.css" TYPE="text/css">
+<script src="damen_min.js"></script>
+<style>canvas {width:100%;height:auto;min-width:308px;max-width:400px}</style>
+</head>
+
+<body>
+<div class="page">
+
+<div class="flex">
+<span id="menuicon"><a href="/menu.html">
+<img src="/img/menuicon.svg" title="Inhalt" alt="menu"></a></span>
+<span class="Haupt"><a class="black" href="/" title="Home"><img src="/img/fractal_logo.svg" alt="Logo">mathematik.ch</a></span>
+</div>
+
+<!-- CONTENT -->
+
+<h1>N Damen-Problem</h1>
+
+<p>Wie kann man 8 Damen so auf ein Schachbrett stellen, dass sie sich gegenseitig nicht schlagen können?<br>
+Gemäss Wikipedia wurde das Damenproblem erstmals vom bayrischen Schachmeister Max Bezzel (1824-1871) formuliert. 
+In der Berliner Schachzeitung fragte er 1848 nach der Anzahl der möglichen Lösungen. Als erster nannte 1850 Dr. Franz 
+Nauck in der 'Leipziger Illustrirten Zeitung' die korrekte Zahl 92. Auch Carl Friedrich <a href="/mathematiker/gauss.html">
+<b>Gauss</b></a> zeigte Interesse an dem Problem, weshalb es irrtümlich häufig auf ihn zurückgeführt wird.<br>
+Nauck verallgemeinerte die Problemstellung und fragte, auf wie viele verschiedene Arten N Damen auf einem N×N-Schachbrett
+ aufgestellt werden können.</p>
+ 
+<div class="colgroup-2">
+  <div class="col">
+    <canvas id="myCanvas" width="400" height="400"> Ihr Browser kann kein Canvas! </canvas>
+  </div>  
+
+  <div class="col">
+    <p>Lösung <span id="label">0</span><br>
+    Anzahl nichtkongruenter Lösungen: <b><span id="label1">0</span></b></p>
+    <ul>  
+      <li>Brettgrösse NxN 
+        <select title="N" id="Anz" style="width:3em" onchange="Startn()">
+        <option value="4">4</option>
+        <option value="5">5</option>
+	    <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8" selected>8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+	    <option value="11">11</option>
+        <option value="12">12</option>
+        </select>
+      </li>
+      <li>Verzögerung in Millisekunden 
+         <select title="Delay" id="Delay" style="width:4em">
+         <option value="1">1</option>
+         <option value="10">10</option>
+         <option value="100" selected>100</option>
+         <option value="500">500</option>
+         <option value="1000">1000</option>
+         </select>
+      </li>
+      <li><label><input type="checkbox" title="ohneHalt" id="ohneHalt"> Ohne Halt bei gefundener Lösung</label></li>
+      <li><input style="margin-right:30px;" type="button" id="start" value="Start" onclick="Start()">  
+        <input type="button" id="run_stop" value="Stop" disabled="disabled">
+      </li>
+    </ul>
+  
+    <div id="label2" style="font-weight:bold">Klicken Sie auf Start zum Suchen der ersten Lösung</div>
+    <br>
+    Das Javascript-Programm zeigt den Algorithmus zum Finden der Lösungen für N=4 bis N=12. Falls es eine Lösung gefunden hat, so 
+    checkt es diese Lösung auf Kongruenz mit allen vorhergehenden Lösungen.
+  </div>
+</div>
+
+<p>Das Programm zeigt alle Lösungen (Klick jeweils auf 'Go') bis die erste Dame in der ersten Zeile die Mitte 
+erreicht hat. Es gibt dann keine weiteren nichtkongruenten Lösungen mehr.<br>
+Sie können die Verzögerung des Programmablaufs jederzeit verändern.<br>
+Durch Ankreuzen der Checkbox 'Ohne Halt' beschleunigen Sie das Finden aller Lösungen.<br>
+Betrachtet man die nichtkongruenten Lösungen, so gibt es für das 8x8 Schachbrett nur 12 statt 92 Lösungen.<br> 
+1991 wurde von B. Bernhardsson eine explizite Lösung des N-Damenproblems für jede beliebige Schachbrettgrösse im ACM SIGART 
+Bulletin, Vol. 2, No. 7 angegeben.<br>
+Falls Sie für N=12 zu wenig Geduld haben: Dort gibt es 1787 nichtkongruente Lösungen!</p>
+
+<p>Interessant ist auch das <a href="/anwendungenmath/pento"><b>Pentominos-Problem</b></a></p>
+
+<!-- EOF: CONTENT -->
+
+<p><small>
+©1997 -
+2026 www.mathematik.ch</small> |<a href="/search/"><span class="b" title="Suche">&#x1F50D;</span></a></p>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="text-scale" content="scale">
+<meta name="Description" content="Magische Quadrate von Ramanujan: Generator">
+<meta name="author" content="B.Berchtold">
+<title>Magische Quadrate nach Ramanujan</title>
+<link rel="stylesheet" href="/css/mathematik.css" TYPE="text/css">
+<script src="magquadrat_min.js"></script>
+<style>
+input[type=number] {width:40px;height:40px;text-align:center;font-weight:bold}
+</style>
+</head>
+
+<body>
+<div class="page">
+<div class="flex">
+<span id="menuicon"><a href="/menu.html">
+<img src="/img/menuicon.svg" title="Inhalt" alt="menu"></a></span>
+<span class="Haupt"><a class="black" href="/" title="Home"><img src="/img/fractal_logo.svg" alt="Logo">mathematik.ch</a></span>
+</div>
+
+<!-- CONTENT -->
+
+<h1>Magische Quadrate nach Ramanujan</h1>
+
+<div class="colgroup-2">
+  <div class="col">
+<p>Hier sehen Sie das magische Quadrat von <a href="/mathematiker/ramanujan.html">Ramanujan</a></p>
+<img src="magischesQuadrat.png" width="320" height="160" alt="magQuadrat">
+<small>https://de.wikipedia.org/wiki/Datei:Magic_Square_Ramanujan.svg</small>
+</div>
+<div class="col">
+<p>Die Summe der Zahlen in den gleichfarbigen Feldern ist 139, die erste Zeile zeigt sein Geburtsdatum 22.12.1887.
+</p>
+</div>
+</div>
+
+<p>Sie können durch Klick auf 'Go' ein zufälliges magisches Quadrat (alle Zahlen verschieden) erzeugen.</p>
+<p>Oder Sie geben in die 4 Felder der ersten Zeile Zahlen zwischen 1 und 99 ein, z.B ein Geburtsdatum. 
+Es werden daher auch gleiche Zahlen zugelassen. Nach Klick auf 'Rechne' wird ein magisches Quadrat berechnet.</p>
+
+<p>Klick auf 'Ändere Zeilen 2 und 4' ändert die dort stehenden Zahlen, ohne dass die Eigenschaften des magischen Quadrates verloren gehen.</p>
+
+<noscript>Bei Ihrem Browser muss JavaScript aktiviert sein.</noscript>
+
+<div class="colgroup-2">
+  <div class="col">
+
+<div style="display:block;">
+  <input id="z1" type="number" min="1" max="99" value="" style="background-color:#00FF00" autofocus><input id="z2" type="number" min="1" max="99" value="" style="background-color:#FFFF00"><input id="z3" type="number" min="1" max="99" value="" style="background-color:#00FFFF"><input id="z4" type="number" min="1" max="99" value="" style="background-color:#00FFFF">
+  &nbsp; Summe = <span id="txt"></span>
+</div>
+<div style="display:block;">
+  <input id="z5" type="number" disabled><input id="z6" type="number" disabled><input id="z7" type="number" disabled><input id="z8" type="number" disabled>
+</div>
+<div style="display:block;">
+  <input id="z9" type="number" disabled><input id="z10" type="number" disabled><input id="z11" type="number" disabled><input id="z12" type="number" disabled>
+</div>
+<div style="display:block;">
+  <input id="z13" type="number" disabled><input id="z14" type="number" disabled><input id="z15" type="number" disabled><input id="z16" type="number" disabled>
+</div>
+
+  </div>
+
+  <div class="col">
+  <ul> 
+    <li><input type="button" value="Go" style="margin-right:15px;margin-top:10px;" onclick="generate()">Erzeugt Quadrat zufällig</li>
+    <li><input type="button" value="Rechne" style="width:5em;margin-right:15px" onclick="chkFormular()">mit Zahlen der Zeile 1</li>
+    <li>Ändere Zeilen <input type="button" style="width:5em" value="2 und 4" onclick="change()"></li>
+    <li>Färbung:<br>
+      <input type="button" style="width:6.3em" value="horizontal" onclick="horiz()">&nbsp;&nbsp;<input type="button" style="width:4.8em" value="vertikal" onclick="vertik()">
+      &nbsp;&nbsp;<input type="button" style="width:5.8em" value="diagonal" onclick="diag()"></li>
+    <li><input type="button" value="Ecke" onclick="eck()" style="margin-top:5px">&nbsp;&nbsp;<input type="button" value="Mitte" onclick="mitte()">&nbsp;&nbsp;
+      <input type="button" value="Li Re" onclick="lire()">&nbsp;&nbsp;<input type="button" value="weiss" onclick="entfaerbe()()"></li>
+    <li><input type="button" value="Reset" onclick="clearall()"></li>
+  </ul>
+  </div>
+</div>
+
+<!-- EOF: CONTENT -->
+
+<p><small>
+©1997 -
+2026 www.mathematik.ch</small> |<a href="/search/"><span class="b" title="Suche">&#x1F50D;</span></a></p>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="text-scale" content="scale">
+<title>Juliamengen und Mandelbrotmenge</title>
+<meta name="description" content="Juliamengen mit Javascript, Juliamengen mit Klick aus Mandelbrotmenge, Zusammenhang Juliamengen mit Mandelbrotmenge">
+<LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
+<script src="julia_min.js"></script>
+<style>
+li {margin:6px 0px 8px 0px;padding:0px}
+canvas {width:100%;height:auto;min-width:308px;max-width:500px}
+</style>
+</head>
+
+<body>
+<div class="page">
+
+<div class="flex">
+<span id="menuicon"><a href="/menu.html">
+<img src="/img/menuicon.svg" title="Inhalt" alt="menu"></a></span>
+<span class="Haupt"><a class="black" href="/" title="Home"><img src="/img/fractal_logo.svg" alt="Logo">mathematik.ch</a></span>
+</div>
+
+<!-- CONTENT -->
+
+<h1>Juliamengen und Mandelbrotmenge</h1>
+<p>
+Das Fraktal Juliamenge wird durch die komplexe Zahl c bestimmt:<br>
+	Realteil&nbsp;&nbsp; -2.2 &le; Re(c) &le; 1.0 &nbsp;&nbsp;
+	Imaginärteil&nbsp;&nbsp; -1.3 &le;Im(c) &le;1.3</p>
+	
+<div class="colgroup-2">
+  <div class="col">
+    <a href="#" onclick="mandel()"><canvas id="myCanvas" width="500" height="400">Ihr Browser kann kein Canvas!</canvas></a> 
+  </div>
+  <div  class="col">
+    <small><span id="cursorpos"> </span></small>
+	<p>Anzahl Iterationen n = <span id="N">100</span>
+	</p>
+    <ul>
+	 <li>Re(c) = <input id="rc" type="number" min=-2.2 max=1.0 value="-0.7" lang="en">&nbsp;&nbsp;
+     Im(c) = <input id="ic" type="number" min=-1.3 max=1.3 value="0.3" lang="en"></li>
+     <li>Klicken Sie auf <input type="button" value="Juliamenge" style="width:7.4em" onclick="einlesen()">, falls Sie Re(c) oder 
+	   Im(c) verändert haben.</li>
+     <li>n <input type="button" id="double" value="verdoppeln" style="width:6.8em;margin-right:20px" onclick="doppelt()">
+	   <input type="button" id="half" value="halbieren" style="width:6em" onclick="halb()"><br>
+	   Je grösser n, desto genauer wird i.a. das Fraktal gezeichnet</li>
+	 <li>c=i (Re(c)=0, Im(c)=1) zeigt das Logo von mathematik.ch: 
+	    <input type="button" value="Logo   " onclick="logo()"></li> 
+	</ul>
+	
+  </div>
+</div>
+
+<p><b>Nach Klick auf das Bild einer Juliamenge erscheint die Mandelbrotmenge.</b><br>
+Dort können Sie dann mit einem Klick die dazugehörige Juliamenge der Koordinaten des Klicks erzeugen.<br>
+Interessante Juliamengen erhalten Sie, wenn Sie am Rand der Mandelbrotmenge klicken.</p>
+<p><a href="./">Zur Info über Juliamengen und Mandelbrotmenge</a>.</p>	
+
+Das könnte Sie auch interessieren:
+ <ul>
+   <li><a href="../mandelbrot_u_pi/">Mandelbrotmenge und Pi</a></li>
+   <li><a href="../">Fraktale mit IFS (Chaosspiel und deterministisch)</a></li>
+ </ul>
+
+<!-- EOF: CONTENT -->
+
+<p><small>
+©1997 -
+2026 www.mathematik.ch</small> |<a href="/search/"><span class="b" title="Suche">&#x1F50D;</span></a></p>
+
+</div>
+</body>
+</html>

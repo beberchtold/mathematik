@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="text-scale" content="scale">
+<meta name="Description" content="Anwendungen der Mathematik, Wahrscheinlichkeit, 
+Approximation der Binomialverteilung durch die Normalverteilung">
+<title>Approximation Binomialverteilung mit Normalverteilung</title>
+<meta name="author" content="B.Berchtold">
+<link rel="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
+<script src="approximation_min.js"></script>
+<style>
+input[type=number] {width:3em}
+canvas {width:100%;height:auto;min-width:308px;max-width:500px}
+img[src="img/binomialvert.png"] {width:119px;height:54px;vertical-align:middle}
+img[src="img/approxnormalver.png"] {width:221px;height:65px;vertical-align:middle}
+</style>
+</head>
+
+<body>
+<div class="page">
+
+<div class="flex">
+<span id="menuicon"><a href="/menu.html">
+<img src="/img/menuicon.svg" title="Inhalt" alt="menu"></a></span>
+<span class="Haupt"><a class="black" href="/" title="Home"><img src="/img/fractal_logo.svg" alt="Logo">mathematik.ch</a></span>
+</div>
+
+<!-- CONTENT -->
+
+<h1>Approximation der Binomialverteilung (Ziehen mit Zurücklegen)</h1>
+
+<p>Die W'keit, aus einer Urne in einem Zug eine rote Kugel zu ziehen, sei p (0&lt;p&lt;1).<br>
+Dann ist die W'keit P gemäss Binomialverteilung, in n Zügen mit Zurücklegen mindestens a und höchstens b rote Kugeln zu ziehen<br>
+P = <img src="img/binomialvert.png" alt="binomialvert"> mit q = 1-p. P wird durch die Normalverteilung mit<br>
+P &approx;<img src="img/approxnormalver.png" alt="approximation durch normalverteilung">
+approximiert (Grenzwertsatz von de Moivre und Laplace).<br>
+Erwartungswert &mu; = n&sdot;p , Varianz &sigma;<sup>2</sup> = n&sdot;p&sdot;q. 
+Die Approximation ist zulässig, falls &sigma;<sup>2</sup>>9.</p>
+
+<p><b>Approximation n = <span id="N"></span>, p = <span id="P"></span></b><br>
+	&mu; = <span id="MU"></span>, &sigma;<sup>2</sup> = <span id="VAR"></span>,  
+	&sigma; = <span id="SIGMA"></span></p>
+	
+<div class="colgroup-2">
+  <div class="col">
+    <canvas id="myCanvas" width="400" height="200">Ihr Browser kann kein Canvas!</canvas>
+  </div>
+  
+  <div class="col">
+    <ul>
+      <li>Anzahl Züge (n&gt;19): <input id="n" type="number" min=20 style="margin-left:17px;" value="600"></li>
+      <li>Einzelw'keit p (0&lt;p&lt;1): <input id="p" style="width:50px;" value="1/6"></li>
+      <li>a: <input id="a" type="number" min=0 value="80">&nbsp;&nbsp;
+        b&ge;a: <input id="b" type="number" min=0 value="120"></li>
+      <li><input type="button" value="Go" onclick="rechne()"></li>  
+    </ul>
+    <h4>Resultate</h4>  <span id="message"></span>
+	P(<span id="Aminus"></span>&le;X&le;<span id="Bplus"></span>) &approx; <b><span id="RESNOR"></span></b><br><br>
+	Nach Binomialverteilung:<br>
+	P(<span id="A"></span>&le;X&le;<span id="B"></span>) = <span id="RESBI"></span>
+  </div>       
+</div>	
+
+<p>Beispiel:<br>
+Wie gross ist die Wahrscheinlichkeit, in 600 Würfen 
+mit einem Würfel zwischen 80 und 120 mal die &quot;6&quot; zu würfeln (Grenzen inklusive)?<br>  
+n = 600, p = 1/6, a = 80, b = 120.</p>
+
+<p>Zur <a href="binomialvert.html">Binomialverteilung mit Histogramm</a></p>
+<p>Zur <a href="normalvert.html">Normalverteilung</a></p>
+<p>Zur <a href="hypergeovert.html">Hypergeometrische Verteilung</a></p>
+
+<script>renderMathInElement(document.body);</script>
+
+<!-- EOF: CONTENT -->
+
+</div>
+</body>
+</html>

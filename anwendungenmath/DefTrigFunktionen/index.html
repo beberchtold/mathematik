@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="text-scale" content="scale">
+<title>Sinus, Cosinus und Tangens eines Winkels</title>
+<meta name="description" content="Sinus, Cosinus und Tangens eines Winkels">
+<meta name="keywords" content="Mathematik, Trigonometrie, Sinus, Cosinus, Tangens">
+<LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
+<script src="trigFkt_min.js"></script>
+<style>
+input[type="button"] {width:5.4em;margin:0px 15px 5px 0px}
+div.a{width:50%;min-width:310px;max-width:600px;margin-right:20px;float:left}
+@media(width<590px) {div.a{width:100%}}
+</style>
+</head>
+
+<body>
+<div class="page">
+
+<div class="flex">
+<span id="menuicon"><a href="/menu.html">
+<img src="/img/menuicon.svg" title="Inhalt" alt="menu"></a></span>
+<span class="Haupt"><a class="black" href="/" title="Home"><img src="/img/fractal_logo.svg" alt="Logo">mathematik.ch</a></span>
+</div>
+
+<!-- CONTENT -->
+
+<h1>Sinus, Cosinus und Tangens eines Winkels</h1>
+
+<p>Hier wird die Definition für den Sinus-, Cosinus- bzw. Tangenswert eines 
+Winkels graphisch dargestellt. Wählen Sie mit Hilfe der Buttons eine dieser trigonometrischen Funktionen. Im 
+linken Teil (Einheitskreis) lässt sich der voreingestellte Winkel durch Ziehen mit der Maus verändern. 
+Alternativ können Sie auch durch Klicken auf 'Step' den Winkel schrittweise verändern.<br> 
+Die gleichfarbig gekennzeichneten Strecken bzw. Kreisbogen sind jeweils gleich lang.</p>
+
+<div class="a" id="containercanvas">
+    <canvas id="myCanvas" width="400" height="240">Ihr Browser kann kein Canvas!</canvas>
+</div>
+
+<div>
+  <ul>
+    <li><input id="1" type="button" style="width:4.2em" value="Sinus" onclick="button1()">
+        <input id="2" type="button" value="Cosinus" onclick="button2()">
+        <input id="3" type="button" value="Tangens" onclick="button3()"></li>
+    <li><span style="color:red">Winkel = </span><span id="phi">   </span>°</li>
+    <li><span style="color:blue">Funktionswert = </span><span id="res">   </span></li>	
+    <li><input type="button" value="Step" onclick="dostep()"></li>
+  </ul>	
+</div>
+<div style="clear:both"></div>
+
+<p>Weiterführende Infos: <a href="../ZusammengesetzteTrigFunktionen/">Zusammengesetzte trig. Funktionen</a></p>
+
+<!-- EOF: CONTENT -->
+
+<p><small>
+©1997 -
+2026 www.mathematik.ch</small> |<a href="/search/"><span class="b" title="Suche">&#x1F50D;</span></a></p>
+
+</div>
+</body>
+</html>

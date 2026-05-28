@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="text-scale" content="scale">
+<title>Mandelbrotmenge und Pi</title>
+<meta name="description" content="Juliamengen mit Javascript, Juliamengen mit Klick aus Mandelbrotmenge, Zusammenhang Juliamengen mit Mandelbrotmenge">
+<LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
+<script src="iteration.js"></script>
+<style>
+li {margin:6px 0px 8px 0px;padding:0px}
+canvas {width:100%;height:auto;min-width:308px;max-width:500px}
+</style>
+</head>
+
+<body>
+<div class="page">
+
+<div class="flex">
+<span id="menuicon"><a href="/menu.html">
+<img src="/img/menuicon.svg" title="Inhalt" alt="menu"></a></span>
+<span class="Haupt"><a class="black" href="/" title="Home"><img src="/img/fractal_logo.svg" alt="Logo">mathematik.ch</a></span>
+</div>
+
+<!-- CONTENT -->
+
+<h1>Mandelbrotmenge und Pi</h1>
+<p>
+Mandelbrotmenge M: z<sub>1</sub> = 0. 
+Für jeden komplexen Parameter c wird die Zahlenfolge (z<sub>n</sub>) gemäss  
+&nbsp; z<sub>n+1</sub> = z<sub>n</sub><sup>2</sup> + c &nbsp; betrachtet.<br>
+M ist die Menge aller Parameter c, für welche die Folge (z<sub>n</sub>) <b>nicht</b> divergiert.</p>
+<p>Für das Auftreten der Ziffern von &pi; sind mehrere Wege möglich.<br>
+Horizontaler Weg: Man setzt c = 0.25 + &epsilon; (&epsilon;&gt;0)<br>
+Vertikaler Weg. Man setzt c = -0.75 + &epsilon;i<br>
+Diese beiden Zahlen c sind nicht in der Mandelbrotmenge. Die Folge z<sub>n</sub> divergiert daher.<br>
+Man zählt nun die Anzahl Iterationen N, bis |z<sub>n</sub>| > 2. Je kleiner &epsilon;, desto grösser wird N. 
+Bei N zeigt sich dann ein erstaunlicher Zusammenhang mit &pi; &approx; 3.141592653... </p>
+<p>Sie können die Resultate in den untenstehenden Tabellen überprüfen, indem Sie die Anzahl Iterationen (maximal 40 Millionen) 
+und Epsilon in die entsprechenden Felder eingeben und dann auf den gewünschten Button klicken.</p> 
+	
+<div class="colgroup-2">
+  <div class="col">
+    <img src="mandelbrot.png" width="460" height="323" style="width:100%;height:auto;max-width:500px" alt="Mandelbrot"> 
+  </div>
+  <div  class="col">
+    <ul>
+	 <li>Iterationen = <input id="N" type="number" min=1 max=40000000 value="30" style="width:4em;margin-right:20px">
+     &epsilon; = <input id="eps" type="number" min=1E-11 max=1 value="0.01" lang="en"></li>
+     <li><input type="button" value="c = 0.25+&epsilon;" style="width:7em;margin-right:60px" onclick="rechne_einviertel()">
+	   <input type="button" value="c = -0.75+&epsilon;i" style="width:7em" onclick="rechne()"><br><br>
+	   <b><span id="Titel"></span></b><br>
+	   <span id="RES1"></span><br>
+	   <span id="RES2"></span>
+	   <span id="RES3"></span>
+	   <span id="RES4"></span>
+     </li>
+	</ul> 
+  </div>
+</div>
+<br>
+<div class="colgroup-2">
+  <div class="col">
+    <b>Iterationen N, bis |z<sub>n</sub>|>2 für c = 0.25 + &epsilon;</b>
+	<table class="c">
+	<tr><td>&epsilon;</td><td>c</td><td>N</td><td>N &Sqrt;&epsilon;</td></tr>
+	<tr><td>1</td><td>1.25</td><td>2</td><td>2</td></tr>
+	<tr><td>0.1</td><td>0.35</td><td>8</td><td>2.53</td></tr>
+	<tr><td>0.01</td><td>0.26</td><td>30</td><td>3.0</td></tr>
+	<tr><td>0.001</td><td>0.251</td><td>97</td><td>3.067</td></tr>
+	<tr><td>0.0001</td><td>0.2501</td><td>312</td><td>3.12</td></tr>
+	<tr><td>0.00001</td><td>0.25001</td><td>991</td><td>3.1338</td></tr>
+	<tr><td>10<sup>-6</sup></td><td>0.250001</td><td>3140</td><td>3.140</td></tr>
+	<tr><td>10<sup>-7</sup></td><td>0.2500001</td><td>9933</td><td>3.14109</td></tr>
+	<tr><td>10<sup>-8</sup></td><td>0.25000001</td><td>31414</td><td>3.1414</td></tr>
+	<tr><td>10<sup>-9</sup></td><td>0.250000001</td><td>99344</td><td>3.14153</td></tr>
+	<tr><td>10<sup>-10</sup></td><td>0.2500000001</td><td>314157</td><td>3.14157</td></tr>
+	</table>
+	<br>
+  </div>
+  <div  class="col">
+    <b>Iterationen N, bis |z<sub>n</sub>|>2 für c = -0.75 + &epsilon;i</b>
+	<table class="c">
+	<tr><td>&epsilon;</td><td>c</td><td>N</td></tr>
+	<tr><td>1</td><td>-0.75+i</td><td>3</td></tr>
+	<tr><td>0.1</td><td>-0.75+0.1i</td><td>33</td></tr>
+	<tr><td>0.01</td><td>-0.75+0.01i</td><td>315</td></tr>
+	<tr><td>0.001</td><td>-0.75+0.001i</td><td>3143</td></tr>
+	<tr><td>0.0001</td><td>...</td><td>31417</td></tr>
+	<tr><td>0.00001</td><td>...</td><td>314160</td></tr>
+	<tr><td>10<sup>-6</sup></td><td>...</td><td>3141593</td></tr>
+	<tr><td>10<sup>-7</sup></td><td>...</td><td>31415927</td></tr>
+	</table>
+  </div>
+</div>
+
+<p><small>Für c = 0.25 + &epsilon; gilt:  N &Sqrt;&epsilon; &approx; &pi;<br>
+Einen Beweis dafür finden Sie auf https://aperiodical.com/2015/03/mandelbrot-pi/</small></p>
+
+<p><a href="../julia/">Zur Info über Juliamengen und Mandelbrotmenge</a>.</p>	
+
+<p><a href="../julia/julia.html"> Zu den Juliamengen</a></p>
+
+<!-- EOF: CONTENT -->
+
+<p><small>
+©1997 -
+2026 www.mathematik.ch</small> |<a href="/search/"><span class="b" title="Suche">&#x1F50D;</span></a></p>
+
+</div>
+</body>
+</html>

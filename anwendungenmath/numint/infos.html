@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="text-scale" content="scale">
+<meta name="Description" content="Information zum Programm Numerische Integration">
+<title>Information zum Programm Numerische Integration</title>
+<LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
+</head>
+<body>
+<div class="page">
+ <!--#include virtual="/header.info.inc" -->
+
+<!-- CONTENT -->
+
+<h1>Infos zum Programm Numerische Integration</h1>
+
+<p><b>Geben Sie eine Gleichung der Form <i>y = f</i>(<i>x</i>) ein.</b></p>
+  <ul>
+  <li>x: unabhängige Variable</li>
+  <li>+, -, *, /: plus, minus, mal, dividiert durch</li>
+  <li>(..): Klammer</li>
+  <li>abs(..): Absolutbetrag</li>
+  <li>sqrt(..): Quadratwurzel</li>
+  <li>exp(..): Exponentialfunktion mit Basis e, z.B. exp(x) ist e^x</li>
+  <li>pow(..,..): Exponentialfunktion mit bel. Basis, z.B. pow(2,x) ist 2^x</li>
+  <li>log(..) oder ln(...): natürlicher Logarithmus ln</li>
+  <li>sin(..): Sinus</li>
+  <li>cos(..): Cosinus</li>
+  <li>tan(..): Tangens</li>
+  <li>asin(..): Arcussinus</li>
+  <li>acos(..): Arcuscosinus</li>
+  <li>atan(..): Arcustangens</li>
+  <li>e: Eulersche Zahl e</li>
+  <li>pi: Kreiszahl pi
+  </ul>
+
+<p><b>Startwert x0 und Endwert xn für x (Integrationsgrenzen).</b></p>
+ f muss stetig sein auf [x0,xn].
+
+<p><b>Geben Sie die Anzahl Intervalle ein, in die Sie das Intervall [x0,xn] einteilen wollen.</b></p>
+  Um grosse Rechenzeiten zu vermeiden, beträgt die maximale Anzahl 200.
+  Normalerweise reichen 20 bis 50 für eine genügende Genauigkeit mit der Simpson-Methode.<br>
+  Die Simpson-Methode benötigt eine gerade Anzahl Intervalle.
+  
+<p><b>Wählen Sie die Graphik durch Klick auf den entsprechenden Button.</b></p>
+ Auf die Graphik der Simpson-Methode wird verzichtet.<br>
+Falls ein Syntaxfehler bei der Funktionsgleichung auftritt, so
+  erhalten Sie eine entsprechende Meldung. Sonst wird der Graph gezeichnet und
+  die Werte gemäss den Methoden Trapez, Simpson, linker Endpunkt usw. werden
+  ausgegeben. Der Graph wird gemäss der gewählten Methode schraffiert.
+  Nachdem der Graph gezeichnet ist, können Sie die Graphik durch Klick des entsprechenden Buttons ändern.
+<br>
+<br>Bei Division durch Null oder einer anderweitigen Operation, die keine Zahl
+  ergibt, wird das Symbol NaN ausgegeben (Definition für "Not a Number").
+<br>
+Über die Genauigkeit des Resultates wird nichts ausgesagt:<br>
+  Wählen Sie z.B. die Funktion f(x) = 1/x mit den Integrationsgrenzen 0.00001 und 1. Bei 200 Teilintervallen 
+  gibt die Methode nach Simpson den Wert 172.76776 aus. Der genaue Wert wäre 5*ln(10) = 11.512925...<br>
+  Insbesondere prüft das Programm auch nicht, ob die Funktion im angegebenen Intervall stetig ist!
+
+<p><script>if (window.opener==undefined) document.write("<a href=\"./\">Zum Programm Numerische Integration</a>")</script></p>
+
+<!-- EOF: CONTENT -->
+
+</div>
+</body>
+</html>

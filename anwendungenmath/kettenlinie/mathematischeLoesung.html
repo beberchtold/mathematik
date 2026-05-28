@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="text-scale" content="scale">
+<meta name="description" content="Die Kettenlinie: mathematische Lösung">
+<title>Die mathematische Lösung</title>
+<link rel="stylesheet" href="/css/mathematik.css" TYPE="text/css">
+<link rel="stylesheet" href="/katex/katex.min.css" TYPE="text/css">
+<script src="/katex/katex.min.js"></script>
+<script src="/katex/contrib/auto-render.min.js"></script>
+<style>
+.katex {font-size: 1.1em;font-family:sf}
+</style>
+</head>
+
+<body>
+<div class="page">
+<div class="flex">
+<span id="menuicon"><a href="/menu.html">
+<img src="/img/menuicon.svg" title="Inhalt" alt="menu"></a></span>
+<span class="Haupt"><a class="black" href="/" title="Home"><img src="/img/fractal_logo.svg" alt="Logo">mathematik.ch</a></span>
+</div>
+
+<!-- CONTENT -->
+
+<h1>Mathematische Lösung</h1>
+<p>Mit Hilfe des <a href="modell.html"><b>physikalischen Modells</b></a> gelingt es, eine Beziehung zwischen den infinitesimalen 
+Grössen aufzustellen.</p>
+<img src="img/kraefte.jpe" width="300" height="138" alt="Kraefte">
+<p>Zunächst sinkt die y-Koordinate der Kraft proportional zur durchlaufenen Kettenlänge s. Wir haben also</p>
+K<sub>y</sub> = c + as
+<p>Dabei ist -a das Gewicht der Kette pro 
+Längeneinheit. Die Konstante c bestimmt zusammen mit dem konstanten y-Anteil des 
+Kraftvektors die Kraft im rechten Aufhängepunkt.</p>
+<p>Wir setzen &nbsp; K<sub>x</sub> = d</p>
+<p>Weil die Kettenkurve und der Kraftvektor die gleiche Steigung haben, ergibt sich für die Gleichung y(x) der Kurve</p>
+y'(x) = \(\sf\dfrac{\sf dy}{\sf dx} = \dfrac{\sf c + as}{\sf d}\)
+<p>Differenziert man auf beiden Seiten nach x, so erhält man mit einer positiven Konstanten k=a/d</p>
+y''(x) = \(\sf\dfrac{\sf d^2y}{\sf dx^2} = k\dfrac{\sf ds}{\sf dx}\)
+<p>Wegen ds = \(\sf\sqrt{dx^2+dy^2}\) 
+erhält man schliesslich die Differentialgleichung (in moderner Form geschrieben)</p>
+y''(x) = k\(\sf\sqrt{1+y'(x)^2}\)
+<p>Die Lösung dieser Differentialgleichung für u=y' erfolgt mit Hilfe der Methode der Variablentrennung. Diese 
+Methode taucht übrigens bei Bernoulli zum ersten Mal auf. Er schreibt (mit u=y')</p>
+\(\sf\dfrac{1}{\sf\sqrt{1+u^2}}\) du = kdx
+<p>Dann integriert er auf beiden Seiten mit den Worten <CITE>"ergo &amp; horum integralia aequantur&quot;</CITE>, wovon 
+unser Wort <em>Integral</em> kommt.</p>
+<p>Es kommt hier nicht darauf an, diese Lösung analytisch zu finden. Man muss lediglich nachprüfen, dass die Funktionen 
+mit Gleichung<br>
+<p><b>y(x) = A + \(\sf\bf\dfrac{1}{\sf k}\) cosh(k(x - B))</b><br><br> die Differentialgleichung in der Tat erfüllen.</p>
+<p>Dabei liegt in x=B der tiefste Punkt (Scheitel) der Kette. Verschiebt man den Graph so, dass der Scheitel in (0,0) liegt, so sieht man, 
+dass die Kettenkurve durch lineares Skalieren in der Tat in eine Kettenkurve mit anderer Konstante k übergeht. Sie erfüllt also unsere 
+geforderten <a href="geometrie.html"><b>geometrischen Eigenschaften</b></a>.</p>
+
+<p><a href="./"><small>zum Inhaltsverzeichnis Kettenlinie</small></a></p>
+
+<script>
+   renderMathInElement(document.body);
+</script>
+
+<!-- EOF: CONTENT -->
+
+<p><small>
+©1997 -
+2026 www.mathematik.ch</small> |<a href="/search/"><span class="b" title="Suche">&#x1F50D;</span></a></p>
+
+</div>
+</body>
+</html>

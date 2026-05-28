@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="text-scale" content="scale">
+<meta name="Description" content="Statistik: Multiple Regression">
+<meta name="format-detection" content="telephone=no">
+<title>Multiple Regression</title>
+<meta name="Author" content="Bernhard Berchtold, https://www.mathematik.ch">
+<link rel="stylesheet" href="/css/mathematik.css" TYPE="text/css">
+<script src="multipleRegression_min.js"></script>
+<style>input {width:1.7em;margin-right:5px}</style>
+</head>
+
+<body>
+<div class="page">
+<div class="flex">
+<span id="menuicon"><a href="/menu.html">
+<img src="/img/menuicon.svg" title="Inhalt" alt="menu"></a></span>
+<span class="Haupt"><a class="black" href="/" title="Home"><img src="/img/fractal_logo.svg" alt="Logo">mathematik.ch</a></span>
+</div>
+
+<!-- CONTENT -->
+
+<h1>Lineare multiple Regression und Korrelation</h1>
+
+<p>Geben Sie die Koordinaten ( x<sub>i</sub> / y<sub>i</sub> / z<sub>i</sub>)  von maximal 30 Punkten in die Felder ein.<br>
+Das Formular berechnet dann nach Klick auf 'Berechne' die Koeffizienten a, b und d in der Gleichung  der 
+<b>Regressionsebene E: z = a*x + b*y + d  </b> auf zwei Arten:<br><br>
+1. Die Summe der Quadrate der z-Differenzen wird minimal, d.h.
+<img src="summe_quadrate_residuen.gif" style="vertical-align:middle" width="211" height="53" alt="Summe Quadrate Residuen"> ( 3 &le; n &le; 30)<br>
+2. Die Summe der Quadrate der Abstände der Punkte wird minimal, d.h. 
+<img src="summe_quadrate_abstaende.gif" style="vertical-align:middle" width="182" height="53" alt="Summe Quadrate Abstände"><br> minimal unter der
+ Bedingung a<sup>2</sup> + b<sup>2</sup> + c<sup>2</sup> = 1 &nbsp;&nbsp; ( 5 &le; n &le; 30)</p>
+<br>
+<div class="colgroup-2">
+ <div class="col">
+  <div>
+    <ul>
+      <li>01 <input value=-6 id="x1"> <input value=-1 id="y1"> <input value=1 id="z1">
+	  02 <input value=-4 id="x2"> <input value=1 id="y2"> <input value=1 id="z2"></li>
+	  <li>03 <input value=0 id="x3"> <input value=7 id="y3"> <input value=2 id="z3">
+	  04 <input value=1 id="x4"> <input value=5 id="y4"> <input value=3 id="z4"></li>
+	  <li>05 <input value=-3 id="x5"> <input value=-1 id="y5"> <input value=2 id="z5">
+	  06 <input id="x6"> <input id="y6"> <input id="z6"></li>
+	  <li>07 <input id="x7"> <input id="y7"> <input id="z7">
+	  08 <input id="x8"> <input id="y8"> <input id="z8"></li>
+	  <li>09 <input id="x9"> <input id="y9"> <input id="z9">
+	  10 <input id="x10"> <input id="y10"> <input id="z10"></li>
+      <li>11 <input id="x11"> <input id="y11"> <input id="z11">
+	  12 <input id="x12"> <input id="y12"> <input id="z12"></li>
+	  <li>13 <input id="x13"> <input id="y13"> <input id="z13">
+	  14 <input id="x14"> <input id="y14"> <input id="z14"></li>
+	  <li>15 <input id="x15"> <input id="y15"> <input id="z15">
+	  16 <input id="x16"> <input id="y16"> <input id="z16"></li>
+	  <li>17 <input id="x17"> <input id="y17"> <input id="z17">
+	  18 <input id="x18"> <input id="y18"> <input id="z18"></li>
+	  <li>19 <input id="x19"> <input id="y19"> <input id="z19">
+	  20 <input id="x20"> <input id="y20"> <input id="z20"></li>
+	  <li>21 <input id="x21"> <input id="y21"> <input id="z21">
+	  22 <input id="x22"> <input id="y22"> <input id="z22"></li>
+	  <li>23 <input id="x23"> <input id="y23"> <input id="z23">
+	  24 <input id="x24"> <input id="y24"> <input id="z24"></li>
+      <li>25 <input id="x25"> <input id="y25"> <input id="z25">  
+      26 <input id="x26"> <input id="y26"> <input id="z26"></li>	  
+      <li>27 <input id="x27"> <input id="y27"> <input id="z27">	  
+      28 <input id="x28"> <input id="y28"> <input id="z28"></li>	  
+	  <li>29 <input id="x29"> <input id="y29"> <input id="z29">
+      30 <input id="x30"> <input id="y30"> <input id="z30"></li>
+	  </ul>
+  </div></div>
+  <div class="col">
+  <div>
+  <ul>
+    <li><input type="button" value="Berechne " style="width:6em" onclick="rechne()"></li>
+  </ul>
+  <h2>Resultate für n = <span id="N"></span></h2>
+  <p>Mittelwerte: <span class="ol">x</span> = <span id="xquer"></span>, <span class="ol">y</span> = <span id="yquer"></span>, <span class="ol">z</span> = <span id="zquer"></span></p>
+  <h3>1. Summe der Quadrate der z-Differenzen minimal</h3>
+    <p><b><span id="Ebgl"></span></b><br><br>
+	Summe der Quadrate der z-Differenzen = <span id="sumquaz"></span><br><br>
+    Bestimmtheitsmass R<sup>2</sup> = <span id="r2"></span><br>
+	Je näher R<sup>2</sup> bei 1, desto besser die Korrelation.<br><br>
+	(Summe der Quadrate der Abstände der Punkte = <span id="sumqua"></span>)</p>
+	
+  <h3>2. Summe der Quadrate der Abstände der Punkte minimal</h3>
+     <p><b><span id="Ebgl2"></span></b><br><br>
+	 Summe der Quadrate der Abstände der Punkte = <span id="sumqua2"></span><br><br>
+	 <span id="Warnung"></span>
+	 (Summe der Quadrate der z-Differenzen = <span id="sumquaz2"></span>)</p>
+  </div>
+  </div>
+ </div> 
+
+<!-- EOF: CONTENT -->
+
+<p><small>
+©1997 -
+2026 www.mathematik.ch</small> |<a href="/search/"><span class="b" title="Suche">&#x1F50D;</span></a></p>
+
+</div>
+</body>
+</html>

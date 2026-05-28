@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="text-scale" content="scale">
+<meta name="Description" content="Wahrscheinlichkeit: Binomialverteilung mit Histogramm">
+<title>Binomialverteilung (Ziehen mit Zurücklegen)</title>
+<meta name="author" content="B.Berchtold">
+<link rel="stylesheet" href="/css/mathematik.css" TYPE="text/css">
+<script src="binomialvert_min.js"></script>
+<style>
+input[type=number] {width:3em}
+canvas {width:100%;height:auto;min-width:308px;max-width:500px}
+img[src="img/binomialvert.png"] {width:119px;height:54px;vertical-align:middle}
+</style>
+</head>
+
+<body>
+<div class="page">
+
+<div class="flex">
+<span id="menuicon"><a href="/menu.html">
+<img src="/img/menuicon.svg" title="Inhalt" alt="menu"></a></span>
+<span class="Haupt"><a class="black" href="/" title="Home"><img src="/img/fractal_logo.svg" alt="Logo">mathematik.ch</a></span>
+</div>
+
+<!-- CONTENT -->
+
+<h1>Binomialverteilung (Ziehen mit Zurücklegen)</h1>
+
+<p>Die Wahrscheinlichkeit, aus einer Urne in <b>einem</b> Zug eine rote Kugel zu ziehen, sei p (0 &le; p &le; 1).<br>
+Dann ist die Wahrscheinlichkeit P, in n Zügen mit Zurücklegen mindestens a und höchstens b rote Kugeln zu ziehen<br>
+P = <img src="img/binomialvert.png" alt="binomialvert"> mit q = 1-p<br>
+Erwartungswert &mu; = n&sdot;p, Varianz &sigma;<sup>2</sup> = n&sdot;p&sdot;q, Standardweichung &sigma;</p>
+
+<p><b>Binomialverteilung n = <span id="N"></span>, p = <span id="P"></span></b><br>
+	&mu; = <span id="MU"></span>, &sigma;<sup>2</sup> = <span id="VAR"></span>,  
+	&sigma; = <span id="SIGMA"></span></p>
+
+<div class="colgroup-2">
+  <div class="col">
+    <canvas id="myCanvas" width="400" height="200">Ihr Browser kann kein Canvas!</canvas>
+  </div>
+  <div class="col">
+    <ul>
+      <li>Anzahl Züge (n&lt;1001): <input id="n" type="number" min=1 max=1000 value="12"></li>
+      <li>Einzelw'keit p (0&le;p&le;1): <input id="p" style="width:50px;" value="1/6"></li>
+      <li>Untere Grenze a: <input id="a" type="number" min=0 style="margin-left:36px;" value="2"></li>
+      <li>Obere Grenze b (b&ge;a): <input id="b" type="number" min=0 value="4"></li>
+      <li><input type="button" value="Go" onclick="rechne()"></li>  
+    </ul>
+	<br>
+    <b>Resultat</b>: 
+	P(<span id="A"></span>&le;X&le;<span id="B"></span>) = <b><span id="RESBI"></span></b>
+  </div>       
+</div>
+
+<p>Beispiel:<br>
+Wie gross ist die Wahrscheinlichkeit, in 12 Würfen mit einem idealen Würfel mindestens zweimal und 
+ höchstens viermal eine "6" zu würfeln?<br>
+ n = 12, p = 1/6, a = 2, b= 4.</p>
+
+<p><a href="approx_bin_norm.html">Approximation der Binomialverteilung durch Normalverteilung</a></p>
+<p><a href="hypotest/">Testen von Hypothesen mit Binomialverteilung</a></p>
+<p><a href="hypergeovert.html">Hypergeometrische Verteilung</a></p>
+<p><a href="normalvert.html">Normalverteilung</a></p>
+
+<!-- EOF: CONTENT -->
+
+<p><small>
+©1997 -
+2026 www.mathematik.ch</small> |<a href="/search/"><span class="b" title="Suche">&#x1F50D;</span></a></p>
+
+</div>
+</body>
+</html>

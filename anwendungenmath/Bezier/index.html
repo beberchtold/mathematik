@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="text-scale" content="scale">
+<meta NAME="Description" CONTENT="Bézierkurve erzeugen, Bezierkurve, Bézier-Kurve, Bezier-Kurve"> 
+<title>Bézierkurven</title>
+<LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
+<script src="bezier_min.js"></script>
+<style>
+input[type=number] {width:2.5em;margin-right:15px;margin-bottom:5px}
+input[type=button] {width:6em;margin-bottom:5px}
+canvas {width:100%;height:auto;min-width:308px;max-width:500px}
+</style>
+</head>
+
+<body>
+<div class="page">
+
+<div class="flex">
+<span id="menuicon"><a href="/menu.html">
+<img src="/img/menuicon.svg" title="Inhalt" alt="menu"></a></span>
+<span class="Haupt"><a class="black" href="/" title="Home"><img src="/img/fractal_logo.svg" alt="Logo">mathematik.ch</a></span>
+</div>
+
+<!-- CONTENT -->
+
+<h1>Bézierkurven</h1>
+<p>
+Nach Klick auf 'Zufallsfigur' bestimmt der Computer Zufallspunkte, Zufallsfarbe und zeichnet die Kurve von P0 zu P3.<br>
+Klick auf '2 Kurven' zeichnet dann eine zweite Bézierkurve von P3 nach P0, so dass eine <b>geschlossene</b> Kurve entsteht.<br>
+Sie können die vier Punkte mit Mausklick eingeben (Reihenfolge P0, P1, P2 und P3). Nach der Eingabe von P3 wird 
+die Bézierkurve von P0 nach P3 gezeichnet.<br>
+Alternativ können Sie die Koordinaten der Punkte auch in die entsprechenden Felder eingeben.<br>
+Der Zeichenbereich liegt für x- und y-Werte zwischen 0 und 10.<br>
+</p>
+
+<div class="colgroup-2">
+  <div class="col">
+       <canvas id="myCanvas" width="400" height="400">Ihr Browser kann kein Canvas!</canvas>
+  </div>
+  
+  <div class="col">
+	<ul>
+      <li><input type="button" style="width:7em" value="Zufallsfigur" onclick="Zufallsfigur()"> </li>
+      <li>x0 <input id="x0" type="number" min=0 max=10 value="5" lang="en">
+	      y0 <input id="y0" type="number" min=0 max=10 value="2" lang="en"></li> 	
+      <li>x1 <input id="x1" type="number" min=0 max=10 value="5" lang="en">
+	      y1 <input id="y1" type="number" min=0 max=10 value="7" lang="en"></li>
+	  <li>x2 <input id="x2" type="number" min=0 max=10 value="1" lang="en">
+          y2 <input id="y2" type="number" min=0 max=10 value="3" lang="en"></li>
+	  <li>x3 <input id="x3" type="number" min=0 max=10 value="2" lang="en">
+          y3 <input id="y3" type="number" min=0 max=10 value="7" lang="en"></li>
+      <li><input type="button" style="margin-right:10px" value="P0 zu P3" onclick="eineKurve()"> 		  
+      <input type="button" value="2 Kurven" onclick="zeichne()"></li>
+    </ul>	  
+  </div>
+        
+</div>	  
+
+Eine (2-dim) Bézierkurve ist durch vier Punkte bestimmt:<br>
+Anfangspunkt P0(x<sub>0</sub>/y<sub>0</sub>), Endpunkt P3(x<sub>3</sub>/y<sub>3</sub>); der Punkt 
+P1(x<sub>1</sub>/y<sub>1</sub>) bestimmt die
+Tangente im Anfangspunkt, der Punkt P2(x<sub>2</sub>/y<sub>2</sub>) die Tangente im Endpunkt:<br>
+<img src="bezier.png" width="182" height="127" alt="bezier"><br>
+Die geschlossene Kurve entsteht, indem entweder P3 = P0 gewählt oder wie hier (mit Klick auf '2 Kurven'), 
+eine zweite Bézierkurve mit Anfangspunkt P3 und Endpunkt P0 gezeichnet wird, während die Tangenten beibehalten werden.
+
+<!-- EOF: CONTENT -->
+
+<p><small>
+©1997 -
+2026 www.mathematik.ch</small> |<a href="/search/"><span class="b" title="Suche">&#x1F50D;</span></a></p>
+
+</div>
+</body>
+</html>

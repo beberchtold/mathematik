@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="text-scale" content="scale">
+<TITLE>Türme von Hanoi</title>
+<meta NAME="Description" CONTENT="Türme von Hanoi, mit html5 und Javascript">
+<meta name="author" content="B.Berchtold">
+<LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
+<script src="hanoi_min.js"></script>
+<style>
+canvas {width:100%;height:auto;min-width:308px;max-width:500px}
+</style>
+</head>
+
+<body>
+<div class="page">
+<div class="flex">
+<span id="menuicon"><a href="/menu.html">
+<img src="/img/menuicon.svg" title="Inhalt" alt="menu"></a></span>
+<span class="Haupt"><a class="black" href="/" title="Home"><img src="/img/fractal_logo.svg" alt="Logo">mathematik.ch</a></span>
+</div>
+
+<!-- CONTENT -->
+
+<h1>Türme von Hanoi</h1>
+  
+<p>1883 erfand der französische Mathematiker Edouard Lucas das Problem der Türme von Hanoi.</p>
+<p>Ziel des Spieles: Alle Scheiben vom Turm ganz links sollen auf den Turm ganz rechts bewegt werden.<br>
+Bedingungen:<br>
+1. Sie können nur eine Scheibe pro Zug verschieben.<br>
+2. Eine grössere Scheibe darf nie auf einer kleineren Scheibe liegen.</p>
+<p>Zum Verschieben einer Scheibe:<br>
+Klicken Sie zuerst auf den Turm, von dem die oberste Scheibe entfernt werden soll.<br>
+Klicken Sie dann auf den Turm, auf den die Scheibe platziert werden soll.</p>
+<p>Falls Sie Ihre Zeit (in Sekunden) messen wollen, so aktivieren Sie die Checkbox 'mit Stoppuhr'. 
+Bei Ihrem <b>ersten</b> Zug wird die Uhr dann gestartet, beim Erreichen des Zieles gestoppt.</p>
+<ul>
+<li>Anzahl Scheiben (3 bis 10): <select id="AnzS" style="width:3em;" onChange="doClear()">
+    <option value="3" selected>3</option>
+	<option value="4">4</option>
+    <option value="5">5</option>
+	<option value="6">6</option>
+    <option value="7">7</option>
+    <option value="8">8</option>
+    <option value="9">9</option>
+    <option value="10">10</option>
+  </select>
+</li>
+</ul>
+<div class="colgroup-2">
+  <div class="col"> 
+     <canvas id="myCanvas" width="450" height="250">Ihr Browser kann kein Canvas!</canvas>
+  </div>
+  <div class="col">	
+	<br>Anzahl Züge: <span id="Anz"> 0 </span>
+	<p><b><span id="message">  </span></b> <b><span id="message2">  </span></b></p>
+	<ul>
+	  <li><label><input type="checkbox" id="Stoppuhr"> mit Stoppuhr</label></li>
+	  <li>Stoppuhr: &nbsp;&nbsp;
+	    <span id="tracker">0.0</span><input type="button" id="resetUhr" value="Reset Uhr" style="width:6em;margin-left:30px;" onclick="resetUhr()">
+	  </li>
+	  <li><input type="button" id="reset" value="Reset " onclick="doClear()"> Stellt Anfangszustand her</li>
+	  <li><input type="button" id="solut" value="Lösung  " onclick="solution()">
+	     <input type="button" id="Zug+" value="Zug+" onclick="zugplus()" style="margin-left:30px">
+	  </li>
+    </ul>	  
+  </div>      
+</div>	   
+
+<div style="display:none">
+  <img id="boardpng" src="board.png" width="450" height="250" style="width:100%;max-width:450px;height:auto" alt="none">
+</div>
+
+<!-- EOF: CONTENT -->
+
+<p><small>
+©1997 -
+2026 www.mathematik.ch</small> |<a href="/search/"><span class="b" title="Suche">&#x1F50D;</span></a></p>
+
+</div>
+</body>
+</html>

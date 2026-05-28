@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="text-scale" content="scale">
+<meta name="Description" content="Programm zur Nullstelle mit Newton-Methode">
+<meta name="author" content="B.Berchtold">
+<title>Nullstelle mit Newton-Methode</title>
+<LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
+<script src="newton_min.js"></script>
+<script src="/script/infos.js" defer></script>
+<style>
+input[type=button] {margin:3px 25px 5px 0px}
+canvas {width:100%;height:auto;min-width:308px;max-width:500px}
+span.red {color:red;font-weight:bold}
+span.green {color:#008000;font-weight:bold}
+span.blue {color:blue;font-weight:bold}
+</style>
+</head>
+
+<body>
+<div class="page">
+<div class="flex">
+<span id="menuicon"><a href="/menu.html">
+<img src="/img/menuicon.svg" title="Inhalt" alt="menu"></a></span>
+<span class="Haupt"><a class="black" href="/" title="Home"><img src="/img/fractal_logo.svg" alt="Logo">mathematik.ch</a></span>
+</div>
+
+<!-- CONTENT -->
+
+<h1>Nullstelle mit Newton Methode</h1>
+
+<p>Gesucht ist eine Nullstelle der Funktion mit Gleichung y = f(x).</p>
+
+<div class="colgroup-2">
+  <div class="col">
+     <canvas id="myCanvas" width="400" height="400">Ihr Browser kann kein Canvas!</canvas>
+  </div>
+  
+  <div class="col">
+    <ul>
+	 <li><span class="green">y&nbsp;=&nbsp;</span>
+	   <input id="f" type="text" value="pow(x,4)-3*pow(x,3)+2*x+1" style="width:14.5em;margin-bottom:5px"> 
+	   <img src="/img/help.png" alt="Hilfe" onclick="infos('info_newton.html','Infofenster',520,600)"></li>
+     <li>Linke: <input id="Xmin" style="width:3em;margin-right:15px" type="number" value="-0.2" lang="en">
+         Rechte Grenze: <input id="Xmax" style="width:3em" type="number" value="3.1" lang="en"></li>
+     <li>Startwert x0: <input id="x0" style="margin-bottom:10px" type="number" value="0.8" lang="en"></li>
+     <li>Stop falls |x(n+1)-xn| &le; <input id="eps" type="number" value="1E-7" lang="en"></li>
+     <li>Max Iterationen: <input id="max" type="number" min="1" max="100" value="50"></li> 
+    <li><input type="button" value="Reset" onclick="reset()">
+	   <input id="Run" type="button" value="Run" onclick="run()">
+	   <input id="Step" type="button" value="Step" onclick="dostep()">
+	   </li>
+	</ul>   
+    <p>
+	<span id="xn" class="red"> </span><br>
+	<span id="yn"> </span><br>
+    <span id="abl"> </span></p>
+    <p><span id="xneu" class="blue"> </span><br>
+	<span id="yneu"> </span></p>
+	<p><span id="message"> </span></p>	
+  </div>
+        
+</div>
+
+<p><a HREF="iteration.html">Zu Nullstelle mit allgemeiner Iteration</a></p>
+<p><a HREF="schachtelung.html">Zu Nullstelle mit Intervallschachtelung</a></p>
+
+<!-- EOF: CONTENT -->
+
+<p><small>
+©1997 -
+2026 www.mathematik.ch</small> |<a href="/search/"><span class="b" title="Suche">&#x1F50D;</span></a></p>
+
+</div>
+</body>
+</html>
+

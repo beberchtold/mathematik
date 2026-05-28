@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="text-scale" content="scale">
+<meta NAME="Description" CONTENT="Archimedische Körper,halbreguläre Körper,Verhältnis Aussenradius Umkugel zu Kantenlänge">
+<title>Archimedische Körper</title>
+<LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
+<link rel="stylesheet" href="/katex/katex.min.css" TYPE="text/css">
+<script src="/katex/katex.min.js"></script>
+<script src="/katex/contrib/auto-render.min.js"></script>
+<style>
+div.a {width:280px;height:190px;margin-right:15px;float:left}
+ol {padding-left:25px}
+li {padding:5px 0px 5px 10px}
+.katex {font-size: 1.1em;font-family:sf}
+</style>
+</head>
+
+<body>
+<div class="page">
+
+<div class="flex">
+<span id="menuicon"><a href="/menu.html">
+<img src="/img/menuicon.svg" title="Inhalt" alt="menu"></a></span>
+<span class="Haupt"><a class="black" href="/" title="Home"><img src="/img/fractal_logo.svg" alt="Logo">mathematik.ch</a></span>
+</div>
+
+<!-- CONTENT -->
+
+<h1>Archimedische Körper</h1>
+
+<p><b>Definition</b>: Ein Polyeder heisst <b>halbregulär</b> oder <b>semiregulär</b>, wenn alle seine Oberflächen aus 
+regelmässigen Vielecken (eventuell unterschiedlicher Eckenzahl) bestehen, und jede Ecke des Polyeders durch eine seiner 
+Symmetrieoperationen auf jede andere Ecke abgebildet werden kann. Es muss sich also um ein <b>uniformes</b> Polyeder handeln.</p>
+<p>Bereits Platon soll neben den nach ihm benannten regulären Polyedern das <b>Kuboktaeder</b> gekannt haben. Seit 
+<a href="/mathematiker/archimedes.html"><b>Archimedes</b></a>, dessen Arbeit darüber jedoch nicht erhalten geblieben ist, weiss 
+man, dass es neben den Platonischen Körpern (und unendlich vielen Prismen und Antiprismen) noch genau <b>dreizehn</b> halbreguläre 
+konvexe Polyeder gibt, die üblicherweise als <b>Archimedische Körper</b> bezeichnet werden:</p>
+
+ <div class="a">
+  1. <b>Abgeschrägtes Hexaeder</b> (Cubus simus) (3,3,3,3,4)<br>
+  <img width=120 height=120 src="img_ArchimedischeKoerper/arch1.webp" alt="arch1">
+ </div>
+ <div class="a">
+  2. <b>Kuboktaeder</b> (3,4,3,4)<br>
+  <img width=120 height=120 src="img_ArchimedischeKoerper/kuboktaeder.webp" alt="kuboktaeder">
+ </div>
+ <div class="a">
+  3. (kleines) <b>Rhomben&shy;kuboktaeder</b> (3,4,4,4)<br>
+  <img width=120 height=120 src="img_ArchimedischeKoerper/arch3.webp" alt="arch3">
+ </div> 
+ <div class="a">
+  4. <b>Abgeschrägtes Dodekaeder</b> (Dodekaedron simum) (3,3,3,3,5)<br>
+  <img width=120 height=120 src="img_ArchimedischeKoerper/arch4.webp" alt="arch4">
+ </div>  
+ <div class="a">
+  5. (kleines) <b>Rhombenikosi&shy;dodekaeder</b> (3,4,5,4)<br>
+  <img width=120 height=120 src="img_ArchimedischeKoerper/arch5.webp" alt="arch5">
+ </div>
+ <div class="a">
+  6. <b>Ikosidodekaeder</b> (3,5,3,5)<br>
+  <img width=120 height=120 src="img_ArchimedischeKoerper/ikosidodekaeder.webp" alt="ikosidodekaeder">
+ </div>
+ <div class="a">
+  7. <b>Abgestumpftes Tetraeder</b> (3,6,6)<br>
+  <img width=120 height=120 src="img_ArchimedischeKoerper/arch7.webp" alt="arch7">
+ </div>
+ <div class="a">
+  8. <b>Abgestumpftes Hexaeder</b> (3,8,8)<br>
+  <img width=120 height=120 src="img_ArchimedischeKoerper/arch8.webp" alt="arch8">
+ </div>
+ <div class="a">
+  9. <b>Abgestumpftes Dodekaeder</b> (3,10,10)<br>
+  <img width=120 height=120 src="img_ArchimedischeKoerper/arch9.webp" alt="arch9">
+ </div>
+ <div class="a">
+  10. <b>Abgestumpftes Oktaeder</b> (4,6,6)<br>
+  <img width=120 height=120 src="img_ArchimedischeKoerper/arch10.webp" alt="arch10">
+ </div>
+ <div class="a">
+  11. <b>Abgestumpftes Kuboktaeder</b> oder grosses Rhomben&shy;kuboktaeder(4,6,8)<br>
+  <img width=120 height=120 src="img_ArchimedischeKoerper/arch11.webp" alt="arch11">
+ </div>
+ <div class="a">
+  12. <b>Abgestumpftes Ikosi&shy;dodekaeder</b> oder grosses Rhomben&shy;ikosidodekaeder (4,6,10)<br>
+  <img width=120 height=120 src="img_ArchimedischeKoerper/arch12.webp" alt="arch12">
+ </div>
+ <div class="a">
+  13. <b>Abgestumpftes Ikosaeder</b> (5,6,6)<br>
+  <img width=120 height=120 src="img_ArchimedischeKoerper/arch13.webp" alt="arch13">
+ </div>
+ 
+<div style="clear: both"></div>
+
+<p>Abgeschrägtes Hexaeder und abgeschrägtes Dodekaeder kommen in zwei 
+spiegelbildlichen Varianten vor, die sich nicht durch Drehungen zur Deckung 
+bringen lassen. Es handelt sich also um <b>chirale</b> Körper. Die Namen 
+<b>Cubus simus</b> und <b>Dodekaedron simum</b> für sie stammen von Johannes 
+Kepler. Dieser hat sie in seinem Buch <b>Harmonice Mundi</b>, das 1619 in 
+Linz erschienen ist, genauer untersucht und insbesondere die Vollständigkeit der 
+obigen Liste bewiesen. Dabei klassifizierte er sämtliche möglichen halbregären 
+Polyeder nach der Anzahl und Art der regelmässen Vielecke, die in jeder der 
+kongruenten Ecken zusammenstossen. Wie schon von Euklid bei der Diskussion der regulären Polyeder bemerkt, 
+können dies nur drei, vier oder fünf Vielecke sein.</p>
+<p><b>Fall 1:</b> In jeder Ecke stossen <b>drei</b> regelmässe Vielecke zusammen. 
+</p>
+<p><b>Fall 1a:</b> Es handelt sich um jeweils gleiche Vielecke.</p>
+<p>Dann liegt bereits ein regulärer Körper vor und zwar ein <b>Tetraeder</b>, 
+ein <b>Hexaeder</b> oder ein <b>Dodekaeder</b>.</p>
+<p><b>Fall 1b:</b> Zwei der Vielecke sind gleich und das dritte ist von ihnen 
+verschieden. </p>
+<p>Die Möglichkeiten werden nun durch den folgenden Hilfssatz eingeschränkt. 
+</p>
+<p><b>Hilfssatz 1</b> Stossen in den Ecken eines uniformen Polyeders jeweils 
+genau ein a-Eck, ein b-Eck und ein c-Eck zusammen und sind b und c verschieden, so muss a gerade sein.</p>
+<p>Zum Beweis beachte man, dass an den Seiten des a-Ecks <b>abwechselnd</b> die 
+Seiten eines b-Ecks und eines c-Ecks liegen. Das ist aber nur möglich, wenn a gerade ist.</p>
+<p>Beachtet man noch, dass die Winkelsumme in jeder Ecke eines konvexen Polyeders 
+echt kleiner als 360° sein muss, so bleiben nur die 
+folgenden Möglichkeiten mit ihren eindeutigen Realisierungen:</p>
+<p>2 Quadrate, 1 beliebiges regelmässes n-Eck (n ungleich 4): <b>Prisma</b><br>2 
+Sechsecke, 1 Dreieck: <b>Abgestumpftes Tetraeder</b><br>2 Sechsecke, 1 Quadrat: 
+<b>Abgestumpftes Oktaeder</b><br>2 Sechsecke, 1 Fünfeck: <b>Abgestumpftes 
+Ikosaeder</b><br>2 Achtecke, 1 Dreieck: <b>Cubus simus</b><br>2 Zehnecke, 1 
+Dreieck: <b>Dodekaedron simum</b></p>
+<p><b>Fall 1c:</b> Die drei Vielecke sind paarweise verschieden. </p>
+<p>Aus dem Hilfssatz 1 ergibt sich sofort, dass jedes der Vielecke eine gerade 
+Anzahl von Ecken besitzt. Beachtet man noch die obige Beschränkung der 
+Winkelsumme, dann kommen nur die folgenden Möglichkeiten mit ihren eindeutigen 
+Realisierungen in Frage:</p>
+<p>1 Quadrat, 1 Sechseck, 1 Achteck: <b>Abgestumpftes Kuboktaeder</b><br>1 
+Quadrat, 1 Sechseck, 1 Zehneck: <b>Abgestumpftes Ikosidodekaeder</b></p>
+<p><b>Fall 2:</b> In jeder Ecke stossen <b>vier</b> regelmässe Vielecke zusammen.</p>
+<p>Auch hier lassen sich die Möglichkeiten durch einen Hilfssatz stark 
+einschränken.</p>
+<p><b>Hilfssatz 2</b> Stossen in den Ecken eines uniformen Polyeders jeweils 
+genau ein 3-Eck, ein a-Eck, ein b-Eck und ein c-Eck so zusammen, dass jeweils das 
+a-Eck und das c-Eck eine Seite mit dem Dreieck gemeinsam haben, so muss a = c gelten.</p>
+<p>Wie beim Beweis von Hilfssatz 1 müssen also an den Seiten des Dreiecks 
+<b>abwechselnd</b> ein a-Eck und ein c-Eck liegen. Dies geht nur, wenn a = c ist. </p>
+<p>Dieser Hilfssatz und die Beschränkung der Winkelsumme lässt nur noch die 
+folgenden Möglichkeiten zu, die sich auch alle eindeutig in der angegebenen Weise realisieren lassen:</p>
+<p>4 Dreiecke: <b>Oktaeder</b><br>3 Dreiecke, 1 beliebiges n-Eck (n ungleich 3): 
+<b>Antiprisma</b><br>2 Dreiecke, 2 Quadrate: <b>Kuboktaeder</b><br>2 Dreiecke, 2 
+Fünfecke: <b>Ikosidodekaeder</b><br>1 Dreieck, 3 Quadrate: 
+<b>Rhombenkuboktaeder</b><br>1 Dreieck, 2 Quadrate, 1 Fünfeck: <b>Rhombenikosidodekaeder</b></p>
+<p><b>Fall 3:</b> In jeder Ecke stossen <b>fünf</b> regelmässe Vielecke zusammen.</p>
+<p>Wegen der schon öfters benutzten Beschränkung der Winkelsumme in den Ecken 
+eines konvexen Polyeders bleiben nur die folgenden drei Möglichkeiten, die sich 
+in der angegebenen Weise realisieren lassen. Dabei ist das Ikosaeder eindeutig 
+bestimmt, für die anderen beiden Körper gibt es jeweils die beiden oben schon 
+angesprochenen verschiedenen spiegelbildlichen Realisierungen.</p>
+<p>5 Dreiecke: <b>Ikosaeder</b><br>4 Dreiecke, 1 Quadrat: <b>Cubus 
+simus</b><br>4 Dreiecke, 1 Sechseck: <b>Dodekaedron simum</b></p>
+<p><img width=250 height=410 src="img_ArchimedischeKoerper/archi1.gif" alt="archi1">
+<img width=250 height=425 src="img_ArchimedischeKoerper/archi2.gif" alt="archi2"></p>
+<p>Abbildungen der Archimedischen Körper aus Keplers Buch <b>Harmonice Mundi</b></p>
+<p>
+Erst um 1930 fand J. C. P. Miller eine Variante des Rhombenkuboktaeders, die aus 
+diesem entsteht, wenn man eine seiner "Kappen", die sich oberhalb eines 
+"Gürtels" aus Quadraten befindet, um 45° verdreht. Auch 
+bei diesem konvexen Polyeder stossen in jeder Ecke jeweils ein Dreieck und drei 
+Quadrate zusammen, die Ecken der oberen Kappe sind jedoch nicht mehr zu denen 
+der unteren Kappe kongruent, es handelt sich also nicht um ein uniformes 
+Polyeder. Es reicht also nicht, die Uniformität durch die Gleichartigkeit der 
+Folge der Vielecke zu beschreiben, die in jeder Ecke zusammenstossen, wie dies 
+manchmal bei der Definition der halbregulären Körper getan wird.</p> 
+
+<p>Jeder Archimedische Körper besitzt eine Umkugel. Diese gestattet die Konstruktion des jeweiligen dualen Körpers.<br>
+In der folgenden Tabelle sind die Werte für den Radius R der Umkugel bei Kantenlänge 1 zusammengestellt:</p>
+
+<ol>
+  <li>Abgeschrägtes Hexaeder: \(0.5\sqrt\dfrac{\sf u^2-8u+4}{\sf u^2-5u+4}\) mit u = \(\sqrt[3]{19+3\sqrt{33}}\)</li> 
+  <li>Kuboktaeder: 1</li>  
+  <li>Kleines Rhombenkuboktaeder: \(0.5\sqrt{5+2\sqrt{2}}\)</li> 
+  <li>Abgeschrägtes Dodekaeder: \(0.5\sqrt\dfrac{\sf 8\sqrt[3]{4}-16u+\sqrt[3]{2}u^2}{\sf 8\sqrt[3]{4}-10u+\sqrt[3]{2}u^2}\) 
+mit u = \(\sqrt[3]{49+27\sqrt{5}+3\sqrt{6}\sqrt{93+49\sqrt{5}}}\)</li> 
+  <li>Rhombenikosidodekaeder: \(0.5\sqrt{4+2\sqrt{2}}\)</li> 
+  <li>Ikosidodekaeder: \(0.5(1+\sqrt{5})\)</li>
+  <li>Abgestumpftes Tetraeder: \(0.25\sqrt{22}\)</li> 
+  <li>Abgestumpftes Hexaeder: \(0.5\sqrt{7+4\sqrt{2}}\)</li>
+  <li>Abgestumpftes Dodekaeder:  \(0.25\sqrt{74+30\sqrt{5}}\)</li>
+  <li>Abgestumpftes Oktaeder: \(0.5\sqrt{10}\)</li> 
+  <li>Abgestumpftes Kuboktaeder: \(0.5\sqrt{13+6\sqrt{2}}\)</li>
+  <li>Abgestumpftes Ikosidodekaeder: \(0.5\sqrt{31+12\sqrt{5}}\)</li> 
+  <li>Abgestumpftes Ikosaeder: \(0.25\sqrt{58+18\sqrt{5}}\)</li>
+</ol>
+
+<p>Das in der Antike vorhandene allgemeine Interesse an regulären und 
+halbregulären Polyedern kam nach einer langen Ruhephase im Mittelalter erst 
+wieder in der Renaissance auf, als sich Mathematiker, Künstler und Handwerker 
+mit ihrer Beschreibung, Darstellung und Herstellung beschäftigten. 
+Beispielsweise behandelt Pierro della Francesca in seinem Buch <b>De Corporibus Regularibus</b> von 1480 die 
+Platonischen Körper. Albrecht Dürer gibt für einige Archimedische Körper in dem vierten Buch seiner 
+<b>Vnderweysung der messung mit dem zirckel vnd dem richtscheyt</b> von 1525 die 
+Netze an, und auch in dem Buch <b>De divina proportione</b> von Luca Pacioli
+aus dem Jahr 1509 findet sich beispielsweise die folgende Abbildung des Rhombenkuboktaeders. 
+<p><img width=300 height=301 src="img_ArchimedischeKoerper/pacioli.gif" alt="pacioli"><br>
+Systematisch wurden die Archimedischen Körper allerdings erst von Johannes Kepler untersucht, 
+der auch zwei nichtkonvexe reguläre Polyeder gefunden 
+hat, die Keplerschen Sternpolyeder. Weitere, von regulären und halbregulären Polyedern 
+abgeleitete Polyederdarstellungen finden sich in den Büchern <b>Geometria et 
+Perspectiva</b> von Lorenz Stöer aus dem Jahr 1567 und <b>Perspectiva 
+corporum regularium</b> von Wenzel Jamnitzer aus dem Jahr 1568.<br>
+Übrigens kam es auch im 16. Jahrhundert in Mode, Sonnenuhren auf den Flächen 
+vornehmlich des Rhombenkuboktaeders anzubringen und in Parkanlagen aufzustellen, 
+wo man sie heute noch bewundern kann.</p>
+<small>Quelle: www.mathe.tu-freiberg.de</small>
+
+<p>Zu den <a href="/anwendungenmath/PlatonKoerper/"><b>Platon Körpern</b></a> (reguläre konvexe Polyeder)</p>
+
+<script>
+   renderMathInElement(document.body);
+</script>
+
+<!-- EOF: CONTENT -->
+
+<p><small>
+©1997 -
+2026 www.mathematik.ch</small> |<a href="/search/"><span class="b" title="Suche">&#x1F50D;</span></a></p>
+
+</div>
+</body>
+</html>

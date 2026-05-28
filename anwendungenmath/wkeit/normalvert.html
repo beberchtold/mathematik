@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="text-scale" content="scale">
+<meta name="Description" content="Normalverteilung, Wahrscheinlichkeit und Grenzen berechnen">
+<title>Normalverteilung</title>
+<meta name="author" content="B.Berchtold">
+<link rel="stylesheet" href="/css/mathematik.css" TYPE="text/css">
+<script src="normalvert_min.js"></script>
+<style>
+input[type=number] {width:3em}
+canvas {width:100%;height:auto;min-width:308px;max-width:500px}
+img[src="img/normalvert.png"] {width:191px;height:61px;vertical-align:middle}
+</style>
+</head>
+
+<body>
+<div class="page">
+
+<div class="flex">
+<span id="menuicon"><a href="/menu.html">
+<img src="/img/menuicon.svg" title="Inhalt" alt="menu"></a></span>
+<span class="Haupt"><a class="black" href="/" title="Home"><img src="/img/fractal_logo.svg" alt="Logo">mathematik.ch</a></span>
+</div>
+
+<!-- CONTENT -->
+
+<h1>Normalverteilung</h1>
+
+<p>Eine Zufallsvariable X sei normalverteilt mit Erwartungswert &mu;, Standard&shy;abweichung &sigma; und Varianz &sigma;<sup>2</sup>.<br>
+Das Formular berechnet nach Klick auf den entsprechenden Button<br>
+I) die W'keit P, dass X einen Wert von mindestens a und höchstens b annimmt 
+gemäss 
+P(a&le;X&le;b)&nbsp;=<img src="img/normalvert.png" alt="normalverteilung"><br>
+II) die Abweichung &Delta; vom Erwartungswert bei vorgegebener Wkeit W gemäss P(&mu;-&Delta;&le;X&le;&mu;+&Delta;) = W
+</p>
+
+<div class="colgroup-2">
+  <div class="col">
+    <canvas id="myCanvas">Ihr Browser kann kein Canvas!</canvas>
+  </div>
+  
+  <div class="col">
+    <ul>
+      <li>&mu;= <input id="mue" type="number" value="25" lang="en"> &nbsp;&nbsp;
+      &sigma;= <input id="sigma" type="number" value="0.2" lang="en"> &nbsp;&nbsp; &sigma;<sup>2</sup>=<span id="VAR"></span></li>
+      <li>I) a= <input id="a" type="number" value="24.5" lang="en">&nbsp;&nbsp;
+          b = <input id="b" type="number" value="25.5" lang="en"></li>
+      <li><input type="button" style="width:10em" value="Berechne Wkeit" onclick="rechne()"></li>
+	</ul>
+	<p><span id="RES"></span></p>
+	<p><span id="message"></span></p>
+	<ul>
+	  <li>II) Wkeit: <input id="wkeit" type="number" min=0 max=1 value="0.98" lang="en"></li>
+      <li><input type="button" style="width:11em" value="Berechne Grenzen" onclick="rechne_grenze()"></li>
+	</ul>
+    <p><span id="RES2"></span></p>
+  </div>       
+</div>
+
+<h4>Beispiel</h4>
+Bei der Produktion eines Massenartikels hat sich gezeigt, dass die Längen normalverteilt sind mit &mu; = 25cm und 
+&sigma; = 0.2cm.<br>
+I) Artikel mit mehr als 0.5cm Abweichung von &mu; sind unbrauchbar. Wie viel Prozent der produzierten Artikel
+sind unbrauchbar?<br>
+II) Wie gross darf die Abweichung &Delta; vom Erwartungswert sein, wenn damit 2% der Artikel unbrauchbar werden?
+
+<p><b>Lösung</b><br>
+I) Da P(24.5&le;X&le;25.5) = 98.76%, so sind <b>1.24%</b> der Artikel unbrauchbar.<br>
+II) Da P(24.53546&le;X&le;25.46454) = 0.9798, so ist <b>&Delta; &asymp; 0.4645cm</b></p>
+
+<p><a href="approx_bin_norm.html">Approximation Binomial- mit Normalverteilung</a></p>
+<p><a href="binomialvert.html">Binomialverteilung mit Histogramm</a></p>
+<p><a href="hypergeovert.html">Hypergeometrische Verteilung</a></p>
+
+<!-- EOF: CONTENT -->
+
+<p><small>
+©1997 -
+2026 www.mathematik.ch</small> |<a href="/search/"><span class="b" title="Suche">&#x1F50D;</span></a></p>
+
+</div>
+</body>
+</html>

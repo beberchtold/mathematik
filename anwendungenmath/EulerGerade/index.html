@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="de">
+<HEAD>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="text-scale" content="scale">
+<meta NAME="Description" content="Eulersche Gerade, Schwerpunkt, Umkreismittelpunkt und Höhenschnittpunkt eines Dreiecks">
+<TITLE>Eulersche Gerade</title>
+<LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
+<script src="EulerGerade_min.js"></script>
+</HEAD>
+
+<body>
+<div class="page">
+<div class="flex">
+<span id="menuicon"><a href="/menu.html">
+<img src="/img/menuicon.svg" title="Inhalt" alt="menu"></a></span>
+<span class="Haupt"><a class="black" href="/" title="Home"><img src="/img/fractal_logo.svg" alt="Logo">mathematik.ch</a></span>
+</div>
+
+<!-- CONTENT -->
+
+<h1>Eulersche Gerade eines Dreiecks</h1>  
+
+<p>Im Dreieck ABC gibt es verschiedene interessante Punkte und spezielle Linien. Sie wandern alle entsprechend 
+mit, wenn Sie die die Lage der Eckpunkte C und B mit der Maus (B und C bleiben auf dem Umkreis) verändern.<br>
+Alternativ können Sie auch mit 'Step' die Positionen von C (bzw.B) schrittweise verändern.</p>
+<div style="border:1px solid;padding:5px;"><b>Eulersche Gerade des Dreiecks</b><br>
+Die drei Punkte M, S und H liegen auf einer Geraden, der sog. Eulerschen Geraden<br>
+(nach <a href="/mathematiker/euler.html">Leonhard Euler</a>, 1707-1783).</div>
+<br>
+	
+<div class="colgroup-2">
+  <div class="col" id="containercanvas">
+       <canvas id="myCanvas">Ihr Browser kann kein Canvas!</canvas>
+  </div>
+
+  <div class="col">
+   <ul>
+	<li><label><input id="VarC" type="radio" name="CB"> Position Punkt C verändern</label></li>
+	<li><label><input id="VarB" type="radio" name="CB"> Position Punkt B verändern</label></li>
+    <li><input type="button" value="Step" onclick="dostep()"></li>
+	<li><input type="button" value="Reset" onclick="reset()"> stellt Anfangszustand her.</li>
+   </ul>
+  </div>
+	
+</div>	   
+
+<p><b>Schwerpunkt S des Dreiecks</b><br>
+A', B' und C' sind die Mittelpunkte der Dreiecksseiten. Die grün gefärbten
+Strecken AA', BB' und CC' sind die Seitenhalbierenden
+(oder Schwerelinien) des Dreiecks. Sie schneiden sich im Schwerpunkt S.<br>
+Man kann zeigen, dass sich die Schwerelinien im Verhältnis 2:1 teilen. So ist
+also z.B. die Strecke AS doppelt so lang wie die Strecke A'S.
+</p>
+<p><b>Umkreismittelpunkt M</b><br>
+Der Mittelpunkt M des Umkreises ist
+Schnittpunkt der (grau gefärbten) Mittelsenkrechten A'D', B'E', and C'F'.
+Die Verbindungslinien A'B', B'C' und C'A' der Mittelpunkte der
+Seiten sind schwarz gefärbt.</p>
+<p><b>Höhenschnittpunkt H</b><br>
+Es gibt drei (rot gefärbte) Höhen des Dreiecks: AD senkrecht zu BC, BE  sekrecht zu CA und
+schliesslich CF  senkrecht zu AB. H ist der Schnittpunkt dieser drei Höhen.</p>
+
+<p>Es erstaunt, dass die drei Punkte M, S und H auf einer Geraden liegen. Aber hier ist der Beweis:<br>
+Wegen dem Teilverhältnis der Schwerelinien (s. oben) ist das Dreieck A'B'C'
+ähnlich zum Dreieck ABC und seine Seiten sind parallel zu den entsprechenden Seiten des Dreiecks ABC und
+ halb so lang wie sie. (Zentrische Streckung an S mit Faktor -0.5) </p>
+<p>Die Höhen AD, BE und CF werden dadurch auf die Höhen A'D', B'E' und 
+C'F' abgebildet. Da sich die Höhen des Originaldreiecks in H
+schneiden, so schneiden sich die Höhen des Dreiecks A'B'C' in H'.
+H' ist aber zugleich der Umkreismittelpunkt M des Dreiecks ABC. 
+Also ist M das Bild des Punktes H  unter der zentrischen Streckung
+an S. Folglich ist zudem die Strecke SM halb so lang wie die Strecke SH.</p>
+
+<!-- EOF: CONTENT -->
+
+<p><small>
+©1997 -
+2026 www.mathematik.ch</small> |<a href="/search/"><span class="b" title="Suche">&#x1F50D;</span></a></p>
+
+</div>
+</body>
+</html>

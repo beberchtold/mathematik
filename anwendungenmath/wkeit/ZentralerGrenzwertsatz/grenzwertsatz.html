@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="text-scale" content="scale">
+<meta name="author" content="Bernhard Berchtold">
+<meta name="Description" content="Anwendungen der Mathematik, Wahrscheinlichkeit, Zentraler Grenzwertsatz">
+<title>Zentraler Grenzwertsatz</title>
+<link rel="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
+<script async src="grenzwertsatz_min.js"></script>
+<style>
+img[src="binomial.png"] {width:140px;height:31px;vertical-align:middle}
+canvas {width:100%;height:auto;min-width:308px;max-width:500px}
+</style>
+</head>
+
+<body>
+<div class="page">
+
+<div class="flex">
+<span id="menuicon"><a href="/menu.html">
+<img src="/img/menuicon.svg" title="Inhalt" alt="menu"></a></span>
+<span class="Haupt"><a class="black" href="/" title="Home"><img src="/img/fractal_logo.svg" alt="Logo">mathematik.ch</a></span>
+</div>
+
+<!-- CONTENT -->
+
+<h1>Zentraler Grenzwertsatz</h1>
+
+<p>Zentraler Grenzwertsatz: (vereinfachte Formulierung)</p>
+<div style="width:95%; border:1px solid; padding:5px; display: block; margin-left: auto; margin-right: auto;">
+Eine <b>Summe</b> von sehr vielen unabhängigen Zufallsvariablen ist unter der Voraussetzung, dass jede der unabhängigen
+ Zufallsvariablen nur einen geringen Einfluss auf die Summe hat, <b>angenähert normalverteilt</b>.<br><br>
+ A.M. Ljapunoff (1857 - 1918)
+ </div>
+ <p>
+Zur Illustration soll die Überlegung (1) und anschliessend unabhängig davon das Formular (2) dienen:<br>
+(1) Die Newton'sche Formel <img src="binomial.png" alt="Newton Formel">,
+ q = 1-p für die Berechnung bei <a href="../binomialvert.html"><b>Binomialverteilung</b></a> kann auch folgendermassen interpretiert werden:<br>
+Gegeben seien n voneinander unabhängige Zufallvariablen Z<sub>1</sub>, Z<sub>2</sub>, ... , Z<sub>n</sub>, die nur den Wert 1 
+(mit Wahrscheinlichkeit p) und den Wert 0 (mit Wahrscheinlichkeit q) annehmen können. Wie gross ist dann die Wahrscheinlichkeit, dass 
+die <b>Summe</b> X := Z<sub>1</sub> + Z<sub>2</sub> + ... + Z<sub>n</sub>  den Wert x annimmt? Dies ist aber die W'keit, dass das Ereignis
+ "Wert 1 annehmen" genau x -mal von n-mal eintreten muss.<br> Die W'keit dafür ist eben P<sub>n</sub>(x).<br>
+ Nach dem zentralen Grenzwertsatz ist X angenähert normalverteilt. Dies führt auf die 
+ <a href="../approx_bin_norm.html"><b>Approximation der Binomialverteilung durch Normalverteilung</b></a>, also den Grenzwertsatz von de Moivre 
+ und Laplace.</p>
+<p>(2) In einer Urne liegen 99 von 1 bis 99 nummerierte Kugeln. Man zieht z.B. n = 4000 -mal eine Kugel, notiert die Nummer und legt die 
+Kugel wieder zurück.<br>
+Jede Zahl x von 1 bis 99 ist dann <b>gleichwahrscheinlich</b>. Bildet man nun aber für je z.B. N = 5 aufeinander notierte 
+Zahlen den Mittelwert, so ist dieser Mittelwert eine angenähert <b>normalverteilte</b> Zufallsvariable (Mittelwerte
+um 50 sind häufiger als solche um 30 oder gar solche um 10 oder 90).</p>
+
+<div class="colgroup-2">
+  <div class="col">
+    <canvas id="myCanvas" width="400" height="240">Ihr Browser kann kein Canvas!</canvas>
+  </div>
+  
+  <div class="col">
+   <br>
+   <ul>
+    <li>Anzahl Züge (1000&le;n&le;10000) 
+      <input id="n" type="number" value="4000"></li>
+    <li>Anzahl notierte Zahlen (5&le;N&le;20)
+      <input id="N" type="number" style="width:2em" value="5"></li>
+    <li> <input type="button" value="Go" onclick="rechne()"></li>
+    <li>Anzahl der Mittelwerte = <span id="Total"> </span></li>
+    <li>Mittelwert der Mittelwerte = <span id="MittelWert"> </span></li>
+    <li>Standardaweichung&nbsp;der&nbsp;Mittelwerte=<span id="StandardAbweichung"> </span></li>
+   </ul>
+  </div>       
+</div>
+
+<p>Die Klassenbreite wurde 5 gewählt. 
+  Der Inhalt der Rechtecksfläche des Vertreters 47.5 repräsentiert also die
+  Anzahl der Mittelwerte, die zwischen 45 und 50 liegen; der Inhalt der Rechtecksfläche des Vertreters 52.5 repräsentiert 
+  die Anzahl der Mittelwerte, die zwischen 50 und 55 liegen usw.<br>
+  Die roten Zahlen geben die absoluten Häufigkeiten der Mittelwerte in der entsprechenden Klasse an.</p> 
+
+<!-- EOF: CONTENT -->
+
+<p><small>
+©1997 -
+2026 www.mathematik.ch</small> |<a href="/search/"><span class="b" title="Suche">&#x1F50D;</span></a></p>
+
+</div>
+</body>
+</html>

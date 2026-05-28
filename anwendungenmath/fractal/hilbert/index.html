@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="text-scale" content="scale">
+<title>Hilbert- und Peanokurven</title>
+<meta name="description" content="Hilbert- und Peanokurven">
+<meta name="keywords" content="Hilbertkurve, Peanokurve, flächenfüllende Kurven">
+<link rel="stylesheet" href="/css/mathematik.css" TYPE="text/css">
+<script src="hilbert.js"></script>
+<script src="/script/infos.js" defer></script>
+<style>
+input[type="button"] {width:9em;margin-bottom:5px}
+canvas {width:100%;height:auto;min-width:308px;max-width:500px}
+</style>
+</head>
+
+<body>
+<div class="page">
+
+<div class="flex">
+<span id="menuicon"><a href="/menu.html">
+<img src="/img/menuicon.svg" title="Inhalt" alt="menu"></a></span>
+<span class="Haupt"><a class="black" href="/" title="Home"><img src="/img/fractal_logo.svg" alt="Logo">mathematik.ch</a></span>
+</div>
+
+<!-- CONTENT -->
+
+<h1>Hilbert- und Peanokurven</h1>
+
+<div class="colgroup-2">
+  <div class="col">
+  <h2><span id="Peanotxt"></span>kurve mit Ordnung <span id="N"></span></h2>
+    <canvas id="myCanvas" width="400" height="400" style="margin-bottom:10px;">Ihr Browser kann kein Canvas!</canvas>
+  </div>
+  <div class="col">
+	<p><input type="button" id="ordh" value="Ordnung höher" style="margin-right:10px" onclick="ordnungh()">
+	  <input type="button" id="ordt" value="Ordnung tiefer" onclick="ordnungt()">
+	</p>
+	<p><label><input id="Hilbert" type="radio" name="Hi" onchange="change()"> Hilbertkurve</label>
+	<label style="margin-left:30px"><input id="Peano" type="radio" name="Hi" onchange="change()"> Peanokurve</label></p>
+	<p>Die Kurven sind nach den Mathematikern <a href="/mathematiker/hilbert.html">David Hilbert</a> und 
+	<a href="/mathematiker/peano.html">Guiseppe Peano</a> benannt.<br>
+    Sie sind im Grenzfall ( n &rarr; &infin; ) flächenfüllende Kurven (Fraktale mit Dimension 2).</p>
+    <p>Es können für die Hilbertkurve Ordnungen zwischen 1 und 7, für die Peanokurve solche zwischen 1 und 5 betrachtet 
+	werden. Ab höherer Ordnung ist die Kurve hier bereits flächenfüllend.</p>
+  </div>
+</div>
+	
+<p>Die Hilbertkurve entsteht rekursiv gemäss:<br>
+    initiator = "X" (s. Ordnung 1), generatorX = "LYFRXFXRFYL", 
+	generatorY = "RXFLYFYLFXR" <img src="/img/help.png" style="margin-left:15px" alt="Info" onclick="infos('info.html','Infofenster',430,600)"></p>
+<p>Die Peanokurve entsteht rekursiv gemäss:<br>
+    initiator = "X" (s. Ordnung 1), generatorX = "XFYFXLFLYFXFYRFRXFYFX", 
+	generatorY = "YFXFYRFRXFYFXLFLYFXFY"</p>
+ 
+
+<p>Interessant sind auch <a href="/anwendungenmath/fractal/">Fraktale mit IFS</a> und das 
+<a href="/anwendungenmath/fractal/sierpinski">Sierpinski-Dreieck</a>.</p>
+
+<!-- EOF: CONTENT -->
+
+<p><small>
+©1997 -
+2026 www.mathematik.ch</small> |<a href="/search/"><span class="b" title="Suche">&#x1F50D;</span></a></p>
+
+</div>
+</body>
+</html>

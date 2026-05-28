@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="text-scale" content="scale">
+<meta name="author" content="Bernhard Berchtold">
+<meta name="Description" content="Fibonacci Zahlen, explizite und rekursive Berechnung">
+<title>Fibonacci-Zahlen und Lucas-Zahlen</title>
+<link rel="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
+<script async src="fibonacci_min.js"></script>
+<style>
+p.border {border:1px solid;font-size:110%;width:10em;margin-left:2em;padding:5px}
+img[src="fibonacci.png"] {width:289px;height:51px;vertical-align:middle}
+</style>
+</head>
+
+<body>
+<div class="page">
+<div class="flex">
+<span id="menuicon"><a href="/menu.html">
+<img src="/img/menuicon.svg" title="Inhalt" alt="menu"></a></span>
+<span class="Haupt"><a class="black" href="/" title="Home"><img src="/img/fractal_logo.svg" alt="Logo">mathematik.ch</a></span>
+</div>
+
+<!-- CONTENT -->
+
+<h1>Fibonacci-Zahlen und Lucas-Zahlen</h1>
+
+<p>Leonardo von Pisa, genannt "Fibonacci" fand im Jahre 1202 die nach ihm benannte Folge beim Studium der Vermehrung von Kaninchen.<br>
+Die rekursive Darstellung der Folge lautet:</p>
+
+  <p class="border">
+   a<sub>1</sub> = 1 , a<sub>2</sub> = 1<br>
+   a<sub>n+2</sub> = a<sub>n+1</sub> + a<sub>n</sub>
+  </p>
+   
+<p>Das folgende Formular berechnet die Zahlen gemäss dieser rekursiven Darstellung. 
+Dabei können Sie die ersten beiden ganzen Zahlen (Rekursionsanfang) beliebig festsetzen und 
+erhalten so sogenannte Lucas-Zahlen (nach Edouard Lucas, 1842 - 1891).<br>
+Die Fibonacci-Folge ist also ein Spezialfall einer Lucas-Folge.
+</p>
+
+<div class="colgroup-2">
+  <div class="col">
+  <ul>
+    <li>Erste Zahl
+      <input id="Zahl1" style="margin-left:1em" type="number" value="1"></li>
+    <li>Zweite Zahl
+      <input id="Zahl2" style="margin-left:0.5em" type="number" value="1"><br></li>
+    <li>Berechne die nächsten
+      <input id="anz" type="number" min=1 max=100 value="10"> Zahlen</li>
+    <li><input type="button" style="margin-left:6em;" value="Go" onclick="rekursiv()"></li>
+  </ul>
+  </div>
+  <div class="col">
+  <span id="txt"></span>
+  </div>
+</div>
+<br>
+<p>Die explizite Darstellung für die Fibonacci-Folge mit a<sub>1</sub> = 1 und a<sub>2</sub> = 1 heisst (nach Binet, 1843):<br> 
+<img src="fibonacci.png" alt="explizite Formel">
+</p>
+<p>Daraus lässt sich die explizite Darstellung für eine Lucas-Folge (zwei beliebige Anfangszahlen) gewinnen.
+Das folgende Formular berechnet die n-te Zahl explizit (n &lt; 1422). 
+</p>
+<div class="colgroup-2">
+  <div class="col">
+   <ul>
+    <li>Erste Zahl
+      <input id="Zahl1exp" style="margin-left:1em" type="number" value="1"></li>
+    <li>Zweite Zahl
+      <input id="Zahl2exp" style="margin-left:0.5em" type="number" value="1"></li>
+    <li>Berechne die n = 
+      <input id="n" type="number" min=3 max=1421 value="30"> -te Zahl</li>
+    <li><input type="button" style="margin-left:6em;" value="Go" onclick="explizit()"></li>
+  </ul>
+  </div>
+  <div class="col">
+  <span id="txt1"></span>
+  </div>
+</div>
+
+<br>
+Für die explizite Darstellung einer Lucas-Folge und den Zusammenhang mit dem Goldenen Schnitt:
+ s. auch <a href="/puzzle/puzzle31.html"><b>Puzzle 31</b></a> und die dazugehörige Lösung.
+
+<!-- EOF: CONTENT -->
+
+<p><small>
+©1997 -
+2026 www.mathematik.ch</small> |<a href="/search/"><span class="b" title="Suche">&#x1F50D;</span></a></p>
+
+</div>
+</body>
+</html>

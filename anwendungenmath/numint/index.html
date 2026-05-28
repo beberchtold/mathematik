@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="text-scale" content="scale">
+<meta name="Description" content="Numerische Integration, Obersumme, Untersumme, Trapez, Simpson">
+<meta name="author" content="B.Berchtold">
+<title>Numerische Integration</title>
+<LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
+<script src="numint_min.js"></script>
+<link rel="stylesheet" href="/katex/katex.min.css" TYPE="text/css">
+<script src="/katex/katex.min.js"></script>
+<script src="/katex/contrib/auto-render.min.js"></script>
+<script src="/script/infos.js" defer></script>
+<style>
+input[type=button] {width:3.8em;margin:3px 6px 4px 0px}
+canvas {width:100%;height:auto;min-width:308px;max-width:500px}
+.katex {font-size: 1.1em;font-family:sf}
+</style>
+</head>
+
+<body>
+<div class="page">
+
+<div class="flex">
+<span id="menuicon"><a href="/menu.html">
+<img src="/img/menuicon.svg" title="Inhalt" alt="menu"></a></span>
+<span class="Haupt"><a class="black" href="/" title="Home"><img src="/img/fractal_logo.svg" alt="Logo">mathematik.ch</a></span>
+</div>
+
+<!-- CONTENT -->
+
+<h1>Numerische Integration</h1>
+
+<p><a href="NumerischeIntegration.pdf">Dazugehörige Theorie <img src="/img/pdficon.png" alt="pdficon"></a></p>
+
+<div class="colgroup-2">
+  <div class="col">
+     <canvas id="myCanvas" width="400" height="400">Ihr Browser kann kein Canvas!</canvas>
+  </div>
+
+  <div class="col">
+   <ul>
+    <li>y = <input id="f" type="text" value="1/sqrt(2*pi)*exp(-x*x/2)" style="width:12em;margin-bottom:5px">
+	  <img src="/img/help.png" alt="Hilfe" onclick="infos('infos.html','Infofenster',520,600)"></li>
+    <li>x0= <input id="Xmin" type="number" value="0" lang="en">  &nbsp;&nbsp;&nbsp;
+        xn= <input id="Xmax" type="number" value="5" lang="en"></li>
+    <li>Anzahl Teilintervalle (&le;200) <input id="Anz" type="number" style="width:3em;" min="1" max="200" value="20"></li>
+	<li><input type="button" value="Go" onclick="reset()"></li>
+   </ul>
+   <br>
+   <b>Graphik</b>
+   <ul>
+    <li><input id="1" type="button" style="width:4.5em" value="Trapez" onclick="button1()">
+      <input id="2" type="button" value="Links" onclick="button2()">
+      <input id="3" type="button" style="width:4.5em" value="Rechts" onclick="button3()">
+      <input id="4" type="button" style="margin-right:0px" value="Mitte" onclick="button4()">
+	</li>
+   </ul>
+   <br>
+   <b>Resultate</b>
+   <ul>
+    <li>Trapez: <span id="trapez" style="margin-right:20px"> </span>
+    Simpson: <b><span id="simpson"> </span></b><br>
+    Links: <span id="lpunkt" style="margin-right:20px"> </span>
+    Rechts: <span id="rpunkt"> </span><br>
+	Mitte: <span id="mpunkt"> </span></li>
+   </ul>	
+<p><small>Klicken Sie nach einer Änderung in einem Eingabefeld auf 'Go'.<br>
+Die Simpson-Methode benötigt eine gerade Anzahl Intervalle</small></p>	 
+  </div>      
+</div>
+
+<h2>Anwendungsbeispiele</h2>
+1) Siehe Beispiel beim Start: Wie gross ist der Inhalt der Fläche unter der Gausskurve von 0 bis 5?<br>
+Resultat: Simpson-Wert = <b>0.5</b> (wäre der exakte Wert für das Integral von 0 bis &infin;)
+<p>2) Wie gross ist der Umfang u einer Ellipse mit den Halbachsen a = 11 und b = 1.75?<br>
+Mit der Parameterdarstellung x=a cost, y=b sint  (t &isin; [0,2&pi;]) gilt:<br>
+u = \(\sf 4\int\limits_0^{\pi/2}\sqrt{\dot{x}^2 + \dot{y}^2}\: dt \) = \(\sf 4\int\limits_0^{\pi/2}\sqrt{a^2 sin^2 t + b^2 cos^2 t}\: dt \)<br>
+
+Für dieses (elliptische!) Integral gibt es keine exakte Formel, man muss sich also z.B. mit numerischer Integration behelfen.<br>
+Eingabe im Feld 'y = ': 4*sqrt(11*11*sin(x)*sin(x) + 1.75*1.75*cos(x)*cos(x))<br>
+x0 = 0 und xn = 1.5707963268 (copy and paste!).<br>
+Wählen Sie 40 Teilintervalle, klicken Sie dann auf 'Berechne' und Sie erhalten den Simpson-Wert <b>u = 45.52858</b>.</p>
+<p>3) Wie gross ist die Bogenlänge L einer Ellipse mit den Halbachsen a = 11 und b = 1.75 zwischen t1=0 und t2=&pi;/4?<br>
+Der Bogen reicht vom Punkt A(11|0) bis zum Punkt P.<br>
+Koordinaten von P: x = 11cos(&pi;/4) = 7.778, y = 1.75sin(&pi;/4) = 1.237</p>
+<div style="width:22em;float:left">
+  <img src="Bogenlaenge.png" width="320" height="80" style="vertical-align:middle" alt="Bogenlänge Ellipse">
+</div>
+<div style="width:22em;float:left">  
+  L = \(\sf \int\limits_0^{\pi/4}\sqrt{a^2 sin^2 t + b^2 cos^2 t}\: dt \) 
+</div>
+ <div style="clear: both"></div><br>
+Eingabe im Feld 'y = ': sqrt(11*11*sin(x)*sin(x) + 1.75*1.75*cos(x)*cos(x))<br>
+Eingabe x0 = 0 und xn = 0.7853981634. Bei 20 Teilintervallen erhalten Sie den Simpson-Wert <b>L = 3.57979</b>.
+
+<script> renderMathInElement(document.body);</script>
+ 
+<!-- EOF: CONTENT -->
+
+<p><small>
+©1997 -
+2026 www.mathematik.ch</small> |<a href="/search/"><span class="b" title="Suche">&#x1F50D;</span></a></p>
+
+</div>
+</body>
+</html>
+

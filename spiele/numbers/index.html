@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="text-scale" content="scale">
+<meta NAME="Description" CONTENT="Zahlenspiel, Grundoperationen, Chiffres">
+<title>Zahlenspiel</title>
+<LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
+<script src="numbers_min.js"></script>
+<style>input[type=number] {width:2.5em;margin:8px 15px 0px 0px}
+</style>
+</head>
+
+<body>
+<div class="page">
+<div class="flex">
+<span id="menuicon"><a href="/menu.html">
+<img src="/img/menuicon.svg" title="Inhalt" alt="menu"></a></span>
+<span class="Haupt"><a class="black" href="/" title="Home"><img src="/img/fractal_logo.svg" alt="Logo">mathematik.ch</a></span>
+</div>
+
+<!-- CONTENT -->
+
+<h1>Zahlenspiel</h1>
+
+<p>Dieses Spiel simuliert den einen Teil der französischen Fernsehshow &quot;Les Chiffres et Les Lettres&quot;.<br>
+Das Problem besteht darin, aus 6 gegebenen Zahlen (zwischen 1 und 100) eine Zielzahl (zwischen 101 und 1000) zu berechnen. 
+Dabei dürfen die Grundrechenarten verwendet werden, aber jede Zahl höchstens einmal.<br>
+Das Programm kann selbst Probleme lösen, oder Sie können die Probleme lösen.</p>
+<p>Wenn Sie eine Zahl in ein Inputfeld eingegeben haben, so müssen Sie auf 'Reset' klicken.<br>
+'Reset' löscht auch Lösungsversuche. Nach Klick auf 'Solve' sucht der Computer eine Lösung.</p>
+
+<div class="colgroup-2">
+  <div class="col">
+  <p><input id="Zahl[0]" type="number" min=1 max=100 value="4">
+     <input id="Zahl[1]" type="number" min=1 max=100 value="6">
+     <input id="Zahl[2]" type="number" min=1 max=100 value="8">
+     <input id="Zahl[3]" type="number" min=1 max=100 value="8">
+     <input id="Zahl[4]" type="number" min=1 max=100 value="10">
+     <input id="Zahl[5]" type="number" min=1 max=100 value="100">
+   </p>
+   <ul>
+   <li>Zielzahl: <input id="Zielzahl" style="width:2.6em;" type="number" min=101 max=1000 value="267">
+      <input id="NewTarget" type="button" value="Neue Zielzahl" onclick="makeTarget()" style="width:9em;margin-left:20px"></li>
+   <li><input id="NewProblem" type="button" value="Neues Problem" style="width:9.5em" onclick="mix()">     
+      <input type="button" value="Reset" onclick="init()" style="margin-left:30px">
+   </li>
+  <li><input id="Solve" type="button" value="Solve" onclick="solve1()"></li>
+  </ul>
+  </div>
+
+  <div class="col">
+    <p>Um eine Rechenoperation auszuführen, klicken Sie auf die zwei Buttons der entsprechenden Zahlen und dann auf eine Operation.</p>
+    <ul>
+	  <li><input id="Z0" type="button" value="4" onclick="z(0)">
+      <input id="Z1" type="button" value="6" onclick="z(1)">
+      <input id="Z2" type="button" value="8" onclick="z(2)">
+      <input id="Z3" type="button" value="8" onclick="z(3)">
+      <input id="Z4" type="button" value="10" style="margin-top:8px" onclick="z(4)">
+      <input id="Z5" type="button" value="100" style="margin-top:8px" onclick="z(5)">
+    </li>	 
+    <li>Operand1: <span id="Zahl1"> </span>&nbsp;&nbsp;&nbsp;&nbsp; Operand2: <span id="Zahl2"> </span></li>
+    <li><input id="Plus" type="button" value="+" onclick="plus()">
+      <input id="Minus" type="button" value="-" onclick="minus()">
+      <input id="Mal" type="button" value="*" onclick="mal()">
+      <input id="Dividiert" type="button" value="/" onclick="dividiert()">
+	</li>
+	</ul>
+  </div>
+
+</div>
+
+<p><b><span id="message"> </span></b></p>
+<p><span id="Solution1"> </span>
+<span id="Solution2" style="margin-left:30px"> </span>
+<span id="Solution3" style="margin-left:30px"> </span></p>
+<p><span id="Solution4"> </span>
+<span id="Solution5" style="margin-left:30px"> </span></p>
+
+<!-- EOF: CONTENT -->
+
+<p><small>
+©1997 -
+2026 www.mathematik.ch</small> |<a href="/search/"><span class="b" title="Suche">&#x1F50D;</span></a></p>
+
+</div>
+</body>
+</html>
+

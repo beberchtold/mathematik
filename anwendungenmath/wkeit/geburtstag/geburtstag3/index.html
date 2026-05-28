@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="text-scale" content="scale">
+<meta name="Description" content="Wahrscheinlichkeit: Geburtstagsparadox: Erweiterung">
+<title>Geburtstagsproblem: mindestens 3 von n Personen: Lösungsformeln</title>
+<LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
+</head>
+
+<body>
+<div class="page">
+<div class="flex">
+<span id="menuicon"><a href="/menu.html">
+<img src="/img/menuicon.svg" title="Inhalt" alt="menu"></a></span>
+<span class="Haupt"><a class="black" href="/" title="Home"><img src="/img/fractal_logo.svg" alt="Logo">mathematik.ch</a></span>
+</div>
+
+<!-- CONTENT -->
+
+<h1>Erweiterung des Geburtstagsproblems: Lösungsformel für k=3</h1>
+
+<p>An einer Versammlung befinden sich n Personen. Wie gross ist die Wahrscheinlichkeit,
+ dass mindestens <b>drei</b> am gleichen Tag des Jahres Geburtstag haben?</p>
+
+<p><b>Lösung</b></p>
+Ereignis A: Mindestens drei von n Personen haben am gleichen Tag Geburtstag.
+Wahrscheinlichkeit P(A) = ? <br>
+Entgegengesetztes Ereignis <span class="ol">A</span>:<br>
+<span class="ol">A</span>: Alle n Personen haben an verschiedenen Tagen Geburtstag oder genau je 2 Personen haben am gleichen Tag Geburtstag.<br><br>
+
+<p>Berechnung der Wahrscheinlichkeit P(<span class="ol">A</span>):<br>
+Anzahl mögliche Fälle m (1 Jahr = 365 Tage): &nbsp;&nbsp; m = 365<sup>n</sup><br>
+Anzahl günstige Fälle g für <span class="ol">A</span>: &nbsp;&nbsp; g = g0 + g1 + g2 + g3 + ..., wo<br>
+g0 = 365 &middot; 364 &middot; 363 &middot; ... &middot; (365 - n + 1)<br>
+g1 = <img src="n_tief2.gif" style="vertical-align:middle" width="25" height="41" alt="n tief 2">
+         &middot; 365 &middot; 1 &middot; 364 &middot; ... &middot; (365 - n + 2)<br>
+g2 = <img src="n_tief2.gif" style="vertical-align:middle" width="25" height="41" alt="n tief 2"> &middot; 
+     <img src="nminus2_tief2.gif" style="vertical-align:middle" width="44" height="41" alt="n-2 tief 2"> / 2! &middot; 365 &middot; 1 &middot; 364 &middot; 1 &middot;... &middot; (365 - n + 3)<br>
+g3 = <img src="n_tief2.gif" style="vertical-align:middle" width="25" height="41" alt="n tief 2"> &middot;
+     <img src="nminus2_tief2.gif" style="vertical-align:middle" width="44" height="41" alt="n-2 tief 2"> &middot;
+     <img src="nminus4_tief2.gif" style="vertical-align:middle" width="44" height="41" alt="n-4 tief 2">  / 3! &middot; 365 &middot; 1 &middot; 364 &middot; 1 &middot; 363 &middot; 1 &middot; ... &middot; (365 - n + 4)<br>
++ ...</p>
+
+<p>P(<span class="ol">A</span>) = g/m<br>
+Es gilt dann  P(A) = 1 - P(<span class="ol">A</span>).</p>  
+
+<p><a href="../">Zur Computersimulation</a></p>
+
+<!-- EOF: CONTENT -->
+
+<p><small>
+©1997 -
+2026 www.mathematik.ch</small> |<a href="/search/"><span class="b" title="Suche">&#x1F50D;</span></a></p>
+
+</div>
+</body>
+</html>

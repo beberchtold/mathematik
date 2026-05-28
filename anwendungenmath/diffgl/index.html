@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="text-scale" content="scale">
+<meta name="Description" content="Differentialgleichungen: Programm zur Lösung nach Runge-Kutta">
+<meta name="author" content="B.Berchtold">
+<title>Differentialgleichungen</title>
+<LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
+<script src="diffgl_min.js"></script>
+<script src="/script/infos.js" defer></script>
+<style>
+input[type=number] {width:3em;margin-bottom:10px}
+canvas {width:100%;height:auto;min-width:308px;max-width:500px}
+</style>
+</head>
+
+<body>
+<div class="page">
+<div class="flex">
+<span id="menuicon"><a href="/menu.html">
+<img src="/img/menuicon.svg" title="Inhalt" alt="menu"></a></span>
+<span class="Haupt"><a class="black" href="/" title="Home"><img src="/img/fractal_logo.svg" alt="Logo">mathematik.ch</a></span>
+</div>
+
+<!-- CONTENT -->
+
+<h1>Differentialgleichungen: Lösung nach Runge-Kutta</h1>
+
+<p>Geben Sie eine Differentialgleichung der Form &nbsp;&nbsp;
+y' = g(x,y)&nbsp;&nbsp; ein.<br>
+Der Startpunkt ist (x0/y0), der Endwert für x ist xe.<br>
+Das Programm versucht den Funktionswert y = f(xe) zu berechnen und den Graph von f im Intervall [x0,xe] 
+im Bereich für y-Werte zwischen ymin und ymax zu zeichnen.<br>
+Die Schrittweite wird im Laufe des Programms - falls nötig - automatisch angepasst.
+</p>
+
+<div class="colgroup-2">
+  <div class="col">
+     <canvas id="myCanvas" width=320 height=320>Ihr Browser kann kein Canvas!</canvas>
+  </div>
+
+  <div class="col">
+   <ul>
+	<li>Gleichung: y' = <input id="f" type="text" value="-x/y" style="width:10em;">
+	  <img src="/img/help.png" alt="Hilfe" onclick="infos('info_diffgl.html','Infofenster',520,600)">
+	</li>
+    <li>x0: <input id="x0" type="number" value="0" lang="en"> &nbsp;&nbsp;&nbsp;
+      y0: <input id="y0" type="number" value="1" lang="en"> &nbsp;&nbsp;&nbsp;
+      xe: <input id="xe" type="number" value="1" lang="en">
+      <br>
+	  ymin: <input id="ymin" type="number" value="-0.1" lang="en"> &nbsp;&nbsp;&nbsp;
+      ymax: <input id="ymax" type="number" value="1.1" lang="en">
+	  <br>
+	  Schrittweite h: <input id="h" type="number" style="width:4em" value="0.1" lang="en">
+	</li>
+    <li><input type="button" value="Reset" onclick="reset()">
+	  <input id="Run" type="button" value="Run" onclick="run()" style="margin-left:30px">
+	  <input id="Step" type="button" value="Step" onclick="dostep()" style="margin-left:30px">
+	</li>
+	</ul>
+	<p><span id="message"> </span></p>
+    <p><span id="x1"> </span> &nbsp;&nbsp;&nbsp;<span id="y1"> </span><br>
+	<span id="x2"> </span> &nbsp;&nbsp;&nbsp;<span id="y2"> </span><br>
+	<span id="x3"> </span> &nbsp;&nbsp;&nbsp;<span id="y3"> </span><br>
+	<span id="x4"> </span> &nbsp;&nbsp;&nbsp;<span id="y4"> </span><br>
+	<span id="x5"> </span> &nbsp;&nbsp;&nbsp;<span id="y5"> </span><br>
+	</p>	
+  </div>   
+</div>
+
+<p><a href="Differentialgleichungen.pdf">Dazugehörige Theorie <img src="/img/pdficon.png" alt="pdficon"></a></p>
+
+<!-- EOF: CONTENT -->
+
+<p><small>
+©1997 -
+2026 www.mathematik.ch</small> |<a href="/search/"><span class="b" title="Suche">&#x1F50D;</span></a></p>
+
+</div>
+</body>
+</html>

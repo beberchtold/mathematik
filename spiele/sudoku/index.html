@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="text-scale" content="scale">
+<title>Sudoku 9x9 (Standard-Sudoku)</title>
+<meta name="Description" content="Spiel Sudoku mit Javascript: Generator und Solver">
+<meta name="author" content="B.Berchtold">
+<link rel="stylesheet" href="/css/mathematik.css" TYPE="text/css">
+<script src="sudoku_min.js"></script>
+<script src="problems_min.js"></script>
+<script src="/script/infos.js" defer></script>
+<style> input[type="button"]{min-width:39px;margin:3px 8px 3px 0px}
+input.a[type="button"]{width:4.2em}
+select{width:4em;height:1.4em}
+li.a{padding:2px 0px 2px 2px}
+</style>
+</head>
+
+<body onkeyup="keyPress(event.keyCode)">
+<div class="page">
+<div class="flex">
+<span id="menuicon"><a href="/menu.html">
+<img src="/img/menuicon.svg" title="Inhalt" alt="menu"></a></span>
+<span class="Haupt"><a class="black" href="/" title="Home"><img src="/img/fractal_logo.svg" alt="Logo">mathematik.ch</a></span>
+</div>
+
+<!-- CONTENT -->
+
+<h1>Sudoku 9x9 (Standard-Sudoku)</h1>
+
+<p>Das Ziel des Spiels ist, in jeder Zeile, Kolonne und Box (eine Box ist durch fette Linien abgetrennt) 
+genau die Ziffern 1 bis 9 zu haben.<br>
+Sie können das angezeigte Problem lösen, die Ziffern einer Problemstellung in die Felder eingeben oder mit <b>Create</b> durch den Computer ein neues Problem 
+erzeugen lassen.<br>
+Sie können auch durch Wahl von p1 bis p11 aus dem Auswahlfeld 'Prob' ein gespeichertes Problem laden und dann lösen.</p>
+<ul>
+  <li><input type="button" value="Weitere Info" style="width:8em" onclick="infos('infos.html','Infofenster',400,600)"></li>
+</ul>
+
+<div class="colgroup-2">
+  <div class="col" id="containercanvas">
+     <canvas id="myCanvas">Ihr Browser kann kein Canvas!</canvas>
+  </div>
+  
+  <div class="col">
+  <div id="zifferbuttons">
+  <ul>
+    <li>Eingabe der Ziffer ins akt. (hellblaue) Feld:</li>
+	<li><input type="button" title="löscht (schwarze) Ziffer, funktioniert auch mit delete-Taste" value=" " onclick="eingabe(0)">
+	<input id="1" type="button" value="1" onclick="eingabe(1)">
+	<input id="2" type="button" value="2" onclick="eingabe(2)">
+	<input id="3" type="button" value="3" onclick="eingabe(3)">
+    <input id="4" type="button" value="4" onclick="eingabe(4)">
+	<input id="5" type="button" value="5" onclick="eingabe(5)">
+	<input id="6" type="button" value="6" onclick="eingabe(6)">
+    <input id="7" type="button" value="7" onclick="eingabe(7)">
+	<input id="8" type="button" value="8" onclick="eingabe(8)">
+	<input id="9" type="button" value="9" onclick="eingabe(9)">
+	</li>
+  </ul>
+	<div style="margin-top:14px;outline:1px solid;padding:0px 0px 3px 2px;">
+	<ul>
+	  <li class="a"><label><input id="faerbe" type="checkbox" onclick="OnChangeCheckbox3(this)">Box färben</label></li>
+	  <li class="a"><label><input id="Show" type="checkbox" onclick="OnChangeCheckbox1(this)">Verfügbare Ziffern im akt. Feld:</label> <span id="Verf"></span>
+      </li>
+      <li class="a"><label><input id="Hilfe" type="checkbox" onclick="OnChangeCheckbox2(this)">Nicht mögliche Felder für Ziffer:</label>
+	  </li>
+	  <li><input id="H1" type="button" value="1" onclick="hilf(1)">
+	  <input id="H2" type="button" value="2" onclick="hilf(2)">
+	  <input id="H3" type="button" value="3" onclick="hilf(3)">
+      <input id="H4" type="button" value="4" onclick="hilf(4)">
+	  <input id="H5" type="button" value="5" onclick="hilf(5)">
+	  <input id="H6" type="button" value="6" onclick="hilf(6)">
+      <input id="H7" type="button" value="7" onclick="hilf(7)">
+	  <input id="H8" type="button" value="8" onclick="hilf(8)">
+	  <input id="H9" type="button" value="9" onclick="hilf(9)">
+	  </li>
+	</ul>
+	</div>
+  </div>
+	<p style="margin-top:20px"><b><span id="message"></span></b></p>
+    <ul>
+	<li><input class="a" type="button" value="Save" title="speichert aktuelle Stellung" onclick="save_user()">
+      <input class="a" type="button" id="Loa" value="Load" title="ladet die mit Save gespeicherte Stellung" onclick="load_user()">
+	  <input class="a" type="button" value="Solve" title="Computer versucht Lösung der aktuellen Stellung zu finden" onclick="solvebutton()">
+	</li>
+	<li><input class="a" type="button" value="Create" title="Computer versucht neue Problemstellung zu erzeugen" onclick="docreate()">
+	  <input class="a" type="button" value="Clear" title="erzeugt leeres Startfeld" onclick="initPuzzle()">
+	  <select id="wahl" onchange="problem(this[selectedIndex].index)">
+        <option>Prob</option>
+	    <option>p1</option>
+        <option>p2</option>
+        <option>p3</option>
+        <option>p4</option>
+        <option>p5</option>
+	    <option>p6</option>
+	    <option>p7</option>
+	    <option>p8</option>
+        <option>p9</option>
+	    <option>p10</option>
+	    <option>p11</option>
+      </select>
+	</li>
+	</ul>
+  </div>       
+</div>	
+
+
+<p>Ein Standard-Sudoku ist ein Spezialfall des Squiggly-Sudoku. Es benötigt mindestens 17 Vorgaben (Gary McGuire, Januar 2012).<br>
+Sie können dieses Standard-Sudoku auch bei <a href="/spiele/sudoku_squiggly/">Squiggly Sudoku</a> spielen. Wählen Sie dort Problem p8.
+Sie haben mehr Möglichkeiten zur Auswahl (z.B. Check, ob Ihre Zwischenlösung korrekt ist, Speichern von neuen Problemen usw.). Die hier  
+vordefinierten Probleme finden Sie dort mit 'Upload Standard-Probleme'.</p>
+
+<p><span style="margin-right:60px;"><a href="/spiele/sudoku_x/">Zu SudokuX</a></span>
+<a href="/spiele/sudoku_squiggly/">Zu Squiggly Sudoku</a></p>
+
+<!-- EOF: CONTENT -->
+ 
+<p><small>
+©1997 -
+2026 www.mathematik.ch</small> |<a href="/search/"><span class="b" title="Suche">&#x1F50D;</span></a></p>
+
+</div>
+</body>
+</html>

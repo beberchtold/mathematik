@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="text-scale" content="scale">
+<meta name="Description" content="Zusammenhang Peripheriewinkel und Zentriwinkel, Thaleskreis">
+<title>Peripherie- und Zentriwinkel</title>
+<link rel="stylesheet" href="/css/mathematik.css" TYPE="text/css">
+<script src="peripherie_min.js"></script>
+</head>
+
+<body>
+<div class="page">
+<div class="flex">
+<span id="menuicon"><a href="/menu.html">
+<img src="/img/menuicon.svg" title="Inhalt" alt="menu"></a></span>
+<span class="Haupt"><a class="black" href="/" title="Home"><img src="/img/fractal_logo.svg" alt="Logo">mathematik.ch</a></span>
+</div>
+
+<!-- CONTENT -->
+
+<h1>Peripherie- und Zentriwinkel</h1>  
+
+<p>Es gilt der Satz:</p>
+<div style="border:1px solid;padding:5px"><strong>Ein Zentriwinkel ist doppelt so gross wie ein Peripheriewinkel über dem 
+gleichen Bogen</strong><br>
+(gilt auch für stumpfe Peripheriewinkel)
+</div>
+
+<p>Folgerung:</p>
+<div style="border:1px solid;padding:5px"><strong>Alle Peripheriewinkel über dem gleichen Bogen sind gleich gross</strong> 
+</div>
+
+<p>Prüfen Sie diese Behauptungen an folgender Figur:<br>
+Sie können den Scheitel P des Peripheriewinkels mit der Maus (auf dem Kreis) bewegen. Alternativ können Sie auch 
+mit 'Step' die Lage von P schrittweise verändern.<br>
+Durch Verschieben der Ecke B (Radiobutton aktivieren) verändern Sie den Zentriwinkel und damit auch den dazugehörigen 
+Peripheriewinkel.<br> Immer gilt aber: Zentriwinkel = 2*Peripheriewinkel<br>
+Sie können dadurch auch den <strong>Satz des <a href="/mathematiker/thales.html">Thales</a></strong> experimentell nachvollziehen:<br>
+Der Peripheriewinkel über dem Kreisdurchmesser AB (also Zentriwinkel = 180°) misst 90° &rarr; <strong>Thaleskreis</strong>.</p>
+
+<div class="colgroup-2">
+  <div class="col" id="containercanvas">
+       <canvas id="myCanvas">Ihr Browser kann kein Canvas!</canvas>
+  </div>
+  <div class="col">
+   <ul>
+    <li>Zentriwinkel = <span id="zentri">   </span>°</li>
+	<li><span style="color:red">Peripheriewinkel = </span><span id="peripherie"> </span>°</li>
+    <li><label><input id="VarP" type="radio" checked="checked" name="PB"> Lage Punkt P verändern</label></li>
+    <li><label><input id="VarB" type="radio" name="PB" onclick="OnChangeradio2 (this)"> Lage Punkt B verändern</label></li>
+	<li><label><input id="Tk" type="checkbox" onclick="OnChangeCheckbox (this)"> Thaleskreis</label></li>
+    <li><input type="button" value="Step" onclick="dostep()"></li>
+   </ul>	
+  </div>       
+</div>	   
+
+<p>Anwendung dazu: <a href="/anwendungenmath/Peripherie_Zentriwinkel/ortsbogen.html">Ortsbogen 70°, Lösung 1</a></p>
+<br>
+
+<p><b>Beweis für spitzen Peripheriewinkel:</b></p>
+<div class="colgroup-2">
+  <div class="col">
+     <img src="peripherie_und_zentriwinkel.png" width="320" height="335" alt="peripheriewinkel">
+  </div>
+  
+  <div class="col">
+    <p>Zentriwinkel &alpha;, Peripheriewinkel &beta;<br>
+       Behauptung: &alpha; = 2&beta;</p>
+    <p>Da Dreieck APM gleichschenklig, so <br>
+       &ang;(APM) = &ang;(PAM) = &epsilon;. 
+       Also ist &gamma; = 180° - 2&epsilon;</p>
+    <p>Da Dreieck APM gleichschenklig, so &ang;(BPM) = &ang;(PBM) = &zeta;.
+      Also ist &delta; = 180° - 2&zeta;</p>
+    <p>Also ist &alpha; = 360° - &gamma; - &delta; = 2&epsilon; + 2&zeta;</p>
+    <p>Da aber &beta; = &epsilon; + &zeta;, so gilt die Behauptung<br>
+    (für stumpfen Peripheriewinkel &beta; analog)</p>
+  </div>
+</div> 
+
+<!-- EOF: CONTENT -->
+
+<p><small>
+©1997 -
+2026 www.mathematik.ch</small> |<a href="/search/"><span class="b" title="Suche">&#x1F50D;</span></a></p>
+
+</div>
+</body>
+</html>

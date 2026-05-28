@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="text-scale" content="scale">
+<meta name="Description" content="Programm zur Nullstelle mit allgemeiner Iteration">
+<meta name="Keywords" content="Nullstelle,Iteration,logistisch,logistische Gleichung,numerische Lösung">
+<meta name="author" content="B.Berchtold">
+<title>Nullstelle mit allgemeiner Iteration</title>
+<LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
+<script src="iteration_min.js"></script>
+<script src="/script/infos.js" defer></script>
+<style>
+input[type=number] {width:3em}
+input[type=button] {margin:3px 20px 5px 0px}
+canvas {width:100%;height:auto;min-width:308px;max-width:500px}
+span.red {color:red;font-weight:bold}
+span.green {color:#008000;font-weight:bold}
+span.blue {color:blue;font-weight:bold}
+</style>
+</head>
+
+<body>
+<div class="page">
+<div class="flex">
+<span id="menuicon"><a href="/menu.html">
+<img src="/img/menuicon.svg" title="Inhalt" alt="menu"></a></span>
+<span class="Haupt"><a class="black" href="/" title="Home"><img src="/img/fractal_logo.svg" alt="Logo">mathematik.ch</a></span>
+</div>
+
+<!-- CONTENT -->
+
+<h1>Nullstelle mit allgemeiner Iteration</h1>
+
+<p>Gesucht ist eine Lösung der Gleichung x = g(x) und damit eine Nullstelle der Funktion mit Gleichung y = f(x) = x - g(x).</p>
+
+<div class="colgroup-2">
+  <div class="col">
+     <canvas id="myCanvas" width="400" height="400">Ihr Browser kann kein Canvas!</canvas>
+  </div>
+
+  <div class="col">
+   <ul>
+    <li><span class="green">g(x) = </span><input id="f" type="text" value="cos(x)" style="width:13.5em;margin-bottom:5px">
+	<img src="/img/help.png" alt="Hilfe" onclick="infos('info_iteration.html','Infofenster',520,600)"></li>
+    <li>Linke: <input id="Xmin" style="margin-right:15px" type="number" value="-0.2" lang="en">
+      Rechte Grenze: <input id="Xmax" type="number" value="2" lang="en"></li>
+    <li>Startwert x0: <input id="x0" type="number" value="1" lang="en"></li>
+    <li>Stop falls |x(n+1)-xn| &le; <input id="eps" style="width:5em;" type="number" value="1E-6" lang="en"></li>
+    <li>Max Iterationen: <input id="max" style="width:3em;" type="number" min="1" max="200" value="70"></li>
+    <li><input type="button" value="Reset" onclick="reset()">
+	   <input id="Run" type="button" value="Run" onclick="run()">
+	   <input id="Step" type="button" value="Step" onclick="dostep()">
+	</li>
+   </ul>  
+    <p><span id="xn" class="red"> </span></p>
+    <p><span id="xneu" class="blue"> </span></p>
+	<p><span id="message"> </span></p>	
+  </div>
+</div>	
+
+<p>Nebenbei:<br>
+Sie können diese Iteration auch dazu benützen, um das chaotische Verhalten an Hand der logistischen Gleichung<br>
+<b>x<sub>n+1</sub> = r x<sub>n</sub> (1 - x<sub>n</sub>)</b> darzustellen.<br>
+Wählen Sie das Intervall von 0 bis 1 und den Startwert x0 = 0.3.<br>
+Geben Sie dann bei y den Term <b>r*x*(1-x)</b> ein für 0 &lt; r &lt; 4.<br>
+(z.B. für r = 2.5, dann r = 3.05, r = 3.5, r = 3.6, r = 3.82, r = 3.83, r = 3.85 und r =4)<br>
+Was entstehen für Resultate?
+</p>
+<br>
+<p><a href="./">Zu Nullstelle mit Newton</a></p>
+<p><a href="schachtelung.html">Zu Nullstelle mit Intervallschachtelung</a></p>
+
+<!-- EOF: CONTENT -->
+
+<p><small>
+©1997 -
+2026 www.mathematik.ch</small> |<a href="/search/"><span class="b" title="Suche">&#x1F50D;</span></a></p>
+
+</div>
+</body>
+</html>
+

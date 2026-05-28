@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="text-scale" content="scale">
+<meta NAME="Description" content="Programm zur Nullstelle mit Intervallschachtelung">
+<meta name="author" content="B.Berchtold">
+<title>Nullstelle mit Intervallschachtelung</title>
+<link rel="stylesheet" href="/css/mathematik.css" TYPE="text/css">
+<script src="schachtelung_min.js"></script>
+<script src="/script/infos.js" defer></script>
+<style>input[type=button] {margin:3px 25px 5px 0px}</style>
+</head>
+
+<body>
+<div class="page">
+<div class="flex">
+<span id="menuicon"><a href="/menu.html">
+<img src="/img/menuicon.svg" title="Inhalt" alt="menu"></a></span>
+<span class="Haupt"><a class="black" href="/" title="Home"><img src="/img/fractal_logo.svg" alt="Logo">mathematik.ch</a></span>
+</div>
+
+<!-- CONTENT -->
+
+<h1>Nullstelle mit Intervallschachtelung</h1>
+
+<p>Gesucht ist eine Nullstelle der Funktion mit Gleichung y = f(x).</p>
+
+<ul>
+  <li>y = <input id="f" type="text" value="cos(x)" style="width:14.5em;margin-bottom:5px">
+	<img src="/img/help.png" alt="Hilfe" onclick="infos('info_schachtelung.html','Infofenster',520,600)"></li>
+  <li>Linke: <input id="Xmin" style="margin-right:15px" type="number" value="1">
+	Rechte Grenze: <span id="Xr"> </span></li>
+  <li>Anzahl Dezimalstellen &le; 14: <input id="Anz" type="number" min="1" max="14" value="8"></li>
+  <li><input type="button" value="Reset" onclick="init()">
+	  <input id="Run" type="button" value="Run" onclick="run()">
+	  <input id="Step" type="button" value="Step" onclick="dostep()">
+  </li>
+  </ul>
+    <p><span id="xl"> </span></p>
+    <p><span id="xr"> </span></p>
+	<p><span id="message"> </span></p>
+<br>
+<p><a HREF="./">Zu Nullstelle mit Newton</a><p>
+<p><a HREF="iteration.html">Zu Nullstelle mit allgemeiner Iteration</a></p>
+
+<!-- EOF: CONTENT -->
+
+<p><small>
+©1997 -
+2026 www.mathematik.ch</small> |<a href="/search/"><span class="b" title="Suche">&#x1F50D;</span></a></p>
+
+</div>
+</body>
+</html>

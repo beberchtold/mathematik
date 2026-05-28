@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="text-scale" content="scale">
+<meta NAME="Description" CONTENT="Lissajous-Figuren mit Javascript und Kunstvarianten">
+<title>Lissajous-Figuren und Varianten</title>
+<LINK REL="stylesheet" href="/css/mathematik.css" TYPE="text/css">
+<script src="lissajous_min.js"></script>
+<style>
+input[type="button"] {margin-bottom:5px;margin-right:12px;}
+canvas {width:100%;height:auto;min-width:308px;max-width:500px}
+</style>
+</head>
+
+<body>
+<div class="page">
+<div class="flex">
+<span id="menuicon"><a href="/menu.html">
+<img src="/img/menuicon.svg" title="Inhalt" alt="menu"></a></span>
+<span class="Haupt"><a class="black" href="/" title="Home"><img src="/img/fractal_logo.svg" alt="Logo">mathematik.ch</a></span>
+</div>
+
+<!-- CONTENT -->
+
+<h1>Lissajous-Figuren und Varianten</h1>  
+
+<div class="colgroup-2">
+  <div class="col">
+     <canvas id="myCanvas" width="400" height="360">Ihr Browser kann kein Canvas!</canvas>
+  </div>
+  <div class="col">
+   <ul>
+    <li>a&nbsp;=&nbsp;<span id="A"></span>,&nbsp;b&nbsp;=&nbsp;<span id="B"></span>,&nbsp;k&nbsp;=&nbsp;<span id="K"></span></li>
+	<li><input id="b1" type="button" value="Step" onclick="dostep()">
+	  <input id="RUN" type="button" value="Run" onclick="run()">
+	</li>
+    <li><input id="b2" type="button" value="a+" onclick="change_a()">
+	  <input id="b18" type="button" value="a-" onclick="change_aminus()">
+	  <input id="b3" type="button" value="b+" onclick="change_b()">
+	  <input id="b19" type="button" value="b-" onclick="change_bminus()">
+	</li>
+	<li><input id="b4" type="button" value="k+" onclick="change_k()">
+	  <input id="b20" type="button" value="k-" onclick="change_kminus()">
+	  <input id="b5" type="button" value="k+10" onclick="change_k10()">
+	  <input id="b6" type="button" value="k=1" onclick="benutzer1()">
+	</li>	
+    <li><input type="button" value="Save" onclick="save()">
+	  <input id="b17" type="button" value="Load" onclick="load()">
+	</li>
+   </ul>
+   </div>
+</div>
+
+   <ul>
+	<li><input id="b7" type="button" value="F1" onclick="F1()">
+	  <input id="b8" type="button" value="F2" onclick="F2()">
+	  <input id="b9" type="button" value="F3" onclick="F3()">
+	  <input id="b10" type="button" value="F4" onclick="F4()">
+	  <input id="b11" type="button" value="F5" onclick="F5()">
+	  <input id="b12" type="button" value="F6" onclick="F6()">
+	  <input id="b13" type="button" value="F7" onclick="F7()">
+	  <input id="b14" type="button" value="F8" onclick="F8()">
+	  <input id="b15" type="button" value="F9" onclick="F9()">
+	  <input id="b16" type="button" value="F10" onclick="F10()">
+    </li>
+   </ul>
+<p>'Step' zeichnet Zufallsfigur mit Zufallsfarbe, 'Run/Stop' erzeugt permanent Zufallsfiguren.<br> 
+Klick auf 'a+', 'b+', 'k+' erhöht den betreffenden Wert um 1 und zeichnet die dazugehörige Figur in der aktuellen Farbe.<br>
+Analog für Klick auf 'a-', 'b-', ... Klick auf 'k+10' erhöht k um 10.<br>
+'k=1' erzeugt die dazugehörige Lissajousfigur.<br>
+Mit 'Save' können Sie eine Figur speichern und sie später mit 'Load' (in der aktuellen Farbe) wieder laden.<br>
+F1 bis F10 zeigen vordefinierte Figuren.</p>
+<p>Lissajous-Figuren sind Überlagerungen zweier zueinander senkrecht stehender Schwingungen.<br>
+Hier entstehen Punkte (x<sub>i</sub>|y<sub>i</sub>) der Figur gemäss x<sub>i</sub> = cos(a*k*i), y<sub>i</sub> = sin(b*k*i) für i = 1,2,3,...,L; 
+1&le;a&le;10, 1&le;b&le;10, 1&le;k&le;359, k in Grad.<br> 
+Aufeinanderfolgende Punkte werden durch eine Strecke verbunden. k=1 liefert also die eigentliche Lissajousfigur.<br>
+Sie erhalten z.B. für a=b=1 und k=60 für i=1 bis 6 ein regelmässiges Sechseck, die dazugehörige Lissajousfigur (k=1) ist ein Kreis.</p>
+
+<!-- EOF: CONTENT -->
+
+<p><small>
+©1997 -
+2026 www.mathematik.ch</small> |<a href="/search/"><span class="b" title="Suche">&#x1F50D;</span></a></p>
+
+</div>
+</body>
+</html>

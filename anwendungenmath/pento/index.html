@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="text-scale" content="scale">
+<title>Pentominos Feld 10x6</title>
+<meta name="Description" content="Lösung des 10x6 Pentominos-Problems mit JavaScript, Backtracking-Algorithmus">
+<meta name="author" content="B.Berchtold">
+<link rel="stylesheet" href="/css/mathematik.css" TYPE="text/css">
+<script src="pentominosver2.2min.js"></script>
+<style>
+input[type="button"] {margin:10px 20px 10px 0px}
+select {height:1.4em}
+canvas {width:100%;height:auto;min-width:308px;max-width:408px}
+select.start{width:15em}
+</style>
+</head>
+
+<body>
+<div class="page">
+<div class="flex">
+<span id="menuicon"><a href="/menu.html">
+<img src="/img/menuicon.svg" title="Inhalt" alt="menu"></a></span>
+<span class="Haupt"><a class="black" href="/" title="Home"><img src="/img/fractal_logo.svg" alt="Logo">mathematik.ch</a></span>
+</div>
+
+<!-- CONTENT -->
+
+<h1>Pentominos Feld 10x6</h1>
+
+<p>Das Programm zeigt den Algorithmus zum Finden von Lösungen des 10x6 Pentominos-Problems.</p>
+
+<div class="colgroup-2">
+  <div class="col">
+   <canvas id="myCanvas" width="408" height="244"> Ihr Browser kann kein Canvas! </canvas><br><br>
+  </div> 
+  <div class="col">
+   <div id="label">Anzahl Lösungen: 0</div>
+   <ul>   
+     <li><input type="button" id="goBttn" value="Go" onclick="doGo()">  
+      <input type="button" id="stepBttn" value="Step" onclick="doStep()">
+	  <input type="button" id="reset" value="Reset" onclick="Start()">
+     </li>
+     <li><span id="label1"> </span></li>
+     <li>Position von Kreuz<br>
+      <select class="start" title="Startposition" id="Startpos" onchange="Start()">
+      <option value="15">Zeile1,Feld3, 389 Lösungen </option>
+      <option value="16">Zeile1,Feld4, 342 Lösungen </option>
+      <option value="17" selected>Zeile1,Feld5, 291 Lösungen </option>
+      <option value="26">Zeile2,Feld2, 442 Lösungen </option>
+      <option value="27">Zeile2,Feld3, 262 Lösungen </option>
+      <option value="28">Zeile2,Feld4, 276 Lösungen </option>
+      <option value="29">Zeile2,Feld5, 337 Lösungen </option>  
+      </select>
+	 </li>
+     <li>Verzögerung in Millisekunden
+      <select title="Delay" id="Delay">
+	  <option value="0">0</option>
+      <option value="1">1</option>
+      <option value="100">100</option>
+      <option value="500">500</option>
+      <option value="1000">1000</option>
+      </select>
+	 </li>
+	</ul> 
+  </div> 
+ </div>
+<ul>
+    <li>Nach Klick auf <b>Go</b> löst der Computer das Puzzle. Klick auf <b>Stop</b> unterbricht diesen Vorgang.<br>
+	     Der Computer stoppt nach jeder gefundenen Lösung.
+    </li>
+	<li>Klick auf <b>Step</b> lässt den Computer das Puzzle schrittweise lösen.</li>
+    <li>Die Geschwindigkeit können Sie mit den entsprechenden Befehlen steuern.</li>
+	<li><b>Reset</b> startet mit der aktuellen Position des Kreuzes neu.</li>
+    <li>Da die Anfangsposition des Kreuzes vorgewählt wird, erzeugt das Programm nur nichtkongruente Lösungen. 
+      Es gibt insgesamt <b>2339</b> solche Lösungen.</li>
+</ul>
+
+<p>Siehe auch das <a href="/anwendungenmath/pento12x5"><b>12x5 Pentominos-Problem</b></a> (Hier können Sie Pentominos setzen)</p>
+<p>Interessant ist auch das <a href="/spiele/N_Damenproblem"><b>N Damen-Problem</b></a></p>
+<p>Bilder zu Polyominos: <a href="/hammer/polyominos/">Wo steckt der Wurm?</a></p>
+
+<!-- EOF: CONTENT -->
+
+<p><small>
+©1997 -
+2026 www.mathematik.ch</small> |<a href="/search/"><span class="b" title="Suche">&#x1F50D;</span></a></p>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<!--
+ The  original file has been put into the public domain by its
+ author, David Eck (http://math.hws.edu/eck), with no
+ guarantees or claims about what it might be good for.
+ Please note that the card images used in this game are
+ from the Gnome Desktop project, which uses the GPL
+ license.  The prototype and scriptaculous JavaScript
+ libraries that are used on this page have their own license.
+ The translation of the comments in german and some other changes by Bernhard Berchtold, www.mathematik.ch
+-->
+<html lang="de">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="text-scale" content="scale">
+<title>BlackJack mit Javascript</title>
+<meta name="Description" CONTENT="Blackjack mit JavaScript, Kartenspiel mit Ziel 21 Punkte">
+<script src="Card_min.js"></script>
+<script src="DisplayedCard_min.js"></script>
+<script src="js/prototype.js"></script>
+<script src="js/effects.js"></script>
+<script src="blackjack_min.js"></script>
+<LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
+<style>
+*[id^='dealer']{width:60px;height:100px;margin-left:2px;background-color:#660;float:left}
+*[id^='player']{width:60px;height:100px;margin-left:2px;background-color:#660;float:left}
+input[type=button] {width:7.2em;margin-bottom:10px}
+div.feld{border:solid #660;color:white;background-color:#280;width:312px;height:270px}
+div.place{height:110px;margin-top:5px}
+</style>
+</head>
+
+<body>
+<div class="page">
+<div class="flex">
+<span id="menuicon"><a href="/menu.html">
+<img src="/img/menuicon.svg" title="Inhalt" alt="menu"></a></span>
+<span class="Haupt"><a class="black" href="/" title="Home"><img src="/img/fractal_logo.svg" alt="Logo">mathematik.ch</a></span>
+</div>
+
+<!-- CONTENT -->
+
+<h1>Black Jack (Ziel: 21 Punkte)</h1>
+<div class="colgroup-2">
+  <div class="col">
+    <div class="feld">
+      <div style="margin-top:5px">Karten der Bank:</div>
+	  <div class="place">
+        <div id="dealer1"></div>
+	    <div id="dealer2"></div>
+        <div id="dealer3"></div>
+        <div id="dealer4"></div>
+        <div id="dealer5"></div>
+	  </div>
+      <div>Ihre Karten:</div>
+	  <div class="place">
+        <div id="player1"></div>
+        <div id="player2"></div>
+        <div id="player3"></div>
+        <div id="player4"></div>
+        <div id="player5"></div>
+	  </div>
+	</div>
+  </div>
+  <div class="col">
+    <ul style="margin-top:10px">
+      <li><input type="button" id="hitButton" value="Neue Karte" style="width:7em" onclick="hit()" disabled>
+        <input type="button" id="standButton" value="Deal" style="width:4.2em" onclick="stand()" disabled>
+        <input type="button" id="newGameButton" value="Neues Spiel" onclick="startGame()">
+      </li>
+      <li><b><span id="message">Willkommen zu Blackjack!<br>
+          Klicken Sie "Neues Spiel" zum Starten.</span></b></li>
+	  <li>Sie besitzen  <span id="money"> </span><br>
+	      Wettbetrag <input type="text" title="Wettbetrag" id="bet" style="width:4em"></li>
+	</ul>	  
+    <p>Total: <span id="Total" style="margin-right:22px">0</span>Gewonnen: <span id="Gewonnen" style="margin-right:22px">0</span>
+       Verloren: <span id="Verloren">0</span></p> 
+    <p><small>Bei den verlorenen Spielen sind auch die <span id="Gleichstand">0</span> unentschiedenen gezählt, denn  
+       bei Gleichstand gewinnt die Bank.</small></p>
+   </div>
+</div>
+
+<!-- EOF: CONTENT -->
+
+<p><small>
+©1997 -
+2026 www.mathematik.ch</small> |<a href="/search/"><span class="b" title="Suche">&#x1F50D;</span></a></p>
+
+</div>
+</body>
+</html>

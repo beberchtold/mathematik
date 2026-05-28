@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="text-scale" content="scale">
+<meta name="Description" content="Wahrscheinlichkeit: Geburtstagsparadox, Simulation">
+<title>Geburtstagsproblem: Simulation und theoretische Lösung</title>
+<link rel="stylesheet" href="/css/mathematik.css" TYPE="text/css">
+<script src="geburtstag_min.js"></script>
+</head>
+
+<body>
+<div class="page">
+<div class="flex">
+<span id="menuicon"><a href="/menu.html">
+<img src="/img/menuicon.svg" title="Inhalt" alt="menu"></a></span>
+<span class="Haupt"><a class="black" href="/" title="Home"><img src="/img/fractal_logo.svg" alt="Logo">mathematik.ch</a></span>
+</div>
+
+<!-- CONTENT -->
+
+<h1>Geburtstagsproblem: Simulation und theoretische Lösung</h1>
+  
+<p>Eine berühmte Aufgabe (auch Geburtstagsparadox genannt, weil das Resultat häufig erstaunt!) aus der 
+Wahrscheinlichkeitsrechnung lautet folgendermassen:</p>
+  
+<p>An einer Versammlung befinden sich n Personen. Wie gross ist die Wahrscheinlichkeit,
+ dass mindestens k am gleichen Tag des Jahres Geburtstag haben? (k = 2, 3, 4, ...n)</p>
+
+<p>Nach Eingabe von n und k und anschliessendem Klick auf "Berechne" wird diese Wahrscheinlichkeit gemäss folgender Anordnung simuliert:<br>
+Es werden 10000 Versuche mit n Personen durchgeführt. Den n Personen wird zufällig einer der 365 Tage als Geburtstag zugeordnet.
+Nun wird gezählt, in wie vielen der 10000 Versuchen mindestens k Personen am gleichen Tag Geburtstag haben.<br><br>
+Zusätzlich wird im Fall k=2 oder k=3 zum Vergleich auch der theoretisch berechnete Wert der Wahrscheinlichkeit angegeben.</p>
+
+<div class="colgroup-2">
+ <div class="col">
+  <div style="border:1px solid #666666; padding:7px;">
+
+  <p>
+    Anzahl (2 &le; n &le; 250)
+      <input id="n" type="number" min=2 max=250 style="width:60px;margin-left:17px;" value="25">
+  </p>
+  <p>
+    Anzahl (2 &le; k &le; n)
+       <input id="k" type="number" min=2 style="width:60px;margin-left:17px;" value="2">
+    </p>
+    <p>
+       <input type="button" value="Berechne" onclick="rechne()">
+    </p>
+  </div>
+ </div> 
+ <div class="col">
+  <div style="border:1px solid #666666; padding:7px;">
+    <p><b>Resultat Simulation für n = <span id="N"></span></b><br>
+    Wahrscheinlichkeit P(mindestens <span id="K"></span> haben am gleichen Tag Geburtstag) &asymp; <b><span id="RES"></span>%</b></p>
+    <p><span id="Res2"></span></p>
+  </div>
+ </div>
+</div>  
+<br>
+<p>Hier finden Sie die Lösungsformel für k = 2: <a href="formeln2.html">theoretische Werte</a></p>
+<p>Hier finden Sie die Lösungsformel für k = 3: <a href="geburtstag3/">theoretische Werte</a></p>
+
+<!-- EOF: CONTENT -->
+
+<p><small>
+©1997 -
+2026 www.mathematik.ch</small> |<a href="/search/"><span class="b" title="Suche">&#x1F50D;</span></a></p>
+
+</div>
+</body>
+</html>

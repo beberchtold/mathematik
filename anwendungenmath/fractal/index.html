@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="text-scale" content="scale">
+<title>Fraktale mit IFS</title>
+<meta name="description" content="Fraktale mit IFS (Iterated Function Systems)">
+<meta name="keywords" content="Fraktal, Farn, Ahorn, Sierpinski, Menger, Kochkurve">
+<LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
+<script src="fractal_min.js"></script>
+<script src="/script/infos.js" defer></script>
+<style>
+input[type="button"] {margin-bottom:5px;margin-right:6px;}
+canvas {width:100%;height:auto;min-width:308px;max-width:500px}
+</style>
+</head>
+
+<body>
+<div class="page">
+
+<div class="flex">
+<span id="menuicon"><a href="/menu.html">
+<img src="/img/menuicon.svg" title="Inhalt" alt="menu"></a></span>
+<span class="Haupt"><a class="black" href="/" title="Home"><img src="/img/fractal_logo.svg" alt="Logo">mathematik.ch</a></span>
+</div>
+
+<!-- CONTENT -->
+
+<h1>Fraktale mit IFS (Iterated Function Systems)</h1>
+
+<div class="colgroup-2">
+  <div class="col">
+     <canvas id="myCanvas" width="408" height="304">Ihr Browser kann kein Canvas!</canvas>
+  </div>
+  <div class="col">
+  <span id="ART"> </span><br><br>
+   <ul>
+   <li>
+    <input type="button" id="1" value="Farn" onclick="farn()">
+	<input type="button" id="2" value="Ahorn  " onclick="ahorn()">
+	<input type="button" id="3" value="Sierpinski" style="width:6em" onclick="sierpinski()"></li>
+	<li><input type="button" id="4" value="Eiche" onclick="eiche()">
+	<input type="button" id="5" value="Baum  " onclick="baum()">
+	<input type="button" id="6" value="Koch" onclick="koch()"></li>
+	<li><input type="button" id="7" value="Dürer " onclick="duerer()">
+	<input type="button" id="8" value="Menger  " onclick="menger()">
+	<input type="button" id="9" value="Drache  "  onclick="drache()">
+   </li>
+   <li>Anzahl Iterationen<br>
+      <input type="button" id="double" value="verdoppeln" style="width:6.8em" onclick="doppelt()">
+	  <input type="button" id="half" value="halbieren" style="width:5.8em" onclick="halb()">
+   </li>
+   </ul>
+  </div>
+</div>
+ 
+<p>Die Fraktale werden mittels Chaosspiel mit Startwert 40000 Iterationen gezeichnet. Die minimale Anzahl 
+ist 5000, die maximale 160000. Je grösser die Anzahl, desto besser wird die Qualität des Fraktals.</p>
+<p>Jede Farbe entspricht genau einer linearen (affinen) Abbildung der Form<br>
+    x' = a1*x + b1*y + v1<br>
+    y' = a2*x + b2*y + v2 &nbsp;&nbsp; (s. <a href="/anwendungenmath/affineAbb/">affine Abbildung</a>)<br><br>
+Das Fraktal "Farn" wird also z.B. durch vier, das Fraktal "Sierpinski-Dreieck" durch drei Abbildungen erzeugt.</p>
+	<ul>
+	  <li>Zur Info <input type="button" value="Fraktale IFS" style="width:8em" onclick="infos('fractal.html','Infofenster',420,600)"></li>
+	</ul>
+
+<p>Betrachten Sie auch die Entstehung des <a href="sierpinski/">Sierpinski-Dreiecks mit speziellem Algorithmus</a>.</p>
+<p>Eventuell interessieren Sie auch die Fraktale <a href="hilbert/">Hilbertkurve und Peanokurve</a>.</p>
+<p>Interessant sind auch die Fraktale <a href="julia/julia.html">Julia-Mengen und Mandelbrotmenge</a>.</p>
+
+<!-- EOF: CONTENT -->
+
+<p><small>
+©1997 -
+2026 www.mathematik.ch</small> |<a href="/search/"><span class="b" title="Suche">&#x1F50D;</span></a></p>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="text-scale" content="scale">
+<title>Phasendiagramm von komplexen Funktionen</title>
+<meta name="description" content="Bilder von komplexen Abbildungen durch Zuordnung des Argumentes (Phasendiagramm)">
+<LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
+<script src="komplexeAbb_min.js"></script>
+<script src="/script/infos.js" defer></script>
+<style>
+canvas {width:100%;height:auto;min-width:308px;max-width:500px}
+</style>
+</head>
+
+<body>
+<div class="page">
+<div class="flex">
+<span id="menuicon"><a href="/menu.html">
+<img src="/img/menuicon.svg" title="Inhalt" alt="menu"></a></span>
+<span class="Haupt"><a class="black" href="/" title="Home"><img src="/img/fractal_logo.svg" alt="Logo">mathematik.ch</a></span>
+</div>
+
+<!-- CONTENT -->
+
+<h1>Phasendiagramm von komplexen Funktionen</h1>
+
+<div class="colgroup-2">
+  <div class="col">
+     <canvas id="myCanvas" width="400" height="400">Ihr Browser kann kein Canvas!</canvas> 
+  </div>
+  <div class="col">
+    <ul>
+      <li>w = f(z) = <input id="f" style="width:12em;" type="text" value="(z*z-1)/(z-2+i)"> 
+	    <img src="/img/help.png" alt="Hilfe" onClick="infos('infos.html','Infofenster',520,600)"></li>
+	  <li><input type="button" value="Go" onclick="einlesen()"></li>
+	</ul>
+    <p>Die Figur stellt ein Phasendiagramm der komplexen Funktion mit Gleichung w = f(z) dar.<br>
+	 Zu jedem z = x+iy wird der Funktionswert w = r(cos&phi; + isin&phi;) berechnet. &phi; bestimmt dann die Farbe des 
+	 Pixels z gemäss einer der folgenden Paletten. Vorgewählt ist Palette1, bei der r zudem noch die Intensität bestimmt.<br>
+	 Klicken Sie zur Wahl auf die entsprechende Palette<br><br>
+	 <img src="palette1.jpg" style="cursor:pointer" width="140" height="140" alt="palette" onclick="palette1()">&nbsp;
+	 <img src="palette2.jpg" style="cursor:pointer" width="140" height="140" alt="palette2" onclick="palette2()">
+     </p>	  
+  </div>
+</div>
+Je komplizierter Sie den Term wählen, desto attraktivere Bilder erhalten Sie im Allgemeinen. Dafür wird die Rechenzeit grösser.<br>
+Klicken Sie als Beispiel auf den nachfolgenden Button und wählen Sie Palette 2.
+<ul>
+  <li><input type="button" style="width:6em" value="Beispiel" onclick="beispiel()"></li>
+</ul>
+
+<!-- EOF: CONTENT -->
+
+<p><small>
+©1997 -
+2026 www.mathematik.ch</small> |<a href="/search/"><span class="b" title="Suche">&#x1F50D;</span></a></p>
+
+</div>
+</body>
+</html>

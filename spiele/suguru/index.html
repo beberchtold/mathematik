@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="text-scale" content="scale">
+<title>Suguru</title>
+<meta name="Description" content="Spiel Suguru (Tectonic) mit Javascript: 120 Probleme, Eingabe neues Suguru, Solver, Download und Upload">
+<link rel="stylesheet" href="/css/mathematik.css">
+<script src="diff1.js"></script>
+<script src="suguru.js"></script>
+<script src="algorithm.js"></script>
+<script src="diff2.js"></script>
+<script src="diff3.js"></script>
+<script src="diff4.js"></script>
+<script src="diff5.js"></script>
+<script src="diff6.js"></script>
+<script src="input_output.js"></script>
+<link rel="stylesheet" href="suguru.css">
+</head>
+<body onload="init()">
+<div class="page">
+
+<div class="flex">
+<span id="menuicon"><a href="/menu.html">
+<img src="/img/menuicon.svg" title="Inhalt" alt="menu"></a></span>
+<span class="Haupt"><a class="black" href="/" title="Home"><img src="/img/fractal_logo.svg" alt="Logo">mathematik.ch</a></span>
+</div>
+
+<!-- CONTENT -->
+
+<h1>Suguru</h1>
+
+<p id="infotext">Das Ziel des Spiels ist, in jeder Box (eine Box ist durch fette Linien und Farbe markiert) 
+genau die Ziffern 1 bis N (Anzahl Zellen der Box) zu haben. Dabei dürfen keine benachbarten Zellen dieselbe Ziffer aufweisen.<br>
+Die Probleme sind eine Teilmenge der Probleme der Suguru.apk (s. <a href="/links.html">Externe Links</a>) von Aliaksandr Uvarau.<br> 
+Der Lösungsalgorithmus (kein Backtracking!) ist von Dirk Kok.<br>
+Sie können das angezeigte Problem lösen, ein Problem durch den Computer lösen lassen ('Solve', 'Step' zeigt Lösung schrittweise) 
+oder eine Problemstellung neu eingeben ('Eingabe neues Suguru'). Ihre neu erstellten Sugurus können Sie mit 'Download' auf Ihren 
+Computer speichern und später mit 'Upload' wieder raufladen.<br>
+Falls Sie bei einer Eingabe einer Ziffer unsicher sind, so klicken Sie auf &#9998;. 
+Die Eingabe erfolgt dann mit kleinerem Font und Sie können - falls nötig - mit <b>&cularr;</b> wieder zu dieser Eingabe zurückkehren.
+</p>
+<input type="button" id="infobutton" class="infobut" value="Info nicht mehr anzeigen" onclick="hideinfo()">
+<br><br>
+    <select id="difficulty" title="Schwierigkeit">
+		<option value="1">Beginner</option>
+		<option value="2">Easy</option>
+		<option value="3">Middle</option>
+		<option value="4">Hard</option>
+		<option value="5">Very hard</option>
+		<option value="6">Expert</option>
+		<option value="7">New</option>
+	</select>
+	<button id="previousButton" title="vorherige Nr" style="margin-left:20px;" onclick="Levelminus()">Nr - </button>
+	<button id="nextButton" title="nächste Nr" style="margin-left:10px;" onclick="Levelplus()">Nr + </button>
+	<button id="reloadButton" style="margin-left:20px;" title="aktuelle Nr wird neu geladen" onclick="loadLevelUI()">Reload</button>			
+	<br><br>	
+	<span id="wintext"></span><br>
+	<br>
+	<div id="solve">
+	   <button id="SF" title="Kleines Font bei Eingabe" onclick="changeSF()">&#9998;</button>
+	   <button id="backButton" title="einen Schritt zurück" onclick="back()"><b> &cularr; </b></button>
+	   <button style="margin-left:45px" id="solveButton" title="Computer versucht, Problem zu lösen" onclick="solvequick()">Solve</button>
+	   <button style="margin-left:10px" id="stepButton" title="Computer löst Problem schrittweise" onclick="step()">Step</button>
+    </div>
+	<br>
+	<table id="suguru"></table>
+	<br>
+    <div id="inputbuttons">
+	   <input type="button" value="1" onclick="input(1)">
+	   <input type="button" value="2" onclick="input(2)">
+	   <input type="button" id="3" value="3" onclick="input(3)">
+       <input type="button" id="4" value="4" onclick="input(4)">
+	   <input type="button" id="5" value="5" onclick="input(5)">
+	   <input type="button" id="6" value="6" onclick="input(6)">
+       <input type="button" id="7" value="7" onclick="input(7)">
+	   <input type="button" id="8" value="8" onclick="input(8)">
+	   <input type="button" id="9" value="9" onclick="input(9)"><br>
+	</div>
+	<div id="newSuguru" style="display:none;">Neues Suguru (min 3x2, max 9x9)<br><br>
+       Breite: <input type="number" id="Breite" min="3" max="9" style="margin-bottom:5px" value=""><br> 
+	   Höhe: <input type="number" id="Hoehe" min="2" max="9" style="margin-bottom:5px" value=""><br>
+	   <button type="button" onclick="inputsize()"> Go </button><br><br>
+	   <small>Klicken Sie nach Eingabe der Breite und Höhe auf 'Go"</small>
+	   <br>
+	</div>
+	<div id="Zifferbuttons" style="display:none">
+	   <input type="button" id="z1" value="1" onclick="faerbe(1)">
+	   <input type="button" id="z2" value="2" onclick="faerbe(2)">
+	   <input type="button" id="z3" value="3" onclick="faerbe(3)">
+       <input type="button" id="z4" value="4" onclick="faerbe(4)">
+	   <input type="button" id="z5" value="5" onclick="faerbe(5)">
+	   <input type="button" id="z6" value="6" onclick="faerbe(6)">
+       <input type="button" id="z7" value="7" onclick="faerbe(7)">
+	   <input type="button" id="z8" value="8" onclick="faerbe(8)">
+	   <input type="button" id="z9" value="9" onclick="faerbe(9)">
+	   <button id="0" onclick="faerbe(0)">End Input</button><br><br>
+	</div>
+	<div id="Letterbuttons" style="display:none">
+	   <input type="button" id="z10" value="Q" onclick="faerbe('10')">
+	   <input type="button" id="z11" value="A" onclick="faerbe('11')">
+	   <input type="button" id="z12" value="Z" onclick="faerbe('12')">
+       <input type="button" id="z13" value="W" onclick="faerbe('13')">
+	   <input type="button" id="z14" value="X" onclick="faerbe('14')">
+	   <input type="button" id="z15" value="S" onclick="faerbe('15')">
+       <input type="button" id="z16" value="R" onclick="faerbe('16')">
+	   <input type="button" id="z17" value="V" onclick="faerbe('17')">
+	   <input type="button" id="z18" value="C" onclick="faerbe('18')">
+	   <input type="button" id="z19" value="E" onclick="faerbe('19')">
+	 </div>
+	 <small><span id="info"></span></small>
+	 <br>
+	 <input type="button" id="newbutton" value="Eingabe neues Suguru" onclick="createnewSuguru()">
+     <input type="button" id="downloadbutton" title="speichert die Probleme von 'New' auf Ihren Computer" value="Download" onclick="download()">
+	 <input type="button" id="uploadbutton" title="ladet die vorher mit 'Download' gespeicherten Probleme in 'New'" value="Upload" onclick="upload()">
+	 <input type="file" id="upload" accept=".txt" onchange="OnShowSelectedFile()" style="display:none;">
+	 <span id="uploadInfo"></span>
+
+<p><a href="/spiele/sudoku_squiggly/">Zu Squiggly Sudoku</a></p>
+	 
+	 <!-- EOF: CONTENT -->
+ 
+<p><small>
+©1997 -
+2026 www.mathematik.ch</small> |<a href="/search/"><span class="b" title="Suche">&#x1F50D;</span></a></p>
+
+</div>
+</body>
+</html>

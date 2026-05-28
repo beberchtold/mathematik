@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="text-scale" content="scale">
+<title>Rechnen mit komplexen Zahlen</title>
+<meta name="description" content="Rechnen mit komplexen Zahlen, geometrische Deutung">
+<meta name="keywords" content="Addition, Subtraktion, Multiplikation, Division, komplexe Zahl, Gauss-Ebene">
+<LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
+<script src="komplexeZahlen_min.js"></script>
+<style>
+input[type=number] {width:2.3em}
+input[type=button] {width:7em}
+</style>
+</head>
+
+<body>
+<div class="page">
+<div class="flex">
+<span id="menuicon"><a href="/menu.html">
+<img src="/img/menuicon.svg" title="Inhalt" alt="menu"></a></span>
+<span class="Haupt"><a class="black" href="/" title="Home"><img src="/img/fractal_logo.svg" alt="Logo">mathematik.ch</a></span>
+</div>
+
+<!-- CONTENT -->
+
+<h1>Rechnen mit komplexen Zahlen</h1>
+  
+<p>Hier werden die Grundrechenarten mit komplexen Zahlen geometrisch gedeutet. 
+Der erste Operand ist durch einen schwarzen Punkt in der Gauss'schen Zahlenebene dargestellt, der
+zweite durch einen roten. Beide Operanden können mit gedrückter Maustaste verändert werden.<br>
+Alternativ können Sie die Operanden auch via Tastatur in die entsprechenden Felder eingeben. Das Resultat erscheint dann nach 
+Drücken der Returntaste.<br>
+Das Resultat wird durch den blauen Punkt repräsentiert.</p>
+
+<p>Wählen Sie mittels Button, welche Operation Sie durchführen wollen und welches Koordinatensystem angezeigt werden soll.
+</p>
+
+<div class="colgroup-2">
+  <div class="col" id="containercanvas">
+     <canvas id="myCanvas" style="border:1px solid; border-color:#A0A0A0">Ihr Browser kann kein Canvas!</canvas>
+  </div>
+  <div class="col">
+    <ul>
+      <li><input id="1" type="button" style="margin-right:20px" value="Addition" onclick="button1()">
+	    <input id="2" type="button" value="Subtraktion" onclick="button2()"></li>
+      <li><input id="3" type="button" style="margin-right:20px" value="Multiplikation" onclick="button3()">
+	    <input id="4" type="button" value="Division" onclick="button4()">
+	  </li>
+	  <li><br>z1=<input id="x1" type="number" min=-10 max=10 value="5" lang="en" onchange="calc()">	
+         +<input id="y1" type="number" min=-10 max=10 value="5" lang="en" onchange="calc()"> i <span style="margin-right:20px;"></span>
+	     <span style="color:red"><b>z2=<input id="x2" type="number" min=-10 max=10 value="1" lang="en" onchange="calc()">
+         +<input id="y2" type="number" min=-10 max=10 value="2" lang="en" onchange="calc()"> i</b></span></li>
+	  <li style="color:blue"><br><b>Resultat z = </b><span id="Resultat"></span></li>
+	  <li style="color:blue">in Polarform z = <span id="Resultat_polar"></span></li>
+      <li>KS: <input id="kartesisch" type="button" style="margin-right:20px" value="Kartesisch" onclick="button5()">
+	    <input id="polar" value="Polar" type="button" onclick="button6()"></li>
+    </ul>	
+  </div>      
+</div>	   
+
+<p><a href="KomplexeZahlen.pdf">Dazugehörige Theorie <img src="/img/pdficon.png" alt="pdficon"></a></p>
+
+<!-- EOF: CONTENT -->
+
+<p><small>
+©1997 -
+2026 www.mathematik.ch</small> |<a href="/search/"><span class="b" title="Suche">&#x1F50D;</span></a></p>
+
+</div>
+</body>
+</html>

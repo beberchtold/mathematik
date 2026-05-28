@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="text-scale" content="scale">
+<title>Funktionsplotter mit 1. und 2. Ableitungsfunktion</title>
+<meta name="Description" content="Funktionsplotter, 1. und 2. Ableitungsfunktion">
+<meta name="author" content="B.Berchtold">
+<LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
+<script src="ableitungen_min.js"></script>
+<script src="/script/infos.js" defer></script>
+<style>
+input[type=number] {width:2.5em;margin-bottom:10px}
+canvas {width:100%;height:auto;min-width:308px;max-width:500px}
+span.blue {color:#0000FF;font-weight:bold}
+span.red {color:#FF0000;font-weight:bold}
+span.green {color:#008000;font-weight:bold}
+</style>
+</head>
+
+<body>
+<div class="page">
+
+<div class="flex">
+<span id="menuicon"><a href="/menu.html">
+<img src="/img/menuicon.svg" title="Inhalt" alt="menu"></a></span>
+<span class="Haupt"><a class="black" href="/" title="Home"><img src="/img/fractal_logo.svg" alt="Logo">mathematik.ch</a></span>
+</div>
+
+<!-- CONTENT -->
+
+<h1>Funktionsplotter mit Ableitungsfunktionen</h1>
+
+<div class="colgroup-2">
+  <div class="col">
+     <canvas id="myCanvas" width="400" height="400">Ihr Browser kann kein Canvas!</canvas>
+  </div>
+  
+  <div class="col">
+   <ul>
+    <li><span class="green">y&nbsp;=&nbsp;</span><input id="f" type="text" value="sin(x)" style="width:12em;">
+	  <img src="/img/help.png" alt="Hilfe" onclick="infos('hilfe_ableitungen.html','Infofenster',520,600)"></li>
+    <li><span class="red"><label><input id="Abl1" type="checkbox" onclick="zeichne()"> 1. Ableitungsfunktion</label></span><br>
+      <span class="blue"><label><input id="Abl2" type="checkbox" onclick="zeichne()"> 2. Ableitungsfunktion</label></span></li>
+    <li>Grenzen<br>
+	Links: <input id="Xmin" type="number" value="-4.1" lang="en">&nbsp;&nbsp;
+    Rechts: <input id="Xmax" type="number" value="4.1" lang="en"><br>
+    Unten: <input id="Ymin" type="number" value="-2.1" lang="en">&nbsp;&nbsp;
+    Oben: <input id="Ymax" type="number" value="2.1" lang="en"></li>
+    <li><input type="button" value="Go" onclick="zeichne()"></li>	
+    <li><small>Klicken Sie nach Änderungen in den Inputfeldern auf 'Go'.</small></li>
+   </ul>
+  </div>       
+</div>	
+
+<!-- EOF: CONTENT -->
+
+<p><small>
+©1997 -
+2026 www.mathematik.ch</small> |<a href="/search/"><span class="b" title="Suche">&#x1F50D;</span></a></p>
+
+</div>
+</body>
+</html>
+

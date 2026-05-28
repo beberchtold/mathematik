@@ -1,0 +1,77 @@
+<!DOCtype html>
+<html lang="de">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="text-scale" content="scale">
+<meta NAME="Description" CONTENT="Sokoban, 50 Originalprobleme">
+<TITLE>Sokoban</title>
+<LINK REL="stylesheet" HREF="/css/mathematik.css" type="text/css">
+<script src="sokoban_min.js"></script>
+<script async src="solut_min.js"></script>
+<style>
+input[type="button"] {padding:2px 3px 3px 3px}
+canvas {width:100%;height:auto;min-width:308px;max-width:500px}
+</style>
+</head>
+
+<body onkeyup="keyPress(event.keyCode)">
+<div class="page">
+<div class="flex">
+<span id="menuicon"><a href="/menu.html">
+<img src="/img/menuicon.svg" title="Inhalt" alt="menu"></a></span>
+<span class="Haupt"><a class="black" href="/" title="Home"><img src="/img/fractal_logo.svg" alt="Logo">mathematik.ch</a></span>
+</div>
+
+<!-- CONTENT -->
+
+<h1>Sokoban, 50 Originalprobleme</h1>
+
+<p>Dieses bekannte Spiel wurde von Hiroyuki Imabayashi um 1980 in Japan erfunden.
+Die Hauptarbeit liegt in den 50 genialen Problemen, die im Originalspiel enthalten waren.<br>
+Das Ziel des Spiels ist, mit dem grünen Schieber alle blauen Kisten auf die markierten Ziele zu schieben.<br>
+Den Schieber können Sie mit den Pfeiltasten auf Ihrer Tastatur oder alternativ mit Klick auf die Pfeilbuttons verschieben.<br>
+'Save' speichert den aktuellen Zwischenstand. Mit 'Load' laden Sie diesen gespeicherten Zwischenstand.<br>
+'Clear' stellt Anfangszustand des aktuellen Problems her. Der ev. gespeicherte Zwischenstand wird gelöscht!<br>
+Mit 'Prob+' gelangen Sie zum nächsten Problem, mit 'Prob-' zum vorherigen.<br>
+Klick auf 'Lösung' liest die Lösungszüge des aktuellen Problems ein. 'Zug+' führt dann den jeweils nächsten Zug aus.
+Tipp: Nach einmaligem Klick auf 'Zug+' können Sie die Return-Taste verwenden. Bei gedrückter Return-Taste gehts schneller...</p>
+
+<div class="colgroup-2">
+  <div class="col">
+       <canvas id="myCanvas">Ihr Browser kann kein Canvas!</canvas>
+  </div>
+
+  <div class="col">
+	<b><span id="message"></span></b>
+    <ul>
+      <li><input type="button" VALUE="&uarr;" onclick="moveb('u')" style="width:28px;margin-left:46px"></li>	
+      <li><input type="button" VALUE="&larr;" onclick="moveb('l')" style="margin-right:30px">
+         <input type="button" VALUE="&rarr;" onclick="moveb('r')">
+	  </li>
+	  <li><input type="button" VALUE="&darr;" onclick="moveb('d')" style="width:28px;margin-left:46px"></li>
+    </ul>
+	<br>
+    <ul>	
+      <li><input type="button" value="Clear" onclick="doClear()">
+	   <input type="button" style="margin-left:15px" value="Save" onclick="save()">
+	   <input type="button" id="Load" style="margin-left:15px" value="Load" onclick="doLoad()">
+	  </li>
+	</ul>
+	<ul>
+	  <li style="margin-top:10px"><input type="button" style="width:5em" value="Lösung" onclick="solution()">
+	    <input type="button" id="Zug+" value="Zug+" onclick="zugplus()" style="margin-left:35px"></li>
+	  <li><input type="button" value="Prob+  " onclick="levelplus()">
+	  <input type="button" value="Prob-" onclick="levelminus()" style="margin-left:55px"></li>
+	</ul>
+  </div>      
+</div>	   
+
+<!-- EOF: CONTENT -->
+
+<p><small>
+©1997 -
+2026 www.mathematik.ch</small> |<a href="/search/"><span class="b" title="Suche">&#x1F50D;</span></a></p>
+
+</div>
+</body>
+</html>

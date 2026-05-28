@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="text-scale" content="scale">
+<meta name="author" content="Bernhard Berchtold">
+<meta name="Description" content="Simulation Euromillions, Anwendungen der Mathematik, Wahrscheinlichkeit, Hypergeometrische Verteilung">
+<title>Euromillions: Simulation der Lottoziehung</title>
+<link rel="stylesheet" href="/css/mathematik.css" TYPE="text/css">
+<script async src="euromillions_min.js"></script>
+<script src="/script/infos.js" defer></script>
+<style>input[type=number] {width:2.2em;margin:0px 13px 6px 0px}
+h4 {margin:0.4em 0em 0.4em 0em}
+</style>
+</head>
+
+<body>
+<div class="page">
+<div class="flex">
+<span id="menuicon"><a href="/menu.html">
+<img src="/img/menuicon.svg" title="Inhalt" alt="menu"></a></span>
+<span class="Haupt"><a class="black" href="/" title="Home"><img src="/img/fractal_logo.svg" alt="Logo">mathematik.ch</a></span>
+</div>
+
+<!-- CONTENT -->
+
+<h1>Euromillions: Simulation der Lottoziehung</h1>
+
+<p>Beim Lottospiel Euromillions werden zweimal pro Woche in Paris 5 aus 50 Zahlen und 2 von 12 Sternen gezogen.<br> 
+Hier können Sie diese Ziehung simulieren.<br>
+Sie können entweder 'Ihre' Zahlen und Sterne in die Felder eingeben oder - bequemer - die Zahlen und Sterne durch Klicken 
+auf die entsprechenden Buttons zufällig erzeugen lassen.<br>  
+Haben Sie (eine Zahl und beide Sterne richtig) oder (mindestens zwei Zahlen richtig), so haben Sie gewonnen.<br>
+Wählen Sie n = 1, so werden Ihnen die - vom Computer - gezogenen Zahlen angezeigt.<br>
+Für n &gt; 1 werden Ihnen diejenigen Spiele, in denen Sie etwas gewonnen hätten und Ihre <b>Schlussbilanz</b> angezeigt.<br> 
+Klicken Sie zur weiteren Info der Schlussbilanz auf das Fragezeichen.
+  <img src="/img/help.png" alt="Hilfe" onclick="infos('infos.html','Infofenster',500,600)">
+</p>
+
+<div class="colgroup-2">
+  <div class="col">
+  <ul>
+   <li>Geben Sie 5 Zahlen zwischen 1 und 50 an oder erzeuge <input type="button" value="Zufallszahlen" style="width:8em" onclick="generatenumbers()">
+   </li>
+   <li>
+    <input id="z1" type="number" min="1" max="50" value="">
+    <input id="z2" type="number" min="1" max="50" value="">
+    <input id="z3" type="number" min="1" max="50" value="">
+    <input id="z4" type="number" min="1" max="50" value="">
+    <input id="z5" type="number" min="1" max="50" value="">
+  </li>
+  <li>Geben Sie noch zwei Sterne zwischen 1 und 12 an oder erzeuge <input type="button" value="Zufallssterne" style="width:8em" onclick="generatestars()">
+  </li>
+  <li>
+    <input id="s1" type="number" min="1" max="12" value="">
+    <input id="s2" type="number" min="1" max="12" value="">
+   </li>
+   <li>Anzahl Ziehungen n (1 &le; n &le; 1000)<br>
+   <input id="n" style="width:3.5em;" type="number" min="1" max="1000" value="1">
+   <input type="button" value="Go" onclick="ziehe()">
+   </li>
+  </ul>
+  </div>
+
+  <div class="col">
+  <span id="txt"></span>
+  </div>
+</div>
+<br>
+
+<noscript>
+Sie haben Java-Script nicht eingeschaltet.
+Die Simulation funktioniert nur mit Javascript.
+</noscript>
+
+<p>Zur <a href="euromillions.html">Berechnung der Wahrscheinlichkeiten von Euromillions</a></p>
+<p>Zur <a href="/spiele/eurodreams/">Simulation Eurodreams</a><br>
+Zur <a href="/spiele/swisslotto/">Simulation Swisslotto</a>
+</p>
+
+<!-- EOF: CONTENT -->
+
+<p><small>
+©1997 -
+2026 www.mathematik.ch</small> |<a href="/search/"><span class="b" title="Suche">&#x1F50D;</span></a></p>
+
+</div>
+</body>
+</html>

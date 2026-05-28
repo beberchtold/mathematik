@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="text-scale" content="scale">
+<meta NAME="Description" CONTENT="Brennpunktsdefinitionen der Kegelschnitte">
+<TITLE>Brennpunktsdefinitionen der Kegelschnitte</title>
+<LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
+<script src="kegelschnitte_min.js"></script>
+<style>
+input[type="button"] {width:5em;margin:0px 20px 10px 0px}
+div.a{width:50%;min-width:310px;max-width:600px;margin-right:20px;float:left}
+@media(width<590px) {div.a{width:100%}}
+</style>
+</head>
+
+<body>
+<div class="page">
+<div class="flex">
+<span id="menuicon"><a href="/menu.html">
+<img src="/img/menuicon.svg" title="Inhalt" alt="menu"></a></span>
+<span class="Haupt"><a class="black" href="/" title="Home"><img src="/img/fractal_logo.svg" alt="Logo">mathematik.ch</a></span>
+</div>
+
+<!-- CONTENT -->
+
+<h1>Brennpunktsdefinitionen der Kegelschnitte</h1>  
+
+<p><b>Definition der Parabel</b> (l:Leitlinie, F:Brennpunkt)<br>
+Für alle Punkte P der Parabel gilt: Abstand d(P,l) = <span class="ol">PF</span></p>
+<p><b>Definition der Ellipse</b> (F1, F2: Brennpunkte, a: grosse Halbachse)<br>
+Für alle Punkte P der Ellipse gilt: <span class="ol">F1P</span> + <span class="ol">F2P</span> = 2a = konstant</p>
+<p><b>Definition der Hyperbel</b> (F1, F2: Brennpunkte, a: reelle Halbachse)<br> 
+Für alle Punkte P der Hyperbel gilt: |<span class="ol">F1P</span> - <span class="ol">F2P</span>| = 2a = konstant</p>
+
+<p>Der orange Punkt C lässt sich mit gedrückter Maustaste entlang der vertikalen Strecke bewegen.
+Alternativ können Sie mit 'Step' den Punkt C schrittweise bewegen.
+Die auf der vertikalen Strecke schwarz gefärbte Strecke AB hat (für Ellipse und Hyperbel) die Länge 2a.<br>
+Für die Parabel gilt dann: Radius des Kreises um F = d(C,l)<br>
+Für Ellipse und Hyperbel gilt: Radius des Kreises um F1 = <span class="ol">CA</span>, Radius des Kreises um F2 = <span class="ol">CB</span><br>
+So 'konstruieren' Sie die blauen Kegelschnittpunkte.</p>
+
+<div class="a" id="containercanvas">
+  <canvas id="myCanvas" width="400" height="400">Ihr Browser kann kein Canvas!</canvas>	   
+</div>
+<div>
+  <ul>
+    <li><input id="1" type="button" value="Ellipse" onclick="button1()">
+        <input id="2" type="button" value="Parabel" onclick="button2()">
+         <input id="3" type="button" style="width:6em;margin-right:0px" value="Hyperbel" onclick="button3()"></li>	
+    <li><input type="button" value="Step" onclick="dostep()"></li>
+  </ul>
+</div>
+
+<div style="clear:both"></div>
+
+<!-- EOF: CONTENT -->
+
+<p><small>
+©1997 -
+2026 www.mathematik.ch</small> |<a href="/search/"><span class="b" title="Suche">&#x1F50D;</span></a></p>
+
+</div>
+</body>
+</html>

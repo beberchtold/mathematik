@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="text-scale" content="scale">
+<meta name="Description" content="Wahrscheinlichkeit: Würfeln, Simulation bis alle 6 Ziffern gewürfelt">
+<title>Simulation Würfeln bis alle 6 Ziffern</title>
+<LINK rel="stylesheet" href="/css/mathematik.css" TYPE="text/css">
+<script src="wuerfeln_min.js"></script>
+</head>
+
+<body>
+<div class="page">
+
+<div class="flex">
+<span id="menuicon"><a href="/menu.html">
+<img src="/img/menuicon.svg" title="Inhalt" alt="menu"></a></span>
+<span class="Haupt"><a class="black" href="/" title="Home"><img src="/img/fractal_logo.svg" alt="Logo">mathematik.ch</a></span>
+</div>
+
+<!-- CONTENT -->
+
+<h1>Simulation: Solange würfeln bis alle 6 Ziffern erschienen sind</h1>
+  
+<p>Wie viele Würfe benötigt man in <b>einem Versuch</b>, um alle 6 Ziffern zu würfeln?<br>
+Bei Klick auf 'Go' führt der Computer diesen Versuch durch.</p>
+<ul>
+  <li><input type="button" value="Go" onclick="simu()"></li>
+</ul>
+<p><b>Anzahl Würfe = <span id="RES1"></span></b><br>
+	<span id="txt"></span>
+</p>
+
+<br>
+<p>Wie oft muss man <b>im Mittel</b> mit einem Würfel würfeln, bis <b>alle</b> sechs Ziffern von 1 bis 6 erschienen sind?</p>
+
+<p>Nach Eingabe von n wird diese Anzahl gemäss folgender Anordnung simuliert:<br>
+Bei jedem von n Versuchen wird gezählt, wie viele Würfe benötigt werden, um alle Ziffern zu würfeln. Die gesuchte Anzahl
+ wird dann approximiert durch das arithmetische Mittel dieser Anzahl Würfe.<br>
+ Klick auf 'Berechne' führt diese Simulation durch.</p>
+ 
+  <ul>
+    <li>Anzahl (100 &le; n &le; 10000)
+      <input id="n" type="number" min=100 max=10000 style="width:60px;margin-left:17px;" value="1000">
+    </li>
+    <li>
+      <input type="button" value="Berechne" style="width:6em" onclick="rechne()">
+    </li>
+  </ul>
+<p><span id="N"></span> Versuche<br>
+	<b>Anzahl Würfe im Mittel = <span id="RES"></span></b></p>
+
+<p>Der theoretische Wert beträgt  6/6 + 6/5 + 6/4 + 6/3 + 6/2 + 6/1 = <b>14.7</b> (Markow-Kette)</p>
+<br>
+<p>Interessant ist in diesem Zusammenhang das Spiel <a href="/spiele/hammer-roulette"><b>Hammer-Roulette</b></a>
+
+<!-- EOF: CONTENT -->
+
+<p><small>
+©1997 -
+2026 www.mathematik.ch</small> |<a href="/search/"><span class="b" title="Suche">&#x1F50D;</span></a></p>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="text-scale" content="scale">
+<meta name="Description" content="Platonische Körper, Tetraeder, Würfel, Oktaeder, Dodekader, Isokaeder">
+<title>Platonische Körper</title>
+<LINK REL="stylesheet" href="/css/mathematik.css" type="text/css">
+<script src="platon_min.js"></script>
+<style>
+input[type="button"] {width:6em;margin-bottom:5px;margin-right:15px}
+canvas {width:100%;height:auto;min-width:308px;max-width:450px}
+</style>
+</head>
+
+<body>
+<div class="page">
+
+<div class="flex">
+<span id="menuicon"><a href="/menu.html">
+<img src="/img/menuicon.svg" title="Inhalt" alt="menu"></a></span>
+<span class="Haupt"><a class="black" href="/" title="Home"><img src="/img/fractal_logo.svg" alt="Logo">mathematik.ch</a></span>
+</div>
+
+<!-- CONTENT -->
+
+<h1>Platonische Körper</h1>  
+
+<p>Als Platonische (nach dem griechischen Philosophen Platon) Körper werden diejenigen Polyeder (Vielflache) bezeichnet, 
+bei denen alle Flächen kongruente regelmässige Vielecke sind. Es gibt genau fünf Platonische Körper (reguläre konvexe Polyeder):</p>
+
+<ul>
+<li>Regelmässiges Tetraeder (4 Ecken, 6 Kanten, 4 gleichseitige Dreiecke als Flächen)</li>
+<li>Regelmässiges Hexaeder oder Würfel (8 Ecken, 12 Kanten, 6 Quadrate als Flächen)</li>
+<li>Regelmässiges Oktaeder (6 Ecken, 12 Kanten, 8 gleichseitige Dreiecke als Flächen)</li>
+<li>Regelmässiges Dodekaeder (20 Ecken, 30 Kanten, 12 regelmässige Fünfecke als Flächen)</li>
+<li>Regelmässiges Ikosaeder (12 Ecken, 30 Kanten, 20 gleichseitige Dreiecke als Flächen)</li>
+</ul>
+<br>
+Der Eulersche Polyedersatz gilt natürlich auch für die Platonischen Körper:
+<div style="margin-top:6px;outline:2px solid;padding:2px;">In jedem konvexen Polyeder mit e Ecken, f Flächen und k Kanten gilt: 
+e + f – k = 2.</div>
+
+<p>Wählen Sie mittels Button einen Körper aus. Die Rotationsachse verläuft immer senkrecht 
+durch den roten Punkt. Die Achse kann wahlweise durch eine Ecke, einen Kantenmittelpunkt oder einen Flächenmittelpunkt 
+verlaufen (Umschaltmöglichkeit mit dem Button 'Achse').<br>
+Klick auf 'Step' lässt den Körper um jeweils &pi;/20 rotieren.<br>
+Klick auf 'Run' lässt den Körper permanent rotieren, Klick auf 'Stop' stoppt diese Rotation.<br>
+Der Höhenwinkel lässt sich im entsprechenden Textfeld zwischen 90&deg; (Anblick senkrecht von oben) 
+und -90&deg; (Anblick senkrecht von unten) verändern.</p>
+
+
+<div class="colgroup-2">
+  <div class="col">
+       <canvas id="myCanvas" width="400" height="400">Ihr Browser kann kein Canvas!</canvas>
+  </div>
+
+  <div class="col">
+    <ul>
+      <li>
+	    <input id="1" type="button" value="Tetraeder" onclick="button1()">
+	    <input id="2" type="button" value="Hexaeder" onclick="button2()">
+	  </li>
+	  <li>
+        <input id="3" type="button" value="Oktaeder" onclick="button3()">
+        <input id="4" type="button" value="Dodekaeder" style="width:7.5em" onclick="button4()">
+	  </li>
+      <li>	  
+        <input id="5" type="button" value="Ikosaeder" onclick="button5()">
+	  </li>
+      <li>Höhenwinkel in Grad = <input id="theta" style="width:2.2em" type="number" min=-90 max=90 value="15" onclick="calc()">	
+	  </li>
+      <li><input type="button" value="Achse  " onclick="doAxis()"> 
+		 <span id="ax">durch&nbsp;Ecke</span> 
+	  </li>
+	  <li>
+	    <input id="STEP" type="button" value="Step" onclick="dostep()" style="margin-right:2em">
+	    <input id="RUN" type="button" value="Run" onclick="run()">
+	  </li>
+    </ul>		  
+  </div>        
+</div>
+ 
+<p>Zu den <a href="/anwendungenmath/ArchimedischeKoerper/"><b>Archimedischen Körpern</b></a> (halbreguläre konvexe Polyeder)</p>
+
+<!-- EOF: CONTENT -->
+
+<p><small>
+©1997 -
+2026 www.mathematik.ch</small> |<a href="/search/"><span class="b" title="Suche">&#x1F50D;</span></a></p>
+
+</div>
+</body>
+</html>

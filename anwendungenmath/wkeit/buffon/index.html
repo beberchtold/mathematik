@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="text-scale" content="scale">
+<title>Nadelproblem von Buffon</title>
+<meta name="description" content="Nadelproblem von Buffon mit MonteCarlo-Methode">
+<meta name="keywords" content="Rudolf Wolf, Buffon, Nadelproblem, Simulation, MonteCarlo-Methode, geometrische Wahrscheinlichkeit">
+<link rel="stylesheet" href="/css/mathematik.css" TYPE="text/css">
+<link rel="stylesheet" href="/katex/katex.min.css" TYPE="text/css">
+<script src="/katex/katex.min.js"></script>
+<script src="/katex/contrib/auto-render.min.js"></script>
+<script src="buffon_min.js"></script>
+<style>
+input[type="button"] {width:6em;margin-bottom:5px}
+canvas {width:100%;height:auto;min-width:308px;max-width:500px}
+.katex {font-size: 1.1em;font-family:sf}
+</style>
+</head>
+
+<body>
+<div class="page">
+
+<div class="flex">
+<span id="menuicon"><a href="/menu.html">
+<img src="/img/menuicon.svg" title="Inhalt" alt="menu"></a></span>
+<span class="Haupt"><a class="black" href="/" title="Home"><img src="/img/fractal_logo.svg" alt="Logo">mathematik.ch</a></span>
+</div>
+
+<!-- CONTENT -->
+
+<h1>Buffon'sches Nadelproblem (18. Jahrhundert)</h1>
+
+<p>Man wirft zufällig eine Nadel der Länge c auf eine Ebene, die mit Parallelstreifen
+  der Breite a versehen ist (c &le; a). Wie gross ist die Wahrscheinlichkeit
+  P(A), dass die Nadel eine der Parallelen trifft? Dies ist eine geometrische Wahrscheinlichkeit.<br>
+  Das folgende Programm ist eine Simulation dieses Problems (Bestimmung der W'keit mit einer sog. Monte-Carlo-Methode).</p>
+  <p>Mit dieser Simulation kann umgekehrt auch eine Näherung für die Zahl <span>\(\pi\)</span> gewonnen werden:<br>
+  Wählt man c = a, so ist <span>\(\boxed{\pi = \sf\footnotesize\frac{2}{P(A)}}\)</span>. (Beweis: s. unten)<br>
+  Der Schweizer Astronom Rudolf Wolf soll 1850 mit 5000 Würfen für <span>\(\pi\)</span> den Näherungswert von 3.1596 gefunden haben.</p>
+<p><span>\(\pi\)</span> wird mit Startwert 400 Würfen berechnet. Sie können diese Anzahl verändern: min=25, max=25600.<br>
+Je mehr Würfe Sie wählen, desto besser wird i.a. die Approximation für <span>\(\pi\)</span>.</p>
+
+<div class="colgroup-2">
+  <div class="col">  
+     <canvas id="myCanvas" width="400" height="240">Ihr Browser kann kein Canvas!</canvas>
+  </div>
+  <div class="col">
+  <span id="N">400</span> Würfe<br>
+    <ul>
+      <li>Mit gleicher Anzahl <input type="button" value="nochmals" onclick="zeichne()"></li>
+      <li>Anzahl <input type="button" id="double" style="width:7em" value="verdoppeln" onclick="doppelt()">
+	    <input type="button" id="half" style="margin-left:10px" value="halbieren" onclick="halb()"></li>
+	</ul>
+	<p><b>Resultat</b></p>
+	W'keit P(A) = <b><span id="Anzb"> </span></b>. Daher \(\pi\) &asymp; <b><span id="Res"> </span></b><br>
+	Exakter Wert: \(\pi\) = 3.14159265...
+   </div>
+</div>
+
+<p><b>Beweis</b></p>
+Die möglichen Fälle m (des Ereignisraumes) werden repräsentiert durch die Lage der Nadel: Winkel &alpha; 
+der Nadel gegenüber der Horizontalen und Distanz d der Nadelspitze zu einer Parallelen
+(0 &le; &alpha; &le; \(\pi\), 0 &le; d &le; a), also m&nbsp;=&nbsp;<span>\(\sf a\,\pi.\)</span><br>
+Die für das Ereignis A günstigen Fälle g werden repräsentiert durch d&nbsp;&le;&nbsp;c&middot;sin&alpha;,
+also der Fläche unterhalb der Kurve mit Gleichung f(&alpha;)&nbsp;=&nbsp;c&middot;sin&alpha; im Intervall <span>\([0,\pi].\)</span><br> 
+Mit Hilfe der Integralrechnung folgt:<br>
+g = \(\sf\int\limits_0^\pi c \cdot sin\alpha \,d\alpha = c \int\limits_0^\pi sin\alpha \,d\alpha = c \large[\normalsize-cos\alpha\large]\normalsize \pi \atop 0 \)
+= c(1&nbsp;-&nbsp;(-1)) = 2c
+<br>
+Damit gilt für die W'keit P(A), dass die Nadel trifft:
+P(A) = \(\sf\dfrac{\sf 2c}{\sf a \pi}\)
+
+<script>renderMathInElement(document.body);</script>
+
+<!-- EOF: CONTENT -->
+
+<p><small>
+©1997 -
+2026 www.mathematik.ch</small> |<a href="/search/"><span class="b" title="Suche">&#x1F50D;</span></a></p>
+
+</div>
+</body>
+</html>

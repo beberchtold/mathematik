@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="text-scale" content="scale">
+<meta name="Description" CONTENT="Der Kreis des Apollonius">
+<title>Der Kreis des Apollonius</title>
+<link rel="stylesheet" href="/css/mathematik.css" TYPE="text/css">
+<script src="kreisApollonius_min.js"></script>
+</head>
+
+<body>
+<div class="page">
+<div class="flex">
+<span id="menuicon"><a href="/menu.html">
+<img src="/img/menuicon.svg" title="Inhalt" alt="menu"></a></span>
+<span class="Haupt"><a class="black" href="/" title="Home"><img src="/img/fractal_logo.svg" alt="Logo">mathematik.ch</a></span>
+</div>
+
+<!-- CONTENT -->
+
+<h1>Der Kreis des Apollonius</h1>  
+
+<p>Es gilt der Satz:</p>
+<div style="border:1px solid; padding:5px"><b>Jede Winkelhalbierende im Dreieck teilt die Gegenseite innen im
+Verhältnis der anliegenden Seiten.<BR>Jede Winkelhalbierende eines Aussenwinkels am Dreieck teilt die Gegenseite aussen im Verhältnis der 
+anliegenden Seiten</b> 
+</div>
+
+<p>Die innere und die äussere Winkelhalbierende eines Dreieckswinkels teilen also die Gegenseite <b>harmonisch</b> im Verhältnis der 
+anliegenden Seiten</p>
+<p>Die Umkehrung des Satzes ist wahr: </p>
+
+<div style="border:1px solid; padding:5px"><b>Teilt man eine Dreiecksseite harmonisch im Verhältinis der 
+anliegenden Seiten, so halbieren die Geraden durch die Teilpunkte und die Gegenecke den Innen- und Aussenwinkel des Dreiecks.</b> 
+</div>
+
+<p>Dieser Satz ist Grundlage für einen berühmten Satz der Antike. Um 200 v. Chr. 
+hat der griechische Mathematiker und Astronom <b>Apollonius</b> in Alexandria folgende Entdeckung gemacht: </p>
+
+<div style="border:1px solid; padding:5px"><b>Der geometrische Ort der Punkte, deren Entfernung von zwei 
+gegebenen Punkten A und B ein festes Verhältnis b:a haben, ist der Kreis mit dem Durchmesser T1 T2.<BR>T1 und T2 teilen AB harmonisch im 
+Verhältnis b:a</b>
+</div>
+
+<p>Prüfen Sie diese Behauptungen an folgender Zeichnung:<br>
+Durch Bewegen der Ecke C1 auf dem Kreis (mit Hilfe der Maus) sehen Sie, dass dieses Verhältnis konstant bleibt.<br>
+Durch Verschieben der Ecke C (Radiobutton aktivieren) können Sie das Verhältnis b:a verändern.<br>
+Alternativ können Sie auch mit 'Step' die Position von C1 (bzw. C bei angekreuztem Radiobutton) schrittweise verändern.
+</p>
+
+<div class="colgroup-2">
+  <div class="col" id="containercanvas">
+       <canvas id="myCanvas">Ihr Browser kann kein Canvas!</canvas>
+  </div> 
+  <div class="col">
+   <ul>
+    <li>Verhältnis AC : BC = b : a = <span id="b_zu_a">   </span></li>
+	<li><span style="color:red">Verhältnis AT<sub>1</sub> : BT<sub>1</sub> = </span><span id="AT1_zu_BT1">   </span></li>
+    <li><span style="color:red">Verhältnis AT<sub>2</sub> : BT<sub>2</sub> = </span><span id="AT2_zu_BT2">   </span></li>
+    <li><span style="color:green">Verhältnis AC<sub>1</sub> : BC<sub>1</sub> = </span><span id="AC1_zu_BC1">   </span></li>
+	<li><label><input id="VarC1" type="radio" name="C1C"> Position Punkt C1 verändern</label></li>
+	<li><label><input id="VarC" type="radio" name="C1C"> Position Punkt C verändern</label></li>
+    <li><input type="button" value="Step" onclick="dostep()"></li>
+   </ul>	
+  </div>     
+</div>	   
+
+<!-- EOF: CONTENT -->
+
+<p><small>
+©1997 -
+2026 www.mathematik.ch</small> |<a href="/search/"><span class="b" title="Suche">&#x1F50D;</span></a></p>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="text-scale" content="scale">
+<meta name="Description" content="Information zum Programm Nullstelle mit Intervallschachtelung">
+<meta name="robots" content="noindex">
+<title>Information zum Programm Intervallschachtelung</title>
+<LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
+</head>
+
+<body>
+<div class="page">
+ <!--#include virtual="/header.info.inc" -->
+
+<!-- CONTENT -->
+
+<h1>Infos Nullstelle mit Intervallschachtelung</h1>
+
+<p><b>Geben Sie eine Gleichung der Form <i>y = f</i>(<i>x</i>) ein.</b></p>
+  <ul>
+  <li>x: unabhängige Variable</li>
+  <li>Dezimalpunkt, nicht Komma. Also z.B. 2.5, nicht 2,5</li>
+  <li>+, -, *, /: plus, minus, mal, dividiert durch</li>
+  <li>(..): Klammer</li>
+  <li>abs(..): Absolutbetrag</li>
+  <li>sqrt(..): Quadratwurzel</li>
+  <li>exp(..): Exponentialfunktion mit Basis e, z.B. exp(x) ist e^x</li>
+  <li>pow(..,..): Exponentialfunktion mit bel. Basis, z.B. pow(2,x) ist 2^x</li>
+  <li>log(..) oder ln(...): natürlicher Logarithmus ln</li>
+  <li>sin(..): Sinus</li>
+  <li>cos(..): Cosinus</li>
+  <li>tan(..): Tangens</li>
+  <li>asin(..): Arcussinus</li>
+  <li>acos(..): Arcuscosinus</li>
+  <li>atan(..): Arcustangens</li>
+  <li>e: Eulersche Zahl e</li>
+  <li>pi: Kreiszahl pi
+  </ul>
+<ul>
+<li>Geben Sie die linke Intervallgrenze für x ein. Die rechte Intervallgrenze wird um eins höher gesetzt</li>
+<li>Wählen Sie die Genauigkeit der Nullstelle und die Höchstanzahl Iterationen. 
+  Anzahl Dezimalstellen: höchstens 14. Beachten Sie auch die WARNUNG zuunterst.</li>
+</ul>
+<p><b>Klicken Sie auf 'Reset'</b></p>
+ Falls ein Syntaxfehler bei der Funktionsgleichung auftritt, so erhalten Sie eine entsprechende Meldung.
+<p><b>Wählen Sie nun entweder 'Schritt', um die jeweils nächste
+  Iteration anzuzeigen oder 'Run', um das Programm laufen zu lassen.</b></p>
+Bei Division durch Null oder einer anderweitigen Operation, die keine Zahl
+  ergibt, wird das Symbol NaN ausgegeben (Definition für "Not a Number")
+
+<p><b>Vergessen Sie nicht, nach einer Änderung auf 'Reset' zu klicken.
+ Die Return-Taste genügt nicht.
+</b></p>
+
+<p>WARNUNG: Die Methode wird je nach Genauigkeit der Maschine ab einer bestimmten Dezimalstelle fehlerhaft!<br>
+  Beispiel: Geben Sie y = pow(x-1000,5)-3, das Intervall von 1001 bis 1002 und die
+  Genauigkeit 14 Dezstellen ein und lassen das Programm schrittweise laufen.
+  Beobachten Sie, was geschieht!
+</p>
+
+<p><script>if (window.opener==undefined) document.write("<a href=\"./schachtelung.html\">Zum Programm Nullstelle mit Intervallschachtelung</a>")</script></p>
+
+<!-- EOF: CONTENT -->
+
+</div>
+</body>
+</html>

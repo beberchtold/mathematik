@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="text-scale" content="scale">
+<meta name="Description" content="Simulation des Doppelpendels mit numerischer Lösung des Differentialgleichungssystems mittels Runge-Kutta">
+<title>Doppelpendel</title>
+<link rel="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
+<script src="doppelpendel_min.js"></script>
+<script src="/script/infos.js" defer></script>
+<style>
+input[type=button] {margin:3px 15px 5px 0px}
+canvas {width:100%;height:auto;min-width:280px;max-width:400px}
+</style>
+</head>
+
+<body>
+<div class="page">
+
+<div class="flex">
+<span id="menuicon"><a href="/menu.html">
+<img src="/img/menuicon.svg" title="Inhalt" alt="menu"></a></span>
+<span class="Haupt"><a class="black" href="/" title="Home"><img src="/img/fractal_logo.svg" alt="Logo">mathematik.ch</a></span>
+</div>
+
+<!-- CONTENT -->
+
+<h1>Doppelpendel</h1>
+
+<div class="colgroup-2">
+  <div class="col">
+     <canvas id="myCanvas" width="280" height="280">Ihr Browser kann kein Canvas!</canvas>
+  </div>
+  
+  <div class="col">
+   <ul>
+    <li>Phi1&nbsp;<input id="PHI1" type="number" min=-3.1415 max=3.1415 value=2.84 lang="en"></li>
+    <li>Phi2&nbsp;<input id="PHI2" type="number" min=-3.1415 max=3.1415 value=-1.57 lang="en"></li>
+    <li>Schrittweite&nbsp;h <input id="Schrittweite" type="number" min=0.0001 max=0.04 value=0.01 lang="en"></li>
+    <li><input type="button" value="Start" onclick="start()">
+	  <input type="button" id="STEP" value="Step" onclick="dostep()">
+	  <input id="RUN" type="button" value="Run" onclick="run()">
+	 </li>
+  </ul>
+  </div>
+</div>
+
+<p>Sie können die Anfangswerte für Phi1, Phi2 (im Bogenmass zwischen -Pi und Pi) und die Schrittweite h 
+(0&lt;h&lt;0.04) ändern.<br>
+Klicken Sie dann zuerst auf den Start-Button, um diese Werte zu übernehmen.</p>
+<p>Klicken Sie für weitere Infos auf <img src="/img/help.png" alt="Hilfe" onclick="infos('info_doppelpendel.html','Infofenster',400,600)"></p>
+  
+<!-- EOF: CONTENT -->
+
+<p><small>
+©1997 -
+2026 www.mathematik.ch</small> |<a href="/search/"><span class="b" title="Suche">&#x1F50D;</span></a></p>
+
+</div>
+</body>
+</html>

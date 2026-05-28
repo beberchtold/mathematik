@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="text-scale" content="scale">
+<title>Berechnung von Pi (MonteCarlo-Methode)</title>
+<meta name="description" content="Berechnung Pi mit MonteCarlo-Methode">
+<meta name="keywords" content="Pi,Wahrscheinlichkeit,MonteCarlo-Methode">
+<LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
+<script src="simu_pi_min.js"></script>
+<style>
+input[type="button"] {width:6em;margin-bottom:5px}
+canvas {width:100%;height:auto;min-width:308px;max-width:500px}
+</style>
+</head>
+
+<body>
+<div class="page">
+
+<div class="flex">
+<span id="menuicon"><a href="/menu.html">
+<img src="/img/menuicon.svg" title="Inhalt" alt="menu"></a></span>
+<span class="Haupt"><a class="black" href="/" title="Home"><img src="/img/fractal_logo.svg" alt="Logo">mathematik.ch</a></span>
+</div>
+
+<!-- CONTENT -->
+
+<h1>Berechnung von Pi mit MonteCarlo-Methode</h1>
+
+<div class="colgroup-2">
+  <div class="col">
+     <canvas id="myCanvas" width="400" height="400">Ihr Browser kann kein Canvas!</canvas>
+  </div>
+  <div class="col">
+   <span id="N">16000</span>&nbsp;Punkte<br>
+   <ul>
+    <li>Mit gleicher Anzahl <input type="button" value="nochmals" onclick="zeichne()"></li>
+      <li>Anzahl <input type="button" id="double" style="width:7em" value="verdoppeln" onclick="doppelt()">
+	    <input type="button" id="half" style="margin-left:10px" value="halbieren" onclick="halb()"><br>
+	    Je mehr Punkte Sie wählen, desto besser wird i.a. die Approximation für Pi.</li>
+   </ul> 
+   <p><b>Resultat</b></p>
+   Anzahl blaue Punkte = <b><span id="Anzb"> </span></b>. Daher &pi; &asymp; <b><span id="Res"> </span></b><br>
+   <p>Exakter Wert  &pi; = 3.14159265...</p>
+   </div>
+</div>
+
+<p>Man bestimmt eine vorgewählte Anzahl Zufallspunkte in einem Quadrat der Seitenlänge 1 (die x-Koordinate und die 
+y-Koordinate sind also Zufallszahlen zwischen 0 und 1).<br>
+Liegt der Punkt im Viertels-Einheitskreis, so wird er blau gezeichnet, sonst rot.<br>
+Das Verhältnis der Anzahl blauen Punkte zur Total Anzahl Punkte ist eine Näherung für &pi;/4.</p>
+
+<!-- EOF: CONTENT -->
+
+<p><small>
+©1997 -
+2026 www.mathematik.ch</small> |<a href="/search/"><span class="b" title="Suche">&#x1F50D;</span></a></p>
+
+</div>
+</body>
+</html>

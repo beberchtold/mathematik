@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="text-scale" content="scale">
+<meta name="author" content="B.Berchtold">
+<meta NAME="Description" CONTENT="Affine Abbildungen">
+<title>Affine Abbildungen</title>
+<LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
+<script src="affineabb_min.js"></script>
+<script src="/script/infos.js" defer></script>
+<style>
+input[type=number] {width:2.5em;margin-bottom:4px}
+input[type="button"]{width:14em;margin-bottom:4px}
+canvas {width:100%;height:auto;min-width:308px;max-width:500px}
+</style>
+</head>
+
+<body>
+<div class="page">
+
+<div class="flex">
+<span id="menuicon"><a href="/menu.html">
+<img src="/img/menuicon.svg" title="Inhalt" alt="menu"></a></span>
+<span class="Haupt"><a class="black" href="/" title="Home"><img src="/img/fractal_logo.svg" alt="Logo">mathematik.ch</a></span>
+</div>
+
+<!-- CONTENT -->
+
+<h1>Affine Abbildungen</h1>
+<ul>
+  <li>Affine Abbildungen in der Grundebene haben die Form P(x/y) &rarr; P'(x'/y') gemäss:<br>
+      x' = a<sub>1</sub>*x + b<sub>1</sub>*y + v<sub>1</sub><br>   
+      y' = a<sub>2</sub>*x + b<sub>2</sub>*y + v<sub>2</sub> &nbsp;&nbsp;
+     mit &Delta;=a<sub>1</sub>*b<sub>2</sub>-b<sub>1</sub>*a<sub>2</sub>&ne;0</li>
+  <li>a<sub>1</sub>&nbsp;<input id="a1" type="number" value="1" lang="en">&nbsp;&nbsp;&nbsp;
+      b<sub>1</sub>&nbsp;<input id="b1" type="number" value="-2" lang="en">&nbsp;&nbsp;&nbsp;
+      v<sub>1</sub>&nbsp;<input id="v1" type="number" value="2" lang="en"></li>
+  <li>a<sub>2</sub>&nbsp;<input id="a2" type="number" value="2" lang="en">&nbsp;&nbsp;&nbsp;
+      b<sub>2</sub>&nbsp;<input id="b2" type="number" value="2" lang="en">&nbsp;&nbsp;&nbsp;
+      v<sub>2</sub>&nbsp;<input id="v2" type="number" value="-3" lang="en"></li>
+</ul>
+<p><span id="Warnung"></span></p>  
+
+<div class="colgroup-2">
+  <div class="col">
+     <canvas id="myCanvas" width="400" height="320">Ihr Browser kann kein Canvas!</canvas>
+  </div>
+
+  <div class="col">
+<ul>
+<li><input type="button" id="1" value="Bild Einheitsquadrat" onclick="button1()"></li>
+<li><input type="button" id="2" value="Bild Kreis mit M, r" onclick="button2()"><br>
+   x <input id="mx" type="number" value="0" lang="en">  
+   y <input id="my" type="number" value="1.5" lang="en">      
+   r <input id="r" type="number" min=0 value="1.2" lang="en"></li>        
+<li><input type="button" id="3" value="Bild Buchstabe F" onclick="button3()"></li>
+<li><input type="button" id="4" value="Bild Dreieck mit" onclick="button4()"><br>
+  x1 <input id="x1" type="number" value="0">
+  y1 <input id="y1" type="number" value="0" lang="en">      
+  x2 <input id="x2" type="number" value="4" lang="en">       
+  y2 <input id="y2" type="number" value="1" lang="en"><br>
+  x3 <input id="x3" type="number" value="2" lang="en">      
+  y3 <input id="y3" type="number" value="-1" lang="en">
+</li>    
+<li><input type="button" id="5" value="Bild Fkt mit Gleichung" onclick="button5()"><br>
+   y = f(x) = <input id="f" type="text" style="width:9em;" value='x*x-1'> 
+<img src="/img/help.png" alt="Hilfe" onclick="infos('infos.html','Infofenster',520,600)"></li>
+</ul>
+<p>Klicken Sie nach einer Änderung eines Wertes auf den entsprechenden Button.</p>
+		
+  </div>       
+</div>	
+
+<p><a href="/anwendungenmath/fractal/">Affine Abbildungen zur Erzeugung von Fraktalen</a></p>
+		 
+<!-- EOF: CONTENT -->
+
+<p><small>
+©1997 -
+2026 www.mathematik.ch</small> |<a href="/search/"><span class="b" title="Suche">&#x1F50D;</span></a></p>
+
+</div>
+</body>
+</html>
+

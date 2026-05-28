@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="text-scale" content="scale">
+<title>Jassen: Simulation der Wahrscheinlichkeiten für Dreiblatt, Vierblatt usw.</title>
+<meta NAME="Description" CONTENT="Spiele, Anwendungen der Mathematik, Wahrscheinlichkeit, Weise beim Jassen">
+<meta name="author" CONTENT="Bernhard Berchtold">
+<LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
+<script async src="jassen_min.js"></script>
+<style>input[type=number] {width:3em}</style>
+</head>
+
+<body>
+<div class="page">
+<div class="flex">
+<span id="menuicon"><a href="/menu.html">
+<img src="/img/menuicon.svg" title="Inhalt" alt="menu"></a></span>
+<span class="Haupt"><a class="black" href="/" title="Home"><img src="/img/fractal_logo.svg" alt="Logo">mathematik.ch</a></span>
+</div>
+
+<!-- CONTENT -->
+
+<h1>Jassen: Simulation der Wahrscheinlichkeiten von Dreiblatt, Vierblatt usw.</h1>
+
+<p>Beim Jassen werden einem Spieler 9 von 36 Karten verteilt.<br> 
+Hier können Sie simulieren, mit welcher Wahrscheinlichkeit ein Spieler genau ein Dreiblatt, genau ein Vierblatt... erhält.<br>
+Wählen Sie n = 1, so werden Ihnen die gezogenen Karten und ev. Dreiblätter usw. angezeigt.<br>
+Für n &gt; 1 werden die Anzahl der Dreiblätter usw. angezeigt. Falls n &ge; 100, so wird auch die relative Häufigkeit 
+und damit die Wahrscheinlichkeit approximativ berechnet.<br> 
+Klicken Sie zur weiteren Info zum Jassen auf das Fragezeichen.
+<a href="infos.html">
+<img src="/img/help.png" alt="Hilfe"></a>
+</p>
+
+ <ul>
+   <li>Ziehe n-mal 9 von 36 Karten:</li>  
+   <li>n = <input type="number" id="n" min=1 max=600 value="1"> (1 &le; n &le; 600)</li>     
+   <li><input type="button" value="Go" onclick=spiele()></li>
+ </ul>
+
+  <span id="txt"></span> 
+
+<p>Für die theoretische Berechnung der Wahrscheinlichkeiten: s. <a href="/puzzle/puzzle36/">puzzle 36</a>. 
+
+<!-- EOF: CONTENT -->
+
+<p><small>
+©1997 -
+2026 www.mathematik.ch</small> |<a href="/search/"><span class="b" title="Suche">&#x1F50D;</span></a></p>
+
+</div>
+</body>
+</html>

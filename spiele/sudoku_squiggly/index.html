@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="text-scale" content="scale">
+<meta name="Description" content="Spiel Squiggly (bzw. Jigsaw oder Freiform) Sudoku mit Javascript: Lösen und Erzeugen, Eindeutigkeit prüfen">
+<meta name="Keywords" content="Spiel,Squiggly,Jigsaw,Nonomino,Hexomino,Schnörkel,Sudoku,irregulär,Freiform-Sudoku,Gebiets-Sudoku,gratis,Chaos-Sudoku,Lösen,Erzeugen,eigene Struktur erzeugen,create,solve">
+<meta name="author" content="B.Berchtold">
+<title>Squiggly Sudoku (Freiform-Sudoku)</title>
+<LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
+<script src="sudoku_sq.3.9.6_min.js"></script>
+<script src="problems_sq.3.8.2.js"></script>
+<script src="input_output.js" defer></script>
+<script src="standard.js" defer></script>
+<script src="/script/infos.js" defer></script>
+<style>
+input[type="button"]{min-width:39px;margin:3px 8px 3px 0px}
+select{height:1.4em}
+li.a{padding:2px 0px 2px 2px}
+canvas {width:100%;height:auto;min-width:308px;max-width:500px}
+</style>
+</head>
+
+<body onkeyup="keyPress(event.keyCode)">
+<div class="page">
+<div class="flex">
+<span id="menuicon"><a href="/menu.html">
+<img src="/img/menuicon.svg" title="Inhalt" alt="menu"></a></span>
+<span class="Haupt"><a class="black" href="/" title="Home"><img src="/img/fractal_logo.svg" alt="Logo">mathematik.ch</a></span>
+</div>
+
+<!-- CONTENT -->
+
+<h1>Squiggly Sudoku (Freiform-Sudoku)</h1>
+
+<p>Das Ziel des Spiels ist, in jeder Zeile, Kolonne und jeder Box (eine Box ist durch fette Linien und Farbe markiert) 
+genau die Ziffern 1 bis 6 (bzw. 9) zu haben. Voreingestellt ist die Situation 6x6. 
+Mit Hilfe der Checkbox wählen Sie die Situation 9x9.<br>
+Sie können das angezeigte Problem lösen, mit <b>Create</b> durch den Computer ein neues Problem mit aktueller Boxstruktur erzeugen lassen oder durch Wahl von p1 bis p9 
+aus 'Prob' ein gespeichertes Problem laden und dann lösen; <b>p8 ist Standard-Sudoku</b>.<br>
+<b>Solve</b> versucht, eine Lösung der Stellung vom aktuellen Brett zu finden und bricht Ihren Lösungsversuch ab!<br>
+<b>NeueBoxstruktur Comp</b> lässt den Computer eine Zufallsstruktur erzeugen.<br>
+Mit Klick auf <b>NeueBoxstruktur User</b> können Sie eine eigene Struktur schaffen und so z.B. auch jede vorgegebene Problemstellung 
+eines Freiform-Sudokus eingeben und vom Computer lösen lassen.<br>
+Das erste Problem nach jeweils neuer Boxstruktur wird automatisch gespeichert und ist via 'Probneu' abrufbar.<br>
+Sie können mit <b>CreateUser</b> auch eine eigene Problemstellung eingeben und sie auf Eindeutigkeit prüfen lassen.<br>
+Die neu entstandenen Probleme in 'Probneu' können Sie auf Ihre HD downloaden und später wieder laden.</p>
+<ul>
+ <li><input type="button" value="Weitere Info" style="width:8em;margin-right:20px" onclick="infos('infos.html','Infofenster',400,600)">
+   <input type="button" value="Strategien " onclick="infos('strategie.html','Strategiefenster',400,600)"></li>
+</ul>
+
+<div class="colgroup-2">
+  <div class="col">
+     <canvas id="myCanvas" width="400" height="400">Ihr Browser kann kein Canvas!</canvas>
+  </div>
+  
+  <div class="col">
+  <div id="zifferbuttons">
+   <ul>
+    <li>Eingabe der Ziffer ins akt. (hellblaue) Feld:</li>
+	<li><input type="button" title="löscht (schwarze) Ziffer, funktioniert auch mit delete-Taste" value=" " onclick="eingabe(0)">
+	  <input type="button" value="1" onclick="eingabe(1)">
+	  <input type="button" value="2" onclick="eingabe(2)">
+	  <input type="button" value="3" onclick="eingabe(3)">
+      <input type="button" value="4" onclick="eingabe(4)">
+	  <input type="button" value="5" onclick="eingabe(5)">
+	  <input type="button" value="6" onclick="eingabe(6)">
+	  <span id="Z9x9" style="display:none;">
+        <input type="button" value="7" onclick="eingabe(7)">
+	    <input type="button" value="8" onclick="eingabe(8)">
+	    <input type="button" value="9" onclick="eingabe(9)">
+	  </span>
+	</li>
+   </ul>
+   <div style="margin-top:14px;outline:1px solid;padding:0px 0px 3px 3px;">
+	<ul>  
+	  <li class="a"><label><input id="Show" type="checkbox" onclick="OnChangeCheckbox1(this)">Verfügbare Ziffern im akt. Feld:</label> <span id="Verf"></span>
+      </li>
+      <li class="a"><label><input id="Hilfe" type="checkbox" onclick="OnChangeCheckbox2(this)">Nicht mögliche Felder für Ziffer:</label>
+	  </li>
+	  <li><input id="H1" type="button" value="1" onclick="hilf(1)">
+	    <input id="H2" type="button" value="2" onclick="hilf(2)">
+	    <input id="H3" type="button" value="3" onclick="hilf(3)">
+        <input id="H4" type="button" value="4" onclick="hilf(4)">
+	    <input id="H5" type="button" value="5" onclick="hilf(5)">
+	    <input id="H6" type="button" value="6" onclick="hilf(6)">
+	    <span id="H9x9" style="display:none;">
+        <input id="H7" type="button" value="7" onclick="hilf(7)">
+	    <input id="H8" type="button" value="8" onclick="hilf(8)">
+	    <input id="H9" type="button" value="9" onclick="hilf(9)">	
+	    </span>
+	  </li>
+	</ul>
+   </div>
+  </div>
+  <p style="margin-top:20px"><span id="message" style="margin-top:10px"></span></p>
+  <span id="messageBox"></span>
+  <span id="right" style="margin-top:8px;margin-bottom:10px;display:none">
+    <input type="button" value="Richtig?" onclick="richtig()" style="margin-right:15px;">
+  </span><span id="Antwort"></span>
+  <span id="testeind" style="margin-top:10px;margin-bottom:10px;display:none">
+	<input type="button" value="Test:Eindeutig?" onclick="dotest()" style="margin-right:15px;">
+  </span><span id="Resultat"></span>
+  <br>
+  <span id="saveaktprob" style="display:none;">
+	<input type="button" value="Save aktuelles Problem als Probneu" onclick="usersaveneu()" style="margin-top:10px;margin-bottom:10px;">
+  </span>
+  <div id="steuerbuttons1">
+   <ul>
+	<li><input id="Sav" type="button" value="Save " title="speichert aktuelle Stellung" onclick="save_user()">
+	  <input id="Loa" type="button" value="Load " title="ladet die mit Save gespeicherte Stellung" onclick="load_user()">
+	  <input id="Sol" type="button" value="Solve " title="Computer versucht Lösung der aktuellen Stellung zu finden" onclick="solvebutton()">
+	</li>
+   </ul>
+  </div>
+  <div id="steuerbuttons2">
+   <ul>
+	<li><input type="button" value="Create  " title="Computer versucht neue Problemstellung zu erzeugen" onclick="docreate()">
+	  <input type="button" value="CreateUser" title="Hier können Sie Ihre Problemstellung eingeben" style="width:7em;margin-right:15px" onclick="createuser()">
+	  <select id="wahl" title="vordef. Probleme " onchange="problem(this[selectedIndex].index)" style="width:5em">
+        <option>Prob</option>
+	    <option>p1</option>
+        <option>p2</option>
+        <option>p3</option>
+        <option>p4</option>
+        <option>p5</option>
+	    <option>p6</option>
+	    <option>p7</option>
+	    <option>p8 Stand</option>
+	    <option>p9</option>
+      </select>
+	</li>
+  </ul>
+  </div>
+  <div id="bNBCle">
+   <ul>
+	<li><input type="button" value="NeueBoxstruktur User" onclick="erzeugeStruktur()" style="width:12em;margin-right:10px">
+	  <span><input type="button" value="Clear " title="erzeugt leeres Startfeld" onclick="clearf()"></span>
+	</li>
+   </ul>
+  </div>
+  <div id="chb3u4">
+   <ul>
+	<li><input type="button" id="NBsC" value="NeueBoxstruktur Comp" onclick="comperzeugeStruktur()" style="width:12em;margin:8px 10px 8px 0px;">
+	  <span id="prob6">
+	    <select id="probneu6" title="neu erzeugte Probleme" onchange="problemneu(this[selectedIndex].index)">
+           <option>Probneu</option>
+        </select>
+	  </span>
+	  <span id="prob9" style="display:none;">
+	    <select id="probneu9" onchange="problemneu(this[selectedIndex].index)">
+            <option>Probneu</option>
+        </select>
+	  </span>
+	</li>
+	<li><label><input id="9x9" type="checkbox" onclick="OnChangeCheckbox3(this)"><b>Squiggly Sudoku: Situation 9x9</b></label></li>
+   </ul>
+  </div>
+  <br>
+  <ul>
+   <li><select id="dateien" title="Up- und Download Probleme in 'Probneu'" onchange="dateihandling(this[selectedIndex].index)">
+	<option>Up- und Download 'Probneu'</option>
+	<option>Upload in 'Probneu'</option>
+	<option>Download von 'Probneu'</option>
+	<option>Upload Standard-Probleme</option>
+   </select>
+   <a id="downloadLink" href="" download="NeueProbleme.txt" style="display:none;"></a>
+   <input type="file" id="upload" accept=".txt" onchange="OnShowSelectedFile()" style="display:none;">
+   </li>
+  </ul>
+  <div id="uploadInfo" style="font-style:italic; color:red;"></div>
+ </div>       
+</div>
+
+<p><a href="/spiele/sudoku_x/">Zu SudokuX</a></p>
+<p><a href="/spiele/suguru/">Zu Suguru</a></p>
+
+<!-- EOF: CONTENT -->
+
+<p><small>
+©1997 -
+2026 www.mathematik.ch</small> |<a href="/search/"><span class="b" title="Suche">&#x1F50D;</span></a></p>
+
+</div>
+</body>
+</html>
+
