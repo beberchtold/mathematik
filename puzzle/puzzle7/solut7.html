@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="text-scale" content="scale">
+<title>Lösung Puzzle Nr 7: Ziegenproblem</title>
+<meta name="Description" content="Lösung Puzzle7: Simulation Ziegenproblem, Monty Hall-Problem">
+<meta name="author" content="B.Berchtold">
+<script src="puzzle7_min.js"></script>
+<link rel="stylesheet" href="/css/mathematik.css" TYPE="text/css">
+<style>input[type="button"] {margin-bottom:10px;margin-right:20px;}</style>
+</head>
+
+<body>
+<div class="page">
+<div class="flex">
+<span id="menuicon"><a href="/menu.html">
+<img src="/img/menuicon.svg" title="Inhalt" alt="menu"></a></span>
+<span class="Haupt"><a class="black" href="/" title="Home"><img src="/img/fractal_logo.svg" alt="Logo">mathematik.ch</a></span>
+</div>
+
+<!-- CONTENT -->
+
+<h1>Lösung Puzzle 7: Ziegenproblem</h1>
+
+<h4>Der Teilnehmer wird mit grossem Vorteil seine Wahl ändern, d.h. auf
+    die andere Tür (im Beispiel Tür Nummer 3) setzen! Die Wahrscheinlichkeit, dass das Auto
+    hinter der anderen Tür ist, beträgt 2/3, die Wahrscheinlichkeit dafür, dass es hinter
+    der zuerst gewählten Tür steht, nur 1/3.</h4>
+
+<p>Man experimentiere mit dem folgenden JavaScript-Programm:</p>
+
+<div class="colgroup-2">
+  <div class="col">
+  <p>
+    <img id="1" src="door.gif" width="80" height="102" onclick="Ziehe(1)" alt="Tür1">&nbsp;&nbsp;
+    <img id="2" src="door.gif" width="80" height="102" onclick="Ziehe(2)" alt="Tür2">&nbsp;&nbsp;
+    <img id="3" src="door.gif" width="80" height="102" onclick="Ziehe(3)" alt="Tür3"><br><br>
+    <b><span id="Antwort">Klicken Sie auf eine Türe</span></b>
+   </div>
+   <div class="col">
+   <ul>
+     <li><input type="button" style="width:8em" value="Neues Spiel" onclick="neuesSpiel()">
+        <input type="button" style="width:18em" value="100 Zufallspiele durch Computer" onclick="Zufallspiel()">
+	 </li>
+   </ul>
+	<p>Sie haben von insgesamt <b><span id="Anzahl"> 0 </span></b> Spielen <b><span id="Gewonnen"> 0 </span></b> Spiele gewonnen.<br>
+    Durch permanentes Umwählen hätte man von allen Spielen <b><span id="Umwahl"> 0 </span></b> Spiele gewonnen.<br><br> 
+    Beim Zufallspiel trifft der Computer seine zweite Wahl rein zufällig.</p>
+  </div>
+</div>
+
+<p><img src="3Tuer.png" style="width:200px; height:200px; float:left;" alt="Baumdiagramm"></p>
+<p><u>Begründung</u>: Ohne Einschränkung der Allgemeinheit kann vom Beispiel
+    ausgegangen werden. Tür 2 bzw. Tür 3 öffnet sich mit W'keit 1/2. Da bei <strong>beiden</strong>
+    Fällen das Auto noch hinter Tür 1 stehen kann, insgesamt die W'keit des Preises hinter
+    Tür 1 aber 1/3 beträgt, so muss jeder Weg zu Tür 1 mit W'keit 1/6 auftreten. Die
+    W'keit, dass sich der Preis hinter Tür 1 befindet, unter der Bedingung dass sich Tür 2
+    bzw. Tür 3 geöffnet hat, beträgt also immer noch 1/3.<br>
+    mathematisch: P(T2 geöffnet) = 1/6 + 0 + 1/3 = 0.5<br>
+    P(Preis hinter T1 | T2 geöffnet) = (1/6)  / 0.5 = 1/3<br>
+    P(Preis hinter T3 | T2 geöffnet) = (1/3)  / 0.5 = 2/3
+</p>
+  
+<p style="clear: left;"><br><a href="./">Zurück zur Frage</a></p>
+
+<!-- EOF: CONTENT -->
+
+<p><small>
+©1997 -
+2026 www.mathematik.ch</small> |<a href="/search/"><span class="b" title="Suche">&#x1F50D;</span></a></p>
+
+</div>
+</body>
+</html>

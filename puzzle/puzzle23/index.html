@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<title>Puzzle 23</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="text-scale" content="scale">
+<meta name="Description" content="Puzzle23: Sechs Hasen Puzzle">
+<meta name="author" content="B.Berchtold">
+<link rel="stylesheet" href="/css/mathematik.css" TYPE="text/css">
+<script src="puzzle23_min.js"></script>
+<style>input[type="button"] {width:8em;margin:0px 20px 10px 0px}
+img {width:14.2%;height:auto}
+</style>
+</head>
+
+<body>
+<div class="page">
+
+<div class="flex">
+<span id="menuicon"><a href="/menu.html">
+<img src="/img/menuicon.svg" title="Inhalt" alt="menu"></a></span>
+<span class="Haupt"><a class="black" href="/" title="Home"><img src="/img/fractal_logo.svg" alt="Logo">mathematik.ch</a></span>
+</div>
+
+<!-- CONTENT -->
+
+<h1>Puzzle 23: Sechs Hasen</h1>
+<p>Dies ist eine (einfachere!) Variante des <a href="/puzzle/SixteenPuzzle/"><b>SixteenPuzzles</b></a>. Das Ziel besteht darin, die drei
+gelben Hasen nach rechts und die drei grauen Hasen nach links zu bringen.<br> Ein Zug ist folgendermassen definiert:<br>
+Ein Hase kann um eine Position vorwärts in die Lücke verschoben werden oder 
+ein Hase kann über einen andern (beliebiger Farbe) vorwärts in die Lücke springen.<br>
+Klicken Sie auf einen Hasen, um mit ihm zu ziehen! Falls es ein zulässiger Zug ist, so wird der Zug durchgeführt.</p>
+<noscript>Bei Ihrem Browser muss JavaScript aktiviert sein.</noscript>
+
+<div class="colgroup-2">
+  <div class="col">
+    <div>
+    <img id="1" src="leer.png" alt=""><img id="2" src="leer.png" alt=""><img id="3" src="leer.png" alt=""><img id="4" src="leer.png" alt=""><img id="5" src="leer.png" alt=""><img id="6" src="leer.png" alt=""><img id="7" src="leer.png" alt="">
+	</div>
+	<div>
+    <img id="8" src="hase1.png" onclick="Pruefe(1)" alt="1"><img id="9" src="hase1.png" onclick="Pruefe(2)" alt="2"><img id="10" src="hase1.png" onclick="Pruefe(3)" alt="3"><img id="11" src="leer.png" onclick="Pruefe(4)" alt="4"><img id="12" src="hase2.png" onclick="Pruefe(5)" alt="5"><img id="13" src="hase2.png" onclick="Pruefe(6)" alt="6"><img id="14" src="hase2.png" onclick="Pruefe(7)" alt="7">                  
+	</div>
+  </div>
+  
+  <div class="col">
+  <br>
+  <ul>
+    <li>Zug: <span id="Zugnummer">0</span>
+	  <span style="margin-left:50px" id="Antwort"> </span></li>
+  <li><input type="button" value="Zug zurück" onclick="Zugruecknehmen()">
+	  <input type="button" value="Zug vorwärts" onclick="Wiederausfuehren()"></li>
+    <li><a href="./">von vorne beginnen</a></li>
+   </ul>
+  </div>
+</div>
+<br>
+<ul>
+<li><input type="button" value="Lösung" onclick="loesung()"></li>
+</ul>
+
+<!-- EOF: CONTENT -->
+
+<p><small>
+©1997 -
+2026 www.mathematik.ch</small> |<a href="/search/"><span class="b" title="Suche">&#x1F50D;</span></a></p>
+
+</div>
+</body>
+</html>

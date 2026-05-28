@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="text-scale" content="scale">
+<title>Puzzle12: Theseus und Minotaur</title>
+<meta name="Description" content="Puzzle 12: Theseus und Minotaur im Labyrinth; mit Lösung">
+<link rel="stylesheet" href="/css/mathematik.css" TYPE="text/css">
+<script src="theseus_min.js"></script>
+<style>
+div.a{width:60%;min-width:320px;max-width:510px;margin-right:40px;position:relative;float:left}
+@media(width<600px) {div.a{width:100%}}
+</style>
+</head>
+
+<body onkeyup="keyPress(event.keyCode)">
+<div class="page">
+
+<div class="flex">
+<span id="menuicon"><a href="/menu.html">
+<img src="/img/menuicon.svg" title="Inhalt" alt="menu"></a></span>
+<span class="Haupt"><a class="black" href="/" title="Home"><img src="/img/fractal_logo.svg" alt="Logo">mathematik.ch</a></span>
+</div>
+
+<!-- CONTENT -->
+
+<h1>Puzzle 12: Theseus und Minotaur</h1>
+
+  <div class="a" id="lab">
+    <script>
+	  init();	  
+    </script>
+  </div>
+   
+  <div>
+    <div id="user">
+	<ul>
+      <li><input type="button" style="min-width:2.5em;margin-left:3.2em" value="&uarr;" onclick="move(Tx-1,Ty)"></li>
+	  <li><input type="button" style="min-width:2.5em;margin-right:0.7em" value="&larr;" onclick="move(Tx,Ty-1)">
+	    <input type="button" style="min-width:2em;margin-right:0.7em" value="d" onclick="move(Tx,Ty)">
+	    <input type="button" style="min-width:2.5em" value="&rarr;" onclick="move(Tx,Ty+1)">
+	  </li>		
+	  <li><input type="button" style="min-width:2.5em;margin-left:3.2em" value="&darr;" onclick="move(Tx+1,Ty)"></li>
+      <li><span id="Antwort"> </span></li>	 
+	  <li><input type="button" style="width:8em;margin-top:10px" value="Restart" onclick="restart()"></li>
+	</ul>
+	</div>
+	<div id="computer" style="display:none">
+	<p><b>Lösung</b></p>
+	<p><span id="info">Klick auf "Zug+"</span></p>
+	<ul>
+	  <li><input type="button" value="Zug+" onclick="loesung()"></li>
+	  <li><input type="button" style="width:5em;margin-top:10px" value="Restart" onclick="restart()"></li>
+	  <li style="margin-top:20px">zurück zur <a href="./"> Aufgabe</a></li>
+	</ul>
+	</div>
+   </div>
+<div style="clear:both"></div>
+
+   <div id="user1">
+   <p>Theseus (rote Kreisfläche) ist im Labyrinth gefangen und muss einen Weg zum
+   Ausgang (Exit) finden. Als Gegner hat er den Minotaur (schwarze Kreisfläche).
+   Bei jedem Zug von Theseus (1 Feld) bewegt sich der Minotaur im Prinzip zwei
+   Felder weiter!<br>
+   Zuerst testet der Minotaur, ob er sich horizontal bewegen kann, um näher zum Theseus
+   zu gelangen. Falls er das nicht kann, so testet er, ob er sich vertikal bewegen
+   kann, um näher zum Theseus zu gelangen. Falls er sich weder horizontal noch
+   vertikal bewegen kann, so lässt er den Zug aus.<br>
+   Benützen Sie für den Zug von Theseus entweder die Pfeiltasten der Tastatur oder klicken Sie auf den entsprechenden Pfeil-Button.<br>
+   Theseus kann auch für einen Zug aussetzen und damit den Minotaur einen Extrazug machen lassen. 
+   Um dies zu veranlassen, schreiben Sie d oder klicken Sie auf den Button "d".</p>
+   <p><small>Das Original dieses Rätsel stammt von Robert Abbott (http://www.logicmazes.com/).</small></p>	
+	<ul>
+     <li><input type="button" value="Lösung   " onclick="initloesung()"> <small>(von B.Berchtold)</small></li>
+    </ul>
+	</div>
+
+<!-- EOF: CONTENT -->
+
+<p><small>
+©1997 -
+2026 www.mathematik.ch</small> |<a href="/search/"><span class="b" title="Suche">&#x1F50D;</span></a></p>
+
+<script>restart()</script>
+</div>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="de">
+<HEAD>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="text-scale" content="scale">
+<meta NAME="Description" CONTENT="Puzzle14: Schiebepuzzle">
+<TITLE>Puzzle14: Schiebepuzzle</title>
+<LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
+<script src="puzzle14_min.js"></script>
+</HEAD>
+
+<body>
+<div class="page">
+<div class="flex">
+<span id="menuicon"><a href="/menu.html">
+<img src="/img/menuicon.svg" title="Inhalt" alt="menu"></a></span>
+<span class="Haupt"><a class="black" href="/" title="Home"><img src="/img/fractal_logo.svg" alt="Logo">mathematik.ch</a></span>
+</div>
+
+<!-- CONTENT -->
+
+<h1>Puzzle 14: Schiebepuzzle</h1>  
+
+<p>
+Stellen Sie durch horizontales und vertikales Verschieben der einzelnen
+Bausteine (Zuerst Radiobutton der Richtung wählen, dann Klick auf Baustein) die Vorlage her!<br>
+Der Baustein bewegt sich so lange, bis er auf den nächsten Stein oder
+einen Farbblock trifft. Stösst er auf einen Farbblock, so nimmt er dessen Farbe an!
+</p>
+
+<div class="colgroup-2">       
+  <div class="col">
+       <canvas id="myCanvas" width=324 height=324>Ihr Browser kann kein Canvas!</canvas>
+  </div>
+  <div class="col">
+  <br>
+    Vorlage: <img src="vorlage14.png" width="104" height="105" style="vertical-align:top" alt="vorlage">
+	<span id="message" style="margin-left:40px"></span>
+	<ul>
+	  <li>Verschieben des Bausteins nach:</li>
+	  <li><label><input id="links" type="radio" name="Richtung">links </label> &nbsp;&nbsp;
+	  <label><input id="rechts" type="radio" name="Richtung">rechts </label> &nbsp;&nbsp;
+	  <label><input id="oben" type="radio" name="Richtung">oben </label> &nbsp;&nbsp;
+	  <label><input id="unten" type="radio" name="Richtung">unten </label></li>
+	  <li>Ihren jeweils letzten Zug können Sie durch Klicken auf 'Zug -' rückgängig machen.<br>
+          Klick auf 'Clear' stellt Anfangszustand her.</li>
+      <li><input type="button" id="Zug-" value="Zug-" onclick="back()">
+	    <input type="button" value="Clear" onclick="doClear()" style="margin-left:40px">
+	  </li>
+    </ul>	
+		
+  </div>
+</div>
+
+<p><a href="solut14.html">Lösung</a></p>
+
+<!-- EOF: CONTENT -->
+
+<p><small>
+©1997 -
+2026 www.mathematik.ch</small> |<a href="/search/"><span class="b" title="Suche">&#x1F50D;</span></a></p>
+
+</div>
+</body>
+</html>

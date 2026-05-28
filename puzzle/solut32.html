@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="text-scale" content="scale">
+<title>Lösung Puzzle 32: Der Münzenwurf zum zweiten</title>
+<LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
+</head>
+
+<body>
+<div class="page">
+<div class="flex">
+<span id="menuicon"><a href="/menu.html">
+<img src="/img/menuicon.svg" title="Inhalt" alt="menu"></a></span>
+<span class="Haupt"><a class="black" href="/" title="Home"><img src="/img/fractal_logo.svg" alt="Logo">mathematik.ch</a></span>
+</div>
+
+<!-- CONTENT -->
+
+<h1>Lösung Puzzle 32: Der Münzenwurf zum zweiten</h1>
+
+<div style="width:200px;float:left">
+<p><img src="img/einstein_formel.jpg" width="175" height="177" alt="einstein_formel"><br>
+<span style="font-size:12px;">Gedenkmünze Einstein</span>
+</p>
+</div>
+<p>
+Anna&nbsp;wirft siebenmal und Berta achtmal.<br><br>
+a) Wie gross ist die Wahrschein&shy;lichkeit, dass Berta dabei mehr 'Zahl' wirft als Anna?<br>
+b) Wie gross ist die Wahrschein&shy;lichkeit, dass Berta genau so viel mal 'Zahl' wirft wie Anna?<br>
+c) Wie gross ist die Wahrschein&shy;lichkeit, dass Anna dabei mehr 'Zahl' wirft als Berta?  
+</p>
+<div style="clear:both;"></div>
+<p>
+Insgesamt gibt es m = 2<sup>15</sup> = 32768 mögliche Fälle.<br><br>
+Zur Lösung von a) braucht man aber nicht alle günstigen Fälle des Ereignisses A = "Berta wirft mehr 'Zahl' als Anna" aufzuzählen.
+Da Berta genau einmal mehr wirft als Anna, so sind die zwei Ereignisse A und <span class="ol">A</span> = "Berta wirft mehr 'Kopf' als Anna" entgegengesetzte
+Ereignisse: Wenn A eintritt, so tritt <span class="ol">A</span> nicht ein und umgekehrt. Da 'Kopf' und 'Zahl' gleich wahrscheinlich sind, so muss
+die <b>Wahrscheinlichkeit für "Berta wirft mehr 'Zahl' als Anna" = P(A) = 0.5</b> sein.<br><br>
+Zur Lösung von b):<br> Die günstigen Fälle g für das betrachtete Ereignis B = "Berta wirft genau so viel mal Zahl wie Anna" ist die 
+Summe von "Anna und Berta werfen genau 0-mal Zahl" + "Anna und Berta werfen je genau 1-mal Zahl" + ... + "Anna und Berta werfen je genau 7-mal Zahl" =<br>
+<img src="img/solut32.gif" width="315" height="39" style="vertical-align:middle" alt="summe binomialkoeff">.<br><br>
+Die <b>Wahrscheinlichkeit für "Berta wirft genau so viel mal 'Zahl' wie Anna"</b> ist daher:<br>
+<b>P(B) = </b><img src="img/solut32.2.gif" width="70" height="33" style="vertical-align:middle" alt="6435/32768"> <b>&asymp; 19.638%</b>.<br><br>
+Zur Lösung von c):<br>
+<b>P("Anna wirft mehr 'Zahl' als Berta")</b> = 1 - P(A) - P(B) = <b>30.362%</b>.     
+</p>
+
+<p><a href="puzzle32.html">Zur Aufgabenstellung</a></p>
+
+<!-- EOF: CONTENT -->
+
+<p><small>
+©1997 -
+2026 www.mathematik.ch</small> |<a href="/search/"><span class="b" title="Suche">&#x1F50D;</span></a></p>
+
+</div>
+</body>
+</html>

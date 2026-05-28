@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="text-scale" content="scale">
+<meta name="Description" content="Lösung Mathematik Rätsel 29">
+<meta name="Keywords" content="mathematics,Logical,Puzzle,Denkaufgabe,Knacknuss,Mathematik,Schule,Algebra,Unterricht,Kombinatorik,Wahrscheinlichkeit">
+<title>Puzzle 29: Tontaubenschiessen</title>
+<LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
+</head>
+
+<body>
+<div class="page">
+<div class="flex">
+<span id="menuicon"><a href="/menu.html">
+<img src="/img/menuicon.svg" title="Inhalt" alt="menu"></a></span>
+<span class="Haupt"><a class="black" href="/" title="Home"><img src="/img/fractal_logo.svg" alt="Logo">mathematik.ch</a></span>
+</div>
+
+<!-- CONTENT -->
+
+<h1>Lösung Puzzle 29: Tontaubenschiessen</h1>
+
+<p>Es seien n Tontauben. Das Problem besteht darin, aus den möglichen m = n<sup>n</sup> Variationen mit Wiederholung 
+die für das betrachtete Ereignis k=0,1,2,...n überlebende Tontauben günstigen Fälle g zu berechnen.<br>
+Für die Ereignisse k=0, k=n-1 und k=n überlebende Tontauben ist die Berechnung von g einfach:<br>
+k=0: g = n! &nbsp;&nbsp;&nbsp;&nbsp;	k=n-1: g = n  &nbsp;&nbsp;&nbsp;&nbsp;  k=n: g = 0 (in keinem Fall überleben 
+alle Tontauben)<br>
+Für die restlichen Ereignisse ist die Berechnung von g schwierig!<br>
+Falls Sie grössere Berechnungen anstellen wollen, so können Sie das Formular zur Lösung benützen: 
+<a href="puzzle29/solutpuzzle29.html">Formular</a><br>
+Diese Berechnungen resultieren in den folgenden Tabellen:
+</p>
+
+<table style="border:1px solid;">
+  <tr>
+    <td style="width:16%">n = 4</td>
+    <td style="width:42%">m = 4^4 = 256</td>
+    <td style="width:42%"><b>Erwartungswert = 1.266</b></td>
+  </tr>
+  <tr>
+    <td class="c"><b>X</b></td>
+	<td class="c"><b>g</b></td>
+	<td class="c"><b>P(x)</b></td>
+  </tr>
+  <tr>
+    <td class="c">0</td>
+	<td class="c">24</td>
+	<td class="c">0.09375</td>
+  </tr>
+  <tr>
+    <td class="c">1</td>
+	<td class="c">144</td>
+	<td class="c">0.5625</td>
+  </tr>  
+  <tr>
+    <td class="c">2</td>
+	<td class="c">84</td>
+	<td class="c">0.328125</td>
+  </tr>  
+  <tr>
+    <td class="c">3</td>
+	<td class="c">4</td>
+	<td class="c">0.015625</td>
+  </tr>  
+  <tr>  
+    <td class="c">4</td>
+	<td class="c">0</td>
+	<td class="c">0</td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<table style="border:1px solid;">
+  <tr>
+    <td style="width:16%">n = 5</td>
+    <td style="width:42%">m = 5^5 = 3125</td>
+    <td style="width:42%"><b>Erwartungswert = 1.638</b></td>
+  </tr>
+  <tr>
+    <td class="c"><b>X</b></td>
+	<td class="c"><b>g</b></td>
+	<td class="c"><b>P(x)</b></td>
+  </tr>
+  <tr>
+    <td class="c">0</td>
+	<td class="c">120</td>
+	<td class="c">0.0384</td>
+  </tr>
+  <tr>
+    <td class="c">1</td>
+	<td class="c">1200</td>
+	<td class="c">0.384</td>
+  </tr>  
+  <tr>
+    <td class="c">2</td>
+	<td class="c">1500</td>
+	<td class="c">0.48</td>
+  </tr>  
+  <tr>
+    <td class="c">3</td>
+	<td class="c">300</td>
+	<td class="c">0.096</td>
+  </tr>  
+ <tr>
+    <td class="c">4</td>
+	<td class="c">5</td>
+	<td class="c">0.0016</td>
+  </tr>
+  <tr>  
+    <td class="c">5</td>
+	<td class="c">0</td>
+	<td class="c">0</td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<table style="border:1px solid;">
+  <tr>
+    <td style="width:16%">n = 6</td>
+    <td style="width:42%">m = 6^6 = 46656</td>
+    <td style="width:42%"><b>Erwartungswert = 2.009</b></td>
+  </tr>
+  <tr>
+    <td class="c"><b>X</b></td>
+	<td class="c"><b>g</b></td>
+	<td class="c"><b>P(x)</b></td>
+  </tr>
+  <tr>
+    <td class="c">0</td>
+	<td class="c">720</td>
+	<td class="c">0.0154</td>
+  </tr>
+  <tr>
+    <td class="c">1</td>
+	<td class="c">10800</td>
+	<td class="c">0.2315</td>
+  </tr>  
+  <tr>
+    <td class="c">2</td>
+	<td class="c">23400</td>
+	<td class="c">0.5015</td>
+  </tr>  
+  <tr>
+    <td class="c">3</td>
+	<td class="c">10800</td>
+	<td class="c">0.2315</td>
+  </tr>  
+ <tr>
+    <td class="c">4</td>
+	<td class="c">930</td>
+	<td class="c">0.009997</td>
+  </tr>
+ <tr>
+    <td class="c">5</td>
+	<td class="c">6</td>
+	<td class="c">0.0001286</td>
+  </tr>
+  <tr>  
+    <td class="c">6</td>
+	<td class="c">0</td>
+	<td class="c">0</td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<table style="border:1px solid;">
+  <tr>
+    <td style="width:16%">n = 7</td>
+    <td style="width:42%">m = 7^7 = 823543</td>
+    <td style="width:42%"><b>Erwartungswert = 2.379</b></td>
+  </tr>
+  <tr>
+    <td class="c"><b>X</b></td>
+	<td class="c"><b>g</b></td>
+	<td class="c"><b>P(x)</b></td>
+  </tr>
+  <tr>
+    <td class="c">0</td>
+	<td class="c">5040</td>
+	<td class="c">0.00612</td>
+  </tr>
+  <tr>
+    <td class="c">1</td>
+	<td class="c">105840</td>
+	<td class="c">0.1285</td>
+  </tr>  
+  <tr>
+    <td class="c">2</td>
+	<td class="c">352800</td>
+	<td class="c">0.5569</td>
+  </tr>  
+  <tr>
+    <td class="c">3</td>
+	<td class="c">294000</td>
+	<td class="c">0.35699</td>
+  </tr>  
+ <tr>
+    <td class="c">4</td>
+	<td class="c">63210</td>
+	<td class="c">0.07675</td>
+  </tr>
+ <tr>
+    <td class="c">5</td>
+	<td class="c">2646</td>
+	<td class="c">0.003213</td>
+  </tr>
+ <tr>
+    <td class="c">6</td>
+	<td class="c">7</td>
+	<td class="c">8.4999*10<sup>-6</sup></td>
+  </tr>
+  <tr>  
+    <td class="c">7</td>
+	<td class="c">0</td>
+	<td class="c">0</td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<table style="border:1px solid;">
+  <tr>
+    <td style="width:16%">n = 8</td>
+    <td style="width:42%">m = 8^8 = 16777216</td>
+    <td style="width:42%"><b>Erwartungswert = 2.749</b></td>
+  </tr>
+  <tr>
+    <td class="c"><b>X</b></td>
+	<td class="c"><b>g</b></td>
+	<td class="c"><b>P(x)</b></td>
+  </tr>
+  <tr>
+    <td class="c">0</td>
+	<td class="c">40320</td>
+	<td class="c">0.0024</td>
+  </tr>
+  <tr>
+    <td class="c">1</td>
+	<td class="c">1128960</td>
+	<td class="c">0.06729</td>
+  </tr>  
+  <tr>
+    <td class="c">2</td>
+	<td class="c">5362560</td>
+	<td class="c">0.3196</td>
+  </tr>  
+  <tr>
+    <td class="c">3</td>
+	<td class="c">7056000</td>
+	<td class="c">0.4206</td>
+  </tr>  
+ <tr>
+    <td class="c">4</td>
+	<td class="c">2857680</td>
+	<td class="c">0.1703</td>
+  </tr>
+ <tr>
+    <td class="c">5</td>
+	<td class="c">324576</td>
+	<td class="c">0.01935</td>
+  </tr>
+ <tr>
+    <td class="c">6</td>
+	<td class="c">7112</td>
+	<td class="c">0.000424</td>
+  </tr>
+ <tr>
+    <td class="c">7</td>
+	<td class="c">8</td>
+	<td class="c">4.7684*10<sup>-7</sup></td>
+  </tr>
+  <tr>  
+    <td class="c">8</td>
+	<td class="c">0</td>
+	<td class="c">0</td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<table style="border:1px solid;">
+  <tr>
+    <td style="width:16%">n = 9</td>
+    <td style="width:42%">m = 9^9 = 387420489</td>
+    <td style="width:42%"><b>Erwartungswert = 3.118</b></td>
+  </tr>
+  <tr>
+    <td class="c"><b>X</b></td>
+	<td class="c"><b>g</b></td>
+	<td class="c"><b>P(x)</b></td>
+  </tr>
+  <tr>
+    <td class="c">0</td>
+	<td class="c">362880</td>
+	<td class="c">9.367*10<sup>-4</sup></td>
+  </tr>
+  <tr>
+    <td class="c">1</td>
+	<td class="c">13063680</td>
+	<td class="c">0.0337</td>
+  </tr>  
+  <tr>
+    <td class="c">2</td>
+	<td class="c">83825280</td>
+	<td class="c">0.2164</td>
+  </tr>  
+  <tr>
+    <td class="c">3</td>
+	<td class="c">160030080</td>
+	<td class="c">0.4131</td>
+  </tr>  
+ <tr>
+    <td class="c">4</td>
+	<td class="c">105099120</td>
+	<td class="c">0.2713</td>
+  </tr>
+ <tr>
+    <td class="c">5</td>
+	<td class="c">23496480</td>
+	<td class="c">0.0606</td>
+  </tr>
+ <tr>
+    <td class="c">6</td>
+	<td class="c">1524600</td>
+	<td class="c">0.003935</td>
+  </tr>
+ <tr>
+    <td class="c">7</td>
+	<td class="c">18360</td>
+	<td class="c">4.739*10<sup>-5</sup></td>
+  </tr>
+ <tr>
+    <td class="c">8</td>
+	<td class="c">9</td>
+	<td class="c">2.323*10<sup>-8</sup></td>
+  </tr>
+  <tr>  
+    <td class="c">9</td>
+	<td class="c">0</td>
+	<td class="c">0</td>
+  </tr>
+</table>
+
+<p><a href="puzzle29.html">Zurück zur Aufgabenstellung</a></p>
+
+<!-- EOF: CONTENT -->
+
+<p><small>
+©1997 -
+2026 www.mathematik.ch</small> |<a href="/search/"><span class="b" title="Suche">&#x1F50D;</span></a></p>
+
+</div>
+</body>
+</html>

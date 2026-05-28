@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="text-scale" content="scale">
+<meta name="description" content="Brachystochron-Problem">
+<title>Brachystochronen-Problem</title>
+<link REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
+<link rel="stylesheet" href="/katex/katex.min.css" TYPE="text/css">
+<script src="/katex/katex.min.js"></script>
+<script src="/katex/contrib/auto-render.min.js"></script>
+<style>
+.katex {font-size: 1.1em;font-family:sf}
+</style>
+</head>
+
+<body>
+<div class="page">
+<div class="flex">
+<span id="menuicon"><a href="/menu.html">
+<img src="/img/menuicon.svg" title="Inhalt" alt="menu"></a></span>
+<span class="Haupt"><a class="black" href="/" title="Home"><img src="/img/fractal_logo.svg" alt="Logo">mathematik.ch</a></span>
+</div>
+
+<!-- CONTENT -->
+
+<h1>Brachystochronen-Problem</h1>
+
+<p>Das Problem der Brachystochrone wurde 1696 von <a href="johann_bernoulli.html"><b>Johann Bernoulli</b></a> öffentlich gestellt.<br>
+Wenn zwei Punkte P<sub>1</sub> und P<sub>2</sub> gegeben sind, die auf verschiedener Höhe (aber nicht untereinander) liegen, dann sollte unter 
+allen möglichen Verbindungskurven, auf denen sich ein materieller Punkt unter dem Einfluss der Schwerkraft (ohne Berücksichtigung der Reibung) 
+von P<sub>1</sub> nach P<sub>2</sub> bewegt, diejenige aufgefunden werden, für die die Zeit des Durchlaufens ein Minimum wird.</p>
+<p><small>Folgende Information stammt aus dem Buch "Kleine Enzyklopädie - Mathematik", 1977, Verlag Harri Deutsch, Thun und Frankfurt/M.</small></p>
+
+ <img src="brachystochron.png" width="312" height="212" style="float:left;margin-right:10px" alt="Figur">
+ 
+ <p>In&nbsp;einem passend gewählten Koordinaten&shy;system sind zwischen den Punkten P<sub>1</sub> und P<sub>2</sub> einige solcher Verbindungskurven y = y(x) 
+ als mögliche Fallkurven eingezeichnet.<br>
+ Da in jedem Punkt dieser Kurven der Weg s, die Zeit t und die momentane Geschwindigkeit v durch die Beziehungen \(\sf v=\dfrac {\sf ds} {\sf dt}\) verknüpft 
+ sind, da die durch  die Erdbeschleunigung g erhaltene Geschwindigkeit den Wert \(\sf v=\sqrt {2gy}\) hat und das Bogenelement ds schliesslich 
+ die bekannte Funktion \(\sf ds=\sqrt {1+y'^2} \,dx\) von y’ und x ist, erhält man die zum Durchlaufen nötige Gesamtzeit T als ein 
+ bestimmtes Integral zwischen den Grenzen x<sub>1</sub> und x<sub>2</sub>:<br>
+ Aus <span style="margin-right:10px;">\(\sf dt=\dfrac {\sf ds} {\sf\sqrt{2g y}} = (\dfrac {\sf\sqrt {1+y'^2}} {\sf\sqrt{2g y}}) dx \)</span> folgt 
+ <span style="margin-left:10px;">\(\sf T = \dfrac {1} {\sf\sqrt{2g}} \LARGE\int_{\normalsize x_1}^{\normalsize x_2} \normalsize\dfrac {\sf\sqrt {1+y'^2}} {\sf\sqrt{y}} dx \)</span>
+ </p>
+ <p>Dieses Integral soll für eine gesuchte Funktion y<sub>0</sub> = y<sub>0</sub>(x) den kleinsten Wert haben, d.h., sein Wert ist für alle von 
+ y<sub>0</sub> verschiedenen Funktionen y*(x) grösser. Dies ist ein Variationsproblem ohne Nebenbedingungen.
+ <a href="euler.html"><b>Euler</b></a> gelang es, das Variationsproblem auf Differentialgleichungen zurückzuführen. Er ging davon aus, dass alle zur Konkurrenz zugelassenen 
+ Funktionen y(x) sich in den Punkten P<sub>1</sub> und P<sub>2</sub> nicht von der gesuchten Extremalen y<sub>0</sub>(x) unterscheiden dürfen. 
+ Er dachte sich y(x) stets zusammengesetzt aus der Extremalen y<sub>0</sub>(x) und einer Abänderungsfunktion &epsilon;&eta;(x).<br>
+ Nach der Lösung der dazugehörigen Eulerschen Differentialgleichung erhält man mit &alpha; als 
+ Parameter und zwei Konstanten C<sub>1</sub> und C<sub>2</sub> als Lösung die <b>Zykloide<br>
+ x<sub>0</sub> = &plusmn;\(\bold {\large\frac {C_1} {2}}\)(&alpha; - sin &alpha;) + C<sub>2</sub><br> 
+ y<sub>0</sub> = \(\bold {\large\frac {C_1} {2}}\)(1 - cos &alpha;)</b>
+ </p>
+
+<script>renderMathInElement(document.body);</script>
+
+<!-- EOF: CONTENT -->
+
+<p><small>
+©1997 -
+2026 www.mathematik.ch</small> |<a href="/search/"><span class="b" title="Suche">&#x1F50D;</span></a></p>
+
+</div>
+</body>
+</html>
