@@ -1,0 +1,1 @@
+function infos(seite,name,breite,hoehe) {var neuFenster = window.open(seite,name,"width="+breite+",height="+hoehe+",left=100,top=100");neuFenster.focus();}
