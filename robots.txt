@@ -1,1 +1,5 @@
 Sitemap: https://www.mathematik.ch/sitemap.xml
+
+User-Agent: * 
+Content-Signal: ai-train=no, search=yes, ai-input=yes
+Allow: /
