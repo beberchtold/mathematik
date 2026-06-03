@@ -43,7 +43,6 @@ img[src="/img/help.png"]{width:25px;height:25px;cursor:pointer;vertical-align:mi
 img[src="/img/menuicon.svg"]{width:28px;height:28px;cursor:pointer;vertical-align:middle}
 img[src="/img/closeicon.svg"]{width:24px;height:24px;cursor:pointer;vertical-align:middle}
 math{display:inline-block;font-size:110%}
-span.b{padding:8px}
 .group:after,[class*=colgroup]:after{content:".";display:block;height:0;clear:both;visibility:hidden}
 .col{position:relative}
 .col:first-child{margin-top:0}
