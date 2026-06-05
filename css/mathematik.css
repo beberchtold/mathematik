@@ -1,4 +1,4 @@
-﻿body{background-color:white;color:black;font-size:clamp(1rem,1.5vw,1.7rem)}
+﻿body{background-color:white;color:black;font-size:clamp(1em,1.5vw,1.7em)}
 div.page{max-width:78rem;margin-left:0px;margin-right:auto;font-family:Arial,Verdana,Helvetica,Tahoma,Sans,sans-serif}
 div.flex{display:flex;align-items:center}
 .grid-container {
