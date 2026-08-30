@@ -22,7 +22,8 @@ var Link=[
 '<a href="/puzzle/puzzle24.html"><img src="/imgH/puzzle24.webp" width="200" height="150" class="H" alt="puzzle24"></a>',
 '<a href="/puzzle/puzzle31.html"><img src="/imgH/puzzle31.png" width="225" height="150" class="H" alt="puzzle31"></a>',
 '<br><a href="/puzzle/puzzle33.html"><img src="/imgH/puzzle33.gif" width="145" height="72" class="H" alt="puzzle33"></a>',
-'<a href="/puzzle/puzzle35.html"><img src="/imgH/puzzle35.webp" width="220" height="156" class="H" alt="puzzle35"></a>'
+'<a href="/puzzle/puzzle35.html"><img src="/imgH/puzzle35.webp" width="220" height="156" class="H" alt="puzzle35"></a>',
+'<a href="/puzzle/puzzle39/"><img src="/imgH/puzzle39H.png" width="200" height="181" class="H" alt="puzzle39"></a>'
 ];
 
 // Zufallsspiel
