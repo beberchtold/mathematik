@@ -15,7 +15,7 @@ var Link=[
 '<a href="/puzzle/puzzle11.html"><img src="/imgH/puzzle11.webp" width="200" height="200" class="H" alt="Prinz"></a>',
 '<a href="/puzzle/puzzle15.html"><img src="/imgH/puzzle15.webp" width="200" height="200" class="H" alt="puzzle15"></a>',
 '<a href="/puzzle/puzzle17.html"><img src="/imgH/puzzle17.webp" width="200" height="200" class="H" alt="puzzle17"></a>',
-'<a href="/puzzle/puzzle18.html"><img src="/imgH/puzzle18.webp" width="200" height="133" class="H" alt="puzzle18"></a>',
+'<a href="/puzzle/puzzle18.html"><img src="/imgH/puzzle18.webp" width="220" height="146" class="H" alt="puzzle18"></a>',
 '<a href="/puzzle/puzzle19.html"><img src="/imgH/puzzle19.webp" width="200" height="136" class="H" alt="puzzle19"></a>',
 '<a href="/puzzle/puzzle21.html"><img src="/imgH/puzzle21.png" width="200" height="134" class="H" alt="puzzle21"></a>',
 '<a href="/puzzle/puzzle22.html"><img src="/imgH/puzzle22.webp" width="200" height="169" class="H" alt="puzzle22"></a>',
