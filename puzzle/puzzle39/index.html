@@ -6,6 +6,7 @@
 <title>Puzzle 39: Romina sucht ihren Hund</title>
 <meta name="Description" CONTENT="Puzzle39: Romina s ucht ihren Hund, Logikrätsel">
 <meta name="author" content="B.Berchtold">
+<script src="puzzle39.js"></script>
 <link rel="stylesheet" href="/css/mathematik.css" TYPE="text/css">
 </head>
 
@@ -21,21 +22,28 @@
 
 <h1>Puzzle 39: Romina sucht ihren Hund</h1>
 
-<img src="puzzle39.png" width="92" height="106" alt="Hund"  style="margin-left:20px;">
-<br><br>
-<img src="../puzzle7/puzzle7.door.gif" width="65" height="93" alt="Tuer1">
-<img src="../puzzle7/puzzle7.door.gif" width="65" height="93" alt="Tuer2" style="margin-left:10px">
-<img src="../puzzle7/puzzle7.door.gif" width="65" height="93" alt="Tuer3" style="margin-left:10px">
-<img src="../puzzle7/puzzle7.door.gif" width="65" height="93" alt="Tuer4" style="margin-left:10px">
-
-
-<p>Romina möchte ihren Hund finden, der sich hinter einer der vier Türen versteckt. Ein Versuch besteht darin, 
+<p>Romina sucht ihren Hund, der sich hinter einer der vier Türen versteckt. Ein Versuch besteht darin, 
  eine Tür zu öffnen und - falls der Hund nicht dahinter war - sie wieder zu schliessen.<br>
  Nach einem erfolglosen Versuch springt der Hund hinter eine benachbarte Tür, also z.B. von 1 zu 2 oder von 4 zu 3 
  (1 und 4 sind keine benachbarten Türen).<br>
- Wie viele Versuche benötigt Romina höchstens, um den Hund sicher zu finden?
+ <b>Wie viele Versuche benötigt Romina höchstens, um den Hund sicher zu finden?</b>
  </p>
 
+<p>Man experimentiere mit dem folgenden JavaScript-Programm:</p>
+
+  <p>
+    <img id="1" src="../puzzle7/puzzle7.door.gif" width="65" height="93" onclick="Ziehe(1)" alt="Tür1">&nbsp;&nbsp;
+    <img id="2" src="../puzzle7/puzzle7.door.gif" width="65" height="93" onclick="Ziehe(2)" alt="Tür2">&nbsp;&nbsp;
+	<img id="3" src="../puzzle7/puzzle7.door.gif" width="65" height="93" onclick="Ziehe(3)" alt="Tür3">&nbsp;&nbsp;
+    <img id="4" src="../puzzle7/puzzle7.door.gif" width="65" height="93" onclick="Ziehe(4)" alt="Tür4"><br><br>
+    <b><span id="Antwort">Klicken Sie auf eine Türe</span></b>
+   </p>
+   <p>Anzahl Versuche =  <b><span id="Anzahl"> 0 </span></b>.
+   </p>
+   <p>
+     <input type="button" style="width:8em" value="Neues Spiel" onclick="neuesSpiel()">
+   </p>
+	
 
 <a href="solut39.html">Lösung</a>
 
