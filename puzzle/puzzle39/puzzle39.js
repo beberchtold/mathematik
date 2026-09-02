@@ -2,7 +2,7 @@
 // copyright Bernhard Berchtold
  
   Tuer = new Image();
-  Tuer.src = "../puzzle7/puzzle7.door.gif";
+  Tuer.src = "door.webp";
   Hund = new Image();
   Hund.src = "puzzle39.png";
   leer = new Image();
