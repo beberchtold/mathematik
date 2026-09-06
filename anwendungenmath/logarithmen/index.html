@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="text-scale" content="scale">
 <meta NAME="Description" CONTENT="Numerik: Historisches zur Berechnung von Logarithmen und Programm dazu">
@@ -22,16 +23,16 @@
 <h1>Berechnung von Logarithmen</h1>
 
 <p>Geschichtliches s. bei <a href ="/mathematiker/napier.html">Lord John Napier</a> (Neper).</p>
-<p><b>A Ein mögliches Verfahren zur Berechnung des natürlichen Logarithmus  ln x für x &gt; 0</b>:</p>
+<p><strong>A Ein mögliches Verfahren zur Berechnung des natürlichen Logarithmus  ln x für x &gt; 0</strong>:</p>
 <img src="img/lnx.gif" width="285" height="54" alt="Berechnung ln x">
-<p>Aus dem natürlichen Logarithmus <b>ln x</b> (Basis e = 2.71828182846...) 
+<p>Aus dem natürlichen Logarithmus <strong>ln x</strong> (Basis e = 2.71828182846...) 
 kann man durch Multiplikation mit dem Kehrwert  (1 / ln 10) = 0.434294481904... den dekadischen (Brigg'schen) 
-Logarithmus <b>lg x</b>  (Basis 10) berechnen:<br>
+Logarithmus <strong>lg x</strong>  (Basis 10) berechnen:<br>
 lg x &asymp; 0.434294481904 · ln x</p>
-<p><b>Beispiel:</b> Berechnung von ln 2 </p>
+<p><strong>Beispiel:</strong> Berechnung von ln 2 </p>
 <p>a) Aus der Formel für ln x ergibt sich für x = 2 mit fünf berechneten Summanden: </p>
 <img src="img/ln2var.gif" width="280" height="89" alt="Berechnung ln 2"><br>
-<b>&asymp; 0.69314605</b>
+<strong>&asymp; 0.69314605</strong>
 <p>b) Daraus die Berechnung von lg 2:  &nbsp;&nbsp;&nbsp;   lg 2 &asymp; 0.434294481904 &middot; 0.69314605 &asymp; 0.30102950 </p>
 <p>Das folgende Formular berechnet ln x gemäss diesem Algorithmus.<br>
 Je grösser n, desto genauer die Approximation. Das Verfahren konvergiert aber für  x nahe bei 0 und für grosse x relativ 
@@ -59,7 +60,7 @@ ln 0.0001234 = ln (1.234 * 10<sup>-4</sup>) = -4 * ln 10 + ln 1.234
   </div>
 </div>
 
-<p><b>B1 Weiteres Verfahren (Idee nach <a href="/mathematiker/buergi.html">Bürgi</a>, Neper, Briggs)</b>:</p>
+<p><strong>B1 Weiteres Verfahren (Idee nach <a href="/mathematiker/buergi.html">Bürgi</a>, Neper, Briggs)</strong>:</p>
 
 <p>Verfahren zur Berechnung des 10-er Logarithmus einer reellen Zahl x zwischen 1 und 10, das auch in vielen Taschenrechnern implementiert ist.<br>
 Man berechnet nur wenige Logarithmen, z.B.<br> lg(1 + 10<sup>-n</sup>) für n = 0, 1, 2,...mit Hilfe der Taylorreihenentwicklung <br>
@@ -98,7 +99,7 @@ lg 123456.78 = lg (1.2345678 * 10<sup>5</sup>) = 5 + lg 1.2345678   oder  lg 0.0
   </div>
 </div>
 
-<p><b>B2 Verfahren von Briggs</b>:</p>
+<p><strong>B2 Verfahren von Briggs</strong>:</p>
 <p>Gesucht ist wiederum lg x. Briggs erhielt die Logarithmen nicht durch Taylorreihen, sondern durch 54-maliges 
 fortlaufendes Quadratwurzelziehen der Zahl 10 (Genauigkeit auf 30 Stellen!), also <br>
 <img src="img/fortlauf_Wurzel.png" width="256" height="27" alt="fortlauf_Wurzel"><br>

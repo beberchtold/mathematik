@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="text-scale" content="scale">
 <meta name="Description" content="Spiel Squiggly (bzw. Jigsaw oder Freiform) Sudoku mit JavaScript: Lösen und Erzeugen, Eindeutigkeit prüfen">
@@ -36,14 +37,14 @@ canvas {width:100%;height:auto;min-width:308px;max-width:500px}
 <p>Das Ziel des Spiels ist, in jeder Zeile, Kolonne und jeder Box (eine Box ist durch fette Linien und Farbe markiert) 
 genau die Ziffern 1 bis 6 (bzw. 9) zu haben. Voreingestellt ist die Situation 6x6. 
 Mit Hilfe der Checkbox wählen Sie die Situation 9x9.<br>
-Sie können das angezeigte Problem lösen, mit <b>Create</b> durch den Computer ein neues Problem mit aktueller Boxstruktur erzeugen lassen oder durch Wahl von p1 bis p9 
-aus 'Prob' ein gespeichertes Problem laden und dann lösen; <b>p8 ist Standard-Sudoku</b>.<br>
-<b>Solve</b> versucht, eine Lösung der Stellung vom aktuellen Brett zu finden und bricht Ihren Lösungsversuch ab!<br>
-<b>NeueBoxstruktur Comp</b> lässt den Computer eine Zufallsstruktur erzeugen.<br>
-Mit Klick auf <b>NeueBoxstruktur User</b> können Sie eine eigene Struktur schaffen und so z.B. auch jede vorgegebene Problemstellung 
+Sie können das angezeigte Problem lösen, mit <strong>Create</strong> durch den Computer ein neues Problem mit aktueller Boxstruktur erzeugen lassen oder durch Wahl von p1 bis p9 
+aus 'Prob' ein gespeichertes Problem laden und dann lösen; <strong>p8 ist Standard-Sudoku</strong>.<br>
+<strong>Solve</strong> versucht, eine Lösung der Stellung vom aktuellen Brett zu finden und bricht Ihren Lösungsversuch ab!<br>
+<strong>NeueBoxstruktur Comp</strong> lässt den Computer eine Zufallsstruktur erzeugen.<br>
+Mit Klick auf <strong>NeueBoxstruktur User</strong> können Sie eine eigene Struktur schaffen und so z.B. auch jede vorgegebene Problemstellung 
 eines Freiform-Sudokus eingeben und vom Computer lösen lassen.<br>
 Das erste Problem nach jeweils neuer Boxstruktur wird automatisch gespeichert und ist via 'Probneu' abrufbar.<br>
-Sie können mit <b>CreateUser</b> auch eine eigene Problemstellung eingeben und sie auf Eindeutigkeit prüfen lassen.<br>
+Sie können mit <strong>CreateUser</strong> auch eine eigene Problemstellung eingeben und sie auf Eindeutigkeit prüfen lassen.<br>
 Die neu entstandenen Probleme in 'Probneu' können Sie auf Ihre HD downloaden und später wieder laden.</p>
 <ul>
  <li><input type="button" value="Weitere Info" style="width:8em;margin-right:20px" onclick="infos('infos.html','Infofenster',400,600)">
@@ -154,7 +155,7 @@ Die neu entstandenen Probleme in 'Probneu' können Sie auf Ihre HD downloaden un
         </select>
 	  </span>
 	</li>
-	<li><label><input id="9x9" type="checkbox" onclick="OnChangeCheckbox3(this)"><b>Squiggly Sudoku: Situation 9x9</b></label></li>
+	<li><label><input id="9x9" type="checkbox" onclick="OnChangeCheckbox3(this)"><strong>Squiggly Sudoku: Situation 9x9</strong></label></li>
    </ul>
   </div>
   <br>

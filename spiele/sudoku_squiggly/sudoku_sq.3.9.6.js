@@ -146,9 +146,9 @@ window.onload=init;
 	  hilfebuttons_bgweiss();
 	  deaktiviere_hilfebuttons();
 	  document.getElementById("testeind").style.display="none";
-	  if (neueBoxstruktur) {document.getElementById("message").innerHTML="<b>Create oder CreateUser</b>";}
+	  if (neueBoxstruktur) {document.getElementById("message").innerHTML="<strong>Create oder CreateUser</strong>";}
 	  else 
-	   {document.getElementById("message").innerHTML="<b>Create, CreateUser oder Auswahl aus 'Prob'</b>";}
+	   {document.getElementById("message").innerHTML="<strong>Create, CreateUser oder Auswahl aus 'Prob'</strong>";}
 	}
     streiche(0);
   }  
@@ -325,8 +325,8 @@ window.onload=init;
 				  block[anzblock]=block[anzblock]+i+""+j;
 				  zushg=true;
 				  var feldnr=block[anzblock].length/2+1;  //nächstes Feld
-				  if (feldnr<digit+1) document.getElementById("messageBox").innerHTML="<b>Fügen Sie Feld "+feldnr+" der Box "+(anzblock+1)+" hinzu.</b>";
-				    else document.getElementById("messageBox").innerHTML="<b>Fügen Sie Feld 1 der Box "+(anzblock+2)+" hinzu.</b>";
+				  if (feldnr<digit+1) document.getElementById("messageBox").innerHTML="<strong>Fügen Sie Feld "+feldnr+" der Box "+(anzblock+1)+" hinzu.</strong>";
+				    else document.getElementById("messageBox").innerHTML="<strong>Fügen Sie Feld 1 der Box "+(anzblock+2)+" hinzu.</strong>";
 				  if ((block[anzblock].length<2*digit) && (freieNachbarn(i,j)==0)) {
 					// gibt es ein anderes Feld des gleichen Blocks, das noch ein NachbarLeerfeld hat?
 					var ja=false;
@@ -336,8 +336,8 @@ window.onload=init;
                       if (freieNachbarn(ihi,jhi)>0) {ja=true;}
 					}
 					if (!ja) { zushg=false;
-					  document.getElementById("messageBox").innerHTML="<b>Keine freien Nachbarn mehr.</b> Ev. gelingt Create später nicht, da kein eindeutiges Problem für diese Struktur existiert.";
-					  document.getElementById("messageBox").innerHTML+="<br><br><b>Fügen Sie Feld "+feldnr+" der Box "+(anzblock+1)+" hinzu.</b>";
+					  document.getElementById("messageBox").innerHTML="<strong>Keine freien Nachbarn mehr.</strong> Ev. gelingt Create später nicht, da kein eindeutiges Problem für diese Struktur existiert.";
+					  document.getElementById("messageBox").innerHTML+="<br><br><strong>Fügen Sie Feld "+feldnr+" der Box "+(anzblock+1)+" hinzu.</strong>";
 					}
 				  }					
 				}
@@ -365,7 +365,7 @@ window.onload=init;
 	  blockgelungen=10; erfolgstruktur=false; neueBoxstruktur=true;
 	  document.getElementById("messageBox").innerHTML="";
 	  document.getElementById("message").innerHTML="";
-	  document.getElementById("message").innerHTML="<b>Create oder CreateUser</b>";
+	  document.getElementById("message").innerHTML="<strong>Create oder CreateUser</strong>";
 	  document.getElementById("steuerbuttons2").style.display = "inline-block";
 	  zeichne();
 	  clearf();
@@ -473,7 +473,7 @@ function compzeichneBlock() {
 	document.getElementById("message").innerHTML+="'Clear' bricht den Prozess ab und ladet Boxstruktur von p1.<br>";
 	for (var i=1;i<digit;i++) block[i]=""; 
 	block[0]="00"; //Start immer oben links
-	xNew=0;yNew=0; document.getElementById("messageBox").innerHTML="<b>Fügen Sie Feld 2 der Box 1 hinzu</b>";
+	xNew=0;yNew=0; document.getElementById("messageBox").innerHTML="<strong>Fügen Sie Feld 2 der Box 1 hinzu</strong>";
 	zeichneBlock();
   }
 
@@ -514,7 +514,7 @@ function comperzeugeStruktur() {
 		neueBoxstruktur=true; 
 		blockgelungen=10;   // noch unbekannt, welcher Block der Struktur für Setzung der digit Ziffern bei create taugt
 		for (var k=0;k<=anzblock;k++) faerbeBlock(k);
-		document.getElementById("message").innerHTML="<b>Create oder CreateUser</b>";
+		document.getElementById("message").innerHTML="<strong>Create oder CreateUser</strong>";
 		clearf();
 	  }
   }
@@ -608,7 +608,7 @@ function comperzeugeStruktur() {
       if (solved()) {
 		document.getElementById("Hilfe").checked=false;
 		OnChangeCheckbox2 (document.getElementById("Hilfe"));
-		document.getElementById("message").innerHTML="<b>"+Nummer+" gelöst. Gratuliere!</b><br><br>Klick auf 'Create' versucht eine neue Problemstellung für diese Boxstruktur zu finden.";
+		document.getElementById("message").innerHTML="<strong>"+Nummer+" gelöst. Gratuliere!</strong><br><br>Klick auf 'Create' versucht eine neue Problemstellung für diese Boxstruktur zu finden.";
         document.getElementById("zifferbuttons").style.display = "none";
 		document.getElementById("steuerbuttons1").style.display="none";
 		document.getElementById("right").style.display="none";
@@ -699,7 +699,7 @@ function comperzeugeStruktur() {
 			  if (solved()) {
 				document.getElementById("Hilfe").checked=false;
 				OnChangeCheckbox2 (document.getElementById("Hilfe"));
-				document.getElementById("message").innerHTML="<b>"+Nummer+" gelöst. Gratuliere!</b><br><br>Klick auf 'Create' versucht eine neue Problemstellung für diese Boxstruktur zu finden.";
+				document.getElementById("message").innerHTML="<strong>"+Nummer+" gelöst. Gratuliere!</strong><br><br>Klick auf 'Create' versucht eine neue Problemstellung für diese Boxstruktur zu finden.";
 			    document.getElementById("zifferbuttons").style.display = "none";
 				document.getElementById("steuerbuttons1").style.display="none";
 				document.getElementById("right").style.display="none";
@@ -929,10 +929,10 @@ function comperzeugeStruktur() {
 	  document.getElementById("bNBCle").style.display = "inline-block";
 	  create=false;
       comp=false;
-	  document.getElementById("message").innerHTML="<b>Create nicht gelungen!</b><br>Klicken Sie nochmals auf Create.";
+	  document.getElementById("message").innerHTML="<strong>Create nicht gelungen!</strong><br>Klicken Sie nochmals auf Create.";
 	  anzcreate++;
 	  if (anzcreate>4) {  // bei bnr==0 ist symm.Struktur: benötigt manchmal auch mehrere Createversuche 
-		document.getElementById("message").innerHTML="<b>Create nicht gelungen!</b>";  
+		document.getElementById("message").innerHTML="<strong>Create nicht gelungen!</strong>";  
 		if (erfolgstruktur) document.getElementById("messageBox").innerHTML="Eindeutige Problemstellung ist für diese Struktur schon mal gelungen, aber schwierig zu finden.<br>Wählen Sie nochmal 'Create' falls Sie noch Geduld haben, sonst 'NeueBoxstruktur...' oder ein Problem aus 'Prob'.<br>";
 		else
 	      document.getElementById("messageBox").innerHTML="Eindeutige Problemstellung ist für diese Struktur eventuell unmöglich.<br>Wählen Sie 'NeueBoxstruktur...' oder ein Problem aus 'Prob'.<br>Sie können es aber auch noch einige Male mit 'Create' versuchen - vielleicht klappt es ja doch noch.<br>"; 
@@ -967,7 +967,7 @@ function comperzeugeStruktur() {
 	document.getElementById("chb3u4").style.display = "inline-block";
 	if (iter<20) {
 	  Nummer="aktuelles Problem: ";
-	  document.getElementById("message").innerHTML="<b>"+Nummer+anz+" Ziffern</b>";
+	  document.getElementById("message").innerHTML="<strong>"+Nummer+anz+" Ziffern</strong>";
 	  savemessage=document.getElementById("message").innerHTML;
 	  anzcreate=0;
 	  zeichne();
@@ -1011,7 +1011,7 @@ function comperzeugeStruktur() {
 	else {
 	  document.getElementById("zifferbuttons").style.display = "none";
 	  document.getElementById("steuerbuttons1").style.display = "none";
-	  document.getElementById("message").innerHTML="<b>Create nicht gelungen!</b><br>Klicken Sie nochmals auf Create.";
+	  document.getElementById("message").innerHTML="<strong>Create nicht gelungen!</strong><br>Klicken Sie nochmals auf Create.";
 	 }
   }
 
@@ -1026,7 +1026,7 @@ function comperzeugeStruktur() {
 	  success=true;}
       else {lock(); success = dosolve();}
     if (success) {
-	  document.getElementById("message").innerHTML="<b>"+Nummer+" gelöst!</b><br><br>Klick auf 'Create' versucht eine neue Problemstellung für diese Boxstruktur zu finden.";
+	  document.getElementById("message").innerHTML="<strong>"+Nummer+" gelöst!</strong><br><br>Klick auf 'Create' versucht eine neue Problemstellung für diese Boxstruktur zu finden.";
 	  document.getElementById("zifferbuttons").style.display = "none";
 	  document.getElementById("steuerbuttons1").style.display="none";
 	  document.getElementById("right").style.display="none";
@@ -1035,11 +1035,11 @@ function comperzeugeStruktur() {
 	  zeichne();
 	}
        else {
-          if (document.getElementById("message").innerHTML=="<b>zu wenig Zahlen</b>");  // kein weiterer Kommentar
+          if (document.getElementById("message").innerHTML=="<strong>zu wenig Zahlen</strong>");  // kein weiterer Kommentar
               else {
-				  if (warnung) document.getElementById("message").innerHTML="<b>Konnte Lösung nicht finden.</b>"
+				  if (warnung) document.getElementById("message").innerHTML="<strong>Konnte Lösung nicht finden.</strong>"
 				  else 
-				  document.getElementById("message").innerHTML="<b>unlösbar!</b>";
+				  document.getElementById("message").innerHTML="<strong>unlösbar!</strong>";
 			  }
        }
   }
@@ -1047,7 +1047,7 @@ function comperzeugeStruktur() {
   function dosolve() {   //Versuch, vom aktuellen Status zu lösen
     if (solved()) return true;
     if (((digit==6) && (anzleere()>31)) || (anzleere()>72))
-      {document.getElementById("message").innerHTML="<b>zu wenig Zahlen</b>"; return false; }
+      {document.getElementById("message").innerHTML="<strong>zu wenig Zahlen</strong>"; return false; }
     var success=false;
 	var anziter=5000;
 	if (!create) anziter=30000;   // bei der Lösung von Standard-Sudoku mit 17 Zeichen müssen mind. 20000 gemacht werden
@@ -1281,7 +1281,7 @@ function comperzeugeStruktur() {
 	zeichne();
 	Nummer="np"+nr;
 	var anz=digit*digit-anzleere();
-	document.getElementById("message").innerHTML="<b>Problem neu "+nr+": "+anz+" Ziffern</b>";
+	document.getElementById("message").innerHTML="<strong>Problem neu "+nr+": "+anz+" Ziffern</strong>";
 	if (digit==9 && Nummer=="np9" && sol[0][1]=="4" && anzleere()==64) {loesungMinimalprob();}
 	else {var timer = setTimeout(function(){dosolution(vert,nr,anz)},20);}	
   }	
@@ -1303,7 +1303,7 @@ function comperzeugeStruktur() {
         locked[i][j] = setvalue(i,j,prob[i][j]);
       }
 	zeichne();
-	document.getElementById("message").innerHTML="<b>Problem neu "+nr+": "+anz+" Ziffern</b>";
+	document.getElementById("message").innerHTML="<strong>Problem neu "+nr+": "+anz+" Ziffern</strong>";
   }  
 
   function usersaveneu() {
@@ -1320,10 +1320,10 @@ function comperzeugeStruktur() {
   function dotest() {
 	save_user();
 	if (((digit==6) && (anzleere()>31)) || (anzleere()>72))
-      {document.getElementById("message").innerHTML="<b>zu wenig Zahlen</b>"; return; }
+      {document.getElementById("message").innerHTML="<strong>zu wenig Zahlen</strong>"; return; }
     document.getElementById("testeind").style.display="none";
-    document.getElementById("Resultat").innerHTML="<b>Ich teste...</b>";
-	if (digit==9) document.getElementById("Resultat").innerHTML+="<b> Das dauert ein bisschen.</b>";
+    document.getElementById("Resultat").innerHTML="<strong>Ich teste...</strong>";
+	if (digit==9) document.getElementById("Resultat").innerHTML+="<strong> Das dauert ein bisschen.</strong>";
 	var timer = setTimeout(function(){testeindeutig()},20);
   }
 
@@ -1336,9 +1336,9 @@ function comperzeugeStruktur() {
 		document.getElementById("Resultat").innerHTML="";
 		document.getElementById("testeind").style.display="inline-block";
 		load_user();
-		if (warnung) document.getElementById("Resultat").innerHTML="<b>Test dauert zu lange</b>"
+		if (warnung) document.getElementById("Resultat").innerHTML="<strong>Test dauert zu lange</strong>"
 		else 
-		document.getElementById("Resultat").innerHTML="<b>Problem unlösbar!</b><br>Korrigieren Sie die Stellung.";
+		document.getElementById("Resultat").innerHTML="<strong>Problem unlösbar!</strong><br>Korrigieren Sie die Stellung.";
 		return;
 	}
 	speichern_in_prob();  // alle Felder von sol jetzt in prob
@@ -1362,7 +1362,7 @@ function comperzeugeStruktur() {
 				  zeichne();
 				  document.getElementById("testeind").style.display="inline-block";
 				  load_user();
-				  document.getElementById("Resultat").innerHTML="<b>nicht eindeutig!</b><br>Korrigieren bzw. ergänzen Sie die Stellung.";
+				  document.getElementById("Resultat").innerHTML="<strong>nicht eindeutig!</strong><br>Korrigieren bzw. ergänzen Sie die Stellung.";
 				  return;
 				}
 	          }
@@ -1400,15 +1400,15 @@ function comperzeugeStruktur() {
     zeichne();
 	Nummer="aktuelles Problem";
 	var anz=digit*digit-anzleere();
-	document.getElementById("message").innerHTML="<b>"+Nummer+": "+anz+" Ziffern</b>";
+	document.getElementById("message").innerHTML="<strong>"+Nummer+": "+anz+" Ziffern</strong>";
 	document.getElementById("saveaktprob").style.display = "none";
     if (!erfolgstruktur) {erfolgstruktur=true; document.getElementById("messageBox").innerHTML=savemessageBox;}
 		else {		
 			if (document.getElementById("probneu"+digit).length<10) {
-				document.getElementById("messageBox").innerHTML+="<b>Eindeutig!</b> Sie können das Problem mit 'Save aktuelles Problem...' in 'Probneu' speichern";
+				document.getElementById("messageBox").innerHTML+="<strong>Eindeutig!</strong> Sie können das Problem mit 'Save aktuelles Problem...' in 'Probneu' speichern";
                 document.getElementById("saveaktprob").style.display = "inline-block";				
 			}
-            else document.getElementById("messageBox").innerHTML+="<b>Eindeutig!</b> "+probfull;
+            else document.getElementById("messageBox").innerHTML+="<strong>Eindeutig!</strong> "+probfull;
 	    } 
 	document.getElementById("testeind").style.display="none";
 	document.getElementById("Resultat").innerHTML="";

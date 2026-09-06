@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="text-scale" content="scale">
 <title>Suguru</title>
@@ -38,7 +39,7 @@ Sie können das angezeigte Problem lösen, ein Problem durch den Computer lösen
 oder eine Problemstellung neu eingeben ('Eingabe neues Suguru'). Ihre neu erstellten Sugurus können Sie mit 'Download' auf Ihren 
 Computer speichern und später mit 'Upload' wieder raufladen.<br>
 Falls Sie bei einer Eingabe einer Ziffer unsicher sind, so klicken Sie auf &#9998;. 
-Die Eingabe erfolgt dann mit kleinerem Font und Sie können - falls nötig - mit <b>&cularr;</b> wieder zu dieser Eingabe zurückkehren.
+Die Eingabe erfolgt dann mit kleinerem Font und Sie können - falls nötig - mit <strong>&cularr;</strong> wieder zu dieser Eingabe zurückkehren.
 </p>
 <input type="button" id="infobutton" class="infobut" value="Info nicht mehr anzeigen" onclick="hideinfo()">
 <br><br>
@@ -59,7 +60,7 @@ Die Eingabe erfolgt dann mit kleinerem Font und Sie können - falls nötig - mit
 	<br>
 	<div id="solve">
 	   <button id="SF" title="Kleines Font bei Eingabe" onclick="changeSF()">&#9998;</button>
-	   <button id="backButton" title="einen Schritt zurück" onclick="back()"><b> &cularr; </b></button>
+	   <button id="backButton" title="einen Schritt zurück" onclick="back()"><strong> &cularr; </strong></button>
 	   <button style="margin-left:45px" id="solveButton" title="Computer versucht, Problem zu lösen" onclick="solvequick()">Solve</button>
 	   <button style="margin-left:10px" id="stepButton" title="Computer löst Problem schrittweise" onclick="step()">Step</button>
     </div>

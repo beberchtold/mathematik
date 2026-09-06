@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="text-scale" content="scale">
 <title>SudokuX (Diagonal-Sudoku)</title>
@@ -31,10 +32,10 @@ canvas {width:100%;height:auto;min-width:308px;max-width:500px}
 
 <h1>SudokuX (Diagonal-Sudoku)</h1>
 
-<p>Das Ziel des Spiels ist, in jeder Zeile, Kolonne, in den <b>zwei Hauptdiagonalen</b> und jeder Box (eine Box ist durch fette 
+<p>Das Ziel des Spiels ist, in jeder Zeile, Kolonne, in den <strong>zwei Hauptdiagonalen</strong> und jeder Box (eine Box ist durch fette 
 Linien abgetrennt) genau die Ziffern 1 bis 6 (bzw. 9) zu haben. Voreingestellt ist die Situation 6x6. 
 Mit Hilfe der Checkbox wählen Sie Situation 9x9.<br>
-Sie können das angezeigte Problem lösen, die Ziffern einer Problemstellung in die Felder eingeben oder mit <b>Create</b> durch den Computer ein neues Problem 
+Sie können das angezeigte Problem lösen, die Ziffern einer Problemstellung in die Felder eingeben oder mit <strong>Create</strong> durch den Computer ein neues Problem 
 erzeugen lassen.<br>
 Durch Wahl von p1 bis p9 aus dem Auswahlfeld 'Prob' lässt sich ein gespeichertes Problem laden und dann lösen.</p>
 
@@ -88,7 +89,7 @@ Durch Wahl von p1 bis p9 aus dem Auswahlfeld 'Prob' lässt sich ein gespeicherte
 	</ul>
 	</div>	
   </div>
-    <p style="margin-top:20px"><b><span id="message"></span></b></p>
+    <p style="margin-top:20px"><strong><span id="message"></span></strong></p>
     <ul>
     <li><input type="button" value="Save " title="speichert aktuelle Stellung" onclick="save_user()">
       <input type="button" id="Loa" value="Load " title="ladet die mit Save gespeicherte Stellung" onclick="load_user()">
@@ -109,7 +110,7 @@ Durch Wahl von p1 bis p9 aus dem Auswahlfeld 'Prob' lässt sich ein gespeicherte
 	    <option>p9</option>
       </select>
     </li>
-    <li><label><input id="9x9" type="checkbox" onclick="OnChangeCheckbox3 (this)"><b>SudokuX: Situation 9x9</b></label></li>
+    <li><label><input id="9x9" type="checkbox" onclick="OnChangeCheckbox3 (this)"><strong>SudokuX: Situation 9x9</strong></label></li>
 	</ul>
   </div>       
 </div>	

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="text-scale" content="scale">
 <meta name="Description" content="Statistik: Multiple Regression">
@@ -26,7 +27,7 @@
 
 <p>Geben Sie die Koordinaten ( x<sub>i</sub> / y<sub>i</sub> / z<sub>i</sub>)  von maximal 30 Punkten in die Felder ein.<br>
 Das Formular berechnet dann nach Klick auf 'Berechne' die Koeffizienten a, b und d in der Gleichung  der 
-<b>Regressionsebene E: z = a*x + b*y + d  </b> auf zwei Arten:<br><br>
+<strong>Regressionsebene E: z = a*x + b*y + d  </strong> auf zwei Arten:<br><br>
 1. Die Summe der Quadrate der z-Differenzen wird minimal, d.h.
 <img src="summe_quadrate_residuen.gif" style="vertical-align:middle" width="211" height="53" alt="Summe Quadrate Residuen"> ( 3 &le; n &le; 30)<br>
 2. Die Summe der Quadrate der Abstände der Punkte wird minimal, d.h. 
@@ -77,14 +78,14 @@ Das Formular berechnet dann nach Klick auf 'Berechne' die Koeffizienten a, b und
   <h2>Resultate für n = <span id="N"></span></h2>
   <p>Mittelwerte: <span class="ol">x</span> = <span id="xquer"></span>, <span class="ol">y</span> = <span id="yquer"></span>, <span class="ol">z</span> = <span id="zquer"></span></p>
   <h3>1. Summe der Quadrate der z-Differenzen minimal</h3>
-    <p><b><span id="Ebgl"></span></b><br><br>
+    <p><strong><span id="Ebgl"></span></strong><br><br>
 	Summe der Quadrate der z-Differenzen = <span id="sumquaz"></span><br><br>
     Bestimmtheitsmass R<sup>2</sup> = <span id="r2"></span><br>
 	Je näher R<sup>2</sup> bei 1, desto besser die Korrelation.<br><br>
 	(Summe der Quadrate der Abstände der Punkte = <span id="sumqua"></span>)</p>
 	
   <h3>2. Summe der Quadrate der Abstände der Punkte minimal</h3>
-     <p><b><span id="Ebgl2"></span></b><br><br>
+     <p><strong><span id="Ebgl2"></span></strong><br><br>
 	 Summe der Quadrate der Abstände der Punkte = <span id="sumqua2"></span><br><br>
 	 <span id="Warnung"></span>
 	 (Summe der Quadrate der z-Differenzen = <span id="sumquaz2"></span>)</p>

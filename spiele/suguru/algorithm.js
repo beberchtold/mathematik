@@ -8,9 +8,9 @@ var blockIndex = null;
 var blockValuesPresent = null;
 var blockSizes = null;
 var nothingChanged = false;
-const compsolved = "<b> von Computer gelöst</b>";
-const failtext = "<b> kann Problem nicht lösen</b>";
-const failtextnew = "<b> Problem unlösbar</b>";
+const compsolved = "<strong> von Computer gelöst</strong>";
+const failtext = "<strong> kann Problem nicht lösen</strong>";
+const failtextnew = "<strong> Problem unlösbar</strong>";
 
 function excludeValue(cell, value) {
 	if (cell.textContent != "") {
@@ -337,7 +337,7 @@ function analyze() {
 }
 
 function endcontrol() {   // by B. Berchtold
-    var Titel="<b>Nr "+currentLevel.level+"</b>";
+    var Titel="<strong>Nr "+currentLevel.level+"</strong>";
     for (var x=0;x<currentLevel.xSize;x++)
 	   for (var y=0;y<currentLevel.ySize;y++)
 	     if (!validateCell(getCell(x,y))) {

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="text-scale" content="scale">
 <meta name="author" content="Bernhard Berchtold">
@@ -29,25 +30,25 @@ canvas {width:100%;height:auto;min-width:308px;max-width:500px}
 
 <p>Zentraler Grenzwertsatz: (vereinfachte Formulierung)</p>
 <div style="width:95%; border:1px solid; padding:5px; display: block; margin-left: auto; margin-right: auto;">
-Eine <b>Summe</b> von sehr vielen unabhängigen Zufallsvariablen ist unter der Voraussetzung, dass jede der unabhängigen
- Zufallsvariablen nur einen geringen Einfluss auf die Summe hat, <b>angenähert normalverteilt</b>.<br><br>
+Eine <strong>Summe</strong> von sehr vielen unabhängigen Zufallsvariablen ist unter der Voraussetzung, dass jede der unabhängigen
+ Zufallsvariablen nur einen geringen Einfluss auf die Summe hat, <strong>angenähert normalverteilt</strong>.<br><br>
  A.M. Ljapunoff (1857 - 1918)
  </div>
  <p>
 Zur Illustration soll die Überlegung (1) und anschliessend unabhängig davon das Formular (2) dienen:<br>
 (1) Die Newton'sche Formel <img src="binomial.png" alt="Newton Formel">,
- q = 1-p für die Berechnung bei <a href="../binomialvert.html"><b>Binomialverteilung</b></a> kann auch folgendermassen interpretiert werden:<br>
+ q = 1-p für die Berechnung bei <a href="../binomialvert.html"><strong>Binomialverteilung</strong></a> kann auch folgendermassen interpretiert werden:<br>
 Gegeben seien n voneinander unabhängige Zufallvariablen Z<sub>1</sub>, Z<sub>2</sub>, ... , Z<sub>n</sub>, die nur den Wert 1 
 (mit Wahrscheinlichkeit p) und den Wert 0 (mit Wahrscheinlichkeit q) annehmen können. Wie gross ist dann die Wahrscheinlichkeit, dass 
-die <b>Summe</b> X := Z<sub>1</sub> + Z<sub>2</sub> + ... + Z<sub>n</sub>  den Wert x annimmt? Dies ist aber die W'keit, dass das Ereignis
+die <strong>Summe</strong> X := Z<sub>1</sub> + Z<sub>2</sub> + ... + Z<sub>n</sub>  den Wert x annimmt? Dies ist aber die W'keit, dass das Ereignis
  "Wert 1 annehmen" genau x -mal von n-mal eintreten muss.<br> Die W'keit dafür ist eben P<sub>n</sub>(x).<br>
  Nach dem zentralen Grenzwertsatz ist X angenähert normalverteilt. Dies führt auf die 
- <a href="../approx_bin_norm.html"><b>Approximation der Binomialverteilung durch Normalverteilung</b></a>, also den Grenzwertsatz von de Moivre 
+ <a href="../approx_bin_norm.html"><strong>Approximation der Binomialverteilung durch Normalverteilung</strong></a>, also den Grenzwertsatz von de Moivre 
  und Laplace.</p>
 <p>(2) In einer Urne liegen 99 von 1 bis 99 nummerierte Kugeln. Man zieht z.B. n = 4000 -mal eine Kugel, notiert die Nummer und legt die 
 Kugel wieder zurück.<br>
-Jede Zahl x von 1 bis 99 ist dann <b>gleichwahrscheinlich</b>. Bildet man nun aber für je z.B. N = 5 aufeinander notierte 
-Zahlen den Mittelwert, so ist dieser Mittelwert eine angenähert <b>normalverteilte</b> Zufallsvariable (Mittelwerte
+Jede Zahl x von 1 bis 99 ist dann <strong>gleichwahrscheinlich</strong>. Bildet man nun aber für je z.B. N = 5 aufeinander notierte 
+Zahlen den Mittelwert, so ist dieser Mittelwert eine angenähert <strong>normalverteilte</strong> Zufallsvariable (Mittelwerte
 um 50 sind häufiger als solche um 30 oder gar solche um 10 oder 90).</p>
 
 <div class="colgroup-2">

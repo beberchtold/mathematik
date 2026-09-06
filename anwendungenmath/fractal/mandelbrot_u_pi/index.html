@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="text-scale" content="scale">
 <title>Mandelbrotmenge und Pi</title>
@@ -29,7 +30,7 @@ canvas {width:100%;height:auto;min-width:308px;max-width:500px}
 Mandelbrotmenge M: z<sub>1</sub> = 0. 
 Für jeden komplexen Parameter c wird die Zahlenfolge (z<sub>n</sub>) gemäss  
 &nbsp; z<sub>n+1</sub> = z<sub>n</sub><sup>2</sup> + c &nbsp; betrachtet.<br>
-M ist die Menge aller Parameter c, für welche die Folge (z<sub>n</sub>) <b>nicht</b> divergiert.</p>
+M ist die Menge aller Parameter c, für welche die Folge (z<sub>n</sub>) <strong>nicht</strong> divergiert.</p>
 <p>Für das Auftreten der Ziffern von &pi; sind mehrere Wege möglich.<br>
 Horizontaler Weg: Man setzt c = 0.25 + &epsilon; (&epsilon;&gt;0)<br>
 Vertikaler Weg. Man setzt c = -0.75 + &epsilon;i<br>
@@ -49,7 +50,7 @@ und Epsilon in die entsprechenden Felder eingeben und dann auf den gewünschten 
      &epsilon; = <input id="eps" type="number" min=1E-11 max=1 value="0.01" lang="en"></li>
      <li><input type="button" value="c = 0.25+&epsilon;" style="width:7em;margin-right:60px" onclick="rechne_einviertel()">
 	   <input type="button" value="c = -0.75+&epsilon;i" style="width:7em" onclick="rechne()"><br><br>
-	   <b><span id="Titel"></span></b><br>
+	   <strong><span id="Titel"></span></strong><br>
 	   <span id="RES1"></span><br>
 	   <span id="RES2"></span>
 	   <span id="RES3"></span>
@@ -61,7 +62,7 @@ und Epsilon in die entsprechenden Felder eingeben und dann auf den gewünschten 
 <br>
 <div class="colgroup-2">
   <div class="col">
-    <b>Iterationen N, bis |z<sub>n</sub>|>2 für c = 0.25 + &epsilon;</b>
+    <strong>Iterationen N, bis |z<sub>n</sub>|>2 für c = 0.25 + &epsilon;</strong>
 	<table class="c">
 	<tr><td>&epsilon;</td><td>c</td><td>N</td><td>N &Sqrt;&epsilon;</td></tr>
 	<tr><td>1</td><td>1.25</td><td>2</td><td>2</td></tr>
@@ -79,7 +80,7 @@ und Epsilon in die entsprechenden Felder eingeben und dann auf den gewünschten 
 	<br>
   </div>
   <div  class="col">
-    <b>Iterationen N, bis |z<sub>n</sub>|>2 für c = -0.75 + &epsilon;i</b>
+    <strong>Iterationen N, bis |z<sub>n</sub>|>2 für c = -0.75 + &epsilon;i</strong>
 	<table class="c">
 	<tr><td>&epsilon;</td><td>c</td><td>N</td></tr>
 	<tr><td>1</td><td>-0.75+i</td><td>3</td></tr>

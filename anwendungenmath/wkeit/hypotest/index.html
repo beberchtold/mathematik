@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="text-scale" content="scale">
 <meta name="Description" content="Testen von Hypothesen mit Binomialverteilung, einseitig, zweiseitig">
@@ -26,27 +27,27 @@
 
   Sie können folgende Parameter wählen:
   <ul>
-    <li><b>Wahrscheinlichkeit p<sub>0</sub></b>, die bei der Nullhypothese angenommen wird.</li>
-    <li><b>Stichprobenumfang n</b> (n &le; 300)</li>
-    <li><b>Signifikanzniveau S-niveau</b>  (S-niv &le; 8.5%)</li>
-    <li>Testtyp <b>linksseitig, rechtsseitig, zweiseitig</b></li>
-    <li>Histogramm der Wahrscheinlichkeiten oder der <b>Summe</b> der Wahrscheinlichkeiten (*1 oder *10)</li>
+    <li><strong>Wahrscheinlichkeit p<sub>0</sub></strong>, die bei der Nullhypothese angenommen wird.</li>
+    <li><strong>Stichprobenumfang n</strong> (n &le; 300)</li>
+    <li><strong>Signifikanzniveau S-niveau</strong>  (S-niv &le; 8.5%)</li>
+    <li>Testtyp <strong>linksseitig, rechtsseitig, zweiseitig</strong></li>
+    <li>Histogramm der Wahrscheinlichkeiten oder der <strong>Summe</strong> der Wahrscheinlichkeiten (*1 oder *10)</li>
   </ul>
   <p>Klicken Sie nach Ende von Änderungen in einem Inputfeld auf 'Start'.</p>
 
 <p>Im oberen Grafikfenster wird wechselweise das Histogramm der Wahrscheinlichkeiten
-  <b> P(X=k)</b> oder die Summenfunktion dargestellt. Der <b><span style="color:#FF0000"> Verwerfungsbereich
-  V</span></b> des Test ist jeweils rot gekennzeichnet. Die waagrechte magentafarbene Linie gibt das 
+  <strong> P(X=k)</strong> oder die Summenfunktion dargestellt. Der <strong><span style="color:#FF0000"> Verwerfungsbereich
+  V</span></strong> des Test ist jeweils rot gekennzeichnet. Die waagrechte magentafarbene Linie gibt das 
   gewählte Signifikanzniveau an. (man redet von signifikant &rarr; Signifikanzniveau=5%, 
   hochsignifikant &rarr; Signifikanzniveau=1%)</p>
 
-  <p>Bei einem linksseitigen Test wird die Summe der Wahrscheinlichkeiten <b>P(X &le; k) </b>dargestellt, bei einem 
-  rechtsseitigen Test die Summe <b>P(X &ge; k)</b>  . Bei einem zweiseitigen Test trennt die senkrechte grüne Linie die 
-  Bereiche, in denen <b>P(X &le; k)</b> bzw. <b>P(X &ge; k)</b> dargestellt werden.</p>
+  <p>Bei einem linksseitigen Test wird die Summe der Wahrscheinlichkeiten <strong>P(X &le; k) </strong>dargestellt, bei einem 
+  rechtsseitigen Test die Summe <strong>P(X &ge; k)</strong>  . Bei einem zweiseitigen Test trennt die senkrechte grüne Linie die 
+  Bereiche, in denen <strong>P(X &le; k)</strong> bzw. <strong>P(X &ge; k)</strong> dargestellt werden.</p>
   
-  <p>Im Resultat wird der <b><span style="color:#FF0000">Verwerfungsbereich V</span></b> und der <b>Alpha-Fehler</b> 
+  <p>Im Resultat wird der <strong><span style="color:#FF0000">Verwerfungsbereich V</span></strong> und der <strong>Alpha-Fehler</strong> 
   (Fehler 1. Art) angegeben.</p>
-  <p>Im unteren Grafikfenster wird der <b>Beta-Fehler</b> (Fehler 2. Art) in Abhängigkeit von p dargestellt.</p>
+  <p>Im unteren Grafikfenster wird der <strong>Beta-Fehler</strong> (Fehler 2. Art) in Abhängigkeit von p dargestellt.</p>
 
 <div class="colgroup-2">
   <div class="col" id="containercanvas">
@@ -75,14 +76,14 @@
    </ul>
     <br>	
 	<h2>Resultate</h2>
-	<p><b>Verwerfungsbereich = <span id="VerB"> </span></b></p>
-	<p><b>Alpha-Fehler = <span id="Alpha"> </span></b></p>
-	<p><b>Beta-Fehler</b> (Punkt in unterer Grafik anklicken):<br>
-	<b>Bei p = <span id="Pbeta"> </span> &nbsp;&nbsp;&nbsp; &beta; = <span id="Beta"> </span></b></p>
+	<p><strong>Verwerfungsbereich = <span id="VerB"> </span></strong></p>
+	<p><strong>Alpha-Fehler = <span id="Alpha"> </span></strong></p>
+	<p><strong>Beta-Fehler</strong> (Punkt in unterer Grafik anklicken):<br>
+	<strong>Bei p = <span id="Pbeta"> </span> &nbsp;&nbsp;&nbsp; &beta; = <span id="Beta"> </span></strong></p>
   </div>       
 </div>	
 
-<p><b>Beispiele</b></p>
+<p><strong>Beispiele</strong></p>
 
   <p>1. Voreingestellt ist das Testen einer Münze bei der
   Nullhypothese H<sub>0</sub>: <i>Münze ist symmetrisch</i>. Die Behauptung <i>Münze ist

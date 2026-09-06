@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="text-scale" content="scale">
 <meta name="Description" content="Lösung Mathematik Rätsel 31">
@@ -24,7 +25,7 @@
 
 <h1>Lösung Puzzle 31: Wie heisst die 57-ste Zahl?</h1>
 
-<p><b>Die 57-ste Zahl ist 817'138'163'596</b></p>
+<p><strong>Die 57-ste Zahl ist 817'138'163'596</strong></p>
 <p>Die rekursive Darstellung dieser Lucas-Folge lautet:</p>
 <p>
    &nbsp;&nbsp; b<sub>1</sub> = 1 , b<sub>2</sub> = 3<br>
@@ -48,14 +49,14 @@ b<sub>n</sub> = <span>\(\frac{1}{\sqrt{5}}\big(((\frac{1+\sqrt{5}}{2})^{n-2} - (
 b<sub>n</sub> = <span>\(\frac{1}{\sqrt{5}}\big(((\frac{1+\sqrt{5}}{2})^{n-2} - (\frac{1-\sqrt{5}}{2})^{n-2}) + \small 3\normalsize((\frac{1+\sqrt{5}}{2})^{n-1} - (\frac{1-\sqrt{5}}{2})^{n-1})\big)\)</span>
 </p>
 <p>Also gilt:<br>
-<b>b<sub>57</sub></b> = ... = <span>\(\large\frac{\sqrt{5}+3}{2}(\frac{1+\sqrt{5}}{2})^{55} - \frac{\sqrt{5}-3}{2}(\frac{1-\sqrt{5}}{2})^{55}\)</span> = <b>817'138'163'596</b>
+<strong>b<sub>57</sub></strong> = ... = <span>\(\large\frac{\sqrt{5}+3}{2}(\frac{1+\sqrt{5}}{2})^{55} - \frac{\sqrt{5}-3}{2}(\frac{1-\sqrt{5}}{2})^{55}\)</span> = <strong>817'138'163'596</strong>
 </p>
-<p>Nun zum <b>Grenzwert</b> x der Quotientenfolge:<br>
+<p>Nun zum <strong>Grenzwert</strong> x der Quotientenfolge:<br>
 x = <span>\(\displaystyle\small\lim_{n \to \infty}\frac{b_{n+1}}{b_n} = \lim_{n \to \infty}\frac{b_{n+2}}{b_{n+1}} 
 = \lim_{n \to \infty}\frac{b_{n+1} + b_n}{b_{n+1}} = \lim_{n \to \infty}(1 +\frac{b_n}{b_{n+1}}) =
 1 + \frac{1}{\displaystyle\lim_{n \to \infty}\frac{b_{n+1}}{b_n}} = 1 + \frac{1}{\rm x}\)</span><br>
 Dies führt auf die Gleichung x<sup>2</sup> - x - 1 = 0 (Goldener Schnitt). Ihre positive Lösung ist <br>
-x = <span>\(\large\frac{1 + \sqrt{5}}{2}\)</span> &asymp; <b>1.6180339887...</b>
+x = <span>\(\large\frac{1 + \sqrt{5}}{2}\)</span> &asymp; <strong>1.6180339887...</strong>
 </p>
 
 <p><a href="puzzle31.html">Zurück zur Aufgabenstellung</a></p>

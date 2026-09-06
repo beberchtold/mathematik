@@ -73,9 +73,9 @@ function control(n,moeglich,guenstig) {
   var Erwartungswert=Math.round(10000*EW(n,moeglich,guenstig))/10000;
   document.getElementById("Ausgabe").innerHTML="";
   document.getElementById("Ausgabe").innerHTML+="<div class=\"table\">";
-  document.getElementById("Ausgabe").innerHTML+="<div class=\"spalte1\"><b>k</b></div>";
-  document.getElementById("Ausgabe").innerHTML+="<div class=\"spalte\"><b>günstige Fälle</b></div>";
-  document.getElementById("Ausgabe").innerHTML+="<div class=\"spalte\"><b>Wkeit</b></div>";
+  document.getElementById("Ausgabe").innerHTML+="<div class=\"spalte1\"><strong>k</strong></div>";
+  document.getElementById("Ausgabe").innerHTML+="<div class=\"spalte\"><strong>günstige Fälle</strong></div>";
+  document.getElementById("Ausgabe").innerHTML+="<div class=\"spalte\"><strong>Wkeit</strong></div>";
   document.getElementById("Ausgabe").innerHTML+="</div>";
   for (var i = 0; i <= n; i++)  {	  
      document.getElementById("Ausgabe").innerHTML+="<div class=\"table\">";
