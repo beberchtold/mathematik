@@ -7,6 +7,12 @@
 <title>error404</title>
 <meta name="robots" content="noindex">
 <LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
+<script> 
+var currentUrl = window.location.href; 
+if (currentUrl.match(/\.php(\?.*)?$/) || currentUrl.includes('.php')) { 
+  var newUrl = currentUrl.replace('.php', '.html'); 
+  window.location.replace(newUrl); } 
+</script>
 </head>
 
 <body>
