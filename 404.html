@@ -9,8 +9,9 @@
 <LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
 <script> 
 var currentUrl = window.location.href; 
-if (currentUrl.match(/\.php(\?.*)?$/)) { 
-  var newUrl = currentUrl.replace('.php', '.html'); 
+if (currentUrl.includes('.php')) {
+  var hilfUrl=currentUrl.split('?')[0];
+  var newUrl = hilfUrl.replace('.php', '.html'); 
   window.location.replace(newUrl); } 
 </script>
 </head>
