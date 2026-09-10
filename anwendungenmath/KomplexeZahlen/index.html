@@ -47,19 +47,19 @@ Das Resultat wird durch den blauen Punkt repräsentiert.</p>
 	    <input id="2" type="button" value="Subtraktion" onclick="button2()">
       <li><input id="3" type="button" style="margin-right:20px" value="Multiplikation" onclick="button3()">
 	    <input id="4" type="button" value="Division" onclick="button4()">
-	  <li><br>z1= <label for="x1"><input id="x1" type="number" min=-10 max=10 value="5" lang="en" onchange="calc()"></label>	
-         + <label for="y1"><input id="y1" type="number" min=-10 max=10 value="5" lang="en" onchange="calc()"></label> i <span style="margin-right:20px;"></span>
+	  <li><br>z1= <input id="x1" type="number" min=-10 max=10 value="5" lang="en" aria-labelledby="x1" onchange="calc()">	
+         + <input id="y1" type="number" min=-10 max=10 value="5" lang="en" aria-labelledby="y1" onchange="calc()"> i <span style="margin-right:20px;"></span>
 	     <br><br>
-		 <span style="color:red"><strong>z2= <label for="x2"><input id="x2" type="number" min=-10 max=10 value="1" lang="en" onchange="calc()"></label>
-         + <label for="y2"><input id="y2" type="number" min=-10 max=10 value="2" lang="en" onchange="calc()"></label> i </strong></span></li>
-	  <li style="color:blue"><br><strong>Resultat z = </strong><span id="Resultat"></span></li>
-	  <li style="color:blue">in Polarform z = <span id="Resultat_polar"></span></li>
+		 <span style="color:red"><strong>z2= <input id="x2" type="number" min=-10 max=10 value="1" lang="en" aria-labelledby="x2" onchange="calc()" >
+         + <input id="y2" type="number" min=-10 max=10 value="2" lang="en" aria-labelledby="y2" onchange="calc()"> i </strong></span>
+	  <li style="color:blue"><br><strong>Resultat z = </strong><span id="Resultat"></span>
+	  <li style="color:blue">in Polarform z = <span id="Resultat_polar"></span>
       <li>KS: <input id="kartesisch" type="button" style="margin-right:20px" value="Kartesisch" onclick="button5()">
-	    <input id="polar" value="Polar" type="button" onclick="button6()"></li>
+	    <input id="polar" value="Polar" type="button" onclick="button6()">
     </ul>	
   </div>      
 </div>	   
-
+<label for="search">Search: </label>
 <p><a href="KomplexeZahlen.pdf">Dazugehörige Theorie <img src="/img/pdficon.png" alt="pdficon"></a></p>
 
 <!-- EOF: CONTENT -->
