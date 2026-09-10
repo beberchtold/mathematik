@@ -45,20 +45,17 @@ Die Schrittweite wird im Laufe des Programms - falls nötig - automatisch angepa
    <ul>
 	<li>Gleichung: y' = <input id="f" type="text" value="-x/y" style="width:10em;">
 	  <img src="/img/help.png" alt="Hilfe" onclick="infos('info_diffgl.html','Infofenster',520,600)">
-	</li>
-    <li>x0: <input id="x0" type="number" value="0" lang="en"> &nbsp;&nbsp;&nbsp;
-      y0: <input id="y0" type="number" value="1" lang="en"> &nbsp;&nbsp;&nbsp;
-      xe: <input id="xe" type="number" value="1" lang="en">
+    <li><label>x0: <input id="x0" type="number" value="0" lang="en"></label> &nbsp;&nbsp;&nbsp;
+      <label>y0: <input id="y0" type="number" value="1" lang="en"></label> &nbsp;&nbsp;&nbsp;
+      <label>xe: <input id="xe" type="number" value="1" lang="en"></label>
       <br>
-	  ymin: <input id="ymin" type="number" value="-0.1" lang="en"> &nbsp;&nbsp;&nbsp;
-      ymax: <input id="ymax" type="number" value="1.1" lang="en">
+	  <label>ymin: <input id="ymin" type="number" value="-0.1" lang="en"></label> &nbsp;&nbsp;&nbsp;
+      <label>ymax: <input id="ymax" type="number" value="1.1" lang="en"></label>
 	  <br>
-	  Schrittweite h: <input id="h" type="number" style="width:4em" value="0.1" lang="en">
-	</li>
+	  <label>Schrittweite h: <input id="h" type="number" style="width:4em" value="0.1" lang="en"></label>
     <li><input type="button" value="Reset" onclick="reset()">
 	  <input id="Run" type="button" value="Run" onclick="run()" style="margin-left:30px">
 	  <input id="Step" type="button" value="Step" onclick="dostep()" style="margin-left:30px">
-	</li>
 	</ul>
 	<p><span id="message"> </span></p>
     <p><span id="x1"> </span> &nbsp;&nbsp;&nbsp;<span id="y1"> </span><br>
