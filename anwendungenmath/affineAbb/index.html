@@ -33,13 +33,13 @@ canvas {width:100%;height:auto;min-width:308px;max-width:500px}
   <li>Affine Abbildungen in der Grundebene haben die Form P(x/y) &rarr; P'(x'/y') gemäss:<br>
       x' = a<sub>1</sub>*x + b<sub>1</sub>*y + v<sub>1</sub><br>   
       y' = a<sub>2</sub>*x + b<sub>2</sub>*y + v<sub>2</sub> &nbsp;&nbsp;
-     mit &Delta;=a<sub>1</sub>*b<sub>2</sub>-b<sub>1</sub>*a<sub>2</sub>&ne;0</li>
-  <li>a<sub>1</sub>&nbsp;<input id="a1" type="number" value="1" lang="en">&nbsp;&nbsp;&nbsp;
-      b<sub>1</sub>&nbsp;<input id="b1" type="number" value="-2" lang="en">&nbsp;&nbsp;&nbsp;
-      v<sub>1</sub>&nbsp;<input id="v1" type="number" value="2" lang="en"></li>
-  <li>a<sub>2</sub>&nbsp;<input id="a2" type="number" value="2" lang="en">&nbsp;&nbsp;&nbsp;
-      b<sub>2</sub>&nbsp;<input id="b2" type="number" value="2" lang="en">&nbsp;&nbsp;&nbsp;
-      v<sub>2</sub>&nbsp;<input id="v2" type="number" value="-3" lang="en"></li>
+     mit &Delta;=a<sub>1</sub>*b<sub>2</sub>-b<sub>1</sub>*a<sub>2</sub>&ne;0
+  <li><label>a<sub>1</sub>&nbsp;<input id="a1" type="number" value="1" lang="en"></label>&nbsp;&nbsp;&nbsp;
+      <label>b<sub>1</sub>&nbsp;<input id="b1" type="number" value="-2" lang="en"></label>&nbsp;&nbsp;&nbsp;
+      <label>v<sub>1</sub>&nbsp;<input id="v1" type="number" value="2" lang="en"></label>
+  <li><label>a<sub>2</sub>&nbsp;<input id="a2" type="number" value="2" lang="en"></label>&nbsp;&nbsp;&nbsp;
+      <label>b<sub>2</sub>&nbsp;<input id="b2" type="number" value="2" lang="en"></label>&nbsp;&nbsp;&nbsp;
+      <label>v<sub>2</sub>&nbsp;<input id="v2" type="number" value="-3" lang="en"></label>
 </ul>
 <p><span id="Warnung"></span></p>  
 
@@ -50,26 +50,24 @@ canvas {width:100%;height:auto;min-width:308px;max-width:500px}
 
   <div class="col">
 <ul>
-<li><input type="button" id="1" value="Bild Einheitsquadrat" onclick="button1()"></li>
+<li><input type="button" id="1" value="Bild Einheitsquadrat" onclick="button1()">
 <li><input type="button" id="2" value="Bild Kreis mit M, r" onclick="button2()"><br>
-   x <input id="mx" type="number" value="0" lang="en">  
-   y <input id="my" type="number" value="1.5" lang="en">      
-   r <input id="r" type="number" min=0 value="1.2" lang="en"></li>        
-<li><input type="button" id="3" value="Bild Buchstabe F" onclick="button3()"></li>
+   <label>x <input id="mx" type="number" value="0" lang="en"></label>  
+   <label>y <input id="my" type="number" value="1.5" lang="en"></label>      
+   <label>r <input id="r" type="number" min=0 value="1.2" lang="en"></label>        
+<li><label><input type="button" id="3" value="Bild Buchstabe F" onclick="button3()"></label>
 <li><input type="button" id="4" value="Bild Dreieck mit" onclick="button4()"><br>
-  x1 <input id="x1" type="number" value="0">
-  y1 <input id="y1" type="number" value="0" lang="en">      
-  x2 <input id="x2" type="number" value="4" lang="en">       
-  y2 <input id="y2" type="number" value="1" lang="en"><br>
-  x3 <input id="x3" type="number" value="2" lang="en">      
-  y3 <input id="y3" type="number" value="-1" lang="en">
-</li>    
+  <label>x1 <input id="x1" type="number" value="0"></label>
+  <label>y1 <input id="y1" type="number" value="0" lang="en"></label>      
+  <label>x2 <input id="x2" type="number" value="4" lang="en"></label>       
+  <label>y2 <input id="y2" type="number" value="1" lang="en"></label><br>
+  <label>x3 <input id="x3" type="number" value="2" lang="en"></label>      
+  <label>y3 <input id="y3" type="number" value="-1" lang="en"></label>    
 <li><input type="button" id="5" value="Bild Fkt mit Gleichung" onclick="button5()"><br>
-   y = f(x) = <input id="f" type="text" style="width:9em;" value='x*x-1'> 
-<img src="/img/help.png" alt="Hilfe" onclick="infos('infos.html','Infofenster',520,600)"></li>
+   <label>y = f(x) = <input id="f" type="text" style="width:9em;" value='x*x-1'></label> 
+<img src="/img/help.png" alt="Hilfe" onclick="infos('infos.html','Infofenster',520,600)">
 </ul>
-<p>Klicken Sie nach einer Änderung eines Wertes auf den entsprechenden Button.</p>
-		
+<p>Klicken Sie nach einer Änderung eines Wertes auf den entsprechenden Button.</p>		
   </div>       
 </div>	
 
