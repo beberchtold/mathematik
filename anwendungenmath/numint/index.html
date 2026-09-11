@@ -42,12 +42,12 @@ canvas {width:100%;height:auto;min-width:308px;max-width:500px}
 
   <div class="col">
    <ul>
-    <li>y = <input id="f" type="text" value="1/sqrt(2*pi)*exp(-x*x/2)" style="width:12em;margin-bottom:5px">
-	  <img src="/img/help.png" alt="Hilfe" onclick="infos('infos.html','Infofenster',520,600)"></li>
-    <li>x0= <input id="Xmin" type="number" value="0" lang="en">  &nbsp;&nbsp;&nbsp;
-        xn= <input id="Xmax" type="number" value="5" lang="en"></li>
-    <li>Anzahl Teilintervalle (&le;200) <input id="Anz" type="number" style="width:3em;" min="1" max="200" value="20"></li>
-	<li><input type="button" value="Go" onclick="reset()"></li>
+    <li><label>y = <input id="f" type="text" value="1/sqrt(2*pi)*exp(-x*x/2)" style="width:12em;margin-bottom:5px"></label>
+	  <img src="/img/help.png" alt="Hilfe" onclick="infos('infos.html','Infofenster',520,600)">
+    <li><label>x0= <input id="Xmin" type="number" value="0" lang="en"></label>  &nbsp;&nbsp;&nbsp;
+        <label>xn= <input id="Xmax" type="number" value="5" lang="en"></label>
+    <li><label>Anzahl Teilintervalle (&le;200) <input id="Anz" type="number" style="width:3em;" min="1" max="200" value="20"></label>
+	<li><input type="button" value="Go" onclick="reset()">
    </ul>
    <br>
    <strong>Graphik</strong>
