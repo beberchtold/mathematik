@@ -39,17 +39,17 @@ span.green {color:#008000;font-weight:bold}
   
   <div class="col">
    <ul>
-    <li><span class="green">y&nbsp;=&nbsp;</span><input id="f" type="text" value="sin(x)" style="width:12em;">
-	  <img src="/img/help.png" alt="Hilfe" onclick="infos('hilfe_ableitungen.html','Infofenster',520,600)"></li>
+    <li><label><span class="green">y&nbsp;=&nbsp;</span><input id="f" type="text" value="sin(x)" style="width:12em;"></label>
+	  <img src="/img/help.png" alt="Hilfe" onclick="infos('hilfe_ableitungen.html','Infofenster',520,600)">
     <li><span class="red"><label><input id="Abl1" type="checkbox" onclick="zeichne()"> 1. Ableitungsfunktion</label></span><br>
-      <span class="blue"><label><input id="Abl2" type="checkbox" onclick="zeichne()"> 2. Ableitungsfunktion</label></span></li>
+      <span class="blue"><label><input id="Abl2" type="checkbox" onclick="zeichne()"> 2. Ableitungsfunktion</label></span>
     <li>Grenzen<br>
-	Links: <input id="Xmin" type="number" value="-4.1" lang="en">&nbsp;&nbsp;
-    Rechts: <input id="Xmax" type="number" value="4.1" lang="en"><br>
-    Unten: <input id="Ymin" type="number" value="-2.1" lang="en">&nbsp;&nbsp;
-    Oben: <input id="Ymax" type="number" value="2.1" lang="en"></li>
-    <li><input type="button" value="Go" onclick="zeichne()"></li>	
-    <li><small>Klicken Sie nach Änderungen in den Inputfeldern auf 'Go'.</small></li>
+	<label>Links: <input id="Xmin" type="number" value="-4.1" lang="en"></label>&nbsp;&nbsp;
+    <label>Rechts: <input id="Xmax" type="number" value="4.1" lang="en"></label><br>
+    <label>Unten: <input id="Ymin" type="number" value="-2.1" lang="en"></label>&nbsp;&nbsp;
+    <label>Oben: <input id="Ymax" type="number" value="2.1" lang="en"></label>
+    <li><input type="button" value="Go" onclick="zeichne()">	
+    <li><small>Klicken Sie nach Änderungen in den Inputfeldern auf 'Go'.</small>
    </ul>
   </div>       
 </div>	
