@@ -41,17 +41,16 @@ span.blue {color:blue;font-weight:bold}
   <div class="col">
     <ul>
 	 <li><span class="green">y&nbsp;=&nbsp;</span>
-	   <input id="f" type="text" value="pow(x,4)-3*pow(x,3)+2*x+1" style="width:14.5em;margin-bottom:5px"> 
-	   <img src="/img/help.png" alt="Hilfe" onclick="infos('info_newton.html','Infofenster',520,600)"></li>
-     <li>Linke: <input id="Xmin" style="width:3em;margin-right:15px" type="number" value="-0.2" lang="en">
-         Rechte Grenze: <input id="Xmax" style="width:3em" type="number" value="3.1" lang="en"></li>
-     <li>Startwert x0: <input id="x0" style="margin-bottom:10px" type="number" value="0.8" lang="en"></li>
-     <li>Stop falls |x(n+1)-xn| &le; <input id="eps" type="number" value="1E-7" lang="en"></li>
-     <li>Max Iterationen: <input id="max" type="number" min="1" max="100" value="50"></li> 
+	   <label><input id="f" type="text" value="pow(x,4)-3*pow(x,3)+2*x+1" style="width:14.5em;margin-bottom:5px"></label> 
+	   <img src="/img/help.png" alt="Hilfe" onclick="infos('info_newton.html','Infofenster',520,600)">
+     <li><label>Linke: <input id="Xmin" style="width:3em;margin-right:15px" type="number" value="-0.2" lang="en"></label>
+         <label>Rechte Grenze: <input id="Xmax" style="width:3em" type="number" value="3.1" lang="en"></label>
+     <li><label>Startwert x0: <input id="x0" style="margin-bottom:10px" type="number" value="0.8" lang="en"></label>
+     <li><label>Stop falls |x(n+1)-xn| &le; <input id="eps" type="number" value="1E-7" lang="en"></label>
+     <li><label>Max Iterationen: <input id="max" type="number" min="1" max="100" value="50"></label> 
     <li><input type="button" value="Reset" onclick="reset()">
 	   <input id="Run" type="button" value="Run" onclick="run()">
 	   <input id="Step" type="button" value="Step" onclick="dostep()">
-	   </li>
 	</ul>   
     <p>
 	<span id="xn" class="red"> </span><br>

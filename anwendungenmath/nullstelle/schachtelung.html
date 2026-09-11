@@ -28,15 +28,14 @@
 <p>Gesucht ist eine Nullstelle der Funktion mit Gleichung y = f(x).</p>
 
 <ul>
-  <li>y = <input id="f" type="text" value="cos(x)" style="width:14.5em;margin-bottom:5px">
-	<img src="/img/help.png" alt="Hilfe" onclick="infos('info_schachtelung.html','Infofenster',520,600)"></li>
-  <li>Linke: <input id="Xmin" style="margin-right:15px" type="number" value="1">
-	Rechte Grenze: <span id="Xr"> </span></li>
-  <li>Anzahl Dezimalstellen &le; 14: <input id="Anz" type="number" min="1" max="14" value="8"></li>
+  <li><label>y = <input id="f" type="text" value="cos(x)" style="width:14.5em;margin-bottom:5px"></label>
+	<img src="/img/help.png" alt="Hilfe" onclick="infos('info_schachtelung.html','Infofenster',520,600)">
+  <li><label>Linke: <input id="Xmin" style="margin-right:15px" type="number" value="1"></label>
+	<label>Rechte Grenze: <span id="Xr"> </span></label>
+  <li><label>Anzahl Dezimalstellen &le; 14: <input id="Anz" type="number" min="1" max="14" value="8"></label>
   <li><input type="button" value="Reset" onclick="init()">
 	  <input id="Run" type="button" value="Run" onclick="run()">
 	  <input id="Step" type="button" value="Step" onclick="dostep()">
-  </li>
   </ul>
     <p><span id="xl"> </span></p>
     <p><span id="xr"> </span></p>
