@@ -26,7 +26,7 @@
 <p>Wie viele Würfe benötigt man in <strong>einem Versuch</strong>, um alle 6 Ziffern zu würfeln?<br>
 Bei Klick auf 'Go' führt der Computer diesen Versuch durch.</p>
 <ul>
-  <li><input type="button" value="Go" onclick="simu()"></li>
+  <li><input type="button" value="Go" onclick="simu()">
 </ul>
 <p><strong>Anzahl Würfe = <span id="RES1"></span></strong><br>
 	<span id="txt"></span>
@@ -41,12 +41,10 @@ Bei jedem von n Versuchen wird gezählt, wie viele Würfe benötigt werden, um a
  Klick auf 'Berechne' führt diese Simulation durch.</p>
  
   <ul>
-    <li>Anzahl (100 &le; n &le; 10000)
-      <input id="n" type="number" min=100 max=10000 style="width:60px;margin-left:17px;" value="1000">
-    </li>
+    <li><label>Anzahl (100 &le; n &le; 10000)
+      <input id="n" type="number" min=100 max=10000 style="width:60px;margin-left:17px;" value="1000"></label>
     <li>
       <input type="button" value="Berechne" style="width:6em" onclick="rechne()">
-    </li>
   </ul>
 <p><span id="N"></span> Versuche<br>
 	<strong>Anzahl Würfe im Mittel = <span id="RES"></span></strong></p>

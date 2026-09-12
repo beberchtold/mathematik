@@ -44,17 +44,17 @@ II) die Abweichung &Delta; vom Erwartungswert bei vorgegebener Wkeit W gemäss P
   
   <div class="col">
     <ul>
-      <li>&mu;= <input id="mue" type="number" value="25" lang="en"> &nbsp;&nbsp;
-      &sigma;= <input id="sigma" type="number" value="0.2" lang="en"> &nbsp;&nbsp; &sigma;<sup>2</sup>=<span id="VAR"></span></li>
-      <li>I) a= <input id="a" type="number" value="24.5" lang="en">&nbsp;&nbsp;
-          b = <input id="b" type="number" value="25.5" lang="en"></li>
-      <li><input type="button" style="width:10em" value="Berechne Wkeit" onclick="rechne()"></li>
+      <li><label>&mu;= <input id="mue" type="number" value="25" lang="en"></label> &nbsp;&nbsp;
+      <label>&sigma;= <input id="sigma" type="number" value="0.2" lang="en"></label> &nbsp;&nbsp; &sigma;<sup>2</sup>=<span id="VAR"></span>
+      <li>I) <label>a= <input id="a" type="number" value="24.5" lang="en"></label>&nbsp;&nbsp;
+          <label>b = <input id="b" type="number" value="25.5" lang="en"></label>
+      <li><input type="button" style="width:10em" value="Berechne Wkeit" onclick="rechne()">
 	</ul>
 	<p><span id="RES"></span></p>
 	<p><span id="message"></span></p>
 	<ul>
-	  <li>II) Wkeit: <input id="wkeit" type="number" min=0 max=1 value="0.98" lang="en"></li>
-      <li><input type="button" style="width:11em" value="Berechne Grenzen" onclick="rechne_grenze()"></li>
+	  <li>II) <label>Wkeit: <input id="wkeit" type="number" min=0 max=1 value="0.98" lang="en"></label>
+      <li><input type="button" style="width:11em" value="Berechne Grenzen" onclick="rechne_grenze()">
 	</ul>
     <p><span id="RES2"></span></p>
   </div>       

@@ -48,27 +48,24 @@ Alternativ können Sie diese Werte mit 'Step' auch schrittweise verändern.
     <li><input id="ch5" type="button" value="Sinus" onclick="button5()">
 	  <input id="ch6" type="button" value="Cosinus" style="width:5.2em;margin-left:10px" onclick="button6()">
 	  <input type="button" value="Reset" style="margin-left:30px" onclick="startwerte()">
-	</li>
     <li>Verändern von:<br>
       <label><input id="ch1" type="radio" name="Param"> a </label>
 	  <span style="margin-left:20px"><label><input id="ch2" type="radio" name="Param"> &omega; </label></span>
 	  <span style="margin-left:20px"><label><input id="ch3" type="radio" name="Param"> h </label></span>
 	  <span style="margin-left:20px"><label><input id="ch4" type="radio" name="Param"> k </label></span>
-    </li>
     <li><input type="button" value="Step" onclick="dostep()"></li>
     <li>a = <span id="a1"> </span>&nbsp;&nbsp;
         &omega; = <span id="b1"> </span>&nbsp;&nbsp;
         h = <span id="h1"> </span>&nbsp;&nbsp;
         k = <span id="k1"> </span>
-	</li>
    </ul>
    <br>
    <ul>
 	<li>Grenzen Koordinatensystem:<br>
-      Links: &nbsp;<input id="Xmin" type="number" value="-1.1" onchange="zeichne()" lang="en">&nbsp;&nbsp;&nbsp;&nbsp;
-      Rechts: <input id="Xmax" type="number" value="7.1" onchange="zeichne()" lang="en"><br>
-      Unten: <input id="Ymin" type="number" value="-3.1" onchange="zeichne()" lang="en">&nbsp;&nbsp;&nbsp;&nbsp;
-      Oben: &nbsp;&nbsp;<input id="Ymax" type="number" value="3.1" onchange="zeichne()" lang="en"></li>
+      <label>Links: &nbsp;<input id="Xmin" type="number" value="-1.1" onchange="zeichne()" lang="en" style="margin-right:30px"></label>
+      <label>Rechts: <input id="Xmax" type="number" value="7.1" onchange="zeichne()" lang="en"></label><br>
+      <label>Unten: <input id="Ymin" type="number" value="-3.1" onchange="zeichne()" lang="en" style="margin-right:30px"></label>
+      <label>Oben: &nbsp;&nbsp;<input id="Ymax" type="number" value="3.1" onchange="zeichne()" lang="en"></label>
 	</ul>				
   </div>       
 <div style="clear:both"></div>	
