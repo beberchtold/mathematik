@@ -41,12 +41,11 @@ Das Programm kann selbst Probleme lösen, oder Sie können die Probleme lösen.<
      <input id="Zahl[5]" type="number" min=1 max=100 value="100">
    </p>
    <ul>
-   <li>Zielzahl: <input id="Zielzahl" style="width:2.6em;" type="number" min=101 max=1000 value="267">
-      <input id="NewTarget" type="button" value="Neue Zielzahl" onclick="makeTarget()" style="width:9em;margin-left:20px"></li>
+   <li><label>Zielzahl: <input id="Zielzahl" style="width:2.6em;" type="number" min=101 max=1000 value="267"></label>
+      <input id="NewTarget" type="button" value="Neue Zielzahl" onclick="makeTarget()" style="width:9em;margin-left:20px">
    <li><input id="NewProblem" type="button" value="Neues Problem" style="width:9.5em" onclick="mix()">     
       <input type="button" value="Reset" onclick="init()" style="margin-left:30px">
-   </li>
-  <li><input id="Solve" type="button" value="Solve" onclick="solve1()"></li>
+  <li><input id="Solve" type="button" value="Solve" onclick="solve1()">
   </ul>
   </div>
 
@@ -58,14 +57,12 @@ Das Programm kann selbst Probleme lösen, oder Sie können die Probleme lösen.<
       <input id="Z2" type="button" value="8" onclick="z(2)">
       <input id="Z3" type="button" value="8" onclick="z(3)">
       <input id="Z4" type="button" value="10" style="margin-top:8px" onclick="z(4)">
-      <input id="Z5" type="button" value="100" style="margin-top:8px" onclick="z(5)">
-    </li>	 
-    <li>Operand1: <span id="Zahl1"> </span>&nbsp;&nbsp;&nbsp;&nbsp; Operand2: <span id="Zahl2"> </span></li>
+      <input id="Z5" type="button" value="100" style="margin-top:8px" onclick="z(5)">	 
+    <li>Operand1: <span id="Zahl1"> </span>&nbsp;&nbsp;&nbsp;&nbsp; Operand2: <span id="Zahl2"> </span>
     <li><input id="Plus" type="button" value="+" onclick="plus()">
       <input id="Minus" type="button" value="-" onclick="minus()">
       <input id="Mal" type="button" value="*" onclick="mal()">
       <input id="Dividiert" type="button" value="/" onclick="dividiert()">
-	</li>
 	</ul>
   </div>
 
