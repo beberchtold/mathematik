@@ -11,7 +11,7 @@
 <link rel="stylesheet" href="/css/mathematik.css" TYPE="text/css">
 </head>
 
-<body>
+<body onkeyup="keyPress(event.keyCode)">
 <div class="page">
 <div class="flex">
 <span id="menuicon"><a href="/menu.html">
@@ -37,7 +37,7 @@
     <img id="2" src="door.webp" width="65" height="92" onclick="Ziehe(2)" alt="Tür2" style="margin-right:12px">
 	<img id="3" src="door.webp" width="65" height="92" onclick="Ziehe(3)" alt="Tür3" style="margin-right:12px">
     <img id="4" src="door.webp" width="65" height="92" onclick="Ziehe(4)" alt="Tür4"><br><br>
-    <strong><span id="Antwort">Klicken Sie auf eine Türe</span></strong>
+    <span id="Antwort"><strong>Klicken Sie auf eine Türe</strong> (oder drücken Sie eine der Tasten 1 bis 4)</span>
    </p>
    <p>Anzahl Versuche =  <strong><span id="Anzahl"> 0 </span></strong>
    </p>
