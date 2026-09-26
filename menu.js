@@ -1,3 +1,3 @@
 function tastatur(event) {   
-    if (event.key === 'Escape') history.back();
+    if (event.key === 'Enter') history.back();
 	}
