@@ -13,11 +13,11 @@
 </style>
 </head>
 
-<body onkeyup="keyPress(event.keyCode)">
+<body>
 <div class="page">
 
 <div class="flex">
-<img src="/img/closeicon.svg" title="schliessen (auch mit esc-Taste)" alt="schliessen" onclick="history.back()">
+<img src="/img/closeicon.svg" title="schliessen (auch mit esc-Taste)" alt="schliessen" onclick="history.back()" tabindex="0" onkeydown="tastatur(event)">
 <span class="Haupt"><a href="/" class="black" title="Home"><img src="/img/fractal_logo.svg" alt="Logo">mathematik.ch</a></span>
 </div>
 
