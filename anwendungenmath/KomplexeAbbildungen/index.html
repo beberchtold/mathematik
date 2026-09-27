@@ -33,8 +33,8 @@ canvas {width:100%;height:auto;min-width:308px;max-width:500px}
   <div class="col">
     <ul>
       <li>w = f(z) = <input id="f" style="width:12em;" type="text" value="(z*z-1)/(z-2+i)"> 
-	    <img src="/img/help.png" alt="Hilfe" onClick="infos('infos.html','Infofenster',520,600)"></li>
-	  <li><input type="button" value="Go" onclick="einlesen()"></li>
+	    <a href="javascript:infos('infos.html','Infofenster',520,600)"><img src="/img/help.png" title="Hilfe" alt="Hilfe"></a>
+	  <li><input type="button" value="Go" onclick="einlesen()">
 	</ul>
     <p>Die Figur stellt ein Phasendiagramm der komplexen Funktion mit Gleichung w = f(z) dar.<br>
 	 Zu jedem z = x+iy wird der Funktionswert w = r(cos&phi; + isin&phi;) berechnet. &phi; bestimmt dann die Farbe des 
