@@ -59,30 +59,10 @@
     anzahl=0;
 	sequenz="";
 	Anzahl.innerHTML = anzahl;
-    Antwort.innerHTML = "Klicken Sie auf eine Türe (oder eine der Tasten 1 bis 4)";
+    Antwort.innerHTML = "<strong>Klicken Sie auf eine Türe</strong>";
     zufall =  Math.floor(Math.random()*4)+1; 	
   }
-  
-    function keyPress(k) {   
-    switch(k)
-        {
-        case 49: // Taste 1
-            Ziehe(1);
-            break;
-        case 50: // Taste 2
-            Ziehe(2);
-            break;
-		case 51: // Taste 3
-            Ziehe(3);
-            break;
-		case 52: // Taste 4
-            Ziehe(4);
-            break;	
-        case 32: // Leertaste: verhindert, dass default Funktion der Befehlswiederholung ausgeführt wird
-		event.preventDefault();
-		break;
-       }
-	}
+
   
   function Sleep(milliseconds) {
     return new Promise(resolve => setTimeout(resolve, milliseconds));
