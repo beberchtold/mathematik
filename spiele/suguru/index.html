@@ -18,7 +18,7 @@
 <script src="input_output.js"></script>
 <link rel="stylesheet" href="suguru.css">
 </head>
-<body onload="init()">
+<body onload="init()" onkeyup="keyPress(event.keyCode)">
 <div class="page">
 
 <div class="flex">
@@ -38,6 +38,8 @@ Der Lösungsalgorithmus (kein Backtracking!) ist von Dirk Kok.<br>
 Sie können das angezeigte Problem lösen, ein Problem durch den Computer lösen lassen ('Solve', 'Step' zeigt Lösung schrittweise) 
 oder eine Problemstellung neu eingeben ('Eingabe neues Suguru'). Ihre neu erstellten Sugurus können Sie mit 'Download' auf Ihren 
 Computer speichern und später mit 'Upload' wieder raufladen.<br>
+Wahl des Feldes für die Eingabe: Klick oder mit Pfeiltasten.
+Die Eingabe der Ziffer erfolgt mittels Button.<br>
 Falls Sie bei einer Eingabe einer Ziffer unsicher sind, so klicken Sie auf &#9998;. 
 Die Eingabe erfolgt dann mit kleinerem Font und Sie können - falls nötig - mit <strong>&cularr;</strong> wieder zu dieser Eingabe zurückkehren.
 </p>
