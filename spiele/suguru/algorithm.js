@@ -2,7 +2,6 @@
 // Some new functions by Bernhard Berchtold
 // Helper functions
 var loopId;
-var Weiter=true;
 var quickly=true;
 var blockIndex = null;
 var blockValuesPresent = null;
@@ -29,6 +28,7 @@ function excludeValue(cell, value) {
 	if (possibleValues.length == 1) {
 		if (!quickly)  cell.classList.add("mark");
 		setCell(cell, possibleValues);
+		if (!quickly) stop();
 	} else if (possibleValues.length == 0) {
 		// Shouldn't happen
 		throw new Error("Cell at " + cell.getAttribute("data-x") + ", " + cell.getAttribute("data-y") + " has no possible values");
@@ -44,7 +44,6 @@ function setCell(cell, value) {
 		excludeValue(blockIndex[block][i], value);
 	}
 	nothingChanged = false;
-	if (!Weiter) clearInterval(loopId);
 }
 
 // All the characters in str in an array
@@ -94,14 +93,12 @@ function stop() {
 function solvequick() {  // by B.Berchtold
 	quickly=true;
 	loadLevel(currentLevel.diff,currentLevel.level);
-	Weiter=true;
 	solve();
 }
 
 function step() {   // by B.Berchtold
 	quickly=false;
 	document.getElementById("SF").style.backgroundColor="#E0FFFF";
-	Weiter=false;
 	solve();
 }
 
@@ -167,7 +164,6 @@ function solve() {
 		}
 	}
 	loopId = setInterval(function() {
-		if (!quickly) Weiter=!Weiter;
 		try {
 			nothingChanged = true;
 			analyze();
