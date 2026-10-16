@@ -8,7 +8,7 @@ var blockValuesPresent = null;
 var blockSizes = null;
 var nothingChanged = false;
 const compsolved = "<strong> von Computer gelöst</strong>";
-const failtext = "<strong> kann Problem nicht lösen.</strong>";
+const failtext = "<strong> kann Problem nur mit Logikalgorithmus nicht lösen.</strong>";
 const failtextnew = "<strong> Problem unlösbar</strong>";
 
 function excludeValue(cell, value) {
@@ -188,13 +188,29 @@ function solve() {
 				document.getElementById("stepButton").disabled = true;
 				document.getElementById("solveButton").disabled = true;
 			} else if (nothingChanged) {
-              if (currentLevel.diff==5 && currentLevel.level==9) 
-				 document.getElementById("wintext").innerHTML+=failtext+" Versuchen Sie selber, die eindeutige Lösung zu finden.";
-			  else document.getElementById("wintext").innerHTML += failtext;	
-			  stop();
-			  document.getElementById("stepButton").disabled = true;
+              if (currentLevel.diff==5 && currentLevel.level==9) {
+				  document.getElementById("wintext").innerHTML += failtext+" Setze daher 2 in Zeile 2, Kolonne 3.<br>";
+				  cell = getCell(2,1);
+				  cell.classList.add("mark");
+                  setCell(cell, 2);
+				  analyze();
+				  if (quickly) {
+					 analyze();
+				     analyze();
+				     analyze();
+				     document.getElementById("wintext").innerHTML += compsolved;
+					 document.getElementById("stepButton").disabled = true;
+					 document.getElementById("solveButton").disabled = true;
+				     stop();
+				  }
+			  }					
+			  else {
+				document.getElementById("wintext").innerHTML += failtext;	
+			    stop();
+			    document.getElementById("stepButton").disabled = true;
+			  }
 			}
-		} catch (e) {	
+			} catch (e) {	
 			document.getElementById("wintext").innerHTML = failtext;
 			stop();
 			throw e;
