@@ -1,12 +1,13 @@
 // from Dirk Kok https://foxite.github.io/suguru/suguru.html
 // Some new functions by Bernhard Berchtold
 // Helper functions
-var loopId;
+
 var quickly=true;
 var blockIndex = null;
 var blockValuesPresent = null;
 var blockSizes = null;
 var nothingChanged = false;
+var solved=false;
 const compsolved = "<strong> von Computer gelöst</strong>";
 const failtext = "<strong> kann Problem nur mit Logikalgorithmus nicht lösen.</strong>";
 const failtextnew = "<strong> Problem unlösbar</strong>";
@@ -28,7 +29,6 @@ function excludeValue(cell, value) {
 	if (possibleValues.length == 1) {
 		if (!quickly)  cell.classList.add("mark");
 		setCell(cell, possibleValues);
-		if (!quickly) stop();
 	} else if (possibleValues.length == 0) {
 		// Shouldn't happen
 		throw new Error("Cell at " + cell.getAttribute("data-x") + ", " + cell.getAttribute("data-y") + " has no possible values");
@@ -83,31 +83,24 @@ function arrayUnique(array) {
     return a;
 }
 
-function stop() {
-	if (loopId != null) {
-		clearInterval(loopId);
-		loopId = null;
-	}
-}
-
 function solvequick() {  // by B.Berchtold
 	quickly=true;
 	loadLevel(currentLevel.diff,currentLevel.level);
 	solve();
+	while (!solved) run();
 }
 
 function step() {   // by B.Berchtold
 	quickly=false;
 	document.getElementById("SF").style.backgroundColor="#E0FFFF";
-	solve();
+	if (first) {    //var first in suguru.js definiert
+	  first=false; solve();
+	}
+	  else run();
 }
 
-// Algorithm
-function solve() {
-	blockValuesPresent = {};
-	blockSizes = {};
-	blockIndex = {};
-    
+
+function clean() {
 	while (sequence.length>2) back();
 	for (var x = 0; x < currentLevel.xSize; x++) {
 		for (var y = 0; y < currentLevel.ySize; y++) {
@@ -116,7 +109,65 @@ function solve() {
 			cell.classList.remove("active");
 			cell.classList.remove("activewhite");
 		}
+	}	
+}
+
+function run() {
+		clean();
+		try {
+			nothingChanged = true;
+			analyze();
+			solved = true;
+			solvedCheck:
+			for (var x = 0; x < currentLevel.xSize; x++) {
+				for (var y = 0; y < currentLevel.ySize; y++) {
+					if (getCell(x,y).textContent == "") {
+						solved = false;
+						break solvedCheck;
+					}
+				}
+			}
+            
+			if (solved) {
+				// Hier Schlusskontrolle mit validatecell() (falls eingegebenes Suguru, also diff==7)			
+				var ok=true;
+				if (document.getElementById("difficulty").value==7) ok=endcontrol();
+				if (ok) document.getElementById("wintext").innerHTML += compsolved;
+				   else document.getElementById("wintext").innerHTML += failtextnew;
+                first=true;
+				document.getElementById("stepButton").disabled = true;
+				document.getElementById("solveButton").disabled = true;
+			} else if (nothingChanged) {
+              if (currentLevel.diff==5 && currentLevel.level==9) {
+				  document.getElementById("wintext").innerHTML += failtext+" Setze daher 2 in Zeile 2, Kolonne 3.<br>";
+				  cell = getCell(2,1);
+				  cell.classList.add("mark");
+                  setCell(cell, 2);
+				  run();
+				  if (quickly) {
+					  while (!solved) run();
+				  }
+			  }					
+			  else {
+				document.getElementById("wintext").innerHTML += failtext;	
+			    first=true;
+				solved=true;   // damit Prog abbricht
+			    document.getElementById("stepButton").disabled = true;
+			  }
+			}
+			} catch (e) {
+			   document.getElementById("wintext").innerHTML = failtext;
+			   throw e;
+		      }
 	}
+
+// Algorithm
+function solve() {
+	blockValuesPresent = {};
+	blockSizes = {};
+	blockIndex = {};
+    
+	clean();
 	
 	// Setup part 1: initialize block index
 	// The block index keeps track of what values are already present in each block, as well as the size of that block.
@@ -163,59 +214,7 @@ function solve() {
 			}
 		}
 	}
-	loopId = setInterval(function() {
-		try {
-			nothingChanged = true;
-			analyze();
-			var solved = true;
-			solvedCheck:
-			for (var x = 0; x < currentLevel.xSize; x++) {
-				for (var y = 0; y < currentLevel.ySize; y++) {
-					if (getCell(x,y).textContent == "") {
-						solved = false;
-						break solvedCheck;
-					}
-				}
-			}
-            
-			if (solved) {
-				// Hier Schlusskontrolle mit validatecell() (falls eingegebenes Suguru, also diff==7)			
-				var ok=true;
-				if (document.getElementById("difficulty").value==7) ok=endcontrol();
-				if (ok) document.getElementById("wintext").innerHTML += compsolved;
-				   else document.getElementById("wintext").innerHTML += failtextnew;
-				stop();
-				document.getElementById("stepButton").disabled = true;
-				document.getElementById("solveButton").disabled = true;
-			} else if (nothingChanged) {
-              if (currentLevel.diff==5 && currentLevel.level==9) {
-				  document.getElementById("wintext").innerHTML += failtext+" Setze daher 2 in Zeile 2, Kolonne 3.<br>";
-				  cell = getCell(2,1);
-				  cell.classList.add("mark");
-                  setCell(cell, 2);
-				  analyze();
-				  if (quickly) {
-					 analyze();
-				     analyze();
-				     analyze();
-				     document.getElementById("wintext").innerHTML += compsolved;
-					 document.getElementById("stepButton").disabled = true;
-					 document.getElementById("solveButton").disabled = true;
-				     stop();
-				  }
-			  }					
-			  else {
-				document.getElementById("wintext").innerHTML += failtext;	
-			    stop();
-			    document.getElementById("stepButton").disabled = true;
-			  }
-			}
-			} catch (e) {	
-			document.getElementById("wintext").innerHTML = failtext;
-			stop();
-			throw e;
-		}
-	},0);
+	run();
 }
 
 // Techniques:
