@@ -15,6 +15,7 @@
 <script src="diff4.js"></script>
 <script src="diff5.js"></script>
 <script src="diff6.js"></script>
+<script src="diff7.js"></script>
 <script src="input_output.js"></script>
 <link rel="stylesheet" href="suguru.css">
 </head>
@@ -34,7 +35,8 @@
 <p id="infotext">Das Ziel des Spiels ist, in jeder Box (eine Box ist durch fette Linien und Farbe markiert) 
 genau die Ziffern 1 bis N (Anzahl Zellen der Box) zu haben. Dabei dürfen keine benachbarten Zellen dieselbe Ziffer aufweisen.<br>
 Die Probleme sind eine Teilmenge der Probleme der Suguru.apk (s. <a href="/links.html">Externe Links</a>) von Aliaksandr Uvarau.<br> 
-Der Lösungsalgorithmus (kein Backtracking!) ist von Dirk Kok mit Ergänzungen von B.Berchtold.<br>
+Der Lösungsalgorithmus (kein Backtracking!) ist von Dirk Kok mit Ergänzungen von B.Berchtold. In 'Exception' finden Sie Probleme, die mit 
+dem Lösungsalgorithmus allein nicht lösbar sind und daher mindestens eine Setzung benötigen.<br>
 Sie können das angezeigte Problem lösen, ein Problem durch den Computer lösen lassen ('Solve', 'Step' zeigt Lösung schrittweise) 
 oder eine Problemstellung neu eingeben ('Eingabe neues Suguru'). Ihre neu erstellten Sugurus können Sie mit 'Download' auf Ihren 
 Computer speichern und später mit 'Upload' wieder raufladen.<br>
@@ -52,18 +54,20 @@ Die Eingabe erfolgt dann mit kleinerem Font und Sie können - falls nötig - mit
 		<option value="4">Hard</option>
 		<option value="5">Very hard</option>
 		<option value="6">Expert</option>
-		<option value="7">New</option>
+		<option value="7">Exception</option>
+		<option value="8">New</option>
 	</select>
-	<button id="previousButton" title="vorherige Nr" style="margin-left:20px;" onclick="Levelminus()">Nr - </button>
-	<button id="nextButton" title="nächste Nr" style="margin-left:10px;" onclick="Levelplus()">Nr + </button>
-	<button id="reloadButton" style="margin-left:20px;" title="aktuelle Nr wird neu geladen" onclick="loadLevelUI()">Reload</button>			
-	<br><br>	
+	<button id="previousButton" title="vorherige Nr" style="margin-left:18px;" onclick="Levelminus()">Nr - </button>
+	<button id="nextButton" title="nächste Nr" style="margin-left:8px;margin-right:10px" onclick="Levelplus()">Nr + </button>
+	<label> Goto <input type="number" id="gotoNr" min="1" max="1000" value="" onchange="gotonr()"></label><br>			
+	<br>	
 	<span id="wintext"></span>
 	<div id="solve">
 	   <button id="SF" title="Kleines Font bei Eingabe" onclick="changeSF()"> &#9998; </button>
 	   <button id="backButton" title="einen Schritt zurück" onclick="back()"><strong> &cularr; </strong></button>
-	   <button style="margin-left:45px" id="solveButton" title="Computer versucht, Problem zu lösen" onclick="solvequick()">Solve</button>
+	   <button style="margin-left:30px" id="solveButton" title="Computer versucht, Problem zu lösen" onclick="solvequick()">Solve</button>
 	   <button style="margin-left:10px" id="stepButton" title="Computer löst Problem schrittweise" onclick="stepButtonclicked()">Step</button>
+	   <button id="reloadButton" style="margin-left:10px;" title="aktuelle Nr wird neu geladen" onclick="loadLevelUI()">Reload</button>
     </div>
 	<br>
 	<table id="suguru"></table>

@@ -51,7 +51,7 @@ function OnShowSelectedFile() {
 					for (var i=1;i<felder.length;i++) {
 					   levelneu[i-1] = felder[i];
 					}
-					document.getElementById("difficulty").value=7;
+					document.getElementById("difficulty").value=8;
 					levelNumber = levelneu.length;
 					loadLevelUI();			
                 }
