@@ -20,11 +20,13 @@ table#suguru tr td:last-of-type {
 }
 
 table#suguru td {
-	font-size: 1.5em;
+	font-size: 1.4em;
 	box-sizing: border-box;
 	border: 1px solid lightgrey;
 	text-align: center;
 	border-style: outset;
+	-webkit-text-size-adjust:100%;
+    text-size-adjust:100%;
 }
 
 table#suguru td.border-left {
@@ -45,15 +47,15 @@ table#suguru td.border-bottom {
 
 table#suguru td.invalid {
 	outline: 3px dashed red;
-	outline-offset: -6px;
+	outline-offset: -5px;
 }
 table#suguru td.active {
 	outline: 3px dashed blue;
-	outline-offset: -6px;
+	outline-offset: -5px;
 }
 table#suguru td.activewhite {
 	outline: 3px dashed white;
-	outline-offset: -6px;
+	outline-offset: -5px;
 }
 table#suguru td.mark {
 	opacity:0.5;
@@ -65,5 +67,4 @@ button[id="backButton"] {font-size:120%;vertical-align:middle;margin-left:12px}
 input[type=number] {width:1.8em;font-size:100%;}
 input[type="button"] {font-size:100%;min-width:2.5em;margin-right:8px;margin-bottom:8px;}
 input.infobut {font-size:90%}
-select{font-size:95%}
-input[type="checkbox"] {vertical-align:middle}
+select{font-size:96%}
