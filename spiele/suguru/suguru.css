@@ -20,7 +20,6 @@ table#suguru tr td:last-of-type {
 }
 
 table#suguru td {
-	font-size: 1.4em;
 	box-sizing: border-box;
 	border: 1px solid lightgrey;
 	text-align: center;
