@@ -60,10 +60,10 @@ table#suguru td.mark {
 	opacity:0.5;
 	font-weight:bold;
 }
-button {font-size:100%;border:1px solid;cursor:pointer;background-color:#E0FFFF}
-button[id="SF"] {font-size:120%;vertical-align:middle}
-button[id="backButton"] {font-size:120%;vertical-align:middle;margin-left:12px}
 input[type=number] {width:1.8em;font-size:100%;}
 input[type="button"] {font-size:100%;min-width:2.5em;margin-right:8px;margin-bottom:8px;}
 input.infobut {font-size:90%}
+button {font-size:100%;border:1px solid;cursor:pointer;background-color:#E0FFFF}
+button[id="SF"] {font-size:120%;vertical-align:middle}
+button[id="backButton"] {font-size:120%;vertical-align:middle;margin-left:12px}
 select{font-size:96%}
