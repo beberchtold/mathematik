@@ -24,8 +24,7 @@ table#suguru td {
 	border: 1px solid lightgrey;
 	text-align: center;
 	border-style: outset;
-	-webkit-text-size-adjust:none;
-    text-size-adjust:none;
+	-webkit-text-size-adjust:90%;
 }
 
 table#suguru td.border-left {
