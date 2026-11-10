@@ -55,6 +55,10 @@ table#suguru td.activewhite {
 	outline: 3px dashed white;
 	outline-offset: -5px;
 }
+table#suguru td.mark {
+	opacity:0.5;
+	font-weight:bold;
+}
 
 input[type=number] {width:1.8em;font-size:100%;}
 input[type="button"] {font-size:100%;min-width:2.5em;margin-right:8px;margin-bottom:8px;}
