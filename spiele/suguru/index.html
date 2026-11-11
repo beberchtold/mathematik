@@ -29,22 +29,23 @@
 
 <!-- CONTENT -->
 
-<h1>Suguru</h1>
+<h1>Suguru (Tectonic)</h1>
 
-<p id="infotext">Das Ziel des Spiels ist, in jeder Box (eine Box ist durch fette Linien und Farbe markiert) 
-genau die Ziffern 1 bis N (Anzahl Zellen der Box) zu haben. Dabei dürfen keine benachbarten Zellen dieselbe Ziffer aufweisen.<br>
+<p>Das Ziel des Spiels ist, in jeder Box (eine Box ist durch fette Linien und Farbe markiert) 
+genau die Ziffern 1 bis N (Anzahl Zellen der Box) zu haben. Dabei dürfen keine benachbarten Zellen dieselbe Ziffer aufweisen.</p>
+<p id="infotext" style="display:none">
 Die meisten Probleme sind Probleme der Suguru.apk (s. <a href="/links.html">Externe Links</a>) von Aliaksandr Uvarau.<br> 
 Der Lösungsalgorithmus (kein Backtracking) ist von Dirk Kok mit Ergänzungen von B.Berchtold. In 'Exception' finden Sie Probleme, die mit 
 dem Lösungsalgorithmus allein nicht lösbar sind und daher mindestens eine Setzung benötigen.<br>
 Sie können das angezeigte Problem lösen, ein Problem durch den Computer lösen lassen ('Solve', 'Step' zeigt Lösung schrittweise) 
 oder eine Problemstellung neu eingeben ('Eingabe neues Suguru'). Ihre neu erstellten Sugurus können Sie mit 'Download' auf Ihren 
-Computer speichern und später mit 'Upload' wieder raufladen.<br>
+Computer speichern und später mit 'Upload' wieder raufladen. Die raufgeladenen Probleme werden unter 'New' angezeigt.<br>
 Wahl des Feldes für die Eingabe: Klick oder mit Pfeiltasten.
 Die Eingabe der Ziffer erfolgt mittels Button.<br>
 Falls Sie bei einer Eingabe einer Ziffer unsicher sind, so klicken Sie auf <span style="font-size:110%">&#9998;</span>. 
-Die Eingabe erfolgt dann mit kleinerem Font und Sie können - falls nötig - mit <span style="font-size:120%"><strong>&cularr;</strong></span> wieder zu dieser Eingabe zurückkehren.
-</p>
-<input type="button" id="infobutton" class="infobut" value="Info nicht mehr anzeigen" onclick="hideinfo()">
+Die Eingabe erfolgt dann mit kleinerem Font und Sie können - falls nötig - mit <span style="font-size:120%"><strong>&cularr;</strong>
+</span> wieder zu dieser Eingabe zurückkehren.</p>
+<input type="button" id="infobutton" class="infobut" value="Mehr Info anzeigen" onclick="showinfo()">
 <br><br>
     <select id="difficulty" title="Schwierigkeit">
 		<option value="1">Beginner</option>
