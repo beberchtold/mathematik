@@ -19,7 +19,7 @@
 <script src="input_output.js"></script>
 <link rel="stylesheet" href="suguru.css">
 </head>
-<body onload="init()" onkeyup="keyPress(event.keyCode)">
+<body onload="init()" onkeyup="keyPress(event.key)">
 <div class="page">
 <div class="flex">
 <span id="menuicon"><a href="/menu.html">
@@ -123,7 +123,7 @@ dem Lösungsalgorithmus allein nicht lösbar sind und daher mindestens eine Setz
 	   <input type="button" id="z25" value="I" onclick="faerbe(25)">
 	   <input type="button" id="z26" value="K" onclick="faerbe(26)">
 	 </div>
-	 <small><span id="info"></span></small>
+	 <span id="info"></span>
 	 <br>
 	 <input type="button" id="newbutton" value="New Suguru" onclick="createnewSuguru()">
      <input type="button" id="downloadbutton" title="speichert die Probleme von 'New' auf Ihren Computer" value="Download" onclick="download()">
