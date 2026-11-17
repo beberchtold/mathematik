@@ -19,7 +19,7 @@
 <script src="input_output.js"></script>
 <link rel="stylesheet" href="suguru.css">
 </head>
-<body onload="init()" onkeyup="keyPress(event.key)">
+<body onload="init()">
 <div class="page">
 <div class="flex">
 <span id="menuicon"><a href="/menu.html">
@@ -70,7 +70,7 @@ dem Lösungsalgorithmus allein nicht lösbar sind und daher mindestens eine Setz
 	   <button id="reloadButton" style="margin-left:10px;" title="aktuelle Nr wird neu geladen" onclick="loadLevelUI()">Reload</button>
     </div>
 	<br>
-	<table id="suguru"></table>
+	<table id="suguru" tabindex="0"></table>
 	<br>
 	<span id="compfailtext"></span>
     <div id="inputbuttons">
