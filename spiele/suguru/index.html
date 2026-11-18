@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="text-scale" content="scale">
 <title>Spiel Suguru - mit Logikalgorithmus zur Lösung</title>
-<meta name="Description" content="Spiel Suguru (Tectonic) mit JavaScript: mehr als 140 Probleme, Eingabe neues Suguru (bis 10x10), Solver (auch schrittweise), Lösungsalgorithmus ohne backtracking, Download und Upload">
+<meta name="Description" content="Rätsel Spiel Suguru (Tectonic) online mit JavaScript: mehr als 140 Rätsel, Eingabe neues Suguru (bis 10x10), Solver (auch schrittweise), Lösungsalgorithmus ohne backtracking, Download und Upload">
 <link rel="stylesheet" href="/css/mathematik.css">
 <script src="diff1.js"></script>
 <script src="sugurumin.js"></script>
@@ -29,20 +29,20 @@
 
 <!-- CONTENT -->
 
-<h1>Suguru (Tectonic)</h1>
+<h1>Rätsel Suguru (Tectonic)</h1>
 <p id="infotext">Das Ziel des Spiels ist, in jeder Box (eine Box ist durch fette Linien und Farbe markiert) 
 genau die Ziffern 1 bis N (Anzahl Zellen der Box) zu haben. Dabei dürfen keine benachbarten Zellen dieselbe Ziffer 
 aufweisen.<br>
-Sie können das angezeigte Problem lösen, ein Problem durch den Computer lösen lassen ('Solve', 'Step' zeigt Lösung schrittweise) 
+Sie können das angezeigte Rätsel lösen, ein Rätsel durch den Computer lösen lassen ('Solve', 'Step' zeigt Lösung schrittweise) 
 oder eine Problemstellung neu eingeben ('New Suguru'). Ihre neu erstellten Sugurus können Sie mit 'Download' auf Ihren 
-Computer speichern und später mit 'Upload' wieder raufladen. Die raufgeladenen Probleme werden unter 'New' angezeigt.<br>
+Computer speichern und später mit 'Upload' wieder raufladen. Die raufgeladenen Rätsel werden unter 'New' angezeigt.<br>
 Wahl des Feldes für die Eingabe: Klick oder mit Pfeiltasten.
 Die Eingabe der Ziffer erfolgt mittels Button oder Tastatur.<br>
 Falls Sie bei einer Eingabe einer Ziffer unsicher sind, so klicken Sie auf <span style="font-size:110%">&#9998;</span>. 
 Die Eingabe erfolgt dann mit kleinerem Font und Sie können - falls nötig - mit <span style="font-size:120%"><strong>&cularr;</strong>
 </span> wieder zu dieser Eingabe zurückkehren.<br>
-Die meisten Probleme sind Probleme der Suguru.apk (s. <a href="/links.html">Externe Links</a>) von Aliaksandr Uvarau.<br> 
-Der Lösungsalgorithmus (kein Backtracking) ist von Dirk Kok mit Ergänzungen von B.Berchtold. In 'Exception' finden Sie Probleme, die mit 
+Die meisten Rätsel sind Probleme der Suguru.apk (s. <a href="/links.html">Externe Links</a>) von Aliaksandr Uvarau.<br> 
+Der Lösungsalgorithmus (kein Backtracking) ist von Dirk Kok mit Ergänzungen von B.Berchtold. In 'Exception' finden Sie Rätsel, die mit 
 dem Lösungsalgorithmus allein nicht lösbar sind und daher mindestens eine Setzung benötigen.
 </p>
 <input type="button" id="infobutton" class="infobut" value="Info nicht mehr anzeigen" onclick="hideinfo()">
@@ -65,8 +65,8 @@ dem Lösungsalgorithmus allein nicht lösbar sind und daher mindestens eine Setz
 	<div id="solve">
 	   <button id="SF" title="Kleines Font bei Eingabe" onclick="changeSF()"> &#9998; </button>
 	   <button id="backButton" title="einen Schritt zurück" onclick="back()"><strong> &cularr; </strong></button>
-	   <button style="margin-left:30px" id="solveButton" title="Computer versucht, Problem zu lösen" onclick="solvequick()">Solve</button>
-	   <button style="margin-left:10px" id="stepButton" title="Computer löst Problem schrittweise" onclick="stepButtonclicked()">Step</button>
+	   <button style="margin-left:30px" id="solveButton" title="Computer versucht, Rätsel zu lösen" onclick="solvequick()">Solve</button>
+	   <button style="margin-left:10px" id="stepButton" title="Computer löst Rätsel schrittweise" onclick="stepButtonclicked()">Step</button>
 	   <button id="reloadButton" style="margin-left:10px;" title="aktuelle Nr wird neu geladen" onclick="loadLevelUI()">Reload</button>
     </div>
 	<br>
@@ -126,8 +126,8 @@ dem Lösungsalgorithmus allein nicht lösbar sind und daher mindestens eine Setz
 	 <span id="info"></span>
 	 <br>
 	 <input type="button" id="newbutton" value="New Suguru" onclick="createnewSuguru()">
-     <input type="button" id="downloadbutton" title="speichert die Probleme von 'New' auf Ihren Computer" value="Download" onclick="download()">
-	 <input type="button" id="uploadbutton" title="ladet die vorher mit 'Download' gespeicherten Probleme in 'New'" value="Upload" onclick="upload()">
+     <input type="button" id="downloadbutton" title="speichert die Rätsel von 'New' auf Ihren Computer" value="Download" onclick="download()">
+	 <input type="button" id="uploadbutton" title="ladet die vorher mit 'Download' gespeicherten Rätsel in 'New'" value="Upload" onclick="upload()">
 	 <input type="file" id="upload" accept=".txt" onchange="OnShowSelectedFile()" style="display:none;">
 	 <span id="uploadInfo"></span>
 
