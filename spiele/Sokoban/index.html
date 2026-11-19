@@ -7,7 +7,7 @@
 <meta NAME="Description" CONTENT="Sokoban, 50 Originalprobleme">
 <TITLE>Sokoban</title>
 <LINK REL="stylesheet" HREF="/css/mathematik.css" type="text/css">
-<script src="sokoban_min.js"></script>
+<script src="sokobanmin.js"></script>
 <script async src="solut_min.js"></script>
 <style>
 input[type="button"] {padding:2px 3px 3px 3px}
@@ -15,7 +15,7 @@ canvas {width:100%;height:auto;min-width:308px;max-width:500px}
 </style>
 </head>
 
-<body onkeyup="keyPress(event.keyCode)">
+<body onload="init()">
 <div class="page">
 <div class="flex">
 <span id="menuicon"><a href="/menu.html">
