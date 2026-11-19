@@ -7,14 +7,14 @@
 <title>Puzzle12: Theseus und Minotaur</title>
 <meta name="Description" content="Puzzle 12: Theseus und Minotaur im Labyrinth; mit Lösung">
 <link rel="stylesheet" href="/css/mathematik.css" TYPE="text/css">
-<script src="theseus_min.js"></script>
+<script src="theseusmin.js"></script>
 <style>
 div.a{width:60%;min-width:320px;max-width:510px;margin-right:40px;position:relative;float:left}
-@media(width<600px) {div.a{width:100%}}
+@media(max-width:600px) {div.a{width:100%}}
 </style>
 </head>
 
-<body onkeyup="keyPress(event.keyCode)">
+<body>
 <div class="page">
 
 <div class="flex">
@@ -36,23 +36,24 @@ div.a{width:60%;min-width:320px;max-width:510px;margin-right:40px;position:relat
   <div>
     <div id="user">
 	<ul>
-      <li><input type="button" style="min-width:2.5em;margin-left:3.2em" value="&uarr;" onclick="move(Tx-1,Ty)"></li>
+      <li><input type="button" style="min-width:2.5em;margin-left:3.2em" value="&uarr;" onclick="move(Tx-1,Ty)">
 	  <li><input type="button" style="min-width:2.5em;margin-right:0.7em" value="&larr;" onclick="move(Tx,Ty-1)">
 	    <input type="button" style="min-width:2em;margin-right:0.7em" value="d" onclick="move(Tx,Ty)">
-	    <input type="button" style="min-width:2.5em" value="&rarr;" onclick="move(Tx,Ty+1)">
-	  </li>		
-	  <li><input type="button" style="min-width:2.5em;margin-left:3.2em" value="&darr;" onclick="move(Tx+1,Ty)"></li>
-      <li><span id="Antwort"> </span></li>	 
-	  <li><input type="button" style="width:8em;margin-top:10px" value="Restart" onclick="restart()"></li>
+	    <input type="button" style="min-width:2.5em" value="&rarr;" onclick="move(Tx,Ty+1)">	
+	  <li><input type="button" style="min-width:2.5em;margin-left:3.2em" value="&darr;" onclick="move(Tx+1,Ty)">
+      <li><span id="Antwort"> </span>	 
+	  <li><input type="button" style="width:8em;margin-top:10px" value="Restart" onclick="restart()">
 	</ul>
 	</div>
 	<div id="computer" style="display:none">
 	<p><strong>Lösung</strong></p>
-	<p><span id="info">Klick auf "Zug+"</span></p>
+	<p><span id="info">Klick auf "Zug+".<br>
+	  Nach einmal Klick auf "Zug+" genügt auch die Return-Taste...
+	</span></p>
 	<ul>
-	  <li><input type="button" value="Zug+" onclick="loesung()"></li>
-	  <li><input type="button" style="width:5em;margin-top:10px" value="Restart" onclick="restart()"></li>
-	  <li style="margin-top:20px">zurück zur <a href="./"> Aufgabe</a></li>
+	  <li><input type="button" value="Zug+" onclick="loesung()">
+	  <li><input type="button" style="width:5em;margin-top:10px" value="Restart" onclick="restart()">
+	  <li style="margin-top:20px">zurück zur <a href="./"> Aufgabe</a>
 	</ul>
 	</div>
    </div>
@@ -68,12 +69,13 @@ div.a{width:60%;min-width:320px;max-width:510px;margin-right:40px;position:relat
    kann, um näher zum Theseus zu gelangen. Falls er sich weder horizontal noch
    vertikal bewegen kann, so lässt er den Zug aus.<br>
    Benützen Sie für den Zug von Theseus entweder die Pfeiltasten der Tastatur oder klicken Sie auf den entsprechenden Pfeil-Button.<br>
-   Theseus kann auch für einen Zug aussetzen und damit den Minotaur einen Extrazug machen lassen. 
-   Um dies zu veranlassen, schreiben Sie d oder klicken Sie auf den Button "d".</p>
+   Theseus kann auch für einen Zug aussetzen und damit den Minotaur einen Extrazug machen lassen: 
+   Klick auf "d" oder Drücken der Taste "d".<br>
+   Spiel neu starten: Klick auf "Restart" oder Drücken der Taste "r".</p>
    <p><small>Das Original dieses Rätsel stammt von Robert Abbott (http://www.logicmazes.com/).</small></p>	
-	<ul>
-     <li><input type="button" value="Lösung   " onclick="initloesung()"> <small>(von B.Berchtold)</small></li>
-    </ul>
+	<p>
+    <input type="button" value="Lösung   " onclick="initloesung()"> <small>(von B.Berchtold)</small>
+    </p>
 	</div>
 
 <!-- EOF: CONTENT -->
