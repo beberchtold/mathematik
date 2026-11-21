@@ -6,7 +6,7 @@
 <meta name="text-scale" content="scale">
 <title>Sudoku X (Diagonal-Sudoku)</title>
 <meta NAME="Description" CONTENT="Spiel Sudoku X mit JavaScript: Generator und Solver">
-<meta name="Keywords" content="Spiel,Nonomino,Hexomino,Sudoku,SudokuX,Sudoku X,Lösen,Erzeugen,create,solve">
+<meta name="Keywords" content="Spiel online,Nonomino,Hexomino,Sudoku,SudokuX,Sudoku X,Lösen,Erzeugen,create,solve">
 <meta name="author" content="B.Berchtold">
 <LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
 <script src="sudoku_xmin.js"></script>
@@ -17,6 +17,7 @@ input[type="button"]{min-width:39px;margin:3px 8px 3px 0px}
 select{width:4em;height:1.4em}
 li.a{padding:2px 0px 2px 2px}
 canvas {width:100%;height:auto;min-width:308px;max-width:500px}
+a.h {display:inline-block;height:44px}
 </style>
 </head>
 
@@ -83,7 +84,7 @@ Durch Wahl von p1 bis p9 aus dem Auswahlfeld 'Prob' lässt sich ein gespeicherte
 	    <span id="H9x9" style="display:none;">
           <input id="H7" type="button" value="7" onclick="hilf(7)">
 	      <input id="H8" type="button" value="8" onclick="hilf(8)">
-	     <input id="H9" type="button" value="9" onclick="hilf(9)">
+	      <input id="H9" type="button" value="9" onclick="hilf(9)">
 	    </span>
 	  </li>
 	</ul>
@@ -97,7 +98,7 @@ Durch Wahl von p1 bis p9 aus dem Auswahlfeld 'Prob' lässt sich ein gespeicherte
     </li>
     <li><input type="button" value="Create  " title="Computer versucht neue Problemstellung zu erzeugen" onclick="docreate()">
       <input type="button" value="Clear " title="erzeugt leeres Startfeld" onclick="initPuzzle()">
-      <select id="wahl" onchange="problem(this[selectedIndex].index)">
+      <label><select id="wahl" onchange="problem(this[selectedIndex].index)">
         <option>Prob</option>
 	    <option>p1</option>
         <option>p2</option>
@@ -108,14 +109,15 @@ Durch Wahl von p1 bis p9 aus dem Auswahlfeld 'Prob' lässt sich ein gespeicherte
 	    <option>p7</option>
 	    <option>p8</option>
 	    <option>p9</option>
-      </select>
+      </select></label>
     </li>
-    <li><label><input id="9x9" type="checkbox" onclick="OnChangeCheckbox3 (this)"><strong>SudokuX: Situation 9x9</strong></label></li>
+    <li><label><input id="9x9" type="checkbox" onclick="OnChangeCheckbox3 (this)"><strong>Sudoku X: Situation 9x9</strong></label></li>
 	</ul>
   </div>       
-</div>	
+</div>
 
-<p><span style="margin-right:35px;"><a href="/spiele/sudoku/">Zu Standard-Sudoku</a></span><a href="/spiele/sudoku_squiggly/">Squiggly Sudoku</a></p>
+<p><span style="margin-right:35px"><a class="h" href="/spiele/sudoku/">Zu Standard-Sudoku</a></span>
+<a class="h" href="/spiele/sudoku_squiggly/">Squiggly Sudoku</a></p>
 
 <!-- EOF: CONTENT -->
  
