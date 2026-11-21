@@ -47,7 +47,7 @@ dem Lösungsalgorithmus allein nicht lösbar sind und daher mindestens eine Setz
 </p>
 <input type="button" id="infobutton" class="infobut" value="Info nicht mehr anzeigen" onclick="hideinfo()">
 <br> <br>
-    <select id="difficulty" title="Schwierigkeit">
+    <label><select id="difficulty" title="Schwierigkeit">
 		<option value="1">Beginner</option>
 		<option value="2">Easy</option>
 		<option value="3">Middle</option>
@@ -56,7 +56,7 @@ dem Lösungsalgorithmus allein nicht lösbar sind und daher mindestens eine Setz
 		<option value="6">Expert</option>
 		<option value="7">Exception</option>
 		<option value="8">New</option>
-	</select>
+	</select></label>
 	<button id="previousButton" title="vorherige Nr" style="margin-left:18px;" onclick="Levelminus()">Nr - </button>
 	<button id="nextButton" title="nächste Nr" style="margin-left:8px;margin-right:10px" onclick="Levelplus()">Nr + </button>
 	<label> Goto <input type="number" id="gotoNr" min="1" max="1000" value="" onchange="gotonr()"></label><br>			

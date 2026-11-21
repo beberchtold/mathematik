@@ -89,7 +89,7 @@ Sie können auch durch Wahl von p1 bis p11 aus dem Auswahlfeld 'Prob' ein gespei
 	</li>
 	<li><input class="a" type="button" value="Create" title="Computer versucht neue Problemstellung zu erzeugen" onclick="docreate()">
 	  <input class="a" type="button" value="Clear" title="erzeugt leeres Startfeld" onclick="initPuzzle()">
-	  <select id="wahl" onchange="problem(this[selectedIndex].index)">
+	  <label><select id="wahl" onchange="problem(this[selectedIndex].index)">
         <option>Prob</option>
 	    <option>p1</option>
         <option>p2</option>
@@ -102,7 +102,7 @@ Sie können auch durch Wahl von p1 bis p11 aus dem Auswahlfeld 'Prob' ein gespei
         <option>p9</option>
 	    <option>p10</option>
 	    <option>p11</option>
-      </select>
+      </select></label>
 	</li>
 	</ul>
   </div>       
