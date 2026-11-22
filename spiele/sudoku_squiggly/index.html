@@ -46,21 +46,21 @@ Mit Klick auf <strong>NeueBoxstruktur User</strong> können Sie eine eigene Stru
 eines Freiform-Sudokus eingeben und vom Computer lösen lassen.<br>
 Das erste Problem nach jeweils neuer Boxstruktur wird automatisch gespeichert und ist via 'Probneu' abrufbar.<br>
 Sie können mit <strong>CreateUser</strong> auch eine eigene Problemstellung eingeben und sie auf Eindeutigkeit prüfen lassen.<br>
-Die neu entstandenen Probleme in 'Probneu' können Sie auf Ihre HD downloaden und später wieder laden.</p>
-<ul>
- <li><input type="button" value="Weitere Info" style="width:8em;margin-right:20px" onclick="infos('infos.html','Infofenster',400,600)">
-   <input type="button" value="Strategien " onclick="infos('strategie.html','Strategiefenster',400,600)"></li>
-</ul>
+Die neu entstandenen Probleme in 'Probneu' können Sie auf Ihre HD downloaden und später wieder laden.<br>
+<input type="button" value="Weitere Info" style="width:8em;margin-right:20px" onclick="infos('infos.html','Infofenster',400,600)">
+<input type="button" value="Strategien " onclick="infos('strategie.html','Strategiefenster',400,600)">
+</p>
 
 <div class="colgroup-2">
   <div class="col">
-     <canvas id="myCanvas" width="400" height="400">Ihr Browser kann kein Canvas!</canvas>
+    <p style="margin-top:20px"><span id="message"></span></p>
+    <canvas id="myCanvas" width="400" height="400">Ihr Browser kann kein Canvas!</canvas>
   </div>
   
   <div class="col">
   <div id="zifferbuttons">
    <ul>
-    <li>Eingabe der Ziffer ins akt. (hellblaue) Feld:</li>
+    <li>Eingabe der Ziffer ins akt. (hellblaue) Feld</li>
 	<li><input type="button" title="löscht (schwarze) Ziffer, funktioniert auch mit delete-Taste" value=" " onclick="eingabe(0)">
 	  <input type="button" value="1" onclick="eingabe(1)">
 	  <input type="button" value="2" onclick="eingabe(2)">
@@ -96,7 +96,6 @@ Die neu entstandenen Probleme in 'Probneu' können Sie auf Ihre HD downloaden un
 	</ul>
    </div>
   </div>
-  <p style="margin-top:20px"><span id="message" style="margin-top:10px"></span></p>
   <span id="messageBox"></span>
   <span id="right" style="margin-top:8px;margin-bottom:10px;display:none">
     <input type="button" value="Richtig?" onclick="richtig()" style="margin-right:15px;">
