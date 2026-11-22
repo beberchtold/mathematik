@@ -45,14 +45,14 @@ Durch Wahl von p1 bis p9 aus dem Auswahlfeld 'Prob' lässt sich ein gespeicherte
 
 <div class="colgroup-2">
   <div class="col">
-    <p style="margin-top:20px"><strong><span id="message"></span></strong></p>
+    <h2><span id="message"></span></h2>
     <canvas id="myCanvas" width="400" height="400">Ihr Browser kann kein Canvas!</canvas>
   </div>
   
   <div class="col">
    <div id="zifferbuttons">
    <ul>
-    <li>Eingabe der Ziffer ins akt. (hellblaue) Feld</li>
+    <li>Eingabe der Ziffer ins akt. (hellblaue) Feld
 	<li><input type="button" title="löscht (schwarze) Ziffer, funktioniert auch mit delete-Taste" value=" " onclick="eingabe(0)">
 	<input id="1" type="button" value="1" onclick="eingabe(1)">
 	<input id="2" type="button" value="2" onclick="eingabe(2)">
@@ -65,15 +65,15 @@ Durch Wahl von p1 bis p9 aus dem Auswahlfeld 'Prob' lässt sich ein gespeicherte
 	<input id="8" type="button" value="8" onclick="eingabe(8)">
 	<input id="9" type="button" value="9" onclick="eingabe(9)">
 	</span>
-	</li>
+	
    </ul>
 	<div style="margin-top:14px;outline:1px solid;padding:0px 0px 3px 3px;">
 	<ul>  
-	  <li class="a"><label><input id="faerbe" type="checkbox" onclick="OnChangeCheckbox4(this)">Diagonalen färben</label></li>
+	  <li class="a"><label><input id="faerbe" type="checkbox" onclick="OnChangeCheckbox4(this)">Diagonalen färben</label>
 	  <li class="a"><label><input id="Show" type="checkbox" onclick="OnChangeCheckbox1(this)">Verfügbare Ziffern im akt. Feld:</label> <span id="Verf"></span>
-      </li>
-      <li class="a"><label><input id="Hilfe" type="checkbox" onclick="OnChangeCheckbox2(this)">Nicht mögliche Felder für Ziffer:</label>
-	  </li>
+      
+      <li class="a"><label><input id="Hilfe" type="checkbox" onclick="OnChangeCheckbox2(this)">Nicht mögliche Felder für Ziffer</label>
+	  
 	  <li><input id="H1" type="button" value="1" onclick="hilf(1)">
 	    <input id="H2" type="button" value="2" onclick="hilf(2)">
 	    <input id="H3" type="button" value="3" onclick="hilf(3)">
@@ -85,7 +85,7 @@ Durch Wahl von p1 bis p9 aus dem Auswahlfeld 'Prob' lässt sich ein gespeicherte
 	      <input id="H8" type="button" value="8" onclick="hilf(8)">
 	      <input id="H9" type="button" value="9" onclick="hilf(9)">
 	    </span>
-	  </li>
+	  
 	</ul>
 	</div>	
   </div>
@@ -93,7 +93,7 @@ Durch Wahl von p1 bis p9 aus dem Auswahlfeld 'Prob' lässt sich ein gespeicherte
     <li><input type="button" value="Save " title="speichert aktuelle Stellung" onclick="save_user()">
       <input type="button" id="Loa" value="Load " title="ladet die mit Save gespeicherte Stellung" onclick="load_user()">
       <input type="button" id="Sol" value="Solve " title="Computer versucht Lösung der aktuellen Stellung zu finden" onclick="solvebutton()">
-    </li>
+    
     <li><input type="button" value="Create  " title="Computer versucht neue Problemstellung zu erzeugen" onclick="docreate()">
       <input type="button" value="Clear " title="erzeugt leeres Startfeld" onclick="initPuzzle()">
       <label><select id="wahl" onchange="problem(this[selectedIndex].index)">
@@ -108,8 +108,8 @@ Durch Wahl von p1 bis p9 aus dem Auswahlfeld 'Prob' lässt sich ein gespeicherte
 	    <option>p8</option>
 	    <option>p9</option>
       </select></label>
-    </li>
-    <li><label><input id="9x9" type="checkbox" onclick="OnChangeCheckbox3 (this)"><strong>Sudoku X: Situation 9x9</strong></label></li>
+    
+    <li><label><input id="9x9" type="checkbox" onclick="OnChangeCheckbox3 (this)"><strong>Sudoku X: Situation 9x9</strong></label>
 	</ul>
   </div>       
 </div>

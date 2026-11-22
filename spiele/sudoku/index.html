@@ -41,7 +41,7 @@ Sie können auch durch Wahl von p1 bis p11 aus dem Auswahlfeld 'Prob' ein gespei
 
 
 <div class="colgroup-2">
-  <p style="margin-top:20px"><strong><span id="message"></span></strong></p>
+  <h2><span id="message"></span></h2>
   <div class="col" id="containercanvas">
      <canvas id="myCanvas" width="400" height="400">Ihr Browser kann kein Canvas!</canvas>
   </div>
@@ -49,7 +49,7 @@ Sie können auch durch Wahl von p1 bis p11 aus dem Auswahlfeld 'Prob' ein gespei
   <div class="col">
   <div id="zifferbuttons">
   <ul>
-    <li>Eingabe der Ziffer ins akt. (hellblaue) Feld</li>
+    <li>Eingabe der Ziffer ins akt. (hellblaue) Feld
 	<li><input type="button" title="löscht (schwarze) Ziffer, funktioniert auch mit delete-Taste" value=" " onclick="eingabe(0)">
 	<input id="1" type="button" value="1" onclick="eingabe(1)">
 	<input id="2" type="button" value="2" onclick="eingabe(2)">
@@ -60,15 +60,12 @@ Sie können auch durch Wahl von p1 bis p11 aus dem Auswahlfeld 'Prob' ein gespei
     <input id="7" type="button" value="7" onclick="eingabe(7)">
 	<input id="8" type="button" value="8" onclick="eingabe(8)">
 	<input id="9" type="button" value="9" onclick="eingabe(9)">
-	</li>
   </ul>
 	<div style="margin-top:14px;outline:1px solid;padding:0px 0px 3px 2px;">
 	<ul>
-	  <li class="a"><label><input id="faerbe" type="checkbox" onclick="OnChangeCheckbox3(this)">Box färben</label></li>
+	  <li class="a"><label><input id="faerbe" type="checkbox" onclick="OnChangeCheckbox3(this)">Box färben</label>
 	  <li class="a"><label><input id="Show" type="checkbox" onclick="OnChangeCheckbox1(this)">Verfügbare Ziffern im akt. Feld:</label> <span id="Verf"></span>
-      </li>
-      <li class="a"><label><input id="Hilfe" type="checkbox" onclick="OnChangeCheckbox2(this)">Nicht mögliche Felder für Ziffer:</label>
-	  </li>
+      <li class="a"><label><input id="Hilfe" type="checkbox" onclick="OnChangeCheckbox2(this)">Nicht mögliche Felder für Ziffer</label>
 	  <li><input id="H1" type="button" value="1" onclick="hilf(1)">
 	  <input id="H2" type="button" value="2" onclick="hilf(2)">
 	  <input id="H3" type="button" value="3" onclick="hilf(3)">
@@ -78,7 +75,6 @@ Sie können auch durch Wahl von p1 bis p11 aus dem Auswahlfeld 'Prob' ein gespei
       <input id="H7" type="button" value="7" onclick="hilf(7)">
 	  <input id="H8" type="button" value="8" onclick="hilf(8)">
 	  <input id="H9" type="button" value="9" onclick="hilf(9)">
-	  </li>
 	</ul>
 	</div>
   </div>
@@ -86,7 +82,6 @@ Sie können auch durch Wahl von p1 bis p11 aus dem Auswahlfeld 'Prob' ein gespei
 	<li><input class="a" type="button" value="Save" title="speichert aktuelle Stellung" onclick="save_user()">
       <input class="a" type="button" id="Loa" value="Load" title="ladet die mit Save gespeicherte Stellung" onclick="load_user()">
 	  <input class="a" type="button" value="Solve" title="Computer versucht Lösung der aktuellen Stellung zu finden" onclick="solvebutton()">
-	</li>
 	<li><input class="a" type="button" value="Create" title="Computer versucht neue Problemstellung zu erzeugen" onclick="docreate()">
 	  <input class="a" type="button" value="Clear" title="erzeugt leeres Startfeld" onclick="initPuzzle()">
 	  <label><select id="wahl" onchange="problem(this[selectedIndex].index)">
@@ -103,7 +98,6 @@ Sie können auch durch Wahl von p1 bis p11 aus dem Auswahlfeld 'Prob' ein gespei
 	    <option>p10</option>
 	    <option>p11</option>
       </select></label>
-	</li>
 	</ul>
   </div>       
 </div>	
