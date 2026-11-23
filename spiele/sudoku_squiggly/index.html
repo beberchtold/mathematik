@@ -10,7 +10,7 @@
 <title>Squiggly Sudoku (Freiform-Sudoku)</title>
 <LINK REL="stylesheet" HREF="/css/mathematik.css" TYPE="text/css">
 <script src="sudoku_sq.4.0min.js"></script>
-<script src="problems_sq.3.8.2.js"></script>
+<script src="problems_sq.3.8.2min.js"></script>
 <script src="input_output.js" defer></script>
 <script src="standard.js" defer></script>
 <script src="/script/infos.js" defer></script>
@@ -18,7 +18,7 @@
 input[type="button"]{min-width:39px;margin:3px 8px 3px 0px}
 select{height:1.4em}
 li.a{padding:2px 0px 2px 2px}
-canvas {width:100%;height:auto;min-width:308px;max-width:500px}
+canvas {width:100%;height:auto;min-width:308px;max-width:400px}
 a.h {display:inline-block;height:44px}
 </style>
 </head>
@@ -79,7 +79,7 @@ Die neu entstandenen Probleme in 'Probneu' können Sie auf Ihre HD downloaden un
 	<ul>  
 	  <li class="a"><label><input id="Show" type="checkbox" onclick="OnChangeCheckbox1(this)">Verfügbare Ziffern im akt. Feld:</label> <span id="Verf"></span>
       </li>
-      <li class="a"><label><input id="Hilfe" type="checkbox" onclick="OnChangeCheckbox2(this)">Nicht mögliche Felder für Ziffer:</label>
+      <li class="a"><label><input id="Hilfe" type="checkbox" onclick="OnChangeCheckbox2(this)">Nicht mögliche Felder für Ziffer</label>
 	  </li>
 	  <li><input id="H1" type="button" value="1" onclick="hilf(1)">
 	    <input id="H2" type="button" value="2" onclick="hilf(2)">
