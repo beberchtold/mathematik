@@ -9,9 +9,10 @@
 <meta name="author" content="B.Berchtold">
 <link rel="stylesheet" href="/css/mathematik.css" TYPE="text/css">
 <script src="sudokumin.js"></script>
-<script src="problems_min.js"></script>
+<script src="problemsmin.js"></script>
 <script src="/script/infos.js" defer></script>
-<style> input[type="button"]{min-width:39px;margin:3px 8px 3px 0px}
+<style>
+input[type="button"]{min-width:39px;margin:3px 8px 3px 0px}
 input.a[type="button"]{width:4.2em}
 select{width:4em;height:1.4em}
 li.a{padding:2px 0px 2px 2px}
@@ -41,9 +42,10 @@ Sie können auch durch Wahl von p1 bis p11 aus dem Auswahlfeld 'Prob' ein gespei
 
 
 <div class="colgroup-2">
-  <h2><span id="message"></span></h2>
+  
   <div class="col" id="containercanvas">
-     <canvas id="myCanvas" width="400" height="400">Ihr Browser kann kein Canvas!</canvas>
+     <span id="message"></span>
+     <canvas style="margin-top:10px" id="myCanvas" width="400" height="400">Ihr Browser kann kein Canvas!</canvas>
   </div>
   
   <div class="col">
