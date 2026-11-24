@@ -43,8 +43,8 @@ var Spiel=[
 '<a href="/spiele/swisslotto/"><img src="/imgH/swisslotto.png" width="200" height="130" class="H" alt="Swisslotto"></a>',
 '<a href="/spiele/numbers/"><img src="/imgH/numbers.png" width="225" height="150" class="H" alt="numbers"></a>',
 '<a href="/spiele/sudoku/"><img src="/imgH/sudoku.png" width="200" height="133" class="H" alt="Sudoku"></a>',
-'<a href="/spiele/sudoku_x/"><img src="/imgH/sudokux.png" width="210" height="147" class="H" alt="SudokuX"></a>',
-'<a href="/spiele/sudoku_squiggly/"><img src="/imgH/sudoku_sq.png" width="200" height="140" class="H" alt="SquigglySudoku"></a>',
+'<a href="/spiele/sudoku-x/"><img src="/imgH/sudokux.png" width="210" height="147" class="H" alt="SudokuX"></a>',
+'<a href="/spiele/sudoku-squiggly/"><img src="/imgH/sudoku_sq.png" width="200" height="140" class="H" alt="SquigglySudoku"></a>',
 '<a href="/anwendungenmath/pento12x5/"><img src="/imgH/pento12x5.png" width="220" height="200" class="H" alt="Pentominos"></a>',
 '<a href="/spiele/suguru/"><img src="/imgH/suguru.png" width="220" height="193" class="H" alt="Suguru"></a>'
 ];
