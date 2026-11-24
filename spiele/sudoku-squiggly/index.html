@@ -16,6 +16,7 @@
 <script src="/script/infos.js" defer></script>
 <style>
 input[type="button"]{min-width:39px;margin:3px 8px 3px 0px}
+input.a[type="button"]{width:4.2em;margin-right:20px}
 select{height:1.4em}
 li.a{padding:2px 0px 2px 2px}
 canvas {width:100%;height:auto;min-width:308px;max-width:400px}
@@ -109,9 +110,9 @@ Die neu entstandenen Probleme in 'Probneu' können Sie auf Ihre HD downloaden un
   </span>
   <div id="steuerbuttons1">
    <ul>
-	<li><input id="Sav" type="button" value="Save " title="speichert aktuelle Stellung" onclick="save_user()">
-	  <input id="Loa" type="button" value="Load " title="ladet die mit Save gespeicherte Stellung" onclick="load_user()">
-	  <input id="Sol" type="button" value="Solve " title="Computer versucht Lösung der aktuellen Stellung zu finden" onclick="solvebutton()">
+	<li><input class="a" id="Sav" type="button" value="Save " title="speichert aktuelle Stellung" onclick="save_user()">
+	  <input class="a" id="Loa" type="button" value="Load " title="ladet die mit Save gespeicherte Stellung" onclick="load_user()">
+	  <input class="a" id="Sol" type="button" value="Solve " title="Computer versucht Lösung der aktuellen Stellung zu finden" onclick="solvebutton()">
 	</li>
    </ul>
   </div>

@@ -14,7 +14,8 @@
 <script src="/script/infos.js" defer></script>
 <style>
 input[type="button"]{min-width:39px;margin:3px 8px 3px 0px}
-select{width:4em;height:1.4em}
+input.a[type="button"]{width:4.2em;margin-right:20px}
+select{width:4.2em;height:1.4em}
 li.a{padding:2px 0px 2px 2px}
 canvas {width:100%;height:auto;min-width:308px;max-width:400px}
 a.h {display:inline-block;height:44px}
@@ -71,9 +72,7 @@ Durch Wahl von p1 bis p9 aus dem Auswahlfeld 'Prob' lässt sich ein gespeicherte
 	<ul>  
 	  <li class="a"><label><input id="faerbe" type="checkbox" onclick="OnChangeCheckbox4(this)">Diagonalen färben</label>
 	  <li class="a"><label><input id="Show" type="checkbox" onclick="OnChangeCheckbox1(this)">Verfügbare Ziffern im akt. Feld:</label> <span id="Verf"></span>
-      
       <li class="a"><label><input id="Hilfe" type="checkbox" onclick="OnChangeCheckbox2(this)">Nicht mögliche Felder für Ziffer</label>
-	  
 	  <li><input id="H1" type="button" value="1" onclick="hilf(1)">
 	    <input id="H2" type="button" value="2" onclick="hilf(2)">
 	    <input id="H3" type="button" value="3" onclick="hilf(3)">
@@ -85,17 +84,15 @@ Durch Wahl von p1 bis p9 aus dem Auswahlfeld 'Prob' lässt sich ein gespeicherte
 	      <input id="H8" type="button" value="8" onclick="hilf(8)">
 	      <input id="H9" type="button" value="9" onclick="hilf(9)">
 	    </span>
-	  
 	</ul>
 	</div>	
   </div>
     <ul>
-    <li><input type="button" value="Save " title="speichert aktuelle Stellung" onclick="save_user()">
-      <input type="button" id="Loa" value="Load " title="ladet die mit Save gespeicherte Stellung" onclick="load_user()">
-      <input type="button" id="Sol" value="Solve " title="Computer versucht Lösung der aktuellen Stellung zu finden" onclick="solvebutton()">
-    
-    <li><input type="button" value="Create  " title="Computer versucht neue Problemstellung zu erzeugen" onclick="docreate()">
-      <input type="button" value="Clear " title="erzeugt leeres Startfeld" onclick="initPuzzle()">
+    <li><input class="a" type="button" value="Save " title="speichert aktuelle Stellung" onclick="save_user()">
+      <input class="a" type="button" id="Loa" value="Load " title="ladet die mit Save gespeicherte Stellung" onclick="load_user()">
+      <input class="a" type="button" id="Sol" value="Solve " title="Computer versucht Lösung der aktuellen Stellung zu finden" onclick="solvebutton()">
+    <li><input class="a" type="button" value="Create  " title="Computer versucht neue Problemstellung zu erzeugen" onclick="docreate()">
+      <input class="a" type="button" value="Clear " title="erzeugt leeres Startfeld" onclick="initPuzzle()">
       <label><select id="wahl" onchange="problem(this[selectedIndex].index)">
         <option>Prob</option>
 	    <option>p1</option>
