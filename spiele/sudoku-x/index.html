@@ -39,7 +39,7 @@ Linien abgetrennt) genau die Ziffern 1 bis 6 (bzw. 9) zu haben. Voreingestellt i
 Mit Hilfe der Checkbox wählen Sie Situation 9x9.<br>
 Sie können das angezeigte Problem lösen, die Ziffern einer Problemstellung in die Felder eingeben oder mit <strong>Create</strong> durch den Computer ein neues Problem 
 erzeugen lassen.<br>
-Durch Wahl von p1 bis p9 aus dem Auswahlfeld 'Prob' lässt sich ein gespeichertes Problem laden und dann lösen.<br>
+Durch Wahl von 1 bis 9 aus dem Auswahlfeld 'Nr' lässt sich ein gespeichertes Problem laden und dann lösen.<br>
 <input type="button" value="Weitere Info" style="width:8em;margin-top:5px;margin-right:20px;" onclick="infos('infos.html','Infofenster',400,600)">
 <input type="button" value="Strategien " onclick="infos('strategie.html','Strategiefenster',400,600)">
 </p>
@@ -94,16 +94,16 @@ Durch Wahl von p1 bis p9 aus dem Auswahlfeld 'Prob' lässt sich ein gespeicherte
     <li><input class="a" type="button" value="Create  " title="Computer versucht neue Problemstellung zu erzeugen" onclick="docreate()">
       <input class="a" type="button" value="Clear " title="erzeugt leeres Startfeld" onclick="initPuzzle()">
       <label><select id="wahl" onchange="problem(this[selectedIndex].index)">
-        <option>Prob</option>
-	    <option>p1</option>
-        <option>p2</option>
-        <option>p3</option>
-        <option>p4</option>
-        <option>p5</option>
-	    <option>p6</option>
-	    <option>p7</option>
-	    <option>p8</option>
-	    <option>p9</option>
+        <option>Nr</option>
+	    <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+	    <option>6</option>
+	    <option>7</option>
+	    <option>8</option>
+	    <option>9</option>
       </select></label>
     
     <li><label><input id="9x9" type="checkbox" onclick="OnChangeCheckbox3 (this)"><strong>Sudoku X: Situation 9x9</strong></label>
