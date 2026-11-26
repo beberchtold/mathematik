@@ -15,10 +15,11 @@
 <style>
 input[type="button"]{min-width:39px;margin:3px 8px 3px 0px}
 input.a[type="button"]{width:4.2em;margin-right:20px}
-select{width:4.2em;height:1.4em}
+select{width:3.8em;height:1.4em}
 li.a{padding:2px 0px 2px 2px}
 canvas {width:100%;height:auto;min-width:308px;max-width:400px}
 a.h {display:inline-block;height:44px}
+span.mess {font-size:124%;font-weight:bold;margin-top:0.4em;white-space:pre}
 </style>
 </head>
 
@@ -46,7 +47,19 @@ Durch Wahl von 1 bis 9 aus dem Auswahlfeld 'Nr' lässt sich ein gespeichertes Pr
 
 <div class="colgroup-2">
   <div class="col">
-    <span id="message"></span>
+    <span id="message" class="mess"></span>
+	<label><select id="wahl" onchange="problem(this[selectedIndex].index)">
+        <option>Nr</option>
+	    <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+	    <option>6</option>
+	    <option>7</option>
+	    <option>8</option>
+	    <option>9</option>
+      </select></label>
     <canvas style="margin-top:10px" id="myCanvas" width="400" height="400">Ihr Browser kann kein Canvas!</canvas>
   </div>
   
@@ -93,19 +106,6 @@ Durch Wahl von 1 bis 9 aus dem Auswahlfeld 'Nr' lässt sich ein gespeichertes Pr
       <input class="a" type="button" id="Sol" value="Solve " title="Computer versucht Lösung der aktuellen Stellung zu finden" onclick="solvebutton()">
     <li><input class="a" type="button" value="Create  " title="Computer versucht neue Problemstellung zu erzeugen" onclick="docreate()">
       <input class="a" type="button" value="Clear " title="erzeugt leeres Startfeld" onclick="initPuzzle()">
-      <label><select id="wahl" onchange="problem(this[selectedIndex].index)">
-        <option>Nr</option>
-	    <option>1</option>
-        <option>2</option>
-        <option>3</option>
-        <option>4</option>
-        <option>5</option>
-	    <option>6</option>
-	    <option>7</option>
-	    <option>8</option>
-	    <option>9</option>
-      </select></label>
-    
     <li><label><input id="9x9" type="checkbox" onclick="OnChangeCheckbox3 (this)"><strong>Sudoku X: Situation 9x9</strong></label>
 	</ul>
   </div>       
