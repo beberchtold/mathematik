@@ -14,9 +14,10 @@
 <style>
 input[type="button"]{min-width:39px;margin:3px 8px 3px 0px}
 input.a[type="button"]{width:4.2em;margin-right:20px}
-select{width:4.2em;height:1.4em}
+select{width:4em;height:1.4em}
 li.a{padding:2px 0px 2px 2px}
 a.h {display:inline-block;height:44px}
+span.mess {font-size:124%;font-weight:bold;margin-top:0.4em;white-space:pre}
 </style>
 </head>
 
@@ -44,8 +45,22 @@ Sie können auch durch Wahl von 1 bis 11 aus dem Auswahlfeld 'Nr' ein gespeicher
 <div class="colgroup-2">
   
   <div class="col" id="containercanvas">
-     <span id="message"></span>
-     <canvas style="margin-top:10px" id="myCanvas" width="400" height="400">Ihr Browser kann kein Canvas!</canvas>
+    <span id="message" class="mess"></span>
+	<label><select id="wahl" onchange="problem(this[selectedIndex].index)">
+        <option>Nr</option>
+	    <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+	    <option>6</option>
+	    <option>7</option>
+	    <option>8</option>
+        <option>9</option>
+	    <option>10</option>
+	    <option>11</option>
+     </select></label>
+    <canvas style="margin-top:10px" id="myCanvas" width="400" height="400">Ihr Browser kann kein Canvas!</canvas>
   </div>
   
   <div class="col">
@@ -86,20 +101,6 @@ Sie können auch durch Wahl von 1 bis 11 aus dem Auswahlfeld 'Nr' ein gespeicher
 	  <input class="a" type="button" value="Solve" title="Computer versucht Lösung der aktuellen Stellung zu finden" onclick="solvebutton()">
 	<li><input class="a" type="button" value="Create" title="Computer versucht neue Problemstellung zu erzeugen" onclick="docreate()">
 	  <input class="a" type="button" value="Clear" title="erzeugt leeres Startfeld" onclick="initPuzzle()">
-	  <label><select id="wahl" onchange="problem(this[selectedIndex].index)">
-        <option>Nr</option>
-	    <option>1</option>
-        <option>2</option>
-        <option>3</option>
-        <option>4</option>
-        <option>5</option>
-	    <option>6</option>
-	    <option>7</option>
-	    <option>8</option>
-        <option>9</option>
-	    <option>10</option>
-	    <option>11</option>
-      </select></label>
 	</ul>
   </div>       
 </div>	
