@@ -16,11 +16,12 @@
 <script src="/script/infos.js" defer></script>
 <style>
 input[type="button"]{min-width:39px;margin:3px 8px 3px 0px}
-input.a[type="button"]{width:4.2em;margin-right:20px}
-select{height:1.4em}
+input.a[type="button"]{min-width:4.2em;margin-right:20px}
+select{min-width:3.8em;height:1.4em}
 li.a{padding:2px 0px 2px 2px}
 canvas {width:100%;height:auto;min-width:308px;max-width:400px}
 a.h {display:inline-block;height:44px}
+span.mess {font-size:124%;font-weight:bold;margin-top:0.4em;white-space:pre}
 </style>
 </head>
 
@@ -46,23 +47,36 @@ erzeugen lassen oder durch Wahl von 1 bis 9 aus 'Nr' ein gespeichertes Problem l
 <strong>NeueBoxstruktur Comp</strong> lässt den Computer eine Zufallsstruktur erzeugen.<br>
 Mit Klick auf <strong>NeueBoxstruktur User</strong> können Sie eine eigene Struktur schaffen und so z.B. auch jede vorgegebene Problemstellung 
 eines Freiform-Sudokus eingeben und vom Computer lösen lassen.<br>
-Das erste Problem nach jeweils neuer Boxstruktur wird automatisch gespeichert und ist via 'Probneu' abrufbar.<br>
+Das erste Problem nach jeweils neuer Boxstruktur wird automatisch gespeichert und ist via 'Neu' abrufbar.<br>
 Sie können mit <strong>CreateUser</strong> auch eine eigene Problemstellung eingeben und sie auf Eindeutigkeit prüfen lassen.<br>
-Die neu entstandenen Probleme in 'Probneu' können Sie auf Ihre HD downloaden und später wieder laden.<br>
+Die neu entstandenen Probleme in 'Neu' können Sie auf Ihre HD downloaden und später wieder laden.<br>
 <input type="button" value="Weitere Info" style="width:8em;margin-right:20px" onclick="infos('infos.html','Infofenster',400,600)">
 <input type="button" value="Strategien " onclick="infos('strategie.html','Strategiefenster',400,600)">
 </p>
 
 <div class="colgroup-2">
   <div class="col">
-    <span id="message"></span>
+    <p><span id="message" class="mess"></span>
+	<label><select id="wahl" title="vordef. Probleme " onchange="problem(this[selectedIndex].index)">
+        <option>Nr</option>
+	    <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+	    <option>6</option>
+	    <option>7</option>
+	    <option>8</option>
+	    <option>9</option>
+    </select></label></p>
+	<span id="message1"></span>
     <canvas id="myCanvas" width="400" height="400">Ihr Browser kann kein Canvas!</canvas>
   </div>
   
   <div class="col">
   <div id="zifferbuttons">
    <ul>
-    <li>Eingabe der Ziffer ins akt. (hellblaue) Feld</li>
+    <li>Eingabe der Ziffer ins akt. (hellblaue) Feld
 	<li><input type="button" title="löscht (schwarze) Ziffer, funktioniert auch mit delete-Taste" value=" " onclick="eingabe(0)">
 	  <input type="button" value="1" onclick="eingabe(1)">
 	  <input type="button" value="2" onclick="eingabe(2)">
@@ -75,14 +89,14 @@ Die neu entstandenen Probleme in 'Probneu' können Sie auf Ihre HD downloaden un
 	    <input type="button" value="8" onclick="eingabe(8)">
 	    <input type="button" value="9" onclick="eingabe(9)">
 	  </span>
-	</li>
+	
    </ul>
    <div style="margin-top:14px;outline:1px solid;padding:0px 0px 3px 3px;">
 	<ul>  
 	  <li class="a"><label><input id="Show" type="checkbox" onclick="OnChangeCheckbox1(this)">Verfügbare Ziffern im akt. Feld:</label> <span id="Verf"></span>
-      </li>
+      
       <li class="a"><label><input id="Hilfe" type="checkbox" onclick="OnChangeCheckbox2(this)">Nicht mögliche Felder für Ziffer</label>
-	  </li>
+	  
 	  <li><input id="H1" type="button" value="1" onclick="hilf(1)">
 	    <input id="H2" type="button" value="2" onclick="hilf(2)">
 	    <input id="H3" type="button" value="3" onclick="hilf(3)">
@@ -94,7 +108,7 @@ Die neu entstandenen Probleme in 'Probneu' können Sie auf Ihre HD downloaden un
 	    <input id="H8" type="button" value="8" onclick="hilf(8)">
 	    <input id="H9" type="button" value="9" onclick="hilf(9)">	
 	    </span>
-	  </li>
+	  
 	</ul>
    </div>
   </div>
@@ -107,40 +121,24 @@ Die neu entstandenen Probleme in 'Probneu' können Sie auf Ihre HD downloaden un
   </span><span id="Resultat"></span>
   <br>
   <span id="saveaktprob" style="display:none;">
-	<input type="button" value="Save aktuelles Problem als Probneu" onclick="usersaveneu()" style="margin-top:10px;margin-bottom:10px;">
+	<input type="button" value="Save aktuelles Problem in Neu" onclick="usersaveneu()" style="margin-top:10px;margin-bottom:10px;">
   </span>
   <div id="steuerbuttons1">
    <ul>
 	<li><input class="a" id="Sav" type="button" value="Save " title="speichert aktuelle Stellung" onclick="save_user()">
 	  <input class="a" id="Loa" type="button" value="Load " title="ladet die mit Save gespeicherte Stellung" onclick="load_user()">
 	  <input class="a" id="Sol" type="button" value="Solve " title="Computer versucht Lösung der aktuellen Stellung zu finden" onclick="solvebutton()">
-	</li>
    </ul>
   </div>
   <div id="steuerbuttons2">
    <ul>
-	<li><input type="button" value="Create  " title="Computer versucht neue Problemstellung zu erzeugen" onclick="docreate()">
-	  <input type="button" value="CreateUser" title="Hier können Sie Ihre Problemstellung eingeben" style="width:7em;margin-right:15px" onclick="createuser()">
-	  <label><select id="wahl" title="vordef. Probleme " onchange="problem(this[selectedIndex].index)" style="width:5em">
-        <option>Nr</option>
-	    <option>1</option>
-        <option>2</option>
-        <option>3</option>
-        <option>4</option>
-        <option>5</option>
-	    <option>6</option>
-	    <option>7</option>
-	    <option>8 Stand</option>
-	    <option>9</option>
-      </select></label>
-	</li>
+	<li><input class="a" type="button" value="Create  " title="Computer versucht neue Problemstellung zu erzeugen" onclick="docreate()">
+	  <input type="button" value="CreateUser" title="Hier können Sie Ihre Problemstellung eingeben" style="width:7em" onclick="createuser()">
   </ul>
   </div>
   <div id="bNBCle">
    <ul>
-	<li><input type="button" value="NeueBoxstruktur User" onclick="erzeugeStruktur()" style="width:12em;margin-right:10px">
-	  <span><input type="button" value="Clear " title="erzeugt leeres Startfeld" onclick="clearf()"></span>
-	</li>
+	<li><input type="button" value="NeueBoxstruktur User" onclick="erzeugeStruktur()" style="width:12em">
    </ul>
   </div>
   <div id="chb3u4">
@@ -148,29 +146,27 @@ Die neu entstandenen Probleme in 'Probneu' können Sie auf Ihre HD downloaden un
 	<li><input type="button" id="NBsC" value="NeueBoxstruktur Comp" onclick="comperzeugeStruktur()" style="width:12em;margin:8px 10px 8px 0px;">
 	  <span id="prob6">
 	    <select id="probneu6" title="neu erzeugte Probleme" onchange="problemneu(this[selectedIndex].index)">
-           <option>Probneu</option>
+           <option>Neu</option>
         </select>
 	  </span>
 	  <span id="prob9" style="display:none;">
 	    <select id="probneu9" onchange="problemneu(this[selectedIndex].index)">
-            <option>Probneu</option>
+            <option>Neu</option>
         </select>
 	  </span>
-	</li>
-	<li><label><input id="9x9" type="checkbox" onclick="OnChangeCheckbox3(this)"><strong>Squiggly Sudoku: Situation 9x9</strong></label></li>
+	<li><label><input id="9x9" type="checkbox" onclick="OnChangeCheckbox3(this)"><strong>Squiggly Sudoku: Situation 9x9</strong></label>
    </ul>
   </div>
   <br>
   <ul>
-   <li><select id="dateien" title="Up- und Download Probleme in 'Probneu'" onchange="dateihandling(this[selectedIndex].index)">
-	<option>Up- und Download 'Probneu'</option>
-	<option>Upload in 'Probneu'</option>
-	<option>Download von 'Probneu'</option>
+   <li><select id="dateien" title="Up- und Download Probleme in 'Neu'" onchange="dateihandling(this[selectedIndex].index)">
+	<option>Up- und Download 'Neu'</option>
+	<option>Upload in 'Neu'</option>
+	<option>Download von 'Neu'</option>
 	<option>Upload Standard-Probleme</option>
    </select>
    <a id="downloadLink" href="" download="NeueProbleme.txt" style="display:none;"></a>
    <input type="file" id="upload" accept=".txt" onchange="OnShowSelectedFile()" style="display:none;">
-   </li>
   </ul>
   <div id="uploadInfo" style="font-style:italic; color:red;"></div>
  </div>       
