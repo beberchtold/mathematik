@@ -13,7 +13,7 @@
 <script src="/script/infos.js" defer></script>
 <style>
 input[type="button"]{min-width:39px;margin:3px 8px 3px 0px}
-input.a[type="button"]{width:4.2em;margin-right:20px}
+input.a[type="button"]{min-width:4.2em;margin-right:20px}
 select{width:3.8em;height:1.4em}
 li.a{padding:2px 0px 2px 2px}
 a.h {display:inline-block;height:44px}
@@ -37,7 +37,7 @@ span.mess {font-size:124%;font-weight:bold;margin-top:0.4em;white-space:pre}
 genau die Ziffern 1 bis 9 zu haben.<br>
 Durch Wahl von 1 bis 11 aus dem Auswahlfeld 'Nr' lässt sich ein gespeichertes Problem laden.<br>
 Sie können das angezeigte Problem lösen, mit <strong>Create</strong> durch den Computer ein neues Problem 
-erzeugen lassen.oder nach <strong>Clear</strong> die Ziffern einer Problemstellung eingeben.<br>
+erzeugen lassen oder mit <strong>CreateUser</strong> eine neue Problemstellung eingeben.<br>
 <input type="button" value="Weitere Info" style="width:8em" onclick="infos('infos.html','Infofenster',400,600)">
 </p>
 
@@ -98,7 +98,7 @@ erzeugen lassen.oder nach <strong>Clear</strong> die Ziffern einer Problemstellu
       <input class="a" type="button" id="Loa" value="Load" title="ladet die mit Save gespeicherte Stellung" onclick="load_user()">
 	  <input class="a" type="button" value="Solve" title="Computer versucht Lösung der aktuellen Stellung zu finden" onclick="solvebutton()">
 	<li><input class="a" type="button" value="Create" title="Computer versucht neue Problemstellung zu erzeugen" onclick="docreate()">
-	  <input class="a" type="button" value="Clear" title="erzeugt leeres Startfeld" onclick="initPuzzle()">
+	  <input class="a" type="button" value="CreateUser" title="User kann neue Problemstellung eingeben" onclick="initPuzzle()">
 	</ul>
   </div>       
 </div>	
